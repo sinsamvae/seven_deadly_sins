@@ -1,0 +1,372 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 121,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_race_demon",
+          "text": {
+            "fixedValue": "",
+            "name": "RaceVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_xp",
+          "text": {
+            "fixedValue": "",
+            "name": "GetXP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_level",
+          "text": {
+            "fixedValue": "",
+            "name": "GetLevel"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 254,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_manavar",
+          "text": {
+            "fixedValue": "",
+            "name": "Manavar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_strvar",
+          "text": {
+            "fixedValue": "",
+            "name": "Strvar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 92
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_dexvar",
+          "text": {
+            "fixedValue": "",
+            "name": "Hpvar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_tpdev",
+          "text": {
+            "fixedValue": "",
+            "name": "TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_var",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_displayname",
+          "text": {
+            "fixedValue": "",
+            "name": "Displayname"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_uc_var",
+          "text": {
+            "fixedValue": "",
+            "name": "UCVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 190
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPStr"
+          },
+          "x": 121,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton1",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPHp"
+          },
+          "x": 121,
+          "y": 105
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton2",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "Tpmana"
+          },
+          "x": 121,
+          "y": 134
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton3",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TpSwitchAmount"
+          },
+          "x": 197,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_agility_var",
+          "text": {
+            "fixedValue": "",
+            "name": "AgilityVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 122
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton4",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPAgility"
+          },
+          "x": 121,
+          "y": 120
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_magicorb",
+          "image": "magicorb.png",
+          "hoveredImage": "magicorbover.png",
+          "onClick": {
+            "name": "OpenMagicMenu"
+          },
+          "x": 317,
+          "y": 31
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_skills",
+          "text": {
+            "fixedValue": "Magic"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 317,
+          "y": 30
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_story",
+          "text": {
+            "fixedValue": "Story"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 317,
+          "y": 6
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_manapower",
+          "text": {
+            "fixedValue": "",
+            "name": "Manapower"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 147
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_commandment_var",
+          "text": {
+            "fixedValue": "",
+            "name": "CommandmentVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "CommandmentReturn"
+          },
+          "x": 121,
+          "y": 53
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storybook2",
+          "image": "storybook2.png",
+          "hoveredImage": "storybookhover.png",
+          "onClick": {
+            "name": "Story"
+          },
+          "x": 317,
+          "y": 16
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnEnitiy"
+          },
+          "scale": 35,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 258,
+          "y": 124
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

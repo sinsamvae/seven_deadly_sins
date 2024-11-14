@@ -1,0 +1,151 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 106,
+          "y": 16
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "ChangeCloneAmount"
+          },
+          "x": 165,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_clones",
+          "text": {
+            "fixedValue": "Clones"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 182,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_lost_vayne_var",
+          "text": {
+            "fixedValue": "",
+            "name": "LostVayneVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 76
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot1",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "DespawnClones"
+          },
+          "x": 165,
+          "y": 122
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_despawn",
+          "text": {
+            "fixedValue": "Despawn"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 179,
+          "y": 125
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Demonimage"
+          },
+          "x": 229,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "giantlogo.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Humanimage"
+          },
+          "x": 229,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "giantlogo.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Gaintimage"
+          },
+          "x": 229,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fairy2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Fairyimage"
+          },
+          "x": 229,
+          "y": 141
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 106,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_stats",
+          "text": {
+            "fixedValue": "Stats"
+          },
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "x": 133,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_30_health",
+          "text": {
+            "fixedValue": "- Health: 25 to 35"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_50_strength",
+          "text": {
+            "fixedValue": "- Strength: 45 to 60"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_40_spirit",
+          "text": {
+            "fixedValue": "- Spirit: 45 to 60"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_15_magic_damage",
+          "text": {
+            "fixedValue": "- Magic Damage: 0 to 5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_magic",
+          "text": {
+            "fixedValue": "Magic"
+          },
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "x": 141,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_random_200_to_500",
+          "text": {
+            "fixedValue": "Random: 150 to 350"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 141,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "image_1.png",
+          "use1Xscale": true,
+          "x": 125,
+          "y": 58
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "BackButton3"
+          },
+          "x": 76,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow2",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "NextButton4"
+          },
+          "x": 316,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_select",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "SelectGaint"
+          },
+          "x": 166,
+          "y": 211
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_giant_race",
+          "text": {
+            "fixedValue": "Giant Race"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 168,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "<"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 81,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 321,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_select",
+          "text": {
+            "fixedValue": "SELECT"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 182,
+          "y": 216
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}
