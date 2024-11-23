@@ -11,46 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "clover_gui.png",
-          "use1Xscale": false,
-          "x": 126,
-          "y": 37
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_1button",
-          "image": "1button.png",
-          "hoveredImage": "button.png",
-          "onClick": {
-            "name": "RemoveItems"
-          },
-          "x": 178,
-          "y": 73
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": "Items.EMERALD"
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 0,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 144,
-          "y": 72
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -64,8 +24,48 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": false,
-          "x": 264,
+          "x": 263,
           "y": 72
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:BritanniaCoins"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 143,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clover_gui.png",
+          "use1Xscale": false,
+          "x": 431,
+          "y": 86
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1button",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "RemoveItems"
+          },
+          "x": 178,
+          "y": 73
         }
       },
       {
@@ -98,8 +98,20 @@
           "x": 175,
           "y": 61
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clover_gui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
       }
     ],
+    "onOpen": {
+      "name": "SetPrice"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

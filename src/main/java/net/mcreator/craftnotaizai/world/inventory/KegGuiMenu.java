@@ -79,7 +79,7 @@ public class KegGuiMenu extends AbstractContainerMenu implements Supplier<Map<In
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 29, 40) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 36, 38) {
 			private final int slot = 0;
 
 			@Override
@@ -87,10 +87,10 @@ public class KegGuiMenu extends AbstractContainerMenu implements Supplier<Map<In
 				return CraftNoTaizaiModItems.AGAVE.get() == stack.getItem();
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 83, 40) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 84, 38) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 137, 40) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 134, 38) {
 			private final int slot = 2;
 
 			@Override

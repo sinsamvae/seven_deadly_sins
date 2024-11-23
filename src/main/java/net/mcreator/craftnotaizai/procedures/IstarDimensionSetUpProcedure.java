@@ -202,6 +202,6 @@ public class IstarDimensionSetUpProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		register(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar")), createNetherEffects(false, true, false));
+		register(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar")), createOverworldEffects(false, false, false));
 	}
 }

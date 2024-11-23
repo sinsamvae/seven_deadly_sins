@@ -32,12 +32,12 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -3837556,
       "falpha": 0.0
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:SpawnEggs"
       }
     ],
     "isBoss": false,

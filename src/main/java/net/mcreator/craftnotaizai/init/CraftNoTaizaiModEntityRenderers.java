@@ -13,7 +13,6 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftnotaizai.client.renderer.ZaneriRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WickedBiteRenderer;
-import net.mcreator.craftnotaizai.client.renderer.WhaleRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WeinheidtAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.VivianAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.VineRenderer;
@@ -38,7 +37,6 @@ import net.mcreator.craftnotaizai.client.renderer.RuinAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RoyalGurardAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RoyalGuardAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RockRushProjectileRenderer;
-import net.mcreator.craftnotaizai.client.renderer.RisingTornadoEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RisingMeteorRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RedKnightAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RedDemonGeckolibRenderer;
@@ -63,7 +61,6 @@ import net.mcreator.craftnotaizai.client.renderer.KingBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KillerIcebergProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KamichigiriProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JumanjuEntityRenderer;
-import net.mcreator.craftnotaizai.client.renderer.JonahNoJunanRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JillianAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JethammerProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JerichoDemonFormRenderer;
@@ -150,12 +147,12 @@ import net.mcreator.craftnotaizai.client.renderer.ChickenRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChatifolshotRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChastiefolTrueSpirtSpearRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChainExplosionV2Renderer;
+import net.mcreator.craftnotaizai.client.renderer.CannonEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.CainBarzadAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BusterIceRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BulletSquallRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BrilliantDetonationProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlazeProjectileRenderer;
-import net.mcreator.craftnotaizai.client.renderer.BlackSmithRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlackOutRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlackOutProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlackHoundRenderer;
@@ -179,7 +176,6 @@ public class CraftNoTaizaiModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.RISING_METEOR.get(), RisingMeteorRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.POLLEN_GARDEN.get(), PollenGardenRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.RISING_TORNADO_ENTITY.get(), RisingTornadoEntityRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.SUNFLOWER.get(), SunflowerRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MANTA.get(), MantaRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CHICKEN.get(), ChickenRenderer::new);
@@ -193,7 +189,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DALE_SEC.get(), DaleSecRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DALEFINAL.get(), DalefinalRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ELAINE.get(), ElaineRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.BLACK_SMITH.get(), BlackSmithRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.INSECT.get(), InsectRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BLAZE_PROJECTILE.get(), BlazeProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MANPUUNO_GEKIRIN_PROJECTILE.get(), ThrownItemRenderer::new);
@@ -227,7 +222,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GRAY_DEMON.get(), GrayDemonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HIDE_AND_SEEK.get(), HideAndSeekRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.VINE.get(), VineRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.WHALE.get(), WhaleRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FROZEN_BREATH.get(), FrozenBreathRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.NOROI_NO_KOE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DESPAIR_VENOM.get(), ThrownItemRenderer::new);
@@ -239,7 +233,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.LUIGI.get(), LuigiRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TYRANT_DRAGON.get(), TyrantDragonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MUTILATOR_RABBITS.get(), MutilatorRabbitsRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.JONAH_NO_JUNAN.get(), JonahNoJunanRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANGLE_CURE.get(), AngleCureRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DUSK_BISON_1.get(), DuskBison1Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.WIND_SHOT_PROJECTILE.get(), ThrownItemRenderer::new);
@@ -364,5 +357,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DIAMOND_TOWER.get(), DiamondTowerRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ESCANOR_BOSS.get(), EscanorBossRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CLOVER.get(), CloverRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.CANNON_ENTITY.get(), CannonEntityRenderer::new);
 	}
 }

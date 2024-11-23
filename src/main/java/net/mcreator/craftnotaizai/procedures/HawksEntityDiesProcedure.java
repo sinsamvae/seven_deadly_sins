@@ -17,7 +17,7 @@ public class HawksEntityDiesProcedure {
 			CraftNoTaizaiModVariables.MapVariables.get(world).heat_fork = true;
 			CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 			random = Mth.nextInt(RandomSource.create(), 1, 100);
-			if (random <= 5) {
+			if (random <= 15) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.HEAT_FORK.get()));
 					entityToSpawn.setPickUpDelay(10);

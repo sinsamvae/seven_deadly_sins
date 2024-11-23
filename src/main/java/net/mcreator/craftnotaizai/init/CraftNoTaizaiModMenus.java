@@ -27,6 +27,7 @@ import net.mcreator.craftnotaizai.world.inventory.DemonKingGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.DemonClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.CloverTradingMenu;
 import net.mcreator.craftnotaizai.world.inventory.ClonesGuiMenu;
+import net.mcreator.craftnotaizai.world.inventory.CannonGuiMenu;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class CraftNoTaizaiModMenus {
@@ -47,4 +48,5 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<DemonKingGuiMenu>> DEMON_KING_GUI = REGISTRY.register("demon_king_gui", () -> IForgeMenuType.create(DemonKingGuiMenu::new));
 	public static final RegistryObject<MenuType<DisasterMenuMenu>> DISASTER_MENU = REGISTRY.register("disaster_menu", () -> IForgeMenuType.create(DisasterMenuMenu::new));
 	public static final RegistryObject<MenuType<CloverTradingMenu>> CLOVER_TRADING = REGISTRY.register("clover_trading", () -> IForgeMenuType.create(CloverTradingMenu::new));
+	public static final RegistryObject<MenuType<CannonGuiMenu>> CANNON_GUI = REGISTRY.register("cannon_gui", () -> IForgeMenuType.create(CannonGuiMenu::new));
 }

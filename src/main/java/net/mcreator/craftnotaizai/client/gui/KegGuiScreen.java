@@ -49,11 +49,11 @@ public class KegGuiScreen extends AbstractContainerScreen<KegGuiMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/1keg_gui-export.png"), this.leftPos + 1, this.topPos + 0, 0, 0, 182, 166, 182, 166);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/keg_ui-export.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 166, 182, 166);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/honey_bottle_je1_be2.png"), this.leftPos + 136, this.topPos + 40, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/honey_bottle_je1_be2.png"), this.leftPos + 134, this.topPos + 38, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/agave.png"), this.leftPos + 29, this.topPos + 40, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/agave.png"), this.leftPos + 36, this.topPos + 38, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -69,13 +69,13 @@ public class KegGuiScreen extends AbstractContainerScreen<KegGuiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.keg_gui.label_keg"), 4, 4, -16777216, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.keg_gui.label_keg"), 2, 3, -16777216, false);
 		guiGraphics.drawString(this.font,
 
-				DisplayKegTickProcedure.execute(world, x, y, z), 109, 3, -16777216, false);
+				DisplayKegTickProcedure.execute(world, x, y, z), 106, 0, -16777216, false);
 		guiGraphics.drawString(this.font,
 
-				CupsLeftProcedure.execute(world, x, y, z), 109, 21, -16777216, false);
+				CupsLeftProcedure.execute(world, x, y, z), 106, 11, -16777216, false);
 	}
 
 	@Override

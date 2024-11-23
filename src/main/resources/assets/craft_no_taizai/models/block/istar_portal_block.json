@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/stonerocketxture",
+    "up": "craft_no_taizai:block/stonerocketxture",
+    "north": "craft_no_taizai:block/stonerocketxture",
+    "east": "craft_no_taizai:block/stonerocketxture",
+    "south": "craft_no_taizai:block/stonerocketxture",
+    "west": "craft_no_taizai:block/stonerocketxture",
+    "particle": "craft_no_taizai:block/stonerocketxture"
+  },
+  "render_type": "solid"
+}

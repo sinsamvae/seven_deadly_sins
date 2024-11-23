@@ -13,68 +13,86 @@
       {
         "type": "image",
         "data": {
-          "image": "tab.png",
-          "use1Xscale": false,
-          "x": 302,
-          "y": 56
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab.png",
-          "use1Xscale": false,
-          "x": 302,
-          "y": 78
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "tab.png",
-          "use1Xscale": false,
-          "x": 303,
-          "y": 99
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "side_quest.png",
+          "image": "gui.png",
           "use1Xscale": false,
           "x": 116,
           "y": 28
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_quest",
-          "text": {
-            "fixedValue": "Quest"
+          "name": "imagebutton_1button",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "SideQuestClaim"
           },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 198,
-          "y": 40
+          "x": 180,
+          "y": 193
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_proc_side_quest_var",
+          "name": "label_proc_quest_slot_1",
           "text": {
             "fixedValue": "",
-            "name": "SideQuestVar"
+            "name": "QuestSlot1"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 126,
-          "y": 55
+          "x": 123,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_claim",
+          "text": {
+            "fixedValue": "CLAIM"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 197,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_quest_slot_2",
+          "text": {
+            "fixedValue": "",
+            "name": "QuestSlot2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 123,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_quest_slot_3",
+          "text": {
+            "fixedValue": "",
+            "name": "QuestSlot3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 123,
+          "y": 123
         }
       }
     ],

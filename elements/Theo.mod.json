@@ -28,16 +28,16 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -12302779,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -10079906,
       "falpha": 0.0
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:SpawnEggs"
       }
     ],
     "isBoss": false,

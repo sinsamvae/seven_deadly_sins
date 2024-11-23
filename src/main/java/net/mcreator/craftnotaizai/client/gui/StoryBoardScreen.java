@@ -18,6 +18,7 @@ import net.mcreator.craftnotaizai.procedures.Story6Procedure;
 import net.mcreator.craftnotaizai.procedures.Story5Procedure;
 import net.mcreator.craftnotaizai.procedures.Story4Procedure;
 import net.mcreator.craftnotaizai.procedures.Story3Procedure;
+import net.mcreator.craftnotaizai.procedures.Story37Procedure;
 import net.mcreator.craftnotaizai.procedures.Story36Procedure;
 import net.mcreator.craftnotaizai.procedures.Story35Procedure;
 import net.mcreator.craftnotaizai.procedures.Story34Procedure;
@@ -465,6 +466,16 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font,
 
 					KillGiantVarProcedure.execute(entity), -56, 94, -13369345, false);
+		if (Story37Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_druids_holy_land"), -58, 11, -12829636, false);
+		if (Story37Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_meliodas_and_others_head_to_mega"), -59, 26, -12829636, false);
+		if (Story37Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_diane_meanwhile_a_confused_dia"), -59, 40, -12829636, false);
+		if (Story37Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -56, 56, -12829636, false);
+		if (Story37Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_find_entrance_of_istar"), -56, 84, -12829636, false);
 	}
 
 	@Override

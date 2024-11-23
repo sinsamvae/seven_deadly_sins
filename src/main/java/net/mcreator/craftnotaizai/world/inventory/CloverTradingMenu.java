@@ -8,7 +8,6 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -20,7 +19,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftnotaizai.procedures.SetPriceProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMenus;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -78,15 +79,7 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 19, 36) {
-			private final int slot = 0;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return Items.EMERALD == stack.getItem();
-			}
-		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 139, 36) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 138, 36) {
 			private final int slot = 1;
 
 			@Override
@@ -99,11 +92,20 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 				return false;
 			}
 		}));
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 18, 36) {
+			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return CraftNoTaizaiModItems.BRITANNIA_COINS.get() == stack.getItem();
+			}
+		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+		SetPriceProcedure.execute(entity);
 	}
 
 	@Override
@@ -235,11 +237,15 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 				for (int j = 0; j < internal.getSlots(); ++j) {
 					if (j == 1)
 						continue;
+					if (j == 0)
+						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
 					if (i == 1)
+						continue;
+					if (i == 0)
 						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}

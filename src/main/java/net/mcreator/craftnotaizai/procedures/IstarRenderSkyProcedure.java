@@ -10,6 +10,7 @@ import net.minecraftforge.client.DimensionSpecialEffectsManager;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -65,7 +66,7 @@ public class IstarRenderSkyProcedure {
 		if (entity != null) {
 			ClientLevel level = minecraft.level;
 			Vec3 pos = entity.getPosition(partialTick);
-			return execute(null, entity);
+			execute(null, level.dimension());
 		}
 		return false;
 	};
@@ -482,17 +483,17 @@ public class IstarRenderSkyProcedure {
 		}
 	}
 
-	public static boolean execute(Entity entity) {
-		return execute(null, entity);
+	public static void execute(ResourceKey<Level> dimension) {
+		execute(null, dimension);
 	}
 
-	private static boolean execute(@Nullable Event event, Entity entity) {
-		if (entity == null)
-			return false;
-		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar"))) {
-			RenderSystem.defaultBlendFunc();
-			renderDeepSky(255 << 24 | 0 << 16 | 218 << 8 | 182);
+	private static void execute(@Nullable Event event, ResourceKey<Level> dimension) {
+		if (dimension == null)
+			return;
+		if (dimension == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar"))) {
+			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "istarsky" + ".png")));
+			renderSkybox(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255, false);
 		}
-		return true;
 	}
 }

@@ -27,9 +27,6 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "MISC"
-    },
     "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -70,7 +67,7 @@
     "inventoryStackSize": 64,
     "deathTime": 20,
     "lerp": 4,
-    "disableCollisions": false,
+    "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -100,6 +97,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "onMobTickUpdate": {

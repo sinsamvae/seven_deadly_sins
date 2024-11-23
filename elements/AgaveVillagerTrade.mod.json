@@ -10,9 +10,9 @@
         "entries": [
           {
             "price1": {
-              "value": "Blocks.WHEAT"
+              "value": "Items.EMERALD"
             },
-            "countPrice1": 17,
+            "countPrice1": 3,
             "price2": {
               "value": ""
             },
@@ -28,9 +28,9 @@
           },
           {
             "price1": {
-              "value": "Blocks.WHEAT"
+              "value": "Items.EMERALD"
             },
-            "countPrice1": 27,
+            "countPrice1": 11,
             "price2": {
               "value": ""
             },

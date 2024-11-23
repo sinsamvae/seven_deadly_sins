@@ -52,7 +52,7 @@
       "max": 0.2
     },
     "genContinentalness": {
-      "min": 0.0,
+      "min": -0.45,
       "max": 0.45
     },
     "genErosion": {
@@ -79,7 +79,10 @@
     "treeFruits": {
       "value": "Blocks.CAVE_AIR"
     },
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "Caves",
+      "Ores"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

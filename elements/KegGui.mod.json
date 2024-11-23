@@ -21,17 +21,8 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 127,
-          "y": 41
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "1keg_gui-export.png",
-          "use1Xscale": false,
-          "x": 124,
-          "y": 37
+          "x": 125,
+          "y": 40
         }
       },
       {
@@ -48,8 +39,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 151,
-          "y": 76
+          "x": 158,
+          "y": 74
         }
       },
       {
@@ -66,24 +57,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 205,
-          "y": 76
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_display_keg_tick",
-          "text": {
-            "fixedValue": "",
-            "name": "DisplayKegTick"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "x": 232,
-          "y": 40
+          "x": 206,
+          "y": 74
         }
       },
       {
@@ -100,17 +75,24 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 259,
-          "y": 76
+          "x": 256,
+          "y": 74
         }
       },
       {
-        "type": "image",
+        "type": "label",
         "data": {
-          "image": "honey_bottle_je1_be2.png",
-          "use1Xscale": false,
-          "x": 259,
-          "y": 77
+          "name": "label_proc_display_keg_tick",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayKegTick"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 229,
+          "y": 37
         }
       },
       {
@@ -125,8 +107,26 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 232,
-          "y": 58
+          "x": 229,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "keg_ui-export.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "honey_bottle_je1_be2.png",
+          "use1Xscale": false,
+          "x": 257,
+          "y": 75
         }
       },
       {
@@ -134,8 +134,8 @@
         "data": {
           "image": "agave.png",
           "use1Xscale": false,
-          "x": 152,
-          "y": 77
+          "x": 159,
+          "y": 75
         }
       }
     ],

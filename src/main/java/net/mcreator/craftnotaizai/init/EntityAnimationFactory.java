@@ -40,7 +40,6 @@ import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.KulumilEntity;
 import net.mcreator.craftnotaizai.entity.KingBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JumanjuEntityEntity;
-import net.mcreator.craftnotaizai.entity.JonahNoJunanEntity;
 import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JerichoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
@@ -227,13 +226,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MutilatorRabbitsEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof JonahNoJunanEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -11,16 +11,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.craftnotaizai.block.TowerOfTrialsBlock;
-import net.mcreator.craftnotaizai.block.TalavillageWood3Block;
-import net.mcreator.craftnotaizai.block.TalavillageWood2Block;
-import net.mcreator.craftnotaizai.block.TalavillageStaries2Block;
-import net.mcreator.craftnotaizai.block.TalavillageStairs3Block;
-import net.mcreator.craftnotaizai.block.TalavillageStaires1Block;
-import net.mcreator.craftnotaizai.block.TalavillageRoof1Block;
 import net.mcreator.craftnotaizai.block.TalaVillageFlowerBlock;
 import net.mcreator.craftnotaizai.block.StageTwoAgaveBlock;
 import net.mcreator.craftnotaizai.block.StageOneAgaveBlock;
-import net.mcreator.craftnotaizai.block.SmallCrystalBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestWoodBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestStairBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestSlabBlock;
@@ -37,6 +30,7 @@ import net.mcreator.craftnotaizai.block.PurgatoryBlockBlock;
 import net.mcreator.craftnotaizai.block.PerfectCubeBlock;
 import net.mcreator.craftnotaizai.block.LastStageAgaveBlock;
 import net.mcreator.craftnotaizai.block.KegBlock;
+import net.mcreator.craftnotaizai.block.IstarPortalBlockBlock;
 import net.mcreator.craftnotaizai.block.HolyTreeOreBlock;
 import net.mcreator.craftnotaizai.block.HayBaleRoofBlock;
 import net.mcreator.craftnotaizai.block.GoddassOreBlock;
@@ -59,8 +53,6 @@ import net.mcreator.craftnotaizai.block.CaveOfTrainingBlock;
 import net.mcreator.craftnotaizai.block.CapitaloftheDeadBlockBlock;
 import net.mcreator.craftnotaizai.block.CapitalOfTheDeadGroundBlockBlock;
 import net.mcreator.craftnotaizai.block.CapitalOfTheDeadGroundBlock;
-import net.mcreator.craftnotaizai.block.BrickStairsBlock;
-import net.mcreator.craftnotaizai.block.BrickBlock;
 import net.mcreator.craftnotaizai.block.BlueBrickWallBlock;
 import net.mcreator.craftnotaizai.block.BlueBrickStairBlock;
 import net.mcreator.craftnotaizai.block.BlueBrickSlabBlock;
@@ -90,18 +82,9 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> AREAFENCE = REGISTRY.register("areafence", () -> new AreafenceBlock());
 	public static final RegistryObject<Block> AREA_SLAB = REGISTRY.register("area_slab", () -> new AreaSlabBlock());
 	public static final RegistryObject<Block> AREA_WOOD_SLAB = REGISTRY.register("area_wood_slab", () -> new AreaWoodSlabBlock());
-	public static final RegistryObject<Block> BRICK = REGISTRY.register("brick", () -> new BrickBlock());
-	public static final RegistryObject<Block> TALAVILLAGE_ROOF_1 = REGISTRY.register("talavillage_roof_1", () -> new TalavillageRoof1Block());
-	public static final RegistryObject<Block> TALAVILLAGE_STAIRES_1 = REGISTRY.register("talavillage_staires_1", () -> new TalavillageStaires1Block());
-	public static final RegistryObject<Block> BRICK_STAIRS = REGISTRY.register("brick_stairs", () -> new BrickStairsBlock());
-	public static final RegistryObject<Block> TALAVILLAGE_WOOD_2 = REGISTRY.register("talavillage_wood_2", () -> new TalavillageWood2Block());
-	public static final RegistryObject<Block> TALAVILLAGE_STARIES_2 = REGISTRY.register("talavillage_staries_2", () -> new TalavillageStaries2Block());
-	public static final RegistryObject<Block> TALAVILLAGE_WOOD_3 = REGISTRY.register("talavillage_wood_3", () -> new TalavillageWood3Block());
-	public static final RegistryObject<Block> TALAVILLAGE_STAIRS_3 = REGISTRY.register("talavillage_stairs_3", () -> new TalavillageStairs3Block());
 	public static final RegistryObject<Block> TALA_VILLAGE_FLOWER = REGISTRY.register("tala_village_flower", () -> new TalaVillageFlowerBlock());
 	public static final RegistryObject<Block> CAPITAL_OF_THE_DEAD_GROUND_BLOCK = REGISTRY.register("capital_of_the_dead_ground_block", () -> new CapitalOfTheDeadGroundBlockBlock());
 	public static final RegistryObject<Block> CAPITAL_OF_THE_DEAD_GROUND = REGISTRY.register("capital_of_the_dead_ground", () -> new CapitalOfTheDeadGroundBlock());
-	public static final RegistryObject<Block> SMALL_CRYSTAL = REGISTRY.register("small_crystal", () -> new SmallCrystalBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_WOOD = REGISTRY.register("sleeping_forest_wood", () -> new SleepingForestWoodBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_SLAB = REGISTRY.register("sleeping_forest_slab", () -> new SleepingForestSlabBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_STAIR = REGISTRY.register("sleeping_forest_stair", () -> new SleepingForestStairBlock());
@@ -144,6 +127,7 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> TOWER_OF_TRIALS = REGISTRY.register("tower_of_trials", () -> new TowerOfTrialsBlock());
 	public static final RegistryObject<Block> CAVE_OF_TRAINING = REGISTRY.register("cave_of_training", () -> new CaveOfTrainingBlock());
 	public static final RegistryObject<Block> SIDE_MOUNTAIN = REGISTRY.register("side_mountain", () -> new SideMountainBlock());
+	public static final RegistryObject<Block> ISTAR_PORTAL_BLOCK = REGISTRY.register("istar_portal_block", () -> new IstarPortalBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
