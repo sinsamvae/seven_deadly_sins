@@ -5,7 +5,7 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "boar_hat_shirt",
+    "textureBody": "boar_hat_chest",
     "enableLeggings": true,
     "textureLeggings": "skirt",
     "enableBoots": false,

@@ -117,7 +117,7 @@ public class DalefinalEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		DalefinalEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		DalefinalEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

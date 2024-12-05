@@ -20,7 +20,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.entity.StoryBanAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.StoryBan2AnimatedEntity;
 
 import java.util.List;
 import java.util.Comparator;
@@ -40,15 +39,9 @@ public class StoryBanOnEntityTickUpdateProcedure {
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
-				if (entity instanceof StoryBanAnimatedEntity) {
-					((StoryBanAnimatedEntity) entity).setAnimation("attack_2");
-				}
-				if (entity instanceof StoryBan2AnimatedEntity) {
-					((StoryBan2AnimatedEntity) entity).setAnimation("attack_2");
-				}
 				{
 					final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), (entity.getY() + entity.getLookAngle().y + 1.8), (entity.getZ() + entity.getLookAngle().z));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
 								|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
@@ -74,9 +67,12 @@ public class StoryBanOnEntityTickUpdateProcedure {
 									}
 								}.checkGamemode(entityiterator))) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEG.get(), 500, 1, false, false));
+								_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(), 1000, 1, false, false));
 						}
 					}
+				}
+				if (entity instanceof StoryBanAnimatedEntity) {
+					((StoryBanAnimatedEntity) entity).setAnimation("attack_2");
 				}
 			}
 			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 45)));

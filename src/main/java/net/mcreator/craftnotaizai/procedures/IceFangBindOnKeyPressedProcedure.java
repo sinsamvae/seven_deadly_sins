@@ -44,7 +44,7 @@ public class IceFangBindOnKeyPressedProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							IceBulletsShotProcedure.execute(world, entity);
+							IceBulletsShotProcedure.execute(world, x, y, z, entity);
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 30);
 						} else {
@@ -68,7 +68,7 @@ public class IceFangBindOnKeyPressedProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							KillerIceBregShotProcedure.execute(world, entity);
+							KillerIceBregShotProcedure.execute(world, x, y, z, entity);
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 45);
 						} else {

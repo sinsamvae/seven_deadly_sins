@@ -118,7 +118,7 @@ public class StoryBanAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		StoryBanEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		StoryBanEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

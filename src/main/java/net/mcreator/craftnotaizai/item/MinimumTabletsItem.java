@@ -13,7 +13,7 @@ import net.mcreator.craftnotaizai.procedures.MinimumTabletsPlayerFinishesUsingIt
 
 public class MinimumTabletsItem extends Item {
 	public MinimumTabletsItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.5f).alwaysEat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.5f).alwaysEat().build()));
 	}
 
 	@Override

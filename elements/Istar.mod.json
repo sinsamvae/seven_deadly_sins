@@ -9,7 +9,7 @@
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.AIR"
     },
     "fluidBlock": {
       "value": "Blocks.AIR"
@@ -23,6 +23,9 @@
     "imitateOverworldBehaviour": false,
     "onPlayerEntersDimension": {
       "name": "IstarPlayerEntersDimension"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "IstarPlayerLeavesDimension"
     },
     "portalFrame": {
       "value": ""

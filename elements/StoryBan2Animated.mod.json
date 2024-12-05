@@ -27,10 +27,11 @@
       "value": -65536,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -102,11 +103,14 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "whenMobDies": {
       "name": "StoryBan2EntityDies"
     },
     "onMobTickUpdate": {
-      "name": "StoryBanOnEntityTickUpdate"
+      "name": "StoryBan2AnimatedOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

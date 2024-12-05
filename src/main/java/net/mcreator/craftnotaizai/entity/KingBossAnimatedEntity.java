@@ -79,7 +79,7 @@ public class KingBossAnimatedEntity extends PathfinderMob implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "king_boss");
+		this.entityData.define(TEXTURE, "boss_king");
 	}
 
 	public void setTexture(String texture) {
@@ -128,7 +128,7 @@ public class KingBossAnimatedEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		KingBossEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		KingBossEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import javax.annotation.Nullable;
 
@@ -48,7 +48,7 @@ public class ManaChargeProcedure {
 					}
 					{
 						double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana
-								+ (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * (double) RandomRaceConfigConfiguration.MANA_REGEN.get();
+								+ (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * (double) CraftNoTaizaiConfiguration.MANA_REGEN.get();
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.mana = _setval;
 							capability.syncPlayerVariables(entity);

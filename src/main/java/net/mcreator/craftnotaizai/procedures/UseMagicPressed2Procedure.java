@@ -8,13 +8,12 @@ public class UseMagicPressed2Procedure {
 		if (entity == null)
 			return;
 		ElizabethArkProcedure.execute(world, entity);
-		DeathkeypressProcedure.execute(world, x, y, z, entity);
 		WallKeyBindOnKeyPressedProcedure.execute(entity);
 		PurgeBindOnKeyPressedProcedure.execute(entity);
 		BreakBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		HellBlazeFullCounterOnKeyPressedProcedure.execute(world, entity);
 		HunterWispbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
-		ExplosionBindOnKeyPressedProcedure.execute(world, entity);
+		ExplosionBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		BoostKeyPressProcedure.execute(world, x, y, z, entity);
 		GreatThunderOnKeyPressedProcedure.execute(world, x, y, z, entity);
 	}

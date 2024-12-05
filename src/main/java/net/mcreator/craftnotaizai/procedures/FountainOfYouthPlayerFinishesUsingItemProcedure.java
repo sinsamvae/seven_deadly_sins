@@ -23,7 +23,7 @@ public class FountainOfYouthPlayerFinishesUsingItemProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		CraftNoTaizaiModVariables.WorldVariables.get(world).immortalityworld = true;
-		CraftNoTaizaiModVariables.WorldVariables.get(world).syncData(world);
+		CraftNoTaizaiModVariables.MapVariables.get(world).immortalityworld = true;
+		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 	}
 }

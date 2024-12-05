@@ -35,6 +35,8 @@ public class QuitetDownSkillProcedure {
 		if (entity == null)
 			return;
 		double range = 0;
+		boolean target = false;
+		Entity entity_target = null;
 		if (entity.isShiftKeyDown()) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
@@ -63,7 +65,7 @@ public class QuitetDownSkillProcedure {
 									return false;
 								}
 							}.checkGamemode(entityiterator))) {
-						entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
 								(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3));
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 10, 5, 5, 5, 0.1);
@@ -79,54 +81,53 @@ public class QuitetDownSkillProcedure {
 				}
 			}
 		} else {
-			for (int index0 = 0; index0 < 10; index0++) {
-				{
-					final Vec3 _center = new Vec3(
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
-							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
-								|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
-								|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
-									public boolean checkGamemode(Entity _ent) {
-										if (_ent instanceof ServerPlayer _serverPlayer) {
-											return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-										} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-											return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-													&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-										}
-										return false;
+			{
+				final Vec3 _center = new Vec3(
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				for (Entity entityiterator : _entfound) {
+					if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
+							|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+							|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
+								public boolean checkGamemode(Entity _ent) {
+									if (_ent instanceof ServerPlayer _serverPlayer) {
+										return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+									} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+										return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+												&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 									}
-								}.checkGamemode(entityiterator) || new Object() {
-									public boolean checkGamemode(Entity _ent) {
-										if (_ent instanceof ServerPlayer _serverPlayer) {
-											return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-										} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-											return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-													&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
-										}
-										return false;
-									}
-								}.checkGamemode(entityiterator))) {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-									(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3));
-							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.EXPLOSION, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 10, 5, 5, 5, 0.1);
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")),
-											SoundSource.NEUTRAL, 1, 1);
-								} else {
-									_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1,
-											false);
+									return false;
 								}
-							}
-						}
+							}.checkGamemode(entityiterator) || new Object() {
+								public boolean checkGamemode(Entity _ent) {
+									if (_ent instanceof ServerPlayer _serverPlayer) {
+										return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+									} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+										return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+												&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+									}
+									return false;
+								}
+							}.checkGamemode(entityiterator))) {
+						target = true;
+						entity_target = entityiterator;
 					}
 				}
-				range = range + 1;
+			}
+		}
+		if (target && entity_target instanceof LivingEntity) {
+			entity_target.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+					(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3));
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.EXPLOSION, (entity_target.getX()), (entity_target.getY()), (entity_target.getZ()), 10, 5, 5, 5, 0.1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(entity_target.getX(), entity_target.getY(), entity_target.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
+				} else {
+					_level.playLocalSound((entity_target.getX()), (entity_target.getY()), (entity_target.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
+				}
 			}
 		}
 	}

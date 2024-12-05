@@ -118,7 +118,7 @@ public class GolgiusAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GolgiusEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GolgiusEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

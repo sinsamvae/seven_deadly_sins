@@ -101,7 +101,7 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:albion_idle"
     },
     "raidCelebrationSound": {
       "value": ""

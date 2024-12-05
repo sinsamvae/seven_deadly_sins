@@ -63,7 +63,7 @@ public class SetdemoneyesProcedure {
 				}.getEntity()));
 			});
 		}
-		CraftNoTaizaiModVariables.WorldVariables.get(world).immortalityworld = BoolArgumentType.getBool(arguments, "name");
-		CraftNoTaizaiModVariables.WorldVariables.get(world).syncData(world);
+		CraftNoTaizaiModVariables.MapVariables.get(world).immortalityworld = BoolArgumentType.getBool(arguments, "name");
+		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 	}
 }

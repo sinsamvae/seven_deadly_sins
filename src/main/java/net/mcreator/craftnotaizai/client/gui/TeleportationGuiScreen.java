@@ -24,9 +24,10 @@ public class TeleportationGuiScreen extends AbstractContainerScreen<Teleportatio
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	EditBox X;
-	EditBox Z;
-	EditBox Y;
+	private final static HashMap<String, String> textstate = new HashMap<>();
+	public static EditBox X;
+	public static EditBox Z;
+	public static EditBox Y;
 	ImageButton imagebutton_slot2;
 
 	public TeleportationGuiScreen(TeleportationGuiMenu container, Inventory inventory, Component text) {
@@ -177,8 +178,11 @@ public class TeleportationGuiScreen extends AbstractContainerScreen<Teleportatio
 		this.addWidget(this.Y);
 		imagebutton_slot2 = new ImageButton(this.leftPos + -32, this.topPos + -53, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot2.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new TeleportationGuiButtonMessage(0, x, y, z));
-				TeleportationGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				textstate.put("textin:X", X.getValue());
+				textstate.put("textin:Z", Z.getValue());
+				textstate.put("textin:Y", Y.getValue());
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new TeleportationGuiButtonMessage(0, x, y, z, textstate));
+				TeleportationGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_slot2", imagebutton_slot2);

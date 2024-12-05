@@ -39,8 +39,8 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftnotaizai.procedures.StoryBanOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.procedures.StoryBan2EntityDiesProcedure;
+import net.mcreator.craftnotaizai.procedures.StoryBan2AnimatedOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class StoryBan2AnimatedEntity extends Monster implements GeoEntity {
@@ -118,7 +118,7 @@ public class StoryBan2AnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		StoryBan2EntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		StoryBan2EntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override
@@ -137,7 +137,7 @@ public class StoryBan2AnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		StoryBanOnEntityTickUpdateProcedure.execute(this.level(), this);
+		StoryBan2AnimatedOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

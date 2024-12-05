@@ -118,7 +118,7 @@ public class HowzerAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		HowzerEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		HowzerEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

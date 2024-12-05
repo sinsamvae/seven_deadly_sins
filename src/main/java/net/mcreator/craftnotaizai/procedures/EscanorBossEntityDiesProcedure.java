@@ -9,22 +9,18 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class EscanorBossEntityDiesProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		double drop = 0;
 		if (!(entity instanceof Player)) {
@@ -34,23 +30,12 @@ public class EscanorBossEntityDiesProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof Player && !(entityiterator == entity)) {
 						{
-							double _setval = ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-									+ Math.ceil(sourceentity.getPersistentData().getDouble("level")) * 0.5 + 850) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
-							sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = ((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
+									+ Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 850) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.xp = _setval;
-								capability.syncPlayerVariables(sourceentity);
+								capability.syncPlayerVariables(entityiterator);
 							});
-						}
-						if (!(sourceentity instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
-								&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"))).isDone())) {
-							if (sourceentity instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"));
-								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-								if (!_ap.isDone()) {
-									for (String criteria : _ap.getRemainingCriteria())
-										_player.getAdvancements().award(_adv, criteria);
-								}
-							}
 						}
 					}
 				}

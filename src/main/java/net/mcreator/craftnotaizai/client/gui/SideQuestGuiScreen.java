@@ -25,6 +25,7 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_1button;
 
 	public SideQuestGuiScreen(SideQuestGuiMenu container, Inventory inventory, Component text) {
@@ -87,8 +88,8 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 		super.init();
 		imagebutton_1button = new ImageButton(this.leftPos + -34, this.topPos + 73, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new SideQuestGuiButtonMessage(0, x, y, z));
-				SideQuestGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new SideQuestGuiButtonMessage(0, x, y, z, textstate));
+				SideQuestGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_1button", imagebutton_1button);

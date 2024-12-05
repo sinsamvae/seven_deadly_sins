@@ -97,7 +97,7 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:red_demon_idle"
     },
     "raidCelebrationSound": {
       "value": ""

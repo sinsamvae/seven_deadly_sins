@@ -52,27 +52,25 @@ public class RenderDemonWingsProcedure {
 			emptyRenderer.clearLayers();
 			emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).render == true) {
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation == true
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark == true) {
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("craft_no_taizai:textures/entities/demon_wings.png") != null) {
-						_texture = new ResourceLocation("craft_no_taizai:textures/entities/demon_wings.png");
-					}
-					Modeldemon_wing newModel = new Modeldemon_wing(context.bakeLayer(Modeldemon_wing.LAYER_LOCATION));
-					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
-					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
-					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
-					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
-					newModel.Body.copyFrom(_pr.getModel().body);
-					newModel.Head.copyFrom(_pr.getModel().head);
-					poseStack.pushPose();
-					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-					poseStack.popPose();
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation == true
+				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark == true) {
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse("craft_no_taizai:textures/entities/demon_wings.png") != null) {
+					_texture = new ResourceLocation("craft_no_taizai:textures/entities/demon_wings.png");
 				}
+				Modeldemon_wing newModel = new Modeldemon_wing(context.bakeLayer(Modeldemon_wing.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
 			}
 		}
 	}

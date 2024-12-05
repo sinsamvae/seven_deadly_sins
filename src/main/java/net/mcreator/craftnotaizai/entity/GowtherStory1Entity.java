@@ -118,7 +118,7 @@ public class GowtherStory1Entity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GowtherStory1EntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GowtherStory1EntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

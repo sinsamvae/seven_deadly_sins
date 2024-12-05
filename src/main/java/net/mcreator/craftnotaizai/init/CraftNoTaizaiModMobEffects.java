@@ -13,8 +13,8 @@ import net.minecraft.world.effect.MobEffect;
 import net.mcreator.craftnotaizai.potion.VenomToxicyPotionMobEffect;
 import net.mcreator.craftnotaizai.potion.PurgatoryFlameMobEffect;
 import net.mcreator.craftnotaizai.potion.PowerAmplifyEffectMobEffect;
-import net.mcreator.craftnotaizai.potion.PhysicalhuntMobEffect;
-import net.mcreator.craftnotaizai.potion.PhysicalHuntNegMobEffect;
+import net.mcreator.craftnotaizai.potion.PhysicalHuntPositiveMobEffect;
+import net.mcreator.craftnotaizai.potion.PhysicalHuntNegitiveMobEffect;
 import net.mcreator.craftnotaizai.potion.NightmaretellerMobEffect;
 import net.mcreator.craftnotaizai.potion.NecrosisMobEffect;
 import net.mcreator.craftnotaizai.potion.MinimumTabletsEffectMobEffect;
@@ -33,10 +33,8 @@ import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 public class CraftNoTaizaiModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, CraftNoTaizaiMod.MODID);
 	public static final RegistryObject<MobEffect> FREZZE = REGISTRY.register("frezze", () -> new FrezzeMobEffect());
-	public static final RegistryObject<MobEffect> PHYSICALHUNT = REGISTRY.register("physicalhunt", () -> new PhysicalhuntMobEffect());
 	public static final RegistryObject<MobEffect> NIGHTMARETELLER = REGISTRY.register("nightmareteller", () -> new NightmaretellerMobEffect());
 	public static final RegistryObject<MobEffect> KING_TRUMPET = REGISTRY.register("king_trumpet", () -> new KingTrumpetMobEffect());
-	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_NEG = REGISTRY.register("physical_hunt_neg", () -> new PhysicalHuntNegMobEffect());
 	public static final RegistryObject<MobEffect> BIND = REGISTRY.register("bind", () -> new BindMobEffect());
 	public static final RegistryObject<MobEffect> PURGATORY_FLAME = REGISTRY.register("purgatory_flame", () -> new PurgatoryFlameMobEffect());
 	public static final RegistryObject<MobEffect> JACK_POTION = REGISTRY.register("jack_potion", () -> new JackPotionMobEffect());
@@ -50,4 +48,6 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> JUBAKU_ENSA_EFFECT = REGISTRY.register("jubaku_ensa_effect", () -> new JubakuEnsaEffectMobEffect());
 	public static final RegistryObject<MobEffect> VENOM_TOXICY_POTION = REGISTRY.register("venom_toxicy_potion", () -> new VenomToxicyPotionMobEffect());
 	public static final RegistryObject<MobEffect> HEAVY_METAL = REGISTRY.register("heavy_metal", () -> new HeavyMetalMobEffect());
+	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_NEGITIVE = REGISTRY.register("physical_hunt_negitive", () -> new PhysicalHuntNegitiveMobEffect());
+	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_POSITIVE = REGISTRY.register("physical_hunt_positive", () -> new PhysicalHuntPositiveMobEffect());
 }

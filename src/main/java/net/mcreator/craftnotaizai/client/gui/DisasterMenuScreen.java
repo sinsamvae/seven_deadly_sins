@@ -32,6 +32,7 @@ public class DisasterMenuScreen extends AbstractContainerScreen<DisasterMenuMenu
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_slot;
 	ImageButton imagebutton_restart;
 	ImageButton imagebutton_plusbuttonmagic;
@@ -75,6 +76,10 @@ public class DisasterMenuScreen extends AbstractContainerScreen<DisasterMenuMenu
 		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -99, this.topPos + -85, 0, 0, 196, 186, 196, 186);
 
 		RenderSystem.disableBlend();
+	}
+
+	public static HashMap<String, String> getTextboxValues() {
+		return textstate;
 	}
 
 	@Override
@@ -126,80 +131,80 @@ public class DisasterMenuScreen extends AbstractContainerScreen<DisasterMenuMenu
 		super.init();
 		imagebutton_slot = new ImageButton(this.leftPos + 23, this.topPos + 75, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(0, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(0, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_slot", imagebutton_slot);
 		this.addRenderableWidget(imagebutton_slot);
 		imagebutton_restart = new ImageButton(this.leftPos + -115, this.topPos + -47, 20, 20, 0, 0, 20, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_restart.png"), 20, 40, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(1, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(1, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_restart", imagebutton_restart);
 		this.addRenderableWidget(imagebutton_restart);
 		imagebutton_plusbuttonmagic = new ImageButton(this.leftPos + -88, this.topPos + -42, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonmagic.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(2, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(2, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonmagic", imagebutton_plusbuttonmagic);
 		this.addRenderableWidget(imagebutton_plusbuttonmagic);
 		imagebutton_plusbuttonover = new ImageButton(this.leftPos + -88, this.topPos + -29, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(3, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(3, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover", imagebutton_plusbuttonover);
 		this.addRenderableWidget(imagebutton_plusbuttonover);
 		imagebutton_plusbuttonover1 = new ImageButton(this.leftPos + -88, this.topPos + -15, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover1.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(4, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(4, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover1", imagebutton_plusbuttonover1);
 		this.addRenderableWidget(imagebutton_plusbuttonover1);
 		imagebutton_plusbuttonover2 = new ImageButton(this.leftPos + -88, this.topPos + -1, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover2.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(5, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(5, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 5, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover2", imagebutton_plusbuttonover2);
 		this.addRenderableWidget(imagebutton_plusbuttonover2);
 		imagebutton_plusbuttonover3 = new ImageButton(this.leftPos + -88, this.topPos + 13, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover3.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(6, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 6, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(6, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 6, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover3", imagebutton_plusbuttonover3);
 		this.addRenderableWidget(imagebutton_plusbuttonover3);
 		imagebutton_plusbuttonover4 = new ImageButton(this.leftPos + -88, this.topPos + 27, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover4.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(7, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 7, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(7, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 7, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover4", imagebutton_plusbuttonover4);
 		this.addRenderableWidget(imagebutton_plusbuttonover4);
 		imagebutton_plusbuttonover5 = new ImageButton(this.leftPos + -88, this.topPos + 41, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover5.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(8, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 8, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(8, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 8, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover5", imagebutton_plusbuttonover5);
 		this.addRenderableWidget(imagebutton_plusbuttonover5);
 		imagebutton_plusbuttonover6 = new ImageButton(this.leftPos + -88, this.topPos + 55, 7, 7, 0, 0, 7, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_plusbuttonover6.png"), 7, 14, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(9, x, y, z));
-				DisasterMenuButtonMessage.handleButtonAction(entity, 9, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DisasterMenuButtonMessage(9, x, y, z, textstate));
+				DisasterMenuButtonMessage.handleButtonAction(entity, 9, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_plusbuttonover6", imagebutton_plusbuttonover6);

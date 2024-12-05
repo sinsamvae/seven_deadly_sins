@@ -19,6 +19,7 @@ public class MonsterBlockGuiScreen extends AbstractContainerScreen<MonsterBlockG
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 
 	public MonsterBlockGuiScreen(MonsterBlockGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -47,6 +48,10 @@ public class MonsterBlockGuiScreen extends AbstractContainerScreen<MonsterBlockG
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
+	}
+
+	public static HashMap<String, String> getTextboxValues() {
+		return textstate;
 	}
 
 	@Override

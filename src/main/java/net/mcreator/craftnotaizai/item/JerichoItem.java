@@ -97,7 +97,7 @@ public abstract class JerichoItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_no_taizai:textures/entities/jericho_armor.png";
+			return "craft_no_taizai:textures/entities/jercho_armor.png";
 		}
 	}
 
@@ -127,7 +127,7 @@ public abstract class JerichoItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_no_taizai:textures/entities/jericho_armor.png";
+			return "craft_no_taizai:textures/entities/jercho_armor.png";
 		}
 	}
 }

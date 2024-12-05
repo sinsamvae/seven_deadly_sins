@@ -34,6 +34,7 @@ import net.mcreator.craftnotaizai.item.SoldierArmorItem;
 import net.mcreator.craftnotaizai.item.SnowflowerbeamItem;
 import net.mcreator.craftnotaizai.item.SladerArmorItem;
 import net.mcreator.craftnotaizai.item.SimonArmorItem;
+import net.mcreator.craftnotaizai.item.SevenDeadlySinsOpeningItem;
 import net.mcreator.craftnotaizai.item.SerpentIconItem;
 import net.mcreator.craftnotaizai.item.SequenceItem;
 import net.mcreator.craftnotaizai.item.ScytheItem;
@@ -76,7 +77,6 @@ import net.mcreator.craftnotaizai.item.LightningbeastItem;
 import net.mcreator.craftnotaizai.item.KnightarmorItem;
 import net.mcreator.craftnotaizai.item.KingsArmorItem;
 import net.mcreator.craftnotaizai.item.KingOutfitItem;
-import net.mcreator.craftnotaizai.item.KillerIcebergItem;
 import net.mcreator.craftnotaizai.item.KillSwitchItem;
 import net.mcreator.craftnotaizai.item.KatanaItem;
 import net.mcreator.craftnotaizai.item.JillianArmorItem;
@@ -84,7 +84,6 @@ import net.mcreator.craftnotaizai.item.JethammerItem;
 import net.mcreator.craftnotaizai.item.JerichoarmorItem;
 import net.mcreator.craftnotaizai.item.JerichoSwordItem;
 import net.mcreator.craftnotaizai.item.JerichoItem;
-import net.mcreator.craftnotaizai.item.IceBulletsItem;
 import net.mcreator.craftnotaizai.item.HyperRecoveryItem;
 import net.mcreator.craftnotaizai.item.HunterWispItem;
 import net.mcreator.craftnotaizai.item.HugoArmorItem;
@@ -173,7 +172,6 @@ import net.mcreator.craftnotaizai.item.BellStaffItem;
 import net.mcreator.craftnotaizai.item.BeerMugItem;
 import net.mcreator.craftnotaizai.item.BearIconItem;
 import net.mcreator.craftnotaizai.item.BasquiasItem;
-import net.mcreator.craftnotaizai.item.BanishingKillItem;
 import net.mcreator.craftnotaizai.item.BanOutfitItem;
 import net.mcreator.craftnotaizai.item.BanArmorItem;
 import net.mcreator.craftnotaizai.item.BalorsMagicalEyeItem;
@@ -294,9 +292,7 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BREAKTHROUGH = REGISTRY.register("breakthrough", () -> new BreakthroughItem());
 	public static final RegistryObject<Item> LIGHTNINGBEAST = REGISTRY.register("lightningbeast", () -> new LightningbeastItem());
 	public static final RegistryObject<Item> EMBRACEOFTHE_THUNDER_GOD = REGISTRY.register("embraceofthe_thunder_god", () -> new EmbraceoftheThunderGodItem());
-	public static final RegistryObject<Item> ICE_BULLETS = REGISTRY.register("ice_bullets", () -> new IceBulletsItem());
 	public static final RegistryObject<Item> FREEZE_SHIELD = REGISTRY.register("freeze_shield", () -> new FreezeShieldItem());
-	public static final RegistryObject<Item> KILLER_ICEBERG = REGISTRY.register("killer_iceberg", () -> new KillerIcebergItem());
 	public static final RegistryObject<Item> DRIFT_BOMB = REGISTRY.register("drift_bomb", () -> new DriftBombItem());
 	public static final RegistryObject<Item> BRILLIANT_DETONATION = REGISTRY.register("brilliant_detonation", () -> new BrilliantDetonationItem());
 	public static final RegistryObject<Item> HUNTER_WISP = REGISTRY.register("hunter_wisp", () -> new HunterWispItem());
@@ -305,7 +301,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> RAKAN = REGISTRY.register("rakan", () -> new RakanItem());
 	public static final RegistryObject<Item> CONDENSE_POWER = REGISTRY.register("condense_power", () -> new CondensePowerItem());
 	public static final RegistryObject<Item> FOSS = REGISTRY.register("foss", () -> new FossItem());
-	public static final RegistryObject<Item> BANISHING_KILL = REGISTRY.register("banishing_kill", () -> new BanishingKillItem());
 	public static final RegistryObject<Item> FAKE_BALL = REGISTRY.register("fake_ball", () -> new FakeBallItem());
 	public static final RegistryObject<Item> EXTERMINATE_RAY = REGISTRY.register("exterminate_ray", () -> new ExterminateRayItem());
 	public static final RegistryObject<Item> PURGATORY_VENOM = REGISTRY.register("purgatory_venom", () -> new PurgatoryVenomItem());
@@ -321,7 +316,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> NEEDLE = REGISTRY.register("needle", () -> new NeedleItem());
 	public static final RegistryObject<Item> HIDE_AND_SEEK_SPAWN_EGG = REGISTRY.register("hide_and_seek_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.HIDE_AND_SEEK, -12882822, -10076326, new Item.Properties()));
 	public static final RegistryObject<Item> VINE_SPAWN_EGG = REGISTRY.register("vine_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.VINE, -13423595, -14278384, new Item.Properties()));
-	public static final RegistryObject<Item> INSECT_F_SPAWN_EGG = REGISTRY.register("insect_f_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.INSECT_F, -3407668, -65281, new Item.Properties()));
 	public static final RegistryObject<Item> FIGHTING_AREA_SPAWN_EGG = REGISTRY.register("fighting_area_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.FIGHTING_AREA, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> TALA_VILLAGE_FLOWER = block(CraftNoTaizaiModBlocks.TALA_VILLAGE_FLOWER);
 	public static final RegistryObject<Item> LUIGI_SPAWN_EGG = REGISTRY.register("luigi_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.LUIGI, -6737152, -26368, new Item.Properties()));
@@ -620,6 +614,11 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> ISTAR_PORTAL_BLOCK = block(CraftNoTaizaiModBlocks.ISTAR_PORTAL_BLOCK);
 	public static final RegistryObject<Item> BRITANNIA_COINS = REGISTRY.register("britannia_coins", () -> new BritanniaCoinsItem());
 	public static final RegistryObject<Item> CANNON_ENTITY_SPAWN_EGG = REGISTRY.register("cannon_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CANNON_ENTITY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> SLEEPING_FOREST_PLANK = block(CraftNoTaizaiModBlocks.SLEEPING_FOREST_PLANK);
+	public static final RegistryObject<Item> SEVEN_DEADLY_SINS_OPENING = REGISTRY.register("seven_deadly_sins_opening", () -> new SevenDeadlySinsOpeningItem());
+	public static final RegistryObject<Item> GLOXINA_BOSS_SPAWN_EGG = REGISTRY.register("gloxina_boss_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GLOXINA_BOSS, -4965284, -10778489, new Item.Properties()));
+	public static final RegistryObject<Item> MOSS_DRAGON_SPAWN_EGG = REGISTRY.register("moss_dragon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MOSS_DRAGON, -12169686, -13421028, new Item.Properties()));
+	public static final RegistryObject<Item> TYRANT_DRAGON_CAVE_SPAWN_EGG = REGISTRY.register("tyrant_dragon_cave_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE, -65536, -6750208, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

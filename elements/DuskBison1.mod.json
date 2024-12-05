@@ -95,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:duskbison_hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:duskbison_death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:duskbison_idle"
     },
     "raidCelebrationSound": {
       "value": ""

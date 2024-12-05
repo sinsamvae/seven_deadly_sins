@@ -118,7 +118,7 @@ public class DeadHelbramanimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		DeadHelbramEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		DeadHelbramEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

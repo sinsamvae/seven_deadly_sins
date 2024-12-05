@@ -10,13 +10,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -34,7 +34,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.procedures.ChainExplosionV2OnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class ChainExplosionV2Entity extends Monster {
+public class ChainExplosionV2Entity extends PathfinderMob {
 	public ChainExplosionV2Entity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftNoTaizaiModEntities.CHAIN_EXPLOSION_V_2.get(), world);
 	}

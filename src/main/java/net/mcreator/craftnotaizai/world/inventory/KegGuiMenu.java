@@ -79,7 +79,7 @@ public class KegGuiMenu extends AbstractContainerMenu implements Supplier<Map<In
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 36, 38) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, -55, -45) {
 			private final int slot = 0;
 
 			@Override
@@ -87,10 +87,10 @@ public class KegGuiMenu extends AbstractContainerMenu implements Supplier<Map<In
 				return CraftNoTaizaiModItems.AGAVE.get() == stack.getItem();
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 84, 38) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, -7, -45) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 134, 38) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, -45) {
 			private final int slot = 2;
 
 			@Override
@@ -100,9 +100,9 @@ public class KegGuiMenu extends AbstractContainerMenu implements Supplier<Map<In
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 3 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, -88 + 8 + sj * 18, -83 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 3 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, -88 + 8 + si * 18, -83 + 142));
 	}
 
 	@Override

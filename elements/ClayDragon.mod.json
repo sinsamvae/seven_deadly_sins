@@ -27,10 +27,11 @@
       "value": -10092493,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -100,7 +101,13 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": "CUSTOM:claydragon_idle"
+    },
+    "raidCelebrationSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "ClayDragonOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

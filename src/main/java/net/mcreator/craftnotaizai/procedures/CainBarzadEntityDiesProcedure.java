@@ -7,40 +7,38 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class CainBarzadEntityDiesProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		double drop = 0;
 		double drop3 = 0;
 		double drop2 = 0;
-		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story14")) {
-			if (!(entity instanceof Player)) {
-				{
-					final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(65 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
-						if (entityiterator instanceof Player && !(entityiterator == entity)) {
-							{
-								String _setval = "Story15";
-								sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.Story = _setval;
-									capability.syncPlayerVariables(sourceentity);
-								});
-							}
-							{
-								double _setval = (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-										+ (Math.ceil(sourceentity.getPersistentData().getDouble("level")) * 0.5 + 415) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
-								sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.xp = _setval;
-									capability.syncPlayerVariables(sourceentity);
-								});
-							}
+		{
+			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(65 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story14")) {
+					if (entityiterator instanceof Player && !(entityiterator == entity)) {
+						{
+							String _setval = "Story15";
+							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Story = _setval;
+								capability.syncPlayerVariables(entityiterator);
+							});
+						}
+						{
+							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
+									+ (Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 415) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.xp = _setval;
+								capability.syncPlayerVariables(entityiterator);
+							});
 						}
 					}
 				}

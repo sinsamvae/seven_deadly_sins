@@ -149,7 +149,7 @@ public class GreenKnightAnimatedEntity extends PathfinderMob implements GeoEntit
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftNoTaizaiModEntities.GREEN_KNIGHT_ANIMATED.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+		SpawnPlacements.register(CraftNoTaizaiModEntities.GREEN_KNIGHT_ANIMATED.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();

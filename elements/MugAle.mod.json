@@ -9,11 +9,7 @@
     "states": [],
     "name": "Vonya ale",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Foods"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 32,

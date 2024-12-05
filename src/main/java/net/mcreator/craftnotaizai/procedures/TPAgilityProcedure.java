@@ -3,14 +3,14 @@ package net.mcreator.craftnotaizai.procedures;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 public class TPAgilityProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double MP = 0;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility != (double) RandomRaceConfigConfiguration.SPEED.get()) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility != (double) CraftNoTaizaiConfiguration.SPEED.get()) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TPAmount == 1) {
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TP >= 1) {
 					{

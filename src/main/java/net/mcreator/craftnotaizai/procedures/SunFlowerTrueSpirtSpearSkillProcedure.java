@@ -30,6 +30,10 @@ public class SunFlowerTrueSpirtSpearSkillProcedure {
 		double yaw = 0;
 		double xShot = 0;
 		double zShot = 0;
+		double z2 = 0;
+		double y2 = 0;
+		double range = 0;
+		double x2 = 0;
 		if (entity.onGround()) {
 			x = entity.getX() + entity.getLookAngle().x * (-1);
 			z = entity.getZ() + entity.getLookAngle().z * (-1);
@@ -41,12 +45,20 @@ public class SunFlowerTrueSpirtSpearSkillProcedure {
 							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("summon craft_no_taizai:sun_flower_true_spirt_spear " + x + " ~ " + z + " {Rotation:[" + yaw + "f,0f]}"));
 				}
 			}
-			if (((Entity) world.getEntitiesOfClass(SunFlowerTrueSpirtSpearEntity.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).stream().sorted(new Object() {
-				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-				}
-			}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
-				_toTame.tame(_owner);
+			if (!(((Entity) world.getEntitiesOfClass(SunFlowerTrueSpirtSpearEntity.class, AABB.ofSize(new Vec3((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1))), 1000, 1000, 1000), e -> true)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+						}
+					}.compareDistOf((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1)))).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+				if (((Entity) world.getEntitiesOfClass(SunFlowerTrueSpirtSpearEntity.class, AABB.ofSize(new Vec3((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1))), 1000, 1000, 1000), e -> true)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+							}
+						}.compareDistOf((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1)))).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+					_toTame.tame(_owner);
+			}
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();

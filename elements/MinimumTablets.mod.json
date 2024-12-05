@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "glass_bottle_je2_be2",
+    "texture": "minimumtablets",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
     "name": "Minimum Tablets",
-    "rarity": "COMMON",
+    "rarity": "UNCOMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:Foods"

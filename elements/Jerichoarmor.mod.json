@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "jericho_body",
+    "textureBody": "jercho_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "jericho_leggings",
+    "textureLeggings": "jercho_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

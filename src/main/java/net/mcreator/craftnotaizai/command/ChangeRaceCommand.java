@@ -24,7 +24,7 @@ import net.mcreator.craftnotaizai.procedures.ChangedemonProcedure;
 public class ChangeRaceCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("change_race").requires(s -> s.hasPermission(1)).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("human").executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("change_race").requires(s -> s.hasPermission(1)).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Human").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -38,7 +38,7 @@ public class ChangeRaceCommand {
 
 			ChangeracehumancommandProcedure.execute(arguments, entity);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("demon").executes(arguments -> {
+		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Demon").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -52,7 +52,7 @@ public class ChangeRaceCommand {
 
 			ChangedemonProcedure.execute(arguments, entity);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("fairy").executes(arguments -> {
+		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Fairy").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -66,7 +66,7 @@ public class ChangeRaceCommand {
 
 			ChangefairyProcedure.execute(arguments, entity);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("giant").executes(arguments -> {
+		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Giant").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

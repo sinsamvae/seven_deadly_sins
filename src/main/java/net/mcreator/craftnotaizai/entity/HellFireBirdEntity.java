@@ -72,7 +72,7 @@ public class HellFireBirdEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity(), this);
+		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), entityHitResult.getEntity(), this);
 	}
 
 	@Override

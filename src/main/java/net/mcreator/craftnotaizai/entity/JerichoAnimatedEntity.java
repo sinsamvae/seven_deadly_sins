@@ -118,7 +118,7 @@ public class JerichoAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		JerichoMobEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		JerichoMobEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

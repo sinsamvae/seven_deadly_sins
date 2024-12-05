@@ -1,6 +1,5 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
@@ -8,7 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 public class FullCounterOnKeyPressedProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Full_Counter")) {
@@ -60,7 +59,6 @@ public class FullCounterOnKeyPressedProcedure {
 						_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
 				}
 			}
-			DivineCutsProcedure.execute(world, entity);
 		}
 	}
 }

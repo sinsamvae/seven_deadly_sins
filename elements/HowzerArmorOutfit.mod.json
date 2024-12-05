@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "howzer_chest",
+    "textureBody": "howzerchest",
     "enableLeggings": true,
-    "textureLeggings": "howzer_leg",
+    "textureLeggings": "howzerleggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

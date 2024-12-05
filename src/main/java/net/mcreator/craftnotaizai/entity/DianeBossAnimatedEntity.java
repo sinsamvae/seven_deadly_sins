@@ -128,7 +128,7 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		DianeBossEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		DianeBossEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

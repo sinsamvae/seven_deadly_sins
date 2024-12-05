@@ -117,7 +117,7 @@ public class TaizooAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		TaizooEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		TaizooEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
+import net.mcreator.craftnotaizai.procedures.IstarPlayerLeavesDimensionProcedure;
 import net.mcreator.craftnotaizai.procedures.IstarPlayerEntersDimensionProcedure;
 
 @Mod.EventBusSubscriber
@@ -47,8 +48,11 @@ public class IstarDimension {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
+		if (event.getFrom() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar"))) {
+			IstarPlayerLeavesDimensionProcedure.execute(entity);
+		}
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar"))) {
-			IstarPlayerEntersDimensionProcedure.execute(world, x, z, entity);
+			IstarPlayerEntersDimensionProcedure.execute(world, entity);
 		}
 	}
 }

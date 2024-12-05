@@ -7,7 +7,7 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "CUSTOM:cruelsunhit"
+      "value": "CUSTOM:fire"
     },
     "igniteFire": false,
     "power": 1.0,

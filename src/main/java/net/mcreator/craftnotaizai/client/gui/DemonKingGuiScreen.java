@@ -25,6 +25,7 @@ public class DemonKingGuiScreen extends AbstractContainerScreen<DemonKingGuiMenu
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_button_1;
 	ImageButton imagebutton_button_2;
 
@@ -89,16 +90,16 @@ public class DemonKingGuiScreen extends AbstractContainerScreen<DemonKingGuiMenu
 		super.init();
 		imagebutton_button_1 = new ImageButton(this.leftPos + -60, this.topPos + -18, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_button_1.png"), 16, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonKingGuiButtonMessage(0, x, y, z));
-				DemonKingGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonKingGuiButtonMessage(0, x, y, z, textstate));
+				DemonKingGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_button_1", imagebutton_button_1);
 		this.addRenderableWidget(imagebutton_button_1);
 		imagebutton_button_2 = new ImageButton(this.leftPos + -60, this.topPos + 11, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_button_2.png"), 16, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonKingGuiButtonMessage(1, x, y, z));
-				DemonKingGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonKingGuiButtonMessage(1, x, y, z, textstate));
+				DemonKingGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_button_2", imagebutton_button_2);

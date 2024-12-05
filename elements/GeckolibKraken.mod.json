@@ -95,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:kraken_hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:kraken_idle"
     },
     "raidCelebrationSound": {
       "value": ""

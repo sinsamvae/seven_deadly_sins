@@ -135,7 +135,7 @@ public class MeliodasBossAnimatedEntity extends PathfinderMob implements GeoEnti
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		MeliodasbossEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		MeliodasbossEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

@@ -118,7 +118,7 @@ public class DemonHendricksonAnimatedEntity extends Monster implements GeoEntity
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		DemonHendricksonEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		DemonHendricksonEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

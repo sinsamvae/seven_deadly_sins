@@ -128,7 +128,7 @@ public class MerlinBossAnimatedEntity extends PathfinderMob implements GeoEntity
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		MerlinBossEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		MerlinBossEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

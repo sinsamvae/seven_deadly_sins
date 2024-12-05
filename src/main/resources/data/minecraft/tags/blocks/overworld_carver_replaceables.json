@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "minecraft:dirt",
+    "minecraft:air",
     "minecraft:stone",
     "minecraft:grass_block",
     "craft_no_taizai:purgatory_block",

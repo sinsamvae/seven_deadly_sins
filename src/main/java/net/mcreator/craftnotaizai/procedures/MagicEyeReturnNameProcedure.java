@@ -19,6 +19,7 @@ public class MagicEyeReturnNameProcedure {
 		boolean target = false;
 		String BP = "";
 		double range = 0;
+		BP = "NONE";
 		for (int index0 = 0; index0 < 20; index0++) {
 			{
 				final Vec3 _center = new Vec3(
@@ -40,6 +41,6 @@ public class MagicEyeReturnNameProcedure {
 			}
 			range = range + 1;
 		}
-		return "";
+		return BP;
 	}
 }

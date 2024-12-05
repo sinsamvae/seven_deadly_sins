@@ -118,7 +118,7 @@ public class HelbremAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		HelbremEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		HelbremEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

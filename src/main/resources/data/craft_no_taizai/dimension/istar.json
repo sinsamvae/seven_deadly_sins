@@ -27,10 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "minecraft:grass_block",
-        "Properties": {
-          "snowy": "false"
-        }
+        "Name": "minecraft:air"
       },
       "default_fluid": {
         "Name": "minecraft:air"

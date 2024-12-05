@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "fairyhelbram_chest",
+    "textureBody": "fairyhelbramchest",
     "enableLeggings": true,
-    "textureLeggings": "fairyhelbrem_leg",
+    "textureLeggings": "fairyhelbramlegs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

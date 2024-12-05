@@ -118,7 +118,7 @@ public class FriesiaAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		FriesiaEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		FriesiaEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

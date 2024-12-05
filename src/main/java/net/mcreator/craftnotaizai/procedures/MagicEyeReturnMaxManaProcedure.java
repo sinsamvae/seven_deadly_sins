@@ -21,6 +21,7 @@ public class MagicEyeReturnMaxManaProcedure {
 		boolean target = false;
 		String BP = "";
 		double range = 0;
+		BP = "NONE";
 		for (int index0 = 0; index0 < 20; index0++) {
 			{
 				final Vec3 _center = new Vec3(
@@ -36,12 +37,13 @@ public class MagicEyeReturnMaxManaProcedure {
 				}
 			}
 			if (target && entity_target instanceof Player) {
-				return "\u00A7eMaxMana: " + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerMaxMana;
+				return "\u00A7eMaxMana: "
+						+ new java.text.DecimalFormat("##.##").format(Math.ceil((entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana));
 			} else if (target && entity_target instanceof PathfinderMob) {
 				return "\u00A7eMaxMana: " + new java.text.DecimalFormat("##.##").format(Math.ceil(entity_target.getPersistentData().getDouble("Mana")));
 			}
 			range = range + 1;
 		}
-		return "";
+		return BP;
 	}
 }

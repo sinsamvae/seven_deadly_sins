@@ -27,10 +27,11 @@
       "value": -13395712,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -102,6 +103,9 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "onMobTickUpdate": {
       "name": "GreenKnightEntityIsHurt"
     },
@@ -158,7 +162,7 @@
       "name": "SpawnCondtion"
     },
     "spawningProbability": 8,
-    "mobSpawningType": "ambient",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [],

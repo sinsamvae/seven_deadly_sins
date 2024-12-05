@@ -118,7 +118,7 @@ public class GrayDemonHendricksonAnimatedEntity extends Monster implements GeoEn
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GrayDemonHendricksonEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GrayDemonHendricksonEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

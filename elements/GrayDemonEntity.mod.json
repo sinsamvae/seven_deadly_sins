@@ -95,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:graydemon_hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:graydemon_idle"
     },
     "raidCelebrationSound": {
       "value": ""

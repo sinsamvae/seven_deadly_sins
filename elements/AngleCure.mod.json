@@ -95,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:cureangle_hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:cure_angle_walk"
     },
     "raidCelebrationSound": {
       "value": ""

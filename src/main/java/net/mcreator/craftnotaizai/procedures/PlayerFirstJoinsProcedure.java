@@ -23,7 +23,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.world.inventory.DemonClanMenu;
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import javax.annotation.Nullable;
 
@@ -44,29 +44,15 @@ public class PlayerFirstJoinsProcedure {
 		if (entity == null)
 			return;
 		double RandomRace = 0;
-		{
-			double _setval = entity.getX();
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.joinX = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			double _setval = entity.getY();
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.joinY = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			double _setval = entity.getZ();
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.joinZ = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins == 0) {
-			if (RandomRaceConfigConfiguration.RANDOM_RACE.get()) {
+		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
+			{
+				boolean _setval = true;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PlayerFirstJoins = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if (CraftNoTaizaiConfiguration.RANDOM_RACE.get()) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -92,13 +78,6 @@ public class PlayerFirstJoinsProcedure {
 					double _setval = 0;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.MagicScroll = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power_percentage = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -161,20 +140,6 @@ public class PlayerFirstJoinsProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.hpandmanaoverlay = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Races = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
 				}
 				if (RandomRace == 2) {
 					{
@@ -191,40 +156,12 @@ public class PlayerFirstJoinsProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.hpandmanaoverlay = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Races = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
 				}
 				if (RandomRace == 3) {
 					{
 						double _setval = 1;
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Fairy_Clan = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Races = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.hpandmanaoverlay = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -247,21 +184,7 @@ public class PlayerFirstJoinsProcedure {
 					{
 						boolean _setval = true;
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.hpandmanaoverlay = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.gaint = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Races = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -277,13 +200,6 @@ public class PlayerFirstJoinsProcedure {
 					double _setval = 0;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.MagicScroll = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power_percentage = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

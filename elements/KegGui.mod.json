@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 182,
-    "height": 166,
+    "width": 0,
+    "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -21,8 +21,8 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 125,
-          "y": 40
+          "x": 129,
+          "y": 42
         }
       },
       {
@@ -91,30 +91,71 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 229,
-          "y": 37
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_cups_left",
-          "text": {
-            "fixedValue": "",
-            "name": "CupsLeft"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "x": 229,
-          "y": 48
+          "x": 237,
+          "y": 51
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "keg_ui-export.png",
+          "image": "water_keg.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCubps1"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_key_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCubps2"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCups3"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCups4"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "key_gui2.png",
           "use1Xscale": false,
           "x": 123,
           "y": 37

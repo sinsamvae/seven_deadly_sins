@@ -104,10 +104,10 @@
       "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:tyrant_death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:tyrant_idle"
     },
     "raidCelebrationSound": {
       "value": ""

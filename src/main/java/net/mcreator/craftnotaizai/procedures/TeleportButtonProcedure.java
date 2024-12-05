@@ -4,7 +4,6 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.client.gui.components.EditBox;
 
 import java.util.HashMap;
 
@@ -15,9 +14,9 @@ public class TeleportButtonProcedure {
 		String x = "";
 		String y = "";
 		String z = "";
-		x = guistate.containsKey("text:X") ? ((EditBox) guistate.get("text:X")).getValue() : "";
-		y = guistate.containsKey("text:Y") ? ((EditBox) guistate.get("text:Y")).getValue() : "";
-		z = guistate.containsKey("text:Z") ? ((EditBox) guistate.get("text:Z")).getValue() : "";
+		x = guistate.containsKey("textin:X") ? (String) guistate.get("textin:X") : "";
+		y = guistate.containsKey("textin:Y") ? (String) guistate.get("textin:Y") : "";
+		z = guistate.containsKey("textin:Z") ? (String) guistate.get("textin:Z") : "";
 		{
 			Entity _ent = entity;
 			_ent.teleportTo(new Object() {
@@ -28,7 +27,7 @@ public class TeleportButtonProcedure {
 					}
 					return 0;
 				}
-			}.convert(guistate.containsKey("text:X") ? ((EditBox) guistate.get("text:X")).getValue() : ""), new Object() {
+			}.convert(guistate.containsKey("textin:X") ? (String) guistate.get("textin:X") : ""), new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -36,7 +35,7 @@ public class TeleportButtonProcedure {
 					}
 					return 0;
 				}
-			}.convert(guistate.containsKey("text:Y") ? ((EditBox) guistate.get("text:Y")).getValue() : ""), new Object() {
+			}.convert(guistate.containsKey("textin:Y") ? (String) guistate.get("textin:Y") : ""), new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -44,7 +43,7 @@ public class TeleportButtonProcedure {
 					}
 					return 0;
 				}
-			}.convert(guistate.containsKey("text:Z") ? ((EditBox) guistate.get("text:Z")).getValue() : ""));
+			}.convert(guistate.containsKey("textin:Z") ? (String) guistate.get("textin:Z") : ""));
 			if (_ent instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.connection.teleport(new Object() {
 					double convert(String s) {
@@ -54,7 +53,7 @@ public class TeleportButtonProcedure {
 						}
 						return 0;
 					}
-				}.convert(guistate.containsKey("text:X") ? ((EditBox) guistate.get("text:X")).getValue() : ""), new Object() {
+				}.convert(guistate.containsKey("textin:X") ? (String) guistate.get("textin:X") : ""), new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -62,7 +61,7 @@ public class TeleportButtonProcedure {
 						}
 						return 0;
 					}
-				}.convert(guistate.containsKey("text:Y") ? ((EditBox) guistate.get("text:Y")).getValue() : ""), new Object() {
+				}.convert(guistate.containsKey("textin:Y") ? (String) guistate.get("textin:Y") : ""), new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -70,7 +69,7 @@ public class TeleportButtonProcedure {
 						}
 						return 0;
 					}
-				}.convert(guistate.containsKey("text:Z") ? ((EditBox) guistate.get("text:Z")).getValue() : ""), _ent.getYRot(), _ent.getXRot());
+				}.convert(guistate.containsKey("textin:Z") ? (String) guistate.get("textin:Z") : ""), _ent.getYRot(), _ent.getXRot());
 		}
 	}
 }

@@ -23,20 +23,6 @@ public class SelectDemonProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			boolean _setval = true;
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.hpandmanaoverlay = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			boolean _setval = true;
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Races = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

@@ -128,7 +128,7 @@ public class BanBossAnimatedEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		BanBossEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		BanBossEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

@@ -22,6 +22,7 @@ public class GaintClanScreen extends AbstractContainerScreen<GaintClanMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_overarrow;
 	ImageButton imagebutton_overarrow2;
 	ImageButton imagebutton_select;
@@ -94,24 +95,24 @@ public class GaintClanScreen extends AbstractContainerScreen<GaintClanMenu> {
 		super.init();
 		imagebutton_overarrow = new ImageButton(this.leftPos + -138, this.topPos + -14, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow.png"), 16, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(0, x, y, z));
-				GaintClanButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(0, x, y, z, textstate));
+				GaintClanButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_overarrow", imagebutton_overarrow);
 		this.addRenderableWidget(imagebutton_overarrow);
 		imagebutton_overarrow2 = new ImageButton(this.leftPos + 102, this.topPos + -14, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow2.png"), 16, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(1, x, y, z));
-				GaintClanButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(1, x, y, z, textstate));
+				GaintClanButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_overarrow2", imagebutton_overarrow2);
 		this.addRenderableWidget(imagebutton_overarrow2);
 		imagebutton_select = new ImageButton(this.leftPos + -48, this.topPos + 91, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_select.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(2, x, y, z));
-				GaintClanButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GaintClanButtonMessage(2, x, y, z, textstate));
+				GaintClanButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_select", imagebutton_select);

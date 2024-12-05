@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "craft_no_taizai:item/advancement_page_1"
+    "layer0": "craft_no_taizai:item/air"
   },
   "display": {
     "thirdperson_righthand": {

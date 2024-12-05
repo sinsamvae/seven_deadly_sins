@@ -18,12 +18,26 @@ public class CraftNoTaizaiModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
 		if (event.getType() == VillagerProfession.FARMER) {
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 3),
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.PUMPKIN_SEEDS, 3),
 
-					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get(), 3), 10, 3, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 11),
+					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get(), 2), 10, 3, 0.03f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.WHEAT_SEEDS, 2),
 
-					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get(), 10), 10, 16, 0.05f));
+					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get()), 10, 2, 0.03f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.TORCHFLOWER_SEEDS, 3),
+
+					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get(), 2), 10, 3, 0.03f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.MELON_SEEDS, 2),
+
+					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get()), 10, 2, 0.03f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.BEETROOT_SEEDS, 3),
+
+					new ItemStack(CraftNoTaizaiModItems.AGAVE_SEEDS.get(), 2), 10, 3, 0.03f));
+		}
+		if (event.getType() == VillagerProfession.WEAPONSMITH) {
+			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 9),
+
+					new ItemStack(CraftNoTaizaiModItems.BRITANNIA_COINS.get(), 4), 10, 12, 0.06f));
 		}
 	}
 }

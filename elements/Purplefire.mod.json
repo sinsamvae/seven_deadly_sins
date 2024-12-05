@@ -58,7 +58,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "FIRE"
+      "value": "ROCK"
     },
     "tickRate": 80,
     "tickRandomly": false,
@@ -129,9 +129,6 @@
     },
     "onDestroyedByExplosion": {
       "name": "PurplefireBlockDestroyedByPlayer"
-    },
-    "onEntityCollides": {
-      "name": "PurplefireEntityCollidesInTheBlock"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

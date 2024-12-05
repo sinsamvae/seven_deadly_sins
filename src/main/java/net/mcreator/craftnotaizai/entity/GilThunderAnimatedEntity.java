@@ -126,7 +126,7 @@ public class GilThunderAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GilThunderEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GilThunderEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

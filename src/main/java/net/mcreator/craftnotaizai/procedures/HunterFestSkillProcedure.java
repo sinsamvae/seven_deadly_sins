@@ -1,52 +1,70 @@
 package net.mcreator.craftnotaizai.procedures;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class HunterFestSkillProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
-				.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("Hunter Fest")) {
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).hunter_fest == false) {
-				{
-					boolean _setval = true;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.hunter_fest = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+		boolean target = false;
+		Entity entity_target = null;
+		{
+			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
+						|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+						|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
+							public boolean checkGamemode(Entity _ent) {
+								if (_ent instanceof ServerPlayer _serverPlayer) {
+									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+								}
+								return false;
+							}
+						}.checkGamemode(entityiterator) || new Object() {
+							public boolean checkGamemode(Entity _ent) {
+								if (_ent instanceof ServerPlayer _serverPlayer) {
+									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+								}
+								return false;
+							}
+						}.checkGamemode(entityiterator))) {
+					target = true;
+					entity_target = entityiterator;
 				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.hunterfest = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Skill Activated"), false);
-			} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).hunter_fest == true) {
-				{
-					boolean _setval = false;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.hunter_fest = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 3;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.hunterfest = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
 			}
+		}
+		if (target && entity_target instanceof LivingEntity) {
+			if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(),
+						(int) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 5), 0, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_POSITIVE.get(),
+						(int) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 5), 0, false, false));
 		}
 	}
 }

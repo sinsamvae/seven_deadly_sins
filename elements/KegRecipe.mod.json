@@ -12,31 +12,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       },
       {
         "value": "Blocks.WOODEN_SLAB"
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.PLANKS"
       }
     ],
     "recipeReturnStack": {

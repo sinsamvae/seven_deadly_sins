@@ -4,10 +4,10 @@
   "definition": {
     "name": "Sleeping Forest",
     "groundBlock": {
-      "value": "CUSTOM:SleepingForestDirt"
+      "value": "Blocks.GRASS"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SleepingForestDirt"
     },
     "underwaterBlock": {
       "value": ""
@@ -44,26 +44,26 @@
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": 0.2,
-      "max": 0.55
+      "min": -0.2,
+      "max": 0.2
     },
     "genHumidity": {
-      "min": -1.0,
-      "max": -0.35
+      "min": -0.2,
+      "max": 0.2
     },
     "genContinentalness": {
-      "min": -0.11,
-      "max": 0.55
+      "min": 0.3,
+      "max": 1.0
     },
     "genErosion": {
       "min": 0.0,
-      "max": 2.0
+      "max": 0.4
     },
     "genWeirdness": {
-      "min": 0.0,
-      "max": 2.0
+      "min": -0.6,
+      "max": 1.0
     },
-    "treesPerChunk": 20,
+    "treesPerChunk": 45,
     "vanillaTreeType": "Savanna trees",
     "treeType": 1,
     "minHeight": 6,
@@ -79,7 +79,11 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "ForestGrass"
+    ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

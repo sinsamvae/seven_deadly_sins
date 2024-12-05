@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "craft_no_taizai:block/sleepingforestlog",
-    "up": "craft_no_taizai:block/sleepingforestlog",
-    "north": "craft_no_taizai:block/sleepingforestlog",
-    "east": "craft_no_taizai:block/sleepingforestlog",
-    "south": "craft_no_taizai:block/sleepingforestlog",
-    "west": "craft_no_taizai:block/sleepingforestlog",
-    "particle": "craft_no_taizai:block/sleepingforestlog"
+    "down": "craft_no_taizai:block/sleeping_forst_log",
+    "up": "craft_no_taizai:block/sleeping_forest_bottom",
+    "north": "craft_no_taizai:block/sleeping_forst_log",
+    "east": "craft_no_taizai:block/sleeping_forst_log",
+    "south": "craft_no_taizai:block/sleeping_forst_log",
+    "west": "craft_no_taizai:block/sleeping_forst_log",
+    "particle": "craft_no_taizai:block/sleeping_forst_log"
   },
   "render_type": "solid"
 }

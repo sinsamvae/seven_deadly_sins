@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import javax.annotation.Nullable;
 
@@ -43,7 +43,7 @@ public class EntityDiesProcedure {
 					if (entityiterator instanceof Player && !(entityiterator == entity)) {
 						{
 							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-									+ (Math.round(entity.getPersistentData().getDouble("level") * 0.5) + 1) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
+									+ (Math.round(entity.getPersistentData().getDouble("level") * 0.5) + 1) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
 							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.xp = _setval;
 								capability.syncPlayerVariables(entityiterator);

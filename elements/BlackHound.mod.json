@@ -95,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.wolf.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "entity.wolf.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.wolf.ambient"
     },
     "raidCelebrationSound": {
       "value": ""

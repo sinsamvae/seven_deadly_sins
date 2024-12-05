@@ -27,6 +27,7 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_slot;
 	ImageButton imagebutton_slot1;
 
@@ -97,16 +98,16 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		super.init();
 		imagebutton_slot = new ImageButton(this.leftPos + -49, this.topPos + -34, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(0, x, y, z));
-				ClonesGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(0, x, y, z, textstate));
+				ClonesGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_slot", imagebutton_slot);
 		this.addRenderableWidget(imagebutton_slot);
 		imagebutton_slot1 = new ImageButton(this.leftPos + -49, this.topPos + 2, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot1.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(1, x, y, z));
-				ClonesGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(1, x, y, z, textstate));
+				ClonesGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_slot1", imagebutton_slot1);

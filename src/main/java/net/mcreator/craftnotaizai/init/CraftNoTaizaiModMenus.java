@@ -17,8 +17,8 @@ import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.MonsterBlockGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.world.inventory.KegGuiMenu;
+import net.mcreator.craftnotaizai.world.inventory.JennaGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.HumanClanMenu;
-import net.mcreator.craftnotaizai.world.inventory.HornOfCernunosGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.GaintClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.FairyClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.DisasterMenuMenu;
@@ -41,7 +41,6 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<MagicMenuMenu>> MAGIC_MENU = REGISTRY.register("magic_menu", () -> IForgeMenuType.create(MagicMenuMenu::new));
 	public static final RegistryObject<MenuType<TeleportationGuiMenu>> TELEPORTATION_GUI = REGISTRY.register("teleportation_gui", () -> IForgeMenuType.create(TeleportationGuiMenu::new));
 	public static final RegistryObject<MenuType<KegGuiMenu>> KEG_GUI = REGISTRY.register("keg_gui", () -> IForgeMenuType.create(KegGuiMenu::new));
-	public static final RegistryObject<MenuType<HornOfCernunosGuiMenu>> HORN_OF_CERNUNOS_GUI = REGISTRY.register("horn_of_cernunos_gui", () -> IForgeMenuType.create(HornOfCernunosGuiMenu::new));
 	public static final RegistryObject<MenuType<SideQuestGuiMenu>> SIDE_QUEST_GUI = REGISTRY.register("side_quest_gui", () -> IForgeMenuType.create(SideQuestGuiMenu::new));
 	public static final RegistryObject<MenuType<ClonesGuiMenu>> CLONES_GUI = REGISTRY.register("clones_gui", () -> IForgeMenuType.create(ClonesGuiMenu::new));
 	public static final RegistryObject<MenuType<MonsterBlockGuiMenu>> MONSTER_BLOCK_GUI = REGISTRY.register("monster_block_gui", () -> IForgeMenuType.create(MonsterBlockGuiMenu::new));
@@ -49,4 +48,5 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<DisasterMenuMenu>> DISASTER_MENU = REGISTRY.register("disaster_menu", () -> IForgeMenuType.create(DisasterMenuMenu::new));
 	public static final RegistryObject<MenuType<CloverTradingMenu>> CLOVER_TRADING = REGISTRY.register("clover_trading", () -> IForgeMenuType.create(CloverTradingMenu::new));
 	public static final RegistryObject<MenuType<CannonGuiMenu>> CANNON_GUI = REGISTRY.register("cannon_gui", () -> IForgeMenuType.create(CannonGuiMenu::new));
+	public static final RegistryObject<MenuType<JennaGuiMenu>> JENNA_GUI = REGISTRY.register("jenna_gui", () -> IForgeMenuType.create(JennaGuiMenu::new));
 }

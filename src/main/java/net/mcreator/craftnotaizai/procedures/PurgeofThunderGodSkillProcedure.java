@@ -33,15 +33,6 @@ public class PurgeofThunderGodSkillProcedure {
 			return;
 		double range = 0;
 		for (int index0 = 0; index0 < 7; index0++) {
-			if (world instanceof ServerLevel _level) {
-				LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-				entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(
-						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
-						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
-						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())));
-				entityToSpawn.setVisualOnly(true);
-				_level.addFreshEntity(entityToSpawn);
-			}
 			{
 				final Vec3 _center = new Vec3(
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
@@ -72,6 +63,12 @@ public class PurgeofThunderGodSkillProcedure {
 									return false;
 								}
 							}.checkGamemode(entityiterator))) {
+						if (world instanceof ServerLevel _level) {
+							LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
+							entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ())));
+							entityToSpawn.setVisualOnly(true);
+							_level.addFreshEntity(entityToSpawn);
+						}
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
 								(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 1.5));
 					}

@@ -21,6 +21,7 @@ public class MagicEyeReturnDexProcedure {
 		boolean target = false;
 		String BP = "";
 		double range = 0;
+		BP = "NONE";
 		for (int index0 = 0; index0 < 20; index0++) {
 			{
 				final Vec3 _center = new Vec3(
@@ -36,12 +37,12 @@ public class MagicEyeReturnDexProcedure {
 				}
 			}
 			if (target && entity_target instanceof Player) {
-				return "\u00A7eSpirit: " + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerDex;
+				return "\u00A7eSpirit: " + new java.text.DecimalFormat("##.##").format(Math.ceil((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit));
 			} else if (target && entity_target instanceof PathfinderMob) {
 				return "\u00A7eSpirit: " + new java.text.DecimalFormat("##.##").format(Math.ceil(entity_target.getPersistentData().getDouble("Spirit")));
 			}
 			range = range + 1;
 		}
-		return "";
+		return BP;
 	}
 }

@@ -128,7 +128,7 @@ public class GowtherBossAnimatedEntity extends PathfinderMob implements GeoEntit
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GowtherBossEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GowtherBossEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

@@ -118,7 +118,7 @@ public class DreyfusAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		DreyfusEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		DreyfusEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

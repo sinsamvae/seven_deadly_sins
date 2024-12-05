@@ -27,10 +27,11 @@
       "value": -39322,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -94,12 +95,15 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:chicken_matango_hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:chicken_matango_dies"
     },
     "stepSound": {
+      "value": "CUSTOM:chicken_matango_idle"
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "whenMobIsHurt": {
@@ -179,6 +183,9 @@
       },
       {
         "value": "mutated_birch_forest"
+      },
+      {
+        "value": "CUSTOM:FairyKingForest"
       }
     ],
     "spawnInDungeons": false

@@ -8,7 +8,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import javax.annotation.Nullable;
 
@@ -32,7 +32,7 @@ public class Setstory20Procedure {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).killroyale >= 5) {
 				{
 					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-							+ (Math.ceil(entity.getPersistentData().getDouble("level")) * 0.5 + 14.5) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
+							+ (Math.ceil(entity.getPersistentData().getDouble("level")) * 0.5 + 14.5) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.xp = _setval;
 						capability.syncPlayerVariables(entity);

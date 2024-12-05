@@ -7,8 +7,10 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
@@ -45,6 +47,8 @@ public class LockOnOnKeyPressedProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(target || entity == entityiterator || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb) && (entityiterator instanceof Player || entityiterator instanceof Mob)) {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal("Lock On!"), true);
 						entity_target = entityiterator;
 						target = true;
 						{
@@ -57,7 +61,7 @@ public class LockOnOnKeyPressedProcedure {
 					}
 				}
 			}
-			if (target && (entity_target instanceof Player || entity_target instanceof Mob)) {
+			if (target && (entity_target instanceof Player || entity_target instanceof LivingEntity)) {
 				{
 					String _setval = entity_target.getStringUUID();
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -76,6 +80,8 @@ public class LockOnOnKeyPressedProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(target || entity == entityiterator || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb) && (entityiterator instanceof Player || entityiterator instanceof Mob)) {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal("Lock Off!"), true);
 						entity_target = entityiterator;
 						target = false;
 						{
@@ -88,7 +94,7 @@ public class LockOnOnKeyPressedProcedure {
 					}
 				}
 			}
-			if (target && (entity_target instanceof Player || entity_target instanceof Mob)) {
+			if (target && (entity_target instanceof Player || entity_target instanceof LivingEntity)) {
 				{
 					String _setval = entity_target.getStringUUID();
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

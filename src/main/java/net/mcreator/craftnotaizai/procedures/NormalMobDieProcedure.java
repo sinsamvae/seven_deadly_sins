@@ -17,7 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import javax.annotation.Nullable;
 
@@ -29,16 +29,16 @@ public class NormalMobDieProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity());
+			execute(event, event.getEntity().level(), event.getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		execute(null, world, entity, sourceentity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:normal")))) {
 			if (!(entity instanceof Player)) {
@@ -48,11 +48,11 @@ public class NormalMobDieProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player && !(entityiterator == entity)) {
 							{
-								double _setval = ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-										+ Math.ceil(sourceentity.getPersistentData().getDouble("level")) * 0.5 + Mth.nextInt(RandomSource.create(), 10, 25)) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
-								sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = ((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
+										+ Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + Mth.nextInt(RandomSource.create(), 10, 25)) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+								entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.xp = _setval;
-									capability.syncPlayerVariables(sourceentity);
+									capability.syncPlayerVariables(entityiterator);
 								});
 							}
 						}

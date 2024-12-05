@@ -12,14 +12,14 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class MeliodasbossEntityDiesProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		if (!(entity instanceof Player)) {
 			{
@@ -28,16 +28,16 @@ public class MeliodasbossEntityDiesProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof Player && !(entityiterator == entity)) {
 						{
-							double _setval = (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-									+ (Math.ceil(sourceentity.getPersistentData().getDouble("level")) * 0.5 + 800) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
-							sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
+									+ (Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 800) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.xp = _setval;
-								capability.syncPlayerVariables(sourceentity);
+								capability.syncPlayerVariables(entityiterator);
 							});
 						}
-						if (!(sourceentity instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
+						if (!(entityiterator instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
 								&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"))).isDone())) {
-							if (sourceentity instanceof ServerPlayer _player) {
+							if (entityiterator instanceof ServerPlayer _player) {
 								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"));
 								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 								if (!_ap.isDone()) {

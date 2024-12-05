@@ -17,8 +17,8 @@ import net.mcreator.craftnotaizai.client.gui.SideQuestGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.MonsterBlockGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.MagicMenuScreen;
 import net.mcreator.craftnotaizai.client.gui.KegGuiScreen;
+import net.mcreator.craftnotaizai.client.gui.JennaGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.HumanClanScreen;
-import net.mcreator.craftnotaizai.client.gui.HornOfCernunosGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.GaintClanScreen;
 import net.mcreator.craftnotaizai.client.gui.FairyClanScreen;
 import net.mcreator.craftnotaizai.client.gui.DisasterMenuScreen;
@@ -43,7 +43,6 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.MAGIC_MENU.get(), MagicMenuScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.TELEPORTATION_GUI.get(), TeleportationGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.KEG_GUI.get(), KegGuiScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.HORN_OF_CERNUNOS_GUI.get(), HornOfCernunosGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.SIDE_QUEST_GUI.get(), SideQuestGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.CLONES_GUI.get(), ClonesGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.MONSTER_BLOCK_GUI.get(), MonsterBlockGuiScreen::new);
@@ -51,6 +50,7 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.DISASTER_MENU.get(), DisasterMenuScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.CLOVER_TRADING.get(), CloverTradingScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.CANNON_GUI.get(), CannonGuiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.JENNA_GUI.get(), JennaGuiScreen::new);
 		});
 	}
 }

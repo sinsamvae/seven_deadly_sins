@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "meliodasdanaforarmor_body",
+    "textureBody": "danafor_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "meliodasdanaforarmor_leggings",
+    "textureLeggings": "danafor_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

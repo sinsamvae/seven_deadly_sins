@@ -120,7 +120,7 @@ public class RuinAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		RuinEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		RuinEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

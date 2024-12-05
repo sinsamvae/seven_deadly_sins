@@ -125,7 +125,7 @@ public class FairyHelbremAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		FairyHelbremEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		FairyHelbremEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

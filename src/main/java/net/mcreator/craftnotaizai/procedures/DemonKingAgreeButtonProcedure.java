@@ -18,7 +18,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 public class DemonKingAgreeButtonProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -53,7 +53,7 @@ public class DemonKingAgreeButtonProcedure {
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).commandment).equals("")) {
 			{
 				double _setval = ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp + Math.ceil(entity.getPersistentData().getDouble("level")) * 0.5 + 1000)
-						* ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
+						* ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.xp = _setval;
 					capability.syncPlayerVariables(entity);

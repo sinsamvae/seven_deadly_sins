@@ -23,6 +23,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.List;
@@ -35,38 +36,37 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entity.getX()), (entity.getY()), (entity.getZ()), 10, 15, 15, 15, 0);
 		if (!(null == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-			entity.getPersistentData().putDouble("dmg",
+			entity.getPersistentData().putDouble("sunflowerspear",
 					(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack));
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
-						|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
-						|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
-							public boolean checkGamemode(Entity _ent) {
-								if (_ent instanceof ServerPlayer _serverPlayer) {
-									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-								}
-								return false;
-							}
-						}.checkGamemode(entityiterator) || new Object() {
-							public boolean checkGamemode(Entity _ent) {
-								if (_ent instanceof ServerPlayer _serverPlayer) {
-									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
-								}
-								return false;
-							}
-						}.checkGamemode(entityiterator))) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),
-							(float) (Math.ceil(0.45 * entity.getPersistentData().getDouble("dmg")) + 3));
+				if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb || new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+						}
+						return false;
+					}
+				}.checkGamemode(entityiterator) || new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayer _serverPlayer) {
+							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+						}
+						return false;
+					}
+				}.checkGamemode(entityiterator) || (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+						|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || entityiterator instanceof SunFlowerTrueSpirtSpearEntity)) {
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+							(float) (Math.ceil(0.45 * entity.getPersistentData().getDouble("sunflowerspear")) + 3));
 					{
 						Entity _ent = entityiterator;
 						_ent.setYRot((float) (entityiterator.getYRot() + Mth.nextInt(RandomSource.create(), -3, 3)));

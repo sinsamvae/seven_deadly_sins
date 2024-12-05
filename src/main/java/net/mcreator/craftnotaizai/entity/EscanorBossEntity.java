@@ -128,7 +128,7 @@ public class EscanorBossEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		EscanorBossEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		EscanorBossEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

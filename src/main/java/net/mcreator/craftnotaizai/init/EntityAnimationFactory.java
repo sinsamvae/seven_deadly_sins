@@ -9,6 +9,7 @@ import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.VineEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
+import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TwigoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.TrollEntity;
 import net.mcreator.craftnotaizai.entity.TallAlbionEntity;
@@ -32,6 +33,7 @@ import net.mcreator.craftnotaizai.entity.ParadaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MutilatorRabbitsEntity;
 import net.mcreator.craftnotaizai.entity.MuramoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.MuramoAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
@@ -43,7 +45,6 @@ import net.mcreator.craftnotaizai.entity.JumanjuEntityEntity;
 import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JerichoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.InsectFEntity;
 import net.mcreator.craftnotaizai.entity.InsectEntity;
 import net.mcreator.craftnotaizai.entity.HugoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HowzerAnimatedEntity;
@@ -66,6 +67,7 @@ import net.mcreator.craftnotaizai.entity.GowtherStory1Entity;
 import net.mcreator.craftnotaizai.entity.GowtherBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GolgiusAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GoddessBlessEntityEntity;
+import net.mcreator.craftnotaizai.entity.GloxinaBossEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimated2Entity;
 import net.mcreator.craftnotaizai.entity.GigaPickEntity;
@@ -205,13 +207,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof VineEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof InsectFEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -828,6 +823,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof EscanorBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GloxinaBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MossDragonEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TyrantDragonCaveEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

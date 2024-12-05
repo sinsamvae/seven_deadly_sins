@@ -1,0 +1,166 @@
+{
+  "_fv": 66,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Craft No Taizai Random Race",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "This will determine if you get random race when you join world (Default True)",
+            "vardisplay": "random_race",
+            "varname": "random_race",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Craft No Taizai Mana",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.04,
+            "textDefault": "",
+            "comment": "This will change how much mana is regen(Default 0.04)",
+            "vardisplay": "mana_regen",
+            "varname": "mana_regen",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.09,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "mana_drain_one",
+            "varname": "mana_drain_one",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.13,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "mana_drain_two",
+            "varname": "mana_drain_two",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.15,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "mana_drain_three",
+            "varname": "mana_drain_three",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Craft No Taizai xp & tp",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Tp_Amount",
+            "varname": "Tp_Amount",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 10.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Xp_Amount",
+            "varname": "Xp_Amount",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "Craft No Taizai Speed",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 100.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Speed",
+            "varname": "Speed",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
+      }
+    ],
+    "file": "Craft_No_Taizai",
+    "configType": 0
+  }
+}

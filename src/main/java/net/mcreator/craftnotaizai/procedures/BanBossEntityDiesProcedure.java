@@ -17,45 +17,16 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class BanBossEntityDiesProcedure {
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		double drop = 0;
-		if (!(entity instanceof Player)) {
-			{
-				final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(65 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
-					if (entityiterator instanceof Player && !(entityiterator == entity)) {
-						{
-							double _setval = ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-									+ Math.ceil(sourceentity.getPersistentData().getDouble("level")) * 0.5 + 800) * ((double) RandomRaceConfigConfiguration.XP_AMOUNT.get() / 10);
-							sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.xp = _setval;
-								capability.syncPlayerVariables(sourceentity);
-							});
-						}
-						if (!(sourceentity instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
-								&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"))).isDone())) {
-							if (sourceentity instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"));
-								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-								if (!_ap.isDone()) {
-									for (String criteria : _ap.getRemainingCriteria())
-										_player.getAdvancements().award(_adv, criteria);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 		if (!CraftNoTaizaiModVariables.MapVariables.get(world).courechouse) {
 			drop = Mth.nextInt(RandomSource.create(), 1, 100);
 			if (drop <= 15) {
@@ -67,6 +38,33 @@ public class BanBossEntityDiesProcedure {
 				}
 				CraftNoTaizaiModVariables.MapVariables.get(world).courechouse = true;
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+			}
+		}
+		{
+			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(65 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (entityiterator instanceof Player && !(entityiterator == entity)) {
+					{
+						double _setval = ((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
+								+ Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 800) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+						entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.xp = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					if (!(entityiterator instanceof ServerPlayer _plr12 && _plr12.level() instanceof ServerLevel
+							&& _plr12.getAdvancements().getOrStartProgress(_plr12.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"))).isDone())) {
+						if (entityiterator instanceof ServerPlayer _player) {
+							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_ban"));
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -7,7 +7,7 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": ""
+      "value": "CUSTOM:wind_effect"
     },
     "igniteFire": false,
     "power": 0.0,

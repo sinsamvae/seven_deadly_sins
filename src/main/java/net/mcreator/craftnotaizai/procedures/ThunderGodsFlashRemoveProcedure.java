@@ -31,7 +31,7 @@ public class ThunderGodsFlashRemoveProcedure {
 			{
 				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).thundergodsflash / 1.3;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.level = _setval;
+					capability.thundergodsflash = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

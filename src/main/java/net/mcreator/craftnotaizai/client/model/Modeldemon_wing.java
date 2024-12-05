@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.10.4
+// Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modeldemon_wing<T extends Entity> extends EntityModel<T> {
@@ -46,7 +46,7 @@ public class Modeldemon_wing<T extends Entity> extends EntityModel<T> {
 				PartPose.offsetAndRotation(-7.7565F, 8.3743F, 7.8324F, -3.0223F, 0.75F, -2.9929F));
 		PartDefinition Body_r2 = Body.addOrReplaceChild("Body_r2", CubeListBuilder.create().texOffs(14, 0).mirror().addBox(-0.5F, -0.6222F, -3.1766F, 1.0F, 6.0F, 1.0F, new CubeDeformation(-0.36F)).mirror(false),
 				PartPose.offsetAndRotation(-5.0F, 1.1132F, 6.0604F, 3.1299F, 0.75F, -2.9929F));
-		PartDefinition Body_r3 = Body.addOrReplaceChild("Body_r3", CubeListBuilder.create().texOffs(0, 0).mirror().addBox(0.0F, -7.5618F, -2.5815F, 0.0F, 26.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false),
+		PartDefinition Body_r3 = Body.addOrReplaceChild("Body_r3", CubeListBuilder.create().texOffs(-1, 0).mirror().addBox(-1.0F, -7.5618F, -2.5815F, 1.0F, 26.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offsetAndRotation(-5.0F, 1.1132F, 6.0604F, 3.0427F, 0.75F, -2.9929F));
 		PartDefinition Body_r4 = Body.addOrReplaceChild("Body_r4", CubeListBuilder.create().texOffs(26, 19).mirror().addBox(-0.5F, -3.0F, -0.5F, 1.0F, 6.0F, 1.0F, new CubeDeformation(-0.36F)).mirror(false),
 				PartPose.offsetAndRotation(-7.9503F, 13.5963F, 7.208F, -2.9351F, 0.75F, -2.9929F));
@@ -74,7 +74,7 @@ public class Modeldemon_wing<T extends Entity> extends EntityModel<T> {
 				.addBox(-0.5F, 3.366F, -0.1087F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(-5.0F, 1.1132F, 6.0604F, -1.206F, -0.75F, 0.1486F));
 		PartDefinition Body_r16 = Body.addOrReplaceChild("Body_r16", CubeListBuilder.create().texOffs(22, 21).mirror().addBox(-0.5F, 2.5008F, -1.4147F, 1.0F, 1.0F, 1.0F, new CubeDeformation(-0.05F)).mirror(false),
 				PartPose.offsetAndRotation(-5.0F, 1.1132F, 6.0604F, -0.8133F, -0.75F, 0.1486F));
-		PartDefinition Body_r17 = Body.addOrReplaceChild("Body_r17", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, -7.5618F, -2.5815F, 0.0F, 26.0F, 8.0F, new CubeDeformation(0.0F)),
+		PartDefinition Body_r17 = Body.addOrReplaceChild("Body_r17", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, -7.5618F, -2.5815F, 1.0F, 26.0F, 8.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(5.0F, 1.1132F, 6.0604F, 3.0427F, -0.75F, 2.9929F));
 		PartDefinition Body_r18 = Body.addOrReplaceChild("Body_r18", CubeListBuilder.create().texOffs(26, 19).addBox(-0.5F, -3.0F, -0.5F, 1.0F, 6.0F, 1.0F, new CubeDeformation(-0.36F)),
 				PartPose.offsetAndRotation(7.9503F, 13.5963F, 7.208F, -2.9351F, -0.75F, 2.9929F));

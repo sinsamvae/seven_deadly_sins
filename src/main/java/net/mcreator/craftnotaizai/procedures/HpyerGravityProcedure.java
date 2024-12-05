@@ -55,40 +55,14 @@ public class HpyerGravityProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		boolean target = false;
+		Entity entity_target = null;
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).HyperGravity == true) {
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.GRAVITY_PARTICLES.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 30, 4, 3, 4, 0);
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.GRAVITY_PARTICLES.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 30, 1, 1, 1, 0);
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).gravity_sound == 0) {
-				{
-					double _setval = 50;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.gravity_sound = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:gravity")), SoundSource.NEUTRAL, (float) 0.05, 1);
-					} else {
-						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:gravity")), SoundSource.NEUTRAL, (float) 0.05, 1, false);
-					}
-				}
-			} else {
-				{
-					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).gravity_sound - 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.gravity_sound = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
 			{
 				final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), (entity.getY() + 1.8 + entity.getLookAngle().y), (entity.getZ() + entity.getLookAngle().z));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
+					if (!(target || entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
 							|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
 							|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
 								public boolean checkGamemode(Entity _ent) {
@@ -111,28 +85,41 @@ public class HpyerGravityProcedure {
 									return false;
 								}
 							}.checkGamemode(entityiterator))) {
-						{
-							Entity _ent = entityiterator;
-							_ent.setYRot((float) (entityiterator.getYRot() + Mth.nextInt(RandomSource.create(), -3, 3)));
-							_ent.setXRot((float) (entityiterator.getXRot() + Mth.nextInt(RandomSource.create(), -3, 3)));
-							_ent.setYBodyRot(_ent.getYRot());
-							_ent.setYHeadRot(_ent.getYRot());
-							_ent.yRotO = _ent.getYRot();
-							_ent.xRotO = _ent.getXRot();
-							if (_ent instanceof LivingEntity _entity) {
-								_entity.yBodyRotO = _entity.getYRot();
-								_entity.yHeadRotO = _entity.getYRot();
-							}
-						}
-						if (!Screen.hasShiftDown()) {
-							entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x() + Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (entityiterator.getDeltaMovement().y()),
-									(entityiterator.getDeltaMovement().z() + Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1))));
-						}
-						if (Math.random() <= 0.3) {
-							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-									(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 2));
-						}
+						target = true;
+						entity_target = entityiterator;
 					}
+				}
+			}
+			if (target && entity_target instanceof LivingEntity) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.GRAVITY_PARTICLES.get()), (entity_target.getX()), (entity_target.getY() + 1), (entity_target.getZ()), 30, 1, 1, 1, 0);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity_target.getX(), entity_target.getY(), entity_target.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:gravity")), SoundSource.NEUTRAL,
+								(float) 0.05, 1);
+					} else {
+						_level.playLocalSound((entity_target.getX()), (entity_target.getY()), (entity_target.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:gravity")), SoundSource.NEUTRAL, (float) 0.05, 1,
+								false);
+					}
+				}
+				entity_target.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+						(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 2));
+				{
+					Entity _ent = entity_target;
+					_ent.setYRot((float) (entity_target.getYRot() + Mth.nextInt(RandomSource.create(), -3, 3)));
+					_ent.setXRot((float) (entity_target.getXRot() + Mth.nextInt(RandomSource.create(), -3, 3)));
+					_ent.setYBodyRot(_ent.getYRot());
+					_ent.setYHeadRot(_ent.getYRot());
+					_ent.yRotO = _ent.getYRot();
+					_ent.xRotO = _ent.getXRot();
+					if (_ent instanceof LivingEntity _entity) {
+						_entity.yBodyRotO = _entity.getYRot();
+						_entity.yHeadRotO = _entity.getYRot();
+					}
+				}
+				if (!Screen.hasShiftDown()) {
+					entity_target.setDeltaMovement(new Vec3((entity_target.getDeltaMovement().x() + Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (entity_target.getDeltaMovement().y()),
+							(entity_target.getDeltaMovement().z() + Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1))));
 				}
 			}
 		}

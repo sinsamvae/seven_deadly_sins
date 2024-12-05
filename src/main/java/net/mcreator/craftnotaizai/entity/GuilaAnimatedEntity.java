@@ -118,7 +118,7 @@ public class GuilaAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GuilaEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		GuilaEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

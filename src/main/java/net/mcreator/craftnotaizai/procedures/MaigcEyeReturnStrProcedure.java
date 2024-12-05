@@ -21,6 +21,7 @@ public class MaigcEyeReturnStrProcedure {
 		boolean target = false;
 		String BP = "";
 		double range = 0;
+		BP = "NONE";
 		for (int index0 = 0; index0 < 20; index0++) {
 			{
 				final Vec3 _center = new Vec3(
@@ -36,12 +37,13 @@ public class MaigcEyeReturnStrProcedure {
 				}
 			}
 			if (target && entity_target instanceof Player) {
-				return "\u00A7eStrength: " + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).playerStr;
+				return "\u00A7eStrength: "
+						+ new java.text.DecimalFormat("##.##").format(Math.ceil((entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength));
 			} else if (target && entity_target instanceof PathfinderMob) {
 				return "\u00A7eStrength: " + new java.text.DecimalFormat("##.##").format(Math.ceil(entity_target.getPersistentData().getDouble("strength")));
 			}
 			range = range + 1;
 		}
-		return "";
+		return BP;
 	}
 }

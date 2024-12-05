@@ -27,10 +27,11 @@
       "value": -5985126,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -94,12 +95,15 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.rabbit.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "entity.rabbit.death"
     },
     "stepSound": {
+      "value": "entity.rabbit.ambient"
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "hasAI": true,

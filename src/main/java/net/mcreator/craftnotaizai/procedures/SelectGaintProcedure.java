@@ -24,21 +24,7 @@ public class SelectGaintProcedure {
 		{
 			boolean _setval = true;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.hpandmanaoverlay = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			boolean _setval = true;
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.gaint = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
-			boolean _setval = true;
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Races = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 0,
+    "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -44,15 +44,6 @@
           "dropItemsWhenNotBound": false,
           "x": 143,
           "y": 72
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "clover_gui.png",
-          "use1Xscale": false,
-          "x": 431,
-          "y": 86
         }
       },
       {

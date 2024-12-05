@@ -16,6 +16,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -44,6 +45,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
@@ -158,6 +160,11 @@ public class AndreDemonFormEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:corrupted_holyknight_idle")), 0.15f, 1);
 	}
 
 	@Override

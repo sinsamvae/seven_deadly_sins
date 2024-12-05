@@ -118,7 +118,7 @@ public class TwigoAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		TwigoEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		TwigoEntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override

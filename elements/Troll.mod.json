@@ -101,7 +101,7 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:troll_idle"
     },
     "raidCelebrationSound": {
       "value": ""

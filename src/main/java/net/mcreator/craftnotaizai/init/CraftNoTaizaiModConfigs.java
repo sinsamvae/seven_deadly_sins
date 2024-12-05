@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import net.mcreator.craftnotaizai.configuration.RandomRaceConfigConfiguration;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 @Mod.EventBusSubscriber(modid = CraftNoTaizaiMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -14,7 +14,7 @@ public class CraftNoTaizaiModConfigs {
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
 		event.enqueueWork(() -> {
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, RandomRaceConfigConfiguration.SPEC, "Craft no taizai.toml");
+			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CraftNoTaizaiConfiguration.SPEC, "Craft_No_Taizai.toml");
 		});
 	}
 }

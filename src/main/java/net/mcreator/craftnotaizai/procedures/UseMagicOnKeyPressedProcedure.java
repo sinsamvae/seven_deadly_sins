@@ -9,13 +9,12 @@ public class UseMagicOnKeyPressedProcedure {
 			return;
 		ThunderboltbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		TransparencyBindOnKeyPressedProcedure.execute(entity);
-		GoenNoJujinKeybindProcedure.execute(entity);
-		WindShooterKeybindProcedure.execute(world, entity);
+		GoenNoJujinKeybindProcedure.execute(world, x, y, z, entity);
+		WindShooterKeybindProcedure.execute(world, x, y, z, entity);
 		FlickStoneKeybindProcedure.execute(entity);
 		GravityManipulationKeybindProcedure.execute(entity);
 		GodSpeedProcedure.execute(world, x, y, z, entity);
 		AuraBurstKeybindProcedure.execute(world, entity);
-		HiveMindPressProcedure.execute();
 		UseMagicPressed2Procedure.execute(world, x, y, z, entity);
 		UseMagicPressed3Procedure.execute(world, x, y, z, entity);
 		DemonModeOnOnKeyPressedProcedure.execute(entity);

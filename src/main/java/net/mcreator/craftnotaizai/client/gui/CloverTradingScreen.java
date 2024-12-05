@@ -23,6 +23,7 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_1button;
 
 	public CloverTradingScreen(CloverTradingMenu container, Inventory inventory, Component text) {
@@ -32,8 +33,8 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 0;
+		this.imageHeight = 0;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/screens/clover_trading.png");
@@ -52,9 +53,7 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/clover_gui.png"), this.leftPos + 305, this.topPos + 49, 0, 0, 176, 166, 176, 166);
-
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/clover_gui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/clover_gui.png"), this.leftPos + -89, this.topPos + -83, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -70,19 +69,19 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clover_trading.label_trade"), 71, 40, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clover_trading.label_trade"), -17, -43, -1, false);
 		guiGraphics.drawString(this.font,
 
-				CostAmountVarProcedure.execute(entity), 49, 24, -1, false);
+				CostAmountVarProcedure.execute(entity), -39, -59, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_1button = new ImageButton(this.leftPos + 52, this.topPos + 36, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
+		imagebutton_1button = new ImageButton(this.leftPos + -36, this.topPos + -47, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new CloverTradingButtonMessage(0, x, y, z));
-				CloverTradingButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new CloverTradingButtonMessage(0, x, y, z, textstate));
+				CloverTradingButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_1button", imagebutton_1button);

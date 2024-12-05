@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "jericho2",
+    "textureBody": "jercho_armor2",
     "enableLeggings": true,
-    "textureLeggings": "jericho2pants",
+    "textureLeggings": "jercho_armorleg2",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "howzerarmor",
-    "helmetName": "Slader Armor",
+    "helmetName": "",
     "bodyName": "Jericho Armor",
     "leggingsName": "Jericho Armor",
-    "bootsName": "GilThunder Armor",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -39,11 +39,11 @@
     "bodyModelPart": "Body",
     "armsModelPartL": "LeftArm",
     "armsModelPartR": "RightArm",
-    "bodyModelTexture": "jericho_armor.png",
+    "bodyModelTexture": "jercho_armor.png",
     "leggingsModelName": "Modelarmor",
     "leggingsModelPartL": "LeftLeg",
     "leggingsModelPartR": "RightLeg",
-    "leggingsModelTexture": "jericho_armor.png",
+    "leggingsModelTexture": "jercho_armor.png",
     "bootsModelName": "Modelgilthunder_armor",
     "bootsModelPartL": "LeftLeg",
     "bootsModelPartR": "RightLeg",

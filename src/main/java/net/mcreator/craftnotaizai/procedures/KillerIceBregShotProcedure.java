@@ -1,8 +1,11 @@
 package net.mcreator.craftnotaizai.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -11,12 +14,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
@@ -27,7 +32,7 @@ import java.util.List;
 import java.util.Comparator;
 
 public class KillerIceBregShotProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double num_rep = 0;
@@ -37,6 +42,13 @@ public class KillerIceBregShotProcedure {
 			rep = rep + 0.3;
 			CraftNoTaizaiMod.queueServerWork((int) rep, () -> {
 				entity.getPersistentData().putDouble("range", (entity.getPersistentData().getDouble("range") + 0.1));
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:killer_iceberg")), SoundSource.PLAYERS, (float) 0.05, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:killer_iceberg")), SoundSource.PLAYERS, (float) 0.05, 1, false);
+					}
+				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ICE.get()), (entity.getX() + entity.getLookAngle().x * entity.getPersistentData().getDouble("range")),
 							(entity.getY() + 1.5 + entity.getLookAngle().y * entity.getPersistentData().getDouble("range")), (entity.getZ() + entity.getLookAngle().z * entity.getPersistentData().getDouble("range")), (int) 1.3, 0.3, 0.3, 0.3, 0.1);

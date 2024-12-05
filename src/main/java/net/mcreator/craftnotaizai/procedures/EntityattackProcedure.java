@@ -13,9 +13,13 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.SimpleParticleType;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -24,15 +28,15 @@ public class EntityattackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity());
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
-		execute(null, world, entity, sourceentity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		execute(null, world, x, y, z, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
 		ItemStack weapon = ItemStack.EMPTY;
@@ -56,6 +60,16 @@ public class EntityattackProcedure {
 				});
 			}
 			damage = Math.ceil((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength * 0.1);
+			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_POSITIVE.get())) {
+				damage = damage * 1.5;
+				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
+			}
+			if (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get())) {
+				damage = damage / 1.5;
+				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
+			}
 			if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")) {
 				day1 = 0;
 				day2 = 12040;
@@ -77,6 +91,13 @@ public class EntityattackProcedure {
 			}
 			if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar == true) {
 				damage = damage * (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostarhit;
+				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
+			}
+			if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PurgeAttack == true) {
+				damage = damage * 1.3;
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ARKPARTICLE.get()), x, y, z, 5, 1, 1, 1, 0.5);
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 			}
