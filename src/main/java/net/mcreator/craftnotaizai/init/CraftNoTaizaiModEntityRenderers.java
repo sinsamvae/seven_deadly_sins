@@ -163,6 +163,7 @@ import net.mcreator.craftnotaizai.client.renderer.ArrowShotProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AngleCureRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AndreDemonFormRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AndreAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.AnaonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AlbionTallRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AlbionRenderer;
 import net.mcreator.craftnotaizai.client.renderer.AlbionFatRenderer;
@@ -201,7 +202,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BREAKTHROUGH_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.LIGHTNINGBEAST_PROJECTILE.get(), LightningbeastProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.EMBRACEOFTHE_THUNDER_GOD_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.FREEZE_SHIELD_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DRIFT_BOMB_PROJECTILE.get(), DriftBombProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BRILLIANT_DETONATION_PROJECTILE.get(), BrilliantDetonationProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HUNTER_WISP_PROJECTILE.get(), HunterWispProjectileRenderer::new);
@@ -355,5 +355,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GLOXINA_BOSS.get(), GloxinaBossRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MOSS_DRAGON.get(), MossDragonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANAON.get(), AnaonRenderer::new);
 	}
 }

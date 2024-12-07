@@ -140,9 +140,6 @@ public class BeforehitProcedure {
 			if (entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 				dmg = dmg * 1.3;
 			}
-			if (entity instanceof LivingEntity _livEnt25 && _livEnt25.isBlocking() && (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.FREEZE_SHIELD.get()) {
-				dmg = dmg * 0.8;
-			}
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")) {
 				day1 = 0;
 				day2 = 12040;

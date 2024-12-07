@@ -118,7 +118,6 @@ import net.mcreator.craftnotaizai.item.GilThunderSwordItem;
 import net.mcreator.craftnotaizai.item.GilThunderArmorItem;
 import net.mcreator.craftnotaizai.item.GideonItem;
 import net.mcreator.craftnotaizai.item.FriesiaarmorItem;
-import net.mcreator.craftnotaizai.item.FreezeShieldItem;
 import net.mcreator.craftnotaizai.item.FragmentOfEternalDarknessItem;
 import net.mcreator.craftnotaizai.item.FragmentOfEternalDarkness3Item;
 import net.mcreator.craftnotaizai.item.FragmentOfEternalDarkness2Item;
@@ -292,7 +291,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BREAKTHROUGH = REGISTRY.register("breakthrough", () -> new BreakthroughItem());
 	public static final RegistryObject<Item> LIGHTNINGBEAST = REGISTRY.register("lightningbeast", () -> new LightningbeastItem());
 	public static final RegistryObject<Item> EMBRACEOFTHE_THUNDER_GOD = REGISTRY.register("embraceofthe_thunder_god", () -> new EmbraceoftheThunderGodItem());
-	public static final RegistryObject<Item> FREEZE_SHIELD = REGISTRY.register("freeze_shield", () -> new FreezeShieldItem());
 	public static final RegistryObject<Item> DRIFT_BOMB = REGISTRY.register("drift_bomb", () -> new DriftBombItem());
 	public static final RegistryObject<Item> BRILLIANT_DETONATION = REGISTRY.register("brilliant_detonation", () -> new BrilliantDetonationItem());
 	public static final RegistryObject<Item> HUNTER_WISP = REGISTRY.register("hunter_wisp", () -> new HunterWispItem());
@@ -339,10 +337,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> EARTH_CRAWLER_SPAWN_EGG = REGISTRY.register("earth_crawler_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.EARTH_CRAWLER, -13615322, -14997738, new Item.Properties()));
 	public static final RegistryObject<Item> CHAIN_EXPLOSION_V_2_SPAWN_EGG = REGISTRY.register("chain_explosion_v_2_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CHAIN_EXPLOSION_V_2, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> MAGIC_SCROLL = REGISTRY.register("magic_scroll", () -> new MagicScrollItem());
-	public static final RegistryObject<Item> BLUE_BRICK = block(CraftNoTaizaiModBlocks.BLUE_BRICK);
-	public static final RegistryObject<Item> BLUE_BRICK_STAIR = block(CraftNoTaizaiModBlocks.BLUE_BRICK_STAIR);
-	public static final RegistryObject<Item> BLUE_BRICK_SLAB = block(CraftNoTaizaiModBlocks.BLUE_BRICK_SLAB);
-	public static final RegistryObject<Item> BLUE_BRICK_WALL = block(CraftNoTaizaiModBlocks.BLUE_BRICK_WALL);
 	public static final RegistryObject<Item> CLAY_DRAGON_SPAWN_EGG = REGISTRY.register("clay_dragon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CLAY_DRAGON, -10040320, -10092493, new Item.Properties()));
 	public static final RegistryObject<Item> FAIRY_TREES_LOG = block(CraftNoTaizaiModBlocks.FAIRY_TREES_LOG);
 	public static final RegistryObject<Item> FAIRY_KING_LOG = block(CraftNoTaizaiModBlocks.FAIRY_KING_LOG);
@@ -619,6 +613,7 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> GLOXINA_BOSS_SPAWN_EGG = REGISTRY.register("gloxina_boss_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GLOXINA_BOSS, -4965284, -10778489, new Item.Properties()));
 	public static final RegistryObject<Item> MOSS_DRAGON_SPAWN_EGG = REGISTRY.register("moss_dragon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MOSS_DRAGON, -12169686, -13421028, new Item.Properties()));
 	public static final RegistryObject<Item> TYRANT_DRAGON_CAVE_SPAWN_EGG = REGISTRY.register("tyrant_dragon_cave_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE, -65536, -6750208, new Item.Properties()));
+	public static final RegistryObject<Item> ANAON_SPAWN_EGG = REGISTRY.register("anaon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ANAON, -14935267, -15987700, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

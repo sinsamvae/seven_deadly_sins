@@ -56,10 +56,10 @@
             "logicField": 0,
             "numberField": 0.09,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine how much mana is drain(Default 0.09)",
             "vardisplay": "mana_drain_one",
             "varname": "mana_drain_one",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           },
           {
@@ -73,10 +73,10 @@
             "logicField": 0,
             "numberField": 0.13,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine how much mana is drain(Default 0.13)",
             "vardisplay": "mana_drain_two",
             "varname": "mana_drain_two",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           },
           {
@@ -90,10 +90,10 @@
             "logicField": 0,
             "numberField": 0.15,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine how much mana is drain(Default 0.15)",
             "vardisplay": "mana_drain_three",
             "varname": "mana_drain_three",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           }
         ]
@@ -112,10 +112,10 @@
             "logicField": 0,
             "numberField": 10.0,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine how much TP you gain after leveling up (Default 10)",
             "vardisplay": "Tp_Amount",
             "varname": "Tp_Amount",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           },
           {
@@ -129,10 +129,10 @@
             "logicField": 0,
             "numberField": 10.0,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine how much xp you gain after killing mobs (Default 10)",
             "vardisplay": "Xp_Amount",
             "varname": "Xp_Amount",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           }
         ]
@@ -151,10 +151,10 @@
             "logicField": 0,
             "numberField": 100.0,
             "textDefault": "",
-            "comment": "",
+            "comment": "This will determine the max speed",
             "vardisplay": "Speed",
             "varname": "Speed",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           }
         ]

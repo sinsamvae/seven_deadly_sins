@@ -21,7 +21,7 @@ import net.mcreator.craftnotaizai.procedures.ResetCaveCooldownProcedure;
 public class RestartTimerCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("restart_timer").requires(s -> s.hasPermission(1)).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("cave").executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("restart_timer").requires(s -> s.hasPermission(1)).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Cave_Of_Training").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

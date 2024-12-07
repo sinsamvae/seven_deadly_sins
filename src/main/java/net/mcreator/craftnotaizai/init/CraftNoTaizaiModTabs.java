@@ -236,10 +236,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.SLEEPING_FOREST_WOOD.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SLEEPING_FOREST_SLAB.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SLEEPING_FOREST_STAIR.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.BLUE_BRICK.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.BLUE_BRICK_STAIR.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.BLUE_BRICK_SLAB.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.BLUE_BRICK_WALL.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_TREES_LOG.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_KING_LOG.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_KING_LEAVE.get().asItem());
@@ -380,6 +376,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_BOSS_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GLOXINA_BOSS_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.MOSS_DRAGON_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.ANAON_SPAWN_EGG.get());
 			})
 
 					.build());

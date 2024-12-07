@@ -957,20 +957,6 @@
       "path": "~/buttons"
     },
     {
-      "name": "Switchvar",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switchvar",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SwitchvarProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/var"
-    },
-    {
       "name": "Switchoverlay",
       "type": "overlay",
       "compiles": true,
@@ -3213,97 +3199,6 @@
       "path": "~/magic abilities/HumanMagic/IceFang"
     },
     {
-      "name": "FreezeShieldCanUseRangedItem",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_can_use_ranged_item",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeShieldCanUseRangedItemProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
-      "name": "FreezeShield1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeShield1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
-      "name": "FreezeShieldTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeShieldTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
-      "name": "FreezeShieldMana",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_mana",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeShieldManaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
-      "name": "FreezeShieldFalse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_false",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeShieldFalseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
       "name": "Frezze",
       "type": "potioneffect",
       "compiles": true,
@@ -4261,25 +4156,6 @@
         ]
       },
       "path": "~/raceimage"
-    },
-    {
-      "name": "Zerosigntick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zerosigntick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ZerosigntickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/sevendeadlysinsmagic/Snatch/zerosign"
     },
     {
       "name": "SetSpeedCommand",
@@ -8367,57 +8243,6 @@
       "path": "~/var"
     },
     {
-      "name": "ManaRegenCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_regen_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/ManaRegenCommandCommand.java"
-        ]
-      },
-      "path": "~/commands/ManaRegen"
-    },
-    {
-      "name": "Manaregen",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "manaregen",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ManaregenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/commands/ManaRegen"
-    },
-    {
-      "name": "ManaR",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_r",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ManaRProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/ManaRegen"
-    },
-    {
       "name": "CoureChouseAnimatedPlayerFinishesUsingItem",
       "type": "procedure",
       "compiles": true,
@@ -9217,33 +9042,6 @@
         ]
       },
       "path": "~/magic abilities/HumanMagic/thunderbolt/Embrace of the Thunder God"
-    },
-    {
-      "name": "FreezeShieldProjectile",
-      "type": "projectile",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/entity/FreezeShieldProjectileEntity.java"
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
-    },
-    {
-      "name": "FreezeShield",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_shield",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/item/freeze_shield.json",
-          "src/main/java/net/mcreator/craftnotaizai/item/FreezeShieldItem.java"
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Blizzard/Freeze Shield"
     },
     {
       "name": "DriftBombProjectile",
@@ -11080,44 +10878,6 @@
       "path": "~/commands/magic/Set_Magic_Fairy"
     },
     {
-      "name": "ChangemagicExplosionHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changemagic_explosion_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangemagicExplosionHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
-      "name": "ChangemagicTransparencyHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changemagic_transparency_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangemagicTransparencyHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
       "name": "ChangemagicInsectManipluation",
       "type": "procedure",
       "compiles": true,
@@ -12463,25 +12223,6 @@
       "path": "~/particle"
     },
     {
-      "name": "SubTypeMagic",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sub_type_magic",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SubTypeMagicProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/mana/SubTypeMagic"
-    },
-    {
       "name": "Banishing",
       "type": "procedure",
       "compiles": true,
@@ -13560,25 +13301,6 @@
       "path": "~/magic abilities/HumanMagic/Gravity Manipulation"
     },
     {
-      "name": "GravityManipulationOnPlayerTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_manipulation_on_player_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GravityManipulationOnPlayerTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Gravity Manipulation/Gravity Ten"
-    },
-    {
       "name": "GravityManiplationReachZero",
       "type": "procedure",
       "compiles": true,
@@ -14411,101 +14133,6 @@
         ]
       },
       "path": "~/entities/StoryModeEntities/jerichoDemonForm"
-    },
-    {
-      "name": "WindShooterHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wind_shooter_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/WindShooterHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
-      "name": "AuraBurstlHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aura_burstl_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/AuraBurstlHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
-      "name": "BulletSquallHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bullet_squall_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/BulletSquallHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
-      "name": "GoennoJujinHellblaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goenno_jujin_hellblaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GoennoJujinHellblazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
-    },
-    {
-      "name": "FlickStoneHellBlaze",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flick_stone_hell_blaze",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FlickStoneHellBlazeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/commands/magic/Set_Magic_Human_HellBlaze"
     },
     {
       "name": "Troll",
@@ -16086,81 +15713,6 @@
       "path": "~/entities/Normal/weak/AngleCure"
     },
     {
-      "name": "BlueBrick",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_brick",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/blue_brick.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick.json",
-          "src/main/java/net/mcreator/craftnotaizai/block/BlueBrickBlock.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/blue_brick.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/blue_brick.json"
-        ]
-      },
-      "path": "~/Block/blue_brick"
-    },
-    {
-      "name": "BlueBrickStair",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_brick_stair",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/block/BlueBrickStairBlock.java",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_stair_inner.json",
-          "src/main/resources/assets/craft_no_taizai/models/item/blue_brick_stair.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_stair.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_stair_outer.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/blue_brick_stair.json",
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/blue_brick_stair.json"
-        ]
-      },
-      "path": "~/Block/blue_brick"
-    },
-    {
-      "name": "BlueBrickSlab",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_brick_slab",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/item/blue_brick_slab.json",
-          "src/main/java/net/mcreator/craftnotaizai/block/BlueBrickSlabBlock.java",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_slab_full.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/blue_brick_slab.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_slab_top.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_slab.json",
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/blue_brick_slab.json"
-        ]
-      },
-      "path": "~/Block/blue_brick"
-    },
-    {
-      "name": "BlueBrickWall",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_brick_wall",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_wall.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_wall_post.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/blue_brick_wall.json",
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/blue_brick_wall.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_wall_inventory.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/blue_brick_wall_side_tall.json",
-          "src/main/java/net/mcreator/craftnotaizai/block/BlueBrickWallBlock.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/blue_brick_wall.json"
-        ]
-      },
-      "path": "~/Block/blue_brick"
-    },
-    {
       "name": "ClayDragon",
       "type": "animatedentity",
       "compiles": true,
@@ -16512,41 +16064,6 @@
         ]
       },
       "path": "~/magic abilities/HumanMagic/Acid/Acid Tower"
-    },
-    {
-      "name": "IncreaseShpere",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "increase_shpere",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/IncreaseShpereProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/chastiefol/Increase/Particle"
     },
     {
       "name": "ChangeMagicWall",
@@ -18627,20 +18144,6 @@
       "path": "~/magic abilities/sevendeadlysinsmagic/Invasion/Arrow Shot"
     },
     {
-      "name": "ArrowShotSkill",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arrow_shot_skill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ArrowShotSkillProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/magic abilities/sevendeadlysinsmagic/Invasion/Arrow Shot"
-    },
-    {
       "name": "PurplefireUpdateTick",
       "type": "procedure",
       "compiles": true,
@@ -19518,19 +19021,6 @@
       "path": "~/var"
     },
     {
-      "name": "ComboStarHit",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "combo_star_hit",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/client/screens/ComboStarHitOverlay.java"
-        ]
-      },
-      "path": "~/overlay"
-    },
-    {
       "name": "DisplayComboStarHit",
       "type": "procedure",
       "compiles": true,
@@ -20206,25 +19696,6 @@
       "path": "~/magic abilities/sevendeadlysinsmagic/Infinity/infinity"
     },
     {
-      "name": "AbsoluteCancelTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "absolute_cancel_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/AbsoluteCancelTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/magic abilities/sevendeadlysinsmagic/Infinity/Absolute Cancel "
-    },
-    {
       "name": "AbsoluteCancelManaZero",
       "type": "procedure",
       "compiles": true,
@@ -20687,26 +20158,6 @@
         ]
       },
       "path": "~/MagicMenu/DisPlayMagicScrollSkills/DisPlayMagicSlot1"
-    },
-    {
-      "name": "Scoll",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scoll",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ScollProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/var"
     },
     {
       "name": "MagicScroll6",
@@ -35494,6 +34945,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -35515,6 +34978,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -35607,6 +35082,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -35972,6 +35459,22 @@
         ]
       },
       "path": "~/commands/training"
+    },
+    {
+      "name": "Anaon",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anaon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/AnaonModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/anaon_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/entity/AnaonEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/AnaonRenderer.java"
+        ]
+      },
+      "path": "~/entities/Hard/weak"
     }
   ],
   "variable_elements": [
@@ -36210,12 +35713,6 @@
       "value": "false"
     },
     {
-      "name": "nighmareteller",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "BreakerOff",
       "type": "logic",
       "scope": "player_persistent",
@@ -36255,12 +35752,6 @@
       "name": "choas",
       "type": "logic",
       "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "regeneration",
-      "type": "logic",
-      "scope": "player_persistent",
       "value": "false"
     },
     {
@@ -36316,12 +35807,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
-    },
-    {
-      "name": "autoregen",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "range",
@@ -36444,30 +35929,6 @@
       "value": "0"
     },
     {
-      "name": "playerBP",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "playerStr",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "PlayerDex",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "PlayerMaxMana",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
       "name": "mana_drain",
       "type": "number",
       "scope": "player_persistent",
@@ -36490,18 +35951,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "supmagic",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Manipulate",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "HalfAwaken",
@@ -36528,12 +35977,6 @@
       "value": "false"
     },
     {
-      "name": "slot",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "AbilitySelect",
       "type": "itemstack",
       "scope": "player_persistent",
@@ -36549,7 +35992,7 @@
       "name": "SlotSwitch",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Agility",
@@ -36576,18 +36019,6 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "increaseSphere",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "increasessphere",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "damage_indicator",
       "type": "logic",
       "scope": "player_persistent",
@@ -36610,12 +36041,6 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
-    },
-    {
-      "name": "regen",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "Story",
@@ -37422,12 +36847,6 @@
       "value": "false"
     },
     {
-      "name": "firstwave",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "cave_of_training_timer",
       "type": "number",
       "scope": "player_persistent",
@@ -37783,13 +37202,13 @@
     ],
     "ENTITIES:mod:cave_of_training": [
       "CUSTOM:ClayDragon",
-      "CUSTOM:TyrantDragon"
+      "CUSTOM:Anaon",
+      "CUSTOM:TyrantDragonCave"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:PurgatoryBrickSlab",
       "~CUSTOM:PurgatorySlab",
       "~CUSTOM:FairyTreeSlab",
-      "~CUSTOM:BlueBrickSlab",
       "~CUSTOM:SleepingForestSlab",
       "~CUSTOM:AreaWoodSlab",
       "~CUSTOM:AreaSlab"
@@ -37816,7 +37235,6 @@
       "~CUSTOM:PurgatoryBrickStair",
       "~CUSTOM:PurgatoryStair",
       "~CUSTOM:FairyTreeStaires",
-      "~CUSTOM:BlueBrickStair",
       "~CUSTOM:SleepingForestStair"
     ],
     "ITEMS:minecraft:swords": [
@@ -37906,6 +37324,7 @@
       "Items.DIAMOND_AXE"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.COBBLED_DEEPSLATE",
       "~Blocks.DIRT#0",
       "~Blocks.AIR",
       "~Blocks.STONE#0",
@@ -37992,9 +37411,6 @@
       "~CUSTOM:FairyTreeFence",
       "~CUSTOM:Areafence"
     ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:BlueBrickWall"
-    ],
     "ITEMS:mod:legendary_clover_trades": [
       "CUSTOM:DemonBlood",
       "Items.DIAMOND_CHESTPLATE",
@@ -38036,6 +37452,7 @@
       "gui.craft_no_taizai.story_board.label_this_is_a_tale_of_ancient_times1": "betrayed the kingdom and became mortal enemies to all",
       "gui.craft_no_taizai.story_board.label_this_is_a_tale_of_ancient_times2": "They were known throughout",
       "entity.craft_no_taizai.royal_gurard_animated": "Royal Guard",
+      "entity.craft_no_taizai.anaon": "Anaon",
       "entity.craft_no_taizai.fighting_area": "Fighting Area",
       "item.craft_no_taizai.dianeoutfit_chestplate": "Diane Shirt",
       "item.craft_no_taizai.gil_thunder_armor_chestplate": "GilThunder Armor",
@@ -38057,6 +37474,7 @@
       "item.craft_no_taizai.dusk_bison_1_spawn_egg": "Dusk Bison Spawn Egg",
       "item.craft_no_taizai.howzer_armor_chestplate": "Howzer Armor",
       "advancements.red_demon_blood.title": "Demon Blood",
+      "item.craft_no_taizai.anaon_spawn_egg": "Anaon Spawn Egg",
       "gui.craft_no_taizai.gaint_clan.button_empty1": "\u003c",
       "gui.craft_no_taizai.story_board.label_baste_dungeon_but_the_group_is": "Baste Dungeon, but the group is assailed by an enemy",
       "block.craft_no_taizai.sleeping_forest_dirt": "Sleeping Forest Dirt",
@@ -38278,7 +37696,6 @@
       "entity.craft_no_taizai.dusk_bison_1": "Dusk Bison",
       "item.craft_no_taizai.peace_amulet_chestplate": "Peace Amulet",
       "effect.craft_no_taizai.freeze_coffin_potion_effect": "Freeze Coffin Potion Effect",
-      "item.craft_no_taizai.freeze_shield": "Freeze Shield",
       "entity.craft_no_taizai.simon_animated": "Simon",
       "item.craft_no_taizai.dreyfus_sword": "Dreyfus Sword",
       "entity.craft_no_taizai.soldier_animated": "Soldier",
@@ -38456,7 +37873,6 @@
       "entity.craft_no_taizai.demon_king": "Demon King",
       "entity.craft_no_taizai.marmas": "Marmas",
       "item.craft_no_taizai.puora_spawn_egg": "Puora Spawn Egg",
-      "block.craft_no_taizai.blue_brick_slab": "Blue Brick Slab",
       "item.craft_no_taizai.hell_blaze": "Hell Blaze",
       "item.craft_no_taizai.basquias_guardian_spawn_egg": "Basquias Guardian Spawn Egg",
       "block.craft_no_taizai.glow_block": "Glow Block",
@@ -38630,7 +38046,6 @@
       "item.craft_no_taizai.helbrum_armor_chestplate": "Helbrum Armor",
       "subtitles.revengecounter": "",
       "item.craft_no_taizai.angle_cure_spawn_egg": "Angle Cure Spawn Egg",
-      "block.craft_no_taizai.blue_brick_wall": "Blue Brick Wall",
       "item.craft_no_taizai.needle": "Needle",
       "item.craft_no_taizai.bear_icon": "Bear Icon",
       "item.craft_no_taizai.axe_2": "Axe",
@@ -38783,7 +38198,6 @@
       "item.craft_no_taizai.snowflowerbeam": "flowerbeam",
       "advancements.blood_awaken.title": "Blood Awaken",
       "gui.craft_no_taizai.story_board.label_locate_capital_of_the_dead": "Locate Capital of the Dead",
-      "block.craft_no_taizai.blue_brick": "Blue Brick",
       "entity.craft_no_taizai.luigi": "Luigi",
       "gui.craft_no_taizai.jenna_gui.label_remember_who_yourre_facing": "Remember who your\u0027re facing!",
       "item.craft_no_taizai.weinheidt_armor_leggings": "Weinheidt Leggings",
@@ -38918,7 +38332,6 @@
       "item.craft_no_taizai.griamore_animated_spawn_egg": "Griamore Spawn Egg",
       "item.craft_no_taizai.demon_hendrickson_animated_spawn_egg": "Demon Hendrickson Spawn Egg",
       "effect.craft_no_taizai.king_trumpet": "King Trumpet",
-      "block.craft_no_taizai.blue_brick_stair": "Blue Brick Stair",
       "gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save1": "he has to kill in order to save Elaine",
       "item.craft_no_taizai.twigo_armor_leggings": "Twigo Leggings",
       "block.craft_no_taizai.side_mountain": "Side Mountain",
@@ -39909,10 +39322,6 @@
                 "name": "chastiefol",
                 "children": [
                   {
-                    "name": "chat",
-                    "children": []
-                  },
-                  {
                     "name": "Luminosity",
                     "children": []
                   },
@@ -40089,10 +39498,6 @@
             "children": []
           },
           {
-            "name": "SubTypeMagic",
-            "children": []
-          },
-          {
             "name": "ReSetMana",
             "children": []
           },
@@ -40189,10 +39594,6 @@
               {
                 "name": "Set_Magic_Fairy",
                 "children": []
-              },
-              {
-                "name": "Set_Magic_Human_HellBlaze",
-                "children": []
               }
             ]
           },
@@ -40210,10 +39611,6 @@
           },
           {
             "name": "immortiliy",
-            "children": []
-          },
-          {
-            "name": "ManaRegen",
             "children": []
           },
           {
@@ -40879,10 +40276,6 @@
           },
           {
             "name": "sleepingforestblocks",
-            "children": []
-          },
-          {
-            "name": "blue_brick",
             "children": []
           },
           {

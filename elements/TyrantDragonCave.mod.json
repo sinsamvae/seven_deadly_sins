@@ -7,10 +7,10 @@
     "mobModelTexture": "tyrant_dragon.png",
     "mobModelGlowTexture": "",
     "visualScale": {
-      "fixedValue": 1.5
+      "fixedValue": 0.8
     },
     "boundingBoxScale": {
-      "fixedValue": 1.5
+      "fixedValue": 0.8
     },
     "entityDataEntries": [
       {
@@ -67,7 +67,7 @@
     "health": 120,
     "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": true,
+    "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,

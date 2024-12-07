@@ -41,8 +41,10 @@ public class JennaGuiAcceptButtonProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Remaining time before you can re enter "
-						+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_cd))), false);
+				_player.displayClientMessage(
+						Component.literal(("Remaining time before you can re enter "
+								+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_cd) + "!")),
+						false);
 		}
 	}
 }

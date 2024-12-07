@@ -37,31 +37,6 @@ public class ChangeMagicDisasterGloxiniaProcedure {
 			});
 		}
 		{
-			String _setval = "";
-			(new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.supmagic = _setval;
-				capability.syncPlayerVariables((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "Player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()));
-			});
-		}
-		{
 			boolean _setval = true;
 			(new Object() {
 				public Entity getEntity() {

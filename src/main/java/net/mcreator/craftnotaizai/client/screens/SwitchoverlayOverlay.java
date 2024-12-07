@@ -14,9 +14,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.procedures.SkillCDProcedure;
+import net.mcreator.craftnotaizai.procedures.RhittaReturnProcedure;
+import net.mcreator.craftnotaizai.procedures.RhittaCountProcedure;
 import net.mcreator.craftnotaizai.procedures.RCoolDownVarProcedure;
 import net.mcreator.craftnotaizai.procedures.RCoolDownTextProcedure;
+import net.mcreator.craftnotaizai.procedures.LostVayneVarProcedure;
+import net.mcreator.craftnotaizai.procedures.LostVayneOverlayProcedure;
+import net.mcreator.craftnotaizai.procedures.DisplayComboStarHitProcedure;
 import net.mcreator.craftnotaizai.procedures.CoolDownReturnProcedure;
+import net.mcreator.craftnotaizai.procedures.ComboStarVarProcedure;
 import net.mcreator.craftnotaizai.procedures.AbilityDisplayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
@@ -48,6 +54,18 @@ public class SwitchoverlayOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						SkillCDProcedure.execute(entity), w / 2 + -33, h / 2 + -1, -1, false);
+			if (DisplayComboStarHitProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						ComboStarVarProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
+			if (LostVayneOverlayProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						LostVayneVarProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
+			if (RhittaReturnProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						RhittaCountProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
 		}
 	}
 }

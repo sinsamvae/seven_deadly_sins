@@ -19,16 +19,16 @@ public class CraftNoTaizaiConfiguration {
 		BUILDER.pop();
 		BUILDER.push("Craft No Taizai Mana");
 		MANA_REGEN = BUILDER.comment("This will change how much mana is regen(Default 0.04)").define("mana_regen", (double) 0.04);
-		MANA_DRAIN_ONE = BUILDER.define("mana_drain_one", (double) 0.09);
-		MANA_DRAIN_TWO = BUILDER.define("mana_drain_two", (double) 0.13);
-		MANA_DRAIN_THREE = BUILDER.define("mana_drain_three", (double) 0.15);
+		MANA_DRAIN_ONE = BUILDER.comment("This will determine how much mana is drain(Default 0.09)").define("mana_drain_one", (double) 0.09);
+		MANA_DRAIN_TWO = BUILDER.comment("This will determine how much mana is drain(Default 0.13)").define("mana_drain_two", (double) 0.13);
+		MANA_DRAIN_THREE = BUILDER.comment("This will determine how much mana is drain(Default 0.15)").define("mana_drain_three", (double) 0.15);
 		BUILDER.pop();
 		BUILDER.push("Craft No Taizai xp & tp");
-		TP_AMOUNT = BUILDER.define("Tp_Amount", (double) 10);
-		XP_AMOUNT = BUILDER.define("Xp_Amount", (double) 10);
+		TP_AMOUNT = BUILDER.comment("This will determine how much TP you gain after leveling up (Default 10)").define("Tp_Amount", (double) 10);
+		XP_AMOUNT = BUILDER.comment("This will determine how much xp you gain after killing mobs (Default 10)").define("Xp_Amount", (double) 10);
 		BUILDER.pop();
 		BUILDER.push("Craft No Taizai Speed");
-		SPEED = BUILDER.define("Speed", (double) 100);
+		SPEED = BUILDER.comment("This will determine the max speed").define("Speed", (double) 100);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

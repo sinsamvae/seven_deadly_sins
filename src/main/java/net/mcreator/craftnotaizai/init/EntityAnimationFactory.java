@@ -105,6 +105,7 @@ import net.mcreator.craftnotaizai.entity.BanBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.AnaonEntity;
 import net.mcreator.craftnotaizai.entity.AlbionTallEntity;
 import net.mcreator.craftnotaizai.entity.AlbionFatEntity;
 import net.mcreator.craftnotaizai.entity.AlbionEntity;
@@ -844,6 +845,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof TyrantDragonCaveEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AnaonEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

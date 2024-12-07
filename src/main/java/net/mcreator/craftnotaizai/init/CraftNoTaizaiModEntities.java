@@ -128,7 +128,6 @@ import net.mcreator.craftnotaizai.entity.GalandEntity;
 import net.mcreator.craftnotaizai.entity.FurkuuSutonEntity;
 import net.mcreator.craftnotaizai.entity.FrozenBreathEntity;
 import net.mcreator.craftnotaizai.entity.FriesiaAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.FreezeShieldProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FossProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FiveLostProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FinalProminenceEntity;
@@ -192,6 +191,7 @@ import net.mcreator.craftnotaizai.entity.ArrowEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.AnaonEntity;
 import net.mcreator.craftnotaizai.entity.AlbionTallEntity;
 import net.mcreator.craftnotaizai.entity.AlbionFatEntity;
 import net.mcreator.craftnotaizai.entity.AlbionEntity;
@@ -286,8 +286,6 @@ public class CraftNoTaizaiModEntities {
 	public static final RegistryObject<EntityType<EmbraceoftheThunderGodProjectileEntity>> EMBRACEOFTHE_THUNDER_GOD_PROJECTILE = register("embraceofthe_thunder_god_projectile",
 			EntityType.Builder.<EmbraceoftheThunderGodProjectileEntity>of(EmbraceoftheThunderGodProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(EmbraceoftheThunderGodProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<FreezeShieldProjectileEntity>> FREEZE_SHIELD_PROJECTILE = register("freeze_shield_projectile", EntityType.Builder.<FreezeShieldProjectileEntity>of(FreezeShieldProjectileEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(FreezeShieldProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DriftBombProjectileEntity>> DRIFT_BOMB_PROJECTILE = register("drift_bomb_projectile", EntityType.Builder.<DriftBombProjectileEntity>of(DriftBombProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(DriftBombProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BrilliantDetonationProjectileEntity>> BRILLIANT_DETONATION_PROJECTILE = register("brilliant_detonation_projectile",
@@ -770,6 +768,10 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<TyrantDragonCaveEntity>of(TyrantDragonCaveEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TyrantDragonCaveEntity::new)
 
 					.sized(2.7f, 3f));
+	public static final RegistryObject<EntityType<AnaonEntity>> ANAON = register("anaon",
+			EntityType.Builder.<AnaonEntity>of(AnaonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnaonEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -901,6 +903,7 @@ public class CraftNoTaizaiModEntities {
 			GloxinaBossEntity.init();
 			MossDragonEntity.init();
 			TyrantDragonCaveEntity.init();
+			AnaonEntity.init();
 		});
 	}
 
@@ -1029,5 +1032,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(GLOXINA_BOSS.get(), GloxinaBossEntity.createAttributes().build());
 		event.put(MOSS_DRAGON.get(), MossDragonEntity.createAttributes().build());
 		event.put(TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveEntity.createAttributes().build());
+		event.put(ANAON.get(), AnaonEntity.createAttributes().build());
 	}
 }

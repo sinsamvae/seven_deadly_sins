@@ -27,10 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "minecraft:grass_block",
-        "Properties": {
-          "snowy": "false"
-        }
+        "Name": "minecraft:stone"
       },
       "default_fluid": {
         "Name": "minecraft:air"
@@ -417,20 +414,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "minecraft:stone"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:water",
-                            "Properties": {
-                              "level": "0"
-                            }
+                            "Name": "minecraft:air"
                           }
                         }
                       ]
@@ -448,7 +439,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "minecraft:cobbled_deepslate"
                       }
                     }
                   }
