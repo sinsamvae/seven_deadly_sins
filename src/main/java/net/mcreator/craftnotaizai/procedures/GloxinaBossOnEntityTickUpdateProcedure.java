@@ -314,7 +314,7 @@ public class GloxinaBossOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 100)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 		}
 	}
 }

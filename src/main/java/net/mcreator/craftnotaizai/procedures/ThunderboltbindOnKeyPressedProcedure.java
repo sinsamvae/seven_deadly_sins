@@ -46,7 +46,7 @@ public class ThunderboltbindOnKeyPressedProcedure {
 									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:lightning")), SoundSource.PLAYERS, (float) 0.05, 1, false);
 								}
 							}
-							PurgeoftheThunderEmperorProcedure.execute(world, entity);
+							PurgeoftheThunderEmperorProcedure.execute(world, y, entity);
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 30);
 						} else {

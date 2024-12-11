@@ -126,7 +126,6 @@ public class CraftNoTaizaiModVariables {
 			clone.berserkmode = original.berserkmode;
 			clone.rCoolDown = original.rCoolDown;
 			clone.PerfectShell = original.PerfectShell;
-			clone.LongShield = original.LongShield;
 			clone.BP = original.BP;
 			clone.immortality = original.immortality;
 			clone.immortalityplayer = original.immortalityplayer;
@@ -197,7 +196,6 @@ public class CraftNoTaizaiModVariables {
 			clone.physical_full_counter = original.physical_full_counter;
 			clone.FullPowerDemonMark = original.FullPowerDemonMark;
 			clone.fullpowerDemonMark = original.fullpowerDemonMark;
-			clone.nutritionalvalue = original.nutritionalvalue;
 			clone.teleplortionX = original.teleplortionX;
 			clone.teleplortionY = original.teleplortionY;
 			clone.teleplortionZ = original.teleplortionZ;
@@ -210,10 +208,8 @@ public class CraftNoTaizaiModVariables {
 			clone.True_Spirt_From = original.True_Spirt_From;
 			clone.true_spirit_spear = original.true_spirit_spear;
 			clone.mana_regen_effect = original.mana_regen_effect;
-			clone.HornOfCernunnosID = original.HornOfCernunnosID;
 			clone.hard_protection = original.hard_protection;
 			clone.Hard_Protection = original.Hard_Protection;
-			clone.demon_blood = original.demon_blood;
 			clone.demon_skill = original.demon_skill;
 			clone.learn_demon_skills = original.learn_demon_skills;
 			clone.aqua_dress = original.aqua_dress;
@@ -222,9 +218,6 @@ public class CraftNoTaizaiModVariables {
 			clone.healing_area_timer = original.healing_area_timer;
 			clone.GoddessBless = original.GoddessBless;
 			clone.goddessbless = original.goddessbless;
-			clone.joinX = original.joinX;
-			clone.joinY = original.joinY;
-			clone.joinZ = original.joinZ;
 			clone.Gloxinia = original.Gloxinia;
 			clone.yggdrasil_armor = original.yggdrasil_armor;
 			clone.yggdrasilarmor = original.yggdrasilarmor;
@@ -281,6 +274,8 @@ public class CraftNoTaizaiModVariables {
 			clone.cave_of_training_timer = original.cave_of_training_timer;
 			clone.cave_of_training_kick = original.cave_of_training_kick;
 			clone.cave_of_training_cd = original.cave_of_training_cd;
+			clone.cave_of_training = original.cave_of_training;
+			clone.training_id = original.training_id;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 			}
@@ -383,8 +378,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean rhitta = false;
 		public boolean Istar = false;
 		public boolean Basquias = false;
-		public boolean cavetraining0 = false;
-		public boolean cavetraining1 = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -424,8 +417,6 @@ public class CraftNoTaizaiModVariables {
 			rhitta = nbt.getBoolean("rhitta");
 			Istar = nbt.getBoolean("Istar");
 			Basquias = nbt.getBoolean("Basquias");
-			cavetraining0 = nbt.getBoolean("cavetraining0");
-			cavetraining1 = nbt.getBoolean("cavetraining1");
 		}
 
 		@Override
@@ -461,8 +452,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("rhitta", rhitta);
 			nbt.putBoolean("Istar", Istar);
 			nbt.putBoolean("Basquias", Basquias);
-			nbt.putBoolean("cavetraining0", cavetraining0);
-			nbt.putBoolean("cavetraining1", cavetraining1);
 			return nbt;
 		}
 
@@ -597,7 +586,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean berserkmode = false;
 		public double rCoolDown = 0;
 		public boolean PerfectShell = false;
-		public boolean LongShield = false;
 		public double BP = 0;
 		public boolean immortality = false;
 		public boolean immortalityplayer = false;
@@ -669,7 +657,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean physical_full_counter = false;
 		public boolean FullPowerDemonMark = false;
 		public double fullpowerDemonMark = 0;
-		public double nutritionalvalue = 0;
 		public double teleplortionX = 0;
 		public double teleplortionY = 0;
 		public double teleplortionZ = 0;
@@ -682,10 +669,8 @@ public class CraftNoTaizaiModVariables {
 		public boolean True_Spirt_From = false;
 		public double true_spirit_spear = 0;
 		public double mana_regen_effect = 0;
-		public double HornOfCernunnosID = 0;
 		public boolean hard_protection = false;
 		public double Hard_Protection = 0;
-		public double demon_blood = 0;
 		public ItemStack demon_skill = ItemStack.EMPTY;
 		public boolean learn_demon_skills = false;
 		public boolean aqua_dress = false;
@@ -694,9 +679,6 @@ public class CraftNoTaizaiModVariables {
 		public double healing_area_timer = 0;
 		public boolean GoddessBless = false;
 		public double goddessbless = 0;
-		public double joinX = 0;
-		public double joinY = 0;
-		public double joinZ = 0;
 		public boolean Gloxinia = false;
 		public boolean yggdrasil_armor = false;
 		public double yggdrasilarmor = 0;
@@ -753,6 +735,8 @@ public class CraftNoTaizaiModVariables {
 		public double cave_of_training_timer = 0;
 		public double cave_of_training_kick = 0;
 		public double cave_of_training_cd = 0;
+		public boolean cave_of_training = false;
+		public double training_id = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -803,7 +787,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("berserkmode", berserkmode);
 			nbt.putDouble("rCoolDown", rCoolDown);
 			nbt.putBoolean("PerfectShell", PerfectShell);
-			nbt.putBoolean("LongShield", LongShield);
 			nbt.putDouble("BP", BP);
 			nbt.putBoolean("immortality", immortality);
 			nbt.putBoolean("immortalityplayer", immortalityplayer);
@@ -875,7 +858,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("physical_full_counter", physical_full_counter);
 			nbt.putBoolean("FullPowerDemonMark", FullPowerDemonMark);
 			nbt.putDouble("fullpowerDemonMark", fullpowerDemonMark);
-			nbt.putDouble("nutritionalvalue", nutritionalvalue);
 			nbt.putDouble("teleplortionX", teleplortionX);
 			nbt.putDouble("teleplortionY", teleplortionY);
 			nbt.putDouble("teleplortionZ", teleplortionZ);
@@ -888,10 +870,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("True_Spirt_From", True_Spirt_From);
 			nbt.putDouble("true_spirit_spear", true_spirit_spear);
 			nbt.putDouble("mana_regen_effect", mana_regen_effect);
-			nbt.putDouble("HornOfCernunnosID", HornOfCernunnosID);
 			nbt.putBoolean("hard_protection", hard_protection);
 			nbt.putDouble("Hard_Protection", Hard_Protection);
-			nbt.putDouble("demon_blood", demon_blood);
 			nbt.put("demon_skill", demon_skill.save(new CompoundTag()));
 			nbt.putBoolean("learn_demon_skills", learn_demon_skills);
 			nbt.putBoolean("aqua_dress", aqua_dress);
@@ -900,9 +880,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("healing_area_timer", healing_area_timer);
 			nbt.putBoolean("GoddessBless", GoddessBless);
 			nbt.putDouble("goddessbless", goddessbless);
-			nbt.putDouble("joinX", joinX);
-			nbt.putDouble("joinY", joinY);
-			nbt.putDouble("joinZ", joinZ);
 			nbt.putBoolean("Gloxinia", Gloxinia);
 			nbt.putBoolean("yggdrasil_armor", yggdrasil_armor);
 			nbt.putDouble("yggdrasilarmor", yggdrasilarmor);
@@ -959,6 +936,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("cave_of_training_timer", cave_of_training_timer);
 			nbt.putDouble("cave_of_training_kick", cave_of_training_kick);
 			nbt.putDouble("cave_of_training_cd", cave_of_training_cd);
+			nbt.putBoolean("cave_of_training", cave_of_training);
+			nbt.putDouble("training_id", training_id);
 			return nbt;
 		}
 
@@ -1006,7 +985,6 @@ public class CraftNoTaizaiModVariables {
 			berserkmode = nbt.getBoolean("berserkmode");
 			rCoolDown = nbt.getDouble("rCoolDown");
 			PerfectShell = nbt.getBoolean("PerfectShell");
-			LongShield = nbt.getBoolean("LongShield");
 			BP = nbt.getDouble("BP");
 			immortality = nbt.getBoolean("immortality");
 			immortalityplayer = nbt.getBoolean("immortalityplayer");
@@ -1078,7 +1056,6 @@ public class CraftNoTaizaiModVariables {
 			physical_full_counter = nbt.getBoolean("physical_full_counter");
 			FullPowerDemonMark = nbt.getBoolean("FullPowerDemonMark");
 			fullpowerDemonMark = nbt.getDouble("fullpowerDemonMark");
-			nutritionalvalue = nbt.getDouble("nutritionalvalue");
 			teleplortionX = nbt.getDouble("teleplortionX");
 			teleplortionY = nbt.getDouble("teleplortionY");
 			teleplortionZ = nbt.getDouble("teleplortionZ");
@@ -1091,10 +1068,8 @@ public class CraftNoTaizaiModVariables {
 			True_Spirt_From = nbt.getBoolean("True_Spirt_From");
 			true_spirit_spear = nbt.getDouble("true_spirit_spear");
 			mana_regen_effect = nbt.getDouble("mana_regen_effect");
-			HornOfCernunnosID = nbt.getDouble("HornOfCernunnosID");
 			hard_protection = nbt.getBoolean("hard_protection");
 			Hard_Protection = nbt.getDouble("Hard_Protection");
-			demon_blood = nbt.getDouble("demon_blood");
 			demon_skill = ItemStack.of(nbt.getCompound("demon_skill"));
 			learn_demon_skills = nbt.getBoolean("learn_demon_skills");
 			aqua_dress = nbt.getBoolean("aqua_dress");
@@ -1103,9 +1078,6 @@ public class CraftNoTaizaiModVariables {
 			healing_area_timer = nbt.getDouble("healing_area_timer");
 			GoddessBless = nbt.getBoolean("GoddessBless");
 			goddessbless = nbt.getDouble("goddessbless");
-			joinX = nbt.getDouble("joinX");
-			joinY = nbt.getDouble("joinY");
-			joinZ = nbt.getDouble("joinZ");
 			Gloxinia = nbt.getBoolean("Gloxinia");
 			yggdrasil_armor = nbt.getBoolean("yggdrasil_armor");
 			yggdrasilarmor = nbt.getDouble("yggdrasilarmor");
@@ -1162,6 +1134,8 @@ public class CraftNoTaizaiModVariables {
 			cave_of_training_timer = nbt.getDouble("cave_of_training_timer");
 			cave_of_training_kick = nbt.getDouble("cave_of_training_kick");
 			cave_of_training_cd = nbt.getDouble("cave_of_training_cd");
+			cave_of_training = nbt.getBoolean("cave_of_training");
+			training_id = nbt.getDouble("training_id");
 		}
 	}
 
@@ -1237,7 +1211,6 @@ public class CraftNoTaizaiModVariables {
 					variables.berserkmode = message.data.berserkmode;
 					variables.rCoolDown = message.data.rCoolDown;
 					variables.PerfectShell = message.data.PerfectShell;
-					variables.LongShield = message.data.LongShield;
 					variables.BP = message.data.BP;
 					variables.immortality = message.data.immortality;
 					variables.immortalityplayer = message.data.immortalityplayer;
@@ -1309,7 +1282,6 @@ public class CraftNoTaizaiModVariables {
 					variables.physical_full_counter = message.data.physical_full_counter;
 					variables.FullPowerDemonMark = message.data.FullPowerDemonMark;
 					variables.fullpowerDemonMark = message.data.fullpowerDemonMark;
-					variables.nutritionalvalue = message.data.nutritionalvalue;
 					variables.teleplortionX = message.data.teleplortionX;
 					variables.teleplortionY = message.data.teleplortionY;
 					variables.teleplortionZ = message.data.teleplortionZ;
@@ -1322,10 +1294,8 @@ public class CraftNoTaizaiModVariables {
 					variables.True_Spirt_From = message.data.True_Spirt_From;
 					variables.true_spirit_spear = message.data.true_spirit_spear;
 					variables.mana_regen_effect = message.data.mana_regen_effect;
-					variables.HornOfCernunnosID = message.data.HornOfCernunnosID;
 					variables.hard_protection = message.data.hard_protection;
 					variables.Hard_Protection = message.data.Hard_Protection;
-					variables.demon_blood = message.data.demon_blood;
 					variables.demon_skill = message.data.demon_skill;
 					variables.learn_demon_skills = message.data.learn_demon_skills;
 					variables.aqua_dress = message.data.aqua_dress;
@@ -1334,9 +1304,6 @@ public class CraftNoTaizaiModVariables {
 					variables.healing_area_timer = message.data.healing_area_timer;
 					variables.GoddessBless = message.data.GoddessBless;
 					variables.goddessbless = message.data.goddessbless;
-					variables.joinX = message.data.joinX;
-					variables.joinY = message.data.joinY;
-					variables.joinZ = message.data.joinZ;
 					variables.Gloxinia = message.data.Gloxinia;
 					variables.yggdrasil_armor = message.data.yggdrasil_armor;
 					variables.yggdrasilarmor = message.data.yggdrasilarmor;
@@ -1393,6 +1360,8 @@ public class CraftNoTaizaiModVariables {
 					variables.cave_of_training_timer = message.data.cave_of_training_timer;
 					variables.cave_of_training_kick = message.data.cave_of_training_kick;
 					variables.cave_of_training_cd = message.data.cave_of_training_cd;
+					variables.cave_of_training = message.data.cave_of_training;
+					variables.training_id = message.data.training_id;
 				}
 			});
 			context.setPacketHandled(true);

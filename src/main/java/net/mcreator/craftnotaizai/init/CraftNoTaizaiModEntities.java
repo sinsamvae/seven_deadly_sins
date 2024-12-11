@@ -151,6 +151,7 @@ import net.mcreator.craftnotaizai.entity.DivineSlashEntity;
 import net.mcreator.craftnotaizai.entity.DianeBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DianeAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DiamondTowerEntity;
+import net.mcreator.craftnotaizai.entity.DestroyFourElementsEntity;
 import net.mcreator.craftnotaizai.entity.DespairVenomEntity;
 import net.mcreator.craftnotaizai.entity.DemonKingEntity;
 import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
@@ -196,7 +197,6 @@ import net.mcreator.craftnotaizai.entity.AlbionTallEntity;
 import net.mcreator.craftnotaizai.entity.AlbionFatEntity;
 import net.mcreator.craftnotaizai.entity.AlbionEntity;
 import net.mcreator.craftnotaizai.entity.AealHealEntity;
-import net.mcreator.craftnotaizai.entity.AcidtowerProjectileEntity;
 import net.mcreator.craftnotaizai.entity.AcidTwowerMobEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -272,8 +272,6 @@ public class CraftNoTaizaiModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<RockRushProjectileEntity>> ROCK_RUSH_PROJECTILE = register("rock_rush_projectile", EntityType.Builder.<RockRushProjectileEntity>of(RockRushProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(RockRushProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<AcidtowerProjectileEntity>> ACIDTOWER_PROJECTILE = register("acidtower_projectile", EntityType.Builder.<AcidtowerProjectileEntity>of(AcidtowerProjectileEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(AcidtowerProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<EvilhoundProjectileEntity>> EVILHOUND_PROJECTILE = register("evilhound_projectile", EntityType.Builder.<EvilhoundProjectileEntity>of(EvilhoundProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(EvilhoundProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<WhirlShockProjectileEntity>> WHIRL_SHOCK_PROJECTILE = register("whirl_shock_projectile", EntityType.Builder.<WhirlShockProjectileEntity>of(WhirlShockProjectileEntity::new, MobCategory.MISC)
@@ -772,6 +770,8 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<AnaonEntity>of(AnaonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnaonEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DestroyFourElementsEntity>> DESTROY_FOUR_ELEMENTS = register("destroy_four_elements", EntityType.Builder.<DestroyFourElementsEntity>of(DestroyFourElementsEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(DestroyFourElementsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

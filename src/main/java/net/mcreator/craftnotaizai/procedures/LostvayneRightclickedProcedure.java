@@ -24,6 +24,7 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.PhysicalCloneEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
+import java.util.List;
 import java.util.Comparator;
 
 import io.netty.buffer.Unpooled;
@@ -56,17 +57,15 @@ public class LostvayneRightclickedProcedure {
 						}
 					}
 					CraftNoTaizaiMod.queueServerWork(5, () -> {
-						if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-							if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+										_toTame.tame(_owner);
 								}
-							}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
-								_toTame.tame(_owner);
+							}
 						}
 					});
 				}
@@ -77,122 +76,92 @@ public class LostvayneRightclickedProcedure {
 							if (entityToSpawn != null) {
 							}
 						}
-						CraftNoTaizaiMod.queueServerWork(5, () -> {
-							for (int index1 = 0; index1 < (int) (2 * 1); index1++) {
-								if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-									if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 										_toTame.tame(_owner);
 								}
 							}
-						});
+						}
 					}
 				}
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 3) {
-					for (int index2 = 0; index2 < (int) (3 * 1); index2++) {
+					for (int index1 = 0; index1 < (int) (3 * 1); index1++) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = CraftNoTaizaiModEntities.PHYSICAL_CLONE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 							}
 						}
-						CraftNoTaizaiMod.queueServerWork(5, () -> {
-							for (int index3 = 0; index3 < (int) (3 * 1); index3++) {
-								if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-									if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 										_toTame.tame(_owner);
 								}
 							}
-						});
+						}
 					}
 				}
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 4) {
-					for (int index4 = 0; index4 < (int) (4 * 1); index4++) {
+					for (int index2 = 0; index2 < (int) (4 * 1); index2++) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = CraftNoTaizaiModEntities.PHYSICAL_CLONE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 							}
 						}
-						CraftNoTaizaiMod.queueServerWork(5, () -> {
-							for (int index5 = 0; index5 < (int) (4 * 1); index5++) {
-								if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-									if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 										_toTame.tame(_owner);
 								}
 							}
-						});
+						}
 					}
 				}
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 5) {
-					for (int index6 = 0; index6 < (int) (5 * 1); index6++) {
+					for (int index3 = 0; index3 < (int) (5 * 1); index3++) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = CraftNoTaizaiModEntities.PHYSICAL_CLONE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 							}
 						}
-						CraftNoTaizaiMod.queueServerWork(5, () -> {
-							for (int index7 = 0; index7 < (int) (5 * 1); index7++) {
-								if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-									if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 										_toTame.tame(_owner);
 								}
 							}
-						});
+						}
 					}
 				}
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 6) {
-					for (int index8 = 0; index8 < (int) (6 * 1); index8++) {
+					for (int index4 = 0; index4 < (int) (6 * 1); index4++) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = CraftNoTaizaiModEntities.PHYSICAL_CLONE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 							}
 						}
-						CraftNoTaizaiMod.queueServerWork(5, () -> {
-							for (int index9 = 0; index9 < (int) (6 * 1); index9++) {
-								if (!(((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-									if (((Entity) world.getEntitiesOfClass(PhysicalCloneEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof PhysicalCloneEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+									if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 										_toTame.tame(_owner);
 								}
 							}
-						});
+						}
 					}
 				}
 			}

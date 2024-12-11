@@ -52,6 +52,13 @@ public class PlayerFirstJoinsProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				double _setval = Mth.nextInt(RandomSource.create(), 1, 100);
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.training_id = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (CraftNoTaizaiConfiguration.RANDOM_RACE.get()) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);

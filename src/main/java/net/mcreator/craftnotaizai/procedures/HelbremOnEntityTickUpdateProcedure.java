@@ -48,7 +48,7 @@ public class HelbremOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 45)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 		}
 	}
 }

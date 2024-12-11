@@ -13,7 +13,7 @@ import net.minecraft.commands.arguments.EntityAnchorArgument;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
+import net.mcreator.craftnotaizai.entity.DestroyFourElementsEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class VivianOnEntityTickUpdateProcedure {
@@ -41,7 +41,7 @@ public class VivianOnEntityTickUpdateProcedure {
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new HellblazeOmegaProjectileEntity(CraftNoTaizaiModEntities.HELLBLAZE_OMEGA_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new DestroyFourElementsEntity(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -56,7 +56,7 @@ public class VivianOnEntityTickUpdateProcedure {
 					}
 				});
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 45)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 		}
 	}
 }

@@ -51,7 +51,7 @@ public class AcidkeyPressProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							AcidTowerSkillProcedure.execute(world, entity);
+							AcidTowerSkillProcedure.execute(world, y, entity);
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 45);
 						} else {

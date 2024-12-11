@@ -21,27 +21,27 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.craftnotaizai.procedures.AcidtowerWhileProjectileFlyingTickProcedure;
-import net.mcreator.craftnotaizai.procedures.AcidtowerProjectileProjectileHitsLivingEntityProcedure;
+import net.mcreator.craftnotaizai.procedures.HellblazeOmegaWhileProjectileFlyingTickProcedure;
+import net.mcreator.craftnotaizai.procedures.DestroyFourElementsProjectileHitsLivingEntityProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class AcidtowerProjectileEntity extends AbstractArrow implements ItemSupplier {
+public class DestroyFourElementsEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
 
-	public AcidtowerProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(CraftNoTaizaiModEntities.ACIDTOWER_PROJECTILE.get(), world);
+	public DestroyFourElementsEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), world);
 	}
 
-	public AcidtowerProjectileEntity(EntityType<? extends AcidtowerProjectileEntity> type, Level world) {
+	public DestroyFourElementsEntity(EntityType<? extends DestroyFourElementsEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public AcidtowerProjectileEntity(EntityType<? extends AcidtowerProjectileEntity> type, double x, double y, double z, Level world) {
+	public DestroyFourElementsEntity(EntityType<? extends DestroyFourElementsEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public AcidtowerProjectileEntity(EntityType<? extends AcidtowerProjectileEntity> type, LivingEntity entity, Level world) {
+	public DestroyFourElementsEntity(EntityType<? extends DestroyFourElementsEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -70,49 +70,49 @@ public class AcidtowerProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		AcidtowerProjectileProjectileHitsLivingEntityProcedure.execute(this.level(), entityHitResult.getEntity(), this);
+		DestroyFourElementsProjectileHitsLivingEntityProcedure.execute(this.level(), entityHitResult.getEntity(), this);
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		AcidtowerWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		HellblazeOmegaWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}
 
-	public static AcidtowerProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 0f, 0, 0);
+	public static DestroyFourElementsEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 1f, 5, 5);
 	}
 
-	public static AcidtowerProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 0f, 0, 0);
+	public static DestroyFourElementsEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 5, 5);
 	}
 
-	public static AcidtowerProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		AcidtowerProjectileEntity entityarrow = new AcidtowerProjectileEntity(CraftNoTaizaiModEntities.ACIDTOWER_PROJECTILE.get(), entity, world);
+	public static DestroyFourElementsEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		DestroyFourElementsEntity entityarrow = new DestroyFourElementsEntity(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
-	public static AcidtowerProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		AcidtowerProjectileEntity entityarrow = new AcidtowerProjectileEntity(CraftNoTaizaiModEntities.ACIDTOWER_PROJECTILE.get(), entity, entity.level());
+	public static DestroyFourElementsEntity shoot(LivingEntity entity, LivingEntity target) {
+		DestroyFourElementsEntity entityarrow = new DestroyFourElementsEntity(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(0);
-		entityarrow.setKnockback(0);
+		entityarrow.setBaseDamage(5);
+		entityarrow.setKnockback(5);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

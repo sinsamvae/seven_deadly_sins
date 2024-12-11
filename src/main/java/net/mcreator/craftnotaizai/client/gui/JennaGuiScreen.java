@@ -53,7 +53,7 @@ public class JennaGuiScreen extends AbstractContainerScreen<JennaGuiMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/black.png"), this.leftPos + -241, this.topPos + -147, 0, 0, 960, 540, 960, 540);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/black.png"), this.leftPos + -449, this.topPos + -254, 0, 0, 960, 540, 960, 540);
 
 		RenderSystem.disableBlend();
 	}

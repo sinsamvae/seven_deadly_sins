@@ -11,6 +11,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
+import net.mcreator.craftnotaizai.world.inventory.ZaneriGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.TeleportationGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.StoryBoardMenu;
 import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
@@ -49,4 +50,5 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<CloverTradingMenu>> CLOVER_TRADING = REGISTRY.register("clover_trading", () -> IForgeMenuType.create(CloverTradingMenu::new));
 	public static final RegistryObject<MenuType<CannonGuiMenu>> CANNON_GUI = REGISTRY.register("cannon_gui", () -> IForgeMenuType.create(CannonGuiMenu::new));
 	public static final RegistryObject<MenuType<JennaGuiMenu>> JENNA_GUI = REGISTRY.register("jenna_gui", () -> IForgeMenuType.create(JennaGuiMenu::new));
+	public static final RegistryObject<MenuType<ZaneriGuiMenu>> ZANERI_GUI = REGISTRY.register("zaneri_gui", () -> IForgeMenuType.create(ZaneriGuiMenu::new));
 }

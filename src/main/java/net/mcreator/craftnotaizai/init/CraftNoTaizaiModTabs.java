@@ -256,7 +256,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_BRICK.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_BRICK_SLAB.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_BRICK_STAIR.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_SPIKE.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SLEEPING_FOREST_DIRT.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.TOWER_OF_TRIALS.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.CAVE_OF_TRAINING.get().asItem());
@@ -390,8 +389,6 @@ public class CraftNoTaizaiModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(CraftNoTaizaiModItems.CLOVER_SPAWN_EGG.get());
 			tabData.accept(CraftNoTaizaiModItems.CANNON_ENTITY_SPAWN_EGG.get());
-		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-			tabData.accept(CraftNoTaizaiModItems.WICKED_BITE_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(CraftNoTaizaiModItems.CARBON_STEEL.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {

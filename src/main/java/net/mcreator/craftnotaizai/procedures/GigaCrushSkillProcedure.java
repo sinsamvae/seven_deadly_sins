@@ -38,6 +38,21 @@ public class GigaCrushSkillProcedure {
 		double yaw = 0;
 		boolean target = false;
 		Entity entity_target = null;
+		for (int index0 = 0; index0 < (int) (15 * 1); index0++) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.GIGA_CRUSH.get().spawn(_level,
+						BlockPos.containing(
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()
+										+ Mth.nextDouble(RandomSource.create(), -5, 5),
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()
+										+ Mth.nextDouble(RandomSource.create(), -5, -6),
+								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()
+										+ Mth.nextDouble(RandomSource.create(), -5, 5)),
+						MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+		}
 		{
 			final Vec3 _center = new Vec3(
 					(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()), y,
@@ -67,29 +82,10 @@ public class GigaCrushSkillProcedure {
 								return false;
 							}
 						}.checkGamemode(entityiterator))) {
-					target = true;
-					entity_target = entityiterator;
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+							(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 1));
 				}
 			}
-		}
-		if (target && entity_target instanceof LivingEntity) {
-			for (int index0 = 0; index0 < (int) (15 * 1); index0++) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.GIGA_CRUSH.get().spawn(_level,
-							BlockPos.containing(
-									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()
-											+ Mth.nextDouble(RandomSource.create(), -5, 5),
-									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()
-											+ Mth.nextDouble(RandomSource.create(), -5, -6),
-									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(8)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()
-											+ Mth.nextDouble(RandomSource.create(), -5, 5)),
-							MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-					}
-				}
-			}
-			entity_target.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-					(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 1));
 		}
 	}
 }

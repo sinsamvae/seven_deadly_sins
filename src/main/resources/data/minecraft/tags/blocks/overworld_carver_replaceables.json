@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:cobbled_deepslate",
-    "minecraft:dirt",
     "minecraft:air",
     "minecraft:stone",
     "minecraft:grass_block",

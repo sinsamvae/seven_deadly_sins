@@ -41,7 +41,7 @@ public class GriamoreAnimatedOnEntityTickUpdateProcedure {
 				if (entity instanceof GriamoreAnimatedEntity _datEntSetL)
 					_datEntSetL.getEntityData().set(GriamoreAnimatedEntity.DATA_wall, true);
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 45)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 		}
 		if ((entity instanceof GriamoreAnimatedEntity _datEntL23 && _datEntL23.getEntityData().get(GriamoreAnimatedEntity.DATA_wall)) == true) {
 			entity.getPersistentData().putDouble("wall", (entity.getPersistentData().getDouble("wall") + 1));

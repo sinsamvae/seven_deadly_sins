@@ -16,7 +16,7 @@
           "image": "gui.png",
           "use1Xscale": false,
           "x": 120,
-          "y": 16
+          "y": 15
         }
       },
       {
@@ -80,7 +80,7 @@
             "falpha": 0.0
           },
           "x": 135,
-          "y": 136
+          "y": 144
         }
       },
       {
@@ -96,7 +96,7 @@
             "falpha": 0.0
           },
           "x": 135,
-          "y": 92
+          "y": 79
         }
       },
       {
@@ -112,7 +112,7 @@
             "falpha": 0.0
           },
           "x": 135,
-          "y": 107
+          "y": 102
         }
       },
       {
@@ -189,7 +189,7 @@
             "name": "TPStr"
           },
           "x": 121,
-          "y": 90
+          "y": 78
         }
       },
       {
@@ -202,7 +202,7 @@
             "name": "TPHp"
           },
           "x": 121,
-          "y": 105
+          "y": 100
         }
       },
       {
@@ -215,7 +215,7 @@
             "name": "Tpmana"
           },
           "x": 121,
-          "y": 134
+          "y": 145
         }
       },
       {
@@ -244,7 +244,7 @@
             "falpha": 0.0
           },
           "x": 134,
-          "y": 122
+          "y": 123
         }
       },
       {
@@ -257,7 +257,7 @@
             "name": "TPAgility"
           },
           "x": 121,
-          "y": 120
+          "y": 122
         }
       },
       {
@@ -312,7 +312,7 @@
             "falpha": 0.0
           },
           "x": 134,
-          "y": 147
+          "y": 154
         }
       },
       {
@@ -358,6 +358,58 @@
           "followMouseMovement": true,
           "x": 258,
           "y": 124
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_strength",
+          "text": {
+            "fixedValue": "Increase Strength"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 111,
+          "y": 71
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_defense",
+          "text": {
+            "fixedValue": "Increase Defense"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 111,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_speed",
+          "text": {
+            "fixedValue": "Increase Speed"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 111,
+          "y": 119
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_maxmana_mana_damage",
+          "text": {
+            "fixedValue": "Increase MaxMana & Mana Damage"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 111,
+          "y": 143
         }
       }
     ],

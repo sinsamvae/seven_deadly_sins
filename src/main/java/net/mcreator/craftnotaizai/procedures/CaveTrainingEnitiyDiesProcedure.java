@@ -55,14 +55,16 @@ public class CaveTrainingEnitiyDiesProcedure {
 							});
 						}
 						{
-							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength + 5;
+							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength
+									+ (double) CraftNoTaizaiConfiguration.CAVE_OF_TRAINING.get();
 							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.strength = _setval;
 								capability.syncPlayerVariables(entityiterator);
 							});
 						}
 						{
-							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit + 5;
+							double _setval = (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit
+									+ (double) CraftNoTaizaiConfiguration.CAVE_OF_TRAINING.get();
 							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.Spirit = _setval;
 								capability.syncPlayerVariables(entityiterator);

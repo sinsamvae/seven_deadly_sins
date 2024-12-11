@@ -527,6 +527,10 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -1942,6 +1946,10 @@
             "type": "entity"
           },
           {
+            "name": "y",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -2210,45 +2218,6 @@
         ]
       },
       "path": "~/magic abilities/HumanMagic/Acid/Acid Down"
-    },
-    {
-      "name": "AcidtowerWhileProjectileFlyingTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acidtower_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/AcidtowerWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Acid/Acid Tower/Projectile"
     },
     {
       "name": "FullCounterOnKeyPressed",
@@ -6636,37 +6605,6 @@
       "path": "~/magic abilities/HumanMagic/Wall/perffectshell"
     },
     {
-      "name": "Longshield",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "longshield",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/LongshieldProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Wall"
-    },
-    {
       "name": "Fairywings",
       "type": "procedure",
       "compiles": true,
@@ -8755,20 +8693,6 @@
       "path": "~/magic abilities/Miracle Wind/Manpuu no Gekirin"
     },
     {
-      "name": "ManpuunoGekirin",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "manpuuno_gekirin",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/item/ManpuunoGekirinItem.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/manpuuno_gekirin.json"
-        ]
-      },
-      "path": "~/magic abilities/Miracle Wind/Manpuu no Gekirin"
-    },
-    {
       "name": "SoyokazenoGekirinProjectile",
       "type": "projectile",
       "compiles": true,
@@ -8777,20 +8701,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/entity/SoyokazenoGekirinProjectileEntity.java"
-        ]
-      },
-      "path": "~/magic abilities/Miracle Wind/Soyokaze no Gekirin"
-    },
-    {
-      "name": "SoyokazenoGekirin",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "soyokazeno_gekirin",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/item/SoyokazenoGekirinItem.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/soyokazeno_gekirin.json"
         ]
       },
       "path": "~/magic abilities/Miracle Wind/Soyokaze no Gekirin"
@@ -8878,33 +8788,6 @@
         ]
       },
       "path": "~/magic abilities/sevendeadlysinsmagic/Creation/rockrush"
-    },
-    {
-      "name": "AcidtowerProjectile",
-      "type": "projectile",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acidtower_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/entity/AcidtowerProjectileEntity.java"
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Acid/Acid Tower/Projectile"
-    },
-    {
-      "name": "Acidtower",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acidtower",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/item/AcidtowerItem.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/acidtower.json"
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Acid/Acid Tower/Projectile"
     },
     {
       "name": "EvilhoundProjectile",
@@ -13709,33 +13592,6 @@
       "path": "~/entities/StoryModeEntities/jerichoDemonForm"
     },
     {
-      "name": "AcidtowerProjectileProjectileHitsLivingEntity",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acidtower_projectile_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/AcidtowerProjectileProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/magic abilities/HumanMagic/Acid/Acid Tower"
-    },
-    {
       "name": "PurgeoftheThunderEmperor",
       "type": "procedure",
       "compiles": true,
@@ -13749,6 +13605,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
           },
           {
             "name": "world",
@@ -17104,6 +16964,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -19380,7 +19244,7 @@
     {
       "name": "PhysicalClone",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "physical_clone",
       "metadata": {
@@ -27134,41 +26998,6 @@
       "path": "~/Weapons/Sacred Treasure/LostVayne/Gui"
     },
     {
-      "name": "PhysicalCloneOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "physical_clone_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/PhysicalCloneOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/LostVayne/PhysicalClone"
-    },
-    {
       "name": "BlackOutProjectile",
       "type": "projectile",
       "compiles": true,
@@ -31078,6 +30907,10 @@
             "type": "entity"
           },
           {
+            "name": "y",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -31161,6 +30994,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
           },
           {
             "name": "world",
@@ -33038,25 +32875,6 @@
       "path": "~/potion"
     },
     {
-      "name": "RenderHeavyMetalOnEntity",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_heavy_metal_on_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderHeavyMetalOnEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities/Normal/weakess/Giants/Dumblebas"
-    },
-    {
       "name": "TeleportationOrb",
       "type": "item",
       "compiles": true,
@@ -33265,7 +33083,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "KillGinats",
@@ -34599,7 +34417,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "IstarPortalBlockEntityCollidesInTheBlock",
@@ -34637,7 +34455,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "IstarCancelBlockBreak",
@@ -34656,7 +34474,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "IstarPlayerLeavesDimension",
@@ -34675,7 +34493,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "EntraceToIstar",
@@ -34945,18 +34763,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34978,18 +34784,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -35084,15 +34878,7 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
             "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
             "type": "number"
           },
           {
@@ -35115,25 +34901,6 @@
         ]
       },
       "path": "~/Config"
-    },
-    {
-      "name": "CaveCancelBlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_cancel_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveCancelBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "CaveTrainingEnitiyDies",
@@ -35475,6 +35242,202 @@
         ]
       },
       "path": "~/entities/Hard/weak"
+    },
+    {
+      "name": "IstarSetUpDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_set_up_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarSetUpDimensionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "IstarRenderSkyBox",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_render_sky_box",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarRenderSkyBoxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dimension",
+            "type": "dimensiontype"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "CaveOfTrainingTimeLeftRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cave_of_training_time_left_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveOfTrainingTimeLeftRenderProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/overlay"
+    },
+    {
+      "name": "CaveofTrainingSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caveof_training_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveofTrainingSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
+    },
+    {
+      "name": "DestroyFourElementsProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destroy_four_elements_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DestroyFourElementsProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Hard/weakess/Vivian"
+    },
+    {
+      "name": "DestroyFourElements",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destroy_four_elements",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/DestroyFourElementsRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/DestroyFourElementsEntity.java"
+        ]
+      },
+      "path": "~/entities/Hard/weakess/Vivian"
+    },
+    {
+      "name": "ZaneriGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zaneri_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/gui/ZaneriGuiScreen.java",
+          "src/main/java/net/mcreator/craftnotaizai/world/inventory/ZaneriGuiMenu.java",
+          "src/main/java/net/mcreator/craftnotaizai/network/ZaneriGuiButtonMessage.java"
+        ]
+      },
+      "path": "~/entities/Istar/Zaneri"
+    },
+    {
+      "name": "ZaneriRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zaneri_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ZaneriRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Zaneri"
+    },
+    {
+      "name": "ZaneriDeny",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zaneri_deny",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ZaneriDenyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Zaneri"
+    },
+    {
+      "name": "TowerOfTrails",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower_of_trails",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/dimension/tower_of_trails.json",
+          "src/main/java/net/mcreator/craftnotaizai/world/dimension/TowerOfTrailsDimension.java",
+          "src/main/resources/data/craft_no_taizai/dimension_type/tower_of_trails.json"
+        ]
+      },
+      "path": "~/dimensions/Istar/TowerOfTrails"
     }
   ],
   "variable_elements": [
@@ -35756,12 +35719,6 @@
     },
     {
       "name": "PerfectShell",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "LongShield",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -36229,12 +36186,6 @@
       "value": "0"
     },
     {
-      "name": "nutritionalvalue",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "teleplortionX",
       "type": "number",
       "scope": "player_persistent",
@@ -36307,12 +36258,6 @@
       "value": "0"
     },
     {
-      "name": "HornOfCernunnosID",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "hard_protection",
       "type": "logic",
       "scope": "player_persistent",
@@ -36320,12 +36265,6 @@
     },
     {
       "name": "Hard_Protection",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "demon_blood",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -36374,24 +36313,6 @@
     },
     {
       "name": "goddessbless",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "joinX",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "joinY",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "joinZ",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -36841,12 +36762,6 @@
       "value": "false"
     },
     {
-      "name": "cavetraining0",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
       "name": "cave_of_training_timer",
       "type": "number",
       "scope": "player_persistent",
@@ -36865,10 +36780,16 @@
       "value": "0"
     },
     {
-      "name": "cavetraining1",
+      "name": "cave_of_training",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "training_id",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -37325,7 +37246,6 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.COBBLED_DEEPSLATE",
-      "~Blocks.DIRT#0",
       "~Blocks.AIR",
       "~Blocks.STONE#0",
       "~Blocks.GRASS",
@@ -37605,13 +37525,13 @@
       "item.craft_no_taizai.beer_mug": "Beer Mug",
       "item.craft_no_taizai.gray_demon_blood_needle": "BloodFuilled Syringe",
       "subtitles.dale_2nd_idle": "",
-      "item.craft_no_taizai.manpuuno_gekirin": "Manpuuno Gekirin",
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie": "Must fight the holy knights Friesia and Ruin ",
       "gui.craft_no_taizai.demon_stat.tooltip_skills": "Magic",
       "item.craft_no_taizai.kulumil_spawn_egg": "Kulumil Spawn Egg",
       "key.craft_no_taizai.double_jump": "Double Jump",
       "item.craft_no_taizai.fairy_helbram_armor_leggings": "Helbram Leggings",
       "gui.craft_no_taizai.story_board.label_ep2_the_sin_in_the_sleeping_fore": "EP2-3 The Sin in the Sleeping Forest",
+      "gui.craft_no_taizai.zaneri_gui.label_deny": ".Deny",
       "item.craft_no_taizai.guila_armor_2_leggings": "Guila Leggings",
       "effect.craft_no_taizai.jack_potion": "Jack",
       "gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga": "of the Ten Commandments once again.",
@@ -37661,6 +37581,7 @@
       "entity.craft_no_taizai.mutilator_rabbits": "Mutilator Rabbits",
       "item.craft_no_taizai.mid_tier_souls": "Mid Tier Souls",
       "gui.craft_no_taizai.disaster_menu.tooltip_reset": "Reset Moves",
+      "gui.craft_no_taizai.zaneri_gui.label_be_warn_this_trail_is_tuf": "be warn this trail is tuf",
       "entity.craft_no_taizai.guardian_1": "Guardian",
       "gui.craft_no_taizai.clover_trading.label_trade": "Trade",
       "item.craft_no_taizai.ban_armor_chestplate": "Ban Chestplate",
@@ -37669,10 +37590,10 @@
       "item.craft_no_taizai.soldier_armor_helmet": "Soldier Helmet",
       "item.craft_no_taizai.merlin_armor_chest_plate_chestplate": "Merlin Chestplate",
       "gui.craft_no_taizai.fairy_clan.label_random_200_to_500": "Random: 500 to 800",
-      "item.craft_no_taizai.soyokazeno_gekirin": "Soyokazeno Gekirin",
       "biome.craft_no_taizai.istar_biome": "Istar Biome",
       "item.craft_no_taizai.earth_golem_spawn_egg": "Earth Golem Spawn Egg",
       "gui.craft_no_taizai.demon_king_gui.label_i_shall_give_you_bit_of_my_power": "I shall give",
+      "gui.craft_no_taizai.zaneri_gui.label_if_youre_ready": "If you\u0027re ready",
       "gui.craft_no_taizai.demon_king_gui.label_of_my_power": "the most powerful Demon,",
       "gui.craft_no_taizai.magic_menu.label_empty": "\u003e",
       "entity.craft_no_taizai.aeal_heal": "Aeal Heal",
@@ -38021,8 +37942,10 @@
       "gui.craft_no_taizai.story_board.label_meliodas_and_others_head_to_mega": "Meliodas and others head to Megadozer in hopes of finding",
       "item.craft_no_taizai.muramo_animated_spawn_egg": "Muramo Spawn Egg",
       "item.craft_no_taizai.seven_deadly_sins_opening.desc": "Seven Deadly Sins Opening",
+      "gui.craft_no_taizai.zaneri_gui.label_accept": ".Accept",
       "item.craft_no_taizai.ban_outfit_helmet": "Ban Collar",
       "gui.craft_no_taizai.story_board.label_revival_of_the_demon_clan": "EP1: Revival Of the Demon Clan",
+      "gui.craft_no_taizai.demon_stat.tooltip_increase_speed": "Increase Speed",
       "advancements.blood_awaken.descr": "you have several demonic features",
       "advancements.defeat_diane.descr": "Defeat The Sin Of Evny",
       "subtitles.corrupted_holyknight_idle": "",
@@ -38114,6 +38037,7 @@
       "item.craft_no_taizai.knightarmor_helmet": "Knightarmor Helmet",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_empty": "Who Are You?",
       "gui.craft_no_taizai.fairy_clan.label_fairy_race": "Fairy Race",
+      "gui.craft_no_taizai.demon_stat.tooltip_increase_defense": "Increase Defense",
       "gui.craft_no_taizai.story_board.label_gideon_you_decide_to_participat": "Gideon, you decide to participate, as do Holy Knights",
       "item.craft_no_taizai.mutilator_rabbits_spawn_egg": "Mutilator Rabbits Spawn Egg",
       "item.craft_no_taizai.lightningbeast": "Lightningbeast",
@@ -38228,6 +38152,7 @@
       "item.craft_no_taizai.acid_twower_mob_spawn_egg": "Acid Twower Mob Spawn Egg",
       "item.craft_no_taizai.fake_ball": "Fake Ball",
       "gui.craft_no_taizai.story_board.label_when_it_seems_the_seven_deadly_s": "When it seems the Seven Deadly Sins",
+      "gui.craft_no_taizai.zaneri_gui.label_you_will_have_to_go_through_trai": "you will have to go through trail",
       "item.craft_no_taizai.troll_spawn_egg": "Troll Spawn Egg",
       "item.craft_no_taizai.dianeoutfit_leggings": "Diane Pants",
       "item.craft_no_taizai.gil_thunder_armor_leggings": "GilThunder Armor",
@@ -38317,6 +38242,7 @@
       "item.craft_no_taizai.gowther_armor_helmet": "Escanor Armor Helments",
       "block.craft_no_taizai.beer_mug_block": "Beer ale Block",
       "effect.craft_no_taizai.mana_regen_effet": "Mana Regen Effet",
+      "gui.craft_no_taizai.demon_stat.tooltip_increase_maxmana_mana_damage": "Increase MaxMana \u0026 Mana Damage",
       "gui.craft_no_taizai.story_board.label_ep4_a_little_girls_dream": "EP4: A Little Girl\u0027s Dream",
       "item.craft_no_taizai.dale_armored_spawn_egg": "Dale Spawn Egg",
       "entity.craft_no_taizai.basquias_guardian": "Basquias Guardian",
@@ -38386,6 +38312,7 @@
       "gui.craft_no_taizai.story_board.label_ep_10the_vaizel_fighting_festiv2": "EP 11:The Vaizel Fighting Festival Round 5",
       "item.craft_no_taizai.gloxina_boss_spawn_egg": "Gloxina Spawn Egg",
       "item.craft_no_taizai.red_knight_armor_leggings": "RedKnight Leggings",
+      "gui.craft_no_taizai.demon_stat.tooltip_increase_strength": "Increase Strength",
       "entity.craft_no_taizai.rising_meteor": "Rising Meteor",
       "block.craft_no_taizai.fairy_tree_staires": "Fairy Tree Stairs",
       "gui.craft_no_taizai.story_board.label_destory_the_fairy_kings_forest": "destory the Fairy King\u0027s Forest. Galand of Ten ",
@@ -38398,7 +38325,6 @@
       "item.craft_no_taizai.weinheidt_animated_spawn_egg": "Weinheidt Spawn Egg",
       "item.craft_no_taizai.cooked_angle_meat": "Angle Cure Cooked Meat",
       "item.craft_no_taizai.ruin_spawn_egg": "Ruin Spawn Egg",
-      "item.craft_no_taizai.acidtower": "Acidtower",
       "entity.craft_no_taizai.jenna": "Jenna",
       "gui.craft_no_taizai.story_board.label_ep_3the_scared_treasure_lostvay1": "EP 4:The Ten Commandments on the Move",
       "entity.craft_no_taizai.green_knight_animated": "Green Knight",
@@ -38749,12 +38675,7 @@
                   },
                   {
                     "name": "Acid Tower",
-                    "children": [
-                      {
-                        "name": "Projectile",
-                        "children": []
-                      }
-                    ]
+                    "children": []
                   }
                 ]
               },
@@ -39903,10 +39824,6 @@
                       {
                         "name": "Red",
                         "children": []
-                      },
-                      {
-                        "name": "blue",
-                        "children": []
                       }
                     ]
                   }
@@ -40411,6 +40328,14 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "IstarSetUp",
+                "children": []
+              },
+              {
+                "name": "TowerOfTrails",
+                "children": []
               }
             ]
           }

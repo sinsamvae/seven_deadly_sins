@@ -29,7 +29,6 @@ import net.mcreator.craftnotaizai.item.TentaclesItem;
 import net.mcreator.craftnotaizai.item.TeleportationOrbItem;
 import net.mcreator.craftnotaizai.item.SwordWolfFurItem;
 import net.mcreator.craftnotaizai.item.SpiraledlanceItem;
-import net.mcreator.craftnotaizai.item.SoyokazenoGekirinItem;
 import net.mcreator.craftnotaizai.item.SoldierArmorItem;
 import net.mcreator.craftnotaizai.item.SnowflowerbeamItem;
 import net.mcreator.craftnotaizai.item.SladerArmorItem;
@@ -64,7 +63,6 @@ import net.mcreator.craftnotaizai.item.MerlinArmorChestPlateItem;
 import net.mcreator.craftnotaizai.item.MeliodasoutfitItem;
 import net.mcreator.craftnotaizai.item.MeliodasdanaforarmorItem;
 import net.mcreator.craftnotaizai.item.MeliodasArmorItem;
-import net.mcreator.craftnotaizai.item.ManpuunoGekirinItem;
 import net.mcreator.craftnotaizai.item.MagicScrollItem;
 import net.mcreator.craftnotaizai.item.LuminosityItem;
 import net.mcreator.craftnotaizai.item.LumeOrbItem;
@@ -183,7 +181,6 @@ import net.mcreator.craftnotaizai.item.AndreArmorItem;
 import net.mcreator.craftnotaizai.item.AldanItem;
 import net.mcreator.craftnotaizai.item.AgaveSeedsItem;
 import net.mcreator.craftnotaizai.item.AgaveItem;
-import net.mcreator.craftnotaizai.item.AcidtowerItem;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class CraftNoTaizaiModItems {
@@ -280,12 +277,9 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> HAY_BALE_ROOF = block(CraftNoTaizaiModBlocks.HAY_BALE_ROOF);
 	public static final RegistryObject<Item> AREA_GROUND = block(CraftNoTaizaiModBlocks.AREA_GROUND);
 	public static final RegistryObject<Item> BLAZE = REGISTRY.register("blaze", () -> new BlazeItem());
-	public static final RegistryObject<Item> MANPUUNO_GEKIRIN = REGISTRY.register("manpuuno_gekirin", () -> new ManpuunoGekirinItem());
-	public static final RegistryObject<Item> SOYOKAZENO_GEKIRIN = REGISTRY.register("soyokazeno_gekirin", () -> new SoyokazenoGekirinItem());
 	public static final RegistryObject<Item> HELL_BLAZE = REGISTRY.register("hell_blaze", () -> new HellBlazeItem());
 	public static final RegistryObject<Item> HELLBLAZE_OMEGA = REGISTRY.register("hellblaze_omega", () -> new HellblazeOmegaItem());
 	public static final RegistryObject<Item> ROCK_RUSH = REGISTRY.register("rock_rush", () -> new RockRushItem());
-	public static final RegistryObject<Item> ACIDTOWER = REGISTRY.register("acidtower", () -> new AcidtowerItem());
 	public static final RegistryObject<Item> EVILHOUND = REGISTRY.register("evilhound", () -> new EvilhoundItem());
 	public static final RegistryObject<Item> WHIRL_SHOCK = REGISTRY.register("whirl_shock", () -> new WhirlShockItem());
 	public static final RegistryObject<Item> BREAKTHROUGH = REGISTRY.register("breakthrough", () -> new BreakthroughItem());

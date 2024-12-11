@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "craft_no_taizai:acidtower_projectile",
     "craft_no_taizai:arrow_shot_projectile",
     "craft_no_taizai:basquias_projectile",
     "craft_no_taizai:black_out_projectile",

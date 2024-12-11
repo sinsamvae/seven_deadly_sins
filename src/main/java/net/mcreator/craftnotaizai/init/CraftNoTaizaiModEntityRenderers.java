@@ -128,6 +128,7 @@ import net.mcreator.craftnotaizai.client.renderer.DivineSlashRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DianeBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DianeAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DiamondTowerRenderer;
+import net.mcreator.craftnotaizai.client.renderer.DestroyFourElementsRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DemonKingRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DemonHendricksonAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeathThornRenderer;
@@ -196,7 +197,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HELL_BLAZE_PROJECTILE.get(), HellBlazeProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HELLBLAZE_OMEGA_PROJECTILE.get(), HellblazeOmegaProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ROCK_RUSH_PROJECTILE.get(), RockRushProjectileRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.ACIDTOWER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.EVILHOUND_PROJECTILE.get(), EvilhoundProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.WHIRL_SHOCK_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BREAKTHROUGH_PROJECTILE.get(), ThrownItemRenderer::new);
@@ -356,5 +356,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MOSS_DRAGON.get(), MossDragonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANAON.get(), AnaonRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), DestroyFourElementsRenderer::new);
 	}
 }

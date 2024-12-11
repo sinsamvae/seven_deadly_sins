@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.craftnotaizai.client.gui.ZaneriGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.TeleportationGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.StoryBoardScreen;
 import net.mcreator.craftnotaizai.client.gui.SideQuestGuiScreen;
@@ -51,6 +52,7 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.CLOVER_TRADING.get(), CloverTradingScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.CANNON_GUI.get(), CannonGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.JENNA_GUI.get(), JennaGuiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.ZANERI_GUI.get(), ZaneriGuiScreen::new);
 		});
 	}
 }

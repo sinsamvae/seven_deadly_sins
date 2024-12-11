@@ -9,11 +9,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -33,7 +33,7 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 import javax.annotation.Nullable;
 
-public class RisingMeteorEntity extends Monster {
+public class RisingMeteorEntity extends PathfinderMob {
 	public RisingMeteorEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftNoTaizaiModEntities.RISING_METEOR.get(), world);
 	}
@@ -42,13 +42,19 @@ public class RisingMeteorEntity extends Monster {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		refreshDimensions();
 	}
 
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+
 	}
 
 	@Override
