@@ -142,7 +142,11 @@ public class SunshinekeypressProcedure {
 											capability.syncPlayerVariables(entity);
 										});
 									}
+									if (entity instanceof Player _player && !_player.level().isClientSide())
+										_player.displayClientMessage(Component.literal("Skill Activated"), true);
 								} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one == true) {
+									if (entity instanceof Player _player && !_player.level().isClientSide())
+										_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 									{
 										double _setval = 3;
 										entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -170,6 +174,8 @@ public class SunshinekeypressProcedure {
 								}
 								if (!((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate == true)) {
 									if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one == false) {
+										if (entity instanceof Player _player && !_player.level().isClientSide())
+											_player.displayClientMessage(Component.literal("Skill Activated"), true);
 										{
 											double _setval = 1;
 											entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -185,6 +191,8 @@ public class SunshinekeypressProcedure {
 											});
 										}
 									} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one == true) {
+										if (entity instanceof Player _player && !_player.level().isClientSide())
+											_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 										{
 											double _setval = 3;
 											entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -257,9 +265,11 @@ public class SunshinekeypressProcedure {
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
 							.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("The One Ultimate")) {
-						if (world instanceof Level _lvl23 && _lvl23.isDay()) {
+						if (world instanceof Level _lvl27 && _lvl27.isDay()) {
 							if (!((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one == true)) {
 								if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate == false) {
+									if (entity instanceof Player _player && !_player.level().isClientSide())
+										_player.displayClientMessage(Component.literal("Skill Activated"), true);
 									{
 										double _setval = 1;
 										entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -290,6 +300,8 @@ public class SunshinekeypressProcedure {
 								}
 								if (!((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one == true)) {
 									if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate == false) {
+										if (entity instanceof Player _player && !_player.level().isClientSide())
+											_player.displayClientMessage(Component.literal("Skill Activated"), true);
 										{
 											double _setval = 1;
 											entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

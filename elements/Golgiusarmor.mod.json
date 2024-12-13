@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "golgiushead",
     "enableBody": true,
-    "textureBody": "golgiuschest",
+    "textureBody": "golgius_chest",
     "enableLeggings": true,
-    "textureLeggings": "golgiuslegs",
+    "textureLeggings": "golgius_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

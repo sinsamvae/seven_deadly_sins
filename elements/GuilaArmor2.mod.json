@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "guila_chest",
+    "textureBody": "guila_chest_plate",
     "enableLeggings": true,
-    "textureLeggings": "guila_leg",
+    "textureLeggings": "guila_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Guila Chestplate",
     "leggingsName": "Guila Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

@@ -192,7 +192,6 @@ public class ChangefairyProcedure {
 				});
 			}
 			ResetMoveSlotsProcedure.execute(arguments, entity);
-			ResetSpellsSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

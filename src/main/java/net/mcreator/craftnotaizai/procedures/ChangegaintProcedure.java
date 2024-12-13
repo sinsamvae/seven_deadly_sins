@@ -192,7 +192,6 @@ public class ChangegaintProcedure {
 				});
 			}
 			ResetMoveSlotsProcedure.execute(arguments, entity);
-			ResetSpellsSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "dreyfus_chest",
+    "textureBody": "dreyfus_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "dreyfus_leg",
+    "textureLeggings": "dreyfus_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Dreyfus Chestplate",
     "leggingsName": "Dreyfus Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

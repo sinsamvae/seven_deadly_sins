@@ -25,7 +25,6 @@ public class CraftNoTaizaiModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PERFECTSHELLPARTICLE = REGISTRY.register("perfectshellparticle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> HEAL = REGISTRY.register("heal", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> DEATH = REGISTRY.register("death", () -> new SimpleParticleType(false));
-	public static final RegistryObject<SimpleParticleType> DEMONPARTICLEMARK = REGISTRY.register("demonparticlemark", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> POSION = REGISTRY.register("posion", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> ICE = REGISTRY.register("ice", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> PURPLEFIREPARTIICLES = REGISTRY.register("purplefirepartiicles", () -> new SimpleParticleType(false));
@@ -66,4 +65,5 @@ public class CraftNoTaizaiModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> RED_PARTICLES = REGISTRY.register("red_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> HELL_GATE_PARTICLES = REGISTRY.register("hell_gate_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> LIGHTNING_2 = REGISTRY.register("lightning_2", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> BREAKER_OFF_PARTICLE = REGISTRY.register("breaker_off_particle", () -> new SimpleParticleType(false));
 }

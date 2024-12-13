@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "simon_chest",
+    "textureBody": "simon_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "simon_leg",
+    "textureLeggings": "simon_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Simon Chestplate",
     "leggingsName": "Simon Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

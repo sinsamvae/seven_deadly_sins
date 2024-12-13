@@ -12,6 +12,19 @@
     "craft_no_taizai:gray_demon",
     "craft_no_taizai:albion_fat",
     "craft_no_taizai:albion_tall",
-    "craft_no_taizai:tall_albion"
+    "craft_no_taizai:tall_albion",
+    "zombie",
+    "zombie_villager",
+    "husk",
+    "drowned",
+    "zombified_piglin",
+    "zoglin",
+    "zombie_horse",
+    "skeleton",
+    "skeleton_horse",
+    "stray",
+    "wither",
+    "wither_skeleton",
+    "phantom"
   ]
 }

@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "soldier_helment",
     "enableBody": true,
-    "textureBody": "solider_chest",
+    "textureBody": "soldier_chest",
     "enableLeggings": true,
-    "textureLeggings": "solider_legs",
+    "textureLeggings": "solider_leg",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

@@ -116,7 +116,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_story"), mouseX, mouseY);
 		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -87 && mouseY < topPos + -63)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_stats"), mouseX, mouseY);
-		if (mouseX > leftPos + -118 && mouseX < leftPos + -94 && mouseY > topPos + -71 && mouseY < topPos + -47)
+		if (mouseX > leftPos + -117 && mouseX < leftPos + -93 && mouseY > topPos + -69 && mouseY < topPos + -45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_reset"), mouseX, mouseY);
 		if (DemonKingPowerReturnProcedure.execute(entity))
 			if (mouseX > leftPos + -70 && mouseX < leftPos + -46 && mouseY > topPos + -103 && mouseY < topPos + -79)

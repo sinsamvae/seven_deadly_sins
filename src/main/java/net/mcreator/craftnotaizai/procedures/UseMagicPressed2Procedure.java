@@ -11,7 +11,7 @@ public class UseMagicPressed2Procedure {
 		WallKeyBindOnKeyPressedProcedure.execute(entity);
 		PurgeBindOnKeyPressedProcedure.execute(entity);
 		BreakBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
-		HellBlazeFullCounterOnKeyPressedProcedure.execute(world, entity);
+		HellBlazeFullCounterOnKeyPressedProcedure.execute(entity);
 		HunterWispbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		ExplosionBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		BoostKeyPressProcedure.execute(world, x, y, z, entity);

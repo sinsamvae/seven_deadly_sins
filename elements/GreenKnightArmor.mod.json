@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "greenknight_helment",
     "enableBody": true,
-    "textureBody": "greenknight_chest",
+    "textureBody": "greenknight_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "greenknight_leg",
+    "textureLeggings": "greenknight_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -19,7 +19,7 @@
     "helmetName": "GreenKnight Helmet",
     "bodyName": "GreenKnight Chestplate",
     "leggingsName": "GreenKnight Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

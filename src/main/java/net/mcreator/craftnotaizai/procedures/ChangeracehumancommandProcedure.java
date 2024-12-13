@@ -192,7 +192,6 @@ public class ChangeracehumancommandProcedure {
 				});
 			}
 			ResetMoveSlotsProcedure.execute(arguments, entity);
-			ResetSpellsSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

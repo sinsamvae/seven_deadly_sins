@@ -19,6 +19,7 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.SnowflowerbeamProjectileEntity;
 
+import java.util.List;
 import java.util.Comparator;
 
 public class SunFlowerTrueSpirtSpearSkillProcedure {
@@ -45,19 +46,15 @@ public class SunFlowerTrueSpirtSpearSkillProcedure {
 							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("summon craft_no_taizai:sun_flower_true_spirt_spear " + x + " ~ " + z + " {Rotation:[" + yaw + "f,0f]}"));
 				}
 			}
-			if (!(((Entity) world.getEntitiesOfClass(SunFlowerTrueSpirtSpearEntity.class, AABB.ofSize(new Vec3((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1))), 1000, 1000, 1000), e -> true)
-					.stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-						}
-					}.compareDistOf((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1)))).findFirst().orElse(null)) instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
-				if (((Entity) world.getEntitiesOfClass(SunFlowerTrueSpirtSpearEntity.class, AABB.ofSize(new Vec3((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1))), 1000, 1000, 1000), e -> true)
-						.stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf((entity.getX() + entity.getLookAngle().x * (-1)), y, (entity.getZ() + entity.getLookAngle().z * (-1)))).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
-					_toTame.tame(_owner);
+			{
+				final Vec3 _center = new Vec3(x, y, z);
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				for (Entity entityiterator : _entfound) {
+					if (entityiterator instanceof SunFlowerTrueSpirtSpearEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+						if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+							_toTame.tame(_owner);
+					}
+				}
 			}
 			{
 				Entity _shootFrom = entity;

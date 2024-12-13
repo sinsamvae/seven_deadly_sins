@@ -39,7 +39,7 @@ public class InfinityManaZeroProcedure {
 				});
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+				_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 		}
 	}
 }

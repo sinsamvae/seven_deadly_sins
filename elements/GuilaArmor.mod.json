@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "guilachestplate",
+    "textureBody": "guiliachest",
     "enableLeggings": true,
-    "textureLeggings": "guilaleggings",
+    "textureLeggings": "guilalegs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

@@ -1,6 +1,5 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Items;
@@ -14,13 +13,13 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
+import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EvilhoundProjectileEntity;
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class HellBlazeFullCounterOnKeyPressedProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		ItemStack weapon = ItemStack.EMPTY;
@@ -41,7 +40,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 									});
 								}
 								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal("Skill Activated"), false);
+									_player.displayClientMessage(Component.literal("Skill Activated"), true);
 							} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Full_Counter_Use == true) {
 								{
 									boolean _setval = false;
@@ -51,7 +50,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 									});
 								}
 								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+									_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 							}
 						} else {
 							if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -69,7 +68,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter == true) {
 							{
 								boolean _setval = false;
@@ -79,7 +78,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -93,7 +92,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PurgatoryFire == true) {
 							{
 								boolean _setval = false;
@@ -103,7 +102,7 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -161,29 +160,26 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							KamiChigiriProcedure.execute(entity);
-							CraftNoTaizaiMod.queueServerWork(20, () -> {
-								{
-									Entity _shootFrom = entity;
-									Level projectileLevel = _shootFrom.level();
-									if (!projectileLevel.isClientSide()) {
-										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new HellBlazeProjectileEntity(CraftNoTaizaiModEntities.HELL_BLAZE_PROJECTILE.get(), level);
-												entityToSpawn.setOwner(shooter);
-												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
-												entityToSpawn.setSilent(true);
-												return entityToSpawn;
-											}
-										}.getArrow(projectileLevel, entity,
-												(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3), 3);
-										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-										projectileLevel.addFreshEntity(_entityToSpawn);
-									}
+							{
+								Entity _shootFrom = entity;
+								Level projectileLevel = _shootFrom.level();
+								if (!projectileLevel.isClientSide()) {
+									Projectile _entityToSpawn = new Object() {
+										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+											AbstractArrow entityToSpawn = new KamichigiriProjectileEntity(CraftNoTaizaiModEntities.KAMICHIGIRI_PROJECTILE.get(), level);
+											entityToSpawn.setOwner(shooter);
+											entityToSpawn.setBaseDamage(damage);
+											entityToSpawn.setKnockback(knockback);
+											entityToSpawn.setSilent(true);
+											return entityToSpawn;
+										}
+									}.getArrow(projectileLevel, entity,
+											(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3), 3);
+									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
-							});
+							}
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 45);
 						} else {
@@ -272,13 +268,6 @@ public class HellBlazeFullCounterOnKeyPressedProcedure {
 							}
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 80);
-							{
-								double _setval = 80;
-								entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.rCoolDown = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
 						} else {
 							if (entity instanceof Player _player && !_player.level().isClientSide())
 								_player.displayClientMessage(Component.literal(("\u00A7c" + "Not Enought Mana: "

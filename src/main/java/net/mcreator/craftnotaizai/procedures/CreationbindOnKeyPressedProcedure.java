@@ -106,7 +106,7 @@ public class CreationbindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).heavy_metal == true) {
 							{
 								double _setval = 3;
@@ -123,7 +123,7 @@ public class CreationbindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -154,7 +154,7 @@ public class CreationbindOnKeyPressedProcedure {
 									}.getArrow(projectileLevel, entity,
 											(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3), 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
 							}

@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "stars.png",
+    "texture": "stars",
     "animate": true,
     "frameDuration": 1,
     "width": 0.2,
@@ -10,7 +10,7 @@
     "scale": {
       "fixedValue": 6.0
     },
-    "speedFactor": 1.0,
+    "speedFactor": 0.0,
     "gravity": 0.0,
     "maxAge": 4,
     "maxAgeDiff": 0,

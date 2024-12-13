@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "redknight_helment",
     "enableBody": true,
-    "textureBody": "redknight_chest",
+    "textureBody": "redknight_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "redknight_leg",
+    "textureLeggings": "redknight_leggins",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

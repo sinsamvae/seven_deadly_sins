@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "parada_head",
     "enableBody": true,
-    "textureBody": "parada_chest",
+    "textureBody": "parada_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "andre_leg",
+    "textureLeggings": "andre_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

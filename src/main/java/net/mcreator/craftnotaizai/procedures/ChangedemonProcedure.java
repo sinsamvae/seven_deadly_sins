@@ -192,7 +192,6 @@ public class ChangedemonProcedure {
 				});
 			}
 			ResetMoveSlotsProcedure.execute(arguments, entity);
-			ResetSpellsSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

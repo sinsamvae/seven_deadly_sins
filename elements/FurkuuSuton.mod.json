@@ -14,7 +14,7 @@
     "damage": 5.0,
     "knockback": 5,
     "entityModel": "Modelearthrock",
-    "customModelTexture": "earthrock.png",
+    "customModelTexture": "earth_rock.png",
     "onHitsEntity": {
       "name": "FurkuuSutonProjectileHitsLivingEntity"
     },

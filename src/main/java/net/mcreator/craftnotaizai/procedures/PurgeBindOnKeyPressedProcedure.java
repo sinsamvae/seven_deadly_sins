@@ -22,7 +22,7 @@ public class PurgeBindOnKeyPressedProcedure {
 						});
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Skill Activated"), false);
+						_player.displayClientMessage(Component.literal("Skill Activated"), true);
 				} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PurgeAttack == true) {
 					{
 						boolean _setval = false;
@@ -32,7 +32,7 @@ public class PurgeBindOnKeyPressedProcedure {
 						});
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+						_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 				}
 			}
 		}

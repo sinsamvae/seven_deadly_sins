@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "vivian_head",
     "enableBody": true,
-    "textureBody": "vivian_chest",
+    "textureBody": "vivian_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "vivian_leg",
+    "textureLeggings": "vivian_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -19,7 +19,7 @@
     "helmetName": "Vivian Helmet",
     "bodyName": "Vivian Chestplate",
     "leggingsName": "Vivian Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

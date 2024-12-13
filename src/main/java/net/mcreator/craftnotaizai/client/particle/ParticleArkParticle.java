@@ -41,9 +41,9 @@ public class ParticleArkParticle extends TextureSheetParticle {
 		this.lifetime = 4;
 		this.gravity = 0f;
 		this.hasPhysics = true;
-		this.xd = vx * 1;
-		this.yd = vy * 1;
-		this.zd = vz * 1;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
 		this.setSpriteFromAge(spriteSet);
 	}
 

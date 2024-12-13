@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "twigo_chest",
+    "textureBody": "twigo_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "twigo_leg",
+    "textureLeggings": "twigo_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Twigo Chestplate",
     "leggingsName": "Twigo Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -61,7 +61,7 @@
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
     "helmetGlowCondition": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "bodyGlowCondition": {
       "fixedValue": false

@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "friesia_helmet",
     "enableBody": true,
-    "textureBody": "friesia_chestplate",
+    "textureBody": "friesia_chest",
     "enableLeggings": true,
-    "textureLeggings": "friesia_leggings",
+    "textureLeggings": "friesia_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

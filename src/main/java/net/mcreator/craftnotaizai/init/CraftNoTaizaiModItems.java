@@ -41,7 +41,6 @@ import net.mcreator.craftnotaizai.item.SawSwordItem;
 import net.mcreator.craftnotaizai.item.SawBladeItem;
 import net.mcreator.craftnotaizai.item.RuinArmorItem;
 import net.mcreator.craftnotaizai.item.RoyalknightItem;
-import net.mcreator.craftnotaizai.item.RockRushItem;
 import net.mcreator.craftnotaizai.item.RhittaItem;
 import net.mcreator.craftnotaizai.item.RedKnightArmorItem;
 import net.mcreator.craftnotaizai.item.RapierItem;
@@ -151,7 +150,6 @@ import net.mcreator.craftnotaizai.item.CruelSunItem;
 import net.mcreator.craftnotaizai.item.CookedtentaclesItem;
 import net.mcreator.craftnotaizai.item.CookedDuskMeatItem;
 import net.mcreator.craftnotaizai.item.CookedAngleMeatItem;
-import net.mcreator.craftnotaizai.item.CondensePowerItem;
 import net.mcreator.craftnotaizai.item.CoffinOfEternalDarknessItem;
 import net.mcreator.craftnotaizai.item.ChickenMatangoMushRoomItem;
 import net.mcreator.craftnotaizai.item.Chastiefol2Item;
@@ -163,7 +161,6 @@ import net.mcreator.craftnotaizai.item.BrilliantDetonationItem;
 import net.mcreator.craftnotaizai.item.BreakthroughItem;
 import net.mcreator.craftnotaizai.item.BowItem;
 import net.mcreator.craftnotaizai.item.BoarHatOutfitItem;
-import net.mcreator.craftnotaizai.item.BlueKnightArmorItem;
 import net.mcreator.craftnotaizai.item.BlazeItem;
 import net.mcreator.craftnotaizai.item.BellStaffItem;
 import net.mcreator.craftnotaizai.item.BeerMugItem;
@@ -279,7 +276,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BLAZE = REGISTRY.register("blaze", () -> new BlazeItem());
 	public static final RegistryObject<Item> HELL_BLAZE = REGISTRY.register("hell_blaze", () -> new HellBlazeItem());
 	public static final RegistryObject<Item> HELLBLAZE_OMEGA = REGISTRY.register("hellblaze_omega", () -> new HellblazeOmegaItem());
-	public static final RegistryObject<Item> ROCK_RUSH = REGISTRY.register("rock_rush", () -> new RockRushItem());
 	public static final RegistryObject<Item> EVILHOUND = REGISTRY.register("evilhound", () -> new EvilhoundItem());
 	public static final RegistryObject<Item> WHIRL_SHOCK = REGISTRY.register("whirl_shock", () -> new WhirlShockItem());
 	public static final RegistryObject<Item> BREAKTHROUGH = REGISTRY.register("breakthrough", () -> new BreakthroughItem());
@@ -291,7 +287,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> JETHAMMER = REGISTRY.register("jethammer", () -> new JethammerItem());
 	public static final RegistryObject<Item> SNOWFLOWERBEAM = REGISTRY.register("snowflowerbeam", () -> new SnowflowerbeamItem());
 	public static final RegistryObject<Item> RAKAN = REGISTRY.register("rakan", () -> new RakanItem());
-	public static final RegistryObject<Item> CONDENSE_POWER = REGISTRY.register("condense_power", () -> new CondensePowerItem());
 	public static final RegistryObject<Item> FOSS = REGISTRY.register("foss", () -> new FossItem());
 	public static final RegistryObject<Item> FAKE_BALL = REGISTRY.register("fake_ball", () -> new FakeBallItem());
 	public static final RegistryObject<Item> EXTERMINATE_RAY = REGISTRY.register("exterminate_ray", () -> new ExterminateRayItem());
@@ -369,9 +364,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> RED_KNIGHT_ARMOR_HELMET = REGISTRY.register("red_knight_armor_helmet", () -> new RedKnightArmorItem.Helmet());
 	public static final RegistryObject<Item> RED_KNIGHT_ARMOR_CHESTPLATE = REGISTRY.register("red_knight_armor_chestplate", () -> new RedKnightArmorItem.Chestplate());
 	public static final RegistryObject<Item> RED_KNIGHT_ARMOR_LEGGINGS = REGISTRY.register("red_knight_armor_leggings", () -> new RedKnightArmorItem.Leggings());
-	public static final RegistryObject<Item> BLUE_KNIGHT_ARMOR_HELMET = REGISTRY.register("blue_knight_armor_helmet", () -> new BlueKnightArmorItem.Helmet());
-	public static final RegistryObject<Item> BLUE_KNIGHT_ARMOR_CHESTPLATE = REGISTRY.register("blue_knight_armor_chestplate", () -> new BlueKnightArmorItem.Chestplate());
-	public static final RegistryObject<Item> BLUE_KNIGHT_ARMOR_LEGGINGS = REGISTRY.register("blue_knight_armor_leggings", () -> new BlueKnightArmorItem.Leggings());
 	public static final RegistryObject<Item> DREYFUS_ARMOR_CHESTPLATE = REGISTRY.register("dreyfus_armor_chestplate", () -> new DreyfusArmorItem.Chestplate());
 	public static final RegistryObject<Item> DREYFUS_ARMOR_LEGGINGS = REGISTRY.register("dreyfus_armor_leggings", () -> new DreyfusArmorItem.Leggings());
 	public static final RegistryObject<Item> HENDRICKSON_ARMOR_CHESTPLATE = REGISTRY.register("hendrickson_armor_chestplate", () -> new HendricksonArmorItem.Chestplate());
@@ -608,6 +600,7 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> MOSS_DRAGON_SPAWN_EGG = REGISTRY.register("moss_dragon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MOSS_DRAGON, -12169686, -13421028, new Item.Properties()));
 	public static final RegistryObject<Item> TYRANT_DRAGON_CAVE_SPAWN_EGG = REGISTRY.register("tyrant_dragon_cave_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE, -65536, -6750208, new Item.Properties()));
 	public static final RegistryObject<Item> ANAON_SPAWN_EGG = REGISTRY.register("anaon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ANAON, -14935267, -15987700, new Item.Properties()));
+	public static final RegistryObject<Item> OMINOUS_NEBULA_ENITIY_SPAWN_EGG = REGISTRY.register("ominous_nebula_enitiy_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

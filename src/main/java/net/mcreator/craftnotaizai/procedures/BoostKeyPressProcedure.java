@@ -43,7 +43,8 @@ public class BoostKeyPressProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							entity.setDeltaMovement(new Vec3((8 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (8 * entity.getLookAngle().z)));
+							entity.setDeltaMovement(
+									new Vec3(((entity.getDeltaMovement().x() + entity.getLookAngle().x) * 8), ((entity.getDeltaMovement().y() + entity.getLookAngle().y) * 0), ((entity.getDeltaMovement().z() + entity.getLookAngle().z) * 8)));
 							{
 								final Vec3 _center = new Vec3(x, y, z);
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "andre_chest",
+    "textureBody": "andre_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "andre_leg",
+    "textureLeggings": "andre_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

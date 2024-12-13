@@ -76,7 +76,8 @@ public class RisingMeteorSkillProcedure {
 						}.checkGamemode(entityiterator))) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
 							(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 2));
-					entityiterator.setDeltaMovement(new Vec3((0 * entityiterator.getLookAngle().y), (8 * entityiterator.getLookAngle().x), (0 * entityiterator.getLookAngle().z)));
+					entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getLookAngle().x) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getLookAngle().y) * 1.3),
+							((entityiterator.getDeltaMovement().z() + entityiterator.getLookAngle().z) * 0)));
 				}
 			}
 		}

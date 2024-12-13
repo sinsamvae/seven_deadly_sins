@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "jillian_chest",
+    "textureBody": "jillian_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "jillian_leg",
+    "textureLeggings": "jillian_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Jillian Chestplate",
     "leggingsName": "Jillian Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

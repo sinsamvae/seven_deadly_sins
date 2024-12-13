@@ -10,7 +10,9 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class ChangemagiccommandProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
+	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
 		{
 			String _setval = "Blaze";
 			(new Object() {
@@ -36,5 +38,6 @@ public class ChangemagiccommandProcedure {
 				}.getEntity()));
 			});
 		}
+		ResetMoveSlotsProcedure.execute(arguments, entity);
 	}
 }

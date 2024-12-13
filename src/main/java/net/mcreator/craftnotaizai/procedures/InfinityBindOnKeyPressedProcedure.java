@@ -33,7 +33,7 @@ public class InfinityBindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).infinity_use == true) {
 							{
 								boolean _setval = false;
@@ -43,7 +43,7 @@ public class InfinityBindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -210,7 +210,7 @@ public class InfinityBindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbsoluteCanel == true) {
 							{
 								boolean _setval = false;
@@ -220,7 +220,7 @@ public class InfinityBindOnKeyPressedProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 				}

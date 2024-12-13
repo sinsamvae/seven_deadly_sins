@@ -30,7 +30,7 @@ public class IronHammeroftheThunderEmperorProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.setDeltaMovement(new Vec3((3.5 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (3.5 * entity.getLookAngle().z)));
+		entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x() + entity.getLookAngle().x * 3.5), (entity.getDeltaMovement().y() + entity.getLookAngle().y * 0), (entity.getDeltaMovement().z() + entity.getLookAngle().z * 3.5)));
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

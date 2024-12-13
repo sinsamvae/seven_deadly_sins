@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "hendrickson_chest",
+    "textureBody": "sir_hendrickson_chest",
     "enableLeggings": true,
-    "textureLeggings": "hendrickson_leg",
+    "textureLeggings": "sir_hendrickson_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "HendrickSon Chestplate",
     "leggingsName": "HendrickSon Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

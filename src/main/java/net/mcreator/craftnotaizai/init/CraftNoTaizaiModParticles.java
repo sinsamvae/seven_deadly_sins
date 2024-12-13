@@ -45,12 +45,12 @@ import net.mcreator.craftnotaizai.client.particle.FlamePurpleParticle;
 import net.mcreator.craftnotaizai.client.particle.FeatherParticle;
 import net.mcreator.craftnotaizai.client.particle.FairySwordParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.DivineCutsParticlesParticle;
-import net.mcreator.craftnotaizai.client.particle.DemonparticlemarkParticle;
 import net.mcreator.craftnotaizai.client.particle.DemonLightingParticle;
 import net.mcreator.craftnotaizai.client.particle.DeathParticle;
 import net.mcreator.craftnotaizai.client.particle.DarkSnowParticle;
 import net.mcreator.craftnotaizai.client.particle.DarkSnow2Particle;
 import net.mcreator.craftnotaizai.client.particle.ChastifolRedParticlesParticle;
+import net.mcreator.craftnotaizai.client.particle.BreakerOffParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.BreakableBugParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.BlackOutParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.BlackLightningParticle;
@@ -75,7 +75,6 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PERFECTSHELLPARTICLE.get(), PerfectshellparticleParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.HEAL.get(), HealParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.DEATH.get(), DeathParticle::provider);
-		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.DEMONPARTICLEMARK.get(), DemonparticlemarkParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.POSION.get(), PosionParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.ICE.get(), IceParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PURPLEFIREPARTIICLES.get(), PurplefirepartiiclesParticle::provider);
@@ -116,5 +115,6 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.RED_PARTICLES.get(), RedParticlesParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.HELL_GATE_PARTICLES.get(), HellGateParticlesParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.LIGHTNING_2.get(), Lightning2Particle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get(), BreakerOffParticleParticle::provider);
 	}
 }

@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "ruin_helment",
     "enableBody": true,
-    "textureBody": "ruin_chest",
+    "textureBody": "ruin_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "ruin_leg",
+    "textureLeggings": "ruin_leggins",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class FurkuuSutonRenderer extends EntityRenderer<FurkuuSutonEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/earthrock.png");
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/earth_rock.png");
 	private final Modelearthrock model;
 
 	public FurkuuSutonRenderer(EntityRendererProvider.Context context) {

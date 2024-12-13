@@ -32,7 +32,7 @@ public class ThunderScreamStrikeProcedure {
 			return;
 		double delay = 0;
 		double rep = 0;
-		entity.setDeltaMovement(new Vec3((6 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (6 * entity.getLookAngle().z)));
+		entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x() + entity.getLookAngle().x * 6), (entity.getDeltaMovement().y() + entity.getLookAngle().y * 0), (entity.getDeltaMovement().z() + entity.getLookAngle().z * 6)));
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

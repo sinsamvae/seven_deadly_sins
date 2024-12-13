@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "knighthelment",
     "enableBody": true,
-    "textureBody": "knightchestplace",
+    "textureBody": "knight_chest_plate",
     "enableLeggings": true,
-    "textureLeggings": "knightsleggings",
+    "textureLeggings": "knight_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

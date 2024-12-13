@@ -19,7 +19,6 @@ import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellBlaze2Entity;
 import net.mcreator.craftnotaizai.entity.EvilhoundProjectileEntity;
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class HellBlazeOnKeyPressProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -45,7 +44,7 @@ public class HellBlazeOnKeyPressProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Activated"), false);
+								_player.displayClientMessage(Component.literal("Skill Activated"), true);
 						} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PurgatoryFire == true) {
 							{
 								boolean _setval = false;
@@ -55,7 +54,7 @@ public class HellBlazeOnKeyPressProcedure {
 								});
 							}
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal("Skill Deactivate"), false);
+								_player.displayClientMessage(Component.literal("Skill Deactivate"), true);
 						}
 					}
 					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -120,36 +119,33 @@ public class HellBlazeOnKeyPressProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-							KamiChigiriProcedure.execute(entity);
-							CraftNoTaizaiMod.queueServerWork(10, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, (float) 0.05, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, (float) 0.05, 1, false);
-									}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, (float) 0.05, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:fire")), SoundSource.PLAYERS, (float) 0.05, 1, false);
 								}
-								{
-									Entity _shootFrom = entity;
-									Level projectileLevel = _shootFrom.level();
-									if (!projectileLevel.isClientSide()) {
-										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new KamichigiriProjectileEntity(CraftNoTaizaiModEntities.KAMICHIGIRI_PROJECTILE.get(), level);
-												entityToSpawn.setOwner(shooter);
-												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
-												entityToSpawn.setSilent(true);
-												return entityToSpawn;
-											}
-										}.getArrow(projectileLevel, entity,
-												(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3), 3);
-										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-										projectileLevel.addFreshEntity(_entityToSpawn);
-									}
+							}
+							{
+								Entity _shootFrom = entity;
+								Level projectileLevel = _shootFrom.level();
+								if (!projectileLevel.isClientSide()) {
+									Projectile _entityToSpawn = new Object() {
+										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+											AbstractArrow entityToSpawn = new KamichigiriProjectileEntity(CraftNoTaizaiModEntities.KAMICHIGIRI_PROJECTILE.get(), level);
+											entityToSpawn.setOwner(shooter);
+											entityToSpawn.setBaseDamage(damage);
+											entityToSpawn.setKnockback(knockback);
+											entityToSpawn.setSilent(true);
+											return entityToSpawn;
+										}
+									}.getArrow(projectileLevel, entity,
+											(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3), 3);
+									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
-							});
+							}
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 45);
 						} else {

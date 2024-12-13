@@ -46,6 +46,7 @@ import net.mcreator.craftnotaizai.client.renderer.PuoraRenderer;
 import net.mcreator.craftnotaizai.client.renderer.PollenGardenRenderer;
 import net.mcreator.craftnotaizai.client.renderer.PhysicalCloneRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ParadaAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.OminousNebulaEnitiyRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MutilatorRabbitsRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MuramoDemonFormRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MuramoAnimatedRenderer;
@@ -357,5 +358,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANAON.get(), AnaonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), DestroyFourElementsRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyRenderer::new);
 	}
 }

@@ -64,13 +64,6 @@ public class BlazeBindOnKeyPressedProcedure {
 									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
 							}
-							{
-								double _setval = 30;
-								entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.rCoolDown = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 40);
 						} else {

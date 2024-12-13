@@ -62,6 +62,7 @@ import net.mcreator.craftnotaizai.entity.ParadaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.PainEditionEntity;
 import net.mcreator.craftnotaizai.entity.PainEdition3Entity;
 import net.mcreator.craftnotaizai.entity.PainEdition2Entity;
+import net.mcreator.craftnotaizai.entity.OminousNebulaEnitiyEntity;
 import net.mcreator.craftnotaizai.entity.NoroiNoKoeEntity;
 import net.mcreator.craftnotaizai.entity.MutilatorRabbitsEntity;
 import net.mcreator.craftnotaizai.entity.MuramoDemonFormEntity;
@@ -772,6 +773,8 @@ public class CraftNoTaizaiModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DestroyFourElementsEntity>> DESTROY_FOUR_ELEMENTS = register("destroy_four_elements", EntityType.Builder.<DestroyFourElementsEntity>of(DestroyFourElementsEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(DestroyFourElementsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<OminousNebulaEnitiyEntity>> OMINOUS_NEBULA_ENITIY = register("ominous_nebula_enitiy", EntityType.Builder.<OminousNebulaEnitiyEntity>of(OminousNebulaEnitiyEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OminousNebulaEnitiyEntity::new).fireImmune().sized(0.25f, 0.25f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -904,6 +907,7 @@ public class CraftNoTaizaiModEntities {
 			MossDragonEntity.init();
 			TyrantDragonCaveEntity.init();
 			AnaonEntity.init();
+			OminousNebulaEnitiyEntity.init();
 		});
 	}
 
@@ -1033,5 +1037,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(MOSS_DRAGON.get(), MossDragonEntity.createAttributes().build());
 		event.put(TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveEntity.createAttributes().build());
 		event.put(ANAON.get(), AnaonEntity.createAttributes().build());
+		event.put(OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyEntity.createAttributes().build());
 	}
 }

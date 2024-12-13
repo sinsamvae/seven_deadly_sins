@@ -107,9 +107,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.RED_KNIGHT_ARMOR_HELMET.get());
 				tabData.accept(CraftNoTaizaiModItems.RED_KNIGHT_ARMOR_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.RED_KNIGHT_ARMOR_LEGGINGS.get());
-				tabData.accept(CraftNoTaizaiModItems.BLUE_KNIGHT_ARMOR_HELMET.get());
-				tabData.accept(CraftNoTaizaiModItems.BLUE_KNIGHT_ARMOR_CHESTPLATE.get());
-				tabData.accept(CraftNoTaizaiModItems.BLUE_KNIGHT_ARMOR_LEGGINGS.get());
 				tabData.accept(CraftNoTaizaiModItems.DREYFUS_ARMOR_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.DREYFUS_ARMOR_LEGGINGS.get());
 				tabData.accept(CraftNoTaizaiModItems.HENDRICKSON_ARMOR_CHESTPLATE.get());

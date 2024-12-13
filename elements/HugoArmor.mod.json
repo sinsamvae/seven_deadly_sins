@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "hugo_head",
     "enableBody": true,
-    "textureBody": "hugo_chest",
+    "textureBody": "hugo_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "hugo_leg",
+    "textureLeggings": "hugo_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -19,7 +19,7 @@
     "helmetName": "Hugo Helmet",
     "bodyName": "Hugo Chestplate",
     "leggingsName": "Hugo Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

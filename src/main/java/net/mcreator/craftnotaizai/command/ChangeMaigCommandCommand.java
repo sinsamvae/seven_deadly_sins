@@ -243,7 +243,7 @@ public class ChangeMaigCommandCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ChangemagiccommandProcedure.execute(arguments);
+			ChangemagiccommandProcedure.execute(arguments, entity);
 			return 0;
 		})).then(Commands.literal("Boost").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();

@@ -44,7 +44,7 @@ public class CursedBindingResentmentChainsProcedure {
 					}
 				}
 			}
-			if (target && entity_target instanceof Player) {
+			if (target && entity_target instanceof LivingEntity) {
 				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1000000, false, false));
 				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -54,23 +54,6 @@ public class CursedBindingResentmentChainsProcedure {
 					a = Mth.nextInt(RandomSource.create(), -180, 180);
 					b = Mth.nextInt(RandomSource.create(), -90, 90);
 					for (int index1 = 0; index1 < 90; index1++) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.JUBAKUENSA_PARTICLE.get()), (entity_target.getX() - r * Math.cos(Math.toRadians(b)) * Math.sin(Math.toRadians(a))),
-									(entity_target.getY() - r * Math.sin(Math.toRadians(b))), (entity_target.getZ() + r * Math.cos(Math.toRadians(b)) * Math.cos(Math.toRadians(a))), 1, 0.1, 0.1, 0.1, 0);
-						r = r - 0.1;
-					}
-				}
-			}
-			if (target && entity_target instanceof LivingEntity) {
-				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1000000, false, false));
-				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.JUBAKU_ENSA_EFFECT.get(), 12000, 1, false, false));
-				for (int index2 = 0; index2 < 15; index2++) {
-					r = 7;
-					a = Mth.nextInt(RandomSource.create(), -180, 180);
-					b = Mth.nextInt(RandomSource.create(), -90, 90);
-					for (int index3 = 0; index3 < 90; index3++) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.JUBAKUENSA_PARTICLE.get()), (entity_target.getX() - r * Math.cos(Math.toRadians(b)) * Math.sin(Math.toRadians(a))),
 									(entity_target.getY() - r * Math.sin(Math.toRadians(b))), (entity_target.getZ() + r * Math.cos(Math.toRadians(b)) * Math.cos(Math.toRadians(a))), 1, 0.1, 0.1, 0.1, 0);

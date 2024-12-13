@@ -33,7 +33,7 @@ public class DuskBisionAttackProcedure {
 		double Zpar = 0;
 		double Range = 0;
 		if (sourceentity instanceof DuskBison1Entity) {
-			entity.setDeltaMovement(new Vec3((entity.getX() * 0), (entity.getY() * 1.5), (entity.getZ() * 0)));
+			entity.setDeltaMovement(new Vec3(((entity.getDeltaMovement().x() + entity.getX()) * 0), ((entity.getDeltaMovement().y() + entity.getY()) * 1.5), ((entity.getDeltaMovement().z() + entity.getZ()) * 0)));
 		}
 	}
 }

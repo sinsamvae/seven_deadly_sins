@@ -1,7 +1,9 @@
 package net.mcreator.craftnotaizai.procedures;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.TraceableEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -29,6 +31,9 @@ public class CondensePowerWhileProjectileFlyingTickProcedure {
 				(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()));
 		entity.getPersistentData().putDouble("tz",
 				(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
+		immediatesourceentity.getPersistentData().putDouble("ax", ((immediatesourceentity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null).getLookAngle().x));
+		immediatesourceentity.getPersistentData().putDouble("ay", ((immediatesourceentity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null).getLookAngle().y));
+		immediatesourceentity.getPersistentData().putDouble("az", ((immediatesourceentity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null).getLookAngle().z));
 		entity.getPersistentData().putDouble("range", Math.sqrt(Math.pow(entity.getPersistentData().getDouble("sx") - entity.getPersistentData().getDouble("tx"), 2)
 				+ Math.pow(entity.getPersistentData().getDouble("sy") - entity.getPersistentData().getDouble("ty"), 2) + Math.pow(entity.getPersistentData().getDouble("sz") - entity.getPersistentData().getDouble("tz"), 2)));
 		entity.getPersistentData().putDouble("x+", ((entity.getPersistentData().getDouble("sx") - entity.getPersistentData().getDouble("tx")) / entity.getPersistentData().getDouble("range")));
@@ -42,6 +47,7 @@ public class CondensePowerWhileProjectileFlyingTickProcedure {
 				entity.getPersistentData().putDouble("sx", (entity.getPersistentData().getDouble("sx") + entity.getPersistentData().getDouble("x+") * (-0.2)));
 				entity.getPersistentData().putDouble("sy", (entity.getPersistentData().getDouble("sy") + entity.getPersistentData().getDouble("y+") * (-0.2)));
 				entity.getPersistentData().putDouble("sz", (entity.getPersistentData().getDouble("sz") + entity.getPersistentData().getDouble("z+") * (-0.2)));
+				immediatesourceentity.setDeltaMovement(new Vec3((immediatesourceentity.getPersistentData().getDouble("ax")), (immediatesourceentity.getPersistentData().getDouble("ay")), (immediatesourceentity.getPersistentData().getDouble("az"))));
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ICE.get()), x, y, z, 4, 0.02, 0.02, 0.02, 0);
 				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);

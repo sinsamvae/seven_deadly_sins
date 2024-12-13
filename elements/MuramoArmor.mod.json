@@ -5,9 +5,9 @@
     "enableHelmet": true,
     "textureHelmet": "muramo_helment",
     "enableBody": true,
-    "textureBody": "muramo_chestpate",
+    "textureBody": "muramo_chest",
     "enableLeggings": true,
-    "textureLeggings": "muramo_legs",
+    "textureLeggings": "muramo_leggings",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [

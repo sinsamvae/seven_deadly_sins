@@ -5,9 +5,9 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "weinheidt_chest",
+    "textureBody": "weinheidt_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "weinheidt_leg",
+    "textureLeggings": "weinheidt_legs",
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "arthurarmor",
-    "helmetName": "Soldier Helmet",
+    "helmetName": "",
     "bodyName": "Weinheidt Chestplate",
     "leggingsName": "Weinheidt Leggings",
-    "bootsName": "Friesiaarmor Boots",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
