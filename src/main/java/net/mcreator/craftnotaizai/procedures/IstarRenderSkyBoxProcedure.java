@@ -495,6 +495,6 @@ public class IstarRenderSkyBoxProcedure {
 			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "istarsky" + ".png")));
 			renderSkybox(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255, true);
 		}
-		return false;
+		return true;
 	}
 }

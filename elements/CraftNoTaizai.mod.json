@@ -171,11 +171,28 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 8.0,
+            "numberField": 3.0,
             "textDefault": "",
-            "comment": "This will determine how much stat you get when killing mob",
+            "comment": "This will determine how much stat you get when killing mob (Default 3)",
             "vardisplay": "cave_of_training",
             "varname": "cave_of_training",
+            "enablecomment": false,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 3.0,
+            "textDefault": "",
+            "comment": "This will determine how much stat you get when killing mob (Default 3)",
+            "vardisplay": "tower_of_trails",
+            "varname": "tower_of_trails",
             "enablecomment": false,
             "stringlist": []
           }

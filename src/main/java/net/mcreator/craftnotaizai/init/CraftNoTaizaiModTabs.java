@@ -149,6 +149,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_ARMOR_HELMET.get());
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_ARMOR_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.MELIODAS_BOAR_HAT_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.MELIODAS_BOAR_HAT_LEGGINGS.get());
 			})
 
 					.build());
@@ -275,9 +277,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.EARTH_CRAWLER_TAIL_COOKED.get());
 				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_COOKED_MEAT.get());
 				tabData.accept(CraftNoTaizaiModItems.MINIMUM_TABLETS.get());
-				tabData.accept(CraftNoTaizaiModItems.LOW_TIER_SOULS.get());
-				tabData.accept(CraftNoTaizaiModItems.MID_TIER_SOULS.get());
-				tabData.accept(CraftNoTaizaiModItems.HIGH_TIER_SOULS.get());
 				tabData.accept(CraftNoTaizaiModItems.TROLL_EAR.get());
 			})
 

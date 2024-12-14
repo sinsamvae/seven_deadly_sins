@@ -61,6 +61,7 @@ import net.mcreator.craftnotaizai.item.MerlinOutfitItem;
 import net.mcreator.craftnotaizai.item.MerlinArmorChestPlateItem;
 import net.mcreator.craftnotaizai.item.MeliodasoutfitItem;
 import net.mcreator.craftnotaizai.item.MeliodasdanaforarmorItem;
+import net.mcreator.craftnotaizai.item.MeliodasBoarHatItem;
 import net.mcreator.craftnotaizai.item.MeliodasArmorItem;
 import net.mcreator.craftnotaizai.item.MagicScrollItem;
 import net.mcreator.craftnotaizai.item.LuminosityItem;
@@ -601,6 +602,8 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> TYRANT_DRAGON_CAVE_SPAWN_EGG = REGISTRY.register("tyrant_dragon_cave_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE, -65536, -6750208, new Item.Properties()));
 	public static final RegistryObject<Item> ANAON_SPAWN_EGG = REGISTRY.register("anaon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ANAON, -14935267, -15987700, new Item.Properties()));
 	public static final RegistryObject<Item> OMINOUS_NEBULA_ENITIY_SPAWN_EGG = REGISTRY.register("ominous_nebula_enitiy_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> MELIODAS_BOAR_HAT_CHESTPLATE = REGISTRY.register("meliodas_boar_hat_chestplate", () -> new MeliodasBoarHatItem.Chestplate());
+	public static final RegistryObject<Item> MELIODAS_BOAR_HAT_LEGGINGS = REGISTRY.register("meliodas_boar_hat_leggings", () -> new MeliodasBoarHatItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

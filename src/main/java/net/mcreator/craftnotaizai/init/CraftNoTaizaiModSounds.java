@@ -17,7 +17,6 @@ public class CraftNoTaizaiModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, CraftNoTaizaiMod.MODID);
 	public static final RegistryObject<SoundEvent> UNSHEATHED = REGISTRY.register("unsheathed", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "unsheathed")));
 	public static final RegistryObject<SoundEvent> INTOSHEATH = REGISTRY.register("intosheath", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "intosheath")));
-	public static final RegistryObject<SoundEvent> FAST = REGISTRY.register("fast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "fast")));
 	public static final RegistryObject<SoundEvent> SWISH = REGISTRY.register("swish", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "swish")));
 	public static final RegistryObject<SoundEvent> GRAVITY = REGISTRY.register("gravity", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "gravity")));
 	public static final RegistryObject<SoundEvent> LIGHTNING = REGISTRY.register("lightning", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("craft_no_taizai", "lightning")));

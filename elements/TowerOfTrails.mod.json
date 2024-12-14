@@ -21,6 +21,12 @@
     "sleepResult": "BED_EXPLODES",
     "hasSkyLight": true,
     "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "TowerOfTrailsPlayerEntersDimension"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "TowerOfTrailsPlayerLeavesDimension"
+    },
     "portalFrame": {
       "value": ""
     },

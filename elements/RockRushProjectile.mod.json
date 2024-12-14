@@ -10,11 +10,11 @@
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 0.0,
-    "damage": 0.0,
-    "knockback": 0,
-    "entityModel": "Modelrockrush",
-    "customModelTexture": "rockrush.png",
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelearthrock",
+    "customModelTexture": "earth_rock.png",
     "onHitsEntity": {
       "name": "RockRushProjectileProjectileHitsLivingEntity"
     },

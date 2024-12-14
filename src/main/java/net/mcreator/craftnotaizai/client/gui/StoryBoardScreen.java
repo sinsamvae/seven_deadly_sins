@@ -468,15 +468,15 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 
 					KillGiantVarProcedure.execute(entity), -144, 11, -13369345, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_druids_holy_land"), -146, -72, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_druids_holy_land"), -146, -72, -16711681, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_meliodas_and_others_head_to_mega"), -147, -57, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_meliodas_and_others_head_to_mega"), -147, -57, -16777216, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_diane_meanwhile_a_confused_dia"), -147, -43, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_diane_meanwhile_a_confused_dia"), -147, -43, -16777216, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -144, -27, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -144, -27, -16777216, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_find_entrance_of_istar"), -144, 1, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_find_entrance_of_istar"), -144, 1, -13369345, false);
 	}
 
 	@Override

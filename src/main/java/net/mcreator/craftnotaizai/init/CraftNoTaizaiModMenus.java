@@ -12,6 +12,9 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.craftnotaizai.world.inventory.ZaneriGuiMenu;
+import net.mcreator.craftnotaizai.world.inventory.TheoTowerMenu;
+import net.mcreator.craftnotaizai.world.inventory.TheoGuiMenu;
+import net.mcreator.craftnotaizai.world.inventory.TheoCaveMenu;
 import net.mcreator.craftnotaizai.world.inventory.TeleportationGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.StoryBoardMenu;
 import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
@@ -51,4 +54,7 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<CannonGuiMenu>> CANNON_GUI = REGISTRY.register("cannon_gui", () -> IForgeMenuType.create(CannonGuiMenu::new));
 	public static final RegistryObject<MenuType<JennaGuiMenu>> JENNA_GUI = REGISTRY.register("jenna_gui", () -> IForgeMenuType.create(JennaGuiMenu::new));
 	public static final RegistryObject<MenuType<ZaneriGuiMenu>> ZANERI_GUI = REGISTRY.register("zaneri_gui", () -> IForgeMenuType.create(ZaneriGuiMenu::new));
+	public static final RegistryObject<MenuType<TheoGuiMenu>> THEO_GUI = REGISTRY.register("theo_gui", () -> IForgeMenuType.create(TheoGuiMenu::new));
+	public static final RegistryObject<MenuType<TheoCaveMenu>> THEO_CAVE = REGISTRY.register("theo_cave", () -> IForgeMenuType.create(TheoCaveMenu::new));
+	public static final RegistryObject<MenuType<TheoTowerMenu>> THEO_TOWER = REGISTRY.register("theo_tower", () -> IForgeMenuType.create(TheoTowerMenu::new));
 }

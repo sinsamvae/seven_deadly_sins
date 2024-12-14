@@ -23,17 +23,20 @@ public class IstarSetUpProcedure {
 		xTP = 95;
 		yTP = 100;
 		zTP = 222;
+		entity.getPersistentData().putDouble("TPX", xTP);
+		entity.getPersistentData().putDouble("TPY", yTP);
+		entity.getPersistentData().putDouble("TPZ", zTP);
 		{
 			Entity _ent = entity;
-			_ent.teleportTo(xTP, yTP, zTP);
+			_ent.teleportTo((entity.getPersistentData().getDouble("TPX")), (entity.getPersistentData().getDouble("TPY")), (entity.getPersistentData().getDouble("TPZ")));
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(xTP, yTP, zTP, _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport((entity.getPersistentData().getDouble("TPX")), (entity.getPersistentData().getDouble("TPY")), (entity.getPersistentData().getDouble("TPZ")), _ent.getYRot(), _ent.getXRot());
 		}
 		if (!CraftNoTaizaiModVariables.MapVariables.get(world).Istar) {
 			if (world instanceof ServerLevel _serverworld) {
 				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "istar_2"));
 				if (template != null) {
-					template.placeInWorld(_serverworld, BlockPos.containing(xTP - 124, yTP - 30, zTP - 250), BlockPos.containing(xTP - 124, yTP - 30, zTP - 250),
+					template.placeInWorld(_serverworld, BlockPos.containing(xTP - 124, yTP - 25, zTP - 250), BlockPos.containing(xTP - 124, yTP - 25, zTP - 250),
 							new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 				}
 			}

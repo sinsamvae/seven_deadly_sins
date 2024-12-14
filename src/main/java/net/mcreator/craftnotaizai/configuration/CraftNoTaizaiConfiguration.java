@@ -14,6 +14,7 @@ public class CraftNoTaizaiConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> XP_AMOUNT;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> CAVE_OF_TRAINING;
+	public static final ForgeConfigSpec.ConfigValue<Double> TOWER_OF_TRAILS;
 	static {
 		BUILDER.push("Craft No Taizai Random Race");
 		RANDOM_RACE = BUILDER.comment("This will determine if you get random race when you join world (Default True)").define("random_race", true);
@@ -32,7 +33,8 @@ public class CraftNoTaizaiConfiguration {
 		SPEED = BUILDER.comment("This will determine the max speed").define("Speed", (double) 100);
 		BUILDER.pop();
 		BUILDER.push("Istar");
-		CAVE_OF_TRAINING = BUILDER.define("cave_of_training", (double) 8);
+		CAVE_OF_TRAINING = BUILDER.define("cave_of_training", (double) 3);
+		TOWER_OF_TRAILS = BUILDER.define("tower_of_trails", (double) 3);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

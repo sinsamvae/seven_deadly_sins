@@ -15,14 +15,6 @@
       }
     ]
   },
-  "fast": {
-    "sounds": [
-      {
-        "name": "craft_no_taizai:movefast",
-        "stream": false
-      }
-    ]
-  },
   "swish": {
     "sounds": [
       {

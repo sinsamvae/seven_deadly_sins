@@ -16,7 +16,7 @@ public class CaveTrainingPlayerEntersDimensionProcedure {
 		{
 			double _setval = 12000;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.cave_of_training_kick = _setval;
+				capability.training_kick = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

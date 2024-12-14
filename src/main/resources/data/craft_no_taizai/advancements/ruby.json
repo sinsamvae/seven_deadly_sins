@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "craft_no_taizai:crystal"
+  "parent": "craft_no_taizai:emerald_advancement"
 }

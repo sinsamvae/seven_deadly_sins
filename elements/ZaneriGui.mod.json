@@ -25,6 +25,9 @@
           "name": "imagebutton_button_1",
           "image": "button_1.png",
           "hoveredImage": "button_1_hover.png",
+          "onClick": {
+            "name": "ZaneriAccept"
+          },
           "x": 191,
           "y": 119
         }
@@ -53,8 +56,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 221,
-          "y": 75
+          "x": 195,
+          "y": 64
         }
       },
       {
@@ -62,14 +65,14 @@
         "data": {
           "name": "label_you_will_have_to_go_through_trai",
           "text": {
-            "fixedValue": "you will have to go through trail"
+            "fixedValue": "you will now go through tower of trails"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 221,
-          "y": 88
+          "x": 195,
+          "y": 78
         }
       },
       {
@@ -107,14 +110,14 @@
         "data": {
           "name": "label_be_warn_this_trail_is_tuf",
           "text": {
-            "fixedValue": "be warn this trail is tuf"
+            "fixedValue": "be warn this trail is tuff"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 221,
-          "y": 102
+          "x": 194,
+          "y": 94
         }
       }
     ],

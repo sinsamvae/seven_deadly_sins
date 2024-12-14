@@ -272,10 +272,12 @@ public class CraftNoTaizaiModVariables {
 			clone.istarY = original.istarY;
 			clone.istarZ = original.istarZ;
 			clone.cave_of_training_timer = original.cave_of_training_timer;
-			clone.cave_of_training_kick = original.cave_of_training_kick;
+			clone.training_kick = original.training_kick;
 			clone.cave_of_training_cd = original.cave_of_training_cd;
 			clone.cave_of_training = original.cave_of_training;
 			clone.training_id = original.training_id;
+			clone.tower_of_trails = original.tower_of_trails;
+			clone.tower_of_trails_cooldown = original.tower_of_trails_cooldown;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 			}
@@ -733,10 +735,12 @@ public class CraftNoTaizaiModVariables {
 		public double istarY = 0;
 		public double istarZ = 0;
 		public double cave_of_training_timer = 0;
-		public double cave_of_training_kick = 0;
+		public double training_kick = 0;
 		public double cave_of_training_cd = 0;
 		public boolean cave_of_training = false;
 		public double training_id = 0;
+		public boolean tower_of_trails = false;
+		public double tower_of_trails_cooldown = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -934,10 +938,12 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("istarY", istarY);
 			nbt.putDouble("istarZ", istarZ);
 			nbt.putDouble("cave_of_training_timer", cave_of_training_timer);
-			nbt.putDouble("cave_of_training_kick", cave_of_training_kick);
+			nbt.putDouble("training_kick", training_kick);
 			nbt.putDouble("cave_of_training_cd", cave_of_training_cd);
 			nbt.putBoolean("cave_of_training", cave_of_training);
 			nbt.putDouble("training_id", training_id);
+			nbt.putBoolean("tower_of_trails", tower_of_trails);
+			nbt.putDouble("tower_of_trails_cooldown", tower_of_trails_cooldown);
 			return nbt;
 		}
 
@@ -1132,10 +1138,12 @@ public class CraftNoTaizaiModVariables {
 			istarY = nbt.getDouble("istarY");
 			istarZ = nbt.getDouble("istarZ");
 			cave_of_training_timer = nbt.getDouble("cave_of_training_timer");
-			cave_of_training_kick = nbt.getDouble("cave_of_training_kick");
+			training_kick = nbt.getDouble("training_kick");
 			cave_of_training_cd = nbt.getDouble("cave_of_training_cd");
 			cave_of_training = nbt.getBoolean("cave_of_training");
 			training_id = nbt.getDouble("training_id");
+			tower_of_trails = nbt.getBoolean("tower_of_trails");
+			tower_of_trails_cooldown = nbt.getDouble("tower_of_trails_cooldown");
 		}
 	}
 
@@ -1358,10 +1366,12 @@ public class CraftNoTaizaiModVariables {
 					variables.istarY = message.data.istarY;
 					variables.istarZ = message.data.istarZ;
 					variables.cave_of_training_timer = message.data.cave_of_training_timer;
-					variables.cave_of_training_kick = message.data.cave_of_training_kick;
+					variables.training_kick = message.data.training_kick;
 					variables.cave_of_training_cd = message.data.cave_of_training_cd;
 					variables.cave_of_training = message.data.cave_of_training;
 					variables.training_id = message.data.training_id;
+					variables.tower_of_trails = message.data.tower_of_trails;
+					variables.tower_of_trails_cooldown = message.data.tower_of_trails_cooldown;
 				}
 			});
 			context.setPacketHandled(true);

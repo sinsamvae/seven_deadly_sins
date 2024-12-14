@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Capital Of The Dead",
-    "achievementDescription": "enter strange place",
+    "achievementDescription": "Enter An Strange Place",
     "achievementIcon": {
       "value": "CUSTOM:CapitalOfTheDeadGround"
     },

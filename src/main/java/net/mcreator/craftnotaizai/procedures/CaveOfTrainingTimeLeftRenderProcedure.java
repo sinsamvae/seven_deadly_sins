@@ -408,9 +408,11 @@ public class CaveOfTrainingTimeLeftRenderProcedure {
 				LevelAccessor world = entity.level();
 				ResourceKey<Level> dimension = entity.level().dimension();
 				if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
-					renderTexts(
-							("Time Left: "
-									+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_kick)),
+					renderTexts(("Time Left: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).training_kick)),
+							210, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
+				}
+				if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
+					renderTexts(("Time Left: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).training_kick)),
 							210, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
 				}
 			}

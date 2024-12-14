@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.ZaneriGuiMenu;
 import net.mcreator.craftnotaizai.procedures.ZaneriDenyProcedure;
+import net.mcreator.craftnotaizai.procedures.ZaneriAcceptProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class ZaneriGuiButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			ZaneriAcceptProcedure.execute(entity);
+		}
 		if (buttonID == 1) {
 
 			ZaneriDenyProcedure.execute(entity);

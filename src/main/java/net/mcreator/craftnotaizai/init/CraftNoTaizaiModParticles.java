@@ -40,7 +40,6 @@ import net.mcreator.craftnotaizai.client.particle.HealParticle;
 import net.mcreator.craftnotaizai.client.particle.GravityParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.GoddessParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.FreezeCoffinParticle;
-import net.mcreator.craftnotaizai.client.particle.FlowerpetalsparticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.FlamePurpleParticle;
 import net.mcreator.craftnotaizai.client.particle.FeatherParticle;
 import net.mcreator.craftnotaizai.client.particle.FairySwordParticlesParticle;
@@ -78,7 +77,6 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.POSION.get(), PosionParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.ICE.get(), IceParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PURPLEFIREPARTIICLES.get(), PurplefirepartiiclesParticle::provider);
-		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.FLOWERPETALSPARTICLES.get(), FlowerpetalsparticlesParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.DEMON_LIGHTING.get(), DemonLightingParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.ARKPARTICLE.get(), ArkparticleParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.SMOKE.get(), SmokeParticle::provider);

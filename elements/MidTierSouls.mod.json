@@ -9,11 +9,7 @@
     "states": [],
     "name": "Mid Tier Souls",
     "rarity": "UNCOMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Foods"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 32,

@@ -69,17 +69,21 @@ public class ZaneriGuiScreen extends AbstractContainerScreen<ZaneriGuiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_if_youre_ready"), 7, -45, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_you_will_have_to_go_through_trai"), 7, -32, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_if_youre_ready"), -19, -56, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_you_will_have_to_go_through_trai"), -19, -42, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_accept"), -10, 3, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_deny"), -11, 24, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_be_warn_this_trail_is_tuf"), 7, -18, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.zaneri_gui.label_be_warn_this_trail_is_tuf"), -20, -26, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		imagebutton_button_1 = new ImageButton(this.leftPos + -23, this.topPos + -1, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_button_1.png"), 16, 32, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ZaneriGuiButtonMessage(0, x, y, z, textstate));
+				ZaneriGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+			}
 		});
 		guistate.put("button:imagebutton_button_1", imagebutton_button_1);
 		this.addRenderableWidget(imagebutton_button_1);

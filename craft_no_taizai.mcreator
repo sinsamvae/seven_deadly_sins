@@ -6152,7 +6152,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/gui/StoryBoardScreen.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui"
+      "path": "~/StoryModeEntities/storygui"
     },
     {
       "name": "Story",
@@ -6222,7 +6222,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0"
+      "path": "~/StoryModeEntities/storygui/story0"
     },
     {
       "name": "Story1",
@@ -6242,7 +6242,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Story2",
@@ -6262,7 +6262,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "TwigoEntityDies",
@@ -6285,7 +6285,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Twigo"
     },
     {
       "name": "Stats",
@@ -6340,7 +6340,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "SleepingForest",
@@ -6378,7 +6378,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GilThunderEntityDies",
@@ -6401,7 +6401,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/gilthunder"
     },
     {
       "name": "Story4",
@@ -6421,7 +6421,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GolgiusEntityDies",
@@ -6444,7 +6444,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Golgius"
     },
     {
       "name": "Story5",
@@ -6464,7 +6464,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "DianeEntityDies",
@@ -6491,7 +6491,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/diane"
     },
     {
       "name": "Story6",
@@ -6511,7 +6511,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "BellStaff",
@@ -6892,7 +6892,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/ruin"
     },
     {
       "name": "Story7",
@@ -6912,7 +6912,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "FriesiaEntityDies",
@@ -6935,7 +6935,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/friesia"
     },
     {
       "name": "Story8",
@@ -6955,7 +6955,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "CapitaloftheDeadPlayerEntersDimension",
@@ -7006,7 +7006,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GuilaEntityDies",
@@ -7029,7 +7029,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/guila"
     },
     {
       "name": "Story10",
@@ -7049,7 +7049,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Purplefire",
@@ -7086,7 +7086,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "TaizooEntityDies",
@@ -7109,7 +7109,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/taizoo"
+      "path": "~/StoryModeEntities/taizoo"
     },
     {
       "name": "Story12",
@@ -7129,7 +7129,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GriamoreEntityDies",
@@ -7152,7 +7152,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/griamore"
     },
     {
       "name": "Story13",
@@ -7172,7 +7172,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "HowzerEntityDies",
@@ -7195,7 +7195,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/howzer"
     },
     {
       "name": "Story14",
@@ -7215,7 +7215,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "CainBarzadEntityDies",
@@ -7238,7 +7238,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/cainbarzad"
     },
     {
       "name": "HyperRecovery",
@@ -7338,7 +7338,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "JerichoMobEntityDies",
@@ -7361,7 +7361,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/jericho"
     },
     {
       "name": "Story16",
@@ -7381,7 +7381,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Story17",
@@ -7401,7 +7401,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GuilademonEntityDies",
@@ -7424,7 +7424,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/guilamob"
     },
     {
       "name": "Death",
@@ -7481,7 +7481,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem"
+      "path": "~/StoryModeEntities/helbrem"
     },
     {
       "name": "Setimortal",
@@ -7628,7 +7628,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Applepie",
@@ -7707,7 +7707,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities"
+      "path": "~/StoryModeEntities"
     },
     {
       "name": "Banhood",
@@ -7720,7 +7720,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/banz_hood.json"
         ]
       },
-      "path": "~/Recipe/Armor/banrecipe"
+      "path": "~/Recipe/Armor/Season1/banrecipe"
     },
     {
       "name": "Banshirt",
@@ -7733,7 +7733,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/ban_shirt.json"
         ]
       },
-      "path": "~/Recipe/Armor/banrecipe"
+      "path": "~/Recipe/Armor/Season1/banrecipe"
     },
     {
       "name": "BanPants",
@@ -7746,7 +7746,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/ban_pants.json"
         ]
       },
-      "path": "~/Recipe/Armor/banrecipe"
+      "path": "~/Recipe/Armor/Season1/banrecipe"
     },
     {
       "name": "KingShirt",
@@ -7759,7 +7759,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/king_shirt.json"
         ]
       },
-      "path": "~/Recipe/Armor/kingrecipe"
+      "path": "~/Recipe/Armor/Season1/kingrecipe"
     },
     {
       "name": "KingPants",
@@ -7772,7 +7772,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/king_pants.json"
         ]
       },
-      "path": "~/Recipe/Armor/kingrecipe"
+      "path": "~/Recipe/Armor/Season1/kingrecipe"
     },
     {
       "name": "MerlinShirt",
@@ -7785,7 +7785,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/merlin_shirt.json"
         ]
       },
-      "path": "~/Recipe/Armor/merlinrecipe"
+      "path": "~/Recipe/Armor/Season1/merlinrecipe"
     },
     {
       "name": "MerlinPants",
@@ -7798,7 +7798,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/merlin_pants.json"
         ]
       },
-      "path": "~/Recipe/Armor/merlinrecipe"
+      "path": "~/Recipe/Armor/Season1/merlinrecipe"
     },
     {
       "name": "DaleArmored",
@@ -7814,7 +7814,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DaleArmoredModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/dale"
     },
     {
       "name": "DaleSec",
@@ -7830,7 +7830,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DaleSecModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/dale"
     },
     {
       "name": "Dalefinal",
@@ -7846,7 +7846,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DalefinalEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/dale"
     },
     {
       "name": "DaleArmoredOnEntityTickUpdate",
@@ -7881,7 +7881,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/form"
+      "path": "~/StoryModeEntities/dale/form"
     },
     {
       "name": "MeliodasShirt",
@@ -7894,7 +7894,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/meliodas_shirt.json"
         ]
       },
-      "path": "~/Recipe/Armor/meliodasrecipe"
+      "path": "~/Recipe/Armor/Season1/meliodasrecipe"
     },
     {
       "name": "MeliodasPants",
@@ -7907,7 +7907,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/meliodas_pants.json"
         ]
       },
-      "path": "~/Recipe/Armor/meliodasrecipe"
+      "path": "~/Recipe/Armor/Season1/meliodasrecipe"
     },
     {
       "name": "GowtherShirt",
@@ -7920,7 +7920,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gowther_shirt.json"
         ]
       },
-      "path": "~/Recipe/Armor/gowtherrecipe"
+      "path": "~/Recipe/Armor/Season1/gowtherrecipe"
     },
     {
       "name": "GowtherPants",
@@ -7933,7 +7933,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gowther_pants.json"
         ]
       },
-      "path": "~/Recipe/Armor/gowtherrecipe"
+      "path": "~/Recipe/Armor/Season1/gowtherrecipe"
     },
     {
       "name": "Elaine",
@@ -8057,7 +8057,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities"
+      "path": "~/StoryModeEntities"
     },
     {
       "name": "GuilaArmor",
@@ -8527,7 +8527,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/form"
+      "path": "~/StoryModeEntities/dale/form"
     },
     {
       "name": "Story19",
@@ -8547,7 +8547,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "DalefinalEntityDies",
@@ -8570,7 +8570,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/dale"
     },
     {
       "name": "BarDoor",
@@ -9607,7 +9607,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves"
+      "path": "~/StoryModeEntities/dale/dalesecmoves"
     },
     {
       "name": "FrozenBreathWhileProjectileFlyingTick",
@@ -9646,7 +9646,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "FrozenBreathProjectileHitsLivingEntity",
@@ -9665,7 +9665,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "FrozenBreath",
@@ -9679,7 +9679,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/FrozenBreathEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "NoroiNoKoeWhileProjectileFlyingTick",
@@ -9718,7 +9718,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
     },
     {
       "name": "NoroiNoKoe",
@@ -9731,7 +9731,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/NoroiNoKoeEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
     },
     {
       "name": "DespairVenomWhileProjectileFlyingTick",
@@ -9770,7 +9770,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DespairVenomProjectileHitsLivingEntity",
@@ -9789,7 +9789,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DespairVenom",
@@ -9802,7 +9802,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DespairVenomEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DemonAxeRightclicked",
@@ -9913,7 +9913,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Twigo"
     },
     {
       "name": "LockOnOnKeyPressed",
@@ -9959,7 +9959,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/helbrem2"
     },
     {
       "name": "FairyHelbremEntityIsHurt",
@@ -9990,7 +9990,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/helbrem2"
     },
     {
       "name": "Story20",
@@ -10010,7 +10010,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "StoryBanEntityDies",
@@ -10033,7 +10033,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/StoryBan1"
     },
     {
       "name": "KillRoyaleGurads",
@@ -10060,7 +10060,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/royalegurads"
+      "path": "~/StoryModeEntities/royalegurads"
     },
     {
       "name": "Roylekillcount",
@@ -10099,7 +10099,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/royalegurads"
+      "path": "~/StoryModeEntities/royalegurads"
     },
     {
       "name": "Redkillcount",
@@ -11076,7 +11076,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "DreyfusEntityDies",
@@ -11099,7 +11099,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/dreyfus"
     },
     {
       "name": "DreyfusEntityIsHurt",
@@ -11118,7 +11118,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/dreyfus"
     },
     {
       "name": "Story22",
@@ -11138,7 +11138,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Capitalofthedeadbiome",
@@ -11478,51 +11478,6 @@
       "path": "~/entities/Normal/weak/blackhound"
     },
     {
-      "name": "TalaVillageFlowerUpdateTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tala_village_flower_update_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/TalaVillageFlowerUpdateTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Block/Tala Village"
-    },
-    {
-      "name": "Flowerpetalsparticles",
-      "type": "particle",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowerpetalsparticles",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/client/particle/FlowerpetalsparticlesParticle.java",
-          "src/main/resources/assets/craft_no_taizai/particles/flowerpetalsparticles.json"
-        ]
-      },
-      "path": "~/particle"
-    },
-    {
       "name": "CapitalOfTheDeadGroundBlock",
       "type": "block",
       "compiles": true,
@@ -11800,7 +11755,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "TyrantDragon",
@@ -11852,7 +11807,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/gilthunder"
     },
     {
       "name": "GuilaOnEntityTickUpdate",
@@ -11871,7 +11826,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/guila"
     },
     {
       "name": "HowzerOnEntityTickUpdate",
@@ -11890,7 +11845,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/howzer"
     },
     {
       "name": "CainBarzadOnEntityTickUpdate",
@@ -11909,7 +11864,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/cainbarzad"
     },
     {
       "name": "GuilademonOnEntityTickUpdate",
@@ -11928,7 +11883,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/guilamob"
     },
     {
       "name": "HelbremOnEntityTickUpdate",
@@ -11947,7 +11902,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem"
+      "path": "~/StoryModeEntities/helbrem"
     },
     {
       "name": "TyrantDragonMeat",
@@ -12731,7 +12686,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/GilThunder2"
     },
     {
       "name": "HendricksonOnEntityTickUpdate",
@@ -12750,7 +12705,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Hendrickson"
     },
     {
       "name": "GilthunderDieNearHendrickson",
@@ -12785,7 +12740,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/GilThunder2"
     },
     {
       "name": "HendricksonMoveCondition",
@@ -12805,7 +12760,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Hendrickson"
     },
     {
       "name": "HendricksonEntityDies",
@@ -12828,7 +12783,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Hendrickson"
     },
     {
       "name": "GilThunder2EntityDies",
@@ -12851,7 +12806,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/GilThunder2"
     },
     {
       "name": "TransparncyKled",
@@ -12883,7 +12838,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/danafor_armor_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/danaforrecipe"
+      "path": "~/Recipe/Armor/Season1/danaforrecipe"
     },
     {
       "name": "DanaforPantsRecipe",
@@ -12896,7 +12851,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/danafor_pants_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/danaforrecipe"
+      "path": "~/Recipe/Armor/Season1/danaforrecipe"
     },
     {
       "name": "AuraBurst",
@@ -13496,7 +13451,7 @@
           "src/main/resources/data/craft_no_taizai/advancements/plaatinum.json"
         ]
       },
-      "path": "~/advancement/Diamond/Platinum"
+      "path": "~/advancement/Ranks/Platinum"
     },
     {
       "name": "PlatinumAdvancement",
@@ -13515,7 +13470,7 @@
           }
         ]
       },
-      "path": "~/advancement/Diamond/Platinum"
+      "path": "~/advancement/Ranks/Platinum"
     },
     {
       "name": "DiamondRank",
@@ -13528,7 +13483,7 @@
           "src/main/resources/data/craft_no_taizai/advancements/diamond_rank.json"
         ]
       },
-      "path": "~/advancement/Diamond"
+      "path": "~/advancement/Ranks/Diamond"
     },
     {
       "name": "DiamondAdvacement",
@@ -13547,7 +13502,7 @@
           }
         ]
       },
-      "path": "~/advancement/Diamond"
+      "path": "~/advancement/Ranks/Diamond"
     },
     {
       "name": "JerichoDemonForm",
@@ -13563,7 +13518,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/JerichoDemonFormRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/jerichoDemonForm"
+      "path": "~/StoryModeEntities/jerichoDemonForm"
     },
     {
       "name": "PurgeoftheThunderEmperor",
@@ -13943,7 +13898,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "JerichoDemonFormEntityDies",
@@ -13966,7 +13921,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/jerichoDemonForm"
+      "path": "~/StoryModeEntities/jerichoDemonForm"
     },
     {
       "name": "Troll",
@@ -16005,7 +15960,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "DeadHelbramEntityDies",
@@ -16028,7 +15983,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/DeadHelbram"
     },
     {
       "name": "StoryBan2EntityDies",
@@ -16051,7 +16006,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/StoryBan2"
     },
     {
       "name": "DemonHendricksonOnEntityTickUpdate",
@@ -16070,7 +16025,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/HendricksonDemonMark"
     },
     {
       "name": "StoryBanOnEntityTickUpdate",
@@ -16093,7 +16048,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/StoryBan1"
     },
     {
       "name": "DarkSnow",
@@ -16121,7 +16076,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DeadEndEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "DeadEndWhileProjectileFlyingTick",
@@ -16160,7 +16115,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "DeadEndProjectileHitsLivingEntity",
@@ -16187,7 +16142,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "GrayDemonHendricksonOnEntityTickUpdate",
@@ -16222,7 +16177,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson"
     },
     {
       "name": "DamageIndicatorCommand",
@@ -16278,7 +16233,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Story27",
@@ -16298,7 +16253,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "FairyHelbremOnEntityTickUpdate",
@@ -16321,7 +16276,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/helbrem2"
     },
     {
       "name": "HelbremSwordParticle",
@@ -16332,7 +16287,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/entities/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/helbrem2"
     },
     {
       "name": "FairySwordParticles",
@@ -16369,7 +16324,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/HendricksonDemonMark"
     },
     {
       "name": "Story28",
@@ -16389,7 +16344,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GrayDemonHendricksonEntityDies",
@@ -16412,7 +16367,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson"
     },
     {
       "name": "GustafOnEntityTickUpdate",
@@ -16482,20 +16437,6 @@
         "files": [
           "src/main/resources/data/craft_no_taizai/damage_type/delay_damage.json"
         ]
-      },
-      "path": "~/DMGType"
-    },
-    {
-      "name": "DamageDelay",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damage_delay",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/DamageDelayProcedure.java"
-        ],
-        "dependencies": []
       },
       "path": "~/DMGType"
     },
@@ -16594,7 +16535,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/diane"
     },
     {
       "name": "RuinArmor",
@@ -16783,7 +16724,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/friesia"
     },
     {
       "name": "RuinOnEntityTickUpdate",
@@ -16806,7 +16747,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/ruin"
     },
     {
       "name": "JillianArmor",
@@ -17262,7 +17203,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/DeadHelbram"
     },
     {
       "name": "HolyKnightStats",
@@ -17573,7 +17514,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "CoffinOfEternalDarkness",
@@ -22693,7 +22634,7 @@
           "src/main/resources/data/craft_no_taizai/advancements/red_demon_blood.json"
         ]
       },
-      "path": "~/advancement/Diamond/DemonBlood"
+      "path": "~/advancement/DemonBlood"
     },
     {
       "name": "BloodAwaken",
@@ -22706,7 +22647,7 @@
           "src/main/resources/data/craft_no_taizai/advancements/blood_awaken.json"
         ]
       },
-      "path": "~/advancement/Diamond/DemonBlood"
+      "path": "~/advancement/DemonBlood"
     },
     {
       "name": "FairyKingForestAdvancement",
@@ -23489,7 +23430,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/TwigoAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Twigo"
     },
     {
       "name": "GrayDemonEntity",
@@ -23523,7 +23464,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/gil_thunder_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/gilthunder"
     },
     {
       "name": "GolgiusAnimated",
@@ -23539,7 +23480,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GolgiusAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Golgius"
     },
     {
       "name": "TransparencyEffect",
@@ -23600,7 +23541,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/diane_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/diane"
     },
     {
       "name": "RuinAnimated",
@@ -23616,7 +23557,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/RuinAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/ruin"
     },
     {
       "name": "FriesiaAnimated",
@@ -23632,7 +23573,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/FriesiaAnimatedRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/friesia"
     },
     {
       "name": "GuilaAnimated",
@@ -23648,7 +23589,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/GuilaAnimatedRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/guila"
     },
     {
       "name": "TaizooAnimated",
@@ -23664,7 +23605,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/TaizooAnimatedEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/taizoo"
+      "path": "~/StoryModeEntities/taizoo"
     },
     {
       "name": "GriamoreAnimated",
@@ -23680,7 +23621,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/griamore_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/griamore"
     },
     {
       "name": "GriamoreAnimatedOnEntityTickUpdate",
@@ -23715,7 +23656,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/griamore"
     },
     {
       "name": "HowzerAnimated",
@@ -23731,7 +23672,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/HowzerAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/howzer"
     },
     {
       "name": "CainBarzadAnimated",
@@ -23747,7 +23688,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/cain_barzad_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/cainbarzad"
     },
     {
       "name": "StoryBanAnimated",
@@ -23763,7 +23704,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/StoryBanAnimatedRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/StoryBan1"
     },
     {
       "name": "JerichoAnimated",
@@ -23779,7 +23720,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/JerichoAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/jericho"
     },
     {
       "name": "JerichoAnimatedOnEntityTickUpdate",
@@ -23814,7 +23755,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/jericho"
     },
     {
       "name": "GuilaDemonanimated",
@@ -23830,7 +23771,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/guila_demonanimated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/guilamob"
     },
     {
       "name": "HelbremAnimated",
@@ -23846,7 +23787,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/HelbremAnimatedEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem"
+      "path": "~/StoryModeEntities/helbrem"
     },
     {
       "name": "GilThunderAnimated2",
@@ -23862,7 +23803,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/GilThunderAnimated2Entity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/GilThunder2"
     },
     {
       "name": "DuskBisionAttack",
@@ -24006,7 +23947,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/dreyfus_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/dreyfus"
     },
     {
       "name": "FairyHelbremAnimated",
@@ -24022,7 +23963,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/FairyHelbremAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/helbrem2"
     },
     {
       "name": "DeadHelbramanimated",
@@ -24038,7 +23979,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/DeadHelbramanimatedRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/DeadHelbram"
     },
     {
       "name": "VivianAnimated",
@@ -24191,7 +24132,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/hendrickson_animated_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Hendrickson"
     },
     {
       "name": "StoryBan2Animated",
@@ -24207,7 +24148,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/StoryBan2AnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/StoryBan2"
     },
     {
       "name": "SpawnCondtion",
@@ -24260,7 +24201,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/DemonHendricksonAnimatedRenderer.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/HendricksonDemonMark"
     },
     {
       "name": "GrayDemonHendricksonAnimated",
@@ -24276,7 +24217,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GrayDemonHendricksonAnimatedModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/GrayDemonHendrickson"
     },
     {
       "name": "AndreAnimated",
@@ -25322,7 +25263,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Golgius"
     },
     {
       "name": "HeavyMetalRemoveLevitions",
@@ -27097,7 +27038,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gil_thunder_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/GilThunder"
+      "path": "~/Recipe/Armor/Season1/GilThunder"
     },
     {
       "name": "GilThunderLegings",
@@ -27110,7 +27051,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gil_thunder_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/GilThunder"
+      "path": "~/Recipe/Armor/Season1/GilThunder"
     },
     {
       "name": "HelBremChestPlate",
@@ -27123,7 +27064,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/hel_brem_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/HelBremArmor"
+      "path": "~/Recipe/Armor/Season1/HelBremArmor"
     },
     {
       "name": "HelBremLegings",
@@ -27136,7 +27077,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/hel_brem_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/HelBremArmor"
+      "path": "~/Recipe/Armor/Season1/HelBremArmor"
     },
     {
       "name": "HowzerArmorChestPlate",
@@ -27149,7 +27090,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/howzer_armor_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/HowzerArmor"
+      "path": "~/Recipe/Armor/Season1/HowzerArmor"
     },
     {
       "name": "HowzerArmorLegings",
@@ -27162,7 +27103,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/howzer_armor_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/HowzerArmor"
+      "path": "~/Recipe/Armor/Season1/HowzerArmor"
     },
     {
       "name": "CainChestPlate",
@@ -27175,7 +27116,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/cain_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/CainArmor"
+      "path": "~/Recipe/Armor/Season1/CainArmor"
     },
     {
       "name": "CainLegings",
@@ -27188,7 +27129,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/cain_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/CainArmor"
+      "path": "~/Recipe/Armor/Season1/CainArmor"
     },
     {
       "name": "DreyfusChestplate",
@@ -27201,7 +27142,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/dreyfus_chestplate.json"
         ]
       },
-      "path": "~/Recipe/Armor/DreyfusArmor"
+      "path": "~/Recipe/Armor/Season1/DreyfusArmor"
     },
     {
       "name": "DreyfusLegings",
@@ -27214,7 +27155,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/dreyfus_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/DreyfusArmor"
+      "path": "~/Recipe/Armor/Season1/DreyfusArmor"
     },
     {
       "name": "GuilaChestplate",
@@ -27227,7 +27168,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/guila_chestplate.json"
         ]
       },
-      "path": "~/Recipe/Armor/GuilaArmor"
+      "path": "~/Recipe/Armor/Season1/GuilaArmor"
     },
     {
       "name": "GuilaLegings",
@@ -27240,7 +27181,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/guila_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/GuilaArmor"
+      "path": "~/Recipe/Armor/Season1/GuilaArmor"
     },
     {
       "name": "JerichoChestPlate",
@@ -27253,7 +27194,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/jericho_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/JerichoArmor"
+      "path": "~/Recipe/Armor/Season1/JerichoArmor"
     },
     {
       "name": "JerichoLegings",
@@ -27266,7 +27207,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/jericho_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/JerichoArmor"
+      "path": "~/Recipe/Armor/Season1/JerichoArmor"
     },
     {
       "name": "JerichoChest",
@@ -27279,7 +27220,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/jericho_chest.json"
         ]
       },
-      "path": "~/Recipe/Armor/JerichoArmor"
+      "path": "~/Recipe/Armor/Season1/JerichoArmor"
     },
     {
       "name": "JerichoArmorLegings",
@@ -27292,7 +27233,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/jericho_armor_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/JerichoArmor"
+      "path": "~/Recipe/Armor/Season1/JerichoArmor"
     },
     {
       "name": "FairyHelbremChestPlate",
@@ -27305,7 +27246,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/fairy_helbrem_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/HelBremArmor"
+      "path": "~/Recipe/Armor/Season1/HelBremArmor"
     },
     {
       "name": "FairyHelbremLegings",
@@ -27318,7 +27259,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/fairy_helbrem_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/HelBremArmor"
+      "path": "~/Recipe/Armor/Season1/HelBremArmor"
     },
     {
       "name": "GuilaArmorChestPlate",
@@ -27331,7 +27272,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/guila_armor_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/GuilaArmor"
+      "path": "~/Recipe/Armor/Season1/GuilaArmor"
     },
     {
       "name": "GuilaArmorLegings",
@@ -27344,7 +27285,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/guila_armor_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/GuilaArmor"
+      "path": "~/Recipe/Armor/Season1/GuilaArmor"
     },
     {
       "name": "TrueSpirtSpearSkills",
@@ -27419,7 +27360,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/arther_armor_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/Arther"
+      "path": "~/Recipe/Armor/Season1/Arther"
     },
     {
       "name": "ArtherArmorLegings",
@@ -27432,7 +27373,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/arther_armor_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/Arther"
+      "path": "~/Recipe/Armor/Season1/Arther"
     },
     {
       "name": "MagicalEyeOverlay",
@@ -27700,7 +27641,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gustaf_helment.json"
         ]
       },
-      "path": "~/Recipe/Armor/GustafArmor"
+      "path": "~/Recipe/Armor/Season1/GustafArmor"
     },
     {
       "name": "GustafRecipeChestPlate",
@@ -27713,7 +27654,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gustaf_recipe_chest_plate.json"
         ]
       },
-      "path": "~/Recipe/Armor/GustafArmor"
+      "path": "~/Recipe/Armor/Season1/GustafArmor"
     },
     {
       "name": "GustafRecipeLegings",
@@ -27726,7 +27667,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gustaf_recipe_legings.json"
         ]
       },
-      "path": "~/Recipe/Armor/GustafArmor"
+      "path": "~/Recipe/Armor/Season1/GustafArmor"
     },
     {
       "name": "ChaosDimension",
@@ -27796,7 +27737,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/royal_knight_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/RoyalKnightArmor"
+      "path": "~/Recipe/Armor/Season1/RoyalKnightArmor"
     },
     {
       "name": "RoyalKnightChestPlateRecipe",
@@ -27809,7 +27750,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/royal_knight_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/RoyalKnightArmor"
+      "path": "~/Recipe/Armor/Season1/RoyalKnightArmor"
     },
     {
       "name": "RoyalKnightLegingsRecipe",
@@ -27822,7 +27763,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/royal_knight_legings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/RoyalKnightArmor"
+      "path": "~/Recipe/Armor/Season1/RoyalKnightArmor"
     },
     {
       "name": "BlackOutParticle",
@@ -28056,7 +27997,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/boar_hat_shirt_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Boar_Hat"
+      "path": "~/Recipe/Armor/Season1/Boar_Hat"
     },
     {
       "name": "BoarHatSkirtRecipe",
@@ -28069,7 +28010,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/boar_hat_skirt_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Boar_Hat"
+      "path": "~/Recipe/Armor/Season1/Boar_Hat"
     },
     {
       "name": "JubakuEnsaEffect",
@@ -30104,7 +30045,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Dogedo",
@@ -30120,7 +30061,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DogedoModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Dogedo"
     },
     {
       "name": "DogedoOnEntityTickUpdate",
@@ -30155,7 +30096,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Dogedo"
     },
     {
       "name": "GowtherStory1",
@@ -30171,7 +30112,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GowtherStory1Model.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Gowther"
     },
     {
       "name": "DogedoEntityDies",
@@ -30194,7 +30135,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Dogedo"
     },
     {
       "name": "DemonRemovePosion",
@@ -30259,7 +30200,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Gowther"
     },
     {
       "name": "GowtherStory1EntityDies",
@@ -30282,7 +30223,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Gowther"
     },
     {
       "name": "Story31",
@@ -30302,7 +30243,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "Albion",
@@ -30318,7 +30259,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/AlbionModel.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/FatAlbion"
     },
     {
       "name": "AlbionOnEntityTickUpdate",
@@ -30341,7 +30282,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/FatAlbion"
     },
     {
       "name": "AlbionEntityDies",
@@ -30364,7 +30305,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/FatAlbion"
     },
     {
       "name": "Stroy32",
@@ -30384,7 +30325,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "CannonWhileProjectileFlyingTick",
@@ -30423,7 +30364,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/FatAlbion/Cannon"
     },
     {
       "name": "CannonProjectileHitsLivingEntity",
@@ -30450,7 +30391,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/FatAlbion/Cannon"
     },
     {
       "name": "Cannon",
@@ -30463,7 +30404,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/CannonEntity.java"
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/FatAlbion/Cannon"
     },
     {
       "name": "RedParticles",
@@ -30512,7 +30453,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/FatAlbion/Cannon"
     },
     {
       "name": "AlbionFat",
@@ -30568,7 +30509,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/tall_albion_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/TallAlbion"
     },
     {
       "name": "PurgatoryBlock",
@@ -30608,7 +30549,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/TallAlbion"
     },
     {
       "name": "TallAlbionEntityDies",
@@ -30631,7 +30572,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/TallAlbion"
     },
     {
       "name": "Story33",
@@ -30651,7 +30592,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "AlbionTall",
@@ -31336,7 +31277,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/merlin_armor_helmeant_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Merlin"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Merlin"
     },
     {
       "name": "MerlinArmorChestPlateRecipe",
@@ -31349,7 +31290,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/merlin_armor_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Merlin"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Merlin"
     },
     {
       "name": "MerlinArmorLeggingsRecipe",
@@ -31362,7 +31303,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/merlin_armor_leggings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Merlin"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Merlin"
     },
     {
       "name": "HellGateParticles",
@@ -31509,7 +31450,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/ban_armor_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Ban"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Ban"
     },
     {
       "name": "BanArmorChestPlateRecipe",
@@ -31522,7 +31463,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/ban_armor_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Ban"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Ban"
     },
     {
       "name": "BanArmorLeggingsRecipe",
@@ -31535,7 +31476,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/ban_armor_leggings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Ban"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Ban"
     },
     {
       "name": "DianeArmorHelmentRecipe",
@@ -31548,7 +31489,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/diane_armor_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Diane"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Diane"
     },
     {
       "name": "DianeArmorChestPlateRecipe",
@@ -31561,7 +31502,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/diane_armor_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Diane"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Diane"
     },
     {
       "name": "DianeArmorLeggingsRecipe",
@@ -31574,7 +31515,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/diane_armor_leggings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Diane"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Diane"
     },
     {
       "name": "EscanorArmor",
@@ -31603,7 +31544,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/escanor_armor_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Escanor"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Escanor"
     },
     {
       "name": "EscanorArmorChestPlateRecipe",
@@ -31616,7 +31557,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/escanor_armor_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Escanor"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Escanor"
     },
     {
       "name": "EscanorArmorLeggings",
@@ -31629,7 +31570,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/escanor_armor_leggings.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Escanor"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Escanor"
     },
     {
       "name": "GowtherArmor",
@@ -31658,7 +31599,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gowther_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Gowther"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Gowther"
     },
     {
       "name": "GowtherChestPlateRecipe",
@@ -31671,7 +31612,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gowther_chest_plate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Gowther"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Gowther"
     },
     {
       "name": "GowtherLeggingsRecipe",
@@ -31684,7 +31625,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/gowther_leggings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Gowther"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Gowther"
     },
     {
       "name": "KingsArmor",
@@ -31713,7 +31654,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/kings_helment_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Kings"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Kings"
     },
     {
       "name": "KingsChestplateRecipe",
@@ -31726,7 +31667,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/kings_chestplate_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Kings"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Kings"
     },
     {
       "name": "KingsLeggingsRecipe",
@@ -31739,7 +31680,7 @@
           "src/main/resources/data/craft_no_taizai/recipes/kings_leggings_recipe.json"
         ]
       },
-      "path": "~/Recipe/Armor/Seven Deadly Sins Armor/Kings"
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Kings"
     },
     {
       "name": "MeliodasArmor",
@@ -32444,7 +32385,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/galand_spawn_egg.json"
         ]
       },
-      "path": "~/entities/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Galand"
     },
     {
       "name": "PeaceAmuletRecipe",
@@ -32477,7 +32418,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "GalandEntityDies",
@@ -32500,7 +32441,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Galand"
     },
     {
       "name": "GalandOnEntityTickUpdate",
@@ -32535,7 +32476,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Galand"
     },
     {
       "name": "RedDemonKill",
@@ -32693,7 +32634,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "SleepingForestDirt",
@@ -32737,7 +32678,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/RedandGrayDemon"
+      "path": "~/StoryModeEntities/RedandGrayDemon"
     },
     {
       "name": "Story35ReachAmount",
@@ -32756,7 +32697,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/RedandGrayDemon"
+      "path": "~/StoryModeEntities/RedandGrayDemon"
     },
     {
       "name": "HeavyMetalOnEffectActiveTick",
@@ -32822,7 +32763,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "KillGiantVar",
@@ -32944,7 +32885,7 @@
           "src/main/resources/data/craft_no_taizai/dimension_type/istar.json"
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
       "name": "SwitchIstar",
@@ -33026,7 +32967,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/KillGiant"
+      "path": "~/StoryModeEntities/KillGiant"
     },
     {
       "name": "SetGiantStory",
@@ -33045,7 +32986,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/KillGiant"
+      "path": "~/StoryModeEntities/KillGiant"
     },
     {
       "name": "Theo",
@@ -33915,7 +33856,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/storygui/story0/storyvar"
+      "path": "~/StoryModeEntities/storygui/story0/storyvar"
     },
     {
       "name": "QuestSlot1",
@@ -34371,7 +34312,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar/IstarSetUp"
+      "path": "~/dimensions/Istar/IstarSetUp/Istar"
     },
     {
       "name": "IstarCancelBlockBreak",
@@ -34390,7 +34331,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar/IstarSetUp"
+      "path": "~/dimensions/Istar/IstarSetUp/Istar"
     },
     {
       "name": "IstarPlayerLeavesDimension",
@@ -34409,7 +34350,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar/IstarSetUp"
+      "path": "~/dimensions/Istar/IstarSetUp/Istar"
     },
     {
       "name": "EntraceToIstar",
@@ -34598,7 +34539,7 @@
           }
         ]
       },
-      "path": "~/entities/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/StoryBan2"
     },
     {
       "name": "CaveTraining",
@@ -35193,7 +35134,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
+      "path": "~/dimensions/Istar"
     },
     {
       "name": "DestroyFourElementsProjectileHitsLivingEntity",
@@ -35416,6 +35357,380 @@
         "dependencies": []
       },
       "path": "~/Commandments"
+    },
+    {
+      "name": "MeliodasBoarHat",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meliodas_boar_hat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/meliodas_boar_hat_leggings.json",
+          "src/main/resources/assets/craft_no_taizai/models/item/meliodas_boar_hat_chestplate.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/MeliodasBoarHatItem.java"
+        ]
+      },
+      "path": "~/armor"
+    },
+    {
+      "name": "MeliodasBoarHatChestPlate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meliodas_boar_hat_chest_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/meliodas_boar_hat_chest_plate.json"
+        ]
+      },
+      "path": "~/Recipe/Armor/MeliodasBoarHat"
+    },
+    {
+      "name": "MeliodasBoarHatLeggings",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meliodas_boar_hat_leggings",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/meliodas_boar_hat_leggings.json"
+        ]
+      },
+      "path": "~/Recipe/Armor/MeliodasBoarHat"
+    },
+    {
+      "name": "TowerOfTrailsSetUp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower_of_trails_set_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TowerOfTrailsSetUpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar/TowerOfTrails"
+    },
+    {
+      "name": "TowerOfTrailsPlayerEntersDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower_of_trails_player_enters_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TowerOfTrailsPlayerEntersDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar/TowerOfTrails"
+    },
+    {
+      "name": "ZaneriAccept",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zaneri_accept",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ZaneriAcceptProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Zaneri"
+    },
+    {
+      "name": "TowerOfTrailsPlayerLeavesDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower_of_trails_player_leaves_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TowerOfTrailsPlayerLeavesDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar/TowerOfTrails"
+    },
+    {
+      "name": "CaveAndTowerKick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cave_and_tower_kick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveAndTowerKickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "ResetTowerCooldown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_tower_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ResetTowerCooldownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/commands/training"
+    },
+    {
+      "name": "TheoGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theo_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/gui/TheoGuiScreen.java",
+          "src/main/java/net/mcreator/craftnotaizai/network/TheoGuiButtonMessage.java",
+          "src/main/java/net/mcreator/craftnotaizai/world/inventory/TheoGuiMenu.java"
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Gui"
+    },
+    {
+      "name": "TheoRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theo_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TheoRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Theo"
+    },
+    {
+      "name": "CaveOfTrainingButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cave_of_training_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveOfTrainingButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Button"
+    },
+    {
+      "name": "TowerOfTrailsButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower_of_trails_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TowerOfTrailsButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Button"
+    },
+    {
+      "name": "TheoCave",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theo_cave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/world/inventory/TheoCaveMenu.java",
+          "src/main/java/net/mcreator/craftnotaizai/network/TheoCaveButtonMessage.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/gui/TheoCaveScreen.java"
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Gui"
+    },
+    {
+      "name": "TheoBackButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theo_back_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TheoBackButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Button"
+    },
+    {
+      "name": "TheoTower",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theo_tower",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/gui/TheoTowerScreen.java",
+          "src/main/java/net/mcreator/craftnotaizai/world/inventory/TheoTowerMenu.java",
+          "src/main/java/net/mcreator/craftnotaizai/network/TheoTowerButtonMessage.java"
+        ]
+      },
+      "path": "~/entities/Istar/Theo/Gui"
+    },
+    {
+      "name": "DefeatEscanor",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defeat_escanor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/advancements/defeat_escanor.json"
+        ]
+      },
+      "path": "~/advancement/Seven Deadly Sins"
+    },
+    {
+      "name": "DefeatGloxina",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defeat_gloxina",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/advancements/defeat_gloxina.json"
+        ]
+      },
+      "path": "~/advancement/Seven Deadly Sins"
     }
   ],
   "variable_elements": [
@@ -36746,7 +37061,7 @@
       "value": "0"
     },
     {
-      "name": "cave_of_training_kick",
+      "name": "training_kick",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -36768,6 +37083,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "tower_of_trails",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "tower_of_trails_cooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -36783,14 +37110,6 @@
       "name": "intosheath",
       "files": [
         "mysterious_sword_into_sheath_sound_effect"
-      ],
-      "category": "neutral",
-      "subtitle": ""
-    },
-    {
-      "name": "fast",
-      "files": [
-        "movefast"
       ],
       "category": "neutral",
       "subtitle": ""
@@ -37258,8 +37577,8 @@
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.COBBLED_DEEPSLATE",
-      "~Blocks.AIR",
       "~Blocks.STONE#0",
+      "~Blocks.DIRT#0",
       "~Blocks.GRASS",
       "~CUSTOM:PurgatoryBlock",
       "~CUSTOM:PurgatoryBrick",
@@ -37377,19 +37696,20 @@
       "effect.craft_no_taizai.fossilization_effect": "Fossilization Effect",
       "gui.craft_no_taizai.story_board.label_the_other_memebers_of_the_seven": "The other memebers of the seven deadly sins",
       "gui.craft_no_taizai.story_board.label_seven_deadly_sins": "seven deadly sins an holy knight attacks named twigo",
-      "block.craft_no_taizai.chaos_wall": "Chaos Wall",
       "gui.craft_no_taizai.story_board.label_the_king_honors_the_seven_deadly": "the king honors the Seven Deadly Sins for their bravery",
-      "item.craft_no_taizai.dragon_icon": "Dragon Icon",
+      "block.craft_no_taizai.chaos_wall": "Chaos Wall",
       "gui.craft_no_taizai.random_race.button_select": "Select",
+      "item.craft_no_taizai.dragon_icon": "Dragon Icon",
       "gui.craft_no_taizai.story_board.label_this_is_a_tale_of_ancient_times1": "betrayed the kingdom and became mortal enemies to all",
       "gui.craft_no_taizai.story_board.label_this_is_a_tale_of_ancient_times2": "They were known throughout",
       "entity.craft_no_taizai.royal_gurard_animated": "Royal Guard",
       "entity.craft_no_taizai.anaon": "Anaon",
       "entity.craft_no_taizai.fighting_area": "Fighting Area",
-      "item.craft_no_taizai.gil_thunder_armor_chestplate": "GilThunder Armor",
       "item.craft_no_taizai.dianeoutfit_chestplate": "Diane Shirt",
+      "item.craft_no_taizai.gil_thunder_armor_chestplate": "GilThunder Armor",
       "entity.craft_no_taizai.galand": "Galand",
       "item.craft_no_taizai.kings_armor_leggings": "Kings Leggings",
+      "gui.craft_no_taizai.theo_gui.label_back": ". Back",
       "gui.craft_no_taizai.story_board.label_season_2_will_be_added_in_soon": "with a medal ceremony.",
       "item.craft_no_taizai.diane_animated_spawn_egg": "Diane Spawn Egg",
       "entity.craft_no_taizai.guila_demonanimated": "Guila",
@@ -37400,26 +37720,26 @@
       "gui.craft_no_taizai.story_board.label_ep_12_bloodcurdling_canon_part": "EP 12: Bloodcurdling Canon Part 2",
       "gui.craft_no_taizai.story_board.label_the_seven_deadly_sins": "EP1: The Seven Deadly Sins",
       "advancements.sapphire.descr": "Get BP 11300",
-      "advancements.defeat_ban.descr": "Defeat The Sin Of Greed",
       "item.craft_no_taizai.manta_spawn_egg": "Mantaray Spawn Egg",
+      "advancements.defeat_ban.descr": "Defeat The Sin Of Greed",
       "item.craft_no_taizai.marmas_spawn_egg": "Marmas Spawn Egg",
       "item.craft_no_taizai.dusk_bison_1_spawn_egg": "Dusk Bison Spawn Egg",
       "item.craft_no_taizai.howzer_armor_chestplate": "Howzer Armor",
       "advancements.red_demon_blood.title": "Demon Blood",
       "item.craft_no_taizai.anaon_spawn_egg": "Anaon Spawn Egg",
-      "gui.craft_no_taizai.story_board.label_baste_dungeon_but_the_group_is": "Baste Dungeon, but the group is assailed by an enemy",
       "gui.craft_no_taizai.gaint_clan.button_empty1": "\u003c",
+      "gui.craft_no_taizai.story_board.label_baste_dungeon_but_the_group_is": "Baste Dungeon, but the group is assailed by an enemy",
       "block.craft_no_taizai.sleeping_forest_dirt": "Sleeping Forest Dirt",
       "gui.craft_no_taizai.demon_clan.label_random_200_to_500": "Random: 200 to 500",
       "entity.craft_no_taizai.pollen_garden": "Pollen Garden",
       "block.craft_no_taizai.fairy_king_leave": "Fairy King Leave",
       "item.craft_no_taizai.andre_armor_leggings": "Andre Leggings",
       "block.craft_no_taizai.fairy_tree_slab": "Fairy Tree Slab",
-      "gui.craft_no_taizai.story_board.label_defeat_ban_and_helbram": "Defeat Ban And Helbram",
       "item.craft_no_taizai.luigi_spawn_egg": "Luigi Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_defeat_ban_and_helbram": "Defeat Ban And Helbram",
       "gui.craft_no_taizai.story_board.label_with_fraudrins_manipulation_of": "With Fraudrin\u0027s manipulation of Hendrickson, the",
-      "entity.craft_no_taizai.weinheidt_animated": "Weinheidt",
       "gui.craft_no_taizai.disaster_menu.label_page_2": "Page 2.",
+      "entity.craft_no_taizai.weinheidt_animated": "Weinheidt",
       "gui.craft_no_taizai.disaster_menu.label_page_3": "Page 3.",
       "gui.craft_no_taizai.disaster_menu.tooltip_learned_skills_from_magic_scroll": "Learned Skills from Magic Scroll",
       "gui.craft_no_taizai.disaster_menu.label_page_1": "Page 1.",
@@ -37452,6 +37772,7 @@
       "gui.craft_no_taizai.disaster_menu.tooltip_stats": "Stats",
       "entity.craft_no_taizai.red_demon_geckolib": "Red Demon",
       "advancements.defeat_meliodas.descr": "Defeat The Sin Of Wrath",
+      "gui.craft_no_taizai.theo_tower.label_tower_of_trail": "Tower Of Trail",
       "gui.craft_no_taizai.gaint_clan.label_15_magic_damage": "- Magic Damage: 0 to 5",
       "gui.craft_no_taizai.story_board.label_empty": "Defeat Friesia",
       "item.craft_no_taizai.king_boss_animated_spawn_egg": "King Spawn Egg",
@@ -37465,25 +37786,27 @@
       "gui.craft_no_taizai.story_board.label_empty5": "Howzer and Guila are forced into a struggle against",
       "block.craft_no_taizai.tala_village_flower": "Tala Village Flower",
       "gui.craft_no_taizai.story_board.label_ep_11_pentup_feelings": "EP 11-12: Pent-up Feelings",
+      "advancements.defeat_escanor.descr": "Defeat The Sin Of Pride",
       "entity.craft_no_taizai.fairy_helbrem_animated": "Fairy Helbrem Animated",
       "item.craft_no_taizai.fox_icon": "Fox Icon",
+      "gui.craft_no_taizai.theo_cave.label_strength_and_spirit": "strength and spirit",
       "block.craft_no_taizai.fairy_trees_log": "Fairy Trees Log",
-      "item.craft_no_taizai.bullet_squall_spawn_egg": "Bullet Squall Spawn Egg",
       "biome.craft_no_taizai.cave_training_biome": "Cave Training Biome",
+      "item.craft_no_taizai.bullet_squall_spawn_egg": "Bullet Squall Spawn Egg",
       "item_group.craft_no_taizai.items": "Craft No Taizai Items",
-      "gui.craft_no_taizai.story_board.label_meliodas_is_reunited_with_elizab": "Meliodas is reunited with Elizabeth; Ban learns he",
       "gui.craft_no_taizai.story_board.label_megadoza_home_of_the_giant_clan": "Megadoza, home of the Giant Clan.",
+      "gui.craft_no_taizai.story_board.label_meliodas_is_reunited_with_elizab": "Meliodas is reunited with Elizabeth; Ban learns he",
       "item.craft_no_taizai.ruin_armor_chestplate": "Ruin Chestplate",
       "entity.craft_no_taizai.taizoo_animated": "Taizoo",
       "item.craft_no_taizai.meliodasoutfit_chestplate": "Meliodas Shirt",
       "item.craft_no_taizai.diane_boss_animated_spawn_egg": "Diane Boss Spawn Egg",
       "item.craft_no_taizai.sword_wolf_fur": "Sword Wolf Fur",
       "block.craft_no_taizai.istar_portal_block": "Istar Portal Block",
-      "item.craft_no_taizai.geckolib_kraken_spawn_egg": "Kraken Spawn Egg",
       "effect.craft_no_taizai.minimum_tablets_effect": "Minimum Tablets",
+      "item.craft_no_taizai.geckolib_kraken_spawn_egg": "Kraken Spawn Egg",
       "gui.craft_no_taizai.story_board.button_start2": "Start",
-      "gui.craft_no_taizai.story_board.button_start1": "Start",
       "item_group.craft_no_taizai.foods": "Craft No Taizai Foods",
+      "gui.craft_no_taizai.story_board.button_start1": "Start",
       "item.craft_no_taizai.merlin_outfit_chestplate": "Merlin Shirt",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_well_shall_give_you_mission": "Well shall give you mission.",
       "biome.craft_no_taizai.chaos_biome": "Chaos Biome",
@@ -37500,9 +37823,10 @@
       "gui.craft_no_taizai.disaster_menu.tooltip_demon_king_magic": "Demon King Magic",
       "gui.craft_no_taizai.fairy_clan.label_stats": "Stats",
       "gui.craft_no_taizai.human_clan.label_50_strength": "- Strength: 15 to 35",
-      "item.craft_no_taizai.friesiaarmor_leggings": "Friesia Leggings",
-      "item.craft_no_taizai.jillian_armor_chestplate": "Jillian Chestplate",
       "item.craft_no_taizai.meliodas_armor_chestplate": "Meliodas Chestplate",
+      "item.craft_no_taizai.jillian_armor_chestplate": "Jillian Chestplate",
+      "item.craft_no_taizai.friesiaarmor_leggings": "Friesia Leggings",
+      "gui.craft_no_taizai.theo_gui.label_tower_of_trail_will_increase_you": "Will increase you\u0027re magical stats",
       "entity.craft_no_taizai.earth_crawler": "Earth Crawler",
       "item.craft_no_taizai.dragon_handle": "Dragon Handle",
       "item.craft_no_taizai.goat_icon": "Goat Icon",
@@ -37513,8 +37837,8 @@
       "gui.craft_no_taizai.story_board.label_empty2": "EP 10:The Vaizel Fighting Festival Round 1",
       "gui.craft_no_taizai.story_board.label_empty3": "EP 10:The Vaizel Fighting Festival Round 2",
       "item.craft_no_taizai.soldier_animated_spawn_egg": "Soldier Spawn Egg",
-      "gui.craft_no_taizai.story_board.label_the_fairies_reconcile_their_diff": "The fairies reconcile their differences with King as Ban",
       "item.craft_no_taizai.helbrumsword": "Holy Tree Sword",
+      "gui.craft_no_taizai.story_board.label_the_fairies_reconcile_their_diff": "The fairies reconcile their differences with King as Ban",
       "entity.craft_no_taizai.acid_twower_mob": "Acid Twower Mob",
       "gui.craft_no_taizai.gaint_clan.label_empty1": "\u003e",
       "item.craft_no_taizai.fairy_helbrem_animated_spawn_egg": "Fairy Helbrem Animated Spawn Egg",
@@ -37523,9 +37847,9 @@
       "gamerule.immortal": "immortality",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_who_are_you": "Who Are You?",
       "entity.craft_no_taizai.vine": "Vine",
-      "entity.craft_no_taizai.merlin_boss_animated": "Merlin Boss Animated",
-      "key.craft_no_taizai.mantaray_space": "Move",
       "item.craft_no_taizai.royalknight_leggings": "Royalknight Leggings",
+      "key.craft_no_taizai.mantaray_space": "Move",
+      "entity.craft_no_taizai.merlin_boss_animated": "Merlin Boss Animated",
       "advancements.emerald_advancement.title": "Emerald",
       "subtitles.graydemon_idle": "",
       "gui.craft_no_taizai.story_board.label_ep_23_descent_into_despair": "EP 23: Descent Into Despair",
@@ -37536,11 +37860,12 @@
       "item.craft_no_taizai.beer_mug": "Beer Mug",
       "item.craft_no_taizai.gray_demon_blood_needle": "BloodFuilled Syringe",
       "subtitles.dale_2nd_idle": "",
+      "gui.craft_no_taizai.theo_gui.label_tower_of_trail": "Tower Of Trail",
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie": "Must fight the holy knights Friesia and Ruin ",
       "gui.craft_no_taizai.demon_stat.tooltip_skills": "Magic",
       "item.craft_no_taizai.kulumil_spawn_egg": "Kulumil Spawn Egg",
-      "item.craft_no_taizai.fairy_helbram_armor_leggings": "Helbram Leggings",
       "key.craft_no_taizai.double_jump": "Double Jump",
+      "item.craft_no_taizai.fairy_helbram_armor_leggings": "Helbram Leggings",
       "gui.craft_no_taizai.story_board.label_ep2_the_sin_in_the_sleeping_fore": "EP2-3 The Sin in the Sleeping Forest",
       "gui.craft_no_taizai.zaneri_gui.label_deny": ".Deny",
       "item.craft_no_taizai.guila_armor_2_leggings": "Guila Leggings",
@@ -37553,8 +37878,8 @@
       "item.craft_no_taizai.perfect_cube_orb": "Perfect Cube Orb (Working On)",
       "item.craft_no_taizai.parada_armor_chestplate": "Parada Chestplate",
       "entity.craft_no_taizai.hell_gate_red_demons": "Hell Gate Red Demons",
-      "entity.craft_no_taizai.jericho_demon_form": "Jericho Demon Form",
       "item.craft_no_taizai.boar_hat_outfit_chestplate": "BoarHat Chestplate",
+      "entity.craft_no_taizai.jericho_demon_form": "Jericho Demon Form",
       "item.craft_no_taizai.gil_thunder_animated_2_spawn_egg": "GilThunder Spawn Egg",
       "subtitles.cruelsunflyingtick": "",
       "item.craft_no_taizai.friesia_animated_spawn_egg": "Friesia Spawn Egg",
@@ -37568,8 +37893,8 @@
       "entity.craft_no_taizai.gil_thunder_animated_2": "GilThunder",
       "item.craft_no_taizai.hendrikson_sword": "Hendrikson Sword",
       "item.craft_no_taizai.jumanju_entity_spawn_egg": "Jumanju Entity Spawn Egg",
-      "gui.craft_no_taizai.fairy_clan.label_40_spirit": "- Spirit: 25 to 40",
       "item.craft_no_taizai.simon_animated_spawn_egg": "Simon Spawn Egg",
+      "gui.craft_no_taizai.fairy_clan.label_40_spirit": "- Spirit: 25 to 40",
       "advancements.defeat_merlin.title": "Defeat Merlin",
       "gui.craft_no_taizai.skillslots.label_x1": "x",
       "subtitles.fullconter": "",
@@ -37580,19 +37905,19 @@
       "gui.craft_no_taizai.magic_menu.tooltip_reset": "Reset Moves",
       "gui.craft_no_taizai.story_board.label_crush_the_armor_giant": "crush the Armor Giant.",
       "item.craft_no_taizai.moss_dragon_spawn_egg": "Moss Dragon Spawn Egg",
-      "entity.craft_no_taizai.sunflower": "Sunflower",
       "item.craft_no_taizai.ban_armor_leggings": "Ban Leggings",
+      "entity.craft_no_taizai.sunflower": "Sunflower",
       "entity.craft_no_taizai.guila_animated": "Guila",
       "item.craft_no_taizai.fragment_of_eternal_darkness_3": "Fragment Of Eternal Darkness",
       "key.craft_no_taizai.lock_on": "Lock On",
-      "gui.craft_no_taizai.magic_menu.tooltip_stats": "Stats",
       "item.craft_no_taizai.demon_king_spawn_egg": "Demon King Spawn Egg",
+      "gui.craft_no_taizai.magic_menu.tooltip_stats": "Stats",
       "block.craft_no_taizai.areawood": "Areawood",
-      "entity.craft_no_taizai.mutilator_rabbits": "Mutilator Rabbits",
       "gui.craft_no_taizai.clones_gui.label_despawn": "Despawn",
+      "entity.craft_no_taizai.mutilator_rabbits": "Mutilator Rabbits",
       "item.craft_no_taizai.mid_tier_souls": "Mid Tier Souls",
       "gui.craft_no_taizai.disaster_menu.tooltip_reset": "Reset Moves",
-      "gui.craft_no_taizai.zaneri_gui.label_be_warn_this_trail_is_tuf": "be warn this trail is tuf",
+      "gui.craft_no_taizai.zaneri_gui.label_be_warn_this_trail_is_tuf": "be warn this trail is tuff",
       "entity.craft_no_taizai.guardian_1": "Guardian",
       "gui.craft_no_taizai.clover_trading.label_trade": "Trade",
       "item.craft_no_taizai.ban_armor_chestplate": "Ban Chestplate",
@@ -37610,8 +37935,8 @@
       "entity.craft_no_taizai.aeal_heal": "Aeal Heal",
       "gui.craft_no_taizai.story_board.label_diane_and_company_battle_the_new1": "Diane and company battle the New Generation.",
       "item.craft_no_taizai.empty_needle": "Empty Syringe",
-      "item.craft_no_taizai.sunflower_spawn_egg": "Sunflower Spawn Egg",
       "item.craft_no_taizai.twigo_animated_spawn_egg": "Twigo Animated Spawn Egg",
+      "item.craft_no_taizai.sunflower_spawn_egg": "Sunflower Spawn Egg",
       "item.craft_no_taizai.red_demon_geckolib_spawn_egg": "Red Demon Spawn Egg",
       "entity.craft_no_taizai.physical_clone": "Physical Clone",
       "subtitles.chicken_matango_hurt": "",
@@ -37652,6 +37977,7 @@
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie1": "Must fight the holy knights Friesia and Ruin ",
       "entity.craft_no_taizai.elaine": "Elaine",
       "item.craft_no_taizai.twigosword": "Twigosword",
+      "gui.craft_no_taizai.theo_tower.label_will_increase_youre_magical_sta": "Will increase you\u0027re magical stats",
       "subtitles.sds_opening": "",
       "gui.craft_no_taizai.story_board.label_defect": "Defect Golgius",
       "item.craft_no_taizai.story_ban_animated_spawn_egg": "Story Ban Spawn Egg",
@@ -37668,6 +37994,7 @@
       "key.craft_no_taizai.use_magic": "Use Magic",
       "subtitles.earth_crawler_idle": "",
       "gui.craft_no_taizai.gaint_clan.label_30_health": "- Health: 25 to 35",
+      "item.craft_no_taizai.meliodas_boar_hat_leggings": "Simon Leggings",
       "item.craft_no_taizai.elaine_spawn_egg": "Elaine Spawn Egg",
       "gui.craft_no_taizai.story_board.label_defect_dreyfus": "Defeat Dreyfus",
       "item.craft_no_taizai.cookedtentacles": "Cooked Tentacles",
@@ -37712,7 +38039,7 @@
       "gui.craft_no_taizai.side_quest_gui.label_start": "START",
       "block.craft_no_taizai.sleeping_forest_wood": "Sleeping Forest Wood",
       "gui.craft_no_taizai.demon_stat.tooltip_story": "Story",
-      "advancements.fairy_king_forest_advancement.descr": "found fairy king tree",
+      "advancements.fairy_king_forest_advancement.descr": "Found fairy king tree",
       "item.craft_no_taizai.tall_albion_spawn_egg": "Tall Albion Spawn Egg",
       "entity.craft_no_taizai.dalefinal": "Dale",
       "item.craft_no_taizai.fighting_area_spawn_egg": "Fighting Area Spawn Egg",
@@ -37747,6 +38074,7 @@
       "item.craft_no_taizai.rank": "Rank Icon",
       "item.craft_no_taizai.guard_spear": "Guard Spear",
       "item.craft_no_taizai.small_hawks_spawn_egg": "Hawks Spawn Egg",
+      "gui.craft_no_taizai.theo_tower.label_max_mana_mana_damage": "max mana \u0026 mana damage",
       "entity.craft_no_taizai.gowther_story_1": "Gowther",
       "gui.craft_no_taizai.demon_stat.label_health": "Health",
       "gui.craft_no_taizai.human_clan.label_15_magic_damage": "- Magic Damage: 0 to 10",
@@ -37808,6 +38136,7 @@
       "item.craft_no_taizai.hell_blaze": "Hell Blaze",
       "item.craft_no_taizai.basquias_guardian_spawn_egg": "Basquias Guardian Spawn Egg",
       "block.craft_no_taizai.glow_block": "Glow Block",
+      "gui.craft_no_taizai.theo_gui.label_welcome_to_istar": "Welcome To Istar",
       "gui.craft_no_taizai.human_clan.button_select": "Select",
       "subtitles.wind_effect": "",
       "gui.craft_no_taizai.story_board.label_defeat_ban_and_helbram1": "Defeat Ban And Helbram",
@@ -37872,7 +38201,7 @@
       "gui.craft_no_taizai.story_board.label_diane_confronts_gowther_after_he": "Diane confronts Gowther after he manipulates Guila and",
       "block.craft_no_taizai.capital_of_the_dead_ground": "Capital of the Dead Block",
       "item.craft_no_taizai.merlin_boss_animated_spawn_egg": "Merlin Boss Animated Spawn Egg",
-      "advancements.capitalofthedeadadvancement.descr": "enter strange place",
+      "advancements.capitalofthedeadadvancement.descr": "Enter An Strange Place",
       "gui.craft_no_taizai.story_board.label_ep_1415_unholy_knight": "EP 13-14: Unholy Knight",
       "gui.craft_no_taizai.story_board.label_holy_knight_guila_follows_you_to": "Holy Knight Guila follows you to the",
       "entity.craft_no_taizai.dumblebbas_animated": "Dumblebbas",
@@ -37889,6 +38218,7 @@
       "item.craft_no_taizai.hendrickson_armor_chestplate": "HendrickSon Chestplate",
       "item.craft_no_taizai.hide_and_seek_spawn_egg": "Hide And Seek Spawn Egg",
       "gui.craft_no_taizai.story_board.label_new_search_for_the_remaining": "New search for the remaining seven deadly sins.",
+      "item.craft_no_taizai.meliodas_boar_hat_chestplate": "Simon Chestplate",
       "gui.craft_no_taizai.story_board.label_defect_jericho": "Defeat Jericho",
       "gui.craft_no_taizai.story_board.label_ep_22_what_i_can_do_for_you": "EP 22: What I Can Do For You",
       "item.craft_no_taizai.lostvayne": "lostvayne",
@@ -37899,6 +38229,7 @@
       "item.craft_no_taizai.vivian_animated_spawn_egg": "Vivian Animated Spawn Egg",
       "item.craft_no_taizai.demon_blood": "Red Demon Blood",
       "item.craft_no_taizai.cain_armor_chestplate": "Cain Chestplate",
+      "gui.craft_no_taizai.theo_gui.label_back1": ". Back",
       "item.craft_no_taizai.diamond_tower_spawn_egg": "Diamond Tower Spawn Egg",
       "gui.craft_no_taizai.story_board.label_ep_10the_vaizel_fighting_festiv": "EP 10:The Vaizel Fighting Festival Round 3",
       "item.craft_no_taizai.jerichoarmor_leggings": "Jericho Armor",
@@ -37984,6 +38315,7 @@
       "item.craft_no_taizai.needle": "Needle",
       "item.craft_no_taizai.bear_icon": "Bear Icon",
       "item.craft_no_taizai.axe_2": "Axe",
+      "advancements.defeat_gloxina.title": "Defeat Gloxina",
       "gui.craft_no_taizai.story_board.label_arthur_to_fight_a_fierce_battle": "Arthur to fight a fierce battle against Hendrickson",
       "item.craft_no_taizai.meliodas_armor_leggings": "Meliodas Leggings",
       "gui.craft_no_taizai.demon_stat.label_magic": "Magic",
@@ -38073,6 +38405,7 @@
       "gui.craft_no_taizai.story_board.label_the_appearance_of_merlin_crushes": "The appearance of Merlin crushes Vivian\u0027s ambitions",
       "gui.craft_no_taizai.demon_stat.label_mp": "MP:",
       "gui.craft_no_taizai.story_board.label_diane_has_a_brush_with_dealth_wh": "Diane has a brush with dealth while protecting Zeal.",
+      "gui.craft_no_taizai.theo_gui.label_cave_of_training1": "Cave Of Training",
       "item.craft_no_taizai.dreyfus_armor_leggings": "Dreyfus Leggings",
       "entity.craft_no_taizai.angle_cure": "Angle Cure",
       "advancements.defeat_gowther.title": "Defeat Gowther",
@@ -38088,6 +38421,7 @@
       "gui.craft_no_taizai.demon_stat.label_tp": "TP:",
       "subtitles.swish": "",
       "item.craft_no_taizai.britannia_coins": "Britannia Coins",
+      "gui.craft_no_taizai.theo_gui.label_here_you_can_train_youre_physic": "Here you can train you\u0027re",
       "item.craft_no_taizai.purgatory_venom": "Purgatory Venom",
       "item.craft_no_taizai.golgiusarmor_chestplate": "Golgius Chestplate",
       "item.craft_no_taizai.hyper_recovery": "Hyper Recovery",
@@ -38133,6 +38467,7 @@
       "item.craft_no_taizai.snowflowerbeam": "flowerbeam",
       "advancements.blood_awaken.title": "Blood Awaken",
       "gui.craft_no_taizai.story_board.label_locate_capital_of_the_dead": "Locate Capital of the Dead",
+      "gui.craft_no_taizai.theo_gui.label_magical_stats": "magical stats",
       "entity.craft_no_taizai.luigi": "Luigi",
       "gui.craft_no_taizai.jenna_gui.label_remember_who_yourre_facing": "Remember who your\u0027re facing!",
       "item.craft_no_taizai.weinheidt_armor_leggings": "Weinheidt Leggings",
@@ -38152,6 +38487,7 @@
       "item.craft_no_taizai.servant_spawn_egg": "Servant Spawn Egg",
       "advancements.defeat_diane.title": "Defeat Diane",
       "gui.craft_no_taizai.story_board.label_defeat_bloodred_form_hendrickso": "Defeat Blood-Red Form Hendrickson",
+      "gui.craft_no_taizai.theo_gui.label_physical_and_magical_power": "physical and magical power",
       "item.craft_no_taizai.meliodas_boss_animated_spawn_egg": "Meliodas Boss Animated Spawn Egg",
       "entity.craft_no_taizai.manta": "Mantaray",
       "\"key.categories.[craftnotaizai]\"": "",
@@ -38163,8 +38499,9 @@
       "item.craft_no_taizai.acid_twower_mob_spawn_egg": "Acid Twower Mob Spawn Egg",
       "item.craft_no_taizai.fake_ball": "Fake Ball",
       "gui.craft_no_taizai.story_board.label_when_it_seems_the_seven_deadly_s": "When it seems the Seven Deadly Sins",
-      "gui.craft_no_taizai.zaneri_gui.label_you_will_have_to_go_through_trai": "you will have to go through trail",
+      "gui.craft_no_taizai.zaneri_gui.label_you_will_have_to_go_through_trai": "you will now go through tower of trails",
       "item.craft_no_taizai.troll_spawn_egg": "Troll Spawn Egg",
+      "gui.craft_no_taizai.theo_gui.label_increase_youre_physical_stats": "increase you’re physical stats",
       "item.craft_no_taizai.dianeoutfit_leggings": "Diane Pants",
       "item.craft_no_taizai.gil_thunder_armor_leggings": "GilThunder Armor",
       "gui.craft_no_taizai.story_board.label_dinae_joins_the_mission_to_free": "Dinae joins the mission to free Ban From the ",
@@ -38194,6 +38531,7 @@
       "biome.craft_no_taizai.capitalofthedeadbiome_2": "Capitalofthedeadbiome",
       "entity.craft_no_taizai.horn_of_cernunos": "Horn Of Cernunos",
       "gui.craft_no_taizai.story_board.label_an_injured_diane_awakens_having": "An injured Diane awakens, having trouble remembering her",
+      "gui.craft_no_taizai.theo_gui.label_tower_of_trails": ". Tower Of Trails",
       "gui.craft_no_taizai.story_board.label_hendricksons_overwhelming_power": "Hendrickson\u0027s overwhelming power, Elizabeth\u0027s.",
       "entity.craft_no_taizai.giga_fall": "Giga Fall",
       "gui.craft_no_taizai.demon_clan.button_select": "Select",
@@ -38208,11 +38546,13 @@
       "entity.craft_no_taizai.albion_fat": "Fat Albion",
       "item.craft_no_taizai.jillian_armor_leggings": "Jillian Leggings",
       "item.craft_no_taizai.high_tier_souls": "High Tier Souls",
+      "gui.craft_no_taizai.theo_gui.label_cave_of_training_will_increase_y": "Will increase you’re physical stats",
       "item.craft_no_taizai.helbrem_animated_spawn_egg": "Helbrem Animated Spawn Egg",
       "item.craft_no_taizai.parada_armor_helmet": "Parada Helmet",
       "item.craft_no_taizai.gerheade_spawn_egg": "Gerheade Spawn Egg",
       "item.craft_no_taizai.king_outfit_leggings": "King Pants",
       "item.craft_no_taizai.agave": "Agave",
+      "gui.craft_no_taizai.theo_gui.label_cave_of_training": ". Cave Of Training",
       "item.craft_no_taizai.hugo_armor_leggings": "Hugo Leggings",
       "block.craft_no_taizai.glow_mug_block": "Sunny ale Block",
       "item.craft_no_taizai.golgiusarmor_helmet": "Golgius Helmet",
@@ -38267,6 +38607,7 @@
       "block.craft_no_taizai.stage_one_agave": "Agave",
       "gui.craft_no_taizai.story_board.label_zeals_memories_with_the_return": "Zeal\u0027s memories. With the return of the Demon Clan, New",
       "item.craft_no_taizai.griamore_animated_spawn_egg": "Griamore Spawn Egg",
+      "gui.craft_no_taizai.theo_tower.label_back": ". Back",
       "item.craft_no_taizai.demon_hendrickson_animated_spawn_egg": "Demon Hendrickson Spawn Egg",
       "effect.craft_no_taizai.king_trumpet": "King Trumpet",
       "gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save1": "he has to kill in order to save Elaine",
@@ -38297,6 +38638,7 @@
       "item.craft_no_taizai.halbert": "Halbert",
       "gui.craft_no_taizai.random_race.button_empty1": "\u003c",
       "item.craft_no_taizai.matrona_spawn_egg": "Matrona Spawn Egg",
+      "gui.craft_no_taizai.theo_cave.label_will_increase_youre_physical_st": "Will increase you’re physical stats",
       "death.attack.mana_dmg.player": "%1$s died whilst trying to escape %2$s",
       "gui.craft_no_taizai.demon_stat.button_empty3": "+",
       "item.craft_no_taizai.twin_bow_herritt": "Twin-Bow Herritt",
@@ -38336,6 +38678,7 @@
       "item.craft_no_taizai.weinheidt_animated_spawn_egg": "Weinheidt Spawn Egg",
       "item.craft_no_taizai.cooked_angle_meat": "Angle Cure Cooked Meat",
       "item.craft_no_taizai.ruin_spawn_egg": "Ruin Spawn Egg",
+      "gui.craft_no_taizai.theo_cave.label_back": ". Back",
       "entity.craft_no_taizai.jenna": "Jenna",
       "gui.craft_no_taizai.story_board.label_ep_3the_scared_treasure_lostvay1": "EP 4:The Ten Commandments on the Move",
       "entity.craft_no_taizai.green_knight_animated": "Green Knight",
@@ -38360,6 +38703,7 @@
       "item.craft_no_taizai.king_outfit_chestplate": "King Shirt",
       "gui.craft_no_taizai.story_board.label_ep_21": "EP 21: The Looming Threat",
       "gui.craft_no_taizai.human_clan.label_40_spirit": "- Spirit: 15 to 25",
+      "advancements.defeat_gloxina.descr": "Defeat Gloxina",
       "gui.craft_no_taizai.magic_menu.label_slot": "Slot",
       "item.craft_no_taizai.slader_animated_spawn_egg": "Slader Spawn Egg",
       "entity.craft_no_taizai.andre_animated": "Andre",
@@ -38373,6 +38717,8 @@
       "gui.craft_no_taizai.story_board.label_ep_10": "EP 9:The Vaizel Fighting Festival",
       "gui.craft_no_taizai.story_board.tooltip_stats": "Stats",
       "gui.craft_no_taizai.story_board.label_ep_7_where_memories_lead": "EP 7: Where Memories Lead",
+      "advancements.defeat_escanor.title": "Defeat Escanor",
+      "gui.craft_no_taizai.theo_cave.label_empty": "Cave Of Training",
       "item.craft_no_taizai.liz_sneath_sword": "Liz Sneath Sword",
       "item.craft_no_taizai.soldier_armor_chestplate": "Soldier Chestplate",
       "advancements.capitalofthedeadadvancement.title": "Capital Of The Dead",
@@ -39937,189 +40283,6 @@
             ]
           },
           {
-            "name": "StoryModeEntities",
-            "children": [
-              {
-                "name": "storygui",
-                "children": [
-                  {
-                    "name": "story0",
-                    "children": [
-                      {
-                        "name": "storyvar",
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Twigo",
-                "children": []
-              },
-              {
-                "name": "gilthunder",
-                "children": []
-              },
-              {
-                "name": "Golgius",
-                "children": []
-              },
-              {
-                "name": "diane",
-                "children": []
-              },
-              {
-                "name": "friesia",
-                "children": []
-              },
-              {
-                "name": "ruin",
-                "children": []
-              },
-              {
-                "name": "guila",
-                "children": []
-              },
-              {
-                "name": "taizoo",
-                "children": []
-              },
-              {
-                "name": "griamore",
-                "children": []
-              },
-              {
-                "name": "howzer",
-                "children": []
-              },
-              {
-                "name": "cainbarzad",
-                "children": []
-              },
-              {
-                "name": "jericho",
-                "children": []
-              },
-              {
-                "name": "guilamob",
-                "children": []
-              },
-              {
-                "name": "helbrem",
-                "children": []
-              },
-              {
-                "name": "dale",
-                "children": [
-                  {
-                    "name": "form",
-                    "children": []
-                  },
-                  {
-                    "name": "dalesecmoves",
-                    "children": [
-                      {
-                        "name": "Frozen Breath",
-                        "children": []
-                      },
-                      {
-                        "name": "Noroi no Koe",
-                        "children": []
-                      },
-                      {
-                        "name": "Despair Venom",
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "helbrem2",
-                "children": []
-              },
-              {
-                "name": "StoryBan1",
-                "children": []
-              },
-              {
-                "name": "royalegurads",
-                "children": []
-              },
-              {
-                "name": "dreyfus",
-                "children": []
-              },
-              {
-                "name": "GilThunder2",
-                "children": []
-              },
-              {
-                "name": "Hendrickson",
-                "children": []
-              },
-              {
-                "name": "jerichoDemonForm",
-                "children": []
-              },
-              {
-                "name": "DeadHelbram",
-                "children": []
-              },
-              {
-                "name": "StoryBan2",
-                "children": []
-              },
-              {
-                "name": "HendricksonDemonMark",
-                "children": []
-              },
-              {
-                "name": "GrayDemonHendrickson",
-                "children": [
-                  {
-                    "name": "DeadEnd",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "Dogedo",
-                "children": []
-              },
-              {
-                "name": "Gowther",
-                "children": []
-              },
-              {
-                "name": "FatAlbion",
-                "children": [
-                  {
-                    "name": "Cannon",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "TallAlbion",
-                "children": []
-              },
-              {
-                "name": "Galand",
-                "children": []
-              },
-              {
-                "name": "RedandGrayDemon",
-                "children": []
-              },
-              {
-                "name": "KillGiant",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Demon King",
             "children": []
           },
@@ -40128,7 +40291,16 @@
             "children": [
               {
                 "name": "Theo",
-                "children": []
+                "children": [
+                  {
+                    "name": "Gui",
+                    "children": []
+                  },
+                  {
+                    "name": "Button",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "Jenna",
@@ -40349,7 +40521,12 @@
               },
               {
                 "name": "IstarSetUp",
-                "children": []
+                "children": [
+                  {
+                    "name": "Istar",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "TowerOfTrails",
@@ -40548,105 +40725,114 @@
             "name": "Armor",
             "children": [
               {
-                "name": "banrecipe",
-                "children": []
-              },
-              {
-                "name": "kingrecipe",
-                "children": []
-              },
-              {
-                "name": "merlinrecipe",
-                "children": []
-              },
-              {
-                "name": "meliodasrecipe",
-                "children": []
-              },
-              {
-                "name": "danaforrecipe",
-                "children": []
-              },
-              {
-                "name": "gowtherrecipe",
-                "children": []
-              },
-              {
-                "name": "GilThunder",
-                "children": []
-              },
-              {
-                "name": "HelBremArmor",
-                "children": []
-              },
-              {
-                "name": "HowzerArmor",
-                "children": []
-              },
-              {
-                "name": "CainArmor",
-                "children": []
-              },
-              {
-                "name": "DreyfusArmor",
-                "children": []
-              },
-              {
-                "name": "GuilaArmor",
-                "children": []
-              },
-              {
-                "name": "JerichoArmor",
-                "children": []
-              },
-              {
-                "name": "Arther",
-                "children": []
-              },
-              {
-                "name": "GustafArmor",
-                "children": []
-              },
-              {
-                "name": "RoyalKnightArmor",
-                "children": []
-              },
-              {
-                "name": "Boar_Hat",
-                "children": []
-              },
-              {
-                "name": "Seven Deadly Sins Armor",
+                "name": "Season1",
                 "children": [
                   {
-                    "name": "Merlin",
+                    "name": "Seven Deadly Sins Armor",
+                    "children": [
+                      {
+                        "name": "Merlin",
+                        "children": []
+                      },
+                      {
+                        "name": "Ban",
+                        "children": []
+                      },
+                      {
+                        "name": "Diane",
+                        "children": []
+                      },
+                      {
+                        "name": "Escanor",
+                        "children": []
+                      },
+                      {
+                        "name": "Gowther",
+                        "children": []
+                      },
+                      {
+                        "name": "Kings",
+                        "children": []
+                      },
+                      {
+                        "name": "Meliodas",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Boar_Hat",
                     "children": []
                   },
                   {
-                    "name": "Ban",
+                    "name": "RoyalKnightArmor",
                     "children": []
                   },
                   {
-                    "name": "Diane",
+                    "name": "GustafArmor",
                     "children": []
                   },
                   {
-                    "name": "Escanor",
+                    "name": "Arther",
                     "children": []
                   },
                   {
-                    "name": "Gowther",
+                    "name": "JerichoArmor",
                     "children": []
                   },
                   {
-                    "name": "Kings",
+                    "name": "GuilaArmor",
                     "children": []
                   },
                   {
-                    "name": "Meliodas",
+                    "name": "DreyfusArmor",
+                    "children": []
+                  },
+                  {
+                    "name": "CainArmor",
+                    "children": []
+                  },
+                  {
+                    "name": "HowzerArmor",
+                    "children": []
+                  },
+                  {
+                    "name": "HelBremArmor",
+                    "children": []
+                  },
+                  {
+                    "name": "GilThunder",
+                    "children": []
+                  },
+                  {
+                    "name": "gowtherrecipe",
+                    "children": []
+                  },
+                  {
+                    "name": "danaforrecipe",
+                    "children": []
+                  },
+                  {
+                    "name": "meliodasrecipe",
+                    "children": []
+                  },
+                  {
+                    "name": "merlinrecipe",
+                    "children": []
+                  },
+                  {
+                    "name": "kingrecipe",
+                    "children": []
+                  },
+                  {
+                    "name": "banrecipe",
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "MeliodasBoarHat",
+                "children": []
               }
             ]
           },
@@ -40735,21 +40921,20 @@
               {
                 "name": "Sapphire",
                 "children": []
+              },
+              {
+                "name": "Diamond",
+                "children": []
+              },
+              {
+                "name": "Platinum",
+                "children": []
               }
             ]
           },
           {
-            "name": "Diamond",
-            "children": [
-              {
-                "name": "Platinum",
-                "children": []
-              },
-              {
-                "name": "DemonBlood",
-                "children": []
-              }
-            ]
+            "name": "DemonBlood",
+            "children": []
           }
         ]
       },
@@ -40979,6 +41164,189 @@
       {
         "name": "VillagerTrade",
         "children": []
+      },
+      {
+        "name": "StoryModeEntities",
+        "children": [
+          {
+            "name": "storygui",
+            "children": [
+              {
+                "name": "story0",
+                "children": [
+                  {
+                    "name": "storyvar",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Twigo",
+            "children": []
+          },
+          {
+            "name": "gilthunder",
+            "children": []
+          },
+          {
+            "name": "Golgius",
+            "children": []
+          },
+          {
+            "name": "diane",
+            "children": []
+          },
+          {
+            "name": "friesia",
+            "children": []
+          },
+          {
+            "name": "ruin",
+            "children": []
+          },
+          {
+            "name": "guila",
+            "children": []
+          },
+          {
+            "name": "taizoo",
+            "children": []
+          },
+          {
+            "name": "griamore",
+            "children": []
+          },
+          {
+            "name": "howzer",
+            "children": []
+          },
+          {
+            "name": "cainbarzad",
+            "children": []
+          },
+          {
+            "name": "jericho",
+            "children": []
+          },
+          {
+            "name": "guilamob",
+            "children": []
+          },
+          {
+            "name": "helbrem",
+            "children": []
+          },
+          {
+            "name": "dale",
+            "children": [
+              {
+                "name": "form",
+                "children": []
+              },
+              {
+                "name": "dalesecmoves",
+                "children": [
+                  {
+                    "name": "Frozen Breath",
+                    "children": []
+                  },
+                  {
+                    "name": "Noroi no Koe",
+                    "children": []
+                  },
+                  {
+                    "name": "Despair Venom",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "helbrem2",
+            "children": []
+          },
+          {
+            "name": "StoryBan1",
+            "children": []
+          },
+          {
+            "name": "royalegurads",
+            "children": []
+          },
+          {
+            "name": "dreyfus",
+            "children": []
+          },
+          {
+            "name": "GilThunder2",
+            "children": []
+          },
+          {
+            "name": "Hendrickson",
+            "children": []
+          },
+          {
+            "name": "jerichoDemonForm",
+            "children": []
+          },
+          {
+            "name": "DeadHelbram",
+            "children": []
+          },
+          {
+            "name": "StoryBan2",
+            "children": []
+          },
+          {
+            "name": "HendricksonDemonMark",
+            "children": []
+          },
+          {
+            "name": "GrayDemonHendrickson",
+            "children": [
+              {
+                "name": "DeadEnd",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Dogedo",
+            "children": []
+          },
+          {
+            "name": "Gowther",
+            "children": []
+          },
+          {
+            "name": "FatAlbion",
+            "children": [
+              {
+                "name": "Cannon",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "TallAlbion",
+            "children": []
+          },
+          {
+            "name": "Galand",
+            "children": []
+          },
+          {
+            "name": "RedandGrayDemon",
+            "children": []
+          },
+          {
+            "name": "KillGiant",
+            "children": []
+          }
+        ]
       }
     ]
   },

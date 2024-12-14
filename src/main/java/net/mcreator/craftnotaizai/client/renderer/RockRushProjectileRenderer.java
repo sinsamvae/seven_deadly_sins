@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.craftnotaizai.entity.RockRushProjectileEntity;
-import net.mcreator.craftnotaizai.client.model.Modelrockrush;
+import net.mcreator.craftnotaizai.client.model.Modelearthrock;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class RockRushProjectileRenderer extends EntityRenderer<RockRushProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/rockrush.png");
-	private final Modelrockrush model;
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/earth_rock.png");
+	private final Modelearthrock model;
 
 	public RockRushProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelrockrush(context.bakeLayer(Modelrockrush.LAYER_LOCATION));
+		model = new Modelearthrock(context.bakeLayer(Modelearthrock.LAYER_LOCATION));
 	}
 
 	@Override
