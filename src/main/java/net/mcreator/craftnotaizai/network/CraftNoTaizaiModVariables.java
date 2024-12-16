@@ -278,6 +278,7 @@ public class CraftNoTaizaiModVariables {
 			clone.training_id = original.training_id;
 			clone.tower_of_trails = original.tower_of_trails;
 			clone.tower_of_trails_cooldown = original.tower_of_trails_cooldown;
+			clone.istar_kills = original.istar_kills;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 			}
@@ -741,6 +742,7 @@ public class CraftNoTaizaiModVariables {
 		public double training_id = 0;
 		public boolean tower_of_trails = false;
 		public double tower_of_trails_cooldown = 0;
+		public double istar_kills = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -944,6 +946,7 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("training_id", training_id);
 			nbt.putBoolean("tower_of_trails", tower_of_trails);
 			nbt.putDouble("tower_of_trails_cooldown", tower_of_trails_cooldown);
+			nbt.putDouble("istar_kills", istar_kills);
 			return nbt;
 		}
 
@@ -1144,6 +1147,7 @@ public class CraftNoTaizaiModVariables {
 			training_id = nbt.getDouble("training_id");
 			tower_of_trails = nbt.getBoolean("tower_of_trails");
 			tower_of_trails_cooldown = nbt.getDouble("tower_of_trails_cooldown");
+			istar_kills = nbt.getDouble("istar_kills");
 		}
 	}
 
@@ -1372,6 +1376,7 @@ public class CraftNoTaizaiModVariables {
 					variables.training_id = message.data.training_id;
 					variables.tower_of_trails = message.data.tower_of_trails;
 					variables.tower_of_trails_cooldown = message.data.tower_of_trails_cooldown;
+					variables.istar_kills = message.data.istar_kills;
 				}
 			});
 			context.setPacketHandled(true);

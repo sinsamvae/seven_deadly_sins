@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Gustaf Animated",
     "mobLabel": "",
-    "mobModelTexture": "gustaf_rm.png",
+    "mobModelTexture": "gustaf_armor_rm.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -27,10 +27,11 @@
       "value": -11958857,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -100,6 +101,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "onMobTickUpdate": {

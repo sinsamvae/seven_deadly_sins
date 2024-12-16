@@ -12,7 +12,7 @@ public class UseMagicPressed2Procedure {
 		PurgeBindOnKeyPressedProcedure.execute(entity);
 		BreakBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		HellBlazeFullCounterOnKeyPressedProcedure.execute(entity);
-		HunterWispbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
+		HunterWispbindOnKeyPressedProcedure.execute(entity);
 		ExplosionBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		BoostKeyPressProcedure.execute(world, x, y, z, entity);
 		GreatThunderOnKeyPressedProcedure.execute(world, x, y, z, entity);

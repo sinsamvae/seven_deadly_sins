@@ -15,6 +15,7 @@ import net.mcreator.craftnotaizai.potion.PurgatoryFlameMobEffect;
 import net.mcreator.craftnotaizai.potion.PowerAmplifyEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PhysicalHuntPositiveMobEffect;
 import net.mcreator.craftnotaizai.potion.PhysicalHuntNegitiveMobEffect;
+import net.mcreator.craftnotaizai.potion.OverPowerEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.NightmaretellerMobEffect;
 import net.mcreator.craftnotaizai.potion.NecrosisMobEffect;
 import net.mcreator.craftnotaizai.potion.MinimumTabletsEffectMobEffect;
@@ -50,4 +51,5 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> HEAVY_METAL = REGISTRY.register("heavy_metal", () -> new HeavyMetalMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_NEGITIVE = REGISTRY.register("physical_hunt_negitive", () -> new PhysicalHuntNegitiveMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_POSITIVE = REGISTRY.register("physical_hunt_positive", () -> new PhysicalHuntPositiveMobEffect());
+	public static final RegistryObject<MobEffect> OVER_POWER_EFFECT = REGISTRY.register("over_power_effect", () -> new OverPowerEffectMobEffect());
 }

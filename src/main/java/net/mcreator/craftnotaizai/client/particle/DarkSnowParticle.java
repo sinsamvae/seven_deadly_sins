@@ -44,7 +44,7 @@ public class DarkSnowParticle extends TextureSheetParticle {
 		this.xd = vx * 0.1;
 		this.yd = vy * 0.1;
 		this.zd = vz * 0.1;
-		this.setSpriteFromAge(spriteSet);
+		this.pickSprite(spriteSet);
 	}
 
 	@Override
@@ -55,8 +55,5 @@ public class DarkSnowParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
-		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 1 + 1, 1));
-		}
 	}
 }

@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.craftnotaizai.entity.CruelSunProjectileEntity;
-import net.mcreator.craftnotaizai.client.model.ModelCruel_Sun_Converted;
+import net.mcreator.craftnotaizai.client.model.Modelcruel_sun;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class CruelSunProjectileRenderer extends EntityRenderer<CruelSunProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/crazy_prominence.png");
-	private final ModelCruel_Sun_Converted model;
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/cruel-sun_texture_1.png");
+	private final Modelcruel_sun model;
 
 	public CruelSunProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new ModelCruel_Sun_Converted(context.bakeLayer(ModelCruel_Sun_Converted.LAYER_LOCATION));
+		model = new Modelcruel_sun(context.bakeLayer(Modelcruel_sun.LAYER_LOCATION));
 	}
 
 	@Override

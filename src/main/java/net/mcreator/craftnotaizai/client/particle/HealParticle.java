@@ -44,7 +44,7 @@ public class HealParticle extends TextureSheetParticle {
 		this.xd = vx * 2;
 		this.yd = vy * 2;
 		this.zd = vz * 2;
-		this.pickSprite(spriteSet);
+		this.setSpriteFromAge(spriteSet);
 	}
 
 	@Override
@@ -55,5 +55,8 @@ public class HealParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+		if (!this.removed) {
+			this.setSprite(this.spriteSet.get((this.age / 1) % 8 + 1, 8));
+		}
 	}
 }

@@ -2,8 +2,8 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "dark_snow.png",
-    "animate": true,
+    "texture": "dark_snow",
+    "animate": false,
     "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,

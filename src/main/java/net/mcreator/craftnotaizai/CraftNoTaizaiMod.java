@@ -29,7 +29,6 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMenus;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEnchantments;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModBlocks;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModBlockEntities;
 
@@ -64,7 +63,7 @@ public class CraftNoTaizaiMod {
 		CraftNoTaizaiModBlockEntities.REGISTRY.register(bus);
 		CraftNoTaizaiModItems.REGISTRY.register(bus);
 		CraftNoTaizaiModEntities.REGISTRY.register(bus);
-		CraftNoTaizaiModEnchantments.REGISTRY.register(bus);
+
 		CraftNoTaizaiModTabs.REGISTRY.register(bus);
 
 		CraftNoTaizaiModMobEffects.REGISTRY.register(bus);

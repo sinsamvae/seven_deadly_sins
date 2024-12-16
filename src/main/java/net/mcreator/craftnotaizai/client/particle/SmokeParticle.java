@@ -44,7 +44,7 @@ public class SmokeParticle extends TextureSheetParticle {
 		this.xd = vx * 1;
 		this.yd = vy * 1;
 		this.zd = vz * 1;
-		this.pickSprite(spriteSet);
+		this.setSpriteFromAge(spriteSet);
 	}
 
 	@Override
@@ -55,5 +55,8 @@ public class SmokeParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+		if (!this.removed) {
+			this.setSprite(this.spriteSet.get((this.age / 20) % 8 + 1, 8));
+		}
 	}
 }

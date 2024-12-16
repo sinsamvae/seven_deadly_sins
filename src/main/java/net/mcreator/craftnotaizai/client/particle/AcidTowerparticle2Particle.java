@@ -56,7 +56,7 @@ public class AcidTowerparticle2Particle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 1 + 1, 1));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 5 + 1, 5));
 		}
 	}
 }

@@ -2,8 +2,8 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "heal1.png",
-    "animate": false,
+    "texture": "heal1",
+    "animate": true,
     "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,

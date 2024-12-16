@@ -7,18 +7,9 @@
     "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "image",
-        "data": {
-          "image": "gui.png",
-          "use1Xscale": false,
-          "x": 106,
-          "y": 16
-        }
-      },
       {
         "type": "imagebutton",
         "data": {
@@ -28,8 +19,8 @@
           "onClick": {
             "name": "ChangeCloneAmount"
           },
-          "x": 165,
-          "y": 86
+          "x": 179,
+          "y": 93
         }
       },
       {
@@ -43,8 +34,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 182,
-          "y": 89
+          "x": 195,
+          "y": 96
         }
       },
       {
@@ -59,8 +50,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 165,
-          "y": 76
+          "x": 180,
+          "y": 73
         }
       },
       {
@@ -72,8 +63,8 @@
           "onClick": {
             "name": "DespawnClones"
           },
-          "x": 165,
-          "y": 122
+          "x": 177,
+          "y": 126
         }
       },
       {
@@ -87,56 +78,17 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 179,
-          "y": 125
+          "x": 193,
+          "y": 129
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "demon.png",
+          "image": "clone_gui.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Demonimage"
-          },
-          "x": 229,
-          "y": 141
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "giantlogo.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Humanimage"
-          },
-          "x": 229,
-          "y": 141
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "giantlogo.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Gaintimage"
-          },
-          "x": 229,
-          "y": 141
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "fairy2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Fairyimage"
-          },
-          "x": 229,
-          "y": 141
+          "x": 150,
+          "y": 42
         }
       }
     ],

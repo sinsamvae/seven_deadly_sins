@@ -4,7 +4,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -41,37 +41,6 @@ public class HunterWispWhileProjectileFlyingTickProcedure {
 		double sevy2 = 0;
 		double sevz2 = 0;
 		double sev = 0;
-		a = 0.5;
-		cubesize = 50;
-		{
-			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(cubesize / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-			for (Entity entityiterator : _entfound) {
-				if (entityiterator.getPersistentData().getDouble("homingtarget") == 1) {
-					if (!world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3(x, y, z), cubesize, cubesize, cubesize), e -> true).isEmpty()) {
-						sev = Math.sqrt(Math.pow(immediatesourceentity.getDeltaMovement().x(), 2) + Math.pow(immediatesourceentity.getDeltaMovement().y(), 2) + Math.pow(immediatesourceentity.getDeltaMovement().z(), 2));
-						sevx = immediatesourceentity.getDeltaMovement().x() / sev;
-						sevy = immediatesourceentity.getDeltaMovement().y() / sev;
-						sevz = immediatesourceentity.getDeltaMovement().z() / sev;
-						tedx = entityiterator.getX() - immediatesourceentity.getX();
-						tedy = entityiterator.getY() - immediatesourceentity.getY();
-						tedz = entityiterator.getZ() - immediatesourceentity.getZ();
-						ted = Math.sqrt(Math.pow(tedx, 2) + Math.pow(tedy, 2) + Math.pow(tedz, 2));
-						tedx = tedx / ted;
-						tedy = tedy / ted;
-						tedz = tedz / ted;
-						sevx2 = a * tedx + sevx2;
-						sevy2 = a * tedy + sevy2;
-						sevz2 = a * tedz + sevz2;
-						sev2 = Math.sqrt(Math.pow(sevx2, 2) + Math.pow(sevy2, 2) + Math.pow(sevz2, 2));
-						sevx2 = sevx2 / sev2;
-						sevy2 = sevy2 / sev2;
-						sevz2 = sevz2 / sev2;
-						immediatesourceentity.setDeltaMovement(new Vec3((sev * sevx2), (sev * sevy2), (sev * sevz2)));
-					}
-				}
-			}
-		}
 		immediatesourceentity.setNoGravity(true);
 		CraftNoTaizaiMod.queueServerWork(80, () -> {
 			if (!immediatesourceentity.level().isClientSide())
@@ -101,10 +70,26 @@ public class HunterWispWhileProjectileFlyingTickProcedure {
 				entity.getPersistentData().putDouble("sy", (entity.getPersistentData().getDouble("sy") + entity.getPersistentData().getDouble("y+") * (-0.2)));
 				entity.getPersistentData().putDouble("sz", (entity.getPersistentData().getDouble("sz") + entity.getPersistentData().getDouble("z+") * (-0.2)));
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.HUNTER_WISPPARTICLE.get()), (entity.getPersistentData().getDouble("sx")), (entity.getPersistentData().getDouble("sy")),
-							(entity.getPersistentData().getDouble("sz")), 4, 0.02, 0.02, 0.02, 0);
+					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.HUNTER_WISPPARTICLE.get()), x, y, z, 4, 0.5, 0.5, 0.5, 0);
 				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
 			});
+		}
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(30 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (!(((Entity) world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, z), 30, 30, 30), e -> true).stream().sorted(new Object() {
+					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+					}
+				}.compareDistOf(x, y, z)).findFirst().orElse(null)) == entityiterator)) {
+					if (!(entityiterator == entity && entityiterator == immediatesourceentity)) {
+						distance = Math.sqrt(Math.pow(entityiterator.getX() - immediatesourceentity.getX(), 2) + Math.pow(entityiterator.getY() - immediatesourceentity.getY(), 2) + Math.pow(entityiterator.getZ() - immediatesourceentity.getZ(), 2));
+						immediatesourceentity.setDeltaMovement(
+								new Vec3(((entityiterator.getX() - immediatesourceentity.getX()) / distance), ((entityiterator.getY() - immediatesourceentity.getY()) / distance), ((entityiterator.getZ() - immediatesourceentity.getZ()) / distance)));
+					}
+				}
+			}
 		}
 	}
 }

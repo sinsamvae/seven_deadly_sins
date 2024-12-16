@@ -11,10 +11,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnotaizai.world.inventory.ClonesGuiMenu;
 import net.mcreator.craftnotaizai.procedures.LostVayneVarProcedure;
-import net.mcreator.craftnotaizai.procedures.HumanimageProcedure;
-import net.mcreator.craftnotaizai.procedures.GaintimageProcedure;
-import net.mcreator.craftnotaizai.procedures.FairyimageProcedure;
-import net.mcreator.craftnotaizai.procedures.DemonimageProcedure;
 import net.mcreator.craftnotaizai.network.ClonesGuiButtonMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -42,8 +38,6 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		this.imageHeight = 0;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/screens/clones_gui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
@@ -56,22 +50,9 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -108, this.topPos + -104, 0, 0, 196, 186, 196, 186);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/clone_gui.png"), this.leftPos + -64, this.topPos + -78, 0, 0, 128, 155, 128, 155);
 
-		if (DemonimageProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/demon.png"), this.leftPos + 15, this.topPos + 21, 0, 0, 50, 50, 50, 50);
-		}
-		if (HumanimageProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/giantlogo.png"), this.leftPos + 15, this.topPos + 21, 0, 0, 50, 50, 50, 50);
-		}
-		if (GaintimageProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/giantlogo.png"), this.leftPos + 15, this.topPos + 21, 0, 0, 50, 50, 50, 50);
-		}
-		if (FairyimageProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/fairy2.png"), this.leftPos + 15, this.topPos + 21, 0, 0, 50, 50, 50, 50);
-		}
 		RenderSystem.disableBlend();
 	}
 
@@ -86,17 +67,17 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_clones"), -32, -31, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_clones"), -19, -24, -1, false);
 		guiGraphics.drawString(this.font,
 
-				LostVayneVarProcedure.execute(entity), -49, -44, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_despawn"), -35, 5, -1, false);
+				LostVayneVarProcedure.execute(entity), -34, -47, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_despawn"), -21, 9, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_slot = new ImageButton(this.leftPos + -49, this.topPos + -34, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
+		imagebutton_slot = new ImageButton(this.leftPos + -35, this.topPos + -27, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(0, x, y, z, textstate));
 				ClonesGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
@@ -104,7 +85,7 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		});
 		guistate.put("button:imagebutton_slot", imagebutton_slot);
 		this.addRenderableWidget(imagebutton_slot);
-		imagebutton_slot1 = new ImageButton(this.leftPos + -49, this.topPos + 2, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot1.png"), 64, 32, e -> {
+		imagebutton_slot1 = new ImageButton(this.leftPos + -37, this.topPos + 6, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot1.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(1, x, y, z, textstate));
 				ClonesGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);

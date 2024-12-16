@@ -83,7 +83,6 @@ import net.mcreator.craftnotaizai.item.JerichoarmorItem;
 import net.mcreator.craftnotaizai.item.JerichoSwordItem;
 import net.mcreator.craftnotaizai.item.JerichoItem;
 import net.mcreator.craftnotaizai.item.HyperRecoveryItem;
-import net.mcreator.craftnotaizai.item.HunterWispItem;
 import net.mcreator.craftnotaizai.item.HugoArmorItem;
 import net.mcreator.craftnotaizai.item.HowzerArmorOutfitItem;
 import net.mcreator.craftnotaizai.item.HowzerArmorItem;
@@ -105,6 +104,7 @@ import net.mcreator.craftnotaizai.item.GuardSpearItem;
 import net.mcreator.craftnotaizai.item.GreenKnightArmorItem;
 import net.mcreator.craftnotaizai.item.GrayDemonBloodNeedleItem;
 import net.mcreator.craftnotaizai.item.GowtherOutfitItem;
+import net.mcreator.craftnotaizai.item.GowtherArmorS2Item;
 import net.mcreator.craftnotaizai.item.GowtherArmorItem;
 import net.mcreator.craftnotaizai.item.GolgiusarmorItem;
 import net.mcreator.craftnotaizai.item.GolgiusSwordItem;
@@ -147,7 +147,6 @@ import net.mcreator.craftnotaizai.item.DemonClawItem;
 import net.mcreator.craftnotaizai.item.DemonBloodItem;
 import net.mcreator.craftnotaizai.item.DemonAxeItem;
 import net.mcreator.craftnotaizai.item.CurvedSwordItem;
-import net.mcreator.craftnotaizai.item.CruelSunItem;
 import net.mcreator.craftnotaizai.item.CookedtentaclesItem;
 import net.mcreator.craftnotaizai.item.CookedDuskMeatItem;
 import net.mcreator.craftnotaizai.item.CookedAngleMeatItem;
@@ -284,7 +283,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> EMBRACEOFTHE_THUNDER_GOD = REGISTRY.register("embraceofthe_thunder_god", () -> new EmbraceoftheThunderGodItem());
 	public static final RegistryObject<Item> DRIFT_BOMB = REGISTRY.register("drift_bomb", () -> new DriftBombItem());
 	public static final RegistryObject<Item> BRILLIANT_DETONATION = REGISTRY.register("brilliant_detonation", () -> new BrilliantDetonationItem());
-	public static final RegistryObject<Item> HUNTER_WISP = REGISTRY.register("hunter_wisp", () -> new HunterWispItem());
 	public static final RegistryObject<Item> JETHAMMER = REGISTRY.register("jethammer", () -> new JethammerItem());
 	public static final RegistryObject<Item> SNOWFLOWERBEAM = REGISTRY.register("snowflowerbeam", () -> new SnowflowerbeamItem());
 	public static final RegistryObject<Item> RAKAN = REGISTRY.register("rakan", () -> new RakanItem());
@@ -293,7 +291,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> EXTERMINATE_RAY = REGISTRY.register("exterminate_ray", () -> new ExterminateRayItem());
 	public static final RegistryObject<Item> PURGATORY_VENOM = REGISTRY.register("purgatory_venom", () -> new PurgatoryVenomItem());
 	public static final RegistryObject<Item> KILL_SWITCH = REGISTRY.register("kill_switch", () -> new KillSwitchItem());
-	public static final RegistryObject<Item> CRUEL_SUN = REGISTRY.register("cruel_sun", () -> new CruelSunItem());
 	public static final RegistryObject<Item> AREAWOOD = block(CraftNoTaizaiModBlocks.AREAWOOD);
 	public static final RegistryObject<Item> AREAFENCE = block(CraftNoTaizaiModBlocks.AREAFENCE);
 	public static final RegistryObject<Item> AREA_SLAB = block(CraftNoTaizaiModBlocks.AREA_SLAB);
@@ -604,6 +601,8 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> OMINOUS_NEBULA_ENITIY_SPAWN_EGG = REGISTRY.register("ominous_nebula_enitiy_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> MELIODAS_BOAR_HAT_CHESTPLATE = REGISTRY.register("meliodas_boar_hat_chestplate", () -> new MeliodasBoarHatItem.Chestplate());
 	public static final RegistryObject<Item> MELIODAS_BOAR_HAT_LEGGINGS = REGISTRY.register("meliodas_boar_hat_leggings", () -> new MeliodasBoarHatItem.Leggings());
+	public static final RegistryObject<Item> GOWTHER_ARMOR_S_2_CHESTPLATE = REGISTRY.register("gowther_armor_s_2_chestplate", () -> new GowtherArmorS2Item.Chestplate());
+	public static final RegistryObject<Item> GOWTHER_ARMOR_S_2_LEGGINGS = REGISTRY.register("gowther_armor_s_2_leggings", () -> new GowtherArmorS2Item.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

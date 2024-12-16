@@ -154,7 +154,7 @@ public class KingBossAnimatedEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		KingBossOnEntityTickUpdateProcedure.execute(this.level(), this);
+		KingBossOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

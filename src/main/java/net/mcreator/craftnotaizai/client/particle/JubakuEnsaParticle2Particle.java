@@ -44,7 +44,7 @@ public class JubakuEnsaParticle2Particle extends TextureSheetParticle {
 		this.xd = vx * 0;
 		this.yd = vy * 0;
 		this.zd = vz * 0;
-		this.pickSprite(spriteSet);
+		this.setSpriteFromAge(spriteSet);
 	}
 
 	@Override
@@ -55,5 +55,8 @@ public class JubakuEnsaParticle2Particle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+		if (!this.removed) {
+			this.setSprite(this.spriteSet.get((this.age / 1) % 1 + 1, 1));
+		}
 	}
 }

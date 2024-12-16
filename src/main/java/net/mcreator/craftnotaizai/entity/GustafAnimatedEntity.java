@@ -71,7 +71,7 @@ public class GustafAnimatedEntity extends PathfinderMob implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "gustaf_rm");
+		this.entityData.define(TEXTURE, "gustaf_armor_rm");
 	}
 
 	public void setTexture(String texture) {

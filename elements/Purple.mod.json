@@ -2,8 +2,8 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "purple.png",
-    "animate": false,
+    "texture": "green_smoke",
+    "animate": true,
     "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,

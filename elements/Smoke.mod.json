@@ -2,8 +2,8 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "pink1.png",
-    "animate": false,
+    "texture": "pink1",
+    "animate": true,
     "frameDuration": 20,
     "width": 0.2,
     "height": 0.2,

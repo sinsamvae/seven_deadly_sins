@@ -73,6 +73,7 @@ import net.mcreator.craftnotaizai.client.model.Modeldemon_wing;
 import net.mcreator.craftnotaizai.client.model.Modeldemon_king;
 import net.mcreator.craftnotaizai.client.model.Modeldeadhelbram;
 import net.mcreator.craftnotaizai.client.model.Modeldeadend;
+import net.mcreator.craftnotaizai.client.model.Modelcruel_sun;
 import net.mcreator.craftnotaizai.client.model.Modelchickenmatango;
 import net.mcreator.craftnotaizai.client.model.Modelchastifolshot;
 import net.mcreator.craftnotaizai.client.model.Modelchastifol_spirit_spear;
@@ -128,6 +129,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelgloxiana_wings.LAYER_LOCATION, Modelgloxiana_wings::createBodyLayer);
 		event.registerLayerDefinition(Modeldemon_king.LAYER_LOCATION, Modeldemon_king::createBodyLayer);
 		event.registerLayerDefinition(Modelearthrock.LAYER_LOCATION, Modelearthrock::createBodyLayer);
+		event.registerLayerDefinition(Modelcruel_sun.LAYER_LOCATION, Modelcruel_sun::createBodyLayer);
 		event.registerLayerDefinition(Modelgear_spirit_spear_rm.LAYER_LOCATION, Modelgear_spirit_spear_rm::createBodyLayer);
 		event.registerLayerDefinition(ModelCustomModel.LAYER_LOCATION, ModelCustomModel::createBodyLayer);
 		event.registerLayerDefinition(Modelteddybear_king.LAYER_LOCATION, Modelteddybear_king::createBodyLayer);

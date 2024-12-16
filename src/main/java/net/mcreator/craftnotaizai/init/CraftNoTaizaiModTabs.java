@@ -151,6 +151,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_ARMOR_LEGGINGS.get());
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_BOAR_HAT_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_BOAR_HAT_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.GOWTHER_ARMOR_S_2_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.GOWTHER_ARMOR_S_2_LEGGINGS.get());
 			})
 
 					.build());

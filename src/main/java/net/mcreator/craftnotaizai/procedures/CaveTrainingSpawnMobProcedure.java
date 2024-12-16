@@ -45,47 +45,49 @@ public class CaveTrainingSpawnMobProcedure {
 		double TPZ = 0;
 		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))
 				|| (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_timer + 1;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.cave_of_training_timer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_timer > 1200) {
+			if (!((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story39")) {
 				{
-					double _setval = 0;
+					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_timer + 1;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.cave_of_training_timer = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				amount = Mth.nextInt(RandomSource.create(), 4, 7);
-				for (int index0 = 0; index0 < (int) (amount * 1); index0++) {
-					entityspawn = Mth.nextInt(RandomSource.create(), 1, 3);
-					if (entityspawn == 1) {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level,
-									BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
-									MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-							}
-						}
-					} else if (entityspawn == 2) {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level,
-									BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
-									MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-							}
-						}
+				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).cave_of_training_timer > 1200) {
+					{
+						double _setval = 0;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.cave_of_training_timer = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
-					if (entityspawn == 3) {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level,
-									BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
-									MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
+					amount = Mth.nextInt(RandomSource.create(), 4, 7);
+					for (int index0 = 0; index0 < (int) (amount * 1); index0++) {
+						entityspawn = Mth.nextInt(RandomSource.create(), 1, 3);
+						if (entityspawn == 1) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level,
+										BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
+										MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
+							}
+						} else if (entityspawn == 2) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level,
+										BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
+										MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
+							}
+						}
+						if (entityspawn == 3) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level,
+										BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), 0, 3), y, entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), 0, 3)),
+										MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
 							}
 						}
 					}

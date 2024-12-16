@@ -85,8 +85,8 @@ public class FairywingsProcedure {
 				&& ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Miracle Wind")) {
 			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-				if (ResourceLocation.tryParse("craft_no_taizai:textures/entities/elaine-wings.png") != null) {
-					_texture = new ResourceLocation("craft_no_taizai:textures/entities/elaine-wings.png");
+				if (ResourceLocation.tryParse("craft_no_taizai:textures/entities/elaine_wings.png") != null) {
+					_texture = new ResourceLocation("craft_no_taizai:textures/entities/elaine_wings.png");
 				}
 				Modelelaine_wing3 newModel = new Modelelaine_wing3(context.bakeLayer(Modelelaine_wing3.LAYER_LOCATION));
 				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);

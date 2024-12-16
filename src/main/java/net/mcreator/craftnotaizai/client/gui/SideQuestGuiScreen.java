@@ -10,9 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
-import net.mcreator.craftnotaizai.procedures.QuestSlot3Procedure;
-import net.mcreator.craftnotaizai.procedures.QuestSlot2Procedure;
-import net.mcreator.craftnotaizai.procedures.QuestSlot1Procedure;
+import net.mcreator.craftnotaizai.procedures.QuestVarProcedure;
 import net.mcreator.craftnotaizai.network.SideQuestGuiButtonMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -55,7 +53,7 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -98, this.topPos + -92, 0, 0, 196, 186, 196, 186);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/side_quset.png"), this.leftPos + -70, this.topPos + -95, 0, 0, 140, 190, 140, 190);
 
 		RenderSystem.disableBlend();
 	}
@@ -71,22 +69,16 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.side_quest_gui.label_claim"), -16, 68, -1, false);
 		guiGraphics.drawString(this.font,
 
-				QuestSlot1Procedure.execute(entity), -91, -43, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.side_quest_gui.label_claim"), -17, 77, -1, false);
-		guiGraphics.drawString(this.font,
-
-				QuestSlot2Procedure.execute(entity), -91, -21, -1, false);
-		guiGraphics.drawString(this.font,
-
-				QuestSlot3Procedure.execute(entity), -91, 3, -1, false);
+				QuestVarProcedure.execute(entity), -24, -28, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_1button = new ImageButton(this.leftPos + -34, this.topPos + 73, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
+		imagebutton_1button = new ImageButton(this.leftPos + -34, this.topPos + 64, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new SideQuestGuiButtonMessage(0, x, y, z, textstate));
 				SideQuestGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);

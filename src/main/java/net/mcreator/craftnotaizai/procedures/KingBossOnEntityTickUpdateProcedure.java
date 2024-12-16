@@ -23,6 +23,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
@@ -33,13 +35,14 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.SnowflowerbeamProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FossProjectileEntity;
+import net.mcreator.craftnotaizai.entity.CondensePowerProjectileEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class KingBossOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double num_rep = 0;
@@ -50,7 +53,7 @@ public class KingBossOnEntityTickUpdateProcedure {
 		}
 		if (entity.getPersistentData().getDouble("skill_cooldown") == 0 && !((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			distance = Math.sqrt(Math.pow(entity.getX() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX(), 2) + Math.pow(entity.getZ() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ(), 2));
-			ran = Mth.nextInt(RandomSource.create(), 1, 3);
+			ran = Mth.nextInt(RandomSource.create(), 1, 5);
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
@@ -150,6 +153,60 @@ public class KingBossOnEntityTickUpdateProcedure {
 								BlockPos.containing(entity.getX() + entity.getLookAngle().x, entity.getY() + entity.getLookAngle().y + entity.getBbHeight(), entity.getLookAngle().z + entity.getZ()), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
 							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+					}
+				}
+				if (ran == 4) {
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new CondensePowerProjectileEntity(CraftNoTaizaiModEntities.CONDENSE_POWER_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 700, 1);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+					}
+				}
+				if (ran == 5) {
+					{
+						final Vec3 _center = new Vec3(x, y, z);
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
+									|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+									|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
+										public boolean checkGamemode(Entity _ent) {
+											if (_ent instanceof ServerPlayer _serverPlayer) {
+												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+											}
+											return false;
+										}
+									}.checkGamemode(entityiterator) || new Object() {
+										public boolean checkGamemode(Entity _ent) {
+											if (_ent instanceof ServerPlayer _serverPlayer) {
+												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+											}
+											return false;
+										}
+									}.checkGamemode(entityiterator))) {
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))), 5);
+							}
 						}
 					}
 				}

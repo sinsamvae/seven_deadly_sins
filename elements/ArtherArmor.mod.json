@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "howzerarmor",
-    "helmetName": "Slader Armor",
+    "helmetName": "",
     "bodyName": "Arthur Armor",
     "leggingsName": "Arthur Armor",
-    "bootsName": "GilThunder Armor",
+    "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
     },

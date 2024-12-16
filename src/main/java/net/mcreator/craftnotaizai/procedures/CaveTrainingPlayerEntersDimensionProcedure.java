@@ -24,7 +24,9 @@ public class CaveTrainingPlayerEntersDimensionProcedure {
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("\u00A77You've entered the cave of training realm!"), false);
 		CraftNoTaizaiMod.queueServerWork(100, () -> {
-			CaveofTrainingSpawnProcedure.execute(world, entity);
+			if (!((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story39")) {
+				CaveofTrainingSpawnProcedure.execute(world, entity);
+			}
 		});
 	}
 }

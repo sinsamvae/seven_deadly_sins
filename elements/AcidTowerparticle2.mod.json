@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "acid3.png",
+    "texture": "acidsmoke",
     "animate": true,
     "frameDuration": 1,
     "width": 0.2,

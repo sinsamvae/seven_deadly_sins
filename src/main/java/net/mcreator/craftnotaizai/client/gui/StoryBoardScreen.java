@@ -18,6 +18,8 @@ import net.mcreator.craftnotaizai.procedures.Story6Procedure;
 import net.mcreator.craftnotaizai.procedures.Story5Procedure;
 import net.mcreator.craftnotaizai.procedures.Story4Procedure;
 import net.mcreator.craftnotaizai.procedures.Story3Procedure;
+import net.mcreator.craftnotaizai.procedures.Story39Procedure;
+import net.mcreator.craftnotaizai.procedures.Story38Procedure;
 import net.mcreator.craftnotaizai.procedures.Story37Procedure;
 import net.mcreator.craftnotaizai.procedures.Story36Procedure;
 import net.mcreator.craftnotaizai.procedures.Story35Procedure;
@@ -52,6 +54,7 @@ import net.mcreator.craftnotaizai.procedures.RoylekillcountProcedure;
 import net.mcreator.craftnotaizai.procedures.RedDemonKillProcedure;
 import net.mcreator.craftnotaizai.procedures.KillGiantVarProcedure;
 import net.mcreator.craftnotaizai.procedures.GrayDemonKillProcedure;
+import net.mcreator.craftnotaizai.procedures.CaveOfTrainingVarProcedure;
 import net.mcreator.craftnotaizai.network.StoryBoardButtonMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -474,9 +477,32 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 		if (Story37Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_diane_meanwhile_a_confused_dia"), -147, -43, -16777216, false);
 		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -144, -27, -16777216, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -145, -27, -16777216, false);
 		if (Story37Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_find_entrance_of_istar"), -144, 1, -13369345, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_9_a_promise_to_a_loved_one"), -145, -72, -16711681, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_acknowledging_his_lack_of_streng"), -147, -58, -16777216, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_commandments_meliodas_vigorousl"), -145, -42, -16777216, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_istar_to_regin_his_sealed_pow"), -146, -25, -16777216, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_entities_cave_of_training"), -144, 4, -13369345, false);
+		if (Story38Procedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					CaveOfTrainingVarProcedure.execute(entity), -144, 22, -13369345, false);
+		if (Story39Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_10_what_we_lacked"), -146, -72, -12829636, false);
+		if (Story39Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ban_relects_on_his_past_after_re"), -147, -57, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_home_in_ravens_meliodass_allie"), -146, -40, -12829636, false);
+		if (Story39Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_inevitable_war_with_the_ten_comm"), -144, -22, -12829636, false);
+		if (Story39Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_king"), -144, 9, -12829636, false);
 	}
 
 	@Override
