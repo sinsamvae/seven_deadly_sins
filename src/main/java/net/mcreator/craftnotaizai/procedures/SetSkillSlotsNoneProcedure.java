@@ -13,6 +13,31 @@ public class SetSkillSlotsNoneProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		boolean can_set = false;
 		double check = 0;
+		{
+			double _setval = 1;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
 		(((new Object() {
 			public Entity getEntity() {
 				try {

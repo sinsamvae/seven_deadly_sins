@@ -36,5 +36,6 @@ public class ChangeMaigcTempestProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

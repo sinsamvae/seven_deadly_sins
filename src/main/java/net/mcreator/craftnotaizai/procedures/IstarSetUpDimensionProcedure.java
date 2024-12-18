@@ -12,9 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.Level;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -202,6 +200,6 @@ public class IstarSetUpDimensionProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
-		register(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar")), createOverworldEffects(false, false, false));
+		register(Level.OVERWORLD, createOverworldEffects(false, false, false));
 	}
 }

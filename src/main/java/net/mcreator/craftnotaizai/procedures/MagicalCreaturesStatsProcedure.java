@@ -33,6 +33,8 @@ import net.mcreator.craftnotaizai.entity.BlackHoundEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.AlbionTallEntity;
+import net.mcreator.craftnotaizai.entity.AlbionFatEntity;
 
 import javax.annotation.Nullable;
 
@@ -185,6 +187,18 @@ public class MagicalCreaturesStatsProcedure {
 			entity.getPersistentData().putDouble("strength", 340);
 			entity.getPersistentData().putDouble("Spirit", 210);
 			entity.getPersistentData().putDouble("Mana", 330);
+		}
+		if (entity instanceof AlbionFatEntity) {
+			entity.getPersistentData().putDouble("BP", 915);
+			entity.getPersistentData().putDouble("strength", 350);
+			entity.getPersistentData().putDouble("Spirit", 210);
+			entity.getPersistentData().putDouble("Mana", 355);
+		}
+		if (entity instanceof AlbionTallEntity) {
+			entity.getPersistentData().putDouble("BP", 895);
+			entity.getPersistentData().putDouble("strength", 350);
+			entity.getPersistentData().putDouble("Spirit", 200);
+			entity.getPersistentData().putDouble("Mana", 345);
 		}
 	}
 }

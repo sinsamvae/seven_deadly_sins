@@ -36,5 +36,6 @@ public class ChangeMagicBoostProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

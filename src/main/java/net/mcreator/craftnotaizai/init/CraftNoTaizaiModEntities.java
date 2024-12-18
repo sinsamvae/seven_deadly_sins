@@ -79,6 +79,7 @@ import net.mcreator.craftnotaizai.entity.LuigiEntity;
 import net.mcreator.craftnotaizai.entity.LightningbeastProjectileEntity;
 import net.mcreator.craftnotaizai.entity.LetThereBeLightEntity;
 import net.mcreator.craftnotaizai.entity.KulumilEntity;
+import net.mcreator.craftnotaizai.entity.KingStory1Entity;
 import net.mcreator.craftnotaizai.entity.KingBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.KillSwitchProjectileEntity;
 import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
@@ -125,6 +126,7 @@ import net.mcreator.craftnotaizai.entity.GigaFallEntity;
 import net.mcreator.craftnotaizai.entity.GigaCrushEntity;
 import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
+import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
 import net.mcreator.craftnotaizai.entity.GalandEntity;
 import net.mcreator.craftnotaizai.entity.FurkuuSutonEntity;
 import net.mcreator.craftnotaizai.entity.FrozenBreathEntity;
@@ -189,7 +191,6 @@ import net.mcreator.craftnotaizai.entity.BanBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.AuraBurstEntity;
 import net.mcreator.craftnotaizai.entity.AshDragonEntity;
 import net.mcreator.craftnotaizai.entity.ArrowShotProjectileEntity;
-import net.mcreator.craftnotaizai.entity.ArrowEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
@@ -642,8 +643,6 @@ public class CraftNoTaizaiModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BasquiasGuardianEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DivineSlashEntity>> DIVINE_SLASH = register("divine_slash",
 			EntityType.Builder.<DivineSlashEntity>of(DivineSlashEntity::new, MobCategory.MISC).setCustomClientFactory(DivineSlashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<ArrowEntity>> ARROW = register("arrow",
-			EntityType.Builder.<ArrowEntity>of(ArrowEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GigaPickEntity>> GIGA_PICK = register("giga_pick",
 			EntityType.Builder.<GigaPickEntity>of(GigaPickEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GigaPickEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GigaFallEntity>> GIGA_FALL = register("giga_fall",
@@ -775,6 +774,14 @@ public class CraftNoTaizaiModEntities {
 			.setCustomClientFactory(DestroyFourElementsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<OminousNebulaEnitiyEntity>> OMINOUS_NEBULA_ENITIY = register("ominous_nebula_enitiy", EntityType.Builder.<OminousNebulaEnitiyEntity>of(OminousNebulaEnitiyEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OminousNebulaEnitiyEntity::new).fireImmune().sized(0.25f, 0.25f));
+	public static final RegistryObject<EntityType<KingStory1Entity>> KING_STORY_1 = register("king_story_1",
+			EntityType.Builder.<KingStory1Entity>of(KingStory1Entity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KingStory1Entity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GalandStory2Entity>> GALAND_STORY_2 = register("galand_story_2",
+			EntityType.Builder.<GalandStory2Entity>of(GalandStory2Entity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandStory2Entity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -908,6 +915,8 @@ public class CraftNoTaizaiModEntities {
 			TyrantDragonCaveEntity.init();
 			AnaonEntity.init();
 			OminousNebulaEnitiyEntity.init();
+			KingStory1Entity.init();
+			GalandStory2Entity.init();
 		});
 	}
 
@@ -1038,5 +1047,7 @@ public class CraftNoTaizaiModEntities {
 		event.put(TYRANT_DRAGON_CAVE.get(), TyrantDragonCaveEntity.createAttributes().build());
 		event.put(ANAON.get(), AnaonEntity.createAttributes().build());
 		event.put(OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyEntity.createAttributes().build());
+		event.put(KING_STORY_1.get(), KingStory1Entity.createAttributes().build());
+		event.put(GALAND_STORY_2.get(), GalandStory2Entity.createAttributes().build());
 	}
 }

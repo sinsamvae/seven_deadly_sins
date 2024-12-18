@@ -36,5 +36,6 @@ public class ChangeMaigcAcidProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

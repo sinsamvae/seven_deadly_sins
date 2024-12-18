@@ -36,5 +36,6 @@ public class ChangeMagicGravityProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

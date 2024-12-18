@@ -36,5 +36,6 @@ public class ChangeMagicBulletSquallProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

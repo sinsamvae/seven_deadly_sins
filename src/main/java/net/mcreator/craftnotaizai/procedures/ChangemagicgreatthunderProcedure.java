@@ -36,5 +36,6 @@ public class ChangemagicgreatthunderProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

@@ -77,18 +77,18 @@ public class BeforehitProcedure {
 		dmg = dmg * (200 / (200 + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit));
 		dmg = dmg * (200 / (200 + entity.getPersistentData().getDouble("Spirit")));
 		dmg = dmg * (25 / (25 + armor));
-		if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get())) {
-			dmg = dmg * 1.5;
-		}
-		if (entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_POSITIVE.get())) {
-			dmg = dmg * 0.5;
-		}
 		if (!(entity instanceof Player)) {
 			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
 			current_health = current_health * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth;
 			current_health = current_health - dmg;
 			current_health = current_health / (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth;
 			current_health = current_health * 20;
+			if (entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get())) {
+				dmg = dmg * 1.5;
+			}
+			if (entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_POSITIVE.get())) {
+				dmg = dmg * 0.5;
+			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) current_health);
 		} else {

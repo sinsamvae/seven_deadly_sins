@@ -21,12 +21,14 @@ import net.mcreator.craftnotaizai.entity.GuilaDemonanimatedEntity;
 import net.mcreator.craftnotaizai.entity.GuilaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GriamoreAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonHendricksonAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.GowtherStory1Entity;
 import net.mcreator.craftnotaizai.entity.GolgiusAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimated2Entity;
 import net.mcreator.craftnotaizai.entity.FriesiaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.FairyHelbremAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.DogedoEntity;
 import net.mcreator.craftnotaizai.entity.DianeAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DeadHelbramanimatedEntity;
@@ -192,6 +194,17 @@ public class MobstatsProcedure {
 			entity.getPersistentData().putDouble("strength", 280);
 			entity.getPersistentData().putDouble("Spirit", 150);
 			entity.getPersistentData().putDouble("Mana", 275);
+		}
+		if (entity instanceof DogedoEntity) {
+			entity.getPersistentData().putDouble("BP", 725);
+			entity.getPersistentData().putDouble("strength", 290);
+			entity.getPersistentData().putDouble("Spirit", 150);
+			entity.getPersistentData().putDouble("Mana", 285);
+		} else if (entity instanceof GowtherStory1Entity) {
+			entity.getPersistentData().putDouble("BP", 745);
+			entity.getPersistentData().putDouble("strength", 295);
+			entity.getPersistentData().putDouble("Spirit", 160);
+			entity.getPersistentData().putDouble("Mana", 290);
 		}
 	}
 }

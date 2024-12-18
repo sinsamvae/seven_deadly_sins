@@ -10,9 +10,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class ChangegaintProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		if (((new Object() {
 			public Entity getEntity() {
 				try {
@@ -191,7 +189,6 @@ public class ChangegaintProcedure {
 					}.getEntity()));
 				});
 			}
-			ResetMoveSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

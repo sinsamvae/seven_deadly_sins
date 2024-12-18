@@ -36,5 +36,6 @@ public class ChangemagicGodSpeedProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

@@ -36,5 +36,6 @@ public class ChangemagicHellBlazeProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

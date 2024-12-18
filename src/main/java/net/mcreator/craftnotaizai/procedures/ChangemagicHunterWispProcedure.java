@@ -36,5 +36,6 @@ public class ChangemagicHunterWispProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

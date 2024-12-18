@@ -3388,7 +3388,7 @@
             "fixedValue": "EP 10: What We Lacked"
           },
           "color": {
-            "value": -12829636,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -3406,7 +3406,7 @@
             "fixedValue": "Ban relects on his past after returning to his childhood"
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -3424,8 +3424,11 @@
             "fixedValue": "home in Ravens. Meliodas's allies train for their "
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story39"
           },
           "x": 68,
           "y": 80
@@ -3439,7 +3442,7 @@
             "fixedValue": "inevitable war with the Ten Commandments."
           },
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -3454,17 +3457,17 @@
         "data": {
           "name": "label_defeat_king",
           "text": {
-            "fixedValue": "Defeat King"
+            "fixedValue": "Defeat King in Cave Of Training"
           },
           "color": {
-            "value": -12829636,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "Story39"
           },
-          "x": 70,
-          "y": 129
+          "x": 71,
+          "y": 115
         }
       }
     ],

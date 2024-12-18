@@ -112,9 +112,9 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_demon_blood_skills"), mouseX, mouseY);
 		if (mouseX > leftPos + -94 && mouseX < leftPos + -70 && mouseY > topPos + -103 && mouseY < topPos + -79)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_learned_skills_from_magic_scroll"), mouseX, mouseY);
-		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -111 && mouseY < topPos + -87)
+		if (mouseX > leftPos + 103 && mouseX < leftPos + 127 && mouseY > topPos + -98 && mouseY < topPos + -74)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_story"), mouseX, mouseY);
-		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -87 && mouseY < topPos + -63)
+		if (mouseX > leftPos + 103 && mouseX < leftPos + 127 && mouseY > topPos + -74 && mouseY < topPos + -50)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_stats"), mouseX, mouseY);
 		if (mouseX > leftPos + -117 && mouseX < leftPos + -93 && mouseY > topPos + -69 && mouseY < topPos + -45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_reset"), mouseX, mouseY);
@@ -420,7 +420,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		});
 		guistate.put("button:imagebutton_slot", imagebutton_slot);
 		this.addRenderableWidget(imagebutton_slot);
-		imagebutton_storybook2 = new ImageButton(this.leftPos + 102, this.topPos + -102, 15, 15, 0, 0, 15, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_storybook2.png"), 15, 30, e -> {
+		imagebutton_storybook2 = new ImageButton(this.leftPos + 99, this.topPos + -102, 32, 32, 0, 0, 32, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_storybook2.png"), 32, 64, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MagicMenuButtonMessage(12, x, y, z, textstate));
 				MagicMenuButtonMessage.handleButtonAction(entity, 12, x, y, z, textstate);
@@ -428,7 +428,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		});
 		guistate.put("button:imagebutton_storybook2", imagebutton_storybook2);
 		this.addRenderableWidget(imagebutton_storybook2);
-		imagebutton_scroll = new ImageButton(this.leftPos + 102, this.topPos + -86, 15, 15, 0, 0, 15, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_scroll.png"), 15, 30, e -> {
+		imagebutton_scroll = new ImageButton(this.leftPos + 107, this.topPos + -71, 15, 15, 0, 0, 15, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_scroll.png"), 15, 30, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MagicMenuButtonMessage(13, x, y, z, textstate));
 				MagicMenuButtonMessage.handleButtonAction(entity, 13, x, y, z, textstate);

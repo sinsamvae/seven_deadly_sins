@@ -36,5 +36,6 @@ public class ChangeMagicComboStarProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

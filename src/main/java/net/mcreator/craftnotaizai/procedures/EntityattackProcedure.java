@@ -106,6 +106,23 @@ public class EntityattackProcedure {
 					if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 				}
+				if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter == true) {
+					damage = damage + (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).storeddmg;
+					{
+						boolean _setval = false;
+						sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.revengecounter = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
+					}
+					{
+						double _setval = 0;
+						sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.storeddmg = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
+					}
+				}
 				for (int index0 = 0; index0 < 2; index0++) {
 					stage = stage + 1;
 					if (stage == 1) {

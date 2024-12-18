@@ -36,5 +36,6 @@ public class ChangemagicExplosionProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

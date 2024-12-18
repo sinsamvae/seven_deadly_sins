@@ -36,5 +36,6 @@ public class ChangeMagicGoennoJujinProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

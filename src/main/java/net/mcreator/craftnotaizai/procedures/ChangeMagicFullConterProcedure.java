@@ -36,5 +36,6 @@ public class ChangeMagicFullConterProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

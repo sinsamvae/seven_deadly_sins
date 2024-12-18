@@ -76,7 +76,7 @@
           "displayCondition": {
             "name": "DisplayComboStarHit"
           },
-          "anchorPoint": "CENTER",
+          "anchorPoint": "BOTTOM_LEFT",
           "x": 4,
           "y": 219
         }
@@ -96,7 +96,7 @@
           "displayCondition": {
             "name": "LostVayneOverlay"
           },
-          "anchorPoint": "CENTER",
+          "anchorPoint": "BOTTOM_LEFT",
           "x": 4,
           "y": 219
         }
@@ -116,9 +116,29 @@
           "displayCondition": {
             "name": "RhittaReturn"
           },
-          "anchorPoint": "CENTER",
+          "anchorPoint": "BOTTOM_LEFT",
           "x": 4,
           "y": 219
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_reveng_counter_var",
+          "text": {
+            "fixedValue": "",
+            "name": "RevengCounterVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Revengecounterimage"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 218
         }
       }
     ],

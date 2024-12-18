@@ -410,12 +410,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_storybook2",
-          "image": "storybook2.png",
-          "hoveredImage": "storybookhover.png",
+          "image": "story_icon.png",
+          "hoveredImage": "story_icon_hover.png",
           "onClick": {
             "name": "Story"
           },
-          "x": 316,
+          "x": 313,
           "y": 18
         }
       },
@@ -428,8 +428,8 @@
           "onClick": {
             "name": "OpenStatsOnKeyPressed"
           },
-          "x": 316,
-          "y": 34
+          "x": 321,
+          "y": 49
         }
       },
       {
@@ -441,8 +441,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 316,
-          "y": 9
+          "x": 317,
+          "y": 22
         }
       },
       {
@@ -454,8 +454,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 316,
-          "y": 33
+          "x": 317,
+          "y": 46
         }
       },
       {

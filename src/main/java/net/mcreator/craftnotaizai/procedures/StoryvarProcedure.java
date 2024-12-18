@@ -365,6 +365,17 @@ public class StoryvarProcedure {
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();
+		} else if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story39")
+				&& (entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.KING_STORY_1.get().spawn(_level,
+						BlockPos.containing(entity.getLookAngle().x + entity.getX(), entity.getLookAngle().y + entity.getY() + entity.getBbHeight(), entity.getLookAngle().z + entity.getZ()), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
+			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
 		}
 	}
 }

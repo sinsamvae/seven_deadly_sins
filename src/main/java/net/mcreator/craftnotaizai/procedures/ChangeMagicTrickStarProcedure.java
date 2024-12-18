@@ -36,5 +36,6 @@ public class ChangeMagicTrickStarProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

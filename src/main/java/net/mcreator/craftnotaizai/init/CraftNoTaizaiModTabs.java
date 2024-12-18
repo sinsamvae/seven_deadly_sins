@@ -209,6 +209,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.SPIRALEDLANCE.get());
 				tabData.accept(CraftNoTaizaiModItems.RAPIER.get());
 				tabData.accept(CraftNoTaizaiModItems.GIL_THUNDER_SWORD.get());
+				tabData.accept(CraftNoTaizaiModItems.SEQUENCE.get());
 				tabData.accept(CraftNoTaizaiModItems.SAW_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.AXE_2.get());
 				tabData.accept(CraftNoTaizaiModItems.SAW_BLADE.get());
@@ -323,7 +324,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.GRIAMORE_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.HOWZER_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.CAIN_BARZAD_ANIMATED_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.STORY_BAN_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.JERICHO_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GUILA_DEMONANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.HELBREM_ANIMATED_SPAWN_EGG.get());
@@ -337,7 +337,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ROYAL_GURARD_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ROYAL_GUARD_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.SOLDIER_ANIMATED_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.HENDRICKSON_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.STORY_BAN_2_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.PARADA_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.DEMON_HENDRICKSON_ANIMATED_SPAWN_EGG.get());
@@ -374,6 +373,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.GLOXINA_BOSS_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.MOSS_DRAGON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ANAON_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.KING_STORY_1_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.GALAND_STORY_2_SPAWN_EGG.get());
 			})
 
 					.build());
@@ -412,7 +413,6 @@ public class CraftNoTaizaiModTabs {
 			tabData.accept(CraftNoTaizaiModItems.RAPIER.get());
 			tabData.accept(CraftNoTaizaiModItems.GIL_THUNDER_SWORD.get());
 			tabData.accept(CraftNoTaizaiModItems.HELBRUMSWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.SEQUENCE.get());
 			tabData.accept(CraftNoTaizaiModItems.SAW_SWORD.get());
 			tabData.accept(CraftNoTaizaiModItems.AXE_2.get());
 			tabData.accept(CraftNoTaizaiModItems.SAW_BLADE.get());

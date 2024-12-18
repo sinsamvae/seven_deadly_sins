@@ -16,6 +16,8 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.craftnotaizai.procedures.SkillCDProcedure;
 import net.mcreator.craftnotaizai.procedures.RhittaReturnProcedure;
 import net.mcreator.craftnotaizai.procedures.RhittaCountProcedure;
+import net.mcreator.craftnotaizai.procedures.RevengecounterimageProcedure;
+import net.mcreator.craftnotaizai.procedures.RevengCounterVarProcedure;
 import net.mcreator.craftnotaizai.procedures.RCoolDownVarProcedure;
 import net.mcreator.craftnotaizai.procedures.RCoolDownTextProcedure;
 import net.mcreator.craftnotaizai.procedures.LostVayneVarProcedure;
@@ -57,15 +59,19 @@ public class SwitchoverlayOverlay {
 			if (DisplayComboStarHitProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						ComboStarVarProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
+						ComboStarVarProcedure.execute(entity), 4, h - 21, -1, false);
 			if (LostVayneOverlayProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						LostVayneVarProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
+						LostVayneVarProcedure.execute(entity), 4, h - 21, -1, false);
 			if (RhittaReturnProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						RhittaCountProcedure.execute(entity), w / 2 + -209, h / 2 + 99, -1, false);
+						RhittaCountProcedure.execute(entity), 4, h - 21, -1, false);
+			if (RevengecounterimageProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						RevengCounterVarProcedure.execute(entity), 4, h - 22, -1, false);
 		}
 	}
 }

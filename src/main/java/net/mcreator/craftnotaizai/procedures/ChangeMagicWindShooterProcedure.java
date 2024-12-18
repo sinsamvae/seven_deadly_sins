@@ -36,5 +36,6 @@ public class ChangeMagicWindShooterProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

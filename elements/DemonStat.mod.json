@@ -269,8 +269,8 @@
           "onClick": {
             "name": "OpenMagicMenu"
           },
-          "x": 317,
-          "y": 31
+          "x": 319,
+          "y": 40
         }
       },
       {
@@ -282,8 +282,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 317,
-          "y": 30
+          "x": 316,
+          "y": 38
         }
       },
       {
@@ -295,8 +295,21 @@
           },
           "width": 24,
           "height": 24,
-          "x": 317,
-          "y": 6
+          "x": 316,
+          "y": 14
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storybook2",
+          "image": "story_icon.png",
+          "hoveredImage": "story_icon_hover.png",
+          "onClick": {
+            "name": "Story"
+          },
+          "x": 311,
+          "y": 9
         }
       },
       {
@@ -332,19 +345,6 @@
           },
           "x": 121,
           "y": 53
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_storybook2",
-          "image": "storybook2.png",
-          "hoveredImage": "storybookhover.png",
-          "onClick": {
-            "name": "Story"
-          },
-          "x": 317,
-          "y": 16
         }
       },
       {

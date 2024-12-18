@@ -5,6 +5,7 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
@@ -63,7 +64,7 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = (double) CraftNoTaizaiConfiguration.SPEED.get();
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -75,6 +76,31 @@ public class SetallstatProcedure {
 				}
 			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Agility = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.mana = _setval;
 				capability.syncPlayerVariables((new Object() {
 					public Entity getEntity() {
 						try {

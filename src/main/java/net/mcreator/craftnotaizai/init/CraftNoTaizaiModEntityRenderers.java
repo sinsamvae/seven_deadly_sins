@@ -60,6 +60,7 @@ import net.mcreator.craftnotaizai.client.renderer.MantaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.LuigiRenderer;
 import net.mcreator.craftnotaizai.client.renderer.LightningbeastProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KulumilRenderer;
+import net.mcreator.craftnotaizai.client.renderer.KingStory1Renderer;
 import net.mcreator.craftnotaizai.client.renderer.KingBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KamichigiriProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JumanjuEntityRenderer;
@@ -104,6 +105,7 @@ import net.mcreator.craftnotaizai.client.renderer.GigaFallRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GigaCrushRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GerheadeRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GeckolibKrakenRenderer;
+import net.mcreator.craftnotaizai.client.renderer.GalandStory2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.GalandRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FurkuuSutonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FrozenBreathRenderer;
@@ -313,7 +315,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DEATH_THORN.get(), DeathThornRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BASQUIAS_GUARDIAN.get(), BasquiasGuardianRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DIVINE_SLASH.get(), DivineSlashRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.ARROW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GIGA_PICK.get(), GigaPickRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GIGA_FALL.get(), GigaFallRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GIGA_CRUSH.get(), GigaCrushRenderer::new);
@@ -359,5 +360,7 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANAON.get(), AnaonRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DESTROY_FOUR_ELEMENTS.get(), DestroyFourElementsRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.KING_STORY_1.get(), KingStory1Renderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_STORY_2.get(), GalandStory2Renderer::new);
 	}
 }

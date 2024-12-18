@@ -39,7 +39,7 @@ public class EntitiesFullCounterProcedure {
 				event.setResult(Event.Result.DENY);
 			}
 			dmg = amount;
-			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), (float) (dmg * 1.5));
+			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), (float) (dmg * 1.5));
 		}
 	}
 }

@@ -36,5 +36,6 @@ public class ChangeMagicCriticalOverProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

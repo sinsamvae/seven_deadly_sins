@@ -10,9 +10,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class ChangefairyProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		if (((new Object() {
 			public Entity getEntity() {
 				try {
@@ -79,6 +77,31 @@ public class ChangefairyProcedure {
 					}
 				}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Race = _setval;
+					capability.syncPlayerVariables((new Object() {
+						public Entity getEntity() {
+							try {
+								return EntityArgument.getEntity(arguments, "Player");
+							} catch (CommandSyntaxException e) {
+								e.printStackTrace();
+								return null;
+							}
+						}
+					}.getEntity()));
+				});
+			}
+			{
+				boolean _setval = true;
+				(new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fairy = _setval;
 					capability.syncPlayerVariables((new Object() {
 						public Entity getEntity() {
 							try {
@@ -166,32 +189,6 @@ public class ChangefairyProcedure {
 					}.getEntity()));
 				});
 			}
-			{
-				boolean _setval = true;
-				(new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "Player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fairy = _setval;
-					capability.syncPlayerVariables((new Object() {
-						public Entity getEntity() {
-							try {
-								return EntityArgument.getEntity(arguments, "Player");
-							} catch (CommandSyntaxException e) {
-								e.printStackTrace();
-								return null;
-							}
-						}
-					}.getEntity()));
-				});
-			}
-			ResetMoveSlotsProcedure.execute(arguments, entity);
 		}
 	}
 }

@@ -83,7 +83,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:Golgiussword"
+              "value": "CUSTOM:GolgiusSword"
             },
             "weight": 1,
             "minCount": 1,

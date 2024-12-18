@@ -36,5 +36,6 @@ public class ChangeMagicFlickStoneProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

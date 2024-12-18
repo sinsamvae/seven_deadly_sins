@@ -10,10 +10,13 @@ import net.minecraftforge.client.DimensionSpecialEffectsManager;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
@@ -63,7 +66,7 @@ public class IstarRenderSkyBoxProcedure {
 		if (entity != null) {
 			ClientLevel level = minecraft.level;
 			Vec3 pos = entity.getPosition(partialTick);
-			return execute(null);
+			return execute(null, level.dimension());
 		}
 		return false;
 	};
@@ -480,14 +483,19 @@ public class IstarRenderSkyBoxProcedure {
 		}
 	}
 
-	public static boolean execute() {
-		return execute(null);
+	public static boolean execute(ResourceKey<Level> dimension) {
+		return execute(null, dimension);
 	}
 
-	private static boolean execute(@Nullable Event event) {
-		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-		RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "istarsky" + ".png")));
-		renderSkybox(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255, true);
+	private static boolean execute(@Nullable Event event, ResourceKey<Level> dimension) {
+		if (dimension == null)
+			return false;
+		assert Boolean.TRUE; //#dbg:IstarRenderSkyBox:render_sky
+		if (dimension == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:istar"))) {
+			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+			RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "istarsky" + ".png")));
+			renderSkybox(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255, true);
+		}
 		return true;
 	}
 }

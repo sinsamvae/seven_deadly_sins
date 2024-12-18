@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Hell Gate Red Demons",
+    "mobName": "Hell Gate Demon",
     "mobLabel": "",
     "mobModelTexture": "red-dragon1-texture.png",
     "mobModelGlowTexture": "",
@@ -51,7 +51,7 @@
     },
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 0,
+    "attackStrength": 1,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
@@ -97,10 +97,13 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": "CUSTOM:red_demon_idle"
+      "value": "CUSTOM:reddemon_idle"
     },
     "raidCelebrationSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "HellGateRedDemonsOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -126,7 +129,7 @@
     "enable8": false,
     "enable9": false,
     "enable10": false,
-    "breedable": false,
+    "breedable": true,
     "tameable": true,
     "disableDeathRotation": false,
     "headMovement": false,

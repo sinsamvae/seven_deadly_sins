@@ -495,14 +495,15 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 
 					CaveOfTrainingVarProcedure.execute(entity), -144, 22, -13369345, false);
 		if (Story39Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_10_what_we_lacked"), -146, -72, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_10_what_we_lacked"), -146, -72, -16711681, false);
 		if (Story39Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ban_relects_on_his_past_after_re"), -147, -57, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_home_in_ravens_meliodass_allie"), -146, -40, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ban_relects_on_his_past_after_re"), -147, -57, -16777216, false);
 		if (Story39Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_inevitable_war_with_the_ten_comm"), -144, -22, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_home_in_ravens_meliodass_allie"), -146, -40, -16777216, false);
 		if (Story39Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_king"), -144, 9, -12829636, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_inevitable_war_with_the_ten_comm"), -144, -22, -16777216, false);
+		if (Story39Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_king"), -143, -5, -13369345, false);
 	}
 
 	@Override

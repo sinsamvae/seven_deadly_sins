@@ -36,5 +36,6 @@ public class ChangeMaigcAuraBurstProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

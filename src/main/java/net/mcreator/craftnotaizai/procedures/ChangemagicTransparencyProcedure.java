@@ -36,5 +36,6 @@ public class ChangemagicTransparencyProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

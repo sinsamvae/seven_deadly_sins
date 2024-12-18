@@ -603,6 +603,8 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> MELIODAS_BOAR_HAT_LEGGINGS = REGISTRY.register("meliodas_boar_hat_leggings", () -> new MeliodasBoarHatItem.Leggings());
 	public static final RegistryObject<Item> GOWTHER_ARMOR_S_2_CHESTPLATE = REGISTRY.register("gowther_armor_s_2_chestplate", () -> new GowtherArmorS2Item.Chestplate());
 	public static final RegistryObject<Item> GOWTHER_ARMOR_S_2_LEGGINGS = REGISTRY.register("gowther_armor_s_2_leggings", () -> new GowtherArmorS2Item.Leggings());
+	public static final RegistryObject<Item> KING_STORY_1_SPAWN_EGG = REGISTRY.register("king_story_1_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.KING_STORY_1, -138288, -5804990, new Item.Properties()));
+	public static final RegistryObject<Item> GALAND_STORY_2_SPAWN_EGG = REGISTRY.register("galand_story_2_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GALAND_STORY_2, -8448202, -13754301, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

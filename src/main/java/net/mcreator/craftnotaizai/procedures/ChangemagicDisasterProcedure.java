@@ -61,5 +61,6 @@ public class ChangemagicDisasterProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

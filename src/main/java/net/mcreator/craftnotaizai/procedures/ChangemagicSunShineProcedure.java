@@ -36,5 +36,6 @@ public class ChangemagicSunShineProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

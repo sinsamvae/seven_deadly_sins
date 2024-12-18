@@ -36,5 +36,6 @@ public class ChangemagicBreakProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

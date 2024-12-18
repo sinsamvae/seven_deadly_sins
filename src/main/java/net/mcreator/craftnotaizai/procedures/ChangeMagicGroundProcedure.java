@@ -36,5 +36,6 @@ public class ChangeMagicGroundProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

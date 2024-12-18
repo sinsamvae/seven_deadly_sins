@@ -36,5 +36,6 @@ public class ChangemagicHellblazeFullcounterProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

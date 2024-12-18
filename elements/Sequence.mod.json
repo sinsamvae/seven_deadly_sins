@@ -5,8 +5,8 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "sequence",
-    "customModelName": "sequence:default",
+    "texture": "arthur-sword-texture",
+    "customModelName": "arthur_sword:default",
     "blockingModelName": "Normal blocking",
     "name": "Sequence",
     "specialInformation": {
@@ -14,7 +14,7 @@
     },
     "creativeTabs": [
       {
-        "value": "TOOLS"
+        "value": "CUSTOM:Weapons"
       }
     ],
     "efficiency": 2.0,

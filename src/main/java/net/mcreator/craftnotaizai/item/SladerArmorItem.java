@@ -97,7 +97,7 @@ public abstract class SladerArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_no_taizai:textures/entities/slader_armor.png";
+			return "craft_no_taizai:textures/entities/slader_new_armor.png";
 		}
 	}
 
@@ -126,7 +126,7 @@ public abstract class SladerArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_no_taizai:textures/entities/slader_armor.png";
+			return "craft_no_taizai:textures/entities/slader_new_armor.png";
 		}
 	}
 
@@ -156,7 +156,7 @@ public abstract class SladerArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craft_no_taizai:textures/entities/slader_armor.png";
+			return "craft_no_taizai:textures/entities/slader_new_armor.png";
 		}
 	}
 }

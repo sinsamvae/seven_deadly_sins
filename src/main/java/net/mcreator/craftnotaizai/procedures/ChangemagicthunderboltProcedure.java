@@ -36,5 +36,6 @@ public class ChangemagicthunderboltProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

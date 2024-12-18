@@ -33,11 +33,9 @@ public class VenomToxicityProcedure {
 		if (entity == null)
 			return;
 		double num_rep = 0;
+		double distance = 0;
 		entity.getPersistentData().putDouble("range", 0.5);
-		entity.getPersistentData().putDouble("look_x", (entity.getLookAngle().x));
-		entity.getPersistentData().putDouble("look_y", (entity.getLookAngle().y));
-		entity.getPersistentData().putDouble("look_z", (entity.getLookAngle().z));
-		for (int index0 = 0; index0 < 500; index0++) {
+		for (int index0 = 0; index0 < 40; index0++) {
 			num_rep = num_rep + 0.3;
 			CraftNoTaizaiMod.queueServerWork((int) num_rep, () -> {
 				entity.getPersistentData().putDouble("range", (entity.getPersistentData().getDouble("range") + 0.1));
@@ -71,10 +69,11 @@ public class VenomToxicityProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator) || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb)) {
-							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),
+							entityiterator.hurt(
+									new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entityiterator),
 									(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 4));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.VENOM_TOXICY_POTION.get(), 1200, 1, false, false));
+								_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.VENOM_TOXICY_POTION.get(), 100, 1, false, false));
 						}
 					}
 				}
