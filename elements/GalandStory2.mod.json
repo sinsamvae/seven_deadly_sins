@@ -55,14 +55,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 320,
+    "attackStrength": 330,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
     "armorBaseValue": 16.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 315,
+    "health": 330,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -107,10 +107,10 @@
       "value": ""
     },
     "whenMobDies": {
-      "name": "GalandEntityDies"
+      "name": "GalandStory2EntityDies"
     },
     "onMobTickUpdate": {
-      "name": "GalandOnEntityTickUpdate"
+      "name": "GalandStory2OnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

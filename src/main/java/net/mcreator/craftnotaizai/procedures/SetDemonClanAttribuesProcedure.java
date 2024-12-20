@@ -82,13 +82,6 @@ public class SetDemonClanAttribuesProcedure {
 			{
 				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.TPAmount = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 1;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.TPSwitchAmount = _setval;
 					capability.syncPlayerVariables(entity);
 				});

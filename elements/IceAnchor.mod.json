@@ -7,19 +7,19 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": ""
     },
     "igniteFire": false,
     "power": 1.0,
     "damage": 5.0,
     "knockback": 5,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "ModelKiller_iceberg",
+    "customModelTexture": "icelance.png",
     "onHitsEntity": {
-      "name": "SpiralHailProjectileHitsLivingEntity"
+      "name": "IceAnchorProjectileHitsLivingEntity"
     },
     "onFlyingTick": {
-      "name": "SpiralHailWhileProjectileFlyingTick"
+      "name": "IceAnchorWhileProjectileFlyingTick"
     }
   }
 }

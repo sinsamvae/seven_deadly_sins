@@ -72,6 +72,11 @@ public class BlizzardAxelProcedure {
 								}
 							}
 							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.WHITE.get()),
+										(entity.getPersistentData().getDouble("pX") + Math.sin(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")),
+										((entity.getPersistentData().getDouble("pY") + entity.getPersistentData().getDouble("height")) - 3),
+										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 3, 0, 0, 0, 0);
+							if (world instanceof ServerLevel _level)
 								_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ICE.get()),
 										(entity.getPersistentData().getDouble("pX") + Math.sin(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")),
 										((entity.getPersistentData().getDouble("pY") + entity.getPersistentData().getDouble("height")) - 3),

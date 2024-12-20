@@ -5,7 +5,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -39,15 +38,15 @@ public class BeforehitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getSource(), event.getEntity(), event.getAmount());
+			execute(event, event.getSource(), event.getEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
-		execute(null, world, damagesource, entity, amount);
+	public static void execute(DamageSource damagesource, Entity entity, double amount) {
+		execute(null, damagesource, entity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
+	private static void execute(@Nullable Event event, DamageSource damagesource, Entity entity, double amount) {
 		if (damagesource == null || entity == null)
 			return;
 		ItemStack weapon = ItemStack.EMPTY;
@@ -131,7 +130,7 @@ public class BeforehitProcedure {
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
 					&& !(entity instanceof Player _plrCldCheck23 && _plrCldCheck23.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 3, false, false));
 				current_health = 0.1;
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(CraftNoTaizaiModItems.ALDAN.get(), 24000);
@@ -152,19 +151,17 @@ public class BeforehitProcedure {
 			if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 				dmg = dmg * 1.3;
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")) {
-				day1 = 0;
-				day2 = 12040;
-				night1 = 12542;
-				night2 = 23000;
-				if (world.dayTime() % 24000 >= day1 && world.dayTime() % 24000 <= day2) {
-					dmg = dmg * 0.5;
-				} else if (world.dayTime() % 24000 >= night1 && world.dayTime() % 24000 <= night2) {
-					dmg = dmg * 1.5;
-				}
-			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {
 				dmg = dmg * 0.9;
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter == true) {
+				{
+					double _setval = amount + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).storeddmg;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.storeddmg = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) current_health);

@@ -38,7 +38,6 @@ import net.mcreator.craftnotaizai.entity.SunflowerEntity;
 import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.StoryBanAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.StoryBan2AnimatedEntity;
-import net.mcreator.craftnotaizai.entity.SpiralHailEntity;
 import net.mcreator.craftnotaizai.entity.SoyokazenoGekirinProjectileEntity;
 import net.mcreator.craftnotaizai.entity.SoldierAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SnowflowerbeamProjectileEntity;
@@ -91,6 +90,7 @@ import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JennaEntity;
 import net.mcreator.craftnotaizai.entity.InsectEntity;
 import net.mcreator.craftnotaizai.entity.InfernoIncantationEntity;
+import net.mcreator.craftnotaizai.entity.IceAnchorEntity;
 import net.mcreator.craftnotaizai.entity.HunterWispProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HugoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HowzerAnimatedEntity;
@@ -690,8 +690,6 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<SuperSlashEntity>of(SuperSlashEntity::new, MobCategory.MISC).setCustomClientFactory(SuperSlashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HornOfCernunosEntity>> HORN_OF_CERNUNOS = register("horn_of_cernunos", EntityType.Builder.<HornOfCernunosEntity>of(HornOfCernunosEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HornOfCernunosEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<SpiralHailEntity>> SPIRAL_HAIL = register("spiral_hail",
-			EntityType.Builder.<SpiralHailEntity>of(SpiralHailEntity::new, MobCategory.MISC).setCustomClientFactory(SpiralHailEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DogedoEntity>> DOGEDO = register("dogedo",
 			EntityType.Builder.<DogedoEntity>of(DogedoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DogedoEntity::new)
 
@@ -782,6 +780,8 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<GalandStory2Entity>of(GalandStory2Entity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandStory2Entity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<IceAnchorEntity>> ICE_ANCHOR = register("ice_anchor",
+			EntityType.Builder.<IceAnchorEntity>of(IceAnchorEntity::new, MobCategory.MISC).setCustomClientFactory(IceAnchorEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

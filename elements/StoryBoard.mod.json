@@ -3469,6 +3469,186 @@
           "x": 71,
           "y": 115
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_11_father_son",
+          "text": {
+            "fixedValue": "EP 11: Father & Son"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story40"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_frail_zhivago_reunites_wtih_ba",
+          "text": {
+            "fixedValue": "A frail Zhivago reunites Wtih Ban, his long-lost adopted"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story40"
+          },
+          "x": 69,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_son_meanwhile_a_wary_king_conf",
+          "text": {
+            "fixedValue": "son. Meanwhile, a wary King Confronts Meliodas about his"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story40"
+          },
+          "x": 68,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_intentions",
+          "text": {
+            "fixedValue": "intentions."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story40"
+          },
+          "x": 69,
+          "y": 101
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_galand1",
+          "text": {
+            "fixedValue": "Defeat Galand"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story40"
+          },
+          "x": 70,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_12_where_love_is_found",
+          "text": {
+            "fixedValue": "EP 12: Where Love Is Found"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story41"
+          },
+          "x": 68,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_revived_but_pssessed_elaine_at",
+          "text": {
+            "fixedValue": "A revived but pssessed Elaine attacks her lover, Ban,"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story41"
+          },
+          "x": 68,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_as_melascula_and_galand_of_the_t",
+          "text": {
+            "fixedValue": "as Melascula and Galand of the Ten Commandments emerge"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story41"
+          },
+          "x": 68,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_destory_those_in_their_path",
+          "text": {
+            "fixedValue": "to destory those in their path."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story41"
+          },
+          "x": 70,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_go_to_the_plains_biome",
+          "text": {
+            "fixedValue": "Go To the Plains Biome"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story41"
+          },
+          "x": 71,
+          "y": 120
+        }
       }
     ],
     "gridSettings": {

@@ -39,8 +39,8 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftnotaizai.procedures.GalandOnEntityTickUpdateProcedure;
-import net.mcreator.craftnotaizai.procedures.GalandEntityDiesProcedure;
+import net.mcreator.craftnotaizai.procedures.GalandStory2OnEntityTickUpdateProcedure;
+import net.mcreator.craftnotaizai.procedures.GalandStory2EntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class GalandStory2Entity extends Monster implements GeoEntity {
@@ -118,7 +118,7 @@ public class GalandStory2Entity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		GalandEntityDiesProcedure.execute(this.level(), this);
+		GalandStory2EntityDiesProcedure.execute(this.level(), this);
 	}
 
 	@Override
@@ -137,7 +137,7 @@ public class GalandStory2Entity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GalandOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		GalandStory2OnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -152,9 +152,9 @@ public class GalandStory2Entity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 315);
+		builder = builder.add(Attributes.MAX_HEALTH, 330);
 		builder = builder.add(Attributes.ARMOR, 16);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 320);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 330);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}

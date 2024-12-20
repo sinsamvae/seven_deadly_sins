@@ -57,6 +57,7 @@ import net.mcreator.craftnotaizai.procedures.ChangeMagicCriticalOverProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicComboStarProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicBulletSquallProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicBoostProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicBlizzardProcedure;
 
 @Mod.EventBusSubscriber
 public class ChangeMaigCommandCommand {
@@ -663,6 +664,20 @@ public class ChangeMaigCommandCommand {
 				direction = entity.getDirection();
 
 			ChangeMagicOverPowerCommandProcedure.execute(arguments);
+			return 0;
+		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Blizzard").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangeMagicBlizzardProcedure.execute(arguments);
 			return 0;
 		}))));
 	}

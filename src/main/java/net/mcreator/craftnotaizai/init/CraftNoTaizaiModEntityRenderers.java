@@ -70,6 +70,7 @@ import net.mcreator.craftnotaizai.client.renderer.JerichoDemonFormRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JerichoAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JennaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.InsectRenderer;
+import net.mcreator.craftnotaizai.client.renderer.IceAnchorRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HunterWispProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HugoAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HowzerAnimatedRenderer;
@@ -334,7 +335,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.AEAL_HEAL.get(), AealHealRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.SUPER_SLASH.get(), SuperSlashRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HORN_OF_CERNUNOS.get(), HornOfCernunosRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.SPIRAL_HAIL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DOGEDO.get(), DogedoRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GOWTHER_STORY_1.get(), GowtherStory1Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ALBION.get(), AlbionRenderer::new);
@@ -362,5 +362,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.KING_STORY_1.get(), KingStory1Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_STORY_2.get(), GalandStory2Renderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.ICE_ANCHOR.get(), IceAnchorRenderer::new);
 	}
 }

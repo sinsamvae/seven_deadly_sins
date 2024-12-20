@@ -17,6 +17,8 @@ import net.mcreator.craftnotaizai.procedures.Story7Procedure;
 import net.mcreator.craftnotaizai.procedures.Story6Procedure;
 import net.mcreator.craftnotaizai.procedures.Story5Procedure;
 import net.mcreator.craftnotaizai.procedures.Story4Procedure;
+import net.mcreator.craftnotaizai.procedures.Story41Procedure;
+import net.mcreator.craftnotaizai.procedures.Story40Procedure;
 import net.mcreator.craftnotaizai.procedures.Story3Procedure;
 import net.mcreator.craftnotaizai.procedures.Story39Procedure;
 import net.mcreator.craftnotaizai.procedures.Story38Procedure;
@@ -504,6 +506,26 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_inevitable_war_with_the_ten_comm"), -144, -22, -16777216, false);
 		if (Story39Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_king"), -143, -5, -13369345, false);
+		if (Story40Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_11_father_son"), -145, -72, -16711681, false);
+		if (Story40Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_a_frail_zhivago_reunites_wtih_ba"), -145, -57, -16777216, false);
+		if (Story40Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_son_meanwhile_a_wary_king_conf"), -146, -38, -16777216, false);
+		if (Story40Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_intentions"), -145, -19, -16777216, false);
+		if (Story40Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_galand1"), -144, 12, -13369345, false);
+		if (Story41Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_12_where_love_is_found"), -146, -71, -16711681, false);
+		if (Story41Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_a_revived_but_pssessed_elaine_at"), -146, -57, -16777216, false);
+		if (Story41Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_as_melascula_and_galand_of_the_t"), -146, -39, -16777216, false);
+		if (Story41Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_to_destory_those_in_their_path"), -144, -18, -16777216, false);
+		if (Story41Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_go_to_the_plains_biome"), -143, 0, -13369345, false);
 	}
 
 	@Override

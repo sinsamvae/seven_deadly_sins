@@ -50,6 +50,9 @@ public class KillerIceBregShotProcedure {
 					}
 				}
 				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.WHITE.get()), (entity.getX() + entity.getLookAngle().x * entity.getPersistentData().getDouble("range")),
+							(entity.getY() + 1.5 + entity.getLookAngle().y * entity.getPersistentData().getDouble("range")), (entity.getZ() + entity.getLookAngle().z * entity.getPersistentData().getDouble("range")), (int) 1.3, 0.3, 0.3, 0.3, 0.1);
+				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ICE.get()), (entity.getX() + entity.getLookAngle().x * entity.getPersistentData().getDouble("range")),
 							(entity.getY() + 1.5 + entity.getLookAngle().y * entity.getPersistentData().getDouble("range")), (entity.getZ() + entity.getLookAngle().z * entity.getPersistentData().getDouble("range")), (int) 1.3, 0.3, 0.3, 0.3, 0.1);
 				if (world instanceof ServerLevel _level)

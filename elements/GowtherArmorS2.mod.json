@@ -17,8 +17,8 @@
     ],
     "armorTextureFile": "arthurarmor",
     "helmetName": "",
-    "bodyName": "Simon Chestplate",
-    "leggingsName": "Simon Leggings",
+    "bodyName": "Gowther Chestplate",
+    "leggingsName": "Gowther Leggings",
     "bootsName": "",
     "helmetSpecialInformation": {
       "fixedValue": []
@@ -34,7 +34,7 @@
     },
     "helmetModelName": "Modelarmor",
     "helmetModelPart": "Head",
-    "helmetModelTexture": "soldier_armor.png",
+    "helmetModelTexture": "From armor",
     "bodyModelName": "Modelarmor",
     "bodyModelPart": "Body",
     "armsModelPartL": "LeftArm",

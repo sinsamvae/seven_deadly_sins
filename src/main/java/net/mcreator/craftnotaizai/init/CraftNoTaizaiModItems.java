@@ -167,6 +167,7 @@ import net.mcreator.craftnotaizai.item.BeerMugItem;
 import net.mcreator.craftnotaizai.item.BearIconItem;
 import net.mcreator.craftnotaizai.item.BasquiasItem;
 import net.mcreator.craftnotaizai.item.BanOutfitItem;
+import net.mcreator.craftnotaizai.item.BanArmorS2Item;
 import net.mcreator.craftnotaizai.item.BanArmorItem;
 import net.mcreator.craftnotaizai.item.BalorsMagicalEyeItem;
 import net.mcreator.craftnotaizai.item.BakeApplePieItem;
@@ -605,6 +606,9 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> GOWTHER_ARMOR_S_2_LEGGINGS = REGISTRY.register("gowther_armor_s_2_leggings", () -> new GowtherArmorS2Item.Leggings());
 	public static final RegistryObject<Item> KING_STORY_1_SPAWN_EGG = REGISTRY.register("king_story_1_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.KING_STORY_1, -138288, -5804990, new Item.Properties()));
 	public static final RegistryObject<Item> GALAND_STORY_2_SPAWN_EGG = REGISTRY.register("galand_story_2_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GALAND_STORY_2, -8448202, -13754301, new Item.Properties()));
+	public static final RegistryObject<Item> BAN_ARMOR_S_2_HELMET = REGISTRY.register("ban_armor_s_2_helmet", () -> new BanArmorS2Item.Helmet());
+	public static final RegistryObject<Item> BAN_ARMOR_S_2_CHESTPLATE = REGISTRY.register("ban_armor_s_2_chestplate", () -> new BanArmorS2Item.Chestplate());
+	public static final RegistryObject<Item> BAN_ARMOR_S_2_LEGGINGS = REGISTRY.register("ban_armor_s_2_leggings", () -> new BanArmorS2Item.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items
