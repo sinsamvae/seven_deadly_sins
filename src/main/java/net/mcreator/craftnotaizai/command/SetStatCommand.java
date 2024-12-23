@@ -71,7 +71,7 @@ public class SetStatCommand {
 
 					SetdexcommandProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Speed").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Agility").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

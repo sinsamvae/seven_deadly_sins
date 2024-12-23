@@ -222,9 +222,27 @@ public class CraftNoTaizaiModTabs {
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> FOODS = REGISTRY.register("foods",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.foods")).icon(() -> new ItemStack(CraftNoTaizaiModItems.UNCOOKED_DUSK.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(CraftNoTaizaiModItems.UNCOOKED_DUSK.get());
+				tabData.accept(CraftNoTaizaiModItems.COOKED_DUSK_MEAT.get());
+				tabData.accept(CraftNoTaizaiModItems.TENTACLES.get());
+				tabData.accept(CraftNoTaizaiModItems.COOKEDTENTACLES.get());
+				tabData.accept(CraftNoTaizaiModItems.APPLEPIE.get());
+				tabData.accept(CraftNoTaizaiModItems.BAKE_APPLE_PIE.get());
+				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_MEAT.get());
+				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_COOKED_MEAT.get());
+				tabData.accept(CraftNoTaizaiModItems.EARTH_CRAWLER_TAIL.get());
+				tabData.accept(CraftNoTaizaiModItems.EARTH_CRAWLER_TAIL_COOKED.get());
+				tabData.accept(CraftNoTaizaiModItems.ANGLE_CURE_MEAT.get());
+				tabData.accept(CraftNoTaizaiModItems.COOKED_ANGLE_MEAT.get());
+				tabData.accept(CraftNoTaizaiModItems.TROLL_EAR.get());
+				tabData.accept(CraftNoTaizaiModItems.MINIMUM_TABLETS.get());
+			})
+
+					.build());
 	public static final RegistryObject<CreativeModeTab> SDS_BLOCKS = REGISTRY.register("sds_blocks",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.sds_blocks")).icon(() -> new ItemStack(CraftNoTaizaiModBlocks.PERFECT_CUBE.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CraftNoTaizaiModBlocks.GLOW_BLOCK.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.CAPITALOFTHE_DEAD_BLOCK.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURPLEFIRE.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PERFECT_CUBE.get().asItem());
@@ -265,25 +283,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.TOWER_OF_TRIALS.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.CAVE_OF_TRAINING.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SIDE_MOUNTAIN.get().asItem());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> FOODS = REGISTRY.register("foods",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.foods")).icon(() -> new ItemStack(CraftNoTaizaiModItems.UNCOOKED_DUSK.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CraftNoTaizaiModItems.UNCOOKED_DUSK.get());
-				tabData.accept(CraftNoTaizaiModItems.COOKED_DUSK_MEAT.get());
-				tabData.accept(CraftNoTaizaiModItems.TENTACLES.get());
-				tabData.accept(CraftNoTaizaiModItems.COOKEDTENTACLES.get());
-				tabData.accept(CraftNoTaizaiModItems.APPLEPIE.get());
-				tabData.accept(CraftNoTaizaiModItems.BAKE_APPLE_PIE.get());
-				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_MEAT.get());
-				tabData.accept(CraftNoTaizaiModItems.EARTH_CRAWLER_TAIL.get());
-				tabData.accept(CraftNoTaizaiModItems.ANGLE_CURE_MEAT.get());
-				tabData.accept(CraftNoTaizaiModItems.COOKED_ANGLE_MEAT.get());
-				tabData.accept(CraftNoTaizaiModItems.EARTH_CRAWLER_TAIL_COOKED.get());
-				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_COOKED_MEAT.get());
-				tabData.accept(CraftNoTaizaiModItems.MINIMUM_TABLETS.get());
-				tabData.accept(CraftNoTaizaiModItems.TROLL_EAR.get());
 			})
 
 					.build());

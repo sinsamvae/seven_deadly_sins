@@ -22,7 +22,6 @@ import net.mcreator.craftnotaizai.potion.MinimumTabletsEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.ManaRegenEffetMobEffect;
 import net.mcreator.craftnotaizai.potion.KingTrumpetMobEffect;
 import net.mcreator.craftnotaizai.potion.JubakuEnsaEffectMobEffect;
-import net.mcreator.craftnotaizai.potion.JackPotionMobEffect;
 import net.mcreator.craftnotaizai.potion.HeavyMetalMobEffect;
 import net.mcreator.craftnotaizai.potion.FrezzeMobEffect;
 import net.mcreator.craftnotaizai.potion.FreezeCoffinPotionEffectMobEffect;
@@ -38,7 +37,6 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> KING_TRUMPET = REGISTRY.register("king_trumpet", () -> new KingTrumpetMobEffect());
 	public static final RegistryObject<MobEffect> BIND = REGISTRY.register("bind", () -> new BindMobEffect());
 	public static final RegistryObject<MobEffect> PURGATORY_FLAME = REGISTRY.register("purgatory_flame", () -> new PurgatoryFlameMobEffect());
-	public static final RegistryObject<MobEffect> JACK_POTION = REGISTRY.register("jack_potion", () -> new JackPotionMobEffect());
 	public static final RegistryObject<MobEffect> MINIMUM_TABLETS_EFFECT = REGISTRY.register("minimum_tablets_effect", () -> new MinimumTabletsEffectMobEffect());
 	public static final RegistryObject<MobEffect> FREEZE_COFFIN_POTION_EFFECT = REGISTRY.register("freeze_coffin_potion_effect", () -> new FreezeCoffinPotionEffectMobEffect());
 	public static final RegistryObject<MobEffect> MANA_REGEN_EFFET = REGISTRY.register("mana_regen_effet", () -> new ManaRegenEffetMobEffect());

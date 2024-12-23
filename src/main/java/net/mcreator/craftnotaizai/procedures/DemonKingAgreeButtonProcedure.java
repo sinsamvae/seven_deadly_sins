@@ -29,9 +29,16 @@ public class DemonKingAgreeButtonProcedure {
 		double drop = 0;
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).God_Chance) {
 			random = Mth.nextInt(RandomSource.create(), 1, 10);
+			{
+				boolean _setval = true;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.God_Chance = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (random == 1 && CraftNoTaizaiModVariables.MapVariables.get(world).god == false) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("You seem to have more promise i'll lend you bit more of my power"), false);
+					_player.displayClientMessage(Component.literal("You seem to have more promise i'll lend you bit more of my power!"), false);
 				{
 					boolean _setval = true;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -42,13 +49,13 @@ public class DemonKingAgreeButtonProcedure {
 				CraftNoTaizaiModVariables.MapVariables.get(world).god = true;
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.God_Chance = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+		}
+		if (CraftNoTaizaiModVariables.MapVariables.get(world).Piety == true && CraftNoTaizaiModVariables.MapVariables.get(world).Repose == true && CraftNoTaizaiModVariables.MapVariables.get(world).Patience == true
+				&& CraftNoTaizaiModVariables.MapVariables.get(world).Pacifism == true && CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness == true && CraftNoTaizaiModVariables.MapVariables.get(world).Purity == true
+				&& CraftNoTaizaiModVariables.MapVariables.get(world).Reticence == true && CraftNoTaizaiModVariables.MapVariables.get(world).Truth == true && CraftNoTaizaiModVariables.MapVariables.get(world).Faith == true
+				&& CraftNoTaizaiModVariables.MapVariables.get(world).Love == true) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("All Commandments Are Taken"), false);
 		}
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).commandment).equals("")) {
 			{
@@ -61,7 +68,9 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			commandment = Mth.nextInt(RandomSource.create(), 1, 10);
 			if (commandment == 1) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Selflessness";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -89,11 +98,11 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Selflessness Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 2) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Pacifism == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Pacifism) {
 					{
 						String _setval = "Pacifism";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -121,11 +130,13 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Pacifism Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 3) {
 				if (CraftNoTaizaiModVariables.MapVariables.get(world).Patience == false) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Patience = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Patience";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -149,17 +160,17 @@ public class DemonKingAgreeButtonProcedure {
 					}
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					CraftNoTaizaiModVariables.MapVariables.get(world).Patience = true;
-					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 				} else {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Patience Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 4) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Repose == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Repose) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Repose = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Repose";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -187,11 +198,13 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Repose Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 5) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Purity == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Purity) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Purity = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Purity";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -219,11 +232,13 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Purity Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 6) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Reticence == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Reticence) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Reticence = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Reticence";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -251,11 +266,13 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Reticence Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 7) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Faith == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Faith) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Faith = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Faith";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -280,14 +297,16 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 				} else {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Faith Has Already Been Taken Please Try Again"), false);
 					if (entity instanceof Player _player)
 						_player.closeContainer();
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 8) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Truth == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Truth) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Truth = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Truth";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -313,13 +332,15 @@ public class DemonKingAgreeButtonProcedure {
 						_player.closeContainer();
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Truth Has Already Been Taken Please Try Again"), false);
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 				}
 			}
 			if (commandment == 9) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Love == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Love) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Love = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Love";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -344,14 +365,16 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 				} else {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Love Has Already Been Taken Please Try Again"), false);
 					if (entity instanceof Player _player)
 						_player.closeContainer();
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 			if (commandment == 10) {
-				if (CraftNoTaizaiModVariables.MapVariables.get(world).Piety == false) {
+				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Piety) {
+					CraftNoTaizaiModVariables.MapVariables.get(world).Piety = true;
+					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
 						String _setval = "Piety";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -376,22 +399,17 @@ public class DemonKingAgreeButtonProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 				} else {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Piety Has Already Been Taken Please Try Again"), false);
 					if (entity instanceof Player _player)
 						_player.closeContainer();
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("Commandment Already Taken Please Try Again!"), true);
 				}
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Already Have Commandment"), false);
-		}
-		if (CraftNoTaizaiModVariables.MapVariables.get(world).Piety == true && CraftNoTaizaiModVariables.MapVariables.get(world).Repose == true && CraftNoTaizaiModVariables.MapVariables.get(world).Patience == true
-				&& CraftNoTaizaiModVariables.MapVariables.get(world).Pacifism == true && CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness == true && CraftNoTaizaiModVariables.MapVariables.get(world).Purity == true
-				&& CraftNoTaizaiModVariables.MapVariables.get(world).Reticence == true && CraftNoTaizaiModVariables.MapVariables.get(world).Truth == true && CraftNoTaizaiModVariables.MapVariables.get(world).Faith == true
-				&& CraftNoTaizaiModVariables.MapVariables.get(world).Love == true) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("All Commandments Are Taken"), false);
+			if (entity instanceof Player _player)
+				_player.closeContainer();
 		}
 	}
 }

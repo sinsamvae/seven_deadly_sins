@@ -18,14 +18,14 @@ public class IceAnchorProjectileHitsLivingEntityProcedure {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
 					(float) ((immediatesourceentity instanceof Projectile _projEnt ? _projEnt.getDeltaMovement().length() : 0) * 1.5));
 		}
-		int horizontalRadiusSquare = (int) 5 - 1;
-		int verticalRadiusSquare = (int) 5 - 1;
+		int horizontalRadiusSquare = (int) 3 - 1;
+		int verticalRadiusSquare = (int) 3 - 1;
 		int yIterationsSquare = verticalRadiusSquare;
 		for (int i = -yIterationsSquare; i <= yIterationsSquare; i++) {
 			for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
 				for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
 					// Execute the desired statements within the square/cube
-					world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.FROSTED_ICE.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.ICE.defaultBlockState(), 3);
 				}
 			}
 		}

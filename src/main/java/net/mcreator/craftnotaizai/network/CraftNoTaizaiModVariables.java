@@ -280,8 +280,11 @@ public class CraftNoTaizaiModVariables {
 			clone.tower_of_trails_cooldown = original.tower_of_trails_cooldown;
 			clone.istar_kills = original.istar_kills;
 			clone.Party = original.Party;
+			clone.HighSpeedRegeneration = original.HighSpeedRegeneration;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
+				clone.hijack = original.hijack;
+				clone.invertedKeys = original.invertedKeys;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -353,7 +356,6 @@ public class CraftNoTaizaiModVariables {
 		public static final String DATA_NAME = "craft_no_taizai_mapvars";
 		public boolean chastiefol = false;
 		public boolean fairyking = false;
-		public double fairy_king = 0;
 		public boolean choas = false;
 		public boolean fariykingtree = false;
 		public boolean immortalityworld = false;
@@ -361,7 +363,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean Gideon = false;
 		public boolean TwinBowHerritt = false;
 		public boolean Aldan = false;
-		public boolean gloxina_fairyking = false;
 		public boolean sunshine = false;
 		public boolean fullcounter = false;
 		public boolean full_counter = false;
@@ -382,6 +383,7 @@ public class CraftNoTaizaiModVariables {
 		public boolean rhitta = false;
 		public boolean Istar = false;
 		public boolean Basquias = false;
+		public boolean fairy_kings = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -392,7 +394,6 @@ public class CraftNoTaizaiModVariables {
 		public void read(CompoundTag nbt) {
 			chastiefol = nbt.getBoolean("chastiefol");
 			fairyking = nbt.getBoolean("fairyking");
-			fairy_king = nbt.getDouble("fairy_king");
 			choas = nbt.getBoolean("choas");
 			fariykingtree = nbt.getBoolean("fariykingtree");
 			immortalityworld = nbt.getBoolean("immortalityworld");
@@ -400,7 +401,6 @@ public class CraftNoTaizaiModVariables {
 			Gideon = nbt.getBoolean("Gideon");
 			TwinBowHerritt = nbt.getBoolean("TwinBowHerritt");
 			Aldan = nbt.getBoolean("Aldan");
-			gloxina_fairyking = nbt.getBoolean("gloxina_fairyking");
 			sunshine = nbt.getBoolean("sunshine");
 			fullcounter = nbt.getBoolean("fullcounter");
 			full_counter = nbt.getBoolean("full_counter");
@@ -421,13 +421,13 @@ public class CraftNoTaizaiModVariables {
 			rhitta = nbt.getBoolean("rhitta");
 			Istar = nbt.getBoolean("Istar");
 			Basquias = nbt.getBoolean("Basquias");
+			fairy_kings = nbt.getBoolean("fairy_kings");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("chastiefol", chastiefol);
 			nbt.putBoolean("fairyking", fairyking);
-			nbt.putDouble("fairy_king", fairy_king);
 			nbt.putBoolean("choas", choas);
 			nbt.putBoolean("fariykingtree", fariykingtree);
 			nbt.putBoolean("immortalityworld", immortalityworld);
@@ -435,7 +435,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("Gideon", Gideon);
 			nbt.putBoolean("TwinBowHerritt", TwinBowHerritt);
 			nbt.putBoolean("Aldan", Aldan);
-			nbt.putBoolean("gloxina_fairyking", gloxina_fairyking);
 			nbt.putBoolean("sunshine", sunshine);
 			nbt.putBoolean("fullcounter", fullcounter);
 			nbt.putBoolean("full_counter", full_counter);
@@ -456,6 +455,7 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("rhitta", rhitta);
 			nbt.putBoolean("Istar", Istar);
 			nbt.putBoolean("Basquias", Basquias);
+			nbt.putBoolean("fairy_kings", fairy_kings);
 			return nbt;
 		}
 
@@ -745,6 +745,9 @@ public class CraftNoTaizaiModVariables {
 		public double tower_of_trails_cooldown = 0;
 		public double istar_kills = 0;
 		public String Party = "\"\"";
+		public boolean hijack = false;
+		public boolean HighSpeedRegeneration = false;
+		public boolean invertedKeys = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -950,6 +953,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("tower_of_trails_cooldown", tower_of_trails_cooldown);
 			nbt.putDouble("istar_kills", istar_kills);
 			nbt.putString("Party", Party);
+			nbt.putBoolean("hijack", hijack);
+			nbt.putBoolean("HighSpeedRegeneration", HighSpeedRegeneration);
+			nbt.putBoolean("invertedKeys", invertedKeys);
 			return nbt;
 		}
 
@@ -1152,6 +1158,9 @@ public class CraftNoTaizaiModVariables {
 			tower_of_trails_cooldown = nbt.getDouble("tower_of_trails_cooldown");
 			istar_kills = nbt.getDouble("istar_kills");
 			Party = nbt.getString("Party");
+			hijack = nbt.getBoolean("hijack");
+			HighSpeedRegeneration = nbt.getBoolean("HighSpeedRegeneration");
+			invertedKeys = nbt.getBoolean("invertedKeys");
 		}
 	}
 
@@ -1382,6 +1391,9 @@ public class CraftNoTaizaiModVariables {
 					variables.tower_of_trails_cooldown = message.data.tower_of_trails_cooldown;
 					variables.istar_kills = message.data.istar_kills;
 					variables.Party = message.data.Party;
+					variables.hijack = message.data.hijack;
+					variables.HighSpeedRegeneration = message.data.HighSpeedRegeneration;
+					variables.invertedKeys = message.data.invertedKeys;
 				}
 			});
 			context.setPacketHandled(true);

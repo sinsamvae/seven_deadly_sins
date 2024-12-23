@@ -39,7 +39,7 @@ public class IceAnchorWhileProjectileFlyingTickProcedure {
 				entity.getPersistentData().putDouble("sy", (entity.getPersistentData().getDouble("sy") + entity.getPersistentData().getDouble("y+") * (-0.2)));
 				entity.getPersistentData().putDouble("sz", (entity.getPersistentData().getDouble("sz") + entity.getPersistentData().getDouble("z+") * (-0.2)));
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.WHITE.get()), x, y, z, 5, 1, 1, 1, 0.5);
+					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.WHITE.get()), x, y, z, 5, 1.5, 1.5, 1.5, 0.5);
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ICE.get()), x, y, z, 5, 1, 1, 1, 0.5);
 				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
