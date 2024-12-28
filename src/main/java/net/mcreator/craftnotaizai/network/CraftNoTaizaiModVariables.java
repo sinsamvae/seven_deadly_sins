@@ -279,12 +279,19 @@ public class CraftNoTaizaiModVariables {
 			clone.tower_of_trails = original.tower_of_trails;
 			clone.tower_of_trails_cooldown = original.tower_of_trails_cooldown;
 			clone.istar_kills = original.istar_kills;
-			clone.Party = original.Party;
 			clone.HighSpeedRegeneration = original.HighSpeedRegeneration;
+			clone.agility_percentage_lower = original.agility_percentage_lower;
+			clone.repose_timer = original.repose_timer;
+			clone.repose = original.repose;
+			clone.health_display = original.health_display;
+			clone.guild_stack = original.guild_stack;
+			clone.guild = original.guild;
+			clone.guild_number = original.guild_number;
+			clone.guild_leader = original.guild_leader;
+			clone.possession = original.possession;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
-				clone.invertedKeys = original.invertedKeys;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -744,10 +751,17 @@ public class CraftNoTaizaiModVariables {
 		public boolean tower_of_trails = false;
 		public double tower_of_trails_cooldown = 0;
 		public double istar_kills = 0;
-		public String Party = "\"\"";
 		public boolean hijack = false;
 		public boolean HighSpeedRegeneration = false;
-		public boolean invertedKeys = false;
+		public double agility_percentage_lower = 0;
+		public double repose_timer = 0;
+		public double repose = 0;
+		public boolean health_display = false;
+		public ItemStack guild_stack = ItemStack.EMPTY;
+		public String guild = "";
+		public double guild_number = 0;
+		public boolean guild_leader = false;
+		public boolean possession = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -952,10 +966,17 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("tower_of_trails", tower_of_trails);
 			nbt.putDouble("tower_of_trails_cooldown", tower_of_trails_cooldown);
 			nbt.putDouble("istar_kills", istar_kills);
-			nbt.putString("Party", Party);
 			nbt.putBoolean("hijack", hijack);
 			nbt.putBoolean("HighSpeedRegeneration", HighSpeedRegeneration);
-			nbt.putBoolean("invertedKeys", invertedKeys);
+			nbt.putDouble("agility_percentage_lower", agility_percentage_lower);
+			nbt.putDouble("repose_timer", repose_timer);
+			nbt.putDouble("repose", repose);
+			nbt.putBoolean("health_display", health_display);
+			nbt.put("guild_stack", guild_stack.save(new CompoundTag()));
+			nbt.putString("guild", guild);
+			nbt.putDouble("guild_number", guild_number);
+			nbt.putBoolean("guild_leader", guild_leader);
+			nbt.putBoolean("possession", possession);
 			return nbt;
 		}
 
@@ -1157,10 +1178,17 @@ public class CraftNoTaizaiModVariables {
 			tower_of_trails = nbt.getBoolean("tower_of_trails");
 			tower_of_trails_cooldown = nbt.getDouble("tower_of_trails_cooldown");
 			istar_kills = nbt.getDouble("istar_kills");
-			Party = nbt.getString("Party");
 			hijack = nbt.getBoolean("hijack");
 			HighSpeedRegeneration = nbt.getBoolean("HighSpeedRegeneration");
-			invertedKeys = nbt.getBoolean("invertedKeys");
+			agility_percentage_lower = nbt.getDouble("agility_percentage_lower");
+			repose_timer = nbt.getDouble("repose_timer");
+			repose = nbt.getDouble("repose");
+			health_display = nbt.getBoolean("health_display");
+			guild_stack = ItemStack.of(nbt.getCompound("guild_stack"));
+			guild = nbt.getString("guild");
+			guild_number = nbt.getDouble("guild_number");
+			guild_leader = nbt.getBoolean("guild_leader");
+			possession = nbt.getBoolean("possession");
 		}
 	}
 
@@ -1390,10 +1418,17 @@ public class CraftNoTaizaiModVariables {
 					variables.tower_of_trails = message.data.tower_of_trails;
 					variables.tower_of_trails_cooldown = message.data.tower_of_trails_cooldown;
 					variables.istar_kills = message.data.istar_kills;
-					variables.Party = message.data.Party;
 					variables.hijack = message.data.hijack;
 					variables.HighSpeedRegeneration = message.data.HighSpeedRegeneration;
-					variables.invertedKeys = message.data.invertedKeys;
+					variables.agility_percentage_lower = message.data.agility_percentage_lower;
+					variables.repose_timer = message.data.repose_timer;
+					variables.repose = message.data.repose;
+					variables.health_display = message.data.health_display;
+					variables.guild_stack = message.data.guild_stack;
+					variables.guild = message.data.guild;
+					variables.guild_number = message.data.guild_number;
+					variables.guild_leader = message.data.guild_leader;
+					variables.possession = message.data.possession;
 				}
 			});
 			context.setPacketHandled(true);

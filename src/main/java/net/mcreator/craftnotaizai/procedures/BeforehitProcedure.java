@@ -19,6 +19,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -159,6 +160,31 @@ public class BeforehitProcedure {
 					}
 				}
 			}
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) current_health);
+		} else {
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - dmg));
+		}
+		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:tamed_skills")))) {
+			dmg = amount;
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
+			} else if (event != null && event.hasResult()) {
+				event.setResult(Event.Result.DENY);
+			}
+			if (entity.getPersistentData().getBoolean("hit")) {
+				entity.getPersistentData().putBoolean("hit", false);
+				dmg = dmg + entity.getPersistentData().getDouble("deal");
+			}
+			armor = entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0;
+			dmg = dmg * (200 / (200 + entity.getPersistentData().getDouble("Spirit")));
+			dmg = dmg * (25 / (25 + armor));
+			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
+			current_health = current_health * entity.getPersistentData().getDouble("CloneHealth");
+			current_health = current_health - dmg;
+			current_health = current_health / entity.getPersistentData().getDouble("CloneHealth");
+			current_health = current_health * 20;
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) current_health);
 		} else {

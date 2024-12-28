@@ -13,7 +13,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
-import net.mcreator.craftnotaizai.procedures.StoryProcedure;
 import net.mcreator.craftnotaizai.procedures.SlotSwitchProcedure;
 import net.mcreator.craftnotaizai.procedures.ResetMoveSelectProcedure;
 import net.mcreator.craftnotaizai.procedures.OpenStatsOnKeyPressedProcedure;
@@ -140,19 +139,15 @@ public class MagicMenuButtonMessage {
 		}
 		if (buttonID == 12) {
 
-			StoryProcedure.execute(world, x, y, z, entity);
+			ResetMoveSelectProcedure.execute(entity);
 		}
 		if (buttonID == 13) {
 
-			OpenStatsOnKeyPressedProcedure.execute(world, x, y, z, entity);
+			DemonKingPageProcedure.execute(entity);
 		}
 		if (buttonID == 14) {
 
-			ResetMoveSelectProcedure.execute(entity);
-		}
-		if (buttonID == 15) {
-
-			DemonKingPageProcedure.execute(entity);
+			OpenStatsOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

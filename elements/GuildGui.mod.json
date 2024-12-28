@@ -1,0 +1,246 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_name",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 183,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member",
+          "text": {
+            "fixedValue": "Members",
+            "name": "GuildMember"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_members",
+          "text": {
+            "fixedValue": "Members"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_2",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_3",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 136
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "SlotSwitch"
+          },
+          "x": 285,
+          "y": 31
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_page",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 249,
+          "y": 33
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 291,
+          "y": 34
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_4",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_5",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 180
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1button",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "LeaveGuild"
+          },
+          "displayCondition": {
+            "name": "PlayerInGuild"
+          },
+          "x": 115,
+          "y": 191
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_leave",
+          "text": {
+            "fixedValue": "LEAVE"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PlayerInGuild"
+          },
+          "x": 134,
+          "y": 194
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "OpenStatsOnKeyPressed"
+          },
+          "x": 311,
+          "y": 25
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back",
+          "text": {
+            "fixedValue": "Back"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 309,
+          "y": 22
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

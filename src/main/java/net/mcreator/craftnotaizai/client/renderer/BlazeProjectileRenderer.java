@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.craftnotaizai.entity.BlazeProjectileEntity;
-import net.mcreator.craftnotaizai.client.model.ModelBlaze;
+import net.mcreator.craftnotaizai.client.model.Modelflame_ball;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class BlazeProjectileRenderer extends EntityRenderer<BlazeProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/sun_curel.png");
-	private final ModelBlaze model;
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/flame_ball.png");
+	private final Modelflame_ball model;
 
 	public BlazeProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new ModelBlaze(context.bakeLayer(ModelBlaze.LAYER_LOCATION));
+		model = new Modelflame_ball(context.bakeLayer(Modelflame_ball.LAYER_LOCATION));
 	}
 
 	@Override

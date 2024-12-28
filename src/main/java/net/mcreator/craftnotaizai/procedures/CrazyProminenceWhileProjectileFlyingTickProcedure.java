@@ -5,8 +5,6 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -18,13 +16,6 @@ public class CrazyProminenceWhileProjectileFlyingTickProcedure {
 		double rep = 0;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 10, 0.3, 0.3, 0.3, 0.1);
-		{
-			Entity _ent = immediatesourceentity;
-			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "particle dust 0.94 0.55 0 5 ~ ~1 ~ 0 0 0 0 1");
-			}
-		}
 		immediatesourceentity.setNoGravity(true);
 		entity.getPersistentData().putDouble("range", 0);
 		entity.getPersistentData().putDouble("sx", (entity.getX()));

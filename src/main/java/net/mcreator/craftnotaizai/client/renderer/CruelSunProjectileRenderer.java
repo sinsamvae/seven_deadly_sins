@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.craftnotaizai.entity.CruelSunProjectileEntity;
-import net.mcreator.craftnotaizai.client.model.Modelcruel_sun;
+import net.mcreator.craftnotaizai.client.model.Modelflame_ball;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class CruelSunProjectileRenderer extends EntityRenderer<CruelSunProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/cruel-sun_texture_1.png");
-	private final Modelcruel_sun model;
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/flame_ball.png");
+	private final Modelflame_ball model;
 
 	public CruelSunProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelcruel_sun(context.bakeLayer(Modelcruel_sun.LAYER_LOCATION));
+		model = new Modelflame_ball(context.bakeLayer(Modelflame_ball.LAYER_LOCATION));
 	}
 
 	@Override

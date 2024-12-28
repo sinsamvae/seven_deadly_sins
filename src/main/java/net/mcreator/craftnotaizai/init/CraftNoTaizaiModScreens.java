@@ -18,13 +18,16 @@ import net.mcreator.craftnotaizai.client.gui.TheoCaveScreen;
 import net.mcreator.craftnotaizai.client.gui.TeleportationGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.StoryBoardScreen;
 import net.mcreator.craftnotaizai.client.gui.SideQuestGuiScreen;
+import net.mcreator.craftnotaizai.client.gui.SettingsUIScreen;
 import net.mcreator.craftnotaizai.client.gui.MonsterBlockGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.MagicMenuScreen;
 import net.mcreator.craftnotaizai.client.gui.KegGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.JennaGuiScreen;
-import net.mcreator.craftnotaizai.client.gui.HumanClanScreen;
-import net.mcreator.craftnotaizai.client.gui.GaintClanScreen;
-import net.mcreator.craftnotaizai.client.gui.FairyClanScreen;
+import net.mcreator.craftnotaizai.client.gui.HumanClanUiScreen;
+import net.mcreator.craftnotaizai.client.gui.GuildGuiScreen;
+import net.mcreator.craftnotaizai.client.gui.GuildAcceptGuiScreen;
+import net.mcreator.craftnotaizai.client.gui.GiantClanScreen;
+import net.mcreator.craftnotaizai.client.gui.FairyClanUiScreen;
 import net.mcreator.craftnotaizai.client.gui.DisasterMenuScreen;
 import net.mcreator.craftnotaizai.client.gui.DemonStatScreen;
 import net.mcreator.craftnotaizai.client.gui.DemonKingGuiScreen;
@@ -40,9 +43,6 @@ public class CraftNoTaizaiModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(CraftNoTaizaiModMenus.DEMON_CLAN.get(), DemonClanScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.DEMON_STAT.get(), DemonStatScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.HUMAN_CLAN.get(), HumanClanScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.FAIRY_CLAN.get(), FairyClanScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.GAINT_CLAN.get(), GaintClanScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.STORY_BOARD.get(), StoryBoardScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.MAGIC_MENU.get(), MagicMenuScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.TELEPORTATION_GUI.get(), TeleportationGuiScreen::new);
@@ -59,6 +59,12 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.THEO_GUI.get(), TheoGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.THEO_CAVE.get(), TheoCaveScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.THEO_TOWER.get(), TheoTowerScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.SETTINGS_UI.get(), SettingsUIScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.HUMAN_CLAN_UI.get(), HumanClanUiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.GIANT_CLAN.get(), GiantClanScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.FAIRY_CLAN_UI.get(), FairyClanUiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_ACCEPT_GUI.get(), GuildAcceptGuiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_GUI.get(), GuildGuiScreen::new);
 		});
 	}
 }

@@ -7,61 +7,9 @@
     "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_magicorb",
-          "image": "magicorb.png",
-          "hoveredImage": "magicorbover.png",
-          "onClick": {
-            "name": "OpenMagicMenu"
-          },
-          "x": 363,
-          "y": 37
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_scroll",
-          "image": "scroll.png",
-          "hoveredImage": "scrollhover.png",
-          "onClick": {
-            "name": "OpenStatsOnKeyPressed"
-          },
-          "x": 363,
-          "y": 53
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_stats",
-          "text": {
-            "fixedValue": "Stats"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 363,
-          "y": 53
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_skills",
-          "text": {
-            "fixedValue": "Magic"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 363,
-          "y": 29
-        }
-      },
       {
         "type": "imagebutton",
         "data": {
@@ -96,6 +44,32 @@
           "image": "story_gui.png",
           "use1Xscale": false,
           "x": 61,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "OpenStatsOnKeyPressed"
+          },
+          "x": 363,
+          "y": 38
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back",
+          "text": {
+            "fixedValue": "Back"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 363,
           "y": 38
         }
       },
@@ -264,24 +238,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_defeat_twigo",
-          "text": {
-            "fixedValue": "Defeat Twigo"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story2"
-          },
-          "x": 71,
-          "y": 98
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_the_seven_deadly_sins",
           "text": {
             "fixedValue": "EP1: The Seven Deadly Sins"
@@ -336,6 +292,24 @@
       {
         "type": "label",
         "data": {
+          "name": "label_defeat_twigo",
+          "text": {
+            "fixedValue": "Defeat Twigo"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story2"
+          },
+          "x": 71,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
           "name": "label_ep2_the_sin_in_the_sleeping_fore",
           "text": {
             "fixedValue": "EP2-3 The Sin in the Sleeping Forest"
@@ -349,24 +323,6 @@
           },
           "x": 72,
           "y": 49
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_go_to_the_sleeping_forest_biome",
-          "text": {
-            "fixedValue": "Go To the Sleeping Forest Biome"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Start2"
-          },
-          "x": 71,
-          "y": 98
         }
       },
       {
@@ -403,6 +359,24 @@
           },
           "x": 72,
           "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_go_to_the_sleeping_forest_biome",
+          "text": {
+            "fixedValue": "Go To the Sleeping Forest Biome"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Start2"
+          },
+          "x": 71,
+          "y": 98
         }
       },
       {
@@ -485,7 +459,7 @@
             "fixedValue": "Defeat GilThunder In Sleeping Forest"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -536,10 +510,10 @@
         "data": {
           "name": "label_defect",
           "text": {
-            "fixedValue": "Defect Golgius"
+            "fixedValue": "Defeat Golgius"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -611,7 +585,7 @@
             "fixedValue": "Defeat Diane"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -683,7 +657,7 @@
             "fixedValue": "Defeat Ruin"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -755,7 +729,7 @@
             "fixedValue": "Defeat Friesia"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -827,7 +801,7 @@
             "fixedValue": "Locate Capital of the Dead"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -899,7 +873,7 @@
             "fixedValue": "Defeat Guila"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1043,7 +1017,7 @@
             "fixedValue": "Defeat Taizoo"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1061,7 +1035,7 @@
             "fixedValue": "EP 10:The Vaizel Fighting Festival Round 2"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1097,7 +1071,7 @@
             "fixedValue": "Defeat Griamore"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1115,7 +1089,7 @@
             "fixedValue": "EP 10:The Vaizel Fighting Festival Round 3"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1151,7 +1125,7 @@
             "fixedValue": "Defeat Howzer"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1169,7 +1143,7 @@
             "fixedValue": "EP 10:The Vaizel Fighting Festival Round 4"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1205,7 +1179,7 @@
             "fixedValue": "Defeat Cain Barzad"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1259,7 +1233,7 @@
             "fixedValue": "Defeat Ban"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1277,7 +1251,7 @@
             "fixedValue": "EP 11: Bloodcurdling Canon"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1349,7 +1323,7 @@
             "fixedValue": "Defeat Jericho"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1367,7 +1341,7 @@
             "fixedValue": "EP 12: Bloodcurdling Canon Part 2"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1439,7 +1413,7 @@
             "fixedValue": "Defeat Guila"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1457,7 +1431,7 @@
             "fixedValue": "EP 12: Bloodcurdling Canon Part 3"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1529,7 +1503,7 @@
             "fixedValue": "Defeat Armord Helbram"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1547,7 +1521,7 @@
             "fixedValue": "EP 13-14: Unholy Knight"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1619,7 +1593,7 @@
             "fixedValue": "Defeat Armor Giant."
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1637,7 +1611,7 @@
             "fixedValue": "EP 15-16:The First Sacrifice"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1691,7 +1665,7 @@
             "fixedValue": "Defeat 10 Holy Knights"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1728,7 +1702,7 @@
             "fixedValue": "EP 17: Even If It Costs Me My Life"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1800,7 +1774,7 @@
             "fixedValue": "Defeat Dreyfus"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1818,7 +1792,7 @@
             "fixedValue": "EP 18-19: The Fairy King Waits In Vain"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1890,7 +1864,7 @@
             "fixedValue": "Defeat Helbram"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1908,7 +1882,7 @@
             "fixedValue": "EP 20: THe Courage Charm"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1980,7 +1954,7 @@
             "fixedValue": "Defeat Hendrickson and Gilthunder."
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -1998,7 +1972,7 @@
             "fixedValue": "EP 21: The Looming Threat"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2070,7 +2044,7 @@
             "fixedValue": "Defeat Corrupted Jericho"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2088,7 +2062,7 @@
             "fixedValue": "EP 22: What I Can Do For You"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2160,7 +2134,7 @@
             "fixedValue": "Defeat Ban And Helbram"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2178,7 +2152,7 @@
             "fixedValue": "EP 22: What I Can Do For You"
           },
           "color": {
-            "value": -16724788,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2250,7 +2224,7 @@
             "fixedValue": "Defeat Ban And Helbram"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2268,7 +2242,7 @@
             "fixedValue": "EP 23: Descent Into Despair"
           },
           "color": {
-            "value": -16737895,
+            "value": -16711681,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2276,6 +2250,24 @@
           },
           "x": 72,
           "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_chased_by_the_seven_deadly_sins",
+          "text": {
+            "fixedValue": "Chased by the Seven Deadly Sins, Hendrickson makes two"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story27"
+          },
+          "x": 70,
+          "y": 65
         }
       },
       {
@@ -2304,7 +2296,7 @@
             "fixedValue": "Defeat Blood-Red Form Hendrickson"
           },
           "color": {
-            "value": -16711681,
+            "value": -13369345,
             "falpha": 0.0
           },
           "displayCondition": {
@@ -2312,24 +2304,6 @@
           },
           "x": 69,
           "y": 115
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_chased_by_the_seven_deadly_sins",
-          "text": {
-            "fixedValue": "Chased by the Seven Deadly Sins, Hendrickson makes two"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story27"
-          },
-          "x": 70,
-          "y": 65
         }
       },
       {
@@ -3583,7 +3557,7 @@
         "data": {
           "name": "label_a_revived_but_pssessed_elaine_at",
           "text": {
-            "fixedValue": "A revived but pssessed Elaine attacks her lover, Ban,"
+            "fixedValue": "After a brief encounter with Meliodas, the Ten Command"
           },
           "color": {
             "value": -16777216,
@@ -3601,7 +3575,7 @@
         "data": {
           "name": "label_as_melascula_and_galand_of_the_t",
           "text": {
-            "fixedValue": "as Melascula and Galand of the Ten Commandments emerge"
+            "fixedValue": "ments begin their attack on Britannia. A resurrected"
           },
           "color": {
             "value": -16777216,
@@ -3619,7 +3593,7 @@
         "data": {
           "name": "label_to_destory_those_in_their_path",
           "text": {
-            "fixedValue": "to destory those in their path."
+            "fixedValue": "Elaine appears before Ban."
           },
           "color": {
             "value": -16777216,
@@ -3647,6 +3621,186 @@
             "name": "Story41"
           },
           "x": 71,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_13_farewell_beloved_thief",
+          "text": {
+            "fixedValue": "EP 13: Farewell, Beloved Thief Part 1"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story42"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_revived_but_possessed_elaine_a",
+          "text": {
+            "fixedValue": "A revived but possessed Elaine attacks her lover, Ban,"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story42"
+          },
+          "x": 68,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_as_melascula_and_galand_of_the_t1",
+          "text": {
+            "fixedValue": "as Melascula And Galand of the Ten Commandments emerge"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story42"
+          },
+          "x": 68,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_destory_those_in_their_path1",
+          "text": {
+            "fixedValue": "to destory those in their path"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story42"
+          },
+          "x": 70,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_elaine",
+          "text": {
+            "fixedValue": "Defeat Elaine"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story42"
+          },
+          "x": 70,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_13_farewell_beloved_thief_p",
+          "text": {
+            "fixedValue": "EP 13: Farewell, Beloved Thief Part 2"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 68,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_revived_but_possessed_elaine_a1",
+          "text": {
+            "fixedValue": "A revived but possessed Elaine attacks her lover, Ban,"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 68,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_as_melascula_and_galand_of_the_t2",
+          "text": {
+            "fixedValue": "as Melascula And Galand of the Ten Commandments emerge"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 69,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_destory_those_in_their_path2",
+          "text": {
+            "fixedValue": "to destory those in their path"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 69,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_elaine1",
+          "text": {
+            "fixedValue": "Defeat Melascula"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 70,
           "y": 120
         }
       }

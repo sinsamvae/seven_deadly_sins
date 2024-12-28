@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.craftnotaizai.entity.HellBlaze2Entity;
-import net.mcreator.craftnotaizai.client.model.ModelBlaze;
+import net.mcreator.craftnotaizai.client.model.Modelflame_ball;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class HellBlaze2Renderer extends EntityRenderer<HellBlaze2Entity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/hellblaze.png");
-	private final ModelBlaze model;
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/hell_blaze_fire.png");
+	private final Modelflame_ball model;
 
 	public HellBlaze2Renderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new ModelBlaze(context.bakeLayer(ModelBlaze.LAYER_LOCATION));
+		model = new Modelflame_ball(context.bakeLayer(Modelflame_ball.LAYER_LOCATION));
 	}
 
 	@Override

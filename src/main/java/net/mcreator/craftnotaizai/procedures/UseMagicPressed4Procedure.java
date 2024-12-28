@@ -9,7 +9,7 @@ public class UseMagicPressed4Procedure {
 			return;
 		ChaosKeyBindProcedure.execute(world, y, entity);
 		DisasterKeybindProcedure.execute(world, x, y, z, entity);
-		GroundKeyBindProcedure.execute(world, y, entity);
+		GroundKeyBindProcedure.execute(world, x, y, z, entity);
 		CurseKeyBindProcedure.execute(world, entity);
 		FullCounterKeyBindProcedure.execute(world, x, y, z, entity);
 		HellGateKeyBindProcedure.execute(world, x, y, z, entity);

@@ -7,9 +7,22 @@
     "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storybook2",
+          "image": "story_icon.png",
+          "hoveredImage": "story_icon_hover.png",
+          "onClick": {
+            "name": "Story"
+          },
+          "x": 313,
+          "y": 11
+        }
+      },
       {
         "type": "image",
         "data": {
@@ -269,8 +282,8 @@
           "onClick": {
             "name": "OpenMagicMenu"
           },
-          "x": 319,
-          "y": 40
+          "x": 321,
+          "y": 43
         }
       },
       {
@@ -283,7 +296,7 @@
           "width": 24,
           "height": 24,
           "x": 316,
-          "y": 38
+          "y": 40
         }
       },
       {
@@ -296,20 +309,7 @@
           "width": 24,
           "height": 24,
           "x": 316,
-          "y": 14
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_storybook2",
-          "image": "story_icon.png",
-          "hoveredImage": "story_icon_hover.png",
-          "onClick": {
-            "name": "Story"
-          },
-          "x": 311,
-          "y": 9
+          "y": 15
         }
       },
       {
@@ -356,8 +356,8 @@
           "scale": 35,
           "rotationX": 0,
           "followMouseMovement": true,
-          "x": 258,
-          "y": 124
+          "x": 246,
+          "y": 149
         }
       },
       {
@@ -410,6 +410,58 @@
           "height": 24,
           "x": 111,
           "y": 143
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_settings",
+          "text": {
+            "fixedValue": "Settings"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 316,
+          "y": 66
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_settings",
+          "image": "settings.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenSettingUi"
+          },
+          "x": 315,
+          "y": 62
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_guild",
+          "image": "guild.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenGuildGui"
+          },
+          "x": 313,
+          "y": 91
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_guild",
+          "text": {
+            "fixedValue": "Guild"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 317,
+          "y": 96
         }
       }
     ],

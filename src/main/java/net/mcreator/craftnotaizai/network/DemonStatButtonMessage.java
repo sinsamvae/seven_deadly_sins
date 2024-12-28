@@ -19,7 +19,9 @@ import net.mcreator.craftnotaizai.procedures.TPStrProcedure;
 import net.mcreator.craftnotaizai.procedures.TPHpProcedure;
 import net.mcreator.craftnotaizai.procedures.TPAgilityProcedure;
 import net.mcreator.craftnotaizai.procedures.StoryProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenSettingUiProcedure;
 import net.mcreator.craftnotaizai.procedures.OpenMagicMenuProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenGuildGuiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -83,31 +85,39 @@ public class DemonStatButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			TPStrProcedure.execute(entity);
+			StoryProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			TPHpProcedure.execute(entity);
+			TPStrProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			TpmanaProcedure.execute(entity);
+			TPHpProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			TpSwitchAmountProcedure.execute(entity);
+			TpmanaProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			TPAgilityProcedure.execute(entity);
+			TpSwitchAmountProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenMagicMenuProcedure.execute(world, x, y, z, entity);
+			TPAgilityProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
-			StoryProcedure.execute(world, x, y, z, entity);
+			OpenMagicMenuProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 7) {
+
+			OpenSettingUiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 8) {
+
+			OpenGuildGuiProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

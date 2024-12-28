@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class DriftBombProjectileRenderer extends EntityRenderer<DriftBombProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/sun_curel.png");
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/flame_ball.png");
 	private final ModelDrift_Bomb model;
 
 	public DriftBombProjectileRenderer(EntityRendererProvider.Context context) {

@@ -39,7 +39,7 @@ public class SetHumanMagicProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1045);
+			RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1090);
 			if (RandomMagic <= 70) {
 				{
 					String _setval = "Wind Shooter";
@@ -248,7 +248,7 @@ public class SetHumanMagicProcedure {
 					CraftNoTaizaiModVariables.MapVariables.get(world).sunshine = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 				} else {
-					RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1010);
+					RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1055);
 					if (RandomMagic <= 70) {
 						{
 							String _setval = "Wind Shooter";
@@ -441,6 +441,15 @@ public class SetHumanMagicProcedure {
 							boolean _setval = true;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.elizbethArk = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+					if (RandomMagic >= 1010 && RandomMagic <= 1055) {
+						{
+							String _setval = "OverPower";
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.magic = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
@@ -459,7 +468,7 @@ public class SetHumanMagicProcedure {
 					CraftNoTaizaiModVariables.MapVariables.get(world).choas = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 				} else {
-					RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1010);
+					RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1055);
 					if (RandomMagic <= 70) {
 						{
 							String _setval = "Wind Shooter";
@@ -656,6 +665,24 @@ public class SetHumanMagicProcedure {
 							});
 						}
 					}
+					if (RandomMagic >= 1010 && RandomMagic <= 1055) {
+						{
+							String _setval = "OverPower";
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.magic = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				}
+			}
+			if (RandomMagic >= 1045 && RandomMagic <= 1090) {
+				{
+					String _setval = "OverPower";
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.magic = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		}

@@ -40,13 +40,15 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 	private final int x, y, z;
 	private final Player entity;
 	private final static HashMap<String, String> textstate = new HashMap<>();
+	ImageButton imagebutton_storybook2;
 	ImageButton imagebutton_statplusbutton;
 	ImageButton imagebutton_statplusbutton1;
 	ImageButton imagebutton_statplusbutton2;
 	ImageButton imagebutton_statplusbutton3;
 	ImageButton imagebutton_statplusbutton4;
 	ImageButton imagebutton_magicorb;
-	ImageButton imagebutton_storybook2;
+	ImageButton imagebutton_settings;
+	ImageButton imagebutton_guild;
 
 	public DemonStatScreen(DemonStatMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -59,19 +61,17 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 		this.imageHeight = 0;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/screens/demon_stat.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (ReturnEnitiyProcedure.execute(entity) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 54, this.topPos + 24, 35, 0f + (float) Math.atan((this.leftPos + 54 - mouseX) / 40.0), (float) Math.atan((this.topPos + -25 - mouseY) / 40.0), livingEntity);
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 42, this.topPos + 49, 35, 0f + (float) Math.atan((this.leftPos + 42 - mouseX) / 40.0), (float) Math.atan((this.topPos + 0 - mouseY) / 40.0), livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -82 && mouseY < topPos + -58)
+		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -80 && mouseY < topPos + -56)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_skills"), mouseX, mouseY);
-		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -106 && mouseY < topPos + -82)
+		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -105 && mouseY < topPos + -81)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_story"), mouseX, mouseY);
 		if (mouseX > leftPos + -103 && mouseX < leftPos + -79 && mouseY > topPos + -49 && mouseY < topPos + -25)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_increase_strength"), mouseX, mouseY);
@@ -81,6 +81,10 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_increase_speed"), mouseX, mouseY);
 		if (mouseX > leftPos + -103 && mouseX < leftPos + -79 && mouseY > topPos + 23 && mouseY < topPos + 47)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_increase_maxmana_mana_damage"), mouseX, mouseY);
+		if (mouseX > leftPos + 102 && mouseX < leftPos + 126 && mouseY > topPos + -54 && mouseY < topPos + -30)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_settings"), mouseX, mouseY);
+		if (mouseX > leftPos + 103 && mouseX < leftPos + 127 && mouseY > topPos + -24 && mouseY < topPos + 0)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.demon_stat.tooltip_guild"), mouseX, mouseY);
 	}
 
 	@Override
@@ -88,7 +92,6 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -94, this.topPos + -105, 0, 0, 196, 186, 196, 186);
 
@@ -151,61 +154,77 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_statplusbutton = new ImageButton(this.leftPos + -93, this.topPos + -42, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton.png"), 13, 26, e -> {
+		imagebutton_storybook2 = new ImageButton(this.leftPos + 99, this.topPos + -109, 32, 32, 0, 0, 32, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_storybook2.png"), 32, 64, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(0, x, y, z, textstate));
 				DemonStatButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+			}
+		});
+		guistate.put("button:imagebutton_storybook2", imagebutton_storybook2);
+		this.addRenderableWidget(imagebutton_storybook2);
+		imagebutton_statplusbutton = new ImageButton(this.leftPos + -93, this.topPos + -42, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton.png"), 13, 26, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(1, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_statplusbutton", imagebutton_statplusbutton);
 		this.addRenderableWidget(imagebutton_statplusbutton);
 		imagebutton_statplusbutton1 = new ImageButton(this.leftPos + -93, this.topPos + -20, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton1.png"), 13, 26, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(1, x, y, z, textstate));
-				DemonStatButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(2, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_statplusbutton1", imagebutton_statplusbutton1);
 		this.addRenderableWidget(imagebutton_statplusbutton1);
 		imagebutton_statplusbutton2 = new ImageButton(this.leftPos + -93, this.topPos + 25, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton2.png"), 13, 26, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(2, x, y, z, textstate));
-				DemonStatButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(3, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_statplusbutton2", imagebutton_statplusbutton2);
 		this.addRenderableWidget(imagebutton_statplusbutton2);
 		imagebutton_statplusbutton3 = new ImageButton(this.leftPos + -17, this.topPos + 68, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton3.png"), 13, 26, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(3, x, y, z, textstate));
-				DemonStatButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(4, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_statplusbutton3", imagebutton_statplusbutton3);
 		this.addRenderableWidget(imagebutton_statplusbutton3);
 		imagebutton_statplusbutton4 = new ImageButton(this.leftPos + -93, this.topPos + 2, 13, 13, 0, 0, 13, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_statplusbutton4.png"), 13, 26, e -> {
 			if (true) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(4, x, y, z, textstate));
-				DemonStatButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
-			}
-		});
-		guistate.put("button:imagebutton_statplusbutton4", imagebutton_statplusbutton4);
-		this.addRenderableWidget(imagebutton_statplusbutton4);
-		imagebutton_magicorb = new ImageButton(this.leftPos + 105, this.topPos + -80, 15, 15, 0, 0, 15, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_magicorb.png"), 15, 30, e -> {
-			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(5, x, y, z, textstate));
 				DemonStatButtonMessage.handleButtonAction(entity, 5, x, y, z, textstate);
 			}
 		});
-		guistate.put("button:imagebutton_magicorb", imagebutton_magicorb);
-		this.addRenderableWidget(imagebutton_magicorb);
-		imagebutton_storybook2 = new ImageButton(this.leftPos + 97, this.topPos + -111, 32, 32, 0, 0, 32, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_storybook2.png"), 32, 64, e -> {
+		guistate.put("button:imagebutton_statplusbutton4", imagebutton_statplusbutton4);
+		this.addRenderableWidget(imagebutton_statplusbutton4);
+		imagebutton_magicorb = new ImageButton(this.leftPos + 107, this.topPos + -77, 15, 15, 0, 0, 15, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_magicorb.png"), 15, 30, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(6, x, y, z, textstate));
 				DemonStatButtonMessage.handleButtonAction(entity, 6, x, y, z, textstate);
 			}
 		});
-		guistate.put("button:imagebutton_storybook2", imagebutton_storybook2);
-		this.addRenderableWidget(imagebutton_storybook2);
+		guistate.put("button:imagebutton_magicorb", imagebutton_magicorb);
+		this.addRenderableWidget(imagebutton_magicorb);
+		imagebutton_settings = new ImageButton(this.leftPos + 101, this.topPos + -58, 32, 32, 0, 0, 32, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_settings.png"), 32, 64, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(7, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 7, x, y, z, textstate);
+			}
+		});
+		guistate.put("button:imagebutton_settings", imagebutton_settings);
+		this.addRenderableWidget(imagebutton_settings);
+		imagebutton_guild = new ImageButton(this.leftPos + 99, this.topPos + -29, 32, 32, 0, 0, 32, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_guild.png"), 32, 64, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new DemonStatButtonMessage(8, x, y, z, textstate));
+				DemonStatButtonMessage.handleButtonAction(entity, 8, x, y, z, textstate);
+			}
+		});
+		guistate.put("button:imagebutton_guild", imagebutton_guild);
+		this.addRenderableWidget(imagebutton_guild);
 	}
 }

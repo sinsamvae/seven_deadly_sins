@@ -46,9 +46,9 @@ public class PlayerFirstJoinsProcedure {
 		double RandomRace = 0;
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
 			{
-				boolean _setval = true;
+				double _setval = 10;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.PlayerFirstJoins = _setval;
+					capability.agility_percentage_lower = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -96,6 +96,13 @@ public class PlayerFirstJoinsProcedure {
 					});
 				}
 				{
+					double _setval = 1;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TPAmount = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
 					boolean _setval = false;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.learn_skills = _setval;
@@ -131,6 +138,13 @@ public class PlayerFirstJoinsProcedure {
 					});
 				}
 			} else {
+				{
+					boolean _setval = true;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.PlayerFirstJoins = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				RandomRace = Mth.nextInt(RandomSource.create(), 1, 4);
 				if (RandomRace == 1) {
 					{
@@ -195,6 +209,13 @@ public class PlayerFirstJoinsProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+				}
+				{
+					double _setval = 1;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TPAmount = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 				{
 					double _setval = 1;

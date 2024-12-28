@@ -92,7 +92,6 @@ import net.mcreator.craftnotaizai.item.HighTierSoulsItem;
 import net.mcreator.craftnotaizai.item.HendriksonSwordItem;
 import net.mcreator.craftnotaizai.item.HendricksonArmorItem;
 import net.mcreator.craftnotaizai.item.HellblazeOmegaItem;
-import net.mcreator.craftnotaizai.item.HellBlazeItem;
 import net.mcreator.craftnotaizai.item.HelbrumswordItem;
 import net.mcreator.craftnotaizai.item.HelbrumArmorItem;
 import net.mcreator.craftnotaizai.item.HeatForkItem;
@@ -133,7 +132,6 @@ import net.mcreator.craftnotaizai.item.EmptyMugItem;
 import net.mcreator.craftnotaizai.item.EmbraceoftheThunderGodItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailCookedItem;
-import net.mcreator.craftnotaizai.item.DriftBombItem;
 import net.mcreator.craftnotaizai.item.DreyfusSwordItem;
 import net.mcreator.craftnotaizai.item.DreyfusArmorItem;
 import net.mcreator.craftnotaizai.item.DragonIconItem;
@@ -157,11 +155,9 @@ import net.mcreator.craftnotaizai.item.ChaosDimensionItem;
 import net.mcreator.craftnotaizai.item.CarbonSteelItem;
 import net.mcreator.craftnotaizai.item.CainArmorItem;
 import net.mcreator.craftnotaizai.item.BritanniaCoinsItem;
-import net.mcreator.craftnotaizai.item.BrilliantDetonationItem;
 import net.mcreator.craftnotaizai.item.BreakthroughItem;
 import net.mcreator.craftnotaizai.item.BowItem;
 import net.mcreator.craftnotaizai.item.BoarHatOutfitItem;
-import net.mcreator.craftnotaizai.item.BlazeItem;
 import net.mcreator.craftnotaizai.item.BellStaffItem;
 import net.mcreator.craftnotaizai.item.BeerMugItem;
 import net.mcreator.craftnotaizai.item.BearIconItem;
@@ -274,16 +270,12 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BAR_DOOR = doubleBlock(CraftNoTaizaiModBlocks.BAR_DOOR);
 	public static final RegistryObject<Item> HAY_BALE_ROOF = block(CraftNoTaizaiModBlocks.HAY_BALE_ROOF);
 	public static final RegistryObject<Item> AREA_GROUND = block(CraftNoTaizaiModBlocks.AREA_GROUND);
-	public static final RegistryObject<Item> BLAZE = REGISTRY.register("blaze", () -> new BlazeItem());
-	public static final RegistryObject<Item> HELL_BLAZE = REGISTRY.register("hell_blaze", () -> new HellBlazeItem());
 	public static final RegistryObject<Item> HELLBLAZE_OMEGA = REGISTRY.register("hellblaze_omega", () -> new HellblazeOmegaItem());
 	public static final RegistryObject<Item> EVILHOUND = REGISTRY.register("evilhound", () -> new EvilhoundItem());
 	public static final RegistryObject<Item> WHIRL_SHOCK = REGISTRY.register("whirl_shock", () -> new WhirlShockItem());
 	public static final RegistryObject<Item> BREAKTHROUGH = REGISTRY.register("breakthrough", () -> new BreakthroughItem());
 	public static final RegistryObject<Item> LIGHTNINGBEAST = REGISTRY.register("lightningbeast", () -> new LightningbeastItem());
 	public static final RegistryObject<Item> EMBRACEOFTHE_THUNDER_GOD = REGISTRY.register("embraceofthe_thunder_god", () -> new EmbraceoftheThunderGodItem());
-	public static final RegistryObject<Item> DRIFT_BOMB = REGISTRY.register("drift_bomb", () -> new DriftBombItem());
-	public static final RegistryObject<Item> BRILLIANT_DETONATION = REGISTRY.register("brilliant_detonation", () -> new BrilliantDetonationItem());
 	public static final RegistryObject<Item> JETHAMMER = REGISTRY.register("jethammer", () -> new JethammerItem());
 	public static final RegistryObject<Item> SNOWFLOWERBEAM = REGISTRY.register("snowflowerbeam", () -> new SnowflowerbeamItem());
 	public static final RegistryObject<Item> RAKAN = REGISTRY.register("rakan", () -> new RakanItem());
@@ -609,6 +601,8 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BAN_ARMOR_S_2_HELMET = REGISTRY.register("ban_armor_s_2_helmet", () -> new BanArmorS2Item.Helmet());
 	public static final RegistryObject<Item> BAN_ARMOR_S_2_CHESTPLATE = REGISTRY.register("ban_armor_s_2_chestplate", () -> new BanArmorS2Item.Chestplate());
 	public static final RegistryObject<Item> BAN_ARMOR_S_2_LEGGINGS = REGISTRY.register("ban_armor_s_2_leggings", () -> new BanArmorS2Item.Leggings());
+	public static final RegistryObject<Item> ELAINE_STORY_SPAWN_EGG = REGISTRY.register("elaine_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ELAINE_STORY, -14212306, -8181720, new Item.Properties()));
+	public static final RegistryObject<Item> MELASCULA_STORY_SPAWN_EGG = REGISTRY.register("melascula_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MELASCULA_STORY, -1004088, -1843996, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

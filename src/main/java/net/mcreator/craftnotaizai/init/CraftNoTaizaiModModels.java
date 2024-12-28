@@ -60,6 +60,7 @@ import net.mcreator.craftnotaizai.client.model.Modelgloxiana_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgilthunder_armor;
 import net.mcreator.craftnotaizai.client.model.Modelgear_spirit_spear_rm;
 import net.mcreator.craftnotaizai.client.model.Modelgear_spirit_spear;
+import net.mcreator.craftnotaizai.client.model.Modelflame_ball;
 import net.mcreator.craftnotaizai.client.model.Modelfakeball;
 import net.mcreator.craftnotaizai.client.model.Modelemeraldocto;
 import net.mcreator.craftnotaizai.client.model.Modelelaine_wing3;
@@ -118,6 +119,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelkings_spear.LAYER_LOCATION, Modelkings_spear::createBodyLayer);
 		event.registerLayerDefinition(Modelincrease_true_spirt_spear.LAYER_LOCATION, Modelincrease_true_spirt_spear::createBodyLayer);
 		event.registerLayerDefinition(Modelminecraftskin.LAYER_LOCATION, Modelminecraftskin::createBodyLayer);
+		event.registerLayerDefinition(Modelflame_ball.LAYER_LOCATION, Modelflame_ball::createBodyLayer);
 		event.registerLayerDefinition(ModelHellFire5.LAYER_LOCATION, ModelHellFire5::createBodyLayer);
 		event.registerLayerDefinition(Modelnew_helbram_wings.LAYER_LOCATION, Modelnew_helbram_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelhowzer_armor.LAYER_LOCATION, Modelhowzer_armor::createBodyLayer);
@@ -160,8 +162,8 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelkillericebergb.LAYER_LOCATION, Modelkillericebergb::createBodyLayer);
 		event.registerLayerDefinition(Modeltwigoandsword.LAYER_LOCATION, Modeltwigoandsword::createBodyLayer);
 		event.registerLayerDefinition(Modelhelbram_wings3.LAYER_LOCATION, Modelhelbram_wings3::createBodyLayer);
-		event.registerLayerDefinition(Modelyggdra_armor.LAYER_LOCATION, Modelyggdra_armor::createBodyLayer);
 		event.registerLayerDefinition(ModelDrift_Bomb.LAYER_LOCATION, ModelDrift_Bomb::createBodyLayer);
+		event.registerLayerDefinition(Modelyggdra_armor.LAYER_LOCATION, Modelyggdra_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelminecraftmob.LAYER_LOCATION, Modelminecraftmob::createBodyLayer);
 		event.registerLayerDefinition(Modelmantaray.LAYER_LOCATION, Modelmantaray::createBodyLayer);
 		event.registerLayerDefinition(Modelking_boss.LAYER_LOCATION, Modelking_boss::createBodyLayer);

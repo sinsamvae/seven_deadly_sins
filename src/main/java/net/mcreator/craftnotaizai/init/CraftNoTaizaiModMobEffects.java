@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftnotaizai.potion.VenomToxicyPotionMobEffect;
+import net.mcreator.craftnotaizai.potion.SelflessnessEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PurgatoryFlameMobEffect;
 import net.mcreator.craftnotaizai.potion.PowerAmplifyEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PhysicalHuntPositiveMobEffect;
@@ -50,4 +51,5 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_NEGITIVE = REGISTRY.register("physical_hunt_negitive", () -> new PhysicalHuntNegitiveMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICAL_HUNT_POSITIVE = REGISTRY.register("physical_hunt_positive", () -> new PhysicalHuntPositiveMobEffect());
 	public static final RegistryObject<MobEffect> OVER_POWER_EFFECT = REGISTRY.register("over_power_effect", () -> new OverPowerEffectMobEffect());
+	public static final RegistryObject<MobEffect> SELFLESSNESS_EFFECT = REGISTRY.register("selflessness_effect", () -> new SelflessnessEffectMobEffect());
 }

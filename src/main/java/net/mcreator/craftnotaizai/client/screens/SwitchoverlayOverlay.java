@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.procedures.SkillCDProcedure;
+import net.mcreator.craftnotaizai.procedures.SelflessnessReturnProcedure;
 import net.mcreator.craftnotaizai.procedures.RhittaReturnProcedure;
 import net.mcreator.craftnotaizai.procedures.RhittaCountProcedure;
 import net.mcreator.craftnotaizai.procedures.RevengecounterimageProcedure;
@@ -49,9 +50,10 @@ public class SwitchoverlayOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						RCoolDownVarProcedure.execute(entity), w / 2 + -33, h / 2 + -1, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+			if (SelflessnessReturnProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					AbilityDisplayProcedure.execute(entity), 4, h - 35, -1, false);
+						AbilityDisplayProcedure.execute(entity), 4, h - 35, -1, false);
 			if (CoolDownReturnProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

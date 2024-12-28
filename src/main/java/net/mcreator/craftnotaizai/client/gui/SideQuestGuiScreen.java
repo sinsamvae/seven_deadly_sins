@@ -37,8 +37,6 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 		this.imageHeight = 0;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/screens/side_quest_gui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
@@ -51,7 +49,6 @@ public class SideQuestGuiScreen extends AbstractContainerScreen<SideQuestGuiMenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/side_quset.png"), this.leftPos + -70, this.topPos + -95, 0, 0, 140, 190, 140, 190);
 

@@ -54,6 +54,7 @@ import net.mcreator.craftnotaizai.client.renderer.MossDragonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MoonRoseRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MerlinBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MeliodasBossAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.MelasculaStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MatronaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MarmasRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MantaRenderer;
@@ -120,6 +121,7 @@ import net.mcreator.craftnotaizai.client.renderer.FairyHelbremAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ExterminateRayProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EvilhoundProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EscanorBossRenderer;
+import net.mcreator.craftnotaizai.client.renderer.ElaineStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ElaineRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EarthGolemRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EarthCrawlerRenderer;
@@ -363,5 +365,7 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.KING_STORY_1.get(), KingStory1Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_STORY_2.get(), GalandStory2Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ICE_ANCHOR.get(), IceAnchorRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.ELAINE_STORY.get(), ElaineStoryRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.MELASCULA_STORY.get(), MelasculaStoryRenderer::new);
 	}
 }

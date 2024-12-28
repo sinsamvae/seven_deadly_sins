@@ -70,6 +70,7 @@ import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
 import net.mcreator.craftnotaizai.entity.MatronaEntity;
 import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.MantaEntity;
@@ -142,6 +143,7 @@ import net.mcreator.craftnotaizai.entity.EvilhoundProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EscanorBossEntity;
 import net.mcreator.craftnotaizai.entity.EnergyArrowEntity;
 import net.mcreator.craftnotaizai.entity.EmbraceoftheThunderGodProjectileEntity;
+import net.mcreator.craftnotaizai.entity.ElaineStoryEntity;
 import net.mcreator.craftnotaizai.entity.ElaineEntity;
 import net.mcreator.craftnotaizai.entity.EarthGolemEntity;
 import net.mcreator.craftnotaizai.entity.EarthCrawlerEntity;
@@ -414,7 +416,7 @@ public class CraftNoTaizaiModEntities {
 	public static final RegistryObject<EntityType<EarthGolemEntity>> EARTH_GOLEM = register("earth_golem",
 			EntityType.Builder.<EarthGolemEntity>of(EarthGolemEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthGolemEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.7f, 2.5f));
 	public static final RegistryObject<EntityType<PainEditionEntity>> PAIN_EDITION = register("pain_edition",
 			EntityType.Builder.<PainEditionEntity>of(PainEditionEntity::new, MobCategory.MISC).setCustomClientFactory(PainEditionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PainEdition2Entity>> PAIN_EDITION_2 = register("pain_edition_2",
@@ -782,6 +784,14 @@ public class CraftNoTaizaiModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<IceAnchorEntity>> ICE_ANCHOR = register("ice_anchor",
 			EntityType.Builder.<IceAnchorEntity>of(IceAnchorEntity::new, MobCategory.MISC).setCustomClientFactory(IceAnchorEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ElaineStoryEntity>> ELAINE_STORY = register("elaine_story",
+			EntityType.Builder.<ElaineStoryEntity>of(ElaineStoryEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElaineStoryEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MelasculaStoryEntity>> MELASCULA_STORY = register("melascula_story",
+			EntityType.Builder.<MelasculaStoryEntity>of(MelasculaStoryEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MelasculaStoryEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -917,6 +927,8 @@ public class CraftNoTaizaiModEntities {
 			OminousNebulaEnitiyEntity.init();
 			KingStory1Entity.init();
 			GalandStory2Entity.init();
+			ElaineStoryEntity.init();
+			MelasculaStoryEntity.init();
 		});
 	}
 
@@ -1049,5 +1061,7 @@ public class CraftNoTaizaiModEntities {
 		event.put(OMINOUS_NEBULA_ENITIY.get(), OminousNebulaEnitiyEntity.createAttributes().build());
 		event.put(KING_STORY_1.get(), KingStory1Entity.createAttributes().build());
 		event.put(GALAND_STORY_2.get(), GalandStory2Entity.createAttributes().build());
+		event.put(ELAINE_STORY.get(), ElaineStoryEntity.createAttributes().build());
+		event.put(MELASCULA_STORY.get(), MelasculaStoryEntity.createAttributes().build());
 	}
 }

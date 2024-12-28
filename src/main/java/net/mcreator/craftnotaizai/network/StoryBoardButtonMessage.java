@@ -15,7 +15,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.world.inventory.StoryBoardMenu;
 import net.mcreator.craftnotaizai.procedures.StoryvarProcedure;
 import net.mcreator.craftnotaizai.procedures.OpenStatsOnKeyPressedProcedure;
-import net.mcreator.craftnotaizai.procedures.OpenMagicMenuProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -79,15 +78,11 @@ public class StoryBoardButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			OpenMagicMenuProcedure.execute(world, x, y, z, entity);
+			StoryvarProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
 			OpenStatsOnKeyPressedProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			StoryvarProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

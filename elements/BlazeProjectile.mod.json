@@ -13,8 +13,8 @@
     "power": 0.0,
     "damage": 0.0,
     "knockback": 0,
-    "entityModel": "ModelBlaze",
-    "customModelTexture": "sun_curel.png",
+    "entityModel": "Modelflame_ball",
+    "customModelTexture": "flame_ball.png",
     "onHitsBlock": {
       "name": "BlazeProjectileHitsBlock"
     },

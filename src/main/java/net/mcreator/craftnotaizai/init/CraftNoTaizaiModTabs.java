@@ -377,6 +377,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ANAON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.KING_STORY_1_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GALAND_STORY_2_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.ELAINE_STORY_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.MELASCULA_STORY_SPAWN_EGG.get());
 			})
 
 					.build());

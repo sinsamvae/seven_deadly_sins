@@ -7,7 +7,7 @@
     "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -404,58 +404,6 @@
           },
           "x": 258,
           "y": 181
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_storybook2",
-          "image": "story_icon.png",
-          "hoveredImage": "story_icon_hover.png",
-          "onClick": {
-            "name": "Story"
-          },
-          "x": 313,
-          "y": 18
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_scroll",
-          "image": "scroll.png",
-          "hoveredImage": "scrollhover.png",
-          "onClick": {
-            "name": "OpenStatsOnKeyPressed"
-          },
-          "x": 321,
-          "y": 49
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_story",
-          "text": {
-            "fixedValue": "Story"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 317,
-          "y": 22
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_stats",
-          "text": {
-            "fixedValue": "Stats"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 317,
-          "y": 46
         }
       },
       {
@@ -1115,6 +1063,32 @@
           },
           "x": 252,
           "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart1",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "OpenStatsOnKeyPressed"
+          },
+          "x": 317,
+          "y": 18
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back",
+          "text": {
+            "fixedValue": "Back"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 315,
+          "y": 16
         }
       }
     ],

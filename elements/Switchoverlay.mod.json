@@ -36,6 +36,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "SelflessnessReturn"
+          },
           "anchorPoint": "BOTTOM_LEFT",
           "x": 4,
           "y": 205

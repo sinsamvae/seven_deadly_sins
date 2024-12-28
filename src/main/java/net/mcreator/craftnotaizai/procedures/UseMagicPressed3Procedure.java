@@ -15,7 +15,7 @@ public class UseMagicPressed3Procedure {
 		MiracleWindKeyPressProcedure.execute(world, x, y, z, entity);
 		BlazeBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		InfinityBindOnKeyPressedProcedure.execute(world, entity);
-		CreationbindOnKeyPressedProcedure.execute(world, y, entity);
+		CreationbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		SnatchBindOnKeyPressedProcedure.execute(world, entity);
 		InvasionBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		SunshinekeypressProcedure.execute(world, x, y, z, entity);
