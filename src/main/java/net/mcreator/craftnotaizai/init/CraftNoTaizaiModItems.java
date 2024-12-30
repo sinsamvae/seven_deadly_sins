@@ -173,6 +173,7 @@ import net.mcreator.craftnotaizai.item.AndreArmorItem;
 import net.mcreator.craftnotaizai.item.AldanItem;
 import net.mcreator.craftnotaizai.item.AgaveSeedsItem;
 import net.mcreator.craftnotaizai.item.AgaveItem;
+import net.mcreator.craftnotaizai.block.display.RhittaBlockDisplayItem;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class CraftNoTaizaiModItems {
@@ -596,7 +597,8 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BAN_ARMOR_S_2_CHESTPLATE = REGISTRY.register("ban_armor_s_2_chestplate", () -> new BanArmorS2Item.Chestplate());
 	public static final RegistryObject<Item> BAN_ARMOR_S_2_LEGGINGS = REGISTRY.register("ban_armor_s_2_leggings", () -> new BanArmorS2Item.Leggings());
 	public static final RegistryObject<Item> ELAINE_STORY_SPAWN_EGG = REGISTRY.register("elaine_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ELAINE_STORY, -14212306, -8181720, new Item.Properties()));
-	public static final RegistryObject<Item> MELASCULA_STORY_SPAWN_EGG = REGISTRY.register("melascula_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MELASCULA_STORY, -1004088, -1843996, new Item.Properties()));
+	public static final RegistryObject<Item> RHITTA_BLOCK = REGISTRY.register(CraftNoTaizaiModBlocks.RHITTA_BLOCK.getId().getPath(), () -> new RhittaBlockDisplayItem(CraftNoTaizaiModBlocks.RHITTA_BLOCK.get(), new Item.Properties()));
+	public static final RegistryObject<Item> GALAND_OVER_SPAWN_EGG = REGISTRY.register("galand_over_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GALAND_OVER, -8448202, -13754301, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

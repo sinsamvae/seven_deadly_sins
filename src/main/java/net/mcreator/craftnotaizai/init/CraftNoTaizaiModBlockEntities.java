@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.craftnotaizai.block.entity.StageTwoAgaveBlockEntity;
 import net.mcreator.craftnotaizai.block.entity.StageOneAgaveBlockEntity;
+import net.mcreator.craftnotaizai.block.entity.RhittaBlockTileEntity;
 import net.mcreator.craftnotaizai.block.entity.PerfectCubeBlockEntity;
 import net.mcreator.craftnotaizai.block.entity.LastStageAgaveBlockEntity;
 import net.mcreator.craftnotaizai.block.entity.KegBlockEntity;
@@ -27,6 +28,7 @@ public class CraftNoTaizaiModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> STAGE_ONE_AGAVE = register("stage_one_agave", CraftNoTaizaiModBlocks.STAGE_ONE_AGAVE, StageOneAgaveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> STAGE_TWO_AGAVE = register("stage_two_agave", CraftNoTaizaiModBlocks.STAGE_TWO_AGAVE, StageTwoAgaveBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> LAST_STAGE_AGAVE = register("last_stage_agave", CraftNoTaizaiModBlocks.LAST_STAGE_AGAVE, LastStageAgaveBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<RhittaBlockTileEntity>> RHITTA_BLOCK = REGISTRY.register("rhitta_block", () -> BlockEntityType.Builder.of(RhittaBlockTileEntity::new, CraftNoTaizaiModBlocks.RHITTA_BLOCK.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

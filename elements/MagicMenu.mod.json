@@ -105,8 +105,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 238,
-          "y": 166
+          "x": 249,
+          "y": 180
         }
       },
       {
@@ -389,21 +389,6 @@
           },
           "x": 237,
           "y": 177
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_slot",
-          "text": {
-            "fixedValue": "Slot"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 258,
-          "y": 181
         }
       },
       {

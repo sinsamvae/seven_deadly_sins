@@ -282,6 +282,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.TOWER_OF_TRIALS.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.CAVE_OF_TRAINING.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SIDE_MOUNTAIN.get().asItem());
+				tabData.accept(CraftNoTaizaiModBlocks.RHITTA_BLOCK.get().asItem());
 			})
 
 					.build());
@@ -313,9 +314,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.CLAY_DRAGON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.MURAMO_DEMON_FORM_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ANDRE_DEMON_FORM_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.TWIGO_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GRAY_DEMON_ENTITY_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.GIL_THUNDER_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GOLGIUS_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.DIANE_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.RUIN_ANIMATED_SPAWN_EGG.get());
@@ -323,7 +322,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.GUILA_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.TAIZOO_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GRIAMORE_ANIMATED_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.HOWZER_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.CAIN_BARZAD_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.JERICHO_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GUILA_DEMONANIMATED_SPAWN_EGG.get());
@@ -377,7 +375,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.KING_STORY_1_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GALAND_STORY_2_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ELAINE_STORY_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.MELASCULA_STORY_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.GALAND_OVER_SPAWN_EGG.get());
 			})
 
 					.build());

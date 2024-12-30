@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle"
+    }
+  }
+}

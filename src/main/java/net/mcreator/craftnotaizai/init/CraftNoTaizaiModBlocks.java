@@ -20,6 +20,7 @@ import net.mcreator.craftnotaizai.block.SleepingForestSlabBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestPlankBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestDirtBlock;
 import net.mcreator.craftnotaizai.block.SideMountainBlock;
+import net.mcreator.craftnotaizai.block.RhittaBlockBlock;
 import net.mcreator.craftnotaizai.block.PurgatoryStairBlock;
 import net.mcreator.craftnotaizai.block.PurgatorySlabBlock;
 import net.mcreator.craftnotaizai.block.PurgatoryBrickStairBlock;
@@ -118,6 +119,7 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> SIDE_MOUNTAIN = REGISTRY.register("side_mountain", () -> new SideMountainBlock());
 	public static final RegistryObject<Block> ISTAR_PORTAL_BLOCK = REGISTRY.register("istar_portal_block", () -> new IstarPortalBlockBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_PLANK = REGISTRY.register("sleeping_forest_plank", () -> new SleepingForestPlankBlock());
+	public static final RegistryObject<Block> RHITTA_BLOCK = REGISTRY.register("rhitta_block", () -> new RhittaBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

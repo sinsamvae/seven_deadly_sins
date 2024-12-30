@@ -16,5 +16,6 @@ public class UseMagicPressed4Procedure {
 		OminousNebulaKeyBindProcedure.execute(world, x, y, z, entity);
 		GodKeyBindProcedure.execute(entity);
 		BlizzardKeyBindProcedure.execute(entity);
+		ArkKeyBindProcedure.execute(world, entity);
 	}
 }

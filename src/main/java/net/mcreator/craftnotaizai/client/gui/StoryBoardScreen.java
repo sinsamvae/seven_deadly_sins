@@ -533,15 +533,15 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 		if (Story42Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_elaine"), -144, -1, -13369345, false);
 		if (Story43Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_13_farewell_beloved_thief_p"), -146, -71, -16711681, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_14_master_of_the_sun"), -146, -72, -16711681, false);
 		if (Story43Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_a_revived_but_possessed_elaine_a1"), -146, -57, -16777216, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_jericho_carries_severely_injured"), -147, -57, -16777216, false);
 		if (Story43Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_as_melascula_and_galand_of_the_t2"), -145, -40, -16777216, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_back_while_escaping_from_galand"), -146, -40, -16777216, false);
 		if (Story43Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_to_destory_those_in_their_path2"), -145, -23, -16777216, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_stumbling_into_a_bar_deep_inside"), -145, -19, -16777216, false);
 		if (Story43Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_elaine1"), -144, 0, -13369345, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_galand2"), -144, 0, -13369345, false);
 	}
 
 	@Override

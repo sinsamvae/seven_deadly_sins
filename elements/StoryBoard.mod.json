@@ -3629,7 +3629,7 @@
         "data": {
           "name": "label_ep_13_farewell_beloved_thief",
           "text": {
-            "fixedValue": "EP 13: Farewell, Beloved Thief Part 1"
+            "fixedValue": "EP 13: Farewell, Beloved Thief"
           },
           "color": {
             "value": -16711681,
@@ -3717,9 +3717,9 @@
       {
         "type": "label",
         "data": {
-          "name": "label_ep_13_farewell_beloved_thief_p",
+          "name": "label_ep_14_master_of_the_sun",
           "text": {
-            "fixedValue": "EP 13: Farewell, Beloved Thief Part 2"
+            "fixedValue": "EP 14: Master of the Sun"
           },
           "color": {
             "value": -16711681,
@@ -3729,15 +3729,33 @@
             "name": "Story43"
           },
           "x": 68,
-          "y": 49
+          "y": 48
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_a_revived_but_possessed_elaine_a1",
+          "name": "label_jericho_carries_severely_injured",
           "text": {
-            "fixedValue": "A revived but possessed Elaine attacks her lover, Ban,"
+            "fixedValue": "Jericho carries severely injured Ban and Elaine on her"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story43"
+          },
+          "x": 67,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_back_while_escaping_from_galand",
+          "text": {
+            "fixedValue": "back while escaping from Galand and Melacula before"
           },
           "color": {
             "value": -16777216,
@@ -3747,33 +3765,15 @@
             "name": "Story43"
           },
           "x": 68,
-          "y": 63
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_as_melascula_and_galand_of_the_t2",
-          "text": {
-            "fixedValue": "as Melascula And Galand of the Ten Commandments emerge"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story43"
-          },
-          "x": 69,
           "y": 80
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_to_destory_those_in_their_path2",
+          "name": "label_stumbling_into_a_bar_deep_inside",
           "text": {
-            "fixedValue": "to destory those in their path"
+            "fixedValue": "stumbling into a bar deep inside a cave."
           },
           "color": {
             "value": -16777216,
@@ -3783,15 +3783,15 @@
             "name": "Story43"
           },
           "x": 69,
-          "y": 97
+          "y": 101
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_defeat_elaine1",
+          "name": "label_defeat_galand2",
           "text": {
-            "fixedValue": "Defeat Melascula"
+            "fixedValue": "Defeat Galand"
           },
           "color": {
             "value": -13369345,

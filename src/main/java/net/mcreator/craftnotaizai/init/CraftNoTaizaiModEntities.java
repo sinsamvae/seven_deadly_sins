@@ -70,7 +70,6 @@ import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
 import net.mcreator.craftnotaizai.entity.MatronaEntity;
 import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.MantaEntity;
@@ -128,6 +127,7 @@ import net.mcreator.craftnotaizai.entity.GigaCrushEntity;
 import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
+import net.mcreator.craftnotaizai.entity.GalandOverEntity;
 import net.mcreator.craftnotaizai.entity.GalandEntity;
 import net.mcreator.craftnotaizai.entity.FurkuuSutonEntity;
 import net.mcreator.craftnotaizai.entity.FrozenBreathEntity;
@@ -788,8 +788,8 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<ElaineStoryEntity>of(ElaineStoryEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElaineStoryEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<MelasculaStoryEntity>> MELASCULA_STORY = register("melascula_story",
-			EntityType.Builder.<MelasculaStoryEntity>of(MelasculaStoryEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MelasculaStoryEntity::new)
+	public static final RegistryObject<EntityType<GalandOverEntity>> GALAND_OVER = register("galand_over",
+			EntityType.Builder.<GalandOverEntity>of(GalandOverEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandOverEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -928,7 +928,7 @@ public class CraftNoTaizaiModEntities {
 			KingStory1Entity.init();
 			GalandStory2Entity.init();
 			ElaineStoryEntity.init();
-			MelasculaStoryEntity.init();
+			GalandOverEntity.init();
 		});
 	}
 
@@ -1062,6 +1062,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(KING_STORY_1.get(), KingStory1Entity.createAttributes().build());
 		event.put(GALAND_STORY_2.get(), GalandStory2Entity.createAttributes().build());
 		event.put(ELAINE_STORY.get(), ElaineStoryEntity.createAttributes().build());
-		event.put(MELASCULA_STORY.get(), MelasculaStoryEntity.createAttributes().build());
+		event.put(GALAND_OVER.get(), GalandOverEntity.createAttributes().build());
 	}
 }

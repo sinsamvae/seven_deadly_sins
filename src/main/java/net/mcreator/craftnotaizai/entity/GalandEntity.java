@@ -143,7 +143,7 @@ public class GalandEntity extends Monster implements GeoEntity {
 
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 2.5);
+		return super.getDimensions(p_33597_).scale((float) 1.5);
 	}
 
 	public static void init() {

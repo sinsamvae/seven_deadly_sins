@@ -153,7 +153,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 				DisplayMagicProcedure.execute(entity), -87, -56, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DisplaySlotProcedure.execute(entity), 24, 46, -1, false);
+				DisplaySlotProcedure.execute(entity), 35, 60, -1, false);
 		if (DisplaySlot1Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
@@ -186,7 +186,6 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 			guiGraphics.drawString(this.font,
 
 					DisplayAbility8Procedure.execute(entity), -80, 53, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.magic_menu.label_slot"), 44, 61, -1, false);
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 

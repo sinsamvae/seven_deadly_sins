@@ -37,7 +37,6 @@ import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
 import net.mcreator.craftnotaizai.entity.MatronaEntity;
 import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.KulumilEntity;
@@ -78,6 +77,7 @@ import net.mcreator.craftnotaizai.entity.GigaCrushEntity;
 import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
+import net.mcreator.craftnotaizai.entity.GalandOverEntity;
 import net.mcreator.craftnotaizai.entity.GalandEntity;
 import net.mcreator.craftnotaizai.entity.FriesiaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.FairyHelbremAnimatedEntity;
@@ -883,7 +883,7 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof MelasculaStoryEntity syncable) {
+			if (event.getEntity() instanceof GalandOverEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

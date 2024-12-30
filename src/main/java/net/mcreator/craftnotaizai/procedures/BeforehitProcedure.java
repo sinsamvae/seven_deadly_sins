@@ -19,7 +19,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -65,9 +64,6 @@ public class BeforehitProcedure {
 		double n = 0;
 		double damage = 0;
 		double stage = 0;
-		double night2 = 0;
-		double day2 = 0;
-		double day1 = 0;
 		dmg = amount;
 		if (event != null && event.isCancelable()) {
 			event.setCanceled(true);
@@ -80,7 +76,6 @@ public class BeforehitProcedure {
 		}
 		armor = entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0;
 		dmg = dmg * (200 / (200 + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit));
-		dmg = dmg * (200 / (200 + entity.getPersistentData().getDouble("Spirit")));
 		dmg = dmg * (25 / (25 + armor));
 		if (entity instanceof Player) {
 			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
@@ -116,7 +111,7 @@ public class BeforehitProcedure {
 			}
 			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get()
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
-					&& !(entity instanceof Player _plrCldCheck16 && _plrCldCheck16.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
+					&& !(entity instanceof Player _plrCldCheck15 && _plrCldCheck15.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 3, false, false));
 				current_health = 0.1;
@@ -124,7 +119,7 @@ public class BeforehitProcedure {
 					_player.getCooldowns().addCooldown(CraftNoTaizaiModItems.ALDAN.get(), 24000);
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).immortality == true && Math.floor(current_health) <= 0
-					&& !(entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get()))) {
+					&& !(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get()))) {
 				current_health = 0.1;
 			}
 			if (entity.getPersistentData().getBoolean("infinity") == true && Math.floor(current_health) <= 0) {
@@ -133,10 +128,10 @@ public class BeforehitProcedure {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).infinity_use == true && Math.floor(current_health) <= 0) {
 				current_health = 0.1;
 			}
-			if (entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
+			if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
 				dmg = dmg * 1.1;
 			}
-			if (entity instanceof LivingEntity _livEnt22 && _livEnt22.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
+			if (entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 				dmg = dmg * 1.3;
 			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {
@@ -160,31 +155,6 @@ public class BeforehitProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth((float) current_health);
-		} else {
-			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - dmg));
-		}
-		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:tamed_skills")))) {
-			dmg = amount;
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
-			}
-			if (entity.getPersistentData().getBoolean("hit")) {
-				entity.getPersistentData().putBoolean("hit", false);
-				dmg = dmg + entity.getPersistentData().getDouble("deal");
-			}
-			armor = entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0;
-			dmg = dmg * (200 / (200 + entity.getPersistentData().getDouble("Spirit")));
-			dmg = dmg * (25 / (25 + armor));
-			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
-			current_health = current_health * entity.getPersistentData().getDouble("CloneHealth");
-			current_health = current_health - dmg;
-			current_health = current_health / entity.getPersistentData().getDouble("CloneHealth");
-			current_health = current_health * 20;
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) current_health);
 		} else {

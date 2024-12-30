@@ -1,6 +1,9 @@
 
 package net.mcreator.craftnotaizai.block;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -14,12 +17,17 @@ import net.mcreator.craftnotaizai.procedures.IstarPortalBlockEntityCollidesInThe
 
 public class IstarPortalBlockBlock extends Block {
 	public IstarPortalBlockBlock() {
-		super(BlockBehaviour.Properties.of().air().sound(SoundType.EMPTY).strength(1f, 10f).noCollission());
+		super(BlockBehaviour.Properties.of().air().sound(SoundType.EMPTY).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
 	}
 
 	@Override

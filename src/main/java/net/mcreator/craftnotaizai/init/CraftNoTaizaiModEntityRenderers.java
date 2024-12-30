@@ -54,7 +54,6 @@ import net.mcreator.craftnotaizai.client.renderer.MossDragonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MoonRoseRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MerlinBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MeliodasBossAnimatedRenderer;
-import net.mcreator.craftnotaizai.client.renderer.MelasculaStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MatronaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MarmasRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MantaRenderer;
@@ -109,6 +108,7 @@ import net.mcreator.craftnotaizai.client.renderer.GerheadeRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GeckolibKrakenRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GalandStory2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.GalandRenderer;
+import net.mcreator.craftnotaizai.client.renderer.GalandOverRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FurkuuSutonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FrozenBreathRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FriesiaAnimatedRenderer;
@@ -366,6 +366,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_STORY_2.get(), GalandStory2Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ICE_ANCHOR.get(), IceAnchorRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ELAINE_STORY.get(), ElaineStoryRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.MELASCULA_STORY.get(), MelasculaStoryRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_OVER.get(), GalandOverRenderer::new);
 	}
 }
