@@ -85,15 +85,15 @@ public class DemonStatButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			StoryProcedure.execute(world, x, y, z, entity);
+			TPStrProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			TPStrProcedure.execute(entity);
+			TPHpProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			TPHpProcedure.execute(entity);
+			TPAgilityProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
@@ -105,7 +105,7 @@ public class DemonStatButtonMessage {
 		}
 		if (buttonID == 5) {
 
-			TPAgilityProcedure.execute(entity);
+			StoryProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 6) {
 

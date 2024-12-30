@@ -18,7 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class EarthGolemRenderer extends GeoEntityRenderer<EarthGolemEntity> {
 	public EarthGolemRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new EarthGolemModel());
-		this.shadowRadius = 0.7f;
+		this.shadowRadius = 1f;
 	}
 
 	@Override

@@ -469,7 +469,7 @@ public class ChangeMaigCommandCommand {
 
 			ChangemagicHunterWispProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Hellblaze_Fullcounter").executes(arguments -> {
+		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("MagicalFullCounter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

@@ -397,33 +397,35 @@ public class RenderProcedure {
 	private static void execute(@Nullable Event event) {
 		double health = 0;
 		double maximumhealth = 0;
-		if (target(2)) {
-			if (Minecraft.getInstance().player != null) {
-				Entity entity = Minecraft.getInstance().player;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				LevelAccessor world = entity.level();
-				ResourceKey<Level> dimension = entity.level().dimension();
-				renderTexts(
-						("HP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).health) + "/"
-								+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth)),
-						55, 17, 0, 0, (float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
-				renderTexts(
-						("MP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana) + "/"
-								+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana)),
-						57, 26, 0, 0, (float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
-				renderTexts(("BP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BP)), 25, 8, 0, 0,
-						(float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
-				renderTexts(
-						("XP: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp) + "/"
-								+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level
-										* (10 + Math.floor((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 5)))),
-						95, 32, 0, 0, (float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
-				renderTexts(("Level: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level)), 13, 32, 0, 0,
-						(float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+		if (Minecraft.getInstance().screen == null) {
+			if (target(2)) {
+				if (Minecraft.getInstance().player != null) {
+					Entity entity = Minecraft.getInstance().player;
+					double x = entity.getX();
+					double y = entity.getY();
+					double z = entity.getZ();
+					LevelAccessor world = entity.level();
+					ResourceKey<Level> dimension = entity.level().dimension();
+					renderTexts(
+							("HP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).health) + "/"
+									+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth)),
+							55, 17, 0, 0, (float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+					renderTexts(
+							("MP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana) + "/"
+									+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana)),
+							57, 26, 0, 0, (float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+					renderTexts(("BP: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BP)), 25, 8, 0, 0,
+							(float) 0.8, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+					renderTexts(
+							("XP: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp) + "/"
+									+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level
+											* (10 + Math.floor((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 5)))),
+							95, 32, 0, 0, (float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+					renderTexts(("Level: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level)), 13, 32, 0, 0,
+							(float) 0.6, 255 << 24 | 255 << 16 | 255 << 8 | 255, 0);
+				}
+				release();
 			}
-			release();
 		}
 	}
 }

@@ -46,7 +46,7 @@ public class PlayerFirstJoinsProcedure {
 		double RandomRace = 0;
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
 			{
-				double _setval = 10;
+				double _setval = 100;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.agility_percentage_lower = _setval;
 					capability.syncPlayerVariables(entity);

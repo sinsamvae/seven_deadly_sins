@@ -12,7 +12,7 @@ import com.mojang.brigadier.context.CommandContext;
 public class ChangemagicHellblazeFullcounterProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			String _setval = "Hellblaze_Fullcounter";
+			String _setval = "Full Counter";
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -24,6 +24,31 @@ public class ChangemagicHellblazeFullcounterProcedure {
 				}
 			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.magic = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			boolean _setval = true;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MagicalCounter = _setval;
 				capability.syncPlayerVariables((new Object() {
 					public Entity getEntity() {
 						try {

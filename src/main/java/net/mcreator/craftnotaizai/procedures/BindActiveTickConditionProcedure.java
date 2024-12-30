@@ -19,7 +19,7 @@ public class BindActiveTickConditionProcedure {
 		double particleAmount = 0;
 		double step = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 1, 10000, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 1, 255, false, false));
 		loop = 0;
 		particleAmount = 16;
 		xRadius = 1;

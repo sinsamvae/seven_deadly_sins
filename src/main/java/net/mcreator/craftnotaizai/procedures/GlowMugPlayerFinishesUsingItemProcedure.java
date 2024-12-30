@@ -16,9 +16,12 @@ public class GlowMugPlayerFinishesUsingItemProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 1200, 3, false, false));
+			_entity.addEffect(
+					new MobEffectInstance(MobEffects.CONFUSION, 1200, (int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.CONFUSION) ? _livEnt.getEffect(MobEffects.CONFUSION).getAmplifier() : 0) + 2), false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.MANA_REGEN_EFFET.get(), 1200, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.MANA_REGEN_EFFET.get(), 1200,
+					(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CraftNoTaizaiModMobEffects.MANA_REGEN_EFFET.get()) ? _livEnt.getEffect(CraftNoTaizaiModMobEffects.MANA_REGEN_EFFET.get()).getAmplifier() : 0) + 1), false,
+					false));
 		if (entity instanceof LivingEntity _entity) {
 			ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.EMPTY_MUG.get()).copy();
 			_setstack.setCount(1);

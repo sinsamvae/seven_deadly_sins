@@ -33,13 +33,15 @@
     "enableMeleeDamage": true,
     "damageVsEntity": 10.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Right Click To Hypnotized"
+      ]
     },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onEntitySwing": {
+    "onRightClickedInAir": {
       "name": "BellStaffLivingEntityIsHitWithItem"
     },
     "isFood": false,

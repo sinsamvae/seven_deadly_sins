@@ -35,9 +35,6 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "Chastiefol2Rightclicked"
-    },
-    "onEntitySwing": {
-      "name": "Chastiefol2EntitySwingsItem"
     }
   }
 }

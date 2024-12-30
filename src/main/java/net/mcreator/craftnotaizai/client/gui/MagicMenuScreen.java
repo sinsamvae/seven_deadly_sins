@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.procedures.SetSlotButtonProcedure;
+import net.mcreator.craftnotaizai.procedures.ReturnPossessionProcedure;
 import net.mcreator.craftnotaizai.procedures.ReturnPageProcedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill4Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill3Procedure;
@@ -87,6 +88,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 	ImageButton imagebutton_restart;
 	ImageButton imagebutton_berserk_mode;
 	ImageButton imagebutton_restart1;
+	ImageButton imagebutton_goddess_particle_7;
 
 	public MagicMenuScreen(MagicMenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -116,6 +118,8 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_demon_king_magic"), mouseX, mouseY);
 		if (mouseX > leftPos + 101 && mouseX < leftPos + 125 && mouseY > topPos + -104 && mouseY < topPos + -80)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_back"), mouseX, mouseY);
+		if (mouseX > leftPos + -70 && mouseX < leftPos + -46 && mouseY > topPos + -79 && mouseY < topPos + -55)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_goddess"), mouseX, mouseY);
 	}
 
 	@Override
@@ -444,5 +448,15 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		});
 		guistate.put("button:imagebutton_restart1", imagebutton_restart1);
 		this.addRenderableWidget(imagebutton_restart1);
+		imagebutton_goddess_particle_7 = new ImageButton(this.leftPos + -69, this.topPos + -77, 20, 20, 0, 0, 20, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_goddess_particle_7.png"), 20, 40, e -> {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ReturnPossessionProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_goddess_particle_7", imagebutton_goddess_particle_7);
+		this.addRenderableWidget(imagebutton_goddess_particle_7);
 	}
 }

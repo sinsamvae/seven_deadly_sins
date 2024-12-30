@@ -289,6 +289,7 @@ public class CraftNoTaizaiModVariables {
 			clone.guild_number = original.guild_number;
 			clone.guild_leader = original.guild_leader;
 			clone.possession = original.possession;
+			clone.MagicalCounter = original.MagicalCounter;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -762,6 +763,7 @@ public class CraftNoTaizaiModVariables {
 		public double guild_number = 0;
 		public boolean guild_leader = false;
 		public boolean possession = false;
+		public boolean MagicalCounter = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -977,6 +979,7 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("guild_number", guild_number);
 			nbt.putBoolean("guild_leader", guild_leader);
 			nbt.putBoolean("possession", possession);
+			nbt.putBoolean("MagicalCounter", MagicalCounter);
 			return nbt;
 		}
 
@@ -1189,6 +1192,7 @@ public class CraftNoTaizaiModVariables {
 			guild_number = nbt.getDouble("guild_number");
 			guild_leader = nbt.getBoolean("guild_leader");
 			possession = nbt.getBoolean("possession");
+			MagicalCounter = nbt.getBoolean("MagicalCounter");
 		}
 	}
 
@@ -1429,6 +1433,7 @@ public class CraftNoTaizaiModVariables {
 					variables.guild_number = message.data.guild_number;
 					variables.guild_leader = message.data.guild_leader;
 					variables.possession = message.data.possession;
+					variables.MagicalCounter = message.data.MagicalCounter;
 				}
 			});
 			context.setPacketHandled(true);

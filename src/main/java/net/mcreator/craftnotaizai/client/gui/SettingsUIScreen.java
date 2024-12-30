@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnotaizai.world.inventory.SettingsUIMenu;
+import net.mcreator.craftnotaizai.procedures.SpeedPercentageProcedure;
 import net.mcreator.craftnotaizai.procedures.DisPlayEnitiyHealthProcedure;
 import net.mcreator.craftnotaizai.procedures.DamageIndicatorVarProcedure;
 import net.mcreator.craftnotaizai.network.SettingsUIButtonMessage;
@@ -28,6 +29,8 @@ public class SettingsUIScreen extends AbstractContainerScreen<SettingsUIMenu> {
 	ImageButton imagebutton_restart;
 	ImageButton imagebutton_statplusbutton;
 	ImageButton imagebutton_statplusbutton1;
+	ImageButton imagebutton_overarrow;
+	ImageButton imagebutton_overarrow1;
 
 	public SettingsUIScreen(SettingsUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -77,6 +80,11 @@ public class SettingsUIScreen extends AbstractContainerScreen<SettingsUIMenu> {
 		guiGraphics.drawString(this.font,
 
 				DisPlayEnitiyHealthProcedure.execute(entity), -47, 17, -1, false);
+		guiGraphics.drawString(this.font,
+
+				SpeedPercentageProcedure.execute(entity), -35, -33, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.settings_ui.label_empty"), -47, -32, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.settings_ui.label_empty1"), 32, -32, -1, false);
 	}
 
 	@Override
@@ -106,5 +114,21 @@ public class SettingsUIScreen extends AbstractContainerScreen<SettingsUIMenu> {
 		});
 		guistate.put("button:imagebutton_statplusbutton1", imagebutton_statplusbutton1);
 		this.addRenderableWidget(imagebutton_statplusbutton1);
+		imagebutton_overarrow = new ImageButton(this.leftPos + -52, this.topPos + -36, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow.png"), 16, 32, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new SettingsUIButtonMessage(3, x, y, z, textstate));
+				SettingsUIButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
+			}
+		});
+		guistate.put("button:imagebutton_overarrow", imagebutton_overarrow);
+		this.addRenderableWidget(imagebutton_overarrow);
+		imagebutton_overarrow1 = new ImageButton(this.leftPos + 26, this.topPos + -36, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow1.png"), 16, 32, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new SettingsUIButtonMessage(4, x, y, z, textstate));
+				SettingsUIButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
+			}
+		});
+		guistate.put("button:imagebutton_overarrow1", imagebutton_overarrow1);
+		this.addRenderableWidget(imagebutton_overarrow1);
 	}
 }

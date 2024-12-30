@@ -15,6 +15,7 @@ public class CraftNoTaizaiConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> SPEED;
 	public static final ForgeConfigSpec.ConfigValue<Double> CAVE_OF_TRAINING;
 	public static final ForgeConfigSpec.ConfigValue<Double> TOWER_OF_TRAILS;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> IMMORTALITY;
 	static {
 		BUILDER.push("Craft No Taizai Random Race");
 		RANDOM_RACE = BUILDER.comment("This will determine if you get random race when you join world (Default True)").define("random_race", true);
@@ -35,6 +36,9 @@ public class CraftNoTaizaiConfiguration {
 		BUILDER.push("Istar");
 		CAVE_OF_TRAINING = BUILDER.define("cave_of_training", (double) 3);
 		TOWER_OF_TRAILS = BUILDER.define("tower_of_trails", (double) 3);
+		BUILDER.pop();
+		BUILDER.push("immortality");
+		IMMORTALITY = BUILDER.define("immortality", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

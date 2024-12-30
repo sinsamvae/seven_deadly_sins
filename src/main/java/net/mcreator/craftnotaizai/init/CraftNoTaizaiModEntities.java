@@ -416,7 +416,7 @@ public class CraftNoTaizaiModEntities {
 	public static final RegistryObject<EntityType<EarthGolemEntity>> EARTH_GOLEM = register("earth_golem",
 			EntityType.Builder.<EarthGolemEntity>of(EarthGolemEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthGolemEntity::new)
 
-					.sized(0.7f, 2.5f));
+					.sized(1f, 3f));
 	public static final RegistryObject<EntityType<PainEditionEntity>> PAIN_EDITION = register("pain_edition",
 			EntityType.Builder.<PainEditionEntity>of(PainEditionEntity::new, MobCategory.MISC).setCustomClientFactory(PainEditionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PainEdition2Entity>> PAIN_EDITION_2 = register("pain_edition_2",

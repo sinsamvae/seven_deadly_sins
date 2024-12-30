@@ -20,9 +20,7 @@ import net.mcreator.craftnotaizai.block.SleepingForestSlabBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestPlankBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestDirtBlock;
 import net.mcreator.craftnotaizai.block.SideMountainBlock;
-import net.mcreator.craftnotaizai.block.PurplefireBlock;
 import net.mcreator.craftnotaizai.block.PurgatoryStairBlock;
-import net.mcreator.craftnotaizai.block.PurgatorySpikeBlock;
 import net.mcreator.craftnotaizai.block.PurgatorySlabBlock;
 import net.mcreator.craftnotaizai.block.PurgatoryBrickStairBlock;
 import net.mcreator.craftnotaizai.block.PurgatoryBrickSlabBlock;
@@ -70,7 +68,6 @@ public class CraftNoTaizaiModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, CraftNoTaizaiMod.MODID);
 	public static final RegistryObject<Block> GLOW_BLOCK = REGISTRY.register("glow_block", () -> new GlowBlockBlock());
 	public static final RegistryObject<Block> CAPITALOFTHE_DEAD_BLOCK = REGISTRY.register("capitalofthe_dead_block", () -> new CapitaloftheDeadBlockBlock());
-	public static final RegistryObject<Block> PURPLEFIRE = REGISTRY.register("purplefire", () -> new PurplefireBlock());
 	public static final RegistryObject<Block> PERFECT_CUBE = REGISTRY.register("perfect_cube", () -> new PerfectCubeBlock());
 	public static final RegistryObject<Block> BAR_DOOR = REGISTRY.register("bar_door", () -> new BarDoorBlock());
 	public static final RegistryObject<Block> HAY_BALE_ROOF = REGISTRY.register("hay_bale_roof", () -> new HayBaleRoofBlock());
@@ -115,7 +112,6 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> PURGATORY_BRICK = REGISTRY.register("purgatory_brick", () -> new PurgatoryBrickBlock());
 	public static final RegistryObject<Block> PURGATORY_BRICK_SLAB = REGISTRY.register("purgatory_brick_slab", () -> new PurgatoryBrickSlabBlock());
 	public static final RegistryObject<Block> PURGATORY_BRICK_STAIR = REGISTRY.register("purgatory_brick_stair", () -> new PurgatoryBrickStairBlock());
-	public static final RegistryObject<Block> PURGATORY_SPIKE = REGISTRY.register("purgatory_spike", () -> new PurgatorySpikeBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_DIRT = REGISTRY.register("sleeping_forest_dirt", () -> new SleepingForestDirtBlock());
 	public static final RegistryObject<Block> TOWER_OF_TRIALS = REGISTRY.register("tower_of_trials", () -> new TowerOfTrialsBlock());
 	public static final RegistryObject<Block> CAVE_OF_TRAINING = REGISTRY.register("cave_of_training", () -> new CaveOfTrainingBlock());

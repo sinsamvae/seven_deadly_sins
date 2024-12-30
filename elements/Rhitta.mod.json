@@ -34,8 +34,8 @@
     "onRightClickedInAir": {
       "name": "RhittaRightclicked"
     },
-    "onEntitySwing": {
-      "name": "RhittaEntitySwingsItem"
+    "onItemInUseTick": {
+      "name": "RhittaInMainHand"
     }
   }
 }

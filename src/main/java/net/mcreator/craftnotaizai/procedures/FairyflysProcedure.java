@@ -34,7 +34,8 @@ public class FairyflysProcedure {
 		double yaw = 0;
 		double FlyingSpeed = 0;
 		yaw = entity.getYRot();
-		FlyingSpeed = 2;
+		FlyingSpeed = ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility + 2)
+				* ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).agility_percentage_lower / 100);
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation == true) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).WPressed == false) {
 				entity.setDeltaMovement(new Vec3(0, 0, 0));
@@ -42,8 +43,6 @@ public class FairyflysProcedure {
 				entity.setDeltaMovement(new Vec3((FlyingSpeed * Math.cos((yaw + 90) * (Math.PI / 180))), (entity.getXRot() * (-0.01)), (FlyingSpeed * Math.sin((yaw + 90) * (Math.PI / 180)))));
 			}
 		}
-		yaw = entity.getYRot();
-		FlyingSpeed = 2;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.DEMON_WING.get()
 				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.DEMON_WING.get()) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).WPressed == false) {

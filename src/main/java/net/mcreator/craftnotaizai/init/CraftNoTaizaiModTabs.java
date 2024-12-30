@@ -244,7 +244,6 @@ public class CraftNoTaizaiModTabs {
 	public static final RegistryObject<CreativeModeTab> SDS_BLOCKS = REGISTRY.register("sds_blocks",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.sds_blocks")).icon(() -> new ItemStack(CraftNoTaizaiModBlocks.PERFECT_CUBE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftNoTaizaiModBlocks.CAPITALOFTHE_DEAD_BLOCK.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.PURPLEFIRE.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PERFECT_CUBE.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.BAR_DOOR.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.HAY_BALE_ROOF.get().asItem());

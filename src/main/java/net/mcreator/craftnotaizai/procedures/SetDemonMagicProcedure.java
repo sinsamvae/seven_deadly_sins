@@ -61,9 +61,16 @@ public class SetDemonMagicProcedure {
 			if (RandomMagic >= 90 && RandomMagic <= 120) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).full_counter) {
 					{
-						String _setval = "Hellblaze_Fullcounter";
+						String _setval = "Full Counter";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						boolean _setval = true;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.MagicalCounter = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -151,6 +158,13 @@ public class SetDemonMagicProcedure {
 						String _setval = "Full Counter";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						boolean _setval = false;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.MagicalCounter = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}

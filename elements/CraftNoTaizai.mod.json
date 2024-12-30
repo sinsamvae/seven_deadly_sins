@@ -197,6 +197,28 @@
             "stringlist": []
           }
         ]
+      },
+      {
+        "category": "immortality",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "This will determine if immortality can be obtain in game(Default True)",
+            "vardisplay": "immortality",
+            "varname": "immortality",
+            "enablecomment": false,
+            "stringlist": []
+          }
+        ]
       }
     ],
     "file": "Craft_No_Taizai",

@@ -43,7 +43,7 @@ public class CraftNoTaizaiModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping DOUBLE_JUMP = new KeyMapping("key.craft_no_taizai.double_jump", GLFW.GLFW_KEY_UNKNOWN, "key.categories.movement") {
+	public static final KeyMapping DOUBLE_JUMP = new KeyMapping("key.craft_no_taizai.double_jump", GLFW.GLFW_KEY_SPACE, "key.categories.movement") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -56,7 +56,7 @@ public class CraftNoTaizaiModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping MANA_CHARGE_BIND = new KeyMapping("key.craft_no_taizai.mana_charge_bind", GLFW.GLFW_KEY_RIGHT_CONTROL, "key.categories.craftnotaizai") {
+	public static final KeyMapping MANA_CHARGE_BIND = new KeyMapping("key.craft_no_taizai.mana_charge_bind", GLFW.GLFW_KEY_LEFT_CONTROL, "key.categories.craftnotaizai") {
 		private boolean isDownOld = false;
 
 		@Override

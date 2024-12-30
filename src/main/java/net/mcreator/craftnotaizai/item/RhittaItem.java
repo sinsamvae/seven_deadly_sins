@@ -8,12 +8,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
 import net.mcreator.craftnotaizai.procedures.RhittaRightclickedProcedure;
-import net.mcreator.craftnotaizai.procedures.RhittaEntitySwingsItemProcedure;
+import net.mcreator.craftnotaizai.procedures.RhittaInMainHandProcedure;
 
 public class RhittaItem extends AxeItem {
 	public RhittaItem() {
@@ -52,9 +52,9 @@ public class RhittaItem extends AxeItem {
 	}
 
 	@Override
-	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
-		boolean retval = super.onEntitySwing(itemstack, entity);
-		RhittaEntitySwingsItemProcedure.execute(entity.level(), entity);
-		return retval;
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			RhittaInMainHandProcedure.execute(world, entity);
 	}
 }

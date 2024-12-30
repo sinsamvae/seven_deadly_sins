@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -25,11 +26,10 @@ import net.mcreator.craftnotaizai.procedures.HellBlazeProjectileWhileProjectileF
 import net.mcreator.craftnotaizai.procedures.HellBlazeProjectileHitsLivingEntityProcedure;
 import net.mcreator.craftnotaizai.procedures.HellBlazeProjectileHitsBlockProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModBlocks;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class HellBlaze2Entity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(CraftNoTaizaiModBlocks.PURPLEFIRE.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
 
 	public HellBlaze2Entity(PlayMessages.SpawnEntity packet, Level world) {
 		super(CraftNoTaizaiModEntities.HELL_BLAZE_2.get(), world);

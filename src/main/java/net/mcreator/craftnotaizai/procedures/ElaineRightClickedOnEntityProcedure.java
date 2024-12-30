@@ -12,14 +12,14 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModGameRules;
+import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 public class ElaineRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
 		double immortality = 0;
-		if (world.getLevelData().getGameRules().getBoolean(CraftNoTaizaiModGameRules.IMMORTAL) == true) {
+		if (CraftNoTaizaiConfiguration.IMMORTALITY.get() == true) {
 			immortality = Mth.nextInt(RandomSource.create(), 1, 100);
 			if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).immortalityplayer == false) {
 				if (immortality <= 5) {

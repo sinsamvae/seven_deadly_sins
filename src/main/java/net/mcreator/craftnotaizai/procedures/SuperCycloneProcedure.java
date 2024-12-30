@@ -48,27 +48,34 @@ public class SuperCycloneProcedure {
 			entity.getPersistentData().putDouble("vY", (entity.getLookAngle().y * 0.1));
 			entity.getPersistentData().putDouble("vZ", (entity.getLookAngle().z * 0.1));
 			entity.getPersistentData().putDouble("rep2", 0);
-			for (int index0 = 0; index0 < 200; index0++) {
+			for (int index0 = 0; index0 < 300; index0++) {
 				rep = rep + 0.5;
 				CraftNoTaizaiMod.queueServerWork((int) rep, () -> {
 					entity.getPersistentData().putDouble("rep2", (entity.getPersistentData().getDouble("rep2") + (2 * Math.PI) / 60));
 					entity.getPersistentData().putDouble("rep", (entity.getPersistentData().getDouble("rep2")));
 					entity.getPersistentData().putDouble("height", 0);
 					entity.getPersistentData().putDouble("distance", 0);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:tonado")), SoundSource.PLAYERS, (float) 0.05, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:tonado")), SoundSource.PLAYERS, (float) 0.05, 1, false);
+						}
+					}
 					for (int index1 = 0; index1 < 60; index1++) {
 						entity.getPersistentData().putDouble("distance", (entity.getPersistentData().getDouble("distance") + 0.85));
-						entity.getPersistentData().putDouble("height", (entity.getPersistentData().getDouble("height") + 0.85));
+						entity.getPersistentData().putDouble("height", (entity.getPersistentData().getDouble("height") + 1.5));
 						entity.getPersistentData().putDouble("rep", (entity.getPersistentData().getDouble("rep") + Math.PI / 60));
 						for (int index2 = 0; index2 < 3; index2++) {
 							entity.getPersistentData().putDouble("rep", (entity.getPersistentData().getDouble("rep") + (20 * Math.PI) / 21));
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.LARGE_SMOKE, (entity.getPersistentData().getDouble("pX") + Math.sin(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")),
 										((entity.getPersistentData().getDouble("pY") + entity.getPersistentData().getDouble("height")) - 3),
-										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 3, 0, 0, 0, 0);
+										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 4, 0, 0, 0, 0);
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.SMOKE, (entity.getPersistentData().getDouble("pX") + Math.sin(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")),
 										((entity.getPersistentData().getDouble("pY") + entity.getPersistentData().getDouble("height")) - 3),
-										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 3, 0, 0, 0, 0);
+										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 4, 0, 0, 0, 0);
 							{
 								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -98,17 +105,10 @@ public class SuperCycloneProcedure {
 											}.checkGamemode(entityiterator))) {
 										entityiterator.hurt(
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-												(float) ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack + 3));
-										if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+												(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 3));
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 120, 1, false, false));
 									}
-								}
-							}
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:tonado")), SoundSource.PLAYERS, (float) 0.05, 1);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:tonado")), SoundSource.PLAYERS, (float) 0.05, 1, false);
 								}
 							}
 						}
