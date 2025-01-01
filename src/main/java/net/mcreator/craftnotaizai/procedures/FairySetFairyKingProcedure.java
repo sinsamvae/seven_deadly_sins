@@ -12,7 +12,7 @@ import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class SetDruidsProcedure {
+public class FairySetFairyKingProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
@@ -27,9 +27,9 @@ public class SetDruidsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Purge")) {
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy King")) {
 			{
-				String _setval = "Druids";
+				String _setval = "Fairy";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Race = _setval;
 					capability.syncPlayerVariables(entity);

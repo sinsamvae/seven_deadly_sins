@@ -39,7 +39,7 @@ public class LowerTierSoulDropProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).demon == true) {
+		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
 			if (entity instanceof Villager || entity instanceof RoyalGuardAnimatedEntity || entity instanceof RoyalGurardAnimatedEntity || entity instanceof Pillager || entity instanceof Vindicator || entity instanceof Evoker
 					|| entity instanceof Witch) {
 				if (world instanceof ServerLevel _level) {

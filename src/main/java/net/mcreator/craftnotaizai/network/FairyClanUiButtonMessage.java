@@ -87,7 +87,7 @@ public class FairyClanUiButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			SelectFairyProcedure.execute(entity);
+			SelectFairyProcedure.execute(world, entity);
 		}
 	}
 

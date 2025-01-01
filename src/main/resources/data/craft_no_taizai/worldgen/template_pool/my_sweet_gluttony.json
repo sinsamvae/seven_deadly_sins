@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "craft_no_taizai:my_sweet_gluttony",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "processors": {
           "processors": [
             {

@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 0,
-    "rotationMode": 0,
+    "rotationMode": 2,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -132,8 +132,8 @@
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
-    "normal": "rhitta_block.geo.json",
-    "displaySettings": "rhitta_block.json",
+    "normal": "rhitta_blocks.geo.json",
+    "displaySettings": "rhitta_blocks.json",
     "vanillaToolTier": "NONE",
     "blockstateList": []
   }

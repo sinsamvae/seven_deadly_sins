@@ -77,7 +77,7 @@ public class InvigorateProcedure {
 		}
 		if (target && entity_target instanceof LivingEntity) {
 			if (entity_target.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("minecraft:demon"))) || entity_target.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("minecraft:undead")))
-					|| (entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).demon == true) {
+					|| ((entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.ARKPARTICLE.get()), (entity_target.getX()), (entity_target.getY()), (entity_target.getZ()), 25, 0.5, 0.5, 0.5, 0.1);
 				entity_target.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),

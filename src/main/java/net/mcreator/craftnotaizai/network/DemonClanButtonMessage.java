@@ -87,7 +87,7 @@ public class DemonClanButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			SelectDemonProcedure.execute(entity);
+			SelectDemonProcedure.execute(world, entity);
 		}
 	}
 

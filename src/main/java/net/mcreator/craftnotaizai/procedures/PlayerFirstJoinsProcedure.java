@@ -147,68 +147,16 @@ public class PlayerFirstJoinsProcedure {
 				}
 				RandomRace = Mth.nextInt(RandomSource.create(), 1, 4);
 				if (RandomRace == 1) {
-					{
-						double _setval = 1;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Demon_Clan = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.demon = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					SelectDemonProcedure.execute(world, entity);
 				}
 				if (RandomRace == 2) {
-					{
-						double _setval = 1;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Human_Clan = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.human = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					SelectHumanProcedure.execute(world, entity);
 				}
 				if (RandomRace == 3) {
-					{
-						double _setval = 1;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Fairy_Clan = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.fairy = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					SelectFairyProcedure.execute(world, entity);
 				}
 				if (RandomRace == 4) {
-					{
-						double _setval = 1;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.GaintRace = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.gaint = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					SelectGaintProcedure.execute(entity);
 				}
 				{
 					double _setval = 1;

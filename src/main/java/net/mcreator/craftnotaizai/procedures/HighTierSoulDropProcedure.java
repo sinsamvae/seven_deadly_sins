@@ -41,7 +41,7 @@ public class HighTierSoulDropProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).demon == true) {
+		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
 			if (entity instanceof RedKnightAnimatedEntity || entity instanceof GreenKnightAnimatedEntity || entity instanceof WeinheidtAnimatedEntity || entity instanceof HugoAnimatedEntity || entity instanceof JillianAnimatedEntity
 					|| entity instanceof SimonAnimatedEntity || entity instanceof SladerAnimatedEntity || entity instanceof VivianAnimatedEntity || entity instanceof GustafAnimatedEntity) {
 				if (world instanceof ServerLevel _level) {

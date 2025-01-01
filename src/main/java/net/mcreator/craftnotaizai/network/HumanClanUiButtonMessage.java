@@ -87,7 +87,7 @@ public class HumanClanUiButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			SelectHumanProcedure.execute(entity);
+			SelectHumanProcedure.execute(world, entity);
 		}
 	}
 
