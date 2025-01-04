@@ -41,7 +41,7 @@ public class RhittaItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 1, -3.2f, new Item.Properties());
+		}, 1, -3.2f, new Item.Properties().fireResistant());
 	}
 
 	@Override

@@ -45,6 +45,14 @@ public class PlayerFirstJoinsProcedure {
 			return;
 		double RandomRace = 0;
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
+			GiveRerollMagicProcedure.execute(entity);
+			{
+				double _setval = 100;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.power_percentage = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = 100;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -138,89 +146,7 @@ public class PlayerFirstJoinsProcedure {
 					});
 				}
 			} else {
-				{
-					boolean _setval = true;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.PlayerFirstJoins = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				RandomRace = Mth.nextInt(RandomSource.create(), 1, 4);
-				if (RandomRace == 1) {
-					SelectDemonProcedure.execute(world, entity);
-				}
-				if (RandomRace == 2) {
-					SelectHumanProcedure.execute(world, entity);
-				}
-				if (RandomRace == 3) {
-					SelectFairyProcedure.execute(world, entity);
-				}
-				if (RandomRace == 4) {
-					SelectGaintProcedure.execute(entity);
-				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.TPAmount = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Move = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 0;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.MagicScroll = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 1;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SlotSwitch = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					boolean _setval = false;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.learn_skills = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					boolean _setval = true;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.damage_indicator = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.AbilitySelect = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.learn_skill = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					String _setval = "Story0";
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Story = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+				RandomRaceProcedure.execute(world, entity);
 			}
 		}
 	}

@@ -170,6 +170,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.HEAT_FORK.get());
 				tabData.accept(CraftNoTaizaiModItems.HOLY_STAFF_COURE_CHOUSE.get());
 				tabData.accept(CraftNoTaizaiModItems.BASQUIAS.get());
+				tabData.accept(CraftNoTaizaiModItems.REAPER_SCYTHE.get());
 			})
 
 					.build());
@@ -299,6 +300,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.DALEFINAL_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ELAINE_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.INSECT_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.GRAY_DEMON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.HIDE_AND_SEEK_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.VINE_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.LUIGI_SPAWN_EGG.get());

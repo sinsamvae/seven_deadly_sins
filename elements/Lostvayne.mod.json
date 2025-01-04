@@ -2,17 +2,17 @@
   "_fv": 66,
   "_type": "tool",
   "definition": {
-    "toolType": "Special",
+    "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
     "texture": "lostvayne",
     "customModelName": "lostvayne:default",
     "blockingModelName": "Normal blocking",
-    "name": "lostvayne",
+    "name": "LostVayne",
     "specialInformation": {
       "fixedValue": [
-        "shift right click to change how many clones",
-        "right right click to spawn clones"
+        "§cShift Right Open UI",
+        "§cRight click Summon Clones"
       ]
     },
     "creativeTabs": [
@@ -29,7 +29,7 @@
       "fixedValue": false
     },
     "repairItems": [],
-    "immuneToFire": false,
+    "immuneToFire": true,
     "blockDropsTier": "STONE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,

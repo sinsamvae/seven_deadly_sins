@@ -26,7 +26,7 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "enableArmPose": false,
     "damageOnCrafting": false,

@@ -55,7 +55,6 @@ public class BeforehitProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, double amount) {
 		if (damagesource == null || entity == null)
 			return;
-		ItemStack weapon = ItemStack.EMPTY;
 		double dmg = 0;
 		double armor = 0;
 		double current_health = 0;
@@ -64,6 +63,8 @@ public class BeforehitProcedure {
 		double n = 0;
 		double damage = 0;
 		double stage = 0;
+		double c_health = 0;
+		double dodge = 0;
 		dmg = amount;
 		if (event != null && event.isCancelable()) {
 			event.setCanceled(true);
@@ -85,9 +86,9 @@ public class BeforehitProcedure {
 			current_health = current_health * 20;
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon") && Math.floor(current_health) <= 10) {
 				n = Mth.nextInt(RandomSource.create(), 1, 100);
-				if (n <= 10) {
+				if (n <= 5) {
 					if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Purgatory) {
-						current_health = 10;
+						current_health = 20;
 						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 							ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:purgatory"));
 							if (_player.level().dimension() == destinationType)

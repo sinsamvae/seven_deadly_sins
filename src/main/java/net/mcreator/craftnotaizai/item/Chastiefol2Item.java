@@ -43,7 +43,7 @@ public class Chastiefol2Item extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -2f, new Item.Properties());
+		}, 3, -2f, new Item.Properties().fireResistant());
 	}
 
 	@Override

@@ -168,6 +168,9 @@
     "restrictionBiomes": [
       {
         "value": "desert"
+      },
+      {
+        "value": "mutated_mesa"
       }
     ],
     "spawnInDungeons": false

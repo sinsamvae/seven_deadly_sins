@@ -113,7 +113,7 @@
             "name": "LowerSpeed"
           },
           "x": 162,
-          "y": 84
+          "y": 66
         }
       },
       {
@@ -129,7 +129,7 @@
             "falpha": 0.0
           },
           "x": 179,
-          "y": 87
+          "y": 71
         }
       },
       {
@@ -142,7 +142,7 @@
             "name": "IncreaseSpeed"
           },
           "x": 240,
-          "y": 84
+          "y": 66
         }
       },
       {
@@ -157,7 +157,7 @@
             "falpha": 0.0
           },
           "x": 167,
-          "y": 88
+          "y": 69
         }
       },
       {
@@ -172,7 +172,79 @@
             "falpha": 0.0
           },
           "x": 246,
+          "y": 69
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow2",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "LowerPower"
+          },
+          "x": 162,
           "y": 88
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow3",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "IncreasePower"
+          },
+          "x": 240,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_power_percentage",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerPercentage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 179,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty2",
+          "text": {
+            "fixedValue": "<"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty3",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 247,
+          "y": 91
         }
       }
     ],

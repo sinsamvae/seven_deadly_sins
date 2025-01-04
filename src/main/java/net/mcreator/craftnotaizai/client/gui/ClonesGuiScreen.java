@@ -70,14 +70,14 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_clones"), -19, -24, -1, false);
 		guiGraphics.drawString(this.font,
 
-				LostVayneVarProcedure.execute(entity), -34, -47, -1, false);
+				LostVayneVarProcedure.execute(entity), -33, -47, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_despawn"), -21, 9, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_slot = new ImageButton(this.leftPos + -35, this.topPos + -27, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
+		imagebutton_slot = new ImageButton(this.leftPos + -33, this.topPos + -27, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(0, x, y, z, textstate));
 				ClonesGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
@@ -85,7 +85,7 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		});
 		guistate.put("button:imagebutton_slot", imagebutton_slot);
 		this.addRenderableWidget(imagebutton_slot);
-		imagebutton_slot1 = new ImageButton(this.leftPos + -37, this.topPos + 6, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot1.png"), 64, 32, e -> {
+		imagebutton_slot1 = new ImageButton(this.leftPos + -33, this.topPos + 6, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_slot1.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ClonesGuiButtonMessage(1, x, y, z, textstate));
 				ClonesGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);

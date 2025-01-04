@@ -27,10 +27,11 @@
       "value": -26266,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -102,6 +103,9 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "onMobTickUpdate": {
       "name": "DumblebbasOnEntityTickUpdate"
     },
@@ -164,6 +168,9 @@
     "restrictionBiomes": [
       {
         "value": "desert"
+      },
+      {
+        "value": "mutated_mesa"
       }
     ],
     "spawnInDungeons": false

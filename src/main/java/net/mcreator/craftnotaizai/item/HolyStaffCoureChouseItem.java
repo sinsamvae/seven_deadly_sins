@@ -40,7 +40,7 @@ public class HolyStaffCoureChouseItem extends Item implements GeoItem {
 	public static ItemDisplayContext transformType;
 
 	public HolyStaffCoureChouseItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override

@@ -61,7 +61,7 @@ public class GrayDemonEntity extends Monster implements GeoEntity {
 	public GrayDemonEntity(EntityType<GrayDemonEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		setMaxUpStep(0.6f);
 	}
 
@@ -70,7 +70,7 @@ public class GrayDemonEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "graydemon");
+		this.entityData.define(TEXTURE, "gray_demon_texture_1");
 	}
 
 	public void setTexture(String texture) {
@@ -84,6 +84,12 @@ public class GrayDemonEntity extends Monster implements GeoEntity {
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+
 	}
 
 	@Override
@@ -174,7 +180,7 @@ public class GrayDemonEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("dead"));
 		}
 		return PlayState.STOP;
 	}

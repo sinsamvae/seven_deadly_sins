@@ -20581,8 +20581,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -21362,7 +21362,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craft_no_taizai/models/item/goddass_ore.json",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/goddass_ore_biome_modifier.json",
+          "src/main/resources/data/craft_no_taizai/worldgen/placed_feature/goddass_ore.json",
           "src/main/resources/assets/craft_no_taizai/models/block/goddass_ore.json",
+          "src/main/resources/data/craft_no_taizai/worldgen/configured_feature/goddass_ore.json",
           "src/main/java/net/mcreator/craftnotaizai/block/GoddassOreBlock.java",
           "src/main/resources/data/craft_no_taizai/loot_tables/blocks/goddass_ore.json",
           "src/main/resources/assets/craft_no_taizai/blockstates/goddass_ore.json"
@@ -21383,37 +21386,6 @@
         ]
       },
       "path": "~/items/GoddessAmber/Goddess Amber"
-    },
-    {
-      "name": "GoddassOreBlockDestroyedByPlayer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goddass_ore_block_destroyed_by_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GoddassOreBlockDestroyedByPlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Block/GoddassOre"
     },
     {
       "name": "PowerAmplifyEffectEffectStartedapplied",
@@ -34996,14 +34968,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -36431,6 +36395,18 @@
             "type": "itemstack"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -36718,7 +36694,7 @@
           "src/main/java/net/mcreator/craftnotaizai/block/entity/RhittaBlockTileEntity.java"
         ]
       },
-      "path": "~/Block"
+      "path": "~/Block/my sweet gluttony"
     },
     {
       "name": "MySweetGluttony",
@@ -36905,6 +36881,461 @@
         ]
       },
       "path": "~/entities"
+    },
+    {
+      "name": "LowerPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lower_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/LowerPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Settings/Power Percentage"
+    },
+    {
+      "name": "IncreasePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IncreasePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/Settings/Power Percentage"
+    },
+    {
+      "name": "PowerPercentage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_percentage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PowerPercentageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/var"
+    },
+    {
+      "name": "PerpetualReincarnation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "perpetual_reincarnation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PerpetualReincarnationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/races/Human_Clan"
+    },
+    {
+      "name": "SetReincarnation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_reincarnation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetReincarnationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/races/Human_Clan"
+    },
+    {
+      "name": "ReRollMagicRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "re_roll_magic_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ReRollMagicRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/ReRollMagic"
+    },
+    {
+      "name": "ReRollMagic",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "re_roll_magic",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/re_roll_magic.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/ReRollMagicItem.java"
+        ]
+      },
+      "path": "~/items/ReRollMagic"
+    },
+    {
+      "name": "RandomRace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_race",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/RandomRaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/playjoinsworld"
+    },
+    {
+      "name": "GiveRerollMagic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_reroll_magic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GiveRerollMagicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/playjoinsworld"
+    },
+    {
+      "name": "CiderMugBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cider_mug_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/block/cider_mug_block.json",
+          "src/main/java/net/mcreator/craftnotaizai/block/CiderMugBlockBlock.java",
+          "src/main/resources/assets/craft_no_taizai/blockstates/cider_mug_block.json",
+          "src/main/resources/assets/craft_no_taizai/models/item/cider_mug_block.json",
+          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/cider_mug_block.json"
+        ]
+      },
+      "path": "~/Block/EmptyMug/CiderMug"
+    },
+    {
+      "name": "CiderMugBlockOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cider_mug_block_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CiderMugBlockOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Block/EmptyMug/CiderMug"
+    },
+    {
+      "name": "CiderMug",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cider_mug",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/cider_mug.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/CiderMugItem.java"
+        ]
+      },
+      "path": "~/items/Cup/CiderMug"
+    },
+    {
+      "name": "CiderMugPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cider_mug_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CiderMugPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/items/Cup/CiderMug"
+    },
+    {
+      "name": "CiderMugRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cider_mug_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CiderMugRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/Cup/CiderMug"
+    },
+    {
+      "name": "SetEternalLife",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_eternal_life",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetEternalLifeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/races/Demon_Clan"
+    },
+    {
+      "name": "ReaperScythe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/item/ReaperScytheItem.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/reaper_scythe.json"
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe"
+    },
+    {
+      "name": "ReaperScytheEntity",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe_entity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/reaper_scythe_entity_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/entity/ReaperScytheEntityEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/ReaperScytheEntityRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/ReaperScytheEntityModel.java"
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe/ReaperScytheEntity"
+    },
+    {
+      "name": "ReaperScytheRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ReaperScytheRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe"
+    },
+    {
+      "name": "ReaperScytheEntityEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe_entity_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ReaperScytheEntityEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe/ReaperScytheEntity"
+    },
+    {
+      "name": "ReaperScytheEntityOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe_entity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ReaperScytheEntityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe/ReaperScytheEntity"
+    },
+    {
+      "name": "ReaperScytheEntityRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reaper_scythe_entity_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ReaperScytheEntityRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Reaper Sycthe/ReaperScytheEntity"
     }
   ],
   "variable_elements": [
@@ -38293,6 +38724,36 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "power_percentage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "PerpetualReincarnation",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Reincarnation",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "EternalLife",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "eternallife",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -38681,6 +39142,7 @@
       "CUSTOM:EarthGolem"
     ],
     "ITEMS:minecraft:axes": [
+      "~CUSTOM:ReaperScythe",
       "~CUSTOM:LongAxe",
       "~CUSTOM:SawBlade",
       "~CUSTOM:Axe2",
@@ -38715,7 +39177,8 @@
       "~CUSTOM:HeatFork",
       "~CUSTOM:Gideon",
       "~CUSTOM:Chastiefol2",
-      "~CUSTOM:DragonHandle"
+      "~CUSTOM:DragonHandle",
+      "CUSTOM:Lostvayne"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:HolyTreeOre",
@@ -38759,7 +39222,6 @@
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TwinBowHerritt",
-      "~CUSTOM:Lostvayne",
       "~CUSTOM:Aldan",
       "~CUSTOM:Luminosity"
     ],
@@ -38917,6 +39379,7 @@
       "item.craft_no_taizai.vivian_armor_chestplate": "Vivian Chestplate",
       "gui.craft_no_taizai.story_board.label_what_have_they_come_for1": "What have they come for?",
       "block.craft_no_taizai.fairy_king_log": "Fairy King Log",
+      "item.craft_no_taizai.reaper_scythe_entity_spawn_egg": "Reaper Scythe Spawn Egg",
       "entity.craft_no_taizai.jumanju_entity": "Jumanju Entity",
       "gui.craft_no_taizai.giant_clan.label_random_200_to_500": "Random: 150 to 350",
       "item.craft_no_taizai.meliodasdanaforarmor_chestplate": "Danafor Armor",
@@ -38947,6 +39410,7 @@
       "entity.craft_no_taizai.sun_flower_true_spirt_spear": "SunFlower",
       "gui.craft_no_taizai.fairy_clan_ui.label_15_magic_damage": "- Magic Damage: 5 to 20",
       "gui.craft_no_taizai.story_board.label_ep_12_bloodcurdling_canon_part": "EP 12: Bloodcurdling Canon Part 2",
+      "entity.craft_no_taizai.reaper_scythe_entity": "Reaper Scythe",
       "gui.craft_no_taizai.story_board.label_the_seven_deadly_sins": "EP1: The Seven Deadly Sins",
       "advancements.sapphire.descr": "Get BP 11300",
       "item.craft_no_taizai.manta_spawn_egg": "Mantaray Spawn Egg",
@@ -39237,6 +39701,7 @@
       "entity.craft_no_taizai.andre_demon_form": "Andre Demon Form",
       "key.craft_no_taizai.use_magic": "Use Magic",
       "subtitles.earth_crawler_idle": "",
+      "item.craft_no_taizai.reaper_scythe": "Reaper Scythe",
       "item.craft_no_taizai.meliodas_boar_hat_leggings": "Simon Leggings",
       "item.craft_no_taizai.elaine_spawn_egg": "Elaine Spawn Egg",
       "gui.craft_no_taizai.story_board.label_defect_dreyfus": "Defeat Dreyfus",
@@ -39267,7 +39732,9 @@
       "gui.craft_no_taizai.story_board.label_howzer_and_griamore": "Howzer and Griamore",
       "gui.craft_no_taizai.settings_ui.label_empty1": "\u003e",
       "effect.craft_no_taizai.frezze": "Freeze",
+      "gui.craft_no_taizai.settings_ui.label_empty3": "\u003e",
       "gui.craft_no_taizai.story_board.label_start": "START",
+      "gui.craft_no_taizai.settings_ui.label_empty2": "\u003c",
       "gui.craft_no_taizai.story_board.label_sins_the_holy_knight_helbram_di": "Sins. The Holy Knight Helbram dispatches assassins to",
       "gui.craft_no_taizai.demon_stat.tooltip_side_quest": "Side Quest",
       "block.craft_no_taizai.tower_of_trials": "Tower Of Trials",
@@ -39473,7 +39940,7 @@
       "item.craft_no_taizai.meliodas_boar_hat_chestplate": "Simon Chestplate",
       "gui.craft_no_taizai.story_board.label_defect_jericho": "Defeat Jericho",
       "gui.craft_no_taizai.story_board.label_ep_22_what_i_can_do_for_you": "EP 22: What I Can Do For You",
-      "item.craft_no_taizai.lostvayne": "lostvayne",
+      "item.craft_no_taizai.lostvayne": "LostVayne",
       "entity.craft_no_taizai.ruin": "Ruin",
       "item.craft_no_taizai.jenna_spawn_egg": "Jenna Spawn Egg",
       "entity.craft_no_taizai.galand_story_2": "Galand",
@@ -39496,6 +39963,7 @@
       "advancements.crystal.descr": "Get BP 3750",
       "gui.craft_no_taizai.giant_clan.label_select": "SELECT",
       "gui.craft_no_taizai.story_board.label_roun_1": "First round challanger taizoo appears",
+      "item.craft_no_taizai.cider_mug": "Cider ale",
       "entity.craft_no_taizai.diane_animated": "Diane",
       "gui.craft_no_taizai.guild_accept_gui.label_accept": "ACCEPT",
       "gui.craft_no_taizai.story_board.label_capital_of_the_dead": "Capital of the Dead",
@@ -39627,7 +40095,7 @@
       "advancements.defeat_meliodas.title": "Defeat Meliodas",
       "item.craft_no_taizai.gowther_armor_chestplate": "Escanor Chestplate",
       "entity.craft_no_taizai.story_ban_2_animated": "Ban",
-      "gui.craft_no_taizai.story_board.label_defeat_15_giants": "Defeat 15 Giants",
+      "gui.craft_no_taizai.story_board.label_defeat_15_giants": "Defeat 15 Giants Located Desert Biome",
       "subtitles.cure_angle_walk": "",
       "entity.craft_no_taizai.servant": "Servant",
       "item.craft_no_taizai.andre_demon_form_spawn_egg": "Andre Demon Form Spawn Egg",
@@ -39721,6 +40189,7 @@
       "item.craft_no_taizai.guila_armor_chestplate": "Guila Armor Chestplate",
       "gui.craft_no_taizai.human_clan_ui.label_random_200_to_500": "Random: 100 to 300",
       "gui.craft_no_taizai.skillslots.label_x": "x",
+      "block.craft_no_taizai.cider_mug_block": "Sunny ale Block",
       "gui.craft_no_taizai.story_board.label_formidable_magical_powers": "formidable magical powers.",
       "gui.craft_no_taizai.demon_clan.label_demon_clan": "Demon Race",
       "effect.craft_no_taizai.venom_toxicy_potion": "Venom Toxicy Potion",
@@ -39972,6 +40441,7 @@
       "gui.craft_no_taizai.story_board.label_during_the_last_match_of_the_fes": "During the last match of the festival, the vanue breaks",
       "item.craft_no_taizai.escanor_boss_spawn_egg": "Escanor Spawn Egg",
       "block.craft_no_taizai.purgatory_slab": "Purgatory",
+      "item.craft_no_taizai.re_roll_magic": "Re_Roll Magic",
       "item.craft_no_taizai.gowther_armor_s_2_leggings": "Gowther Leggings",
       "item.craft_no_taizai.tyrant_dragon_meat": "Tyrant Dragon Meat",
       "gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save": "he has to kill in order to save Elaine",
@@ -41002,6 +41472,15 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Reaper Sycthe",
+                "children": [
+                  {
+                    "name": "ReaperScytheEntity",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -41711,6 +42190,10 @@
               {
                 "name": "BeerMug",
                 "children": []
+              },
+              {
+                "name": "CiderMug",
+                "children": []
               }
             ]
           },
@@ -41753,6 +42236,10 @@
           },
           {
             "name": "HolyTreeOre",
+            "children": []
+          },
+          {
+            "name": "my sweet gluttony",
             "children": []
           }
         ]
@@ -41916,6 +42403,10 @@
               {
                 "name": "BeerMug",
                 "children": []
+              },
+              {
+                "name": "CiderMug",
+                "children": []
               }
             ]
           },
@@ -42008,6 +42499,10 @@
           },
           {
             "name": "Link",
+            "children": []
+          },
+          {
+            "name": "ReRollMagic",
             "children": []
           }
         ]
@@ -42603,6 +43098,10 @@
               },
               {
                 "name": "Speed Percentage",
+                "children": []
+              },
+              {
+                "name": "Power Percentage",
                 "children": []
               }
             ]

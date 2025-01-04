@@ -17,7 +17,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class TwinBowHerrittItem extends Item {
 	public TwinBowHerrittItem() {
-		super(new Item.Properties().durability(0));
+		super(new Item.Properties().durability(0).fireResistant());
 	}
 
 	@Override

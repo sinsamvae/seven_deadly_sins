@@ -28,6 +28,7 @@ import net.mcreator.craftnotaizai.entity.RoyalGurardAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.RoyalGuardAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.RedKnightAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.RedDemonGeckolibEntity;
+import net.mcreator.craftnotaizai.entity.ReaperScytheEntityEntity;
 import net.mcreator.craftnotaizai.entity.PuoraEntity;
 import net.mcreator.craftnotaizai.entity.ParadaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MutilatorRabbitsEntity;
@@ -884,6 +885,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof GalandOverEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ReaperScytheEntityEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

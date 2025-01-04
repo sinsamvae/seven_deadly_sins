@@ -1,6 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "desert",
+  "biomes": [
+    "desert",
+    "eroded_badlands"
+  ],
   "spawners": {
     "type": "craft_no_taizai:dumblebbas_animated",
     "weight": 8,

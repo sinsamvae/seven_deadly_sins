@@ -20,13 +20,13 @@
     "efficiency": 0.0,
     "attackSpeed": 0.0,
     "enchantability": 0,
-    "damageVsEntity": 0.1,
+    "damageVsEntity": 1.0,
     "usageCount": 0,
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [],
-    "immuneToFire": false,
+    "immuneToFire": true,
     "blockDropsTier": "STONE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,

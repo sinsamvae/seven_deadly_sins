@@ -16,6 +16,7 @@ public class CraftNoTaizaiConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> CAVE_OF_TRAINING;
 	public static final ForgeConfigSpec.ConfigValue<Double> TOWER_OF_TRAILS;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> IMMORTALITY;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> REROLL;
 	static {
 		BUILDER.push("Craft No Taizai Random Race");
 		RANDOM_RACE = BUILDER.comment("This will determine if you get random race when you join world (Default True)").define("random_race", true);
@@ -34,11 +35,14 @@ public class CraftNoTaizaiConfiguration {
 		SPEED = BUILDER.comment("This will determine the max speed").define("Speed", (double) 100);
 		BUILDER.pop();
 		BUILDER.push("Istar");
-		CAVE_OF_TRAINING = BUILDER.define("cave_of_training", (double) 3);
-		TOWER_OF_TRAILS = BUILDER.define("tower_of_trails", (double) 3);
+		CAVE_OF_TRAINING = BUILDER.comment("This will determine how much stat you get when killing mob (Default 3)").define("cave_of_training", (double) 3);
+		TOWER_OF_TRAILS = BUILDER.comment("This will determine how much stat you get when killing mob (Default 3)").define("tower_of_trails", (double) 3);
 		BUILDER.pop();
 		BUILDER.push("immortality");
-		IMMORTALITY = BUILDER.define("immortality", true);
+		IMMORTALITY = BUILDER.comment("This will determine if immortality can be obtain in game(Default True)").define("immortality", true);
+		BUILDER.pop();
+		BUILDER.push("re-roll");
+		REROLL = BUILDER.comment("this will determine if you can re-roll magic item first join").define("reroll", false);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

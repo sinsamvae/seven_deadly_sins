@@ -42,6 +42,8 @@ import net.mcreator.craftnotaizai.item.RuinArmorItem;
 import net.mcreator.craftnotaizai.item.RoyalknightItem;
 import net.mcreator.craftnotaizai.item.RhittaItem;
 import net.mcreator.craftnotaizai.item.RedKnightArmorItem;
+import net.mcreator.craftnotaizai.item.ReaperScytheItem;
+import net.mcreator.craftnotaizai.item.ReRollMagicItem;
 import net.mcreator.craftnotaizai.item.RapierItem;
 import net.mcreator.craftnotaizai.item.RankItem;
 import net.mcreator.craftnotaizai.item.RakanItem;
@@ -147,6 +149,7 @@ import net.mcreator.craftnotaizai.item.CookedtentaclesItem;
 import net.mcreator.craftnotaizai.item.CookedDuskMeatItem;
 import net.mcreator.craftnotaizai.item.CookedAngleMeatItem;
 import net.mcreator.craftnotaizai.item.CoffinOfEternalDarknessItem;
+import net.mcreator.craftnotaizai.item.CiderMugItem;
 import net.mcreator.craftnotaizai.item.ChickenMatangoMushRoomItem;
 import net.mcreator.craftnotaizai.item.Chastiefol2Item;
 import net.mcreator.craftnotaizai.item.ChaosDimensionItem;
@@ -284,7 +287,7 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> AREAFENCE = block(CraftNoTaizaiModBlocks.AREAFENCE);
 	public static final RegistryObject<Item> AREA_SLAB = block(CraftNoTaizaiModBlocks.AREA_SLAB);
 	public static final RegistryObject<Item> AREA_WOOD_SLAB = block(CraftNoTaizaiModBlocks.AREA_WOOD_SLAB);
-	public static final RegistryObject<Item> GRAY_DEMON_SPAWN_EGG = REGISTRY.register("gray_demon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GRAY_DEMON, -9607313, -11120296, new Item.Properties()));
+	public static final RegistryObject<Item> GRAY_DEMON_SPAWN_EGG = REGISTRY.register("gray_demon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GRAY_DEMON, -13213395, -12752844, new Item.Properties()));
 	public static final RegistryObject<Item> EMPTY_NEEDLE = REGISTRY.register("empty_needle", () -> new EmptyNeedleItem());
 	public static final RegistryObject<Item> GRAY_DEMON_BLOOD_NEEDLE = REGISTRY.register("gray_demon_blood_needle", () -> new GrayDemonBloodNeedleItem());
 	public static final RegistryObject<Item> NEEDLE = REGISTRY.register("needle", () -> new NeedleItem());
@@ -599,6 +602,11 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> ELAINE_STORY_SPAWN_EGG = REGISTRY.register("elaine_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ELAINE_STORY, -14212306, -8181720, new Item.Properties()));
 	public static final RegistryObject<Item> GALAND_OVER_SPAWN_EGG = REGISTRY.register("galand_over_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GALAND_OVER, -8448202, -13754301, new Item.Properties()));
 	public static final RegistryObject<Item> RHITTA_BLOCK = REGISTRY.register(CraftNoTaizaiModBlocks.RHITTA_BLOCK.getId().getPath(), () -> new RhittaBlockDisplayItem(CraftNoTaizaiModBlocks.RHITTA_BLOCK.get(), new Item.Properties()));
+	public static final RegistryObject<Item> RE_ROLL_MAGIC = REGISTRY.register("re_roll_magic", () -> new ReRollMagicItem());
+	public static final RegistryObject<Item> CIDER_MUG_BLOCK = block(CraftNoTaizaiModBlocks.CIDER_MUG_BLOCK);
+	public static final RegistryObject<Item> CIDER_MUG = REGISTRY.register("cider_mug", () -> new CiderMugItem());
+	public static final RegistryObject<Item> REAPER_SCYTHE = REGISTRY.register("reaper_scythe", () -> new ReaperScytheItem());
+	public static final RegistryObject<Item> REAPER_SCYTHE_ENTITY_SPAWN_EGG = REGISTRY.register("reaper_scythe_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.REAPER_SCYTHE_ENTITY, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

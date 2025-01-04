@@ -41,6 +41,7 @@ import net.mcreator.craftnotaizai.client.renderer.RockRushProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RisingMeteorRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RedKnightAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.RedDemonGeckolibRenderer;
+import net.mcreator.craftnotaizai.client.renderer.ReaperScytheEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.PurgatoryVenomProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.PuoraRenderer;
 import net.mcreator.craftnotaizai.client.renderer.PollenGardenRenderer;
@@ -367,5 +368,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ICE_ANCHOR.get(), IceAnchorRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ELAINE_STORY.get(), ElaineStoryRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_OVER.get(), GalandOverRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityRenderer::new);
 	}
 }

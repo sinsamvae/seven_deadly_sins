@@ -204,9 +204,9 @@ public class DisplayHealthProcedure {
 					if (entityiterator instanceof LivingEntity && !(entityiterator == entity)) {
 						if (begin(VertexFormat.Mode.QUADS, false, true)) {
 							add(0, 0, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0, 0.75, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.25, 0.75, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.25, 0, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(0, 0.25, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(1, 0.25, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(1, 0, 0, 0.0F, 0.0F, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 							end();
 						}
 						if (target(2)) {

@@ -15,7 +15,9 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.world.inventory.SettingsUIMenu;
 import net.mcreator.craftnotaizai.procedures.OpenStatsOnKeyPressedProcedure;
 import net.mcreator.craftnotaizai.procedures.LowerSpeedProcedure;
+import net.mcreator.craftnotaizai.procedures.LowerPowerProcedure;
 import net.mcreator.craftnotaizai.procedures.IncreaseSpeedProcedure;
+import net.mcreator.craftnotaizai.procedures.IncreasePowerProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplayHealthButtonProcedure;
 import net.mcreator.craftnotaizai.procedures.DamageindicatorButtonProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
@@ -98,6 +100,14 @@ public class SettingsUIButtonMessage {
 		if (buttonID == 4) {
 
 			IncreaseSpeedProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			LowerPowerProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			IncreasePowerProcedure.execute(entity);
 		}
 	}
 

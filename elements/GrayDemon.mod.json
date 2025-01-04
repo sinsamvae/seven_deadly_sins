@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Gray Demon_Statue",
     "mobLabel": "",
-    "mobModelTexture": "graydemon.png",
+    "mobModelTexture": "gray_demon_texture_1.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.7999999999999998
@@ -20,14 +20,18 @@
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -9607313,
+      "value": -13213395,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -11120296,
+      "value": -12752844,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -99,15 +103,18 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "onRightClickedOn": {
       "name": "GrayDemonRightClickedOnEntity"
     },
-    "hasAI": false,
+    "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
-    "model": "sinsamvae_graydemon.geo.json",
+    "model": "gay_demon.geo.json",
     "groupName": "",
-    "animation1": "idle",
+    "animation1": "dead",
     "animation2": "",
     "animation3": "",
     "animation4": "",

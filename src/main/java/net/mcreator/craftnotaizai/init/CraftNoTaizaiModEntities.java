@@ -52,6 +52,7 @@ import net.mcreator.craftnotaizai.entity.RockRushProjectileEntity;
 import net.mcreator.craftnotaizai.entity.RisingMeteorEntity;
 import net.mcreator.craftnotaizai.entity.RedKnightAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.RedDemonGeckolibEntity;
+import net.mcreator.craftnotaizai.entity.ReaperScytheEntityEntity;
 import net.mcreator.craftnotaizai.entity.RakanProjectileEntity;
 import net.mcreator.craftnotaizai.entity.PurgatoryVenomProjectileEntity;
 import net.mcreator.craftnotaizai.entity.PuoraEntity;
@@ -402,11 +403,11 @@ public class CraftNoTaizaiModEntities {
 	public static final RegistryObject<EntityType<MuramoDemonFormEntity>> MURAMO_DEMON_FORM = register("muramo_demon_form",
 			EntityType.Builder.<MuramoDemonFormEntity>of(MuramoDemonFormEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MuramoDemonFormEntity::new)
 
-					.sized(1.1f, 3f));
+					.sized(1.1f, 6f));
 	public static final RegistryObject<EntityType<AndreDemonFormEntity>> ANDRE_DEMON_FORM = register("andre_demon_form",
 			EntityType.Builder.<AndreDemonFormEntity>of(AndreDemonFormEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AndreDemonFormEntity::new)
 
-					.sized(1.3f, 3f));
+					.sized(1.3f, 6f));
 	public static final RegistryObject<EntityType<EnergyArrowEntity>> ENERGY_ARROW = register("energy_arrow",
 			EntityType.Builder.<EnergyArrowEntity>of(EnergyArrowEntity::new, MobCategory.MISC).setCustomClientFactory(EnergyArrowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AcidTwowerMobEntity>> ACID_TWOWER_MOB = register("acid_twower_mob", EntityType.Builder.<AcidTwowerMobEntity>of(AcidTwowerMobEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
@@ -792,6 +793,10 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<GalandOverEntity>of(GalandOverEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandOverEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ReaperScytheEntityEntity>> REAPER_SCYTHE_ENTITY = register("reaper_scythe_entity",
+			EntityType.Builder.<ReaperScytheEntityEntity>of(ReaperScytheEntityEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReaperScytheEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -929,6 +934,7 @@ public class CraftNoTaizaiModEntities {
 			GalandStory2Entity.init();
 			ElaineStoryEntity.init();
 			GalandOverEntity.init();
+			ReaperScytheEntityEntity.init();
 		});
 	}
 
@@ -1063,5 +1069,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(GALAND_STORY_2.get(), GalandStory2Entity.createAttributes().build());
 		event.put(ELAINE_STORY.get(), ElaineStoryEntity.createAttributes().build());
 		event.put(GALAND_OVER.get(), GalandOverEntity.createAttributes().build());
+		event.put(REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityEntity.createAttributes().build());
 	}
 }

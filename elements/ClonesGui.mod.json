@@ -19,7 +19,7 @@
           "onClick": {
             "name": "ChangeCloneAmount"
           },
-          "x": 179,
+          "x": 181,
           "y": 93
         }
       },
@@ -50,7 +50,7 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 180,
+          "x": 181,
           "y": 73
         }
       },
@@ -63,7 +63,7 @@
           "onClick": {
             "name": "DespawnClones"
           },
-          "x": 177,
+          "x": 181,
           "y": 126
         }
       },

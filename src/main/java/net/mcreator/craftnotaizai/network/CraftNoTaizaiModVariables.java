@@ -282,6 +282,9 @@ public class CraftNoTaizaiModVariables {
 			clone.guild_leader = original.guild_leader;
 			clone.possession = original.possession;
 			clone.MagicalCounter = original.MagicalCounter;
+			clone.power_percentage = original.power_percentage;
+			clone.PerpetualReincarnation = original.PerpetualReincarnation;
+			clone.EternalLife = original.EternalLife;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -384,6 +387,8 @@ public class CraftNoTaizaiModVariables {
 		public boolean Istar = false;
 		public boolean Basquias = false;
 		public boolean fairy_kings = false;
+		public boolean Reincarnation = false;
+		public boolean eternallife = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -422,6 +427,8 @@ public class CraftNoTaizaiModVariables {
 			Istar = nbt.getBoolean("Istar");
 			Basquias = nbt.getBoolean("Basquias");
 			fairy_kings = nbt.getBoolean("fairy_kings");
+			Reincarnation = nbt.getBoolean("Reincarnation");
+			eternallife = nbt.getBoolean("eternallife");
 		}
 
 		@Override
@@ -456,6 +463,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("Istar", Istar);
 			nbt.putBoolean("Basquias", Basquias);
 			nbt.putBoolean("fairy_kings", fairy_kings);
+			nbt.putBoolean("Reincarnation", Reincarnation);
+			nbt.putBoolean("eternallife", eternallife);
 			return nbt;
 		}
 
@@ -748,6 +757,9 @@ public class CraftNoTaizaiModVariables {
 		public boolean guild_leader = false;
 		public boolean possession = false;
 		public boolean MagicalCounter = false;
+		public double power_percentage = 0.0;
+		public boolean PerpetualReincarnation = false;
+		public boolean EternalLife = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -956,6 +968,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("guild_leader", guild_leader);
 			nbt.putBoolean("possession", possession);
 			nbt.putBoolean("MagicalCounter", MagicalCounter);
+			nbt.putDouble("power_percentage", power_percentage);
+			nbt.putBoolean("PerpetualReincarnation", PerpetualReincarnation);
+			nbt.putBoolean("EternalLife", EternalLife);
 			return nbt;
 		}
 
@@ -1161,6 +1176,9 @@ public class CraftNoTaizaiModVariables {
 			guild_leader = nbt.getBoolean("guild_leader");
 			possession = nbt.getBoolean("possession");
 			MagicalCounter = nbt.getBoolean("MagicalCounter");
+			power_percentage = nbt.getDouble("power_percentage");
+			PerpetualReincarnation = nbt.getBoolean("PerpetualReincarnation");
+			EternalLife = nbt.getBoolean("EternalLife");
 		}
 	}
 
@@ -1394,6 +1412,9 @@ public class CraftNoTaizaiModVariables {
 					variables.guild_leader = message.data.guild_leader;
 					variables.possession = message.data.possession;
 					variables.MagicalCounter = message.data.MagicalCounter;
+					variables.power_percentage = message.data.power_percentage;
+					variables.PerpetualReincarnation = message.data.PerpetualReincarnation;
+					variables.EternalLife = message.data.EternalLife;
 				}
 			});
 			context.setPacketHandled(true);

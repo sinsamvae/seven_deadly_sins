@@ -46,6 +46,7 @@ import net.mcreator.craftnotaizai.block.FairyKingLogBlock;
 import net.mcreator.craftnotaizai.block.FairyKingLeavesBlock;
 import net.mcreator.craftnotaizai.block.FairyKingLeaveBlock;
 import net.mcreator.craftnotaizai.block.EmptyMugBlockBlock;
+import net.mcreator.craftnotaizai.block.CiderMugBlockBlock;
 import net.mcreator.craftnotaizai.block.ChaosWallBlock;
 import net.mcreator.craftnotaizai.block.ChaosFloorBlock;
 import net.mcreator.craftnotaizai.block.ChaosDimensionPortalBlock;
@@ -120,6 +121,7 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> ISTAR_PORTAL_BLOCK = REGISTRY.register("istar_portal_block", () -> new IstarPortalBlockBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_PLANK = REGISTRY.register("sleeping_forest_plank", () -> new SleepingForestPlankBlock());
 	public static final RegistryObject<Block> RHITTA_BLOCK = REGISTRY.register("rhitta_block", () -> new RhittaBlockBlock());
+	public static final RegistryObject<Block> CIDER_MUG_BLOCK = REGISTRY.register("cider_mug_block", () -> new CiderMugBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,7 +1,6 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -124,14 +123,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 1) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.EMPTY_MUG.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
+					if (entity instanceof LivingEntity _entity) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.MUG_ALE.get()).copy();
 						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof Player _player)
+							_player.getInventory().setChanged();
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -167,14 +164,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 2) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.EMPTY_MUG.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
+					if (entity instanceof LivingEntity _entity) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.GLOW_MUG.get()).copy();
 						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof Player _player)
+							_player.getInventory().setChanged();
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -210,14 +205,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 3) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.EMPTY_MUG.get());
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-					}
-					if (entity instanceof Player _player) {
+					if (entity instanceof LivingEntity _entity) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.BEER_MUG.get()).copy();
 						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof Player _player)
+							_player.getInventory().setChanged();
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);

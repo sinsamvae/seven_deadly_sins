@@ -3,10 +3,10 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.Gay Demon",
+				"identifier": "geometry.gay_demon",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 5.5,
 				"visible_bounds_offset": [0, 2.25, 0]
 			},
@@ -23,7 +23,12 @@
 				{
 					"name": "Head",
 					"parent": "bone4",
-					"pivot": [0, 48, 1],
+					"pivot": [0, 48, 1]
+				},
+				{
+					"name": "bone8",
+					"parent": "Head",
+					"pivot": [-0.01478, 53.87881, -8.58826],
 					"cubes": [
 						{"origin": [-5.5, 47, -7], "size": [11, 14, 5], "uv": [0, 42]},
 						{"origin": [7.81948, 52.37119, -8.74], "size": [3, 1, 0], "pivot": [9.31948, 52.87119, -8.75], "rotation": [0, 0, -15], "uv": [85, 6]},
@@ -132,7 +137,7 @@
 				},
 				{
 					"name": "Eyes",
-					"parent": "Head",
+					"parent": "bone8",
 					"pivot": [-4.5, 6.75, -0.5],
 					"cubes": [
 						{"origin": [-4, 54.25, -8.4], "size": [2, 3, 0], "uv": [121, 0]},
@@ -227,10 +232,15 @@
 				{
 					"name": "LeftArm",
 					"parent": "bone4",
-					"pivot": [12, 48.5, 0],
+					"pivot": [12, 48.5, 0]
+				},
+				{
+					"name": "bone5",
+					"parent": "LeftArm",
+					"pivot": [12.5, 45.5, 0],
 					"cubes": [
-						{"origin": [9, 40.5, -4], "size": [7, 10, 8], "uv": [24, 54], "mirror": true},
-						{"origin": [9, 40.5, -4], "size": [7, 10, 8], "inflate": 0.1, "uv": [98, 93]}
+						{"origin": [9, 40.5, -4], "size": [7, 10, 8], "inflate": 0.1, "uv": [98, 93]},
+						{"origin": [9, 40.5, -4], "size": [7, 10, 8], "uv": [24, 54], "mirror": true}
 					]
 				},
 				{
@@ -255,7 +265,12 @@
 				{
 					"name": "RightLeg",
 					"parent": "bone",
-					"pivot": [-4.45, 26, 0.5],
+					"pivot": [-4.45, 26, 0.5]
+				},
+				{
+					"name": "bone7",
+					"parent": "RightLeg",
+					"pivot": [-3.77, 20, 0.25],
 					"cubes": [
 						{"origin": [-7.77, 14, -3.75], "size": [8, 12, 8], "uv": [36, 34]}
 					]
@@ -286,7 +301,12 @@
 				{
 					"name": "LeftLeg",
 					"parent": "bone",
-					"pivot": [4.45, 26, 0.5],
+					"pivot": [4.45, 26, 0.5]
+				},
+				{
+					"name": "bone6",
+					"parent": "LeftLeg",
+					"pivot": [3.77, 20, 0.25],
 					"cubes": [
 						{"origin": [-0.23, 14, -3.75], "size": [8, 12, 8], "uv": [36, 34], "mirror": true}
 					]

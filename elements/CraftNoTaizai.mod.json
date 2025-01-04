@@ -176,7 +176,7 @@
             "comment": "This will determine how much stat you get when killing mob (Default 3)",
             "vardisplay": "cave_of_training",
             "varname": "cave_of_training",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           },
           {
@@ -193,7 +193,7 @@
             "comment": "This will determine how much stat you get when killing mob (Default 3)",
             "vardisplay": "tower_of_trails",
             "varname": "tower_of_trails",
-            "enablecomment": false,
+            "enablecomment": true,
             "stringlist": []
           }
         ]
@@ -215,7 +215,29 @@
             "comment": "This will determine if immortality can be obtain in game(Default True)",
             "vardisplay": "immortality",
             "varname": "immortality",
-            "enablecomment": false,
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      },
+      {
+        "category": "re-roll",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "this will determine if you can re-roll magic item first join",
+            "vardisplay": "reroll",
+            "varname": "reroll",
+            "enablecomment": true,
             "stringlist": []
           }
         ]
