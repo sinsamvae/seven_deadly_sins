@@ -13,6 +13,7 @@ import software.bernie.geckolib.animatable.GeoItem;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -24,12 +25,14 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 
 import net.mcreator.craftnotaizai.procedures.CoureChouseRightclickedProcedure;
 import net.mcreator.craftnotaizai.item.renderer.HolyStaffCoureChouseItemRenderer;
 
 import java.util.function.Consumer;
+import java.util.List;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
@@ -114,6 +117,12 @@ public class HolyStaffCoureChouseItem extends Item implements GeoItem {
 			return builder.build();
 		}
 		return super.getDefaultAttributeModifiers(equipmentSlot);
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		list.add(Component.literal("\u00A7Right Click Use Super Concentration"));
 	}
 
 	@Override

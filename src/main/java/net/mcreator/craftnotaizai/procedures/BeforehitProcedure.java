@@ -1,5 +1,6 @@
 package net.mcreator.craftnotaizai.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -14,11 +15,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -27,6 +28,7 @@ import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
@@ -65,6 +67,7 @@ public class BeforehitProcedure {
 		double stage = 0;
 		double c_health = 0;
 		double dodge = 0;
+		double block = 0;
 		dmg = amount;
 		if (event != null && event.isCancelable()) {
 			event.setCanceled(true);
@@ -84,6 +87,28 @@ public class BeforehitProcedure {
 			current_health = current_health - dmg;
 			current_health = current_health / (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth;
 			current_health = current_health * 20;
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Human")
+					&& !((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost
+							|| (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood)
+					&& !(((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Infinity")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Snatch")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Chaos")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Ark"))
+					&& Math.floor(current_health) <= 10) {
+				n = Mth.nextInt(RandomSource.create(), 1, 100);
+				if (n <= 5 && !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).possession) {
+					{
+						boolean _setval = true;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.possession = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("It looks like you could use some power!"), false);
+				}
+			}
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon") && Math.floor(current_health) <= 10) {
 				n = Mth.nextInt(RandomSource.create(), 1, 100);
 				if (n <= 5) {
@@ -112,15 +137,18 @@ public class BeforehitProcedure {
 			}
 			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get()
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
-					&& !(entity instanceof Player _plrCldCheck15 && _plrCldCheck15.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 3, false, false));
-				current_health = 0.1;
+					&& !(entity instanceof Player _plrCldCheck17 && _plrCldCheck17.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
+				current_health = 20;
+				if (world instanceof Level _level) {
+					if (_level.isClientSide()) {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(CraftNoTaizaiModItems.ALDAN.get(), 24000);
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).immortality == true && Math.floor(current_health) <= 0
-					&& !(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get()))) {
+					&& !(entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get()))) {
 				current_health = 0.1;
 			}
 			if (entity.getPersistentData().getBoolean("infinity") == true && Math.floor(current_health) <= 0) {
@@ -129,10 +157,10 @@ public class BeforehitProcedure {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).infinity_use == true && Math.floor(current_health) <= 0) {
 				current_health = 0.1;
 			}
-			if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
+			if (entity instanceof LivingEntity _livEnt22 && _livEnt22.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
 				dmg = dmg * 1.1;
 			}
-			if (entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
+			if (entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 				dmg = dmg * 1.3;
 			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {

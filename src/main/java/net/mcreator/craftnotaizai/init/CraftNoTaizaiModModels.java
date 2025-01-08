@@ -56,6 +56,7 @@ import net.mcreator.craftnotaizai.client.model.Modelhelbram_wings3;
 import net.mcreator.craftnotaizai.client.model.Modelhelbram_wing;
 import net.mcreator.craftnotaizai.client.model.Modelgustaf;
 import net.mcreator.craftnotaizai.client.model.Modelgolgiusskin;
+import net.mcreator.craftnotaizai.client.model.Modelgoddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgloxiana_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgilthunder_armor;
 import net.mcreator.craftnotaizai.client.model.Modelgear_spirit_spear_rm;
@@ -121,6 +122,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelminecraftskin.LAYER_LOCATION, Modelminecraftskin::createBodyLayer);
 		event.registerLayerDefinition(Modelflame_ball.LAYER_LOCATION, Modelflame_ball::createBodyLayer);
 		event.registerLayerDefinition(ModelHellFire5.LAYER_LOCATION, ModelHellFire5::createBodyLayer);
+		event.registerLayerDefinition(Modelgoddess_wings.LAYER_LOCATION, Modelgoddess_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelnew_helbram_wings.LAYER_LOCATION, Modelnew_helbram_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelhowzer_armor.LAYER_LOCATION, Modelhowzer_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelremake_evilhound.LAYER_LOCATION, Modelremake_evilhound::createBodyLayer);

@@ -529,7 +529,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/MaxHealth"
+      "path": "~/commands/Stat/Stats/MaxHealth"
     },
     {
       "name": "Setstrengthcommand",
@@ -548,7 +548,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/Strength"
+      "path": "~/commands/Stat/Stats/Strength"
     },
     {
       "name": "Setdexcommand",
@@ -567,7 +567,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/Defence"
+      "path": "~/commands/Stat/Stats/Defence"
     },
     {
       "name": "Strvar",
@@ -1126,19 +1126,6 @@
       "path": "~/magic abilities/Miracle Wind/Tempest Falls"
     },
     {
-      "name": "SetLevel",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_level",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SetLevelCommand.java"
-        ]
-      },
-      "path": "~/commands/level"
-    },
-    {
       "name": "Setlevelcommand",
       "type": "procedure",
       "compiles": true,
@@ -1155,7 +1142,7 @@
           }
         ]
       },
-      "path": "~/commands/level"
+      "path": "~/commands/Stat/level"
     },
     {
       "name": "NextButton2",
@@ -2804,7 +2791,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/MaxMana"
+      "path": "~/commands/Stat/Stats/MaxMana"
     },
     {
       "name": "HeavyarmorActiveTickCondition",
@@ -3676,19 +3663,6 @@
       "path": "~/magic abilities/sevendeadlysinsmagic/Creation/Jet Hammer"
     },
     {
-      "name": "GiveXp",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_xp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/GiveXpCommand.java"
-        ]
-      },
-      "path": "~/commands/Xp"
-    },
-    {
       "name": "Givexpcommand",
       "type": "procedure",
       "compiles": true,
@@ -3705,7 +3679,7 @@
           }
         ]
       },
-      "path": "~/commands/Xp"
+      "path": "~/commands/Stat/Xp"
     },
     {
       "name": "HellBlazeFullCounterOnKeyPressed",
@@ -3898,7 +3872,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/Speed"
+      "path": "~/commands/Stat/Stats/Speed"
     },
     {
       "name": "RakanWhileProjectileFlyingTick",
@@ -4813,7 +4787,7 @@
           }
         ]
       },
-      "path": "~/races/Demon_Clan/DemonMark/mark1"
+      "path": "~/races/Demon_Clan/DemonMark/DemonMark"
     },
     {
       "name": "Setdemoneyes",
@@ -4836,7 +4810,7 @@
           }
         ]
       },
-      "path": "~/commands/immortiliy"
+      "path": "~/commands/Miscellaneous/immortiliy"
     },
     {
       "name": "GlowBlockUpdateTick",
@@ -4922,7 +4896,7 @@
           }
         ]
       },
-      "path": "~/races/Demon_Clan/DemonMark/mark1"
+      "path": "~/races/Demon_Clan/DemonMark/DemonMark"
     },
     {
       "name": "DemonMarkAdd",
@@ -4941,7 +4915,7 @@
           }
         ]
       },
-      "path": "~/races/Demon_Clan/DemonMark/mark1"
+      "path": "~/races/Demon_Clan/DemonMark/DemonMark"
     },
     {
       "name": "DemonMarkRemove",
@@ -4960,7 +4934,7 @@
           }
         ]
       },
-      "path": "~/races/Demon_Clan/DemonMark/mark1"
+      "path": "~/races/Demon_Clan/DemonMark/DemonMark"
     },
     {
       "name": "BerserkModeTick",
@@ -5975,7 +5949,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Season1/Twigo"
     },
     {
       "name": "Stats",
@@ -6091,7 +6065,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/Season1/gilthunder"
     },
     {
       "name": "Story4",
@@ -6134,7 +6108,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Season1/Golgius"
     },
     {
       "name": "Story5",
@@ -6181,7 +6155,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/Season1/diane"
     },
     {
       "name": "Story6",
@@ -6339,6 +6313,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6388,19 +6366,6 @@
       "path": "~/Weapons/whip"
     },
     {
-      "name": "ChangeRace",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "change_race",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/ChangeRaceCommand.java"
-        ]
-      },
-      "path": "~/commands/race"
-    },
-    {
       "name": "Changeracehumancommand",
       "type": "procedure",
       "compiles": true,
@@ -6418,19 +6383,6 @@
         ]
       },
       "path": "~/commands/race"
-    },
-    {
-      "name": "ChangeMaigCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "change_maig_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/ChangeMaigCommandCommand.java"
-        ]
-      },
-      "path": "~/commands/magic"
     },
     {
       "name": "Changemagiccommand",
@@ -6562,7 +6514,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/Season1/ruin"
     },
     {
       "name": "Story7",
@@ -6605,7 +6557,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/Season1/friesia"
     },
     {
       "name": "Story8",
@@ -6699,7 +6651,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/Season1/guila"
     },
     {
       "name": "Story10",
@@ -6762,7 +6714,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/taizoo"
+      "path": "~/StoryModeEntities/Season1/taizoo"
     },
     {
       "name": "Story12",
@@ -6805,7 +6757,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/Season1/griamore"
     },
     {
       "name": "Story13",
@@ -6848,7 +6800,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/Season1/howzer"
     },
     {
       "name": "Story14",
@@ -6891,7 +6843,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/Season1/cainbarzad"
     },
     {
       "name": "HyperRecovery",
@@ -7014,7 +6966,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/Season1/jericho"
     },
     {
       "name": "Story16",
@@ -7077,7 +7029,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/Season1/guilamob"
     },
     {
       "name": "BP",
@@ -7120,20 +7072,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/helbrem"
-    },
-    {
-      "name": "Setimortal",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setimortal",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SetimortalCommand.java"
-        ]
-      },
-      "path": "~/commands/immortiliy"
+      "path": "~/StoryModeEntities/Season1/helbrem"
     },
     {
       "name": "CruelSunWhileProjectileFlyingTick",
@@ -7434,7 +7373,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DaleArmoredModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/Season1/dale"
     },
     {
       "name": "DaleSec",
@@ -7450,7 +7389,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DaleSecModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/Season1/dale"
     },
     {
       "name": "Dalefinal",
@@ -7466,7 +7405,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DalefinalEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/Season1/dale"
     },
     {
       "name": "DaleArmoredOnEntityTickUpdate",
@@ -7501,7 +7440,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/form"
+      "path": "~/StoryModeEntities/Season1/dale/form"
     },
     {
       "name": "MeliodasShirt",
@@ -7875,19 +7814,6 @@
       "path": "~/items/Incantation Orb/perfectcube"
     },
     {
-      "name": "SetAllStats",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_all_stats",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SetAllStatsCommand.java"
-        ]
-      },
-      "path": "~/commands/AllStats"
-    },
-    {
       "name": "Setallstat",
       "type": "procedure",
       "compiles": true,
@@ -7904,7 +7830,7 @@
           }
         ]
       },
-      "path": "~/commands/AllStats"
+      "path": "~/commands/Stat/AllStats"
     },
     {
       "name": "Insect",
@@ -8147,7 +8073,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/form"
+      "path": "~/StoryModeEntities/Season1/dale/form"
     },
     {
       "name": "Story19",
@@ -8190,7 +8116,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale"
+      "path": "~/StoryModeEntities/Season1/dale"
     },
     {
       "name": "BarDoor",
@@ -9115,7 +9041,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves"
     },
     {
       "name": "FrozenBreathWhileProjectileFlyingTick",
@@ -9154,7 +9080,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "FrozenBreathProjectileHitsLivingEntity",
@@ -9173,7 +9099,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "FrozenBreath",
@@ -9187,7 +9113,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/FrozenBreathEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Frozen Breath"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Frozen Breath"
     },
     {
       "name": "NoroiNoKoeWhileProjectileFlyingTick",
@@ -9226,7 +9152,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Noroi no Koe"
     },
     {
       "name": "NoroiNoKoe",
@@ -9239,7 +9165,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/NoroiNoKoeEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Noroi no Koe"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Noroi no Koe"
     },
     {
       "name": "DespairVenomWhileProjectileFlyingTick",
@@ -9278,7 +9204,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DespairVenomProjectileHitsLivingEntity",
@@ -9297,7 +9223,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DespairVenom",
@@ -9310,7 +9236,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DespairVenomEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/dale/dalesecmoves/Despair Venom"
+      "path": "~/StoryModeEntities/Season1/dale/dalesecmoves/Despair Venom"
     },
     {
       "name": "DemonAxeRightclicked",
@@ -9386,7 +9312,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/MagicDmg"
+      "path": "~/commands/Stat/Stats/MagicDmg"
     },
     {
       "name": "TwigoOnEntityTickUpdate",
@@ -9421,7 +9347,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Season1/Twigo"
     },
     {
       "name": "LockOnOnKeyPressed",
@@ -9467,7 +9393,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2"
     },
     {
       "name": "FairyHelbremEntityIsHurt",
@@ -9498,7 +9424,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2"
     },
     {
       "name": "Story20",
@@ -9541,7 +9467,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/Season1/StoryBan1"
     },
     {
       "name": "KillRoyaleGurads",
@@ -9568,7 +9494,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/royalegurads"
+      "path": "~/StoryModeEntities/Season1/royalegurads"
     },
     {
       "name": "Roylekillcount",
@@ -9607,7 +9533,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/royalegurads"
+      "path": "~/StoryModeEntities/Season1/royalegurads"
     },
     {
       "name": "Redkillcount",
@@ -10524,7 +10450,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/Season1/dreyfus"
     },
     {
       "name": "DreyfusEntityIsHurt",
@@ -10543,7 +10469,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/Season1/dreyfus"
     },
     {
       "name": "Story22",
@@ -11232,7 +11158,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/Season1/gilthunder"
     },
     {
       "name": "GuilaOnEntityTickUpdate",
@@ -11251,7 +11177,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/Season1/guila"
     },
     {
       "name": "HowzerOnEntityTickUpdate",
@@ -11270,7 +11196,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/Season1/howzer"
     },
     {
       "name": "CainBarzadOnEntityTickUpdate",
@@ -11289,7 +11215,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/Season1/cainbarzad"
     },
     {
       "name": "GuilademonOnEntityTickUpdate",
@@ -11308,7 +11234,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/Season1/guilamob"
     },
     {
       "name": "HelbremOnEntityTickUpdate",
@@ -11327,7 +11253,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/helbrem"
+      "path": "~/StoryModeEntities/Season1/helbrem"
     },
     {
       "name": "TyrantDragonMeat",
@@ -12065,7 +11991,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/Season1/GilThunder2"
     },
     {
       "name": "HendricksonOnEntityTickUpdate",
@@ -12084,7 +12010,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Season1/Hendrickson"
     },
     {
       "name": "GilthunderDieNearHendrickson",
@@ -12119,7 +12045,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/Season1/GilThunder2"
     },
     {
       "name": "HendricksonMoveCondition",
@@ -12139,7 +12065,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Season1/Hendrickson"
     },
     {
       "name": "HendricksonEntityDies",
@@ -12162,7 +12088,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Season1/Hendrickson"
     },
     {
       "name": "GilThunder2EntityDies",
@@ -12185,7 +12111,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/Season1/GilThunder2"
     },
     {
       "name": "TransparncyKled",
@@ -12897,7 +12823,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/JerichoDemonFormRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/jerichoDemonForm"
+      "path": "~/StoryModeEntities/Season1/jerichoDemonForm"
     },
     {
       "name": "PurgeoftheThunderEmperor",
@@ -13300,7 +13226,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/jerichoDemonForm"
+      "path": "~/StoryModeEntities/Season1/jerichoDemonForm"
     },
     {
       "name": "Troll",
@@ -15121,7 +15047,7 @@
           }
         ]
       },
-      "path": "~/commands/Stats/Agility"
+      "path": "~/commands/Stat/Stats/Agility"
     },
     {
       "name": "Bow",
@@ -15290,38 +15216,6 @@
       "path": "~/entities/Hard/weakess/Vivian"
     },
     {
-      "name": "SwitchCapitalOfTheDeadCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_capital_of_the_dead_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SwitchCapitalOfTheDeadCommandCommand.java"
-        ]
-      },
-      "path": "~/commands/SwitchCapitalOfTheDead"
-    },
-    {
-      "name": "SwitchCapitalOfTheDead",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_capital_of_the_dead",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SwitchCapitalOfTheDeadProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/commands/SwitchCapitalOfTheDead"
-    },
-    {
       "name": "Story25",
       "type": "procedure",
       "compiles": true,
@@ -15362,7 +15256,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/Season1/DeadHelbram"
     },
     {
       "name": "StoryBan2EntityDies",
@@ -15385,7 +15279,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/Season1/StoryBan2"
     },
     {
       "name": "DemonHendricksonOnEntityTickUpdate",
@@ -15404,7 +15298,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/Season1/HendricksonDemonMark"
     },
     {
       "name": "StoryBanOnEntityTickUpdate",
@@ -15427,7 +15321,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/Season1/StoryBan1"
     },
     {
       "name": "DarkSnow",
@@ -15455,7 +15349,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/DeadEndEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "DeadEndWhileProjectileFlyingTick",
@@ -15494,7 +15388,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "DeadEndProjectileHitsLivingEntity",
@@ -15521,7 +15415,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson/DeadEnd"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson/DeadEnd"
     },
     {
       "name": "GrayDemonHendricksonOnEntityTickUpdate",
@@ -15556,7 +15450,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson"
     },
     {
       "name": "Story26",
@@ -15619,7 +15513,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2"
     },
     {
       "name": "HelbremSwordParticle",
@@ -15630,7 +15524,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2"
     },
     {
       "name": "FairySwordParticles",
@@ -15667,7 +15561,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/Season1/HendricksonDemonMark"
     },
     {
       "name": "Story28",
@@ -15710,7 +15604,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson"
     },
     {
       "name": "GustafOnEntityTickUpdate",
@@ -15865,7 +15759,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/Season1/diane"
     },
     {
       "name": "RuinArmor",
@@ -16054,7 +15948,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/Season1/friesia"
     },
     {
       "name": "RuinOnEntityTickUpdate",
@@ -16077,7 +15971,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/Season1/ruin"
     },
     {
       "name": "JillianArmor",
@@ -16533,7 +16427,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/Season1/DeadHelbram"
     },
     {
       "name": "BanBossOnEntityTickUpdate",
@@ -16696,29 +16590,6 @@
         ]
       },
       "path": "~/DMGType"
-    },
-    {
-      "name": "BossDianeOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "boss_diane_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/BossDianeOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/entities/Bosses/Diane"
     },
     {
       "name": "DarkSnow2",
@@ -16911,19 +16782,6 @@
         ]
       },
       "path": "~/Loot/Drops"
-    },
-    {
-      "name": "SetStoryCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_story_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SetStoryCommandCommand.java"
-        ]
-      },
-      "path": "~/commands/SetStory"
     },
     {
       "name": "SetStory",
@@ -22399,19 +22257,6 @@
       "path": "~/magic abilities/HumanMagic/Goen no Jujin"
     },
     {
-      "name": "SetStat",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_stat",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/SetStatCommand.java"
-        ]
-      },
-      "path": "~/commands/Stats"
-    },
-    {
       "name": "TwigoAnimated",
       "type": "animatedentity",
       "compiles": true,
@@ -22425,7 +22270,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/TwigoAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/Twigo"
+      "path": "~/StoryModeEntities/Season1/Twigo"
     },
     {
       "name": "GrayDemonEntity",
@@ -22459,7 +22304,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/gil_thunder_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/gilthunder"
+      "path": "~/StoryModeEntities/Season1/gilthunder"
     },
     {
       "name": "GolgiusAnimated",
@@ -22475,7 +22320,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GolgiusAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Season1/Golgius"
     },
     {
       "name": "TransparencyEffect",
@@ -22536,7 +22381,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/diane_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/diane"
+      "path": "~/StoryModeEntities/Season1/diane"
     },
     {
       "name": "RuinAnimated",
@@ -22552,7 +22397,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/RuinAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/ruin"
+      "path": "~/StoryModeEntities/Season1/ruin"
     },
     {
       "name": "FriesiaAnimated",
@@ -22568,7 +22413,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/FriesiaAnimatedRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/friesia"
+      "path": "~/StoryModeEntities/Season1/friesia"
     },
     {
       "name": "GuilaAnimated",
@@ -22584,7 +22429,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/GuilaAnimatedRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/guila"
+      "path": "~/StoryModeEntities/Season1/guila"
     },
     {
       "name": "TaizooAnimated",
@@ -22600,7 +22445,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/TaizooAnimatedEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/taizoo"
+      "path": "~/StoryModeEntities/Season1/taizoo"
     },
     {
       "name": "GriamoreAnimated",
@@ -22616,7 +22461,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/griamore_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/Season1/griamore"
     },
     {
       "name": "GriamoreAnimatedOnEntityTickUpdate",
@@ -22651,7 +22496,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/griamore"
+      "path": "~/StoryModeEntities/Season1/griamore"
     },
     {
       "name": "HowzerAnimated",
@@ -22667,7 +22512,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/HowzerAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/howzer"
+      "path": "~/StoryModeEntities/Season1/howzer"
     },
     {
       "name": "CainBarzadAnimated",
@@ -22683,7 +22528,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/cain_barzad_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/cainbarzad"
+      "path": "~/StoryModeEntities/Season1/cainbarzad"
     },
     {
       "name": "StoryBanAnimated",
@@ -22699,7 +22544,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/StoryBanAnimatedRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan1"
+      "path": "~/StoryModeEntities/Season1/StoryBan1"
     },
     {
       "name": "JerichoAnimated",
@@ -22715,7 +22560,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/JerichoAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/Season1/jericho"
     },
     {
       "name": "JerichoAnimatedOnEntityTickUpdate",
@@ -22750,7 +22595,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/jericho"
+      "path": "~/StoryModeEntities/Season1/jericho"
     },
     {
       "name": "GuilaDemonanimated",
@@ -22766,7 +22611,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/guila_demonanimated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/guilamob"
+      "path": "~/StoryModeEntities/Season1/guilamob"
     },
     {
       "name": "HelbremAnimated",
@@ -22782,7 +22627,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/HelbremAnimatedEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/helbrem"
+      "path": "~/StoryModeEntities/Season1/helbrem"
     },
     {
       "name": "GilThunderAnimated2",
@@ -22798,7 +22643,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/GilThunderAnimated2Entity.java"
         ]
       },
-      "path": "~/StoryModeEntities/GilThunder2"
+      "path": "~/StoryModeEntities/Season1/GilThunder2"
     },
     {
       "name": "DuskBisionAttack",
@@ -22942,7 +22787,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/dreyfus_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/dreyfus"
+      "path": "~/StoryModeEntities/Season1/dreyfus"
     },
     {
       "name": "FairyHelbremAnimated",
@@ -22958,7 +22803,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/FairyHelbremAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2"
     },
     {
       "name": "DeadHelbramanimated",
@@ -22974,7 +22819,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/DeadHelbramanimatedRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/DeadHelbram"
+      "path": "~/StoryModeEntities/Season1/DeadHelbram"
     },
     {
       "name": "VivianAnimated",
@@ -23127,7 +22972,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/hendrickson_animated_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/Hendrickson"
+      "path": "~/StoryModeEntities/Season1/Hendrickson"
     },
     {
       "name": "StoryBan2Animated",
@@ -23143,7 +22988,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/StoryBan2AnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/Season1/StoryBan2"
     },
     {
       "name": "SpawnCondtion",
@@ -23196,7 +23041,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/DemonHendricksonAnimatedRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/HendricksonDemonMark"
+      "path": "~/StoryModeEntities/Season1/HendricksonDemonMark"
     },
     {
       "name": "GrayDemonHendricksonAnimated",
@@ -23212,7 +23057,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GrayDemonHendricksonAnimatedModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/GrayDemonHendrickson"
+      "path": "~/StoryModeEntities/Season1/GrayDemonHendrickson"
     },
     {
       "name": "AndreAnimated",
@@ -24245,7 +24090,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Golgius"
+      "path": "~/StoryModeEntities/Season1/Golgius"
     },
     {
       "name": "HeavyMetalRemoveLevitions",
@@ -26568,63 +26413,6 @@
       "path": "~/Recipe/Armor/Season1/GustafArmor"
     },
     {
-      "name": "ChaosDimension",
-      "type": "dimension",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_dimension",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/block/chaos_dimension_portal_ns.json",
-          "src/main/resources/assets/craft_no_taizai/models/item/chaos_dimension.json",
-          "src/main/resources/data/craft_no_taizai/dimension_type/chaos_dimension.json",
-          "src/main/java/net/mcreator/craftnotaizai/item/ChaosDimensionItem.java",
-          "src/main/resources/data/craft_no_taizai/dimension/chaos_dimension.json",
-          "src/main/java/net/mcreator/craftnotaizai/block/ChaosDimensionPortalBlock.java",
-          "src/main/java/net/mcreator/craftnotaizai/world/teleporter/ChaosDimensionPortalShape.java",
-          "src/main/resources/assets/craft_no_taizai/models/block/chaos_dimension_portal_ew.json",
-          "src/main/java/net/mcreator/craftnotaizai/world/teleporter/ChaosDimensionTeleporter.java",
-          "src/main/java/net/mcreator/craftnotaizai/world/dimension/ChaosDimensionDimension.java",
-          "src/main/resources/assets/craft_no_taizai/blockstates/chaos_dimension_portal.json"
-        ]
-      },
-      "path": "~/dimensions"
-    },
-    {
-      "name": "ChaosBiome",
-      "type": "biome",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_biome",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_no_taizai/worldgen/placed_feature/chaos_biome_tree.json",
-          "src/main/resources/data/craft_no_taizai/worldgen/biome/chaos_biome.json",
-          "src/main/resources/data/craft_no_taizai/worldgen/configured_feature/chaos_biome_tree.json"
-        ]
-      },
-      "path": "~/biomes"
-    },
-    {
-      "name": "SwitchChaos",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_chaos",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SwitchChaosProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/commands/SwitchCapitalOfTheDead"
-    },
-    {
       "name": "RoyalKnightHelmentRecipe",
       "type": "recipe",
       "compiles": true,
@@ -28260,7 +28048,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/troll_ear.json"
         ]
       },
-      "path": "~/food_drinks"
+      "path": "~/food_drinks/TrollEar"
     },
     {
       "name": "CurvedSword",
@@ -28786,7 +28574,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/DogedoModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Season2/Dogedo"
     },
     {
       "name": "DogedoOnEntityTickUpdate",
@@ -28821,7 +28609,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Season2/Dogedo"
     },
     {
       "name": "GowtherStory1",
@@ -28837,7 +28625,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GowtherStory1Model.java"
         ]
       },
-      "path": "~/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Season2/Gowther"
     },
     {
       "name": "DogedoEntityDies",
@@ -28860,7 +28648,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Dogedo"
+      "path": "~/StoryModeEntities/Season2/Dogedo"
     },
     {
       "name": "DemonRemovePosion",
@@ -28925,7 +28713,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Season2/Gowther"
     },
     {
       "name": "GowtherStory1EntityDies",
@@ -28948,7 +28736,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Gowther"
+      "path": "~/StoryModeEntities/Season2/Gowther"
     },
     {
       "name": "Story31",
@@ -28984,7 +28772,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/AlbionModel.java"
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/Season2/FatAlbion"
     },
     {
       "name": "AlbionOnEntityTickUpdate",
@@ -29007,7 +28795,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/Season2/FatAlbion"
     },
     {
       "name": "AlbionEntityDies",
@@ -29030,7 +28818,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion"
+      "path": "~/StoryModeEntities/Season2/FatAlbion"
     },
     {
       "name": "Stroy32",
@@ -29089,7 +28877,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/Season2/FatAlbion/Cannon"
     },
     {
       "name": "CannonProjectileHitsLivingEntity",
@@ -29116,7 +28904,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/Season2/FatAlbion/Cannon"
     },
     {
       "name": "Cannon",
@@ -29129,7 +28917,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/CannonEntity.java"
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/Season2/FatAlbion/Cannon"
     },
     {
       "name": "RedParticles",
@@ -29178,7 +28966,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/FatAlbion/Cannon"
+      "path": "~/StoryModeEntities/Season2/FatAlbion/Cannon"
     },
     {
       "name": "AlbionFat",
@@ -29234,7 +29022,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/tall_albion_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/Season2/TallAlbion"
     },
     {
       "name": "PurgatoryBlock",
@@ -29274,7 +29062,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/Season2/TallAlbion"
     },
     {
       "name": "TallAlbionEntityDies",
@@ -29297,7 +29085,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/TallAlbion"
+      "path": "~/StoryModeEntities/Season2/TallAlbion"
     },
     {
       "name": "Story33",
@@ -29398,19 +29186,6 @@
         ]
       },
       "path": "~/var"
-    },
-    {
-      "name": "CommandmentCommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "commandment_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/CommandmentCommandCommand.java"
-        ]
-      },
-      "path": "~/commands/Commandment"
     },
     {
       "name": "CommandmentProcedure",
@@ -30592,25 +30367,6 @@
       "path": "~/dimensions/Purgatory"
     },
     {
-      "name": "SwitchPurgatory",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_purgatory",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SwitchPurgatoryProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/commands/SwitchCapitalOfTheDead"
-    },
-    {
       "name": "PurgatorySetUp",
       "type": "procedure",
       "compiles": true,
@@ -30755,19 +30511,6 @@
       "path": "~/Gui/MagicMenu/Demon King/DemonKingMagic"
     },
     {
-      "name": "GiveGod",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_god",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/GiveGodCommand.java"
-        ]
-      },
-      "path": "~/commands/GiveGod"
-    },
-    {
       "name": "GiveGodProcedure",
       "type": "procedure",
       "compiles": true,
@@ -30784,7 +30527,7 @@
           }
         ]
       },
-      "path": "~/commands/GiveGod"
+      "path": "~/commands/Miscellaneous/GiveGod"
     },
     {
       "name": "GodKeyBind",
@@ -31057,7 +30800,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/galand_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Season2/Galand"
     },
     {
       "name": "PeaceAmuletRecipe",
@@ -31113,7 +30856,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Season2/Galand"
     },
     {
       "name": "GalandOnEntityTickUpdate",
@@ -31148,7 +30891,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Galand"
+      "path": "~/StoryModeEntities/Season2/Galand"
     },
     {
       "name": "RedDemonKill",
@@ -31346,7 +31089,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/RedandGrayDemon"
+      "path": "~/StoryModeEntities/Season2/RedandGrayDemon"
     },
     {
       "name": "Story35ReachAmount",
@@ -31365,7 +31108,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/RedandGrayDemon"
+      "path": "~/StoryModeEntities/Season2/RedandGrayDemon"
     },
     {
       "name": "HeavyMetalOnEffectActiveTick",
@@ -31556,25 +31299,6 @@
       "path": "~/dimensions/Istar/IstarSetUp"
     },
     {
-      "name": "SwitchIstar",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_istar",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SwitchIstarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/commands/SwitchCapitalOfTheDead"
-    },
-    {
       "name": "IstarBiome",
       "type": "biome",
       "compiles": true,
@@ -31631,7 +31355,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/KillGiant"
+      "path": "~/StoryModeEntities/Season2/KillGiant"
     },
     {
       "name": "SetGiantStory",
@@ -31650,7 +31374,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/KillGiant"
+      "path": "~/StoryModeEntities/Season2/KillGiant"
     },
     {
       "name": "Theo",
@@ -32755,6 +32479,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -32791,19 +32531,6 @@
       "path": "~/VillagerTrade"
     },
     {
-      "name": "GiveRhittaStorePower",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_rhitta_store_power",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/GiveRhittaStorePowerCommand.java"
-        ]
-      },
-      "path": "~/commands/GiveRhittaStorePower"
-    },
-    {
       "name": "GiveRhittaStorePowerProcedure",
       "type": "procedure",
       "compiles": true,
@@ -32820,7 +32547,7 @@
           }
         ]
       },
-      "path": "~/commands/GiveRhittaStorePower"
+      "path": "~/commands/Miscellaneous/GiveRhittaStorePower"
     },
     {
       "name": "StatusPromotionSkill",
@@ -33143,7 +32870,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/StoryBan2"
+      "path": "~/StoryModeEntities/Season1/StoryBan2"
     },
     {
       "name": "CaveTraining",
@@ -33668,20 +33395,6 @@
         ]
       },
       "path": "~/entities/Hard/weak"
-    },
-    {
-      "name": "IstarSetUpDimension",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "istar_set_up_dimension",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarSetUpDimensionProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/dimensions/Istar"
     },
     {
       "name": "IstarRenderSkyBox",
@@ -34409,7 +34122,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/KillCaveOrTowrEnitiy"
+      "path": "~/StoryModeEntities/Season2/KillCaveOrTowrEnitiy"
     },
     {
       "name": "SetCaveAndTowerStory",
@@ -34428,7 +34141,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/KillCaveOrTowrEnitiy"
+      "path": "~/StoryModeEntities/Season2/KillCaveOrTowrEnitiy"
     },
     {
       "name": "Story39",
@@ -34651,7 +34364,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/KingStory1Renderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/King"
+      "path": "~/StoryModeEntities/Season2/King"
     },
     {
       "name": "KingStory1EntityDies",
@@ -34674,7 +34387,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/King"
+      "path": "~/StoryModeEntities/Season2/King"
     },
     {
       "name": "HendricksonLootTable",
@@ -34722,7 +34435,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/King"
+      "path": "~/StoryModeEntities/Season2/King"
     },
     {
       "name": "GalandStory2",
@@ -34738,7 +34451,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GalandStory2Model.java"
         ]
       },
-      "path": "~/StoryModeEntities/Galand2"
+      "path": "~/StoryModeEntities/Season2/Galand2"
     },
     {
       "name": "RevengCounterVar",
@@ -34781,7 +34494,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Galand2"
+      "path": "~/StoryModeEntities/Season2/Galand2"
     },
     {
       "name": "GalandStory2OnEntityTickUpdate",
@@ -34816,7 +34529,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Galand2"
+      "path": "~/StoryModeEntities/Season2/Galand2"
     },
     {
       "name": "Story40",
@@ -35462,7 +35175,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/ElaineStoryRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/Elaine"
+      "path": "~/StoryModeEntities/Season2/Elaine"
     },
     {
       "name": "ElaineStoryEntityDies",
@@ -35485,7 +35198,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Elaine"
+      "path": "~/StoryModeEntities/Season2/Elaine"
     },
     {
       "name": "ElaineStoryOnEntityTickUpdate",
@@ -35508,7 +35221,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Elaine"
+      "path": "~/StoryModeEntities/Season2/Elaine"
     },
     {
       "name": "Story42",
@@ -36473,19 +36186,6 @@
       "path": "~/Gui/Settings/Speed Percentage"
     },
     {
-      "name": "AddTp",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "add_tp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/command/AddTpCommand.java"
-        ]
-      },
-      "path": "~/commands/TP"
-    },
-    {
       "name": "AddTpCommand",
       "type": "procedure",
       "compiles": true,
@@ -36502,7 +36202,7 @@
           }
         ]
       },
-      "path": "~/commands/TP"
+      "path": "~/commands/Stat/TP"
     },
     {
       "name": "ReturnPossession",
@@ -36542,7 +36242,7 @@
           }
         ]
       },
-      "path": "~/Gui/MagicMenu/Possession"
+      "path": "~/Gui/MagicMenu/Possession/PossessionSkills"
     },
     {
       "name": "MySweetGluttonyLoot",
@@ -36571,7 +36271,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/galand_over_spawn_egg.json"
         ]
       },
-      "path": "~/StoryModeEntities/GalandOver"
+      "path": "~/StoryModeEntities/Season2/GalandOver"
     },
     {
       "name": "Story44",
@@ -36614,7 +36314,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GalandOver"
+      "path": "~/StoryModeEntities/Season2/GalandOver"
     },
     {
       "name": "GalandOverOnEntityTickUpdate",
@@ -36649,7 +36349,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/GalandOver"
+      "path": "~/StoryModeEntities/Season2/GalandOver"
     },
     {
       "name": "ArkKeyBind",
@@ -37336,6 +37036,419 @@
         ]
       },
       "path": "~/Weapons/Sacred Treasure/Reaper Sycthe/ReaperScytheEntity"
+    },
+    {
+      "name": "FlyingSaucer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_saucer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/flying_saucer.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/FlyingSaucerItem.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/flying_saucer_0.json"
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Flying Saucer"
+    },
+    {
+      "name": "HeavyMetalEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_metal_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/HeavyMetalEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/potion/HeavyMetal"
+    },
+    {
+      "name": "HeavyMetalEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_metal_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/HeavyMetalEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/potion/HeavyMetal"
+    },
+    {
+      "name": "RenderPossesionWings",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_possesion_wings",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderPossesionWingsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/races/Human_Clan"
+    },
+    {
+      "name": "CookTrollEar",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cook_troll_ear",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/cook_troll_ear.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/CookTrollEarItem.java"
+        ]
+      },
+      "path": "~/food_drinks/TrollEar"
+    },
+    {
+      "name": "CookedTrollEar",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_troll_ear",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/cooked_troll_ear.json"
+        ]
+      },
+      "path": "~/food_drinks/TrollEar"
+    },
+    {
+      "name": "SmokerTrollEar",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoker_troll_ear",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/smoker_troll_ear.json"
+        ]
+      },
+      "path": "~/food_drinks/TrollEar"
+    },
+    {
+      "name": "CampTrollEar",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "camp_troll_ear",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/camp_troll_ear.json"
+        ]
+      },
+      "path": "~/food_drinks/TrollEar"
+    },
+    {
+      "name": "SdsSet",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sds_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/command/SdsSetCommand.java"
+        ]
+      },
+      "path": "~/commands"
+    },
+    {
+      "name": "FlyingSaucerReflect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_saucer_reflect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/FlyingSaucerReflectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Flying Saucer"
+    },
+    {
+      "name": "SetRedDemonBlood",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_red_demon_blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetRedDemonBloodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/commands/Miscellaneous/DemonBlood"
+    },
+    {
+      "name": "SetGrayDemonBlood",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_gray_demon_blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetGrayDemonBloodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/commands/Miscellaneous/DemonBlood"
+    },
+    {
+      "name": "SetPossession",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_possession",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetPossessionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/commands/Miscellaneous/Possession"
+    },
+    {
+      "name": "PossessionButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "possession_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PossessionButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/MagicMenu/Possession"
+    },
+    {
+      "name": "PossessionSwitch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "possession_switch",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PossessionSwitchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/MagicMenu/Possession"
+    },
+    {
+      "name": "StaffOfImprisonment",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "staff_of_imprisonment",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/staff_of_imprisonment.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/StaffOfImprisonmentItem.java"
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Staff Of Inprisonment"
+    },
+    {
+      "name": "StaffOfImrisonmentEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "staff_of_imrisonment_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/StaffOfImrisonmentEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/potion/StaffOfImprisonment"
+    },
+    {
+      "name": "StaffOfImrisonmentEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "staff_of_imrisonment_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/potion/StaffOfImrisonmentEffectMobEffect.java"
+        ]
+      },
+      "path": "~/potion/StaffOfImprisonment"
+    },
+    {
+      "name": "StaffOfImprisonmentLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "staff_of_imprisonment_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/StaffOfImprisonmentLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/Staff Of Inprisonment"
+    },
+    {
+      "name": "PossessionSkill2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "possession_skill_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PossessionSkill2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/MagicMenu/Possession/PossessionSkills"
+    },
+    {
+      "name": "Dubs",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dubs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/dubs_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/entity/DubsEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/DubsRenderer.java"
+        ]
+      },
+      "path": "~/entities/Dubs"
+    },
+    {
+      "name": "RenderSphere",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_sphere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderSphereProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Weapons/Sacred Treasure/Staff Of Inprisonment"
+    },
+    {
+      "name": "SetUpAnimations",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "set_up_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetUpAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Ect"
     }
   ],
   "variable_elements": [
@@ -37634,12 +37747,6 @@
       "value": "\"\""
     },
     {
-      "name": "reddemonblood",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "humandemon",
       "type": "number",
       "scope": "player_persistent",
@@ -37800,12 +37907,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "reddemonmark",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "SpacePressed",
@@ -38754,6 +38855,24 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "Possession_Switch",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Awaken",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "awaken",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -39221,6 +39340,7 @@
       "CUSTOM:WindShotProjectile"
     ],
     "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:StaffOfImprisonment",
       "~CUSTOM:TwinBowHerritt",
       "~CUSTOM:Aldan",
       "~CUSTOM:Luminosity"
@@ -39247,8 +39367,6 @@
       "~Blocks.GRASS",
       "~CUSTOM:PurgatoryBlock",
       "~CUSTOM:PurgatoryBrick",
-      "~CUSTOM:ChaosWall",
-      "~CUSTOM:ChaosFloor",
       "~CUSTOM:CapitalOfTheDeadGround",
       "~CUSTOM:CapitaloftheDeadBlock"
     ],
@@ -39367,6 +39485,7 @@
       "AngleCureMeat",
       "CookedAngleMeat",
       "TrollEar",
+      "CookTrollEar",
       "MinimumTablets"
     ]
   },
@@ -39439,14 +39558,14 @@
       "gui.craft_no_taizai.disaster_menu.label_page_3": "Page 3.",
       "gui.craft_no_taizai.disaster_menu.tooltip_learned_skills_from_magic_scroll": "Learned Skills from Magic Scroll",
       "gui.craft_no_taizai.disaster_menu.label_page_1": "Page 1.",
-      "item.craft_no_taizai.earth_crawler_tail_cooked": "Earth Crawler Cooked Tail",
+      "item.craft_no_taizai.earth_crawler_tail_cooked": "Earth Crawler Tail",
       "item.craft_no_taizai.howzer_armor_leggings": "Howzer Armor",
       "gui.craft_no_taizai.story_board.label_proceed_to_the_dungeon": "proceed to the dungeon",
       "gui.craft_no_taizai.demon_clan.label_30_health": "- Health: 30 to 40",
       "item.craft_no_taizai.gowther_boss_animated_spawn_egg": "Gowther Boss Spawn Egg",
       "item.craft_no_taizai.guila_demonanimated_spawn_egg": "Guila Spawn Egg",
       "gui.craft_no_taizai.story_board.label_proceed_to_the_dungeon1": "proceed to the dungeon",
-      "item.craft_no_taizai.earth_crawler_tail": "Earth Crawler Tail",
+      "item.craft_no_taizai.earth_crawler_tail": "Raw Earth Crawler Tail",
       "block.craft_no_taizai.capital_of_the_dead_ground_block": "Capital Of The Dead Ground Block",
       "gui.craft_no_taizai.story_board.label_defeat_cain_barzad": "Defeat Cain Barzad",
       "gui.craft_no_taizai.demon_stat.button_story": "Story",
@@ -39508,8 +39627,8 @@
       "gui.craft_no_taizai.story_board.button_start1": "Start",
       "item.craft_no_taizai.merlin_outfit_chestplate": "Merlin Shirt",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_well_shall_give_you_mission": "Well shall give you mission.",
-      "biome.craft_no_taizai.chaos_biome": "Chaos Biome",
       "gui.craft_no_taizai.story_board.label_ep_10_what_we_lacked": "EP 10: What We Lacked",
+      "item.craft_no_taizai.staff_of_imprisonment": "Staff Of Imprisonment",
       "subtitles.kraken_hurt": "",
       "entity.craft_no_taizai.diane_boss_animated": "Diane Boss",
       "gui.craft_no_taizai.story_board.label_ep24_the_heroes": "EP:24 The Heroes",
@@ -39630,6 +39749,7 @@
       "gui.craft_no_taizai.story_board.label_ep_14_master_of_the_sun": "EP 14: Master of the Sun",
       "block.craft_no_taizai.perfect_cube": "Perfect Cube",
       "gui.craft_no_taizai.story_board.label_ep_3the_scared_treasure_lostvay": "EP 3:The Scared Treasure Lostvayne",
+      "entity.craft_no_taizai.dubs": "Dubs",
       "item.craft_no_taizai.soldier_armor_helmet": "Soldier Helmet",
       "item.craft_no_taizai.merlin_armor_chest_plate_chestplate": "Merlin Chestplate",
       "biome.craft_no_taizai.istar_biome": "Istar Biome",
@@ -39654,7 +39774,7 @@
       "entity.craft_no_taizai.sword_wolf": "Sword Wolf",
       "item.craft_no_taizai.dead_helbramanimated_spawn_egg": "Dead Helbram Spawn Egg",
       "item.craft_no_taizai.jillian_animated_spawn_egg": "Jillian Spawn Egg",
-      "item.craft_no_taizai.troll_ear": "Troll Ear",
+      "item.craft_no_taizai.troll_ear": "Raw Troll Ear",
       "gui.craft_no_taizai.teleportation_gui.label_teleport": "Teleport",
       "subtitles.lightning": "",
       "gui.craft_no_taizai.story_board.label_defeat": "Defeat Red \u0026 Gray Demons",
@@ -39686,6 +39806,7 @@
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie1": "Must fight the holy knights Friesia and Ruin ",
       "entity.craft_no_taizai.elaine": "Elaine",
       "item.craft_no_taizai.twigosword": "Twigosword",
+      "item.craft_no_taizai.cook_troll_ear": "Troll Ear",
       "gui.craft_no_taizai.theo_tower.label_will_increase_youre_magical_sta": "Will increase you\u0027re magical stats",
       "subtitles.sds_opening": "",
       "gui.craft_no_taizai.story_board.label_defect": "Defeat Golgius",
@@ -39705,7 +39826,7 @@
       "item.craft_no_taizai.meliodas_boar_hat_leggings": "Simon Leggings",
       "item.craft_no_taizai.elaine_spawn_egg": "Elaine Spawn Egg",
       "gui.craft_no_taizai.story_board.label_defect_dreyfus": "Defeat Dreyfus",
-      "item.craft_no_taizai.cookedtentacles": "Cooked Tentacles",
+      "item.craft_no_taizai.cookedtentacles": "Tentacles",
       "advancements.defeat_ban.title": "Defeat Ban",
       "key.craft_no_taizai.mana_charge_bind": "Mana Charge",
       "block.craft_no_taizai.area_slab": "Area Slab",
@@ -39776,7 +39897,7 @@
       "item.craft_no_taizai.giga_crush_spawn_egg": "Giga Crush Spawn Egg",
       "gui.craft_no_taizai.story_board.label_defeat_griamore": "Defeat Griamore",
       "item.craft_no_taizai.tyrant_dragon_cave_spawn_egg": "Tyrant Dragon Spawn Egg",
-      "item.craft_no_taizai.tyrant_dragon_cooked_meat": "Tyrant Dragon Cooked Meat",
+      "item.craft_no_taizai.tyrant_dragon_cooked_meat": "Tyrant Dragon Meat",
       "item.craft_no_taizai.gideon": "Gideon",
       "gui.craft_no_taizai.story_board.label_defeat_diane": "Defeat Diane",
       "item.craft_no_taizai.bow": "Bow",
@@ -39845,7 +39966,7 @@
       "key.craft_no_taizai.w_press_f_ly": "W Press Fly",
       "gui.craft_no_taizai.story_board.label_human_and_nonhuman_worlds_were": "human and non-human worlds were forever divided.",
       "item.craft_no_taizai.arther_armor_chestplate": "Arthur Armor",
-      "item.craft_no_taizai.applepie": "Apple Pie",
+      "item.craft_no_taizai.applepie": "Raw Apple Pie",
       "gui.craft_no_taizai.story_board.label_threats_descend_upon_allied_clan": "threats descend upon allied clans.",
       "entity.craft_no_taizai.red_knight_animated": "Red Knight",
       "item.craft_no_taizai.boar_hat_outfit_leggings": "BoarHat Leggings",
@@ -39895,6 +40016,7 @@
       "gui.craft_no_taizai.story_board.label_drives_the_group_to_fight_each_o": "Drives the group to fight each other.",
       "item.craft_no_taizai.cannon_entity_spawn_egg": "Cannon Spawn Egg",
       "entity.craft_no_taizai.guardian_true_spirt_spear": "Guardian",
+      "effect.craft_no_taizai.staff_of_imrisonment_effect": "Staff Of Imrisonment Effect",
       "item.craft_no_taizai.holy_staff_coure_chouse": "Holy Staff Coure Chouse",
       "advancements.red_demon_blood.descr": "New Generation Holy Knights!",
       "gui.craft_no_taizai.story_board.label_defeat_taizoo": "Defeat Taizoo",
@@ -39913,6 +40035,7 @@
       "gui.craft_no_taizai.demon_clan.label_empty": "\u003c",
       "advancements.fairy_king_forest_advancement.title": "Fairy King Tree",
       "item.craft_no_taizai.pig_icon": "Boar Icon",
+      "item.craft_no_taizai.flying_saucer": "Flying Saucer",
       "gui.craft_no_taizai.story_board.label_what_i_can_do_for_you": "EP 22: What I Can Do For You",
       "item.craft_no_taizai.royal_guard_animated_spawn_egg": "Royal Guard Animated Spawn Egg",
       "gui.craft_no_taizai.story_board.label_diane_confronts_gowther_after_he": "Diane confronts Gowther after he manipulates Guila and",
@@ -39930,7 +40053,7 @@
       "item.craft_no_taizai.aldan": "Aldan",
       "item.craft_no_taizai.guardian_1_spawn_egg": "Guardian Spawn Egg",
       "gui.craft_no_taizai.story_board.label_power_returns": "power returns.",
-      "item.craft_no_taizai.angle_cure_meat": "Angle Cure Meat",
+      "item.craft_no_taizai.angle_cure_meat": "Raw Angle Cure Meat",
       "item.craft_no_taizai.merlin_armor_chest_plate_helmet": "Merlin Armor Helments",
       "item.craft_no_taizai.magic_scroll": "Magic Scroll",
       "item.craft_no_taizai.hendrickson_armor_chestplate": "HendrickSon Chestplate",
@@ -40063,7 +40186,6 @@
       "gui.craft_no_taizai.guild_gui.label_empty": "\u003e",
       "item.craft_no_taizai.bell_staff": "Bell Staff",
       "gui.craft_no_taizai.guild_gui.tooltip_back": "Back",
-      "item.craft_no_taizai.chaos_dimension": "Chaos Dimension Portal Igniter",
       "gui.craft_no_taizai.demon_king_gui.label_welcome_demon_i_shall_share_bit": "As the ruler of the Demon Clan and",
       "gui.craft_no_taizai.magic_menu.label_page_3": "Page 3.",
       "gui.craft_no_taizai.demon_stat.label_mana": "Mana",
@@ -40142,6 +40264,7 @@
       "gui.craft_no_taizai.story_board.label_defect_helbram": "Defeat Helbram",
       "block.craft_no_taizai.fairy_tree_fence": "Fairy Tree Fence",
       "biome.craft_no_taizai.sleeping_forest": "Sleeping Forest",
+      "item.craft_no_taizai.dubs_spawn_egg": "Dubs Spawn Egg",
       "item.craft_no_taizai.goddess_bless_entity_spawn_egg": "Goddess Bless Entity Spawn Egg",
       "gui.craft_no_taizai.human_clan_ui.label_empty1": "\u003e",
       "gui.craft_no_taizai.demon_stat.label_tp": "TP:",
@@ -40222,7 +40345,7 @@
       "entity.craft_no_taizai.manta": "Mantaray",
       "\"key.categories.[craftnotaizai]\"": "",
       "gui.craft_no_taizai.story_board.label_respected_but_among_them_a_grou": "respected. But among them a group emerged that betrayed",
-      "item.craft_no_taizai.cooked_dusk_meat": "Cooked Dusk Meat",
+      "item.craft_no_taizai.cooked_dusk_meat": "Dusk Meat",
       "gui.craft_no_taizai.cannon_gui.label_deny": "Deny",
       "entity.craft_no_taizai.gloxina_boss": "Gloxina",
       "item.craft_no_taizai.acid_twower_mob_spawn_egg": "Acid Twower Mob Spawn Egg",
@@ -40256,7 +40379,7 @@
       "item.craft_no_taizai.saw_sword": "Saw Sword",
       "gui.craft_no_taizai.side_quest_gui.label_claim": "CLAIM",
       "item.craft_no_taizai.knightarmor_leggings": "Knightarmor Leggings",
-      "item.craft_no_taizai.uncooked_dusk": "Uncooked Dusk",
+      "item.craft_no_taizai.uncooked_dusk": "Raw Dusk Meat",
       "gui.craft_no_taizai.story_board.label_evvent_that_occurred_between_him": "event that occurred between him and Helbram. What",
       "item.craft_no_taizai.heat_fork": "Heat_Fork",
       "item.craft_no_taizai.emptyorb": "Empty Incantation Orb",
@@ -40418,7 +40541,7 @@
       "item.craft_no_taizai.minimum_tablets": "Minimum Tablets",
       "gui.craft_no_taizai.story_board.label_kill_someone_in_order_to_resurre": "kill someone in order to resurrect Elaine.",
       "item.craft_no_taizai.weinheidt_animated_spawn_egg": "Weinheidt Spawn Egg",
-      "item.craft_no_taizai.cooked_angle_meat": "Angle Cure Cooked Meat",
+      "item.craft_no_taizai.cooked_angle_meat": "Angle Cure Meat",
       "item.craft_no_taizai.ruin_spawn_egg": "Ruin Spawn Egg",
       "gui.craft_no_taizai.human_clan_ui.label_30_health": "- Health: 15 to 30",
       "gui.craft_no_taizai.theo_cave.label_back": ". Back",
@@ -40443,7 +40566,7 @@
       "block.craft_no_taizai.purgatory_slab": "Purgatory",
       "item.craft_no_taizai.re_roll_magic": "Re_Roll Magic",
       "item.craft_no_taizai.gowther_armor_s_2_leggings": "Gowther Leggings",
-      "item.craft_no_taizai.tyrant_dragon_meat": "Tyrant Dragon Meat",
+      "item.craft_no_taizai.tyrant_dragon_meat": "Raw Tyrant Dragon Meat",
       "gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save": "he has to kill in order to save Elaine",
       "item.craft_no_taizai.king_outfit_chestplate": "King Shirt",
       "gui.craft_no_taizai.story_board.label_ep_21": "EP 21: The Looming Threat",
@@ -41254,15 +41377,15 @@
                 "name": "DemonMark",
                 "children": [
                   {
-                    "name": "mark1",
-                    "children": []
-                  },
-                  {
                     "name": "Berserk Mode",
                     "children": []
                   },
                   {
                     "name": "FullPowerDemonMark",
+                    "children": []
+                  },
+                  {
+                    "name": "DemonMark",
                     "children": []
                   }
                 ]
@@ -41481,6 +41604,14 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Flying Saucer",
+                "children": []
+              },
+              {
+                "name": "Staff Of Inprisonment",
+                "children": []
               }
             ]
           },
@@ -41607,6 +41738,10 @@
           {
             "name": "HeavyMetal",
             "children": []
+          },
+          {
+            "name": "StaffOfImprisonment",
+            "children": []
           }
         ]
       },
@@ -41639,72 +41774,11 @@
             ]
           },
           {
-            "name": "level",
-            "children": []
-          },
-          {
-            "name": "Xp",
-            "children": []
-          },
-          {
-            "name": "immortiliy",
-            "children": []
-          },
-          {
-            "name": "AllStats",
-            "children": []
-          },
-          {
-            "name": "SwitchCapitalOfTheDead",
-            "children": []
-          },
-          {
             "name": "SetStory",
             "children": []
           },
           {
-            "name": "Stats",
-            "children": [
-              {
-                "name": "MaxHealth",
-                "children": []
-              },
-              {
-                "name": "Strength",
-                "children": []
-              },
-              {
-                "name": "Defence",
-                "children": []
-              },
-              {
-                "name": "Speed",
-                "children": []
-              },
-              {
-                "name": "Agility",
-                "children": []
-              },
-              {
-                "name": "MagicDmg",
-                "children": []
-              },
-              {
-                "name": "MaxMana",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Commandment",
-            "children": []
-          },
-          {
-            "name": "GiveGod",
-            "children": []
-          },
-          {
-            "name": "GiveRhittaStorePower",
             "children": []
           },
           {
@@ -41729,8 +41803,83 @@
             ]
           },
           {
-            "name": "TP",
-            "children": []
+            "name": "Miscellaneous",
+            "children": [
+              {
+                "name": "DemonBlood",
+                "children": []
+              },
+              {
+                "name": "GiveRhittaStorePower",
+                "children": []
+              },
+              {
+                "name": "GiveGod",
+                "children": []
+              },
+              {
+                "name": "immortiliy",
+                "children": []
+              },
+              {
+                "name": "Possession",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Stat",
+            "children": [
+              {
+                "name": "level",
+                "children": []
+              },
+              {
+                "name": "Xp",
+                "children": []
+              },
+              {
+                "name": "AllStats",
+                "children": []
+              },
+              {
+                "name": "Stats",
+                "children": [
+                  {
+                    "name": "MaxHealth",
+                    "children": []
+                  },
+                  {
+                    "name": "Strength",
+                    "children": []
+                  },
+                  {
+                    "name": "Defence",
+                    "children": []
+                  },
+                  {
+                    "name": "Speed",
+                    "children": []
+                  },
+                  {
+                    "name": "Agility",
+                    "children": []
+                  },
+                  {
+                    "name": "MagicDmg",
+                    "children": []
+                  },
+                  {
+                    "name": "MaxMana",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "TP",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -42120,6 +42269,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Dubs",
+            "children": []
           }
         ]
       },
@@ -42273,6 +42426,10 @@
           },
           {
             "name": "ApplePie",
+            "children": []
+          },
+          {
+            "name": "TrollEar",
             "children": []
           }
         ]
@@ -42897,81 +43054,135 @@
         "name": "StoryModeEntities",
         "children": [
           {
-            "name": "Twigo",
-            "children": []
-          },
-          {
-            "name": "gilthunder",
-            "children": []
-          },
-          {
-            "name": "Golgius",
-            "children": []
-          },
-          {
-            "name": "diane",
-            "children": []
-          },
-          {
-            "name": "friesia",
-            "children": []
-          },
-          {
-            "name": "ruin",
-            "children": []
-          },
-          {
-            "name": "guila",
-            "children": []
-          },
-          {
-            "name": "taizoo",
-            "children": []
-          },
-          {
-            "name": "griamore",
-            "children": []
-          },
-          {
-            "name": "howzer",
-            "children": []
-          },
-          {
-            "name": "cainbarzad",
-            "children": []
-          },
-          {
-            "name": "jericho",
-            "children": []
-          },
-          {
-            "name": "guilamob",
-            "children": []
-          },
-          {
-            "name": "helbrem",
-            "children": []
-          },
-          {
-            "name": "dale",
+            "name": "Season1",
             "children": [
               {
-                "name": "form",
+                "name": "Twigo",
                 "children": []
               },
               {
-                "name": "dalesecmoves",
+                "name": "gilthunder",
+                "children": []
+              },
+              {
+                "name": "Golgius",
+                "children": []
+              },
+              {
+                "name": "diane",
+                "children": []
+              },
+              {
+                "name": "friesia",
+                "children": []
+              },
+              {
+                "name": "ruin",
+                "children": []
+              },
+              {
+                "name": "guila",
+                "children": []
+              },
+              {
+                "name": "taizoo",
+                "children": []
+              },
+              {
+                "name": "griamore",
+                "children": []
+              },
+              {
+                "name": "howzer",
+                "children": []
+              },
+              {
+                "name": "cainbarzad",
+                "children": []
+              },
+              {
+                "name": "StoryBan1",
+                "children": []
+              },
+              {
+                "name": "jericho",
+                "children": []
+              },
+              {
+                "name": "guilamob",
+                "children": []
+              },
+              {
+                "name": "helbrem",
+                "children": []
+              },
+              {
+                "name": "dale",
                 "children": [
                   {
-                    "name": "Frozen Breath",
+                    "name": "form",
                     "children": []
                   },
                   {
-                    "name": "Noroi no Koe",
-                    "children": []
-                  },
+                    "name": "dalesecmoves",
+                    "children": [
+                      {
+                        "name": "Frozen Breath",
+                        "children": []
+                      },
+                      {
+                        "name": "Noroi no Koe",
+                        "children": []
+                      },
+                      {
+                        "name": "Despair Venom",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "helbrem2",
+                "children": []
+              },
+              {
+                "name": "royalegurads",
+                "children": []
+              },
+              {
+                "name": "dreyfus",
+                "children": []
+              },
+              {
+                "name": "GilThunder2",
+                "children": []
+              },
+              {
+                "name": "Hendrickson",
+                "children": []
+              },
+              {
+                "name": "jerichoDemonForm",
+                "children": []
+              },
+              {
+                "name": "DeadHelbram",
+                "children": []
+              },
+              {
+                "name": "StoryBan2",
+                "children": []
+              },
+              {
+                "name": "HendricksonDemonMark",
+                "children": []
+              },
+              {
+                "name": "GrayDemonHendrickson",
+                "children": [
                   {
-                    "name": "Despair Venom",
+                    "name": "DeadEnd",
                     "children": []
                   }
                 ]
@@ -42979,106 +43190,62 @@
             ]
           },
           {
-            "name": "helbrem2",
-            "children": []
-          },
-          {
-            "name": "StoryBan1",
-            "children": []
-          },
-          {
-            "name": "royalegurads",
-            "children": []
-          },
-          {
-            "name": "dreyfus",
-            "children": []
-          },
-          {
-            "name": "GilThunder2",
-            "children": []
-          },
-          {
-            "name": "Hendrickson",
-            "children": []
-          },
-          {
-            "name": "jerichoDemonForm",
-            "children": []
-          },
-          {
-            "name": "DeadHelbram",
-            "children": []
-          },
-          {
-            "name": "StoryBan2",
-            "children": []
-          },
-          {
-            "name": "HendricksonDemonMark",
-            "children": []
-          },
-          {
-            "name": "GrayDemonHendrickson",
+            "name": "Season2",
             "children": [
               {
-                "name": "DeadEnd",
+                "name": "Dogedo",
+                "children": []
+              },
+              {
+                "name": "Gowther",
+                "children": []
+              },
+              {
+                "name": "FatAlbion",
+                "children": [
+                  {
+                    "name": "Cannon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "TallAlbion",
+                "children": []
+              },
+              {
+                "name": "Galand",
+                "children": []
+              },
+              {
+                "name": "RedandGrayDemon",
+                "children": []
+              },
+              {
+                "name": "KillGiant",
+                "children": []
+              },
+              {
+                "name": "KillCaveOrTowrEnitiy",
+                "children": []
+              },
+              {
+                "name": "King",
+                "children": []
+              },
+              {
+                "name": "Galand2",
+                "children": []
+              },
+              {
+                "name": "Elaine",
+                "children": []
+              },
+              {
+                "name": "GalandOver",
                 "children": []
               }
             ]
-          },
-          {
-            "name": "Dogedo",
-            "children": []
-          },
-          {
-            "name": "Gowther",
-            "children": []
-          },
-          {
-            "name": "FatAlbion",
-            "children": [
-              {
-                "name": "Cannon",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "TallAlbion",
-            "children": []
-          },
-          {
-            "name": "Galand",
-            "children": []
-          },
-          {
-            "name": "RedandGrayDemon",
-            "children": []
-          },
-          {
-            "name": "KillGiant",
-            "children": []
-          },
-          {
-            "name": "KillCaveOrTowrEnitiy",
-            "children": []
-          },
-          {
-            "name": "King",
-            "children": []
-          },
-          {
-            "name": "Galand2",
-            "children": []
-          },
-          {
-            "name": "Elaine",
-            "children": []
-          },
-          {
-            "name": "GalandOver",
-            "children": []
           }
         ]
       },
@@ -43152,7 +43319,12 @@
               },
               {
                 "name": "Possession",
-                "children": []
+                "children": [
+                  {
+                    "name": "PossessionSkills",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "Normal Magic",

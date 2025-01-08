@@ -3,6 +3,7 @@ package net.mcreator.craftnotaizai.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -11,9 +12,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftnotaizai.procedures.RhittaRightclickedProcedure;
 import net.mcreator.craftnotaizai.procedures.RhittaInMainHandProcedure;
+
+import java.util.List;
 
 public class RhittaItem extends AxeItem {
 	public RhittaItem() {
@@ -49,6 +53,12 @@ public class RhittaItem extends AxeItem {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		RhittaRightclickedProcedure.execute(entity);
 		return ar;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		list.add(Component.literal("\u00A7RightClick Releases Store Up Power"));
 	}
 
 	@Override

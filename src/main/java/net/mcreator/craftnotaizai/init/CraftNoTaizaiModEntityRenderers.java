@@ -128,6 +128,7 @@ import net.mcreator.craftnotaizai.client.renderer.EarthGolemRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EarthCrawlerRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DuskBison1Renderer;
 import net.mcreator.craftnotaizai.client.renderer.DumblebbasAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.DubsRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DriftBombProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DreyfusAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DogedoRenderer;
@@ -369,5 +370,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ELAINE_STORY.get(), ElaineStoryRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_OVER.get(), GalandOverRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.DUBS.get(), DubsRenderer::new);
 	}
 }

@@ -13,6 +13,9 @@ import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.procedures.SetSlotButtonProcedure;
 import net.mcreator.craftnotaizai.procedures.ReturnPossessionProcedure;
 import net.mcreator.craftnotaizai.procedures.ReturnPageProcedure;
+import net.mcreator.craftnotaizai.procedures.PossessionSwitchProcedure;
+import net.mcreator.craftnotaizai.procedures.PossessionSkillProcedure;
+import net.mcreator.craftnotaizai.procedures.PossessionSkill2Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill4Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill3Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill2Procedure;
@@ -118,8 +121,9 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_demon_king_magic"), mouseX, mouseY);
 		if (mouseX > leftPos + 101 && mouseX < leftPos + 125 && mouseY > topPos + -104 && mouseY < topPos + -80)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_back"), mouseX, mouseY);
-		if (mouseX > leftPos + -70 && mouseX < leftPos + -46 && mouseY > topPos + -79 && mouseY < topPos + -55)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_goddess"), mouseX, mouseY);
+		if (ReturnPossessionProcedure.execute(entity))
+			if (mouseX > leftPos + -70 && mouseX < leftPos + -46 && mouseY > topPos + -79 && mouseY < topPos + -55)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.magic_menu.tooltip_goddess"), mouseX, mouseY);
 	}
 
 	@Override
@@ -310,6 +314,14 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		guiGraphics.drawString(this.font,
 
 				ReturnPageProcedure.execute(entity), 38, -96, -1, false);
+		if (PossessionSwitchProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					PossessionSkillProcedure.execute(entity), -79, -44, -1, false);
+		if (PossessionSwitchProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					PossessionSkill2Procedure.execute(entity), -80, -31, -1, false);
 	}
 
 	@Override
@@ -448,6 +460,10 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		guistate.put("button:imagebutton_restart1", imagebutton_restart1);
 		this.addRenderableWidget(imagebutton_restart1);
 		imagebutton_goddess_particle_7 = new ImageButton(this.leftPos + -69, this.topPos + -77, 20, 20, 0, 0, 20, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_goddess_particle_7.png"), 20, 40, e -> {
+			if (ReturnPossessionProcedure.execute(entity)) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MagicMenuButtonMessage(15, x, y, z, textstate));
+				MagicMenuButtonMessage.handleButtonAction(entity, 15, x, y, z, textstate);
+			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {

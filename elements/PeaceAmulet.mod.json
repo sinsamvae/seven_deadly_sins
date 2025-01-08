@@ -12,9 +12,6 @@
     "textureBoots": "",
     "creativeTabs": [
       {
-        "value": "COMBAT"
-      },
-      {
         "value": "CUSTOM:Items"
       }
     ],

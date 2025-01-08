@@ -7,12 +7,19 @@ package net.mcreator.craftnotaizai.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.craftnotaizai.item.WhirlShockItem;
 import net.mcreator.craftnotaizai.item.WhipItem;
@@ -28,6 +35,7 @@ import net.mcreator.craftnotaizai.item.TrollEarItem;
 import net.mcreator.craftnotaizai.item.TentaclesItem;
 import net.mcreator.craftnotaizai.item.TeleportationOrbItem;
 import net.mcreator.craftnotaizai.item.SwordWolfFurItem;
+import net.mcreator.craftnotaizai.item.StaffOfImprisonmentItem;
 import net.mcreator.craftnotaizai.item.SpiraledlanceItem;
 import net.mcreator.craftnotaizai.item.SoldierArmorItem;
 import net.mcreator.craftnotaizai.item.SladerArmorItem;
@@ -121,6 +129,7 @@ import net.mcreator.craftnotaizai.item.FragmentOfEternalDarkness3Item;
 import net.mcreator.craftnotaizai.item.FragmentOfEternalDarkness2Item;
 import net.mcreator.craftnotaizai.item.FoxIconItem;
 import net.mcreator.craftnotaizai.item.FountainOfYouthItem;
+import net.mcreator.craftnotaizai.item.FlyingSaucerItem;
 import net.mcreator.craftnotaizai.item.FakeBallItem;
 import net.mcreator.craftnotaizai.item.FairyHelbramArmorItem;
 import net.mcreator.craftnotaizai.item.ExterminateRayItem;
@@ -148,11 +157,11 @@ import net.mcreator.craftnotaizai.item.CurvedSwordItem;
 import net.mcreator.craftnotaizai.item.CookedtentaclesItem;
 import net.mcreator.craftnotaizai.item.CookedDuskMeatItem;
 import net.mcreator.craftnotaizai.item.CookedAngleMeatItem;
+import net.mcreator.craftnotaizai.item.CookTrollEarItem;
 import net.mcreator.craftnotaizai.item.CoffinOfEternalDarknessItem;
 import net.mcreator.craftnotaizai.item.CiderMugItem;
 import net.mcreator.craftnotaizai.item.ChickenMatangoMushRoomItem;
 import net.mcreator.craftnotaizai.item.Chastiefol2Item;
-import net.mcreator.craftnotaizai.item.ChaosDimensionItem;
 import net.mcreator.craftnotaizai.item.CarbonSteelItem;
 import net.mcreator.craftnotaizai.item.CainArmorItem;
 import net.mcreator.craftnotaizai.item.BritanniaCoinsItem;
@@ -179,6 +188,7 @@ import net.mcreator.craftnotaizai.item.AgaveItem;
 import net.mcreator.craftnotaizai.block.display.RhittaBlockDisplayItem;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftNoTaizaiModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CraftNoTaizaiMod.MODID);
 	public static final RegistryObject<Item> DRAGON_HANDLE = REGISTRY.register("dragon_handle", () -> new DragonHandleItem());
@@ -490,7 +500,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> LUME_ORB = REGISTRY.register("lume_orb", () -> new LumeOrbItem());
 	public static final RegistryObject<Item> CHAOS_FLOOR = block(CraftNoTaizaiModBlocks.CHAOS_FLOOR);
 	public static final RegistryObject<Item> CHAOS_WALL = block(CraftNoTaizaiModBlocks.CHAOS_WALL);
-	public static final RegistryObject<Item> CHAOS_DIMENSION = REGISTRY.register("chaos_dimension", () -> new ChaosDimensionItem());
 	public static final RegistryObject<Item> BOAR_HAT_OUTFIT_CHESTPLATE = REGISTRY.register("boar_hat_outfit_chestplate", () -> new BoarHatOutfitItem.Chestplate());
 	public static final RegistryObject<Item> BOAR_HAT_OUTFIT_LEGGINGS = REGISTRY.register("boar_hat_outfit_leggings", () -> new BoarHatOutfitItem.Leggings());
 	public static final RegistryObject<Item> HELL_GATE_RED_DEMONS_SPAWN_EGG = REGISTRY.register("hell_gate_red_demons_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.HELL_GATE_RED_DEMONS, -1, -1, new Item.Properties()));
@@ -607,6 +616,10 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> CIDER_MUG = REGISTRY.register("cider_mug", () -> new CiderMugItem());
 	public static final RegistryObject<Item> REAPER_SCYTHE = REGISTRY.register("reaper_scythe", () -> new ReaperScytheItem());
 	public static final RegistryObject<Item> REAPER_SCYTHE_ENTITY_SPAWN_EGG = REGISTRY.register("reaper_scythe_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.REAPER_SCYTHE_ENTITY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> FLYING_SAUCER = REGISTRY.register("flying_saucer", () -> new FlyingSaucerItem());
+	public static final RegistryObject<Item> COOK_TROLL_EAR = REGISTRY.register("cook_troll_ear", () -> new CookTrollEarItem());
+	public static final RegistryObject<Item> STAFF_OF_IMPRISONMENT = REGISTRY.register("staff_of_imprisonment", () -> new StaffOfImprisonmentItem());
+	public static final RegistryObject<Item> DUBS_SPAWN_EGG = REGISTRY.register("dubs_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DUBS, -6170673, -3565712, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -616,5 +629,12 @@ public class CraftNoTaizaiModItems {
 
 	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties()));
+	}
+
+	@SubscribeEvent
+	public static void clientLoad(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> {
+			ItemProperties.register(FLYING_SAUCER.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
+		});
 	}
 }

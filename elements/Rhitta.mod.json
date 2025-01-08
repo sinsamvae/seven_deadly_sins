@@ -10,7 +10,9 @@
     "blockingModelName": "Normal blocking",
     "name": "Rhitta",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§RightClick Releases Store Up Power"
+      ]
     },
     "creativeTabs": [
       {

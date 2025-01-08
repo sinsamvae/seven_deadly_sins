@@ -33,7 +33,9 @@
     "enableMeleeDamage": true,
     "damageVsEntity": 11.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§Right Click Use Super Concentration"
+      ]
     },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

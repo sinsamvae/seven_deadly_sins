@@ -119,5 +119,39 @@ public class HumandemonmarkProcedure {
 				}
 			}
 		}
+		if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
+				.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("Awaken")) {
+			if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Awaken) {
+				{
+					boolean _setval = true;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Awaken = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = 1;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.awaken = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Awaken) {
+				{
+					boolean _setval = false;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Awaken = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = 3;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.awaken = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
 	}
 }

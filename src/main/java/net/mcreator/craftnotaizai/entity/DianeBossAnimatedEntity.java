@@ -57,6 +57,7 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(DianeBossAnimatedEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(DianeBossAnimatedEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(DianeBossAnimatedEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_HM = SynchedEntityData.defineId(DianeBossAnimatedEntity.class, EntityDataSerializers.BOOLEAN);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -80,6 +81,7 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
 		this.entityData.define(TEXTURE, "diane");
+		this.entityData.define(DATA_HM, false);
 	}
 
 	public void setTexture(String texture) {
@@ -142,6 +144,7 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
+		compound.putBoolean("DataHM", this.entityData.get(DATA_HM));
 	}
 
 	@Override
@@ -149,6 +152,8 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("DataHM"))
+			this.entityData.set(DATA_HM, compound.getBoolean("DataHM"));
 	}
 
 	@Override

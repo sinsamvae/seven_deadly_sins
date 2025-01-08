@@ -29,5 +29,12 @@ public class MagicMenuThisGUIIsClosedProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Possession_Switch = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

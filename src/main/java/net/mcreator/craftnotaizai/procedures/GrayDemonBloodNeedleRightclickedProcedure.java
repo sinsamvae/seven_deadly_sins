@@ -21,11 +21,8 @@ public class GrayDemonBloodNeedleRightclickedProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		boolean can_set = false;
 		double grayblood = 0;
-		double check = 0;
-		String skill = "";
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost) {
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Human")) {
 				grayblood = Mth.nextInt(RandomSource.create(), 1, 100);
 				if (grayblood <= 90) {
@@ -45,13 +42,6 @@ public class GrayDemonBloodNeedleRightclickedProcedure {
 						boolean _setval = true;
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.graydemonblood = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = false;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.reddemonblood = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}

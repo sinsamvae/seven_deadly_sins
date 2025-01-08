@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
@@ -101,7 +102,7 @@ public class EarthGolemEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -208,7 +209,7 @@ public class EarthGolemEntity extends TamableAnimal implements GeoEntity {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return List.of().contains(stack.getItem());
+		return List.of(Blocks.COBBLESTONE.asItem()).contains(stack.getItem());
 	}
 
 	@Override

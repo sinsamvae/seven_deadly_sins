@@ -10,7 +10,9 @@
     "blockingModelName": "Normal blocking",
     "name": "Reaper Scythe",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§RightClick Summon"
+      ]
     },
     "creativeTabs": [
       {

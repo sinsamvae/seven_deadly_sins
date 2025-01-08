@@ -10,7 +10,7 @@ public class PossessionSkillProcedure {
 			return "";
 		String Skill = "";
 		Skill = "LOCKED";
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).possession == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Possession_Switch == true) {
 			Skill = "Ark";
 		}
 		return Skill;

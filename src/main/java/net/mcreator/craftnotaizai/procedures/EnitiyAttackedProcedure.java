@@ -231,14 +231,10 @@ public class EnitiyAttackedProcedure {
 				entity.getPersistentData().putBoolean("hit", true);
 				entity.getPersistentData().putDouble("deal", damage);
 			} else if (damagesource.is(DamageTypes.ARROW) || damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))) {
-				damage = Math.ceil(0.45 * (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 1;
-				damage = damage * ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 				if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 					if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 				}
-				entity.getPersistentData().putBoolean("hit", true);
-				entity.getPersistentData().putDouble("deal", damage);
 			}
 			if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).guild)
 					.equals((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).guild)) {

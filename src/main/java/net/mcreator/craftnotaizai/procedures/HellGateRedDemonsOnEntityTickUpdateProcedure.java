@@ -82,6 +82,17 @@ public class HellGateRedDemonsOnEntityTickUpdateProcedure {
 				}
 				entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 25, 45)));
 			}
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				if ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {
+					if (entity instanceof Mob) {
+						try {
+							((Mob) entity).setTarget(null);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
 		}
 	}
 }

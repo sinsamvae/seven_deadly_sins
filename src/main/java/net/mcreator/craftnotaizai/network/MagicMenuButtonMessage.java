@@ -15,6 +15,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.procedures.SlotSwitchProcedure;
 import net.mcreator.craftnotaizai.procedures.ResetMoveSelectProcedure;
+import net.mcreator.craftnotaizai.procedures.PossessionButtonProcedure;
 import net.mcreator.craftnotaizai.procedures.OpenStatsOnKeyPressedProcedure;
 import net.mcreator.craftnotaizai.procedures.MagicAbilityslotProcedure;
 import net.mcreator.craftnotaizai.procedures.MagicAbilitySlot8Procedure;
@@ -148,6 +149,10 @@ public class MagicMenuButtonMessage {
 		if (buttonID == 14) {
 
 			OpenStatsOnKeyPressedProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 15) {
+
+			PossessionButtonProcedure.execute(entity);
 		}
 	}
 

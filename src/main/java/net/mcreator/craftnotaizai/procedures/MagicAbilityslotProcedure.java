@@ -96,6 +96,27 @@ public class MagicAbilityslotProcedure {
 				}
 			}
 		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Possession_Switch == true) {
+			if (!(PossessionSkillProcedure.execute(entity)).equals("LOCKED")) {
+				can_set = true;
+				for (int index4 = 0; index4 < 8; index4++) {
+					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().getString(("skill" + check)))
+							.equals(PossessionSkillProcedure.execute(entity))) {
+						can_set = false;
+					}
+					check = check + 1;
+				}
+				if (can_set) {
+					((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
+							.putString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move), PossessionSkillProcedure.execute(entity));
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(PossessionSkillProcedure.execute(entity)), false);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("You already have this skill"), false);
+				}
+			}
+		}
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).SlotSwitch == 2) {
 			MagicBilitySlot9Procedure.execute(entity);
 		}

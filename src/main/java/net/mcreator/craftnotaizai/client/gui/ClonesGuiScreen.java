@@ -70,7 +70,7 @@ public class ClonesGuiScreen extends AbstractContainerScreen<ClonesGuiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_clones"), -19, -24, -1, false);
 		guiGraphics.drawString(this.font,
 
-				LostVayneVarProcedure.execute(entity), -33, -47, -1, false);
+				LostVayneVarProcedure.execute(entity), -22, -47, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clones_gui.label_despawn"), -21, 9, -1, false);
 	}
 

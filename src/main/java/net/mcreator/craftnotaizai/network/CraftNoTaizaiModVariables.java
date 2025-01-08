@@ -126,7 +126,6 @@ public class CraftNoTaizaiModVariables {
 			clone.range = original.range;
 			clone.lock_on = original.lock_on;
 			clone.target_lock = original.target_lock;
-			clone.reddemonblood = original.reddemonblood;
 			clone.humandemon = original.humandemon;
 			clone.graydemonblood = original.graydemonblood;
 			clone.humandemonmark = original.humandemonmark;
@@ -154,7 +153,6 @@ public class CraftNoTaizaiModVariables {
 			clone.Move = original.Move;
 			clone.SlotSwitch = original.SlotSwitch;
 			clone.Agility = original.Agility;
-			clone.reddemonmark = original.reddemonmark;
 			clone.SpacePressed = original.SpacePressed;
 			clone.learn_skill = original.learn_skill;
 			clone.damage_indicator = original.damage_indicator;
@@ -285,6 +283,9 @@ public class CraftNoTaizaiModVariables {
 			clone.power_percentage = original.power_percentage;
 			clone.PerpetualReincarnation = original.PerpetualReincarnation;
 			clone.EternalLife = original.EternalLife;
+			clone.Possession_Switch = original.Possession_Switch;
+			clone.Awaken = original.Awaken;
+			clone.awaken = original.awaken;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -397,6 +398,9 @@ public class CraftNoTaizaiModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			if (nbt == null) {
+				nbt = save(new CompoundTag());
+			}
 			chastiefol = nbt.getBoolean("chastiefol");
 			fairyking = nbt.getBoolean("fairyking");
 			choas = nbt.getBoolean("choas");
@@ -600,7 +604,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean jumbvar = false;
 		public boolean lock_on = false;
 		public String target_lock = "\"\"";
-		public boolean reddemonblood = false;
 		public double humandemon = 0;
 		public boolean graydemonblood = false;
 		public boolean humandemonmark = false;
@@ -628,7 +631,6 @@ public class CraftNoTaizaiModVariables {
 		public double Move = 0;
 		public double SlotSwitch = 0.0;
 		public double Agility = 0;
-		public boolean reddemonmark = false;
 		public boolean SpacePressed = false;
 		public ItemStack learn_skill = ItemStack.EMPTY;
 		public boolean damage_indicator = false;
@@ -760,6 +762,9 @@ public class CraftNoTaizaiModVariables {
 		public double power_percentage = 0.0;
 		public boolean PerpetualReincarnation = false;
 		public boolean EternalLife = false;
+		public boolean Possession_Switch = false;
+		public boolean Awaken = false;
+		public double awaken = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -811,7 +816,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("jumbvar", jumbvar);
 			nbt.putBoolean("lock_on", lock_on);
 			nbt.putString("target_lock", target_lock);
-			nbt.putBoolean("reddemonblood", reddemonblood);
 			nbt.putDouble("humandemon", humandemon);
 			nbt.putBoolean("graydemonblood", graydemonblood);
 			nbt.putBoolean("humandemonmark", humandemonmark);
@@ -839,7 +843,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("Move", Move);
 			nbt.putDouble("SlotSwitch", SlotSwitch);
 			nbt.putDouble("Agility", Agility);
-			nbt.putBoolean("reddemonmark", reddemonmark);
 			nbt.putBoolean("SpacePressed", SpacePressed);
 			nbt.put("learn_skill", learn_skill.save(new CompoundTag()));
 			nbt.putBoolean("damage_indicator", damage_indicator);
@@ -971,11 +974,20 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("power_percentage", power_percentage);
 			nbt.putBoolean("PerpetualReincarnation", PerpetualReincarnation);
 			nbt.putBoolean("EternalLife", EternalLife);
+			nbt.putBoolean("Possession_Switch", Possession_Switch);
+			nbt.putBoolean("Awaken", Awaken);
+			nbt.putDouble("awaken", awaken);
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		public void readNBT(Tag tag) {
+			if (tag == null) {
+				tag = writeNBT();
+			}
+			CompoundTag nbt = (CompoundTag) tag;
+			if (nbt == null) {
+				nbt = (CompoundTag) writeNBT();
+			}
 			level = nbt.getDouble("level");
 			xp = nbt.getDouble("xp");
 			TP = nbt.getDouble("TP");
@@ -1019,7 +1031,6 @@ public class CraftNoTaizaiModVariables {
 			jumbvar = nbt.getBoolean("jumbvar");
 			lock_on = nbt.getBoolean("lock_on");
 			target_lock = nbt.getString("target_lock");
-			reddemonblood = nbt.getBoolean("reddemonblood");
 			humandemon = nbt.getDouble("humandemon");
 			graydemonblood = nbt.getBoolean("graydemonblood");
 			humandemonmark = nbt.getBoolean("humandemonmark");
@@ -1047,7 +1058,6 @@ public class CraftNoTaizaiModVariables {
 			Move = nbt.getDouble("Move");
 			SlotSwitch = nbt.getDouble("SlotSwitch");
 			Agility = nbt.getDouble("Agility");
-			reddemonmark = nbt.getBoolean("reddemonmark");
 			SpacePressed = nbt.getBoolean("SpacePressed");
 			learn_skill = ItemStack.of(nbt.getCompound("learn_skill"));
 			damage_indicator = nbt.getBoolean("damage_indicator");
@@ -1179,6 +1189,9 @@ public class CraftNoTaizaiModVariables {
 			power_percentage = nbt.getDouble("power_percentage");
 			PerpetualReincarnation = nbt.getBoolean("PerpetualReincarnation");
 			EternalLife = nbt.getBoolean("EternalLife");
+			Possession_Switch = nbt.getBoolean("Possession_Switch");
+			Awaken = nbt.getBoolean("Awaken");
+			awaken = nbt.getDouble("awaken");
 		}
 	}
 
@@ -1255,7 +1268,6 @@ public class CraftNoTaizaiModVariables {
 					variables.jumbvar = message.data.jumbvar;
 					variables.lock_on = message.data.lock_on;
 					variables.target_lock = message.data.target_lock;
-					variables.reddemonblood = message.data.reddemonblood;
 					variables.humandemon = message.data.humandemon;
 					variables.graydemonblood = message.data.graydemonblood;
 					variables.humandemonmark = message.data.humandemonmark;
@@ -1283,7 +1295,6 @@ public class CraftNoTaizaiModVariables {
 					variables.Move = message.data.Move;
 					variables.SlotSwitch = message.data.SlotSwitch;
 					variables.Agility = message.data.Agility;
-					variables.reddemonmark = message.data.reddemonmark;
 					variables.SpacePressed = message.data.SpacePressed;
 					variables.learn_skill = message.data.learn_skill;
 					variables.damage_indicator = message.data.damage_indicator;
@@ -1415,6 +1426,9 @@ public class CraftNoTaizaiModVariables {
 					variables.power_percentage = message.data.power_percentage;
 					variables.PerpetualReincarnation = message.data.PerpetualReincarnation;
 					variables.EternalLife = message.data.EternalLife;
+					variables.Possession_Switch = message.data.Possession_Switch;
+					variables.Awaken = message.data.Awaken;
+					variables.awaken = message.data.awaken;
 				}
 			});
 			context.setPacketHandled(true);

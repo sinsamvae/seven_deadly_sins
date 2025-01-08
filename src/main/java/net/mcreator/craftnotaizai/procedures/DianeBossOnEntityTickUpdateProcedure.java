@@ -5,11 +5,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.RockRushProjectileEntity;
 import net.mcreator.craftnotaizai.entity.JethammerProjectileEntity;
@@ -78,8 +81,14 @@ public class DianeBossOnEntityTickUpdateProcedure {
 						}
 					}
 				}
+				if (ran == 3) {
+					if (!(entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(CraftNoTaizaiModMobEffects.HEAVY_METAL.get()))) {
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.HEAVY_METAL.get(), 1200, 3, false, false));
+					}
+				}
+				entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
 		}
 	}
 }

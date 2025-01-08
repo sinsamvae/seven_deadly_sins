@@ -1,6 +1,7 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
@@ -33,6 +34,17 @@ public class EarthGolemOnEntityTickUpdateProcedure {
 			entity.getPersistentData().putDouble("ManaDmg", (Math.ceil(
 					0.45 * ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack)
 					+ 3));
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				if ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {
+					if (entity instanceof Mob) {
+						try {
+							((Mob) entity).setTarget(null);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
 		}
 	}
 }

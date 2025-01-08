@@ -10,7 +10,9 @@
     "blockingModelName": "Normal blocking",
     "name": "Heat_Fork",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§Right Click Cook Food In OffHand"
+      ]
     },
     "creativeTabs": [
       {

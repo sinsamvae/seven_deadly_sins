@@ -171,6 +171,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.HOLY_STAFF_COURE_CHOUSE.get());
 				tabData.accept(CraftNoTaizaiModItems.BASQUIAS.get());
 				tabData.accept(CraftNoTaizaiModItems.REAPER_SCYTHE.get());
+				tabData.accept(CraftNoTaizaiModItems.FLYING_SAUCER.get());
+				tabData.accept(CraftNoTaizaiModItems.STAFF_OF_IMPRISONMENT.get());
 			})
 
 					.build());
@@ -203,6 +205,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.BOW.get());
 				tabData.accept(CraftNoTaizaiModItems.CURVED_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.HALBERT.get());
+				tabData.accept(CraftNoTaizaiModItems.HENDRIKSON_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.DEMON_KING_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.DREYFUS_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.KATANA.get());
@@ -213,6 +216,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.SPIRALEDLANCE.get());
 				tabData.accept(CraftNoTaizaiModItems.RAPIER.get());
 				tabData.accept(CraftNoTaizaiModItems.GIL_THUNDER_SWORD.get());
+				tabData.accept(CraftNoTaizaiModItems.HELBRUMSWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.SEQUENCE.get());
 				tabData.accept(CraftNoTaizaiModItems.SAW_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.AXE_2.get());
@@ -238,6 +242,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ANGLE_CURE_MEAT.get());
 				tabData.accept(CraftNoTaizaiModItems.COOKED_ANGLE_MEAT.get());
 				tabData.accept(CraftNoTaizaiModItems.TROLL_EAR.get());
+				tabData.accept(CraftNoTaizaiModItems.COOK_TROLL_EAR.get());
 				tabData.accept(CraftNoTaizaiModItems.MINIMUM_TABLETS.get());
 			})
 
@@ -284,6 +289,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.CAVE_OF_TRAINING.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.SIDE_MOUNTAIN.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.RHITTA_BLOCK.get().asItem());
+				tabData.accept(CraftNoTaizaiModItems.DUBS_SPAWN_EGG.get());
 			})
 
 					.build());
@@ -386,8 +392,6 @@ public class CraftNoTaizaiModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(CraftNoTaizaiModBlocks.KEG.get().asItem());
-		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
-			tabData.accept(CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(CraftNoTaizaiModItems.CLOVER_SPAWN_EGG.get());
 			tabData.accept(CraftNoTaizaiModItems.CANNON_ENTITY_SPAWN_EGG.get());
@@ -396,32 +400,10 @@ public class CraftNoTaizaiModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(CraftNoTaizaiModItems.DEMON_BLOOD.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-			tabData.accept(CraftNoTaizaiModBlocks.STAGE_ONE_AGAVE.get().asItem());
 			tabData.accept(CraftNoTaizaiModItems.AGAVE_SEEDS.get());
 			tabData.accept(CraftNoTaizaiModBlocks.FAIRY_TREE_SAPLINGS.get().asItem());
 			tabData.accept(CraftNoTaizaiModBlocks.HOLY_TREE_ORE.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-			tabData.accept(CraftNoTaizaiModItems.CHAOS_DIMENSION.get());
-			tabData.accept(CraftNoTaizaiModItems.CURVED_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.HALBERT.get());
-			tabData.accept(CraftNoTaizaiModItems.HENDRIKSON_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.DEMON_KING_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.DREYFUS_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.KATANA.get());
-			tabData.accept(CraftNoTaizaiModItems.SCYTHE.get());
-			tabData.accept(CraftNoTaizaiModItems.JERICHO_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.GOLGIUS_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.TWIGOSWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.SPIRALEDLANCE.get());
-			tabData.accept(CraftNoTaizaiModItems.RAPIER.get());
-			tabData.accept(CraftNoTaizaiModItems.GIL_THUNDER_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.HELBRUMSWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.SAW_SWORD.get());
-			tabData.accept(CraftNoTaizaiModItems.AXE_2.get());
-			tabData.accept(CraftNoTaizaiModItems.SAW_BLADE.get());
-			tabData.accept(CraftNoTaizaiModItems.LONG_AXE.get());
-			tabData.accept(CraftNoTaizaiModItems.GUARD_SPEAR.get());
-			tabData.accept(CraftNoTaizaiModItems.DOUBLE_SIDED_SPEAR.get());
 			tabData.accept(CraftNoTaizaiModItems.SEVEN_DEADLY_SINS_OPENING.get());
 		}
 	}

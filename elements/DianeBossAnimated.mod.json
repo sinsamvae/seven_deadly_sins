@@ -12,7 +12,13 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "name": "HM",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -27,10 +33,11 @@
       "value": -13466469,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -100,6 +107,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "whenMobDies": {
