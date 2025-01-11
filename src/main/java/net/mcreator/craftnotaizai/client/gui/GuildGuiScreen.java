@@ -53,7 +53,7 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 95 && mouseX < leftPos + 119 && mouseY > topPos + -98 && mouseY < topPos + -74)
+		if (mouseX > leftPos + 103 && mouseX < leftPos + 127 && mouseY > topPos + -105 && mouseY < topPos + -81)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.guild_gui.tooltip_back"), mouseX, mouseY);
 	}
 
@@ -64,7 +64,7 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -100, this.topPos + -96, 0, 0, 196, 186, 196, 186);
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -93, this.topPos + -104, 0, 0, 196, 186, 196, 186);
 
 		RenderSystem.disableBlend();
 	}
@@ -82,35 +82,35 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				GuildNameProcedure.execute(entity), -31, -74, -1, false);
+				GuildNameProcedure.execute(entity), -28, -79, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMemberProcedure.execute(entity), -14, -23, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_members"), -24, -42, -1, false);
+				GuildMemberProcedure.execute(entity), -14, -48, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_members"), -14, -60, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMember2Procedure.execute(entity), -14, -4, -1, false);
+				GuildMember2Procedure.execute(entity), -14, -28, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMember3Procedure.execute(entity), -14, 16, -1, false);
+				GuildMember3Procedure.execute(entity), -14, -7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnPageProcedure.execute(entity), 35, -87, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_empty"), 77, -86, -1, false);
+				ReturnPageProcedure.execute(entity), 39, -101, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_empty"), 76, -100, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMember4Procedure.execute(entity), -14, 36, -1, false);
+				GuildMember4Procedure.execute(entity), -14, 14, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMember5Procedure.execute(entity), -14, 60, -1, false);
+				GuildMember5Procedure.execute(entity), -15, 36, -1, false);
 		if (PlayerInGuildProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_leave"), -80, 74, -1, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_leave"), -6, 65, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_overarrow = new ImageButton(this.leftPos + 71, this.topPos + -89, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow.png"), 16, 32, e -> {
+		imagebutton_overarrow = new ImageButton(this.leftPos + 71, this.topPos + -103, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow.png"), 16, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GuildGuiButtonMessage(0, x, y, z, textstate));
 				GuildGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
@@ -118,7 +118,7 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 		});
 		guistate.put("button:imagebutton_overarrow", imagebutton_overarrow);
 		this.addRenderableWidget(imagebutton_overarrow);
-		imagebutton_1button = new ImageButton(this.leftPos + -99, this.topPos + 71, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
+		imagebutton_1button = new ImageButton(this.leftPos + -25, this.topPos + 61, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
 			if (PlayerInGuildProcedure.execute(entity)) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GuildGuiButtonMessage(1, x, y, z, textstate));
 				GuildGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
@@ -132,7 +132,7 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 		};
 		guistate.put("button:imagebutton_1button", imagebutton_1button);
 		this.addRenderableWidget(imagebutton_1button);
-		imagebutton_restart = new ImageButton(this.leftPos + 97, this.topPos + -95, 20, 20, 0, 0, 20, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_restart.png"), 20, 40, e -> {
+		imagebutton_restart = new ImageButton(this.leftPos + 104, this.topPos + -104, 20, 20, 0, 0, 20, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_restart.png"), 20, 40, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GuildGuiButtonMessage(2, x, y, z, textstate));
 				GuildGuiButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);

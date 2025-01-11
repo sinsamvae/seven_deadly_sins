@@ -98,6 +98,15 @@
           "x": 125,
           "y": 37
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "britannia_coins.png",
+          "use1Xscale": true,
+          "x": 144,
+          "y": 73
+        }
       }
     ],
     "onOpen": {

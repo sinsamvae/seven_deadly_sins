@@ -103,6 +103,7 @@ import net.mcreator.craftnotaizai.entity.CocoonOfDarknessEntity;
 import net.mcreator.craftnotaizai.entity.ClayDragonEntity;
 import net.mcreator.craftnotaizai.entity.ChickenEntity;
 import net.mcreator.craftnotaizai.entity.CainBarzadAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.BlueDemonEntity;
 import net.mcreator.craftnotaizai.entity.BlackOutEntity;
 import net.mcreator.craftnotaizai.entity.BlackHoundEntity;
 import net.mcreator.craftnotaizai.entity.BasquiasGuardianEntity;
@@ -892,6 +893,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ReaperScytheEntityEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BlueDemonEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

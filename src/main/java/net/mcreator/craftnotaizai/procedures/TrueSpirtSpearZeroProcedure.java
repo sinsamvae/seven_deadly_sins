@@ -30,16 +30,16 @@ public class TrueSpirtSpearZeroProcedure {
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).True_Spirt_From == true
 				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana <= 0) {
 			{
-				double _setval = 3;
+				boolean _setval = false;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.true_spirit_spear = _setval;
+					capability.True_Spirt_From = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				boolean _setval = false;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.True_Spirt_From = _setval;
+					capability.ManaAttack_boost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

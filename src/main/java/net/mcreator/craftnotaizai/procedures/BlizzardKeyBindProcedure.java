@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
-import net.mcreator.craftnotaizai.entity.BusterIceEntity;
+import net.mcreator.craftnotaizai.entity.IceAnchorEntity;
 
 public class BlizzardKeyBindProcedure {
 	public static void execute(Entity entity) {
@@ -37,7 +37,7 @@ public class BlizzardKeyBindProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new BusterIceEntity(CraftNoTaizaiModEntities.BUSTER_ICE.get(), level);
+											AbstractArrow entityToSpawn = new IceAnchorEntity(CraftNoTaizaiModEntities.ICE_ANCHOR.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);

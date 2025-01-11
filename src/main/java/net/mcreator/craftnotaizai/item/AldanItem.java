@@ -10,7 +10,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
+
+import net.mcreator.craftnotaizai.procedures.AldanToolInHandProcedure;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
@@ -52,5 +55,12 @@ public class AldanItem extends Item {
 			return builder.build();
 		}
 		return super.getDefaultAttributeModifiers(equipmentSlot);
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			AldanToolInHandProcedure.execute(entity);
 	}
 }

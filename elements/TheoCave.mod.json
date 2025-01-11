@@ -15,7 +15,7 @@
         "data": {
           "name": "label_empty",
           "text": {
-            "fixedValue": "Cave Of Training"
+            "fixedValue": "Cave of training"
           },
           "color": {
             "value": -1,
@@ -30,7 +30,7 @@
         "data": {
           "name": "label_will_increase_youre_physical_st",
           "text": {
-            "fixedValue": "Will increase you’re physical stats"
+            "fixedValue": "will increase your physical stats,"
           },
           "color": {
             "value": -1,
@@ -45,7 +45,7 @@
         "data": {
           "name": "label_strength_and_spirit",
           "text": {
-            "fixedValue": "strength and spirit"
+            "fixedValue": "strength, and spirit."
           },
           "color": {
             "value": -1,
@@ -81,15 +81,6 @@
           },
           "x": 214,
           "y": 142
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "black.png",
-          "use1Xscale": false,
-          "x": -667,
-          "y": -440
         }
       }
     ],

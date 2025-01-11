@@ -58,9 +58,6 @@ public class DemonKingGuiScreen extends AbstractContainerScreen<DemonKingGuiMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/black.png"), this.leftPos + -259, this.topPos + -163, 0, 0, 960, 540, 960, 540);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -79,10 +76,9 @@ public class DemonKingGuiScreen extends AbstractContainerScreen<DemonKingGuiMenu
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_accept"), -46, -13, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_empty1"), -51, 14, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_deny"), -46, 14, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_welcome_demon_i_shall_share_bit"), -21, -65, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_of_my_power"), -22, -53, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_i_shall_give_you_bit_of_my_power"), 105, -53, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_you_bit_of_my_power"), -21, -41, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_welcome_demon_i_shall_share_bit"), -34, -65, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_of_my_power"), -34, -51, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.demon_king_gui.label_i_shall_give_you_bit_of_my_power"), -34, -37, -1, false);
 	}
 
 	@Override

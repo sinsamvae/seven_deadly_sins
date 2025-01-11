@@ -32,7 +32,7 @@ public class PhysicalFullCounterProcedure {
 		if (damagesource == null || entity == null || sourceentity == null)
 			return;
 		double dmg = 0;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).physical_full_counter == true
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).physical_full_counter
 				&& (damagesource.is(DamageTypes.PLAYER_ATTACK) || damagesource.is(DamageTypes.MOB_ATTACK))) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);

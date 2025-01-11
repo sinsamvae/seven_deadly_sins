@@ -52,7 +52,7 @@ public class LevitationMessage {
 			return;
 		if (type == 0) {
 
-			LevitationOnKeyPressedProcedure.execute(entity);
+			LevitationOnKeyPressedProcedure.execute(world, entity);
 		}
 	}
 

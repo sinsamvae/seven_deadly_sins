@@ -11,7 +11,6 @@ public class UseMagicPressed3Procedure {
 		TempestBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		IceFangBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		AcidkeyPressProcedure.execute(world, x, y, z, entity);
-		HellBlazeOnKeyPressProcedure.execute(world, x, y, z, entity);
 		MiracleWindKeyPressProcedure.execute(world, x, y, z, entity);
 		BlazeBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		InfinityBindOnKeyPressedProcedure.execute(world, entity);

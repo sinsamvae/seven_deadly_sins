@@ -384,6 +384,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.GALAND_STORY_2_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ELAINE_STORY_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GALAND_OVER_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.BLUE_DEMON_SPAWN_EGG.get());
 			})
 
 					.build());

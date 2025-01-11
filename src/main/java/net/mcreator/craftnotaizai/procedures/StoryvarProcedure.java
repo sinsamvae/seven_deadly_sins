@@ -395,6 +395,8 @@ public class StoryvarProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
 		} else if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story42")) {
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = CraftNoTaizaiModEntities.ELAINE_STORY.get().spawn(_level,
@@ -412,6 +414,19 @@ public class StoryvarProcedure {
 				if (entityToSpawn != null) {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
+			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		}
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story45")
+				&& (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("desert")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("forest"))
+						|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("swamp")))) {
+			{
+				String _setval = "Story46";
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Story = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();

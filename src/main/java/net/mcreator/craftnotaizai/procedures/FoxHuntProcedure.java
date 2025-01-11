@@ -72,27 +72,24 @@ public class FoxHuntProcedure {
 								return false;
 							}
 						}.checkGamemode(entityiterator))) {
-					target = true;
-					entity_target = entityiterator;
-				}
-			}
-		}
-		if (target && entity_target instanceof LivingEntity) {
-			entity_target.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),
-					(float) ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack + 3));
-			entity_target.setDeltaMovement(new Vec3(((entity.getX() - entity_target.getX()) * 0.4), ((entity.getY() - entity_target.getY()) * 0.4), ((entity.getZ() - entity_target.getZ()) * 0.4)));
-			Random = Mth.nextInt(RandomSource.create(), 1, 100);
-			item = (entity_target instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-			if (Random <= 5) {
-				if ((entity_target instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == item.getItem() && entity_target instanceof LivingEntity) {
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = item.copy();
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-					if (entity_target instanceof Player _player) {
-						ItemStack _stktoremove = item;
-						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),
+							(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+									* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 3));
+					entityiterator.setDeltaMovement(new Vec3(((entity.getX() - entityiterator.getX()) * 0.4), ((entity.getY() - entityiterator.getY()) * 0.4), ((entity.getZ() - entityiterator.getZ()) * 0.4)));
+					Random = Mth.nextInt(RandomSource.create(), 1, 100);
+					item = (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+					if (Random <= 5) {
+						if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == item.getItem() && entityiterator instanceof LivingEntity) {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = item.copy();
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							if (entityiterator instanceof Player _player) {
+								ItemStack _stktoremove = item;
+								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+							}
+						}
 					}
 				}
 			}

@@ -22,6 +22,13 @@ import javax.annotation.Nullable;
 
 import java.util.function.Supplier;
 
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationFactory;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
+
 @Mod.EventBusSubscriber(modid = "craft_no_taizai", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class SetUpAnimationsProcedure {
 	@SubscribeEvent

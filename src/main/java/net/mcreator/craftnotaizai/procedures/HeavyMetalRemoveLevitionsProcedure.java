@@ -30,7 +30,7 @@ public class HeavyMetalRemoveLevitionsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).heavy_metal == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).heavy_metal) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.LEVITATION);
 			if (entity instanceof LivingEntity _entity)

@@ -160,6 +160,7 @@ import net.mcreator.craftnotaizai.client.renderer.CainBarzadAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BusterIceRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BulletSquallRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BrilliantDetonationProjectileRenderer;
+import net.mcreator.craftnotaizai.client.renderer.BlueDemonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlazeProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlackOutRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BlackOutProjectileRenderer;
@@ -371,5 +372,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GALAND_OVER.get(), GalandOverRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DUBS.get(), DubsRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.BLUE_DEMON.get(), BlueDemonRenderer::new);
 	}
 }

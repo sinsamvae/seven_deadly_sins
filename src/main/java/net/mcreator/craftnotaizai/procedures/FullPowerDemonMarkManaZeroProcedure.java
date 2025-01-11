@@ -27,7 +27,7 @@ public class FullPowerDemonMarkManaZeroProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark == true
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark
 				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana <= 0) {
 			{
 				boolean _setval = false;
@@ -37,16 +37,23 @@ public class FullPowerDemonMarkManaZeroProcedure {
 				});
 			}
 			{
-				boolean _setval = false;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Levitation = _setval;
+					capability.strength_boost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				double _setval = 3;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fullpowerDemonMark = _setval;
+					capability.spirit_boost = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 1;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ManaAttack_boost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

@@ -19,6 +19,7 @@ import net.mcreator.craftnotaizai.world.inventory.TeleportationGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.StoryBoardMenu;
 import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.SettingsUIMenu;
+import net.mcreator.craftnotaizai.world.inventory.PossessionMenu;
 import net.mcreator.craftnotaizai.world.inventory.MonsterBlockGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.world.inventory.KegGuiMenu;
@@ -63,4 +64,5 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<FairyClanUiMenu>> FAIRY_CLAN_UI = REGISTRY.register("fairy_clan_ui", () -> IForgeMenuType.create(FairyClanUiMenu::new));
 	public static final RegistryObject<MenuType<GuildAcceptGuiMenu>> GUILD_ACCEPT_GUI = REGISTRY.register("guild_accept_gui", () -> IForgeMenuType.create(GuildAcceptGuiMenu::new));
 	public static final RegistryObject<MenuType<GuildGuiMenu>> GUILD_GUI = REGISTRY.register("guild_gui", () -> IForgeMenuType.create(GuildGuiMenu::new));
+	public static final RegistryObject<MenuType<PossessionMenu>> POSSESSION = REGISTRY.register("possession", () -> IForgeMenuType.create(PossessionMenu::new));
 }

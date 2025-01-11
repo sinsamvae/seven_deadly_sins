@@ -8,6 +8,13 @@ public class AgilityVarProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Agility: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility);
+		String spirit = "";
+		String agility = "";
+		agility = "Agility: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility);
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).agility_boost > 1) {
+			agility = "Agility: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility) + " " + "\u00A7cx "
+					+ new java.text.DecimalFormat("#.#").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).agility_boost);
+		}
+		return agility;
 	}
 }

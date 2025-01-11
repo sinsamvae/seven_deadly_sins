@@ -28,18 +28,17 @@ public class ZerosignmanaProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).zerosign == true) {
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana <= 0) {
-				{
-					boolean _setval = false;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.zerosign = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				CraftNoTaizaiModVariables.WorldVariables.get(world).zerotime = false;
-				CraftNoTaizaiModVariables.WorldVariables.get(world).syncData(world);
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).zerosign
+				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana <= 0) {
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.zerosign = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
+			CraftNoTaizaiModVariables.WorldVariables.get(world).zerotime = false;
+			CraftNoTaizaiModVariables.WorldVariables.get(world).syncData(world);
 		}
 	}
 }

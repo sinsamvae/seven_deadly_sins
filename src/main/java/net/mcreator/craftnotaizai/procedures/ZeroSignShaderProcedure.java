@@ -33,7 +33,7 @@ public class ZeroSignShaderProcedure {
 			return;
 		boolean YourCondition = false;
 		if (world.isClientSide() && entity instanceof Player) {
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).zerosign == true) {
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).zerosign) {
 				Minecraft.getInstance().gameRenderer.loadEffect(new ResourceLocation("minecraft:shaders/post/invert.json"));
 			} else {
 				if (Minecraft.getInstance().gameRenderer.currentEffect() != null) {

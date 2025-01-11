@@ -46,7 +46,7 @@ public class CursedBindingResentmentChainsProcedure {
 			}
 			if (target && entity_target instanceof LivingEntity) {
 				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 1000000, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 255, false, false));
 				if (entity_target instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.JUBAKU_ENSA_EFFECT.get(), 12000, 1, false, false));
 				for (int index0 = 0; index0 < 15; index0++) {

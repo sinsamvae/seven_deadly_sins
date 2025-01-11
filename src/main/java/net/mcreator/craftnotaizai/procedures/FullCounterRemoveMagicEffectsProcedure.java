@@ -29,7 +29,7 @@ public class FullCounterRemoveMagicEffectsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Full_Counter_Use == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Full_Counter_Use) {
 			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CraftNoTaizaiModMobEffects.FREZZE.get()) || entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(CraftNoTaizaiModMobEffects.BLACK_OUT_EFFECT.get())
 					|| entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(CraftNoTaizaiModMobEffects.NECROSIS.get())
 					|| entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())

@@ -34,7 +34,7 @@
     "damageVsEntity": 11.0,
     "specialInformation": {
       "fixedValue": [
-        "§Right Click Use Super Concentration"
+        "RightClick Use Super Concentration"
       ]
     },
     "hasGlow": false,
@@ -43,6 +43,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "CoureChouseRightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "CoureChouseAnimatedPlayerFinishesUsingItem"
     },
     "isFood": false,
     "nutritionalValue": 4,

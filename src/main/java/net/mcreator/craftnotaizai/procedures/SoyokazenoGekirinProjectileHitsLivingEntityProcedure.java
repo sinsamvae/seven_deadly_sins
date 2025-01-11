@@ -16,7 +16,7 @@ public class SoyokazenoGekirinProjectileHitsLivingEntityProcedure {
 		double delay = 0;
 		entity.setDeltaMovement(new Vec3(((-0.5) * entity.getLookAngle().x), (0 * entity.getLookAngle().y), ((-0.5) * entity.getLookAngle().z)));
 		if (immediatesourceentity.getPersistentData().getBoolean("deflected") == true) {
-			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), immediatesourceentity),
+			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:wind_magic"))), immediatesourceentity),
 					(float) ((immediatesourceentity instanceof Projectile _projEnt ? _projEnt.getDeltaMovement().length() : 0) * 1.5));
 		}
 	}

@@ -52,9 +52,6 @@ public class TheoGuiScreen extends AbstractContainerScreen<TheoGuiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/black.png"), this.leftPos + -842, this.topPos + -565, 0, 0, 1920, 1080, 1920, 1080);
-
 		RenderSystem.disableBlend();
 	}
 

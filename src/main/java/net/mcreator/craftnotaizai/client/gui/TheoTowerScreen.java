@@ -48,9 +48,6 @@ public class TheoTowerScreen extends AbstractContainerScreen<TheoTowerMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
-		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/black.png"), this.leftPos + -832, this.topPos + -532, 0, 0, 1920, 1080, 1920, 1080);
-
 		RenderSystem.disableBlend();
 	}
 

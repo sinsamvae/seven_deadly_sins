@@ -34,7 +34,11 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 		double distance = 0;
 		double ran = 0;
 		if (!(null == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-			entity.getPersistentData().putDouble("ChainExplosion", (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack) + 5));
+			entity.getPersistentData().putDouble("ChainExplosion", (Math.ceil(
+					0.45 * ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
+					+ 5));
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -63,7 +67,7 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 								return false;
 							}
 						}.checkGamemode(entityiterator) || entityiterator instanceof ChainExplosionV2Entity)) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:fire_magic")))),
 							(float) entity.getPersistentData().getDouble("ChainExplosion"));
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.EXPLOSION, (entity.getX()), (entity.getY()), (entity.getZ()), 3, 0.1, 0.1, 0.1, 0);
@@ -104,7 +108,7 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 									return false;
 								}
 							}.checkGamemode(entityiterator) || entityiterator instanceof ChainExplosionV2Entity)) {
-						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:fire_magic")))),
 								(float) entity.getPersistentData().getDouble("ChainExplosion"));
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, (entity.getX()), (entity.getY()), (entity.getZ()), 3, 0.1, 0.1, 0.1, 0);

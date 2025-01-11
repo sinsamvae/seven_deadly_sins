@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Blood Awaken",
-    "achievementDescription": "you have several demonic features",
+    "achievementDescription": "You have several demonic features",
     "achievementIcon": {
       "value": "CUSTOM:GrayDemonBloodNeedle"
     },

@@ -37,6 +37,8 @@ import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 import java.util.function.Supplier;
 import java.util.ArrayList;
 
+import dev.kosmx.playerAnim.core.data.quarktool.Move;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CraftNoTaizaiModVariables {
 	@SubscribeEvent
@@ -100,7 +102,6 @@ public class CraftNoTaizaiModVariables {
 			clone.PurgatoryFire = original.PurgatoryFire;
 			clone.creation = original.creation;
 			clone.heavy_metal = original.heavy_metal;
-			clone.heavy_meta = original.heavy_meta;
 			clone.lightningarmor = original.lightningarmor;
 			clone.heavy_armor = original.heavy_armor;
 			clone.FreezeShield = original.FreezeShield;
@@ -113,8 +114,6 @@ public class CraftNoTaizaiModVariables {
 			clone.infinity_use = original.infinity_use;
 			clone.BreakerOff = original.BreakerOff;
 			clone.DemonMark = original.DemonMark;
-			clone.DemonMark1 = original.DemonMark1;
-			clone.berserk = original.berserk;
 			clone.berserkmode = original.berserkmode;
 			clone.rCoolDown = original.rCoolDown;
 			clone.PerfectShell = original.PerfectShell;
@@ -126,11 +125,9 @@ public class CraftNoTaizaiModVariables {
 			clone.range = original.range;
 			clone.lock_on = original.lock_on;
 			clone.target_lock = original.target_lock;
-			clone.humandemon = original.humandemon;
 			clone.graydemonblood = original.graydemonblood;
 			clone.humandemonmark = original.humandemonmark;
 			clone.graydemonform = original.graydemonform;
-			clone.graydemon = original.graydemon;
 			clone.AbsoluteCanel = original.AbsoluteCanel;
 			clone.killroyale = original.killroyale;
 			clone.redKill = original.redKill;
@@ -163,11 +160,9 @@ public class CraftNoTaizaiModVariables {
 			clone.CDJack = original.CDJack;
 			clone.LostVayne = original.LostVayne;
 			clone.the_one = original.the_one;
-			clone.theone = original.theone;
 			clone.combostar = original.combostar;
 			clone.combostarcounter = original.combostarcounter;
 			clone.TheOneUltimate = original.TheOneUltimate;
-			clone.TheOneUltimateNumber = original.TheOneUltimateNumber;
 			clone.combostartick = original.combostartick;
 			clone.capitalofthedeadX = original.capitalofthedeadX;
 			clone.capitalofthedeadY = original.capitalofthedeadY;
@@ -176,16 +171,13 @@ public class CraftNoTaizaiModVariables {
 			clone.TrickStarX = original.TrickStarX;
 			clone.TrickStarY = original.TrickStarY;
 			clone.TrickStarZ = original.TrickStarZ;
-			clone.fullsize = original.fullsize;
 			clone.FullSize = original.FullSize;
 			clone.CriticalOver = original.CriticalOver;
-			clone.criticalover = original.criticalover;
 			clone.Rhitta = original.Rhitta;
 			clone.rhittatick = original.rhittatick;
 			clone.TrickStarYaw = original.TrickStarYaw;
 			clone.physical_full_counter = original.physical_full_counter;
 			clone.FullPowerDemonMark = original.FullPowerDemonMark;
-			clone.fullpowerDemonMark = original.fullpowerDemonMark;
 			clone.teleplortionX = original.teleplortionX;
 			clone.teleplortionY = original.teleplortionY;
 			clone.teleplortionZ = original.teleplortionZ;
@@ -194,12 +186,9 @@ public class CraftNoTaizaiModVariables {
 			clone.learned_spells = original.learned_spells;
 			clone.spells = original.spells;
 			clone.yggdra_cloth = original.yggdra_cloth;
-			clone.Yggdra_Cloth = original.Yggdra_Cloth;
 			clone.True_Spirt_From = original.True_Spirt_From;
-			clone.true_spirit_spear = original.true_spirit_spear;
 			clone.mana_regen_effect = original.mana_regen_effect;
 			clone.hard_protection = original.hard_protection;
-			clone.Hard_Protection = original.Hard_Protection;
 			clone.demon_skill = original.demon_skill;
 			clone.learn_demon_skills = original.learn_demon_skills;
 			clone.aqua_dress = original.aqua_dress;
@@ -210,10 +199,8 @@ public class CraftNoTaizaiModVariables {
 			clone.goddessbless = original.goddessbless;
 			clone.Gloxinia = original.Gloxinia;
 			clone.yggdrasil_armor = original.yggdrasil_armor;
-			clone.yggdrasilarmor = original.yggdrasilarmor;
 			clone.MagicDetection = original.MagicDetection;
 			clone.fire_protection = original.fire_protection;
-			clone.EmeraldOcto = original.EmeraldOcto;
 			clone.Emerald_Octo = original.Emerald_Octo;
 			clone.drole_eye = original.drole_eye;
 			clone.Moon_Rose = original.Moon_Rose;
@@ -285,7 +272,14 @@ public class CraftNoTaizaiModVariables {
 			clone.EternalLife = original.EternalLife;
 			clone.Possession_Switch = original.Possession_Switch;
 			clone.Awaken = original.Awaken;
-			clone.awaken = original.awaken;
+			clone.drole_dance = original.drole_dance;
+			clone.strength_boost = original.strength_boost;
+			clone.spirit_boost = original.spirit_boost;
+			clone.maxmana_boost = original.maxmana_boost;
+			clone.ManaAttack_boost = original.ManaAttack_boost;
+			clone.agility_boost = original.agility_boost;
+			clone.kill_earthcrawler = original.kill_earthcrawler;
+			clone.freeze_saber = original.freeze_saber;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -577,7 +571,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean PurgatoryFire = false;
 		public boolean creation = false;
 		public boolean heavy_metal = false;
-		public double heavy_meta = 0;
 		public boolean lightningarmor = false;
 		public double heavy_armor = 0;
 		public boolean FreezeShield = false;
@@ -590,8 +583,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean infinity_use = false;
 		public boolean BreakerOff = false;
 		public boolean DemonMark = false;
-		public double DemonMark1 = 0;
-		public double berserk = 0;
 		public boolean berserkmode = false;
 		public double rCoolDown = 0;
 		public boolean PerfectShell = false;
@@ -604,11 +595,9 @@ public class CraftNoTaizaiModVariables {
 		public boolean jumbvar = false;
 		public boolean lock_on = false;
 		public String target_lock = "\"\"";
-		public double humandemon = 0;
 		public boolean graydemonblood = false;
 		public boolean humandemonmark = false;
 		public boolean graydemonform = false;
-		public double graydemon = 0;
 		public boolean AbsoluteCanel = false;
 		public double killroyale = 0;
 		public double redKill = 0;
@@ -641,11 +630,9 @@ public class CraftNoTaizaiModVariables {
 		public double CDJack = 0;
 		public double LostVayne = 0;
 		public boolean the_one = false;
-		public double theone = 0;
 		public boolean combostar = false;
 		public double combostarcounter = 0;
 		public boolean TheOneUltimate = false;
-		public double TheOneUltimateNumber = 0;
 		public double combostartick = 0;
 		public double capitalofthedeadX = 0;
 		public double capitalofthedeadY = 0;
@@ -654,16 +641,13 @@ public class CraftNoTaizaiModVariables {
 		public double TrickStarX = 0;
 		public double TrickStarY = 0;
 		public double TrickStarZ = 0;
-		public double fullsize = 0;
 		public boolean FullSize = false;
 		public boolean CriticalOver = false;
-		public double criticalover = 0;
 		public double Rhitta = 0;
 		public double rhittatick = 0;
 		public double TrickStarYaw = 0;
 		public boolean physical_full_counter = false;
 		public boolean FullPowerDemonMark = false;
-		public double fullpowerDemonMark = 0;
 		public double teleplortionX = 0;
 		public double teleplortionY = 0;
 		public double teleplortionZ = 0;
@@ -672,12 +656,9 @@ public class CraftNoTaizaiModVariables {
 		public double learned_spells = 0;
 		public double spells = 0;
 		public boolean yggdra_cloth = false;
-		public double Yggdra_Cloth = 0;
 		public boolean True_Spirt_From = false;
-		public double true_spirit_spear = 0;
 		public double mana_regen_effect = 0;
 		public boolean hard_protection = false;
-		public double Hard_Protection = 0;
 		public ItemStack demon_skill = ItemStack.EMPTY;
 		public boolean learn_demon_skills = false;
 		public boolean aqua_dress = false;
@@ -688,10 +669,8 @@ public class CraftNoTaizaiModVariables {
 		public double goddessbless = 0;
 		public boolean Gloxinia = false;
 		public boolean yggdrasil_armor = false;
-		public double yggdrasilarmor = 0;
 		public boolean MagicDetection = false;
 		public boolean fire_protection = false;
-		public double EmeraldOcto = 0;
 		public boolean Emerald_Octo = false;
 		public boolean drole_eye = false;
 		public double Moon_Rose = 0;
@@ -764,7 +743,14 @@ public class CraftNoTaizaiModVariables {
 		public boolean EternalLife = false;
 		public boolean Possession_Switch = false;
 		public boolean Awaken = false;
-		public double awaken = 0;
+		public boolean drole_dance = false;
+		public double strength_boost = 0;
+		public double spirit_boost = 0;
+		public double maxmana_boost = 0;
+		public double ManaAttack_boost = 0;
+		public double agility_boost = 0;
+		public double kill_earthcrawler = 0;
+		public boolean freeze_saber = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -789,7 +775,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("PurgatoryFire", PurgatoryFire);
 			nbt.putBoolean("creation", creation);
 			nbt.putBoolean("heavy_metal", heavy_metal);
-			nbt.putDouble("heavy_meta", heavy_meta);
 			nbt.putBoolean("lightningarmor", lightningarmor);
 			nbt.putDouble("heavy_armor", heavy_armor);
 			nbt.putBoolean("FreezeShield", FreezeShield);
@@ -802,8 +787,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("infinity_use", infinity_use);
 			nbt.putBoolean("BreakerOff", BreakerOff);
 			nbt.putBoolean("DemonMark", DemonMark);
-			nbt.putDouble("DemonMark1", DemonMark1);
-			nbt.putDouble("berserk", berserk);
 			nbt.putBoolean("berserkmode", berserkmode);
 			nbt.putDouble("rCoolDown", rCoolDown);
 			nbt.putBoolean("PerfectShell", PerfectShell);
@@ -816,11 +799,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("jumbvar", jumbvar);
 			nbt.putBoolean("lock_on", lock_on);
 			nbt.putString("target_lock", target_lock);
-			nbt.putDouble("humandemon", humandemon);
 			nbt.putBoolean("graydemonblood", graydemonblood);
 			nbt.putBoolean("humandemonmark", humandemonmark);
 			nbt.putBoolean("graydemonform", graydemonform);
-			nbt.putDouble("graydemon", graydemon);
 			nbt.putBoolean("AbsoluteCanel", AbsoluteCanel);
 			nbt.putDouble("killroyale", killroyale);
 			nbt.putDouble("redKill", redKill);
@@ -853,11 +834,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("CDJack", CDJack);
 			nbt.putDouble("LostVayne", LostVayne);
 			nbt.putBoolean("the_one", the_one);
-			nbt.putDouble("theone", theone);
 			nbt.putBoolean("combostar", combostar);
 			nbt.putDouble("combostarcounter", combostarcounter);
 			nbt.putBoolean("TheOneUltimate", TheOneUltimate);
-			nbt.putDouble("TheOneUltimateNumber", TheOneUltimateNumber);
 			nbt.putDouble("combostartick", combostartick);
 			nbt.putDouble("capitalofthedeadX", capitalofthedeadX);
 			nbt.putDouble("capitalofthedeadY", capitalofthedeadY);
@@ -866,16 +845,13 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("TrickStarX", TrickStarX);
 			nbt.putDouble("TrickStarY", TrickStarY);
 			nbt.putDouble("TrickStarZ", TrickStarZ);
-			nbt.putDouble("fullsize", fullsize);
 			nbt.putBoolean("FullSize", FullSize);
 			nbt.putBoolean("CriticalOver", CriticalOver);
-			nbt.putDouble("criticalover", criticalover);
 			nbt.putDouble("Rhitta", Rhitta);
 			nbt.putDouble("rhittatick", rhittatick);
 			nbt.putDouble("TrickStarYaw", TrickStarYaw);
 			nbt.putBoolean("physical_full_counter", physical_full_counter);
 			nbt.putBoolean("FullPowerDemonMark", FullPowerDemonMark);
-			nbt.putDouble("fullpowerDemonMark", fullpowerDemonMark);
 			nbt.putDouble("teleplortionX", teleplortionX);
 			nbt.putDouble("teleplortionY", teleplortionY);
 			nbt.putDouble("teleplortionZ", teleplortionZ);
@@ -884,12 +860,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("learned_spells", learned_spells);
 			nbt.putDouble("spells", spells);
 			nbt.putBoolean("yggdra_cloth", yggdra_cloth);
-			nbt.putDouble("Yggdra_Cloth", Yggdra_Cloth);
 			nbt.putBoolean("True_Spirt_From", True_Spirt_From);
-			nbt.putDouble("true_spirit_spear", true_spirit_spear);
 			nbt.putDouble("mana_regen_effect", mana_regen_effect);
 			nbt.putBoolean("hard_protection", hard_protection);
-			nbt.putDouble("Hard_Protection", Hard_Protection);
 			nbt.put("demon_skill", demon_skill.save(new CompoundTag()));
 			nbt.putBoolean("learn_demon_skills", learn_demon_skills);
 			nbt.putBoolean("aqua_dress", aqua_dress);
@@ -900,10 +873,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("goddessbless", goddessbless);
 			nbt.putBoolean("Gloxinia", Gloxinia);
 			nbt.putBoolean("yggdrasil_armor", yggdrasil_armor);
-			nbt.putDouble("yggdrasilarmor", yggdrasilarmor);
 			nbt.putBoolean("MagicDetection", MagicDetection);
 			nbt.putBoolean("fire_protection", fire_protection);
-			nbt.putDouble("EmeraldOcto", EmeraldOcto);
 			nbt.putBoolean("Emerald_Octo", Emerald_Octo);
 			nbt.putBoolean("drole_eye", drole_eye);
 			nbt.putDouble("Moon_Rose", Moon_Rose);
@@ -976,7 +947,14 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("EternalLife", EternalLife);
 			nbt.putBoolean("Possession_Switch", Possession_Switch);
 			nbt.putBoolean("Awaken", Awaken);
-			nbt.putDouble("awaken", awaken);
+			nbt.putBoolean("drole_dance", drole_dance);
+			nbt.putDouble("strength_boost", strength_boost);
+			nbt.putDouble("spirit_boost", spirit_boost);
+			nbt.putDouble("maxmana_boost", maxmana_boost);
+			nbt.putDouble("ManaAttack_boost", ManaAttack_boost);
+			nbt.putDouble("agility_boost", agility_boost);
+			nbt.putDouble("kill_earthcrawler", kill_earthcrawler);
+			nbt.putBoolean("freeze_saber", freeze_saber);
 			return nbt;
 		}
 
@@ -1004,7 +982,6 @@ public class CraftNoTaizaiModVariables {
 			PurgatoryFire = nbt.getBoolean("PurgatoryFire");
 			creation = nbt.getBoolean("creation");
 			heavy_metal = nbt.getBoolean("heavy_metal");
-			heavy_meta = nbt.getDouble("heavy_meta");
 			lightningarmor = nbt.getBoolean("lightningarmor");
 			heavy_armor = nbt.getDouble("heavy_armor");
 			FreezeShield = nbt.getBoolean("FreezeShield");
@@ -1017,8 +994,6 @@ public class CraftNoTaizaiModVariables {
 			infinity_use = nbt.getBoolean("infinity_use");
 			BreakerOff = nbt.getBoolean("BreakerOff");
 			DemonMark = nbt.getBoolean("DemonMark");
-			DemonMark1 = nbt.getDouble("DemonMark1");
-			berserk = nbt.getDouble("berserk");
 			berserkmode = nbt.getBoolean("berserkmode");
 			rCoolDown = nbt.getDouble("rCoolDown");
 			PerfectShell = nbt.getBoolean("PerfectShell");
@@ -1031,11 +1006,9 @@ public class CraftNoTaizaiModVariables {
 			jumbvar = nbt.getBoolean("jumbvar");
 			lock_on = nbt.getBoolean("lock_on");
 			target_lock = nbt.getString("target_lock");
-			humandemon = nbt.getDouble("humandemon");
 			graydemonblood = nbt.getBoolean("graydemonblood");
 			humandemonmark = nbt.getBoolean("humandemonmark");
 			graydemonform = nbt.getBoolean("graydemonform");
-			graydemon = nbt.getDouble("graydemon");
 			AbsoluteCanel = nbt.getBoolean("AbsoluteCanel");
 			killroyale = nbt.getDouble("killroyale");
 			redKill = nbt.getDouble("redKill");
@@ -1068,11 +1041,9 @@ public class CraftNoTaizaiModVariables {
 			CDJack = nbt.getDouble("CDJack");
 			LostVayne = nbt.getDouble("LostVayne");
 			the_one = nbt.getBoolean("the_one");
-			theone = nbt.getDouble("theone");
 			combostar = nbt.getBoolean("combostar");
 			combostarcounter = nbt.getDouble("combostarcounter");
 			TheOneUltimate = nbt.getBoolean("TheOneUltimate");
-			TheOneUltimateNumber = nbt.getDouble("TheOneUltimateNumber");
 			combostartick = nbt.getDouble("combostartick");
 			capitalofthedeadX = nbt.getDouble("capitalofthedeadX");
 			capitalofthedeadY = nbt.getDouble("capitalofthedeadY");
@@ -1081,16 +1052,13 @@ public class CraftNoTaizaiModVariables {
 			TrickStarX = nbt.getDouble("TrickStarX");
 			TrickStarY = nbt.getDouble("TrickStarY");
 			TrickStarZ = nbt.getDouble("TrickStarZ");
-			fullsize = nbt.getDouble("fullsize");
 			FullSize = nbt.getBoolean("FullSize");
 			CriticalOver = nbt.getBoolean("CriticalOver");
-			criticalover = nbt.getDouble("criticalover");
 			Rhitta = nbt.getDouble("Rhitta");
 			rhittatick = nbt.getDouble("rhittatick");
 			TrickStarYaw = nbt.getDouble("TrickStarYaw");
 			physical_full_counter = nbt.getBoolean("physical_full_counter");
 			FullPowerDemonMark = nbt.getBoolean("FullPowerDemonMark");
-			fullpowerDemonMark = nbt.getDouble("fullpowerDemonMark");
 			teleplortionX = nbt.getDouble("teleplortionX");
 			teleplortionY = nbt.getDouble("teleplortionY");
 			teleplortionZ = nbt.getDouble("teleplortionZ");
@@ -1099,12 +1067,9 @@ public class CraftNoTaizaiModVariables {
 			learned_spells = nbt.getDouble("learned_spells");
 			spells = nbt.getDouble("spells");
 			yggdra_cloth = nbt.getBoolean("yggdra_cloth");
-			Yggdra_Cloth = nbt.getDouble("Yggdra_Cloth");
 			True_Spirt_From = nbt.getBoolean("True_Spirt_From");
-			true_spirit_spear = nbt.getDouble("true_spirit_spear");
 			mana_regen_effect = nbt.getDouble("mana_regen_effect");
 			hard_protection = nbt.getBoolean("hard_protection");
-			Hard_Protection = nbt.getDouble("Hard_Protection");
 			demon_skill = ItemStack.of(nbt.getCompound("demon_skill"));
 			learn_demon_skills = nbt.getBoolean("learn_demon_skills");
 			aqua_dress = nbt.getBoolean("aqua_dress");
@@ -1115,10 +1080,8 @@ public class CraftNoTaizaiModVariables {
 			goddessbless = nbt.getDouble("goddessbless");
 			Gloxinia = nbt.getBoolean("Gloxinia");
 			yggdrasil_armor = nbt.getBoolean("yggdrasil_armor");
-			yggdrasilarmor = nbt.getDouble("yggdrasilarmor");
 			MagicDetection = nbt.getBoolean("MagicDetection");
 			fire_protection = nbt.getBoolean("fire_protection");
-			EmeraldOcto = nbt.getDouble("EmeraldOcto");
 			Emerald_Octo = nbt.getBoolean("Emerald_Octo");
 			drole_eye = nbt.getBoolean("drole_eye");
 			Moon_Rose = nbt.getDouble("Moon_Rose");
@@ -1191,7 +1154,14 @@ public class CraftNoTaizaiModVariables {
 			EternalLife = nbt.getBoolean("EternalLife");
 			Possession_Switch = nbt.getBoolean("Possession_Switch");
 			Awaken = nbt.getBoolean("Awaken");
-			awaken = nbt.getDouble("awaken");
+			drole_dance = nbt.getBoolean("drole_dance");
+			strength_boost = nbt.getDouble("strength_boost");
+			spirit_boost = nbt.getDouble("spirit_boost");
+			maxmana_boost = nbt.getDouble("maxmana_boost");
+			ManaAttack_boost = nbt.getDouble("ManaAttack_boost");
+			agility_boost = nbt.getDouble("agility_boost");
+			kill_earthcrawler = nbt.getDouble("kill_earthcrawler");
+			freeze_saber = nbt.getBoolean("freeze_saber");
 		}
 	}
 
@@ -1241,7 +1211,6 @@ public class CraftNoTaizaiModVariables {
 					variables.PurgatoryFire = message.data.PurgatoryFire;
 					variables.creation = message.data.creation;
 					variables.heavy_metal = message.data.heavy_metal;
-					variables.heavy_meta = message.data.heavy_meta;
 					variables.lightningarmor = message.data.lightningarmor;
 					variables.heavy_armor = message.data.heavy_armor;
 					variables.FreezeShield = message.data.FreezeShield;
@@ -1254,8 +1223,6 @@ public class CraftNoTaizaiModVariables {
 					variables.infinity_use = message.data.infinity_use;
 					variables.BreakerOff = message.data.BreakerOff;
 					variables.DemonMark = message.data.DemonMark;
-					variables.DemonMark1 = message.data.DemonMark1;
-					variables.berserk = message.data.berserk;
 					variables.berserkmode = message.data.berserkmode;
 					variables.rCoolDown = message.data.rCoolDown;
 					variables.PerfectShell = message.data.PerfectShell;
@@ -1268,11 +1235,9 @@ public class CraftNoTaizaiModVariables {
 					variables.jumbvar = message.data.jumbvar;
 					variables.lock_on = message.data.lock_on;
 					variables.target_lock = message.data.target_lock;
-					variables.humandemon = message.data.humandemon;
 					variables.graydemonblood = message.data.graydemonblood;
 					variables.humandemonmark = message.data.humandemonmark;
 					variables.graydemonform = message.data.graydemonform;
-					variables.graydemon = message.data.graydemon;
 					variables.AbsoluteCanel = message.data.AbsoluteCanel;
 					variables.killroyale = message.data.killroyale;
 					variables.redKill = message.data.redKill;
@@ -1305,11 +1270,9 @@ public class CraftNoTaizaiModVariables {
 					variables.CDJack = message.data.CDJack;
 					variables.LostVayne = message.data.LostVayne;
 					variables.the_one = message.data.the_one;
-					variables.theone = message.data.theone;
 					variables.combostar = message.data.combostar;
 					variables.combostarcounter = message.data.combostarcounter;
 					variables.TheOneUltimate = message.data.TheOneUltimate;
-					variables.TheOneUltimateNumber = message.data.TheOneUltimateNumber;
 					variables.combostartick = message.data.combostartick;
 					variables.capitalofthedeadX = message.data.capitalofthedeadX;
 					variables.capitalofthedeadY = message.data.capitalofthedeadY;
@@ -1318,16 +1281,13 @@ public class CraftNoTaizaiModVariables {
 					variables.TrickStarX = message.data.TrickStarX;
 					variables.TrickStarY = message.data.TrickStarY;
 					variables.TrickStarZ = message.data.TrickStarZ;
-					variables.fullsize = message.data.fullsize;
 					variables.FullSize = message.data.FullSize;
 					variables.CriticalOver = message.data.CriticalOver;
-					variables.criticalover = message.data.criticalover;
 					variables.Rhitta = message.data.Rhitta;
 					variables.rhittatick = message.data.rhittatick;
 					variables.TrickStarYaw = message.data.TrickStarYaw;
 					variables.physical_full_counter = message.data.physical_full_counter;
 					variables.FullPowerDemonMark = message.data.FullPowerDemonMark;
-					variables.fullpowerDemonMark = message.data.fullpowerDemonMark;
 					variables.teleplortionX = message.data.teleplortionX;
 					variables.teleplortionY = message.data.teleplortionY;
 					variables.teleplortionZ = message.data.teleplortionZ;
@@ -1336,12 +1296,9 @@ public class CraftNoTaizaiModVariables {
 					variables.learned_spells = message.data.learned_spells;
 					variables.spells = message.data.spells;
 					variables.yggdra_cloth = message.data.yggdra_cloth;
-					variables.Yggdra_Cloth = message.data.Yggdra_Cloth;
 					variables.True_Spirt_From = message.data.True_Spirt_From;
-					variables.true_spirit_spear = message.data.true_spirit_spear;
 					variables.mana_regen_effect = message.data.mana_regen_effect;
 					variables.hard_protection = message.data.hard_protection;
-					variables.Hard_Protection = message.data.Hard_Protection;
 					variables.demon_skill = message.data.demon_skill;
 					variables.learn_demon_skills = message.data.learn_demon_skills;
 					variables.aqua_dress = message.data.aqua_dress;
@@ -1352,10 +1309,8 @@ public class CraftNoTaizaiModVariables {
 					variables.goddessbless = message.data.goddessbless;
 					variables.Gloxinia = message.data.Gloxinia;
 					variables.yggdrasil_armor = message.data.yggdrasil_armor;
-					variables.yggdrasilarmor = message.data.yggdrasilarmor;
 					variables.MagicDetection = message.data.MagicDetection;
 					variables.fire_protection = message.data.fire_protection;
-					variables.EmeraldOcto = message.data.EmeraldOcto;
 					variables.Emerald_Octo = message.data.Emerald_Octo;
 					variables.drole_eye = message.data.drole_eye;
 					variables.Moon_Rose = message.data.Moon_Rose;
@@ -1428,7 +1383,14 @@ public class CraftNoTaizaiModVariables {
 					variables.EternalLife = message.data.EternalLife;
 					variables.Possession_Switch = message.data.Possession_Switch;
 					variables.Awaken = message.data.Awaken;
-					variables.awaken = message.data.awaken;
+					variables.drole_dance = message.data.drole_dance;
+					variables.strength_boost = message.data.strength_boost;
+					variables.spirit_boost = message.data.spirit_boost;
+					variables.maxmana_boost = message.data.maxmana_boost;
+					variables.ManaAttack_boost = message.data.ManaAttack_boost;
+					variables.agility_boost = message.data.agility_boost;
+					variables.kill_earthcrawler = message.data.kill_earthcrawler;
+					variables.freeze_saber = message.data.freeze_saber;
 				}
 			});
 			context.setPacketHandled(true);

@@ -3803,6 +3803,205 @@
           "x": 70,
           "y": 120
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_15_a_bloodcurdling_confessio",
+          "text": {
+            "fixedValue": "EP 15: A Bloodcurdling Confession"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story45"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_gloxinia_and_drole_of_the_ten_co",
+          "text": {
+            "fixedValue": "Gloxinia And Drole of the Ten Commandents lure strong"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story45"
+          },
+          "x": 68,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fighters_to_vaizel_by_offering_t",
+          "text": {
+            "fixedValue": "fighters to Vaizel by offering to grant any wish to the"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story45"
+          },
+          "x": 68,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_winner_of_their_great_fight_fest",
+          "text": {
+            "fixedValue": "winner of their Great Fight Festival."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story45"
+          },
+          "x": 68,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_go_to_plains_biome",
+          "text": {
+            "fixedValue": "Go To Desert, Forest or Swamp Biome"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story45"
+          },
+          "x": 70,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_16_deathtrap_maze",
+          "text": {
+            "fixedValue": "EP 16: Death-Trap Maze"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_an_elaborate_trapladen_deadly_m",
+          "text": {
+            "fixedValue": "An elaborate trap-laden deadly maze constructed by drole"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 68,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_begins_to_weed_out_the_weaker_ch",
+          "text": {
+            "fixedValue": "begins to weed out the weaker challengers that have"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_gathered_for_the_great_fight_fes",
+          "text": {
+            "fixedValue": "gathered for the Great Fight Festival."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_5_earth_crawlers",
+          "text": {
+            "fixedValue": "Defeat Earth Crawlers "
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 70,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_earth_crawler_kills",
+          "text": {
+            "fixedValue": "",
+            "name": "EarthCrawlerKills"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 70,
+          "y": 137
+        }
       }
     ],
     "gridSettings": {

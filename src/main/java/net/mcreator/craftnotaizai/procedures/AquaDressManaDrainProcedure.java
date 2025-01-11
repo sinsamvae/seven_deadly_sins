@@ -32,13 +32,13 @@ public class AquaDressManaDrainProcedure {
 			return;
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).aqua_dress == true) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 1, 4, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 60, 4, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 1, 4, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 60, 4, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 1, 4, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 60, 4, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1, 4, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 60, 4, false, false));
 		}
 	}
 }

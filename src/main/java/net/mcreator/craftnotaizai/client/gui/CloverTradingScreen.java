@@ -55,6 +55,8 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 
 		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/clover_gui.png"), this.leftPos + -89, this.topPos + -83, 0, 0, 176, 166, 176, 166);
 
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/britannia_coins.png"), this.leftPos + -70, this.topPos + -47, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

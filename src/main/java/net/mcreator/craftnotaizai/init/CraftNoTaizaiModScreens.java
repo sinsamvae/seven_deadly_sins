@@ -19,6 +19,7 @@ import net.mcreator.craftnotaizai.client.gui.TeleportationGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.StoryBoardScreen;
 import net.mcreator.craftnotaizai.client.gui.SideQuestGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.SettingsUIScreen;
+import net.mcreator.craftnotaizai.client.gui.PossessionScreen;
 import net.mcreator.craftnotaizai.client.gui.MonsterBlockGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.MagicMenuScreen;
 import net.mcreator.craftnotaizai.client.gui.KegGuiScreen;
@@ -65,6 +66,7 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.FAIRY_CLAN_UI.get(), FairyClanUiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_ACCEPT_GUI.get(), GuildAcceptGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_GUI.get(), GuildGuiScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.POSSESSION.get(), PossessionScreen::new);
 		});
 	}
 }

@@ -185,6 +185,7 @@ import net.mcreator.craftnotaizai.entity.BusterIceEntity;
 import net.mcreator.craftnotaizai.entity.BulletSquallEntity;
 import net.mcreator.craftnotaizai.entity.BrilliantDetonationProjectileEntity;
 import net.mcreator.craftnotaizai.entity.BreakthroughProjectileEntity;
+import net.mcreator.craftnotaizai.entity.BlueDemonEntity;
 import net.mcreator.craftnotaizai.entity.BlazeProjectileEntity;
 import net.mcreator.craftnotaizai.entity.BlackOutProjectileEntity;
 import net.mcreator.craftnotaizai.entity.BlackOutEntity;
@@ -802,6 +803,10 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<DubsEntity>of(DubsEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DubsEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlueDemonEntity>> BLUE_DEMON = register("blue_demon",
+			EntityType.Builder.<BlueDemonEntity>of(BlueDemonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlueDemonEntity::new)
+
+					.sized(1.5f, 2.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -941,6 +946,7 @@ public class CraftNoTaizaiModEntities {
 			GalandOverEntity.init();
 			ReaperScytheEntityEntity.init();
 			DubsEntity.init();
+			BlueDemonEntity.init();
 		});
 	}
 
@@ -1077,5 +1083,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(GALAND_OVER.get(), GalandOverEntity.createAttributes().build());
 		event.put(REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityEntity.createAttributes().build());
 		event.put(DUBS.get(), DubsEntity.createAttributes().build());
+		event.put(BLUE_DEMON.get(), BlueDemonEntity.createAttributes().build());
 	}
 }

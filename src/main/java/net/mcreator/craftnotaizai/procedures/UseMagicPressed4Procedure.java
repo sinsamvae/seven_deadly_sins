@@ -17,5 +17,6 @@ public class UseMagicPressed4Procedure {
 		GodKeyBindProcedure.execute(entity);
 		BlizzardKeyBindProcedure.execute(entity);
 		ArkKeyBindProcedure.execute(world, entity);
+		DroleDanceKeyBindProcedure.execute(world, entity);
 	}
 }

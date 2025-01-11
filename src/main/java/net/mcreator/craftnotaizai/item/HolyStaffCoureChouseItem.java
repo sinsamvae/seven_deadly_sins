@@ -23,12 +23,14 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 
 import net.mcreator.craftnotaizai.procedures.CoureChouseRightclickedProcedure;
+import net.mcreator.craftnotaizai.procedures.CoureChouseAnimatedPlayerFinishesUsingItemProcedure;
 import net.mcreator.craftnotaizai.item.renderer.HolyStaffCoureChouseItemRenderer;
 
 import java.util.function.Consumer;
@@ -122,7 +124,7 @@ public class HolyStaffCoureChouseItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A7Right Click Use Super Concentration"));
+		list.add(Component.literal("RightClick Use Super Concentration"));
 	}
 
 	@Override
@@ -135,5 +137,12 @@ public class HolyStaffCoureChouseItem extends Item implements GeoItem {
 
 		CoureChouseRightclickedProcedure.execute(world, entity, itemstack);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			CoureChouseAnimatedPlayerFinishesUsingItemProcedure.execute(entity);
 	}
 }

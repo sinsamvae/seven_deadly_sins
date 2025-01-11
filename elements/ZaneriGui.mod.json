@@ -11,15 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "black.png",
-          "use1Xscale": false,
-          "x": -834,
-          "y": -445
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_1",
@@ -50,7 +41,7 @@
         "data": {
           "name": "label_if_youre_ready",
           "text": {
-            "fixedValue": "If you're ready"
+            "fixedValue": "If you're ready,"
           },
           "color": {
             "value": -1,
@@ -65,7 +56,7 @@
         "data": {
           "name": "label_you_will_have_to_go_through_trai",
           "text": {
-            "fixedValue": "you will now go through tower of trails"
+            "fixedValue": "you will now go through the Power Trail."
           },
           "color": {
             "value": -1,
@@ -110,7 +101,7 @@
         "data": {
           "name": "label_be_warn_this_trail_is_tuf",
           "text": {
-            "fixedValue": "be warn this trail is tuff"
+            "fixedValue": "Be warned that this trail is tough."
           },
           "color": {
             "value": -1,

@@ -12,9 +12,9 @@ public class GideonToolInHandTickProcedure {
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")) {
 			if (entity.getPersistentData().getBoolean("gideon") == false) {
 				{
-					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack * 1.5;
+					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost * 1.5;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ManaAttack = _setval;
+						capability.ManaAttack_boost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -22,9 +22,9 @@ public class GideonToolInHandTickProcedure {
 			}
 			if (entity.getPersistentData().getBoolean("gideon") == true) {
 				{
-					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack / 1.5;
+					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost / 1.5;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.ManaAttack = _setval;
+						capability.ManaAttack_boost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

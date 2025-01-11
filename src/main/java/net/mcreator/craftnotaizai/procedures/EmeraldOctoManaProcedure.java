@@ -37,9 +37,9 @@ public class EmeraldOctoManaProcedure {
 				});
 			}
 			{
-				double _setval = 0;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.EmeraldOcto = _setval;
+					capability.spirit_boost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

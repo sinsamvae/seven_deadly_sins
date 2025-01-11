@@ -11,15 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "black.png",
-          "use1Xscale": true,
-          "x": -45,
-          "y": -43
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_1",
@@ -110,13 +101,13 @@
         "data": {
           "name": "label_welcome_demon_i_shall_share_bit",
           "text": {
-            "fixedValue": "As the ruler of the Demon Clan and"
+            "fixedValue": "I will give you a small portion of my power"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 193,
+          "x": 180,
           "y": 55
         }
       },
@@ -125,14 +116,14 @@
         "data": {
           "name": "label_of_my_power",
           "text": {
-            "fixedValue": "the most powerful Demon,"
+            "fixedValue": "as the ruler of the demon clan"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 192,
-          "y": 67
+          "x": 180,
+          "y": 69
         }
       },
       {
@@ -140,29 +131,14 @@
         "data": {
           "name": "label_i_shall_give_you_bit_of_my_power",
           "text": {
-            "fixedValue": "I shall give"
+            "fixedValue": "and the most powerful demon."
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 319,
-          "y": 67
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_you_bit_of_my_power",
-          "text": {
-            "fixedValue": "you bit of my power"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 193,
-          "y": 79
+          "x": 180,
+          "y": 83
         }
       },
       {

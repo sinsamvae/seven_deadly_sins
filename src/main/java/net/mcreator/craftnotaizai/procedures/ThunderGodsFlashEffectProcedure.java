@@ -7,6 +7,8 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 
@@ -20,20 +22,21 @@ public class ThunderGodsFlashEffectProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ThunderGodsFlash == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ThunderGodsFlash) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.LIGHTNING_2.get()), x, y, z, 5, 1, 2, 1, 0.1);
+				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.LIGHTNING_2.get()), (entity.getX() + Mth.nextDouble(RandomSource.create(), -1, 1)), (entity.getY() + Mth.nextDouble(RandomSource.create(), -1, 1)),
+						(entity.getZ() + Mth.nextDouble(RandomSource.create(), -1, 1)), 5, 1, 2, 1, 0.1);
 		}
 	}
 }

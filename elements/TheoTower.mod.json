@@ -15,7 +15,7 @@
         "data": {
           "name": "label_tower_of_trail",
           "text": {
-            "fixedValue": "Tower Of Trail"
+            "fixedValue": "Tower of Trails"
           },
           "color": {
             "value": -1,
@@ -30,7 +30,7 @@
         "data": {
           "name": "label_will_increase_youre_magical_sta",
           "text": {
-            "fixedValue": "Will increase you're magical stats"
+            "fixedValue": "will increase your magical stats,"
           },
           "color": {
             "value": -1,
@@ -45,7 +45,7 @@
         "data": {
           "name": "label_max_mana_mana_damage",
           "text": {
-            "fixedValue": "max mana & mana damage"
+            "fixedValue": "maxmana, and mana damage."
           },
           "color": {
             "value": -1,
@@ -81,15 +81,6 @@
           },
           "x": 209,
           "y": 146
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "black.png",
-          "use1Xscale": false,
-          "x": -618,
-          "y": -412
         }
       }
     ],

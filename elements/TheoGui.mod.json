@@ -11,20 +11,11 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "black.png",
-          "use1Xscale": false,
-          "x": -628,
-          "y": -445
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_welcome_to_istar",
           "text": {
-            "fixedValue": "Welcome To Istar"
+            "fixedValue": "Welcome to Istar,"
           },
           "color": {
             "value": -1,
@@ -39,7 +30,7 @@
         "data": {
           "name": "label_here_you_can_train_youre_physic",
           "text": {
-            "fixedValue": "Here you can train you're"
+            "fixedValue": "where you can train your"
           },
           "color": {
             "value": -1,
@@ -54,7 +45,7 @@
         "data": {
           "name": "label_physical_and_magical_power",
           "text": {
-            "fixedValue": "physical and magical power"
+            "fixedValue": "physical and magical powers."
           },
           "color": {
             "value": -1,

@@ -75,9 +75,9 @@ public class GreatThunderOnKeyPressedProcedure {
 								});
 							}
 							{
-								double _setval = 1;
+								double _setval = 1.3;
 								entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.thundergodsflash = _setval;
+									capability.agility_boost = _setval;
 									capability.syncPlayerVariables(entity);
 								});
 							}
@@ -90,9 +90,9 @@ public class GreatThunderOnKeyPressedProcedure {
 								});
 							}
 							{
-								double _setval = 3;
+								double _setval = 1;
 								entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.thundergodsflash = _setval;
+									capability.agility_boost = _setval;
 									capability.syncPlayerVariables(entity);
 								});
 							}
