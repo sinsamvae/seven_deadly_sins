@@ -73,6 +73,7 @@ public class BlizzardAxelProcedure {
 										(entity.getPersistentData().getDouble("pX") + Math.sin(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")),
 										(entity.getPersistentData().getDouble("pY") + entity.getPersistentData().getDouble("height")),
 										(entity.getPersistentData().getDouble("pZ") + Math.cos(entity.getPersistentData().getDouble("rep")) * entity.getPersistentData().getDouble("distance")), 3, 0, 0, 0, 0);
+							BlizzardAxelDamageProcedure.execute(world, entity);
 						}
 					}
 				});

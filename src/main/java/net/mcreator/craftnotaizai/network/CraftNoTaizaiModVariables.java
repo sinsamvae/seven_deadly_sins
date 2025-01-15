@@ -280,6 +280,7 @@ public class CraftNoTaizaiModVariables {
 			clone.agility_boost = original.agility_boost;
 			clone.kill_earthcrawler = original.kill_earthcrawler;
 			clone.freeze_saber = original.freeze_saber;
+			clone.weapon_boost = original.weapon_boost;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -751,6 +752,7 @@ public class CraftNoTaizaiModVariables {
 		public double agility_boost = 0;
 		public double kill_earthcrawler = 0;
 		public boolean freeze_saber = false;
+		public double weapon_boost = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -955,6 +957,7 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("agility_boost", agility_boost);
 			nbt.putDouble("kill_earthcrawler", kill_earthcrawler);
 			nbt.putBoolean("freeze_saber", freeze_saber);
+			nbt.putDouble("weapon_boost", weapon_boost);
 			return nbt;
 		}
 
@@ -1162,6 +1165,7 @@ public class CraftNoTaizaiModVariables {
 			agility_boost = nbt.getDouble("agility_boost");
 			kill_earthcrawler = nbt.getDouble("kill_earthcrawler");
 			freeze_saber = nbt.getBoolean("freeze_saber");
+			weapon_boost = nbt.getDouble("weapon_boost");
 		}
 	}
 
@@ -1391,6 +1395,7 @@ public class CraftNoTaizaiModVariables {
 					variables.agility_boost = message.data.agility_boost;
 					variables.kill_earthcrawler = message.data.kill_earthcrawler;
 					variables.freeze_saber = message.data.freeze_saber;
+					variables.weapon_boost = message.data.weapon_boost;
 				}
 			});
 			context.setPacketHandled(true);

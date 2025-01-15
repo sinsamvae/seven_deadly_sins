@@ -13,7 +13,7 @@ import net.minecraft.commands.arguments.EntityAnchorArgument;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.RedDemonGeckolibEntity;
-import net.mcreator.craftnotaizai.entity.HellBlaze2Entity;
+import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class BlueDemonOnEntityTickUpdateProcedure {
@@ -41,7 +41,7 @@ public class BlueDemonOnEntityTickUpdateProcedure {
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new HellBlaze2Entity(CraftNoTaizaiModEntities.HELL_BLAZE_2.get(), level);
+									AbstractArrow entityToSpawn = new HellBlazeProjectileEntity(CraftNoTaizaiModEntities.HELL_BLAZE_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);

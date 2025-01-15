@@ -33,12 +33,17 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 			return;
 		double distance = 0;
 		double ran = 0;
+		double damage = 0;
 		if (!(null == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-			entity.getPersistentData().putDouble("ChainExplosion", (Math.ceil(
+			damage = Math.ceil(
 					0.45 * ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
-					+ 5));
+					+ 4;
+			damage = damage
+					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
+							/ 100;
+			entity.getPersistentData().putDouble("ChainExplosion", damage);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);

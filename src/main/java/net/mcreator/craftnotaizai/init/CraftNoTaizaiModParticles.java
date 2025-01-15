@@ -16,11 +16,13 @@ import net.mcreator.craftnotaizai.client.particle.Smoke2Particle;
 import net.mcreator.craftnotaizai.client.particle.RedParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.PurpleParticle;
 import net.mcreator.craftnotaizai.client.particle.PurpleFlameParticle;
+import net.mcreator.craftnotaizai.client.particle.PurgatoryFireParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.PunchEffectParticle;
 import net.mcreator.craftnotaizai.client.particle.PosionParticle;
 import net.mcreator.craftnotaizai.client.particle.PinkParticle;
 import net.mcreator.craftnotaizai.client.particle.PerfectshellparticleParticle;
 import net.mcreator.craftnotaizai.client.particle.ParticleArkParticle;
+import net.mcreator.craftnotaizai.client.particle.OminousNebulaParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.LightningParticle;
 import net.mcreator.craftnotaizai.client.particle.Lightning2Particle;
 import net.mcreator.craftnotaizai.client.particle.KillerbregParticlesParticle;
@@ -102,5 +104,7 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.HELL_GATE_PARTICLES.get(), HellGateParticlesParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.LIGHTNING_2.get(), Lightning2Particle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get(), BreakerOffParticleParticle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.OMINOUS_NEBULA_PARTICLE.get(), OminousNebulaParticleParticle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PURGATORY_FIRE_PARTICLES.get(), PurgatoryFireParticlesParticle::provider);
 	}
 }

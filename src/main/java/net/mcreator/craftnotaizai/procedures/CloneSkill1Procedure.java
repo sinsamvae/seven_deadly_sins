@@ -41,7 +41,7 @@ import net.mcreator.craftnotaizai.entity.KillSwitchProjectileEntity;
 import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
 import net.mcreator.craftnotaizai.entity.JethammerProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
-import net.mcreator.craftnotaizai.entity.HellBlaze2Entity;
+import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FinalProminenceEntity;
 import net.mcreator.craftnotaizai.entity.FakeBallProjectileEntity;
 import net.mcreator.craftnotaizai.entity.ExterminateRayProjectileEntity;
@@ -396,7 +396,7 @@ public class CloneSkill1Procedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new HellBlaze2Entity(CraftNoTaizaiModEntities.HELL_BLAZE_2.get(), level);
+							AbstractArrow entityToSpawn = new HellBlazeProjectileEntity(CraftNoTaizaiModEntities.HELL_BLAZE_PROJECTILE.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);

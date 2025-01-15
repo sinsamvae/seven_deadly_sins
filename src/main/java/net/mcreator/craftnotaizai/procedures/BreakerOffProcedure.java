@@ -8,9 +8,7 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 
@@ -35,12 +33,10 @@ public class BreakerOffProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BreakerOff == true) {
-			if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) {
-				entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get()), x, (y + entity.getEyeHeight()), z, 5, 3, 3, 3, 0.1);
-			}
+		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BreakerOff) {
+			entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get()), x, (y + entity.getEyeHeight()), z, 5, 3, 3, 3, 0.1);
 		}
 	}
 }

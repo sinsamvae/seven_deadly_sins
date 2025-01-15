@@ -17,9 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.entity.ZaneriEntity;
-import net.mcreator.craftnotaizai.entity.Windshot3Entity;
 import net.mcreator.craftnotaizai.entity.WindShotProjectileEntity;
-import net.mcreator.craftnotaizai.entity.WindShot2Entity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WhirlShockProjectileEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
@@ -60,8 +58,6 @@ import net.mcreator.craftnotaizai.entity.PollenGardenEntity;
 import net.mcreator.craftnotaizai.entity.PhysicalCloneEntity;
 import net.mcreator.craftnotaizai.entity.ParadaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.PainEditionEntity;
-import net.mcreator.craftnotaizai.entity.PainEdition3Entity;
-import net.mcreator.craftnotaizai.entity.PainEdition2Entity;
 import net.mcreator.craftnotaizai.entity.OminousNebulaEnitiyEntity;
 import net.mcreator.craftnotaizai.entity.NoroiNoKoeEntity;
 import net.mcreator.craftnotaizai.entity.MutilatorRabbitsEntity;
@@ -102,7 +98,6 @@ import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellGateRedDemonsEntity;
 import net.mcreator.craftnotaizai.entity.HellFireBirdEntity;
 import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
-import net.mcreator.craftnotaizai.entity.HellBlaze2Entity;
 import net.mcreator.craftnotaizai.entity.HelbremAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HawksEntity;
 import net.mcreator.craftnotaizai.entity.GustafAnimatedEntity;
@@ -175,7 +170,6 @@ import net.mcreator.craftnotaizai.entity.CocoonOfDarknessEntity;
 import net.mcreator.craftnotaizai.entity.CloverEntity;
 import net.mcreator.craftnotaizai.entity.ClayDragonEntity;
 import net.mcreator.craftnotaizai.entity.ChickenEntity;
-import net.mcreator.craftnotaizai.entity.ChatifolshotEntity;
 import net.mcreator.craftnotaizai.entity.ChastiefolTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.ChainExplosionV2Entity;
 import net.mcreator.craftnotaizai.entity.CannonEntityEntity;
@@ -340,8 +334,6 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<NoroiNoKoeEntity>of(NoroiNoKoeEntity::new, MobCategory.MISC).setCustomClientFactory(NoroiNoKoeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DespairVenomEntity>> DESPAIR_VENOM = register("despair_venom",
 			EntityType.Builder.<DespairVenomEntity>of(DespairVenomEntity::new, MobCategory.MISC).setCustomClientFactory(DespairVenomEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<ChatifolshotEntity>> CHATIFOLSHOT = register("chatifolshot",
-			EntityType.Builder.<ChatifolshotEntity>of(ChatifolshotEntity::new, MobCategory.MISC).setCustomClientFactory(ChatifolshotEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<CrazyProminenceEntity>> CRAZY_PROMINENCE = register("crazy_prominence", EntityType.Builder.<CrazyProminenceEntity>of(CrazyProminenceEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(CrazyProminenceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FightingAreaEntity>> FIGHTING_AREA = register("fighting_area", EntityType.Builder.<FightingAreaEntity>of(FightingAreaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
@@ -368,10 +360,6 @@ public class CraftNoTaizaiModEntities {
 					.sized(2.1f, 2.9f));
 	public static final RegistryObject<EntityType<WindShotProjectileEntity>> WIND_SHOT_PROJECTILE = register("wind_shot_projectile", EntityType.Builder.<WindShotProjectileEntity>of(WindShotProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(WindShotProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<WindShot2Entity>> WIND_SHOT_2 = register("wind_shot_2",
-			EntityType.Builder.<WindShot2Entity>of(WindShot2Entity::new, MobCategory.MISC).setCustomClientFactory(WindShot2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<Windshot3Entity>> WINDSHOT_3 = register("windshot_3",
-			EntityType.Builder.<Windshot3Entity>of(Windshot3Entity::new, MobCategory.MISC).setCustomClientFactory(Windshot3Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AuraBurstEntity>> AURA_BURST = register("aura_burst",
 			EntityType.Builder.<AuraBurstEntity>of(AuraBurstEntity::new, MobCategory.MISC).setCustomClientFactory(AuraBurstEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BulletSquallEntity>> BULLET_SQUALL = register("bullet_squall", EntityType.Builder.<BulletSquallEntity>of(BulletSquallEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
@@ -422,10 +410,6 @@ public class CraftNoTaizaiModEntities {
 					.sized(1f, 3f));
 	public static final RegistryObject<EntityType<PainEditionEntity>> PAIN_EDITION = register("pain_edition",
 			EntityType.Builder.<PainEditionEntity>of(PainEditionEntity::new, MobCategory.MISC).setCustomClientFactory(PainEditionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<PainEdition2Entity>> PAIN_EDITION_2 = register("pain_edition_2",
-			EntityType.Builder.<PainEdition2Entity>of(PainEdition2Entity::new, MobCategory.MISC).setCustomClientFactory(PainEdition2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<PainEdition3Entity>> PAIN_EDITION_3 = register("pain_edition_3",
-			EntityType.Builder.<PainEdition3Entity>of(PainEdition3Entity::new, MobCategory.MISC).setCustomClientFactory(PainEdition3Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ArrowShotProjectileEntity>> ARROW_SHOT_PROJECTILE = register("arrow_shot_projectile", EntityType.Builder.<ArrowShotProjectileEntity>of(ArrowShotProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(ArrowShotProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PhysicalCloneEntity>> PHYSICAL_CLONE = register("physical_clone",
@@ -444,8 +428,6 @@ public class CraftNoTaizaiModEntities {
 	public static final RegistryObject<EntityType<GuardianTrueSpirtSpearEntity>> GUARDIAN_TRUE_SPIRT_SPEAR = register("guardian_true_spirt_spear",
 			EntityType.Builder.<GuardianTrueSpirtSpearEntity>of(GuardianTrueSpirtSpearEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(GuardianTrueSpirtSpearEntity::new).fireImmune().sized(2f, 5f));
-	public static final RegistryObject<EntityType<HellBlaze2Entity>> HELL_BLAZE_2 = register("hell_blaze_2",
-			EntityType.Builder.<HellBlaze2Entity>of(HellBlaze2Entity::new, MobCategory.MISC).setCustomClientFactory(HellBlaze2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<LetThereBeLightEntity>> LET_THERE_BE_LIGHT = register("let_there_be_light", EntityType.Builder.<LetThereBeLightEntity>of(LetThereBeLightEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(LetThereBeLightEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<InfernoIncantationEntity>> INFERNO_INCANTATION = register("inferno_incantation", EntityType.Builder.<InfernoIncantationEntity>of(InfernoIncantationEntity::new, MobCategory.MISC)

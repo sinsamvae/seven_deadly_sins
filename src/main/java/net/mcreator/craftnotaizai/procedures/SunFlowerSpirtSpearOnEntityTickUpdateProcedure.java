@@ -33,11 +33,19 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double damage = 0;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entity.getX()), (entity.getY()), (entity.getZ()), 10, 15, 15, 15, 0);
 		if (!(null == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-			entity.getPersistentData().putDouble("sunflowerspear",
-					(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack));
+			damage = Math.ceil(
+					0.45 * ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
+					+ 3;
+			damage = damage
+					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
+							/ 100;
+			entity.getPersistentData().putDouble("sunflowerspear", damage);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -66,7 +74,7 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 				}.checkGamemode(entityiterator) || (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
 						|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || entityiterator instanceof SunFlowerTrueSpirtSpearEntity)) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-							(float) (Math.ceil(0.45 * entity.getPersistentData().getDouble("sunflowerspear")) + 3));
+							(float) entity.getPersistentData().getDouble("sunflowerspear"));
 					{
 						Entity _ent = entityiterator;
 						_ent.setYRot((float) (entityiterator.getYRot() + Mth.nextInt(RandomSource.create(), -3, 3)));

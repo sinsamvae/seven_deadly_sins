@@ -26,6 +26,5 @@ public class UseMagicPressed3Procedure {
 		FullSizeKeybindProcedure.execute(entity);
 		CriticalOverKeybindProcedure.execute(world, x, y, z, entity);
 		TrueSpirtSpearKeybindProcedure.execute(entity);
-		HellBlazeKeybindProcedure.execute(world, x, y, z, entity);
 	}
 }

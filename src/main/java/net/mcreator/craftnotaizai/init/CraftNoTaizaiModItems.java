@@ -53,7 +53,6 @@ import net.mcreator.craftnotaizai.item.ReaperScytheItem;
 import net.mcreator.craftnotaizai.item.ReRollMagicItem;
 import net.mcreator.craftnotaizai.item.RapierItem;
 import net.mcreator.craftnotaizai.item.RankItem;
-import net.mcreator.craftnotaizai.item.PurgatoryVenomItem;
 import net.mcreator.craftnotaizai.item.PigIconItem;
 import net.mcreator.craftnotaizai.item.PerfectCubeOrbItem;
 import net.mcreator.craftnotaizai.item.PeaceAmuletItem;
@@ -81,7 +80,6 @@ import net.mcreator.craftnotaizai.item.LizSneathSwordItem;
 import net.mcreator.craftnotaizai.item.KnightarmorItem;
 import net.mcreator.craftnotaizai.item.KingsArmorItem;
 import net.mcreator.craftnotaizai.item.KingOutfitItem;
-import net.mcreator.craftnotaizai.item.KillSwitchItem;
 import net.mcreator.craftnotaizai.item.KatanaItem;
 import net.mcreator.craftnotaizai.item.JillianArmorItem;
 import net.mcreator.craftnotaizai.item.JerichoarmorItem;
@@ -125,9 +123,8 @@ import net.mcreator.craftnotaizai.item.FragmentOfEternalDarkness2Item;
 import net.mcreator.craftnotaizai.item.FoxIconItem;
 import net.mcreator.craftnotaizai.item.FountainOfYouthItem;
 import net.mcreator.craftnotaizai.item.FlyingSaucerItem;
-import net.mcreator.craftnotaizai.item.FakeBallItem;
 import net.mcreator.craftnotaizai.item.FairyHelbramArmorItem;
-import net.mcreator.craftnotaizai.item.ExterminateRayItem;
+import net.mcreator.craftnotaizai.item.EscanorTavernItem;
 import net.mcreator.craftnotaizai.item.EscanorArmorItem;
 import net.mcreator.craftnotaizai.item.EmptyorbItem;
 import net.mcreator.craftnotaizai.item.EmptyNeedleItem;
@@ -273,10 +270,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> BAR_DOOR = doubleBlock(CraftNoTaizaiModBlocks.BAR_DOOR);
 	public static final RegistryObject<Item> HAY_BALE_ROOF = block(CraftNoTaizaiModBlocks.HAY_BALE_ROOF);
 	public static final RegistryObject<Item> AREA_GROUND = block(CraftNoTaizaiModBlocks.AREA_GROUND);
-	public static final RegistryObject<Item> FAKE_BALL = REGISTRY.register("fake_ball", () -> new FakeBallItem());
-	public static final RegistryObject<Item> EXTERMINATE_RAY = REGISTRY.register("exterminate_ray", () -> new ExterminateRayItem());
-	public static final RegistryObject<Item> PURGATORY_VENOM = REGISTRY.register("purgatory_venom", () -> new PurgatoryVenomItem());
-	public static final RegistryObject<Item> KILL_SWITCH = REGISTRY.register("kill_switch", () -> new KillSwitchItem());
 	public static final RegistryObject<Item> AREAWOOD = block(CraftNoTaizaiModBlocks.AREAWOOD);
 	public static final RegistryObject<Item> AREAFENCE = block(CraftNoTaizaiModBlocks.AREAFENCE);
 	public static final RegistryObject<Item> AREA_SLAB = block(CraftNoTaizaiModBlocks.AREA_SLAB);
@@ -605,6 +598,9 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> STAFF_OF_IMPRISONMENT = REGISTRY.register("staff_of_imprisonment", () -> new StaffOfImprisonmentItem());
 	public static final RegistryObject<Item> DUBS_SPAWN_EGG = REGISTRY.register("dubs_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DUBS, -6170673, -3565712, new Item.Properties()));
 	public static final RegistryObject<Item> BLUE_DEMON_SPAWN_EGG = REGISTRY.register("blue_demon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.BLUE_DEMON, -10579532, -9095101, new Item.Properties()));
+	public static final RegistryObject<Item> ESCANOR_TAVERN_HELMET = REGISTRY.register("escanor_tavern_helmet", () -> new EscanorTavernItem.Helmet());
+	public static final RegistryObject<Item> ESCANOR_TAVERN_CHESTPLATE = REGISTRY.register("escanor_tavern_chestplate", () -> new EscanorTavernItem.Chestplate());
+	public static final RegistryObject<Item> ESCANOR_TAVERN_LEGGINGS = REGISTRY.register("escanor_tavern_leggings", () -> new EscanorTavernItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -156,6 +156,9 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.BAN_ARMOR_S_2_HELMET.get());
 				tabData.accept(CraftNoTaizaiModItems.BAN_ARMOR_S_2_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.BAN_ARMOR_S_2_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_HELMET.get());
+				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_LEGGINGS.get());
 			})
 
 					.build());

@@ -82,7 +82,6 @@ import net.mcreator.craftnotaizai.client.renderer.HellblazeOmegaProjectileRender
 import net.mcreator.craftnotaizai.client.renderer.HellGateRedDemonsRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HellFireBirdRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HellBlazeProjectileRenderer;
-import net.mcreator.craftnotaizai.client.renderer.HellBlaze2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.HelbremAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.HawksRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GustafAnimatedRenderer;
@@ -152,7 +151,6 @@ import net.mcreator.craftnotaizai.client.renderer.CocoonOfDarknessRenderer;
 import net.mcreator.craftnotaizai.client.renderer.CloverRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ClayDragonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChickenRenderer;
-import net.mcreator.craftnotaizai.client.renderer.ChatifolshotRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChastiefolTrueSpirtSpearRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChainExplosionV2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.CannonEntityRenderer;
@@ -230,7 +228,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FROZEN_BREATH.get(), FrozenBreathRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.NOROI_NO_KOE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DESPAIR_VENOM.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.CHATIFOLSHOT.get(), ChatifolshotRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CRAZY_PROMINENCE.get(), CrazyProminenceRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FIGHTING_AREA.get(), FightingAreaRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FINAL_PROMINENCE.get(), FinalProminenceRenderer::new);
@@ -240,8 +237,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ANGLE_CURE.get(), AngleCureRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DUSK_BISON_1.get(), DuskBison1Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.WIND_SHOT_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.WIND_SHOT_2.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.WINDSHOT_3.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.AURA_BURST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BULLET_SQUALL.get(), BulletSquallRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.JERICHO_DEMON_FORM.get(), JerichoDemonFormRenderer::new);
@@ -258,8 +253,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DEAD_END.get(), DeadEndRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.EARTH_GOLEM.get(), EarthGolemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.PAIN_EDITION.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.PAIN_EDITION_2.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.PAIN_EDITION_3.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ARROW_SHOT_PROJECTILE.get(), ArrowShotProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.PHYSICAL_CLONE.get(), PhysicalCloneRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HELL_FIRE_BIRD.get(), HellFireBirdRenderer::new);
@@ -267,7 +260,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.BUSTER_ICE.get(), BusterIceRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CHASTIEFOL_TRUE_SPIRT_SPEAR.get(), ChastiefolTrueSpirtSpearRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GUARDIAN_TRUE_SPIRT_SPEAR.get(), GuardianTrueSpirtSpearRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.HELL_BLAZE_2.get(), HellBlaze2Renderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.LET_THERE_BE_LIGHT.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.INFERNO_INCANTATION.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TWIGO_ANIMATED.get(), TwigoAnimatedRenderer::new);

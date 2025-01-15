@@ -1,51 +1,60 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.BlackOutProjectileEntity;
-import net.mcreator.craftnotaizai.entity.BlackOutEntity;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
-import java.util.List;
-import java.util.Comparator;
-
 public class BlackOutSkillProcedure {
-	public static void execute(LevelAccessor world, double y, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double x = 0;
 		double z = 0;
 		double yaw = 0;
+		double damage = 0;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.TWIN_BOW_HERRITT.get()
 				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.TWIN_BOW_HERRITT.get()) {
+			damage = Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+					* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 5;
+			damage = damage + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100;
+			if (world.dayTime() % 24000 >= 23000 && world.dayTime() % 24000 <= 23460) {
+				damage = damage * 1;
+			} else if (world.dayTime() % 24000 >= 23460 && world.dayTime() % 24000 <= 23992) {
+				damage = damage * 3;
+			} else if (world.dayTime() % 24000 >= 23992 && world.dayTime() % 24000 <= 0) {
+				damage = damage * 10;
+			} else if (world.dayTime() % 24000 >= 0 && world.dayTime() % 24000 <= 1000) {
+				damage = damage * 13.5;
+			} else if (world.dayTime() % 24000 >= 1000 && world.dayTime() % 24000 <= 5723) {
+				damage = damage * 15;
+			} else if (world.dayTime() % 24000 >= 5723 && world.dayTime() % 24000 <= 11834) {
+				damage = damage * 20;
+			} else if (world.dayTime() % 24000 >= 11834 && world.dayTime() % 24000 <= 12040) {
+				damage = damage / 3;
+			} else if (world.dayTime() % 24000 >= 12040 && world.dayTime() % 24000 <= 12786) {
+				damage = damage / 10;
+			} else if (world.dayTime() % 24000 >= 12786 && world.dayTime() % 24000 <= 13188) {
+				damage = damage / 13.5;
+			} else if (world.dayTime() % 24000 >= 13188 && world.dayTime() % 24000 <= 17843) {
+				damage = damage / 15;
+			} else if (world.dayTime() % 24000 >= 18000 && world.dayTime() % 24000 <= 23000) {
+				damage = damage / 20;
+			}
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
@@ -59,12 +68,15 @@ public class BlackOutSkillProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
-							* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 5), 1);
+					}.getArrow(projectileLevel, entity, (float) damage, 1);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 			}
 		} else {
 			if (entity.onGround()) {
@@ -79,41 +91,7 @@ public class BlackOutSkillProcedure {
 					}
 				}
 				CraftNoTaizaiMod.queueServerWork(6, () -> {
-					{
-						final Vec3 _center = new Vec3((entity.getX()), y, (entity.getZ()));
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
-							if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
-									|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
-									|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
-										public boolean checkGamemode(Entity _ent) {
-											if (_ent instanceof ServerPlayer _serverPlayer) {
-												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-											}
-											return false;
-										}
-									}.checkGamemode(entityiterator) || new Object() {
-										public boolean checkGamemode(Entity _ent) {
-											if (_ent instanceof ServerPlayer _serverPlayer) {
-												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
-											}
-											return false;
-										}
-									}.checkGamemode(entityiterator) || entityiterator instanceof BlackOutEntity)) {
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.BLACK_OUT_EFFECT.get(), 1200, 1, false, false));
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-										(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
-												* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 5));
-							}
-						}
-					}
+					BlackOutDamageProcedure.execute(world, entity);
 				});
 			} else {
 				if (entity instanceof Player _player && !_player.level().isClientSide())

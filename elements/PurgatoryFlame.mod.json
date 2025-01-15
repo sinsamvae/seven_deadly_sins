@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "purgatory flame",
-    "icon": "air.png",
+    "icon": "air",
     "color": {
       "value": -1,
       "falpha": 0.0
@@ -11,6 +11,9 @@
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "PurgatoryFlameOnEffectActiveTick"
+    }
   }
 }

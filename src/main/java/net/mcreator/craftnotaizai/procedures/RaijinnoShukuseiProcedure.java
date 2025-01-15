@@ -20,6 +20,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
@@ -30,7 +31,6 @@ import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.LightningbeastProjectileEntity;
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.List;
 import java.util.Comparator;
@@ -39,6 +39,10 @@ public class RaijinnoShukuseiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double damage = 0;
+		damage = Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 3;
+		damage = damage + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.LIGHTNING.get()), x, y, z, 5, 0.1, 2, 0.1, 1);
 		if (world instanceof ServerLevel _level)
@@ -71,8 +75,7 @@ public class RaijinnoShukuseiProcedure {
 							}
 						}.checkGamemode(entityiterator))) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:lightning_magic")))),
-							(float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
-									* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 3));
+							(float) damage);
 					entity.setDeltaMovement(new Vec3((4.5 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (4.5 * entity.getLookAngle().z)));
 					if (world instanceof ServerLevel _level) {
 						LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
@@ -95,27 +98,28 @@ public class RaijinnoShukuseiProcedure {
 				}
 			}
 		}
-		CraftNoTaizaiMod.queueServerWork(20, () -> {
-			{
-				Entity _shootFrom = entity;
-				Level projectileLevel = _shootFrom.level();
-				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new LightningbeastProjectileEntity(CraftNoTaizaiModEntities.LIGHTNINGBEAST_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) (Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
-							* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 5), 1);
-					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
+		{
+			Entity _shootFrom = entity;
+			Level projectileLevel = _shootFrom.level();
+			if (!projectileLevel.isClientSide()) {
+				Projectile _entityToSpawn = new Object() {
+					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+						AbstractArrow entityToSpawn = new LightningbeastProjectileEntity(CraftNoTaizaiModEntities.LIGHTNINGBEAST_PROJECTILE.get(), level);
+						entityToSpawn.setOwner(shooter);
+						entityToSpawn.setBaseDamage(damage);
+						entityToSpawn.setKnockback(knockback);
+						entityToSpawn.setSilent(true);
+						return entityToSpawn;
+					}
+				}.getArrow(projectileLevel, entity, (float) damage, 1);
+				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 5, 0);
+				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
-		});
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
+		}
 	}
 }
