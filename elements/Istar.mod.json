@@ -7,9 +7,9 @@
         "value": "CUSTOM:IstarBiome"
       }
     ],
-    "worldGenType": "Normal world gen",
+    "worldGenType": "End like gen",
     "mainFillerBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "Blocks.AIR"
     },
     "fluidBlock": {
       "value": "Blocks.AIR"

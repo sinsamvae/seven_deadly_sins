@@ -9,10 +9,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
+import net.mcreator.craftnotaizai.procedures.ReaperScytheToolInInventoryTickProcedure;
 import net.mcreator.craftnotaizai.procedures.ReaperScytheRightclickedProcedure;
 
 import java.util.List;
@@ -56,6 +58,12 @@ public class ReaperScytheItem extends AxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A7RightClick Summon"));
+		list.add(Component.literal("\u00A7cRightClick Summon"));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		ReaperScytheToolInInventoryTickProcedure.execute(world);
 	}
 }

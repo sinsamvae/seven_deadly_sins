@@ -1,9 +1,13 @@
 
 package net.mcreator.craftnotaizai.world.inventory;
 
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,12 +20,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftnotaizai.procedures.SetPriceProcedure;
+import net.mcreator.craftnotaizai.procedures.SetTradesProcedure;
+import net.mcreator.craftnotaizai.procedures.CloverTradingThisGUIIsClosedProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMenus;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
+import net.mcreator.craftnotaizai.client.gui.CloverTradingScreen;
+import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -79,6 +87,14 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 					});
 			}
 		}
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, -70, -47) {
+			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return CraftNoTaizaiModItems.BRITANNIA_COINS.get() == stack.getItem();
+			}
+		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 50, -47) {
 			private final int slot = 1;
 
@@ -88,16 +104,8 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 			}
 
 			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
-		}));
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, -70, -47) {
-			private final int slot = 0;
-
-			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return CraftNoTaizaiModItems.BRITANNIA_COINS.get() == stack.getItem();
+				return false;
 			}
 		}));
 		for (int si = 0; si < 3; ++si)
@@ -105,7 +113,6 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, -88 + 8 + sj * 18, -83 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, -88 + 8 + si * 18, -83 + 142));
-		SetPriceProcedure.execute(entity);
 	}
 
 	@Override
@@ -232,12 +239,13 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		if (this.world != null && this.world.isClientSide) {
+			textBoxStart();
+		}
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
 					if (j == 1)
-						continue;
-					if (j == 0)
 						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
@@ -245,15 +253,105 @@ public class CloverTradingMenu extends AbstractContainerMenu implements Supplier
 				for (int i = 0; i < internal.getSlots(); ++i) {
 					if (i == 1)
 						continue;
-					if (i == 0)
-						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}
 		}
 	}
 
+	public void textBoxStart() {
+		CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new CloverTradingOtherMessage(1, x, y, z, CloverTradingScreen.getTextboxValues()));
+		CloverTradingOtherMessage.handleOtherAction(entity, 1, x, y, z, CloverTradingScreen.getTextboxValues());
+	}
+
 	public Map<Integer, Slot> get() {
 		return customSlots;
+	}
+
+	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+	public static class CloverTradingOtherMessage {
+		private final int mode, x, y, z;
+		private HashMap<String, String> textstate;
+
+		public CloverTradingOtherMessage(FriendlyByteBuf buffer) {
+			this.mode = buffer.readInt();
+			this.x = buffer.readInt();
+			this.y = buffer.readInt();
+			this.z = buffer.readInt();
+			this.textstate = readTextState(buffer);
+		}
+
+		public CloverTradingOtherMessage(int mode, int x, int y, int z, HashMap<String, String> textstate) {
+			this.mode = mode;
+			this.x = x;
+			this.y = y;
+			this.z = z;
+			this.textstate = textstate;
+		}
+
+		public static void buffer(CloverTradingOtherMessage message, FriendlyByteBuf buffer) {
+			buffer.writeInt(message.mode);
+			buffer.writeInt(message.x);
+			buffer.writeInt(message.y);
+			buffer.writeInt(message.z);
+			writeTextState(message.textstate, buffer);
+		}
+
+		public static void handler(CloverTradingOtherMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+			NetworkEvent.Context context = contextSupplier.get();
+			context.enqueueWork(() -> {
+				Player entity = context.getSender();
+				int mode = message.mode;
+				int x = message.x;
+				int y = message.y;
+				int z = message.z;
+				HashMap<String, String> textstate = message.textstate;
+				handleOtherAction(entity, mode, x, y, z, textstate);
+			});
+			context.setPacketHandled(true);
+		}
+
+		public static void handleOtherAction(Player entity, int mode, int x, int y, int z, HashMap<String, String> textstate) {
+			Level world = entity.level();
+			HashMap guistate = CloverTradingMenu.guistate;
+			for (Map.Entry<String, String> entry : textstate.entrySet()) {
+				String key = entry.getKey();
+				String value = entry.getValue();
+				guistate.put(key, value);
+			}
+			// security measure to prevent arbitrary chunk generation
+			if (!world.hasChunkAt(new BlockPos(x, y, z)))
+				return;
+			if (mode == 0) {
+				SetTradesProcedure.execute(world, entity);
+			}
+			if (mode == 1) {
+				CloverTradingThisGUIIsClosedProcedure.execute(entity);
+			}
+		}
+
+		@SubscribeEvent
+		public static void registerMessage(FMLCommonSetupEvent event) {
+			CraftNoTaizaiMod.addNetworkMessage(CloverTradingOtherMessage.class, CloverTradingOtherMessage::buffer, CloverTradingOtherMessage::new, CloverTradingOtherMessage::handler);
+		}
+
+		public static void writeTextState(HashMap<String, String> map, FriendlyByteBuf buffer) {
+			buffer.writeInt(map.size());
+			for (Map.Entry<String, String> entry : map.entrySet()) {
+				buffer.writeComponent(Component.literal(entry.getKey()));
+				buffer.writeComponent(Component.literal(entry.getValue()));
+			}
+		}
+
+		public static HashMap<String, String> readTextState(FriendlyByteBuf buffer) {
+			int size = buffer.readInt();
+			HashMap<String, String> map = new HashMap<>();
+			for (int i = 0; i < size; i++) {
+				String key = buffer.readComponent().getString();
+				String value = buffer.readComponent().getString();
+				map.put(key, value);
+			}
+			return map;
+		}
 	}
 }

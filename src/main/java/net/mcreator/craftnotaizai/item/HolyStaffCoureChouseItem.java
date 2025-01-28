@@ -124,7 +124,7 @@ public class HolyStaffCoureChouseItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("RightClick Use Super Concentration"));
+		list.add(Component.literal("\u00A7cRightClick Use Super Concentration"));
 	}
 
 	@Override

@@ -2,10 +2,10 @@
   "_fv": 66,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Defeat Gloxina",
-    "achievementDescription": "Defeat Gloxina",
+    "achievementName": "Defeat 10 Commandment",
+    "achievementDescription": "Defeat Commandment Of Repose",
     "achievementIcon": {
-      "value": "CUSTOM:DragonIcon"
+      "value": "CUSTOM:ReposeIcon"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -18,7 +18,7 @@
     "rewardXP": 0,
     "achievementType": "challenge",
     "parent": {
-      "value": "CUSTOM:DefeatMerlin"
+      "value": "No parent: root"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
   }

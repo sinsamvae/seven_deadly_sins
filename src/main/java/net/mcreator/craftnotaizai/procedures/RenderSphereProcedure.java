@@ -9,10 +9,14 @@ import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -173,7 +177,7 @@ public class RenderSphereProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event);
+			execute(event, level, pos.x(), pos.y(), pos.z());
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -181,14 +185,45 @@ public class RenderSphereProcedure {
 		}
 	}
 
-	public static void execute() {
-		execute(null);
+	public static void execute(LevelAccessor world, double x, double y, double z) {
+		execute(null, world, x, y, z);
 	}
 
-	private static void execute(@Nullable Event event) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
 		double i = 0;
 		double j = 0;
 		double k = 0;
 		double l = 0;
+		if (world instanceof ClientLevel) {
+			for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
+				if (entityiterator instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CraftNoTaizaiModMobEffects.STAFF_OF_IMRISONMENT_EFFECT.get())) {
+					if (begin(VertexFormat.Mode.QUADS, false, false)) {
+						for (int index0 = 0; index0 < 90; index0++) {
+							for (int index1 = 0; index1 < 45; index1++) {
+								k = 255 - (j / 180) * 95;
+								l = 255 - ((j + 4) / 180) * 95;
+								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), 0.0F, 0.0F,
+										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), 0.0F, 0.0F,
+										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), 0.0F, 0.0F,
+										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), 0.0F, 0.0F,
+										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+								j = j + 4;
+							}
+							j = 0;
+							i = i + 4;
+						}
+						i = 0;
+						end();
+					}
+					if (target(1)) {
+						renderShape((shape()), x, y, z, 0, 0, 0, 5, 5, 5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+						release();
+					}
+				}
+			}
+		}
 	}
 }

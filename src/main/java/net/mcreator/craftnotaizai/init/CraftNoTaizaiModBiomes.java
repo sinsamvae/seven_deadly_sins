@@ -55,10 +55,10 @@ public class CraftNoTaizaiModBiomes {
 							Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.6f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "sleeping_forest")))));
 					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(0.5f, 1f), Climate.Parameter.span(0f, 0.4f),
 							Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.6f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "sleeping_forest")))));
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(0.5f, 1f), Climate.Parameter.span(0f, 0.6f),
-							Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.5f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "fairy_king_forest")))));
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(0.5f, 1f), Climate.Parameter.span(0f, 0.6f),
-							Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.5f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "fairy_king_forest")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(0.481f, 1.2f), Climate.Parameter.span(-0.4f, 0.6f),
+							Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.6f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "fairy_king_forest")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(-0.2f, 0.2f), Climate.Parameter.span(0.481f, 1.2f), Climate.Parameter.span(-0.4f, 0.6f),
+							Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.6f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("craft_no_taizai", "fairy_king_forest")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers
 							.memoize(() -> FeatureSorter.buildFeaturesPerStep(List.copyOf(chunkGenerator.biomeSource.possibleBiomes()), biome -> chunkGenerator.generationSettingsGetter.apply(biome).features(), true));

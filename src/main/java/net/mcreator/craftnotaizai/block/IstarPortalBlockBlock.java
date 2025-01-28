@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.IstarPortalBlockEntityCollidesInTheBlockProcedure;
@@ -18,6 +19,11 @@ import net.mcreator.craftnotaizai.procedures.IstarPortalBlockEntityCollidesInThe
 public class IstarPortalBlockBlock extends Block {
 	public IstarPortalBlockBlock() {
 		super(BlockBehaviour.Properties.of().air().sound(SoundType.EMPTY).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	}
+
+	@Override
+	public boolean skipRendering(BlockState state, BlockState adjacentBlockState, Direction side) {
+		return adjacentBlockState.getBlock() == this ? true : super.skipRendering(state, adjacentBlockState, side);
 	}
 
 	@Override

@@ -36,6 +36,9 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "LostvayneRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "LostvayneToolInInventoryTick"
     }
   }
 }

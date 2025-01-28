@@ -20,7 +20,7 @@ public class MantaOnEntityTickUpdateProcedure {
 			MoveZ = speed * Math.sin((Yaw + 90) * (Math.PI / 180));
 			entity.setDeltaMovement(new Vec3(MoveX, (entity.getXRot() * (-0.03)), MoveZ));
 		} else {
-			if (entity.isVehicle() && entity.getPersistentData().getBoolean("Montado") == false) {
+			if (entity.isVehicle() && !entity.getPersistentData().getBoolean("Montado")) {
 				speed = 0;
 				entity.setDeltaMovement(new Vec3(0, (entity.getPersistentData().getDouble("MoveY")), 0));
 			}

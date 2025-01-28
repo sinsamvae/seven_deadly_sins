@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "craft_no_taizai:diamond_rank"
+  "parent": "craft_no_taizai:sapphire"
 }

@@ -355,6 +355,17 @@ public class StoryvarProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story37")) {
+			{
+				String _setval = "Story38";
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Story = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		}
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story34")) {
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = CraftNoTaizaiModEntities.GALAND.get().spawn(_level,

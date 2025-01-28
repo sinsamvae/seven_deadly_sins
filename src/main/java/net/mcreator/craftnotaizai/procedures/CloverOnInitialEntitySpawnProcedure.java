@@ -11,7 +11,7 @@ public class CloverOnInitialEntitySpawnProcedure {
 			return;
 		double random = 0;
 		if (!world.isClientSide()) {
-			random = Mth.nextInt(RandomSource.create(), 1, 100);
+			random = Mth.nextInt(RandomSource.create(), 1, 165);
 			if (random <= 60) {
 				entity.getPersistentData().putDouble("NPCtrade", 1);
 			}

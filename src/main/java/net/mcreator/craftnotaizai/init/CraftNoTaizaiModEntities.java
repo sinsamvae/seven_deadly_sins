@@ -782,7 +782,7 @@ public class CraftNoTaizaiModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DubsEntity>> DUBS = register("dubs",
-			EntityType.Builder.<DubsEntity>of(DubsEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DubsEntity::new)
+			EntityType.Builder.<DubsEntity>of(DubsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DubsEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlueDemonEntity>> BLUE_DEMON = register("blue_demon",

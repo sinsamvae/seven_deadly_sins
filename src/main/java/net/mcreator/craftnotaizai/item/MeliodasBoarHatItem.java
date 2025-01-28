@@ -6,6 +6,7 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -51,7 +52,7 @@ public abstract class MeliodasBoarHatItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
+				return Ingredient.of(new ItemStack(Blocks.WHITE_WOOL), new ItemStack(Blocks.GREEN_WOOL), new ItemStack(Blocks.YELLOW_WOOL));
 			}
 
 			@Override

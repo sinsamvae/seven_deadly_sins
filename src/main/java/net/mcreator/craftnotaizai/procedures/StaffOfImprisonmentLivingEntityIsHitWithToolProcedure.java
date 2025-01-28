@@ -50,7 +50,7 @@ public class StaffOfImprisonmentLivingEntityIsHitWithToolProcedure {
 								}
 								return false;
 							}
-						}.checkGamemode(entityiterator)) && !(entity instanceof Player _plrCldCheck8 && _plrCldCheck8.getCooldowns().isOnCooldown(itemstack.getItem()))) {
+						}.checkGamemode(entityiterator))) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.STAFF_OF_IMRISONMENT_EFFECT.get(), 300, 1, false, false));
 					if (entity instanceof Player _player)

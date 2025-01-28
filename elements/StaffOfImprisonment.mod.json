@@ -10,7 +10,9 @@
     "blockingModelName": "Normal blocking",
     "name": "Staff Of Imprisonment",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§cRight Click Use Ability"
+      ]
     },
     "creativeTabs": [
       {
@@ -33,6 +35,9 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "StaffOfImprisonmentLivingEntityIsHitWithTool"
+    },
+    "onItemInInventoryTick": {
+      "name": "StaffOfImprisonmentToolInInventoryTick"
     }
   }
 }

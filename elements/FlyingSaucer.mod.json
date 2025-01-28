@@ -10,7 +10,9 @@
     "blockingModelName": "flying_saucer_block:default",
     "name": "Flying Saucer",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§cBlocking Has Chance Reflect DMG"
+      ]
     },
     "creativeTabs": [
       {
@@ -30,6 +32,9 @@
     "blockDropsTier": "WOOD",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "FlyingSaucerToolInInventoryTick"
+    }
   }
 }

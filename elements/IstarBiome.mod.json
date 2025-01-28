@@ -4,10 +4,10 @@
   "definition": {
     "name": "Istar Biome",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.AIR"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.AIR"
     },
     "underwaterBlock": {
       "value": ""

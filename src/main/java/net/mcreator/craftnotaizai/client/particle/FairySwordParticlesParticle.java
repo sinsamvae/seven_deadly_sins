@@ -48,9 +48,9 @@ public class FairySwordParticlesParticle extends TextureSheetParticle {
 				private ClientLevel world;
 				public EntityModel model = new ModelHelbram_Sword_Particles(Minecraft.getInstance().getEntityModels().bakeLayer(ModelHelbram_Sword_Particles.LAYER_LOCATION));
 				private float scale = (float) 1;
-				private int rotX = (int) 0;
-				private int rotY = (int) 0;
-				private int rotZ = (int) 0;
+				private int rotX = (int) 180;
+				private int rotY = (int) 180;
+				private int rotZ = (int) 180;
 
 				@SubscribeEvent
 				public void render(RenderLevelStageEvent event) {

@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "craft_no_taizai:defeat_merlin"
+  "parent": "craft_no_taizai:defeat_gowther"
 }

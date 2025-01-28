@@ -29,6 +29,8 @@ public class CreateGuildProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).guild_stack).getOrCreateTag()
+					.putString(("guild" + ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).guild_number + 1)), (entity.getDisplayName().getString()));
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Already In Guild"), false);

@@ -1,17 +1,12 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 public class IstarSetUpProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -20,6 +15,7 @@ public class IstarSetUpProcedure {
 		double xTP = 0;
 		double yTP = 0;
 		double zTP = 0;
+		double offset = 0;
 		xTP = 95;
 		yTP = 100;
 		zTP = 222;
@@ -32,16 +28,8 @@ public class IstarSetUpProcedure {
 			if (_ent instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.connection.teleport((entity.getPersistentData().getDouble("TPX")), (entity.getPersistentData().getDouble("TPY")), (entity.getPersistentData().getDouble("TPZ")), _ent.getYRot(), _ent.getXRot());
 		}
-		if (!CraftNoTaizaiModVariables.MapVariables.get(world).Istar) {
-			if (world instanceof ServerLevel _serverworld) {
-				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "istar_2"));
-				if (template != null) {
-					template.placeInWorld(_serverworld, BlockPos.containing(xTP - 124, yTP - 25, zTP - 250), BlockPos.containing(xTP - 124, yTP - 25, zTP - 250),
-							new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-				}
-			}
-			CraftNoTaizaiModVariables.MapVariables.get(world).Istar = true;
-			CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
-		}
+		if (world instanceof ServerLevel _level)
+			_level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(FeatureUtils.createKey("craft_no_taizai:istar_structure")).value().place(_level, _level.getChunkSource().getGenerator(), _level.getRandom(),
+					BlockPos.containing(xTP - 103, yTP - 23, zTP - 175));
 	}
 }

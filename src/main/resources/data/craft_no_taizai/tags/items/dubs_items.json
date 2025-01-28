@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:gil_thunder_sword",
+    "craft_no_taizai:curved_sword",
+    "craft_no_taizai:jericho_sword",
+    "craft_no_taizai:scythe",
+    "craft_no_taizai:saw_blade",
+    "minecraft:wooden_sword",
+    "minecraft:stone_sword",
+    "minecraft:iron_sword",
+    "minecraft:golden_sword",
+    "minecraft:diamond_sword",
+    "minecraft:netherite_sword",
+    "craft_no_taizai:twigosword",
+    "craft_no_taizai:golgius_sword"
+  ]
+}

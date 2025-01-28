@@ -35,15 +35,15 @@ public class MeliodasbossEntityDiesProcedure {
 								capability.syncPlayerVariables(entityiterator);
 							});
 						}
-						if (!(entityiterator instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
-								&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"))).isDone())) {
-							if (entityiterator instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"));
-								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-								if (!_ap.isDone()) {
-									for (String criteria : _ap.getRemainingCriteria())
-										_player.getAdvancements().award(_adv, criteria);
-								}
+					}
+					if (entityiterator instanceof Player && !(entityiterator instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
+							&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"))).isDone())) {
+						if (entityiterator instanceof ServerPlayer _player) {
+							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_meliodas"));
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
 							}
 						}
 					}

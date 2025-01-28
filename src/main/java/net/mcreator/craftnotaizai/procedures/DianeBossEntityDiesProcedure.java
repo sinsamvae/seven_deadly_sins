@@ -52,9 +52,20 @@ public class DianeBossEntityDiesProcedure {
 						}
 					}
 				}
+				if (entityiterator instanceof Player && !(entityiterator instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
+						&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_diane"))).isDone())) {
+					if (entityiterator instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_diane"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
+						}
+					}
+				}
 			}
 		}
-		if (CraftNoTaizaiModVariables.MapVariables.get(world).Gideon) {
+		if (!CraftNoTaizaiModVariables.MapVariables.get(world).Gideon) {
 			drop = Mth.nextInt(RandomSource.create(), 1, 100);
 			if (drop <= 15) {
 				if (world instanceof ServerLevel _level) {

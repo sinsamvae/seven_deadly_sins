@@ -68,7 +68,7 @@ public class PlayerFirstJoinsProcedure {
 				});
 			}
 			{
-				double _setval = Mth.nextInt(RandomSource.create(), 1, 100);
+				double _setval = Mth.nextInt(RandomSource.create(), 1, 10);
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.training_id = _setval;
 					capability.syncPlayerVariables(entity);

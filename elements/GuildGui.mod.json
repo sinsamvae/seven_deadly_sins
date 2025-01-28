@@ -31,71 +31,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 186,
-          "y": 41
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_guild_member",
-          "text": {
-            "fixedValue": "Members",
-            "name": "GuildMember"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 200,
-          "y": 72
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_members",
-          "text": {
-            "fixedValue": "Members"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 200,
-          "y": 60
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_guild_member_2",
-          "text": {
-            "fixedValue": "",
-            "name": "GuildMember2"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 200,
-          "y": 92
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_guild_member_3",
-          "text": {
-            "fixedValue": "",
-            "name": "GuildMember3"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 200,
-          "y": 113
+          "x": 195,
+          "y": 45
         }
       },
       {
@@ -123,8 +60,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 253,
-          "y": 19
+          "x": 250,
+          "y": 20
         }
       },
       {
@@ -140,38 +77,6 @@
           },
           "x": 290,
           "y": 20
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_guild_member_4",
-          "text": {
-            "fixedValue": "",
-            "name": "GuildMember4"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 200,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_guild_member_5",
-          "text": {
-            "fixedValue": "",
-            "name": "GuildMember5"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 199,
-          "y": 156
         }
       },
       {
@@ -232,6 +137,101 @@
           "height": 24,
           "x": 317,
           "y": 15
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_members",
+          "text": {
+            "fixedValue": "MEMBERS"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 191,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_2",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_3",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_4",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_guild_member_5",
+          "text": {
+            "fixedValue": "",
+            "name": "GuildMember5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 161
         }
       }
     ],

@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class CaveofTrainingSpawnProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double y, Entity entity) {
 		if (entity == null)
 			return;
 		double amount = 0;
@@ -24,24 +24,21 @@ public class CaveofTrainingSpawnProcedure {
 			entityspawn = Mth.nextInt(RandomSource.create(), 1, 3);
 			if (entityspawn == 1) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level,
-							BlockPos.containing(entity.getPersistentData().getDouble("TPX"), entity.getPersistentData().getDouble("TPY"), entity.getPersistentData().getDouble("TPZ")), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX"), y, entity.getPersistentData().getDouble("TPZ")), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
 			}
 			if (entityspawn == 2) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level,
-							BlockPos.containing(entity.getPersistentData().getDouble("TPX"), entity.getPersistentData().getDouble("TPY"), entity.getPersistentData().getDouble("TPZ")), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX"), y, entity.getPersistentData().getDouble("TPZ")), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
 			}
 			if (entityspawn == 3) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX"), entity.getPersistentData().getDouble("TPY"), entity.getPersistentData().getDouble("TPZ")),
-							MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX"), y, entity.getPersistentData().getDouble("TPZ")), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}

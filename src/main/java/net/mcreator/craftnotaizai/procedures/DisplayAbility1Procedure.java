@@ -156,6 +156,11 @@ public class DisplayAbility1Procedure {
 					skill = "Physical Full Counter";
 				}
 			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level >= 10) {
+				if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("The Ruler")) {
+					skill = "The Ruler";
+				}
+			}
 		}
 		return skill;
 	}

@@ -34,22 +34,26 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 100) * 50) {
 			if (entity instanceof MeliodasBossAnimatedEntity animatable)
 				animatable.setTexture("meliodasdemon_mark");
-			entity.getPersistentData().putBoolean("DemonMark", true);
-			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+			if (!entity.getPersistentData().getBoolean("DemonMark")) {
+				entity.getPersistentData().putBoolean("DemonMark", true);
+				if (entity instanceof LivingEntity _entity)
+					_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+			}
 		}
 		if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
 			entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
 		}
 		if (entity.getPersistentData().getDouble("skill_cooldown") == 0 && !((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			distance = Math.sqrt(Math.pow(entity.getX() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX(), 2) + Math.pow(entity.getZ() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ(), 2));
-			ran = Mth.nextInt(RandomSource.create(), 1, 3);
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
-				if (entity.getPersistentData().getBoolean("DemonMark") == false) {
+				if (entity.getPersistentData().getBoolean("DemonMark")) {
+					ran = Mth.nextInt(RandomSource.create(), 1, 3);
 					if (ran == 1) {
-						entity.getPersistentData().putBoolean("Full Counter", true);
+						if (!entity.getPersistentData().getBoolean("Full Counter")) {
+							entity.getPersistentData().putBoolean("Full Counter", true);
+						}
 					}
 					if (ran == 2) {
 						{
@@ -142,11 +146,13 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 						}
 					}
 					if (ran == 4) {
-						entity.getPersistentData().putBoolean("Full Counter", true);
+						if (!entity.getPersistentData().getBoolean("Full Counter")) {
+							entity.getPersistentData().putBoolean("Full Counter", true);
+						}
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 80, 300)));
 		}
 	}
 }

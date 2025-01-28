@@ -1,17 +1,12 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 public class PurgatorySetUpProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -32,16 +27,11 @@ public class PurgatorySetUpProcedure {
 			if (_ent instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.connection.teleport(xTP, yTP, zTP, _ent.getYRot(), _ent.getXRot());
 		}
-		if (!CraftNoTaizaiModVariables.MapVariables.get(world).purgatory) {
-			if (world instanceof ServerLevel _serverworld) {
-				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "purgatory_2"));
-				if (template != null) {
-					template.placeInWorld(_serverworld, BlockPos.containing(xTP - 30, yTP - 11, zTP - 40), BlockPos.containing(xTP - 30, yTP - 11, zTP - 40),
-							new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-				}
-			}
-			CraftNoTaizaiModVariables.MapVariables.get(world).purgatory = true;
-			CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+		if (!(world instanceof ServerLevel _level1 && _level1.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(FeatureUtils.createKey("craft_no_taizai:purgatory_feature")).value().place(_level1,
+				_level1.getChunkSource().getGenerator(), _level1.getRandom(), BlockPos.containing(xTP - 30, yTP - 11, zTP - 40)))) {
+			if (world instanceof ServerLevel _level)
+				_level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(FeatureUtils.createKey("craft_no_taizai:purgatory_feature")).value().place(_level, _level.getChunkSource().getGenerator(), _level.getRandom(),
+						BlockPos.containing(xTP - 30, yTP - 11, zTP - 40));
 		}
 	}
 }

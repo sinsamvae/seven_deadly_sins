@@ -12,8 +12,8 @@
         "value": "Blocks.AIR"
       }
     ],
-    "spacing": 125,
-    "separation": 60,
+    "spacing": 180,
+    "separation": 75,
     "restrictionBiomes": [
       {
         "value": "forest"

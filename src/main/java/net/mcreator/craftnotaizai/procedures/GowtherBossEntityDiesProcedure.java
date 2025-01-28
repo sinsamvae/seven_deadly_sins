@@ -40,15 +40,15 @@ public class GowtherBossEntityDiesProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
-					if (!(entityiterator instanceof ServerPlayer _plr7 && _plr7.level() instanceof ServerLevel
-							&& _plr7.getAdvancements().getOrStartProgress(_plr7.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_gowther"))).isDone())) {
-						if (entityiterator instanceof ServerPlayer _player) {
-							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_gowther"));
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
-							}
+				}
+				if (entityiterator instanceof Player && !(entityiterator instanceof ServerPlayer _plr8 && _plr8.level() instanceof ServerLevel
+						&& _plr8.getAdvancements().getOrStartProgress(_plr8.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_gowther"))).isDone())) {
+					if (entityiterator instanceof ServerPlayer _player) {
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craft_no_taizai:defeat_gowther"));
+						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+						if (!_ap.isDone()) {
+							for (String criteria : _ap.getRemainingCriteria())
+								_player.getAdvancements().award(_adv, criteria);
 						}
 					}
 				}

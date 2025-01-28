@@ -39,6 +39,10 @@ public class BlizzardKeyBindProcedure {
 									true);
 					}
 				}
+				if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
+						.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("Freeze Saber")) {
+					FreezeSaberSkillProcedure.execute(entity);
+				}
 			}
 		}
 	}

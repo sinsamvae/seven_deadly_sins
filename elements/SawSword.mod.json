@@ -5,8 +5,8 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "sawblade",
-    "customModelName": "sawsword:default",
+    "texture": "saw_sword",
+    "customModelName": "saw_sword:default",
     "blockingModelName": "Normal blocking",
     "name": "Saw Sword",
     "specialInformation": {

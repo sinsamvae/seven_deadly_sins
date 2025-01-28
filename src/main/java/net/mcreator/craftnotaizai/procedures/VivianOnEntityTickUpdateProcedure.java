@@ -11,7 +11,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
-import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DestroyFourElementsEntity;
@@ -58,9 +57,6 @@ public class VivianOnEntityTickUpdateProcedure {
 				});
 			}
 			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
-			if (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation == true) {
-				entity.setDeltaMovement(new Vec3(0, ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()), 0));
-			}
 		}
 	}
 }

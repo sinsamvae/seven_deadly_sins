@@ -4,10 +4,10 @@
   "definition": {
     "name": "Cave Training Biome",
     "groundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.AIR"
     },
     "undergroundBlock": {
-      "value": "Blocks.COBBLED_DEEPSLATE"
+      "value": "Blocks.AIR"
     },
     "underwaterBlock": {
       "value": "Blocks.AIR"

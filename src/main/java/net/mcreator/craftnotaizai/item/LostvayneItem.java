@@ -9,10 +9,12 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
+import net.mcreator.craftnotaizai.procedures.LostvayneToolInInventoryTickProcedure;
 import net.mcreator.craftnotaizai.procedures.LostvayneRightclickedProcedure;
 
 import java.util.List;
@@ -58,5 +60,11 @@ public class LostvayneItem extends SwordItem {
 		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.literal("\u00A7cShift Right Open UI"));
 		list.add(Component.literal("\u00A7cRight click Summon Clones"));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		LostvayneToolInInventoryTickProcedure.execute(world);
 	}
 }

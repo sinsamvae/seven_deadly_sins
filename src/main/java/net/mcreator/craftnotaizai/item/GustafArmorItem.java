@@ -6,7 +6,9 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
@@ -20,7 +22,6 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.client.model.Modelgustaf;
 
 import java.util.function.Consumer;
@@ -52,7 +53,7 @@ public abstract class GustafArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CraftNoTaizaiModItems.CARBON_STEEL.get()));
+				return Ingredient.of(new ItemStack(Blocks.BLUE_WOOL), new ItemStack(Items.YELLOW_DYE), new ItemStack(Items.GRAY_DYE));
 			}
 
 			@Override

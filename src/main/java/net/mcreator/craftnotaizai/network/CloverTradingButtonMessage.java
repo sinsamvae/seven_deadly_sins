@@ -13,7 +13,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.CloverTradingMenu;
-import net.mcreator.craftnotaizai.procedures.RemoveItemsProcedure;
+import net.mcreator.craftnotaizai.procedures.TradeButtonProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -77,7 +77,7 @@ public class CloverTradingButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			RemoveItemsProcedure.execute(entity);
+			TradeButtonProcedure.execute(entity);
 		}
 	}
 

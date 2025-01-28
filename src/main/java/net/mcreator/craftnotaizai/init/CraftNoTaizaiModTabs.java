@@ -159,6 +159,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_HELMET.get());
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_TAVERN_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.ELAINE_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.ELAINE_ARMOR_LEGGINGS.get());
 			})
 
 					.build());
@@ -227,6 +229,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.LONG_AXE.get());
 				tabData.accept(CraftNoTaizaiModItems.GUARD_SPEAR.get());
 				tabData.accept(CraftNoTaizaiModItems.DOUBLE_SIDED_SPEAR.get());
+				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_SWORD.get());
 			})
 
 					.build());
@@ -358,7 +361,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.JILLIAN_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.SIMON_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.BAN_BOSS_ANIMATED_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.SLADER_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GUSTAF_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.DIANE_BOSS_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GOWTHER_BOSS_ANIMATED_SPAWN_EGG.get());

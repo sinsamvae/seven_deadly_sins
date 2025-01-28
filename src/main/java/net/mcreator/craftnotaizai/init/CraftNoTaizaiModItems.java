@@ -21,6 +21,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.mcreator.craftnotaizai.item.ZeldrisSwordItem;
 import net.mcreator.craftnotaizai.item.WhipItem;
 import net.mcreator.craftnotaizai.item.WeinheidtArmorItem;
 import net.mcreator.craftnotaizai.item.VivianArmorItem;
@@ -48,6 +49,7 @@ import net.mcreator.craftnotaizai.item.SawBladeItem;
 import net.mcreator.craftnotaizai.item.RuinArmorItem;
 import net.mcreator.craftnotaizai.item.RoyalknightItem;
 import net.mcreator.craftnotaizai.item.RhittaItem;
+import net.mcreator.craftnotaizai.item.ReposeIconItem;
 import net.mcreator.craftnotaizai.item.RedKnightArmorItem;
 import net.mcreator.craftnotaizai.item.ReaperScytheItem;
 import net.mcreator.craftnotaizai.item.ReRollMagicItem;
@@ -129,6 +131,7 @@ import net.mcreator.craftnotaizai.item.EscanorArmorItem;
 import net.mcreator.craftnotaizai.item.EmptyorbItem;
 import net.mcreator.craftnotaizai.item.EmptyNeedleItem;
 import net.mcreator.craftnotaizai.item.EmptyMugItem;
+import net.mcreator.craftnotaizai.item.ElaineArmorItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailCookedItem;
 import net.mcreator.craftnotaizai.item.DreyfusSwordItem;
@@ -601,6 +604,10 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> ESCANOR_TAVERN_HELMET = REGISTRY.register("escanor_tavern_helmet", () -> new EscanorTavernItem.Helmet());
 	public static final RegistryObject<Item> ESCANOR_TAVERN_CHESTPLATE = REGISTRY.register("escanor_tavern_chestplate", () -> new EscanorTavernItem.Chestplate());
 	public static final RegistryObject<Item> ESCANOR_TAVERN_LEGGINGS = REGISTRY.register("escanor_tavern_leggings", () -> new EscanorTavernItem.Leggings());
+	public static final RegistryObject<Item> ELAINE_ARMOR_CHESTPLATE = REGISTRY.register("elaine_armor_chestplate", () -> new ElaineArmorItem.Chestplate());
+	public static final RegistryObject<Item> ELAINE_ARMOR_LEGGINGS = REGISTRY.register("elaine_armor_leggings", () -> new ElaineArmorItem.Leggings());
+	public static final RegistryObject<Item> ZELDRIS_SWORD = REGISTRY.register("zeldris_sword", () -> new ZeldrisSwordItem());
+	public static final RegistryObject<Item> REPOSE_ICON = REGISTRY.register("repose_icon", () -> new ReposeIconItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

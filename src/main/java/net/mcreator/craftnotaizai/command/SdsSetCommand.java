@@ -31,7 +31,6 @@ import net.mcreator.craftnotaizai.procedures.MagicdmgprocedureProcedure;
 import net.mcreator.craftnotaizai.procedures.GivexpcommandProcedure;
 import net.mcreator.craftnotaizai.procedures.GiveRhittaStorePowerProcedureProcedure;
 import net.mcreator.craftnotaizai.procedures.GiveGodProcedureProcedure;
-import net.mcreator.craftnotaizai.procedures.CommandmentProcedureProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeracehumancommandProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangemagicthunderboltProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangemagicsnatchProcedure;
@@ -63,6 +62,7 @@ import net.mcreator.craftnotaizai.procedures.ChangeMaigcAcidProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicWindShooterProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicWallProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicTrickStarProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicTheRulerProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOverPowerCommandProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOminousNebulaProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicHellGateProcedure;
@@ -89,7 +89,7 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 public class SdsSetCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("sds_set").requires(s -> s.hasPermission(1)).then(Commands.literal("Race").then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Human").executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("sds_set").requires(s -> s.hasPermission(1)).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Race").then(Commands.literal("Human").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -103,7 +103,7 @@ public class SdsSetCommand {
 
 			ChangeracehumancommandProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Demon").executes(arguments -> {
+		})).then(Commands.literal("Demon").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -117,7 +117,7 @@ public class SdsSetCommand {
 
 			ChangedemonProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Fairy").executes(arguments -> {
+		})).then(Commands.literal("Fairy").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -131,7 +131,7 @@ public class SdsSetCommand {
 
 			ChangefairyProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Giant").executes(arguments -> {
+		})).then(Commands.literal("Giant").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -145,7 +145,21 @@ public class SdsSetCommand {
 
 			ChangegaintProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.literal("Magic").then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("OminousNebula").executes(arguments -> {
+		}))).then(Commands.literal("Magic").then(Commands.literal("The_Ruler").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangeMagicTheRulerProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("OminousNebula").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -159,7 +173,7 @@ public class SdsSetCommand {
 
 			ChangeMagicOminousNebulaProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Hell_Gate").executes(arguments -> {
+		})).then(Commands.literal("Hell_Gate").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -173,7 +187,7 @@ public class SdsSetCommand {
 
 			ChangeMagicHellGateProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Curse").executes(arguments -> {
+		})).then(Commands.literal("Curse").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -187,7 +201,7 @@ public class SdsSetCommand {
 
 			ChangeMagicCurseProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Ground").executes(arguments -> {
+		})).then(Commands.literal("Ground").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -201,7 +215,7 @@ public class SdsSetCommand {
 
 			ChangeMagicGroundProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Disaster_Gloxinia").executes(arguments -> {
+		})).then(Commands.literal("Disaster_Gloxinia").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -215,7 +229,7 @@ public class SdsSetCommand {
 
 			ChangeMagicDisasterGloxiniaProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Chaos").executes(arguments -> {
+		})).then(Commands.literal("Chaos").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -229,7 +243,7 @@ public class SdsSetCommand {
 
 			ChangemagicChaosProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("CriticalOver").executes(arguments -> {
+		})).then(Commands.literal("CriticalOver").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -243,7 +257,7 @@ public class SdsSetCommand {
 
 			ChangeMagicCriticalOverProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("PhysicalFullCounter").executes(arguments -> {
+		})).then(Commands.literal("PhysicalFullCounter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -257,7 +271,7 @@ public class SdsSetCommand {
 
 			ChangeMagicFullConterProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("FullSize").executes(arguments -> {
+		})).then(Commands.literal("FullSize").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -271,7 +285,7 @@ public class SdsSetCommand {
 
 			ChangeMagicFullSizeProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("TrickStar").executes(arguments -> {
+		})).then(Commands.literal("TrickStar").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -285,7 +299,7 @@ public class SdsSetCommand {
 
 			ChangeMagicTrickStarProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("ComboStar").executes(arguments -> {
+		})).then(Commands.literal("ComboStar").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -299,7 +313,7 @@ public class SdsSetCommand {
 
 			ChangeMagicComboStarProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Wall").executes(arguments -> {
+		})).then(Commands.literal("Wall").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -313,7 +327,7 @@ public class SdsSetCommand {
 
 			ChangeMagicWallProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Blaze").executes(arguments -> {
+		})).then(Commands.literal("Blaze").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -327,119 +341,7 @@ public class SdsSetCommand {
 
 			ChangemagiccommandProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Boost").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangeMagicBoostProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Acid").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangeMaigcAcidProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Tempest").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangeMaigcTempestProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Thunderbolt").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicthunderboltProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("GreatThunder").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicgreatthunderProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Snatch").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicsnatchProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("IceFang").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicicefangProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Transparency").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicTransparencyProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Explosion").executes(arguments -> {
+		})).then(Commands.literal("Explosion").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -453,7 +355,7 @@ public class SdsSetCommand {
 
 			ChangemagicExplosionProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Purge").executes(arguments -> {
+		})).then(Commands.literal("Boost").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -465,9 +367,9 @@ public class SdsSetCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ChangemagicPurgeProcedure.execute(arguments);
+			ChangeMagicBoostProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Break").executes(arguments -> {
+		})).then(Commands.literal("Break").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -481,77 +383,7 @@ public class SdsSetCommand {
 
 			ChangemagicBreakProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Infinity").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicInfinityProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("HellBlaze").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicHellBlazeProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Invasion").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicInvasionProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Creation").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicCreationProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("HunterWisp").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicHunterWispProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("MagicalFullCounter").executes(arguments -> {
+		})).then(Commands.literal("MagicalFullCounter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -565,7 +397,35 @@ public class SdsSetCommand {
 
 			ChangemagicHellblazeFullcounterProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Disaster").executes(arguments -> {
+		})).then(Commands.literal("HunterWisp").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicHunterWispProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Infinity").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicInfinityProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Disaster").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -579,7 +439,7 @@ public class SdsSetCommand {
 
 			ChangemagicDisasterProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Creation").executes(arguments -> {
+		})).then(Commands.literal("Creation").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -593,7 +453,7 @@ public class SdsSetCommand {
 
 			ChangemagicCreationProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Wind_Shooter").executes(arguments -> {
+		})).then(Commands.literal("Wind_Shooter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -607,7 +467,35 @@ public class SdsSetCommand {
 
 			ChangeMagicWindShooterProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("ark_elizebeth").executes(arguments -> {
+		})).then(Commands.literal("Acid").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangeMaigcAcidProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Purge").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicPurgeProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("ark_elizebeth").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -621,7 +509,7 @@ public class SdsSetCommand {
 
 			ChangemagicarkelizebethProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("GodSpeed").executes(arguments -> {
+		})).then(Commands.literal("GodSpeed").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -635,7 +523,7 @@ public class SdsSetCommand {
 
 			ChangemagicGodSpeedProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("SunShine").executes(arguments -> {
+		})).then(Commands.literal("SunShine").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -649,21 +537,7 @@ public class SdsSetCommand {
 
 			ChangemagicSunShineProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("MiracleWind").executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			ChangemagicMiracleWindProcedure.execute(arguments);
-			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Aura_Burst").executes(arguments -> {
+		})).then(Commands.literal("Aura_Burst").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -677,7 +551,7 @@ public class SdsSetCommand {
 
 			ChangeMaigcAuraBurstProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Bullet_Squall").executes(arguments -> {
+		})).then(Commands.literal("MiracleWind").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -689,9 +563,9 @@ public class SdsSetCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ChangeMagicBulletSquallProcedure.execute(arguments);
+			ChangemagicMiracleWindProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Gravity_Manipulation").executes(arguments -> {
+		})).then(Commands.literal("Gravity_Manipulation").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -705,7 +579,21 @@ public class SdsSetCommand {
 
 			ChangeMagicGravityProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Goen_no_Jujin").executes(arguments -> {
+		})).then(Commands.literal("Bullet_Squall").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangeMagicBulletSquallProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Goen_no_Jujin").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -719,7 +607,21 @@ public class SdsSetCommand {
 
 			ChangeMagicGoennoJujinProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Flick_Stone").executes(arguments -> {
+		})).then(Commands.literal("Tempest").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangeMaigcTempestProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Flick_Stone").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -733,7 +635,7 @@ public class SdsSetCommand {
 
 			ChangeMagicFlickStoneProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("OverPower").executes(arguments -> {
+		})).then(Commands.literal("OverPower").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -747,7 +649,7 @@ public class SdsSetCommand {
 
 			ChangeMagicOverPowerCommandProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Blizzard").executes(arguments -> {
+		})).then(Commands.literal("Blizzard").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -761,7 +663,119 @@ public class SdsSetCommand {
 
 			ChangeMagicBlizzardProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.literal("Stat").then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Level").then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+		})).then(Commands.literal("HellBlaze").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicHellBlazeProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Invasion").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicInvasionProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Creation").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicCreationProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Transparency").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicTransparencyProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("IceFang").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicicefangProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Thunderbolt").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicthunderboltProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("GreatThunder").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicgreatthunderProcedure.execute(arguments);
+			return 0;
+		})).then(Commands.literal("Snatch").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			ChangemagicsnatchProcedure.execute(arguments);
+			return 0;
+		}))).then(Commands.literal("Stat").then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).then(Commands.literal("Level").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -775,7 +789,7 @@ public class SdsSetCommand {
 
 			SetlevelcommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("XP").then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+		})).then(Commands.literal("XP").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -789,7 +803,7 @@ public class SdsSetCommand {
 
 			GivexpcommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("TP").then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+		})).then(Commands.literal("TP").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -803,7 +817,7 @@ public class SdsSetCommand {
 
 			AddTpCommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Max_Health").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Max_Health").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -817,7 +831,7 @@ public class SdsSetCommand {
 
 			SethealthcommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Strength").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Strength").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -831,7 +845,7 @@ public class SdsSetCommand {
 
 			SetstrengthcommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Spirt").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Spirt").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -845,7 +859,7 @@ public class SdsSetCommand {
 
 			SetdexcommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Agility").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Agility").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -859,7 +873,7 @@ public class SdsSetCommand {
 
 			SetSpeedCommandProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Max_Mana").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Max_Mana").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -873,7 +887,7 @@ public class SdsSetCommand {
 
 			SetMaxManaProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("Magic_Damage").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("Magic_Damage").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -887,7 +901,7 @@ public class SdsSetCommand {
 
 			MagicdmgprocedureProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("Player", EntityArgument.players()).then(Commands.literal("All_Stats").then(Commands.argument("number", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		})).then(Commands.literal("All_Stats").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -901,77 +915,7 @@ public class SdsSetCommand {
 
 			SetallstatProcedure.execute(arguments);
 			return 0;
-		}))))).then(Commands.literal("Miscellaneous").then(Commands.literal("Immortality").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			SetdemoneyesProcedure.execute(world, arguments);
-			return 0;
-		})))).then(Commands.literal("God").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			GiveGodProcedureProcedure.execute(arguments);
-			return 0;
-		})))).then(Commands.literal("RhittaStorePower").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			GiveRhittaStorePowerProcedureProcedure.execute(arguments);
-			return 0;
-		})))).then(Commands.literal("Red_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			SetRedDemonBloodProcedure.execute(arguments);
-			return 0;
-		})))).then(Commands.literal("Gray_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
-			Level world = arguments.getSource().getUnsidedLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null && world instanceof ServerLevel _servLevel)
-				entity = FakePlayerFactory.getMinecraft(_servLevel);
-			Direction direction = Direction.DOWN;
-			if (entity != null)
-				direction = entity.getDirection();
-
-			SetGrayDemonBloodProcedure.execute(arguments);
-			return 0;
-		})))).then(Commands.literal("Possession").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
+		})))).then(Commands.literal("Miscellaneous").then(Commands.argument("name", BoolArgumentType.bool()).then(Commands.literal("Possession").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -985,7 +929,7 @@ public class SdsSetCommand {
 
 			SetPossessionProcedure.execute(arguments);
 			return 0;
-		}))))).then(Commands.literal("Commandment").then(Commands.argument("Player", EntityArgument.players()).then(Commands.argument("name", StringArgumentType.string()).executes(arguments -> {
+		}))).then(Commands.literal("Gray_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -997,9 +941,65 @@ public class SdsSetCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			CommandmentProcedureProcedure.execute(arguments, entity);
+			SetGrayDemonBloodProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.literal("Story").then(Commands.argument("Player", EntityArgument.player()).then(Commands.argument("name", StringArgumentType.word()).executes(arguments -> {
+		}))).then(Commands.literal("Red_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			SetRedDemonBloodProcedure.execute(arguments);
+			return 0;
+		}))).then(Commands.literal("Immortality").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			SetdemoneyesProcedure.execute(world, arguments);
+			return 0;
+		}))).then(Commands.literal("God").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			GiveGodProcedureProcedure.execute(arguments);
+			return 0;
+		})))).then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).then(Commands.literal("RhittaStorePower").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			GiveRhittaStorePowerProcedureProcedure.execute(arguments);
+			return 0;
+		}))))).then(Commands.literal("Story").then(Commands.argument("name", StringArgumentType.word()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

@@ -34,7 +34,7 @@
     "damageVsEntity": 11.0,
     "specialInformation": {
       "fixedValue": [
-        "RightClick Use Super Concentration"
+        "§cRightClick Use Super Concentration"
       ]
     },
     "hasGlow": false,

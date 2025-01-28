@@ -15,6 +15,7 @@ import net.mcreator.craftnotaizai.client.model.Modelwing_helbram;
 import net.mcreator.craftnotaizai.client.model.Modelwater;
 import net.mcreator.craftnotaizai.client.model.Modeltwigoandsword;
 import net.mcreator.craftnotaizai.client.model.Modelthrowingknives;
+import net.mcreator.craftnotaizai.client.model.Modelthe_ultimate;
 import net.mcreator.craftnotaizai.client.model.Modelteddybear_king;
 import net.mcreator.craftnotaizai.client.model.Modelsunflower_true_spirt_spear;
 import net.mcreator.craftnotaizai.client.model.Modelsunflower;
@@ -125,6 +126,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelgoddess_wings.LAYER_LOCATION, Modelgoddess_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelnew_helbram_wings.LAYER_LOCATION, Modelnew_helbram_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelhowzer_armor.LAYER_LOCATION, Modelhowzer_armor::createBodyLayer);
+		event.registerLayerDefinition(Modelthe_ultimate.LAYER_LOCATION, Modelthe_ultimate::createBodyLayer);
 		event.registerLayerDefinition(Modelremake_evilhound.LAYER_LOCATION, Modelremake_evilhound::createBodyLayer);
 		event.registerLayerDefinition(Modelblack_out.LAYER_LOCATION, Modelblack_out::createBodyLayer);
 		event.registerLayerDefinition(Modelinsect.LAYER_LOCATION, Modelinsect::createBodyLayer);

@@ -11,7 +11,7 @@
     "name": "Reaper Scythe",
     "specialInformation": {
       "fixedValue": [
-        "§RightClick Summon"
+        "§cRightClick Summon"
       ]
     },
     "creativeTabs": [
@@ -35,6 +35,9 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "ReaperScytheRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "ReaperScytheToolInInventoryTick"
     }
   }
 }

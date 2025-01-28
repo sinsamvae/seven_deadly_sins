@@ -52,7 +52,7 @@ public class TowerOfTrailsDimension {
 			TowerOfTrailsPlayerLeavesDimensionProcedure.execute(entity);
 		}
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
-			TowerOfTrailsPlayerEntersDimensionProcedure.execute(world, entity);
+			TowerOfTrailsPlayerEntersDimensionProcedure.execute(world, y, entity);
 		}
 	}
 }

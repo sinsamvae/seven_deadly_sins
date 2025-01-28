@@ -22,6 +22,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftnotaizai.world.features.StructureFeature;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModTabs;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModSounds;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
@@ -66,6 +67,7 @@ public class CraftNoTaizaiMod {
 
 		CraftNoTaizaiModTabs.REGISTRY.register(bus);
 
+		StructureFeature.REGISTRY.register(bus);
 		CraftNoTaizaiModMobEffects.REGISTRY.register(bus);
 
 		CraftNoTaizaiModParticleTypes.REGISTRY.register(bus);

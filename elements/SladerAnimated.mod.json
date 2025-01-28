@@ -27,9 +27,6 @@
       "value": -13289657,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
     "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -100,6 +97,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "onMobTickUpdate": {

@@ -6,7 +6,9 @@ import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
@@ -51,7 +53,7 @@ public abstract class EscanorTavernItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
+				return Ingredient.of(new ItemStack(Blocks.GLASS), new ItemStack(Items.IRON_NUGGET), new ItemStack(Blocks.GREEN_WOOL), new ItemStack(Blocks.BLACK_WOOL), new ItemStack(Blocks.WHITE_WOOL), new ItemStack(Blocks.RED_WOOL));
 			}
 
 			@Override

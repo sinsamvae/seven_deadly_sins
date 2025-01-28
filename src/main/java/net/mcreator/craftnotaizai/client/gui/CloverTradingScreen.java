@@ -60,6 +60,10 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 		RenderSystem.disableBlend();
 	}
 
+	public static HashMap<String, String> getTextboxValues() {
+		return textstate;
+	}
+
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256) {
@@ -70,17 +74,24 @@ public class CloverTradingScreen extends AbstractContainerScreen<CloverTradingMe
 	}
 
 	@Override
+	public void containerTick() {
+		super.containerTick();
+		CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new CloverTradingMenu.CloverTradingOtherMessage(0, x, y, z, textstate));
+		CloverTradingMenu.CloverTradingOtherMessage.handleOtherAction(entity, 0, x, y, z, textstate);
+	}
+
+	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clover_trading.label_trade"), -17, -43, -1, false);
 		guiGraphics.drawString(this.font,
 
-				CostAmountVarProcedure.execute(entity), -39, -59, -1, false);
+				CostAmountVarProcedure.execute(entity), -34, -56, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.clover_trading.label_trade"), -15, -42, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_1button = new ImageButton(this.leftPos + -36, this.topPos + -47, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
+		imagebutton_1button = new ImageButton(this.leftPos + -34, this.topPos + -45, 64, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_1button.png"), 64, 32, e -> {
 			if (true) {
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new CloverTradingButtonMessage(0, x, y, z, textstate));
 				CloverTradingButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);

@@ -14,24 +14,6 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": true
-          },
-          "id": 1,
-          "disablePickup": {
-            "fixedValue": true
-          },
-          "dropItemsWhenNotBound": false,
-          "x": 263,
-          "y": 72
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
             "value": "CUSTOM:BritanniaCoins"
           },
           "disablePlacement": {
@@ -41,37 +23,21 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
+          "dropItemsWhenNotBound": true,
           "x": 143,
           "y": 72
         }
       },
       {
-        "type": "imagebutton",
+        "type": "outputslot",
         "data": {
-          "name": "imagebutton_1button",
-          "image": "1button.png",
-          "hoveredImage": "button.png",
-          "onClick": {
-            "name": "RemoveItems"
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": true
           },
-          "x": 178,
-          "y": 73
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_trade",
-          "text": {
-            "fixedValue": "Trade"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 197,
-          "y": 77
+          "dropItemsWhenNotBound": false,
+          "x": 263,
+          "y": 72
         }
       },
       {
@@ -86,8 +52,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 175,
-          "y": 61
+          "x": 180,
+          "y": 64
         }
       },
       {
@@ -107,10 +73,41 @@
           "x": 144,
           "y": 73
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1button",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "TradeButton"
+          },
+          "x": 180,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_trade",
+          "text": {
+            "fixedValue": "TRADE"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 199,
+          "y": 78
+        }
       }
     ],
-    "onOpen": {
-      "name": "SetPrice"
+    "onTick": {
+      "name": "SetTrades"
+    },
+    "onClosed": {
+      "name": "CloverTradingThisGUIIsClosed"
     },
     "gridSettings": {
       "sx": 18,

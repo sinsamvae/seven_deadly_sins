@@ -22,7 +22,7 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 			return;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			{
-				double _setval = entity.getX();
+				double _setval = entity.getX() - 5;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.istarX = _setval;
 					capability.syncPlayerVariables(entity);
@@ -36,7 +36,7 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 				});
 			}
 			{
-				double _setval = entity.getZ() - 2;
+				double _setval = entity.getZ() - 5;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.istarZ = _setval;
 					capability.syncPlayerVariables(entity);

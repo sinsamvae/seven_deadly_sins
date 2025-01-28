@@ -58,7 +58,7 @@ public class RhittaItem extends AxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A7RightClick Releases Store Up Power"));
+		list.add(Component.literal("\u00A7cRightClick Releases Store Up Power"));
 	}
 
 	@Override

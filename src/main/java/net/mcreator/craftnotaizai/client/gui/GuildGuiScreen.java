@@ -82,29 +82,29 @@ public class GuildGuiScreen extends AbstractContainerScreen<GuildGuiMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				GuildNameProcedure.execute(entity), -28, -79, -1, false);
+				GuildNameProcedure.execute(entity), -19, -75, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GuildMemberProcedure.execute(entity), -14, -48, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_members"), -14, -60, -1, false);
-		guiGraphics.drawString(this.font,
-
-				GuildMember2Procedure.execute(entity), -14, -28, -1, false);
-		guiGraphics.drawString(this.font,
-
-				GuildMember3Procedure.execute(entity), -14, -7, -1, false);
-		guiGraphics.drawString(this.font,
-
-				ReturnPageProcedure.execute(entity), 39, -101, -1, false);
+				ReturnPageProcedure.execute(entity), 36, -100, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_empty"), 76, -100, -1, false);
-		guiGraphics.drawString(this.font,
-
-				GuildMember4Procedure.execute(entity), -14, 14, -1, false);
-		guiGraphics.drawString(this.font,
-
-				GuildMember5Procedure.execute(entity), -15, 36, -1, false);
 		if (PlayerInGuildProcedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_leave"), -6, 65, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.guild_gui.label_members"), -14, -56, -1, false);
+		guiGraphics.drawString(this.font,
+
+				GuildMemberProcedure.execute(entity), -23, -43, -1, false);
+		guiGraphics.drawString(this.font,
+
+				GuildMember2Procedure.execute(entity), -24, -21, -1, false);
+		guiGraphics.drawString(this.font,
+
+				GuildMember3Procedure.execute(entity), -24, 1, -1, false);
+		guiGraphics.drawString(this.font,
+
+				GuildMember4Procedure.execute(entity), -24, 22, -1, false);
+		guiGraphics.drawString(this.font,
+
+				GuildMember5Procedure.execute(entity), -24, 41, -1, false);
 	}
 
 	@Override

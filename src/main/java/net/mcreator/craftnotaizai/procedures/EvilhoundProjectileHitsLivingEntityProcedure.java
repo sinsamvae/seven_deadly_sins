@@ -17,7 +17,7 @@ public class EvilhoundProjectileHitsLivingEntityProcedure {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get(), 300, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get(), 200, 1, false, false));
 		entity.setSecondsOnFire(30);
 		if (immediatesourceentity.getPersistentData().getBoolean("deflected") == true) {
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:fire_magic"))), immediatesourceentity),

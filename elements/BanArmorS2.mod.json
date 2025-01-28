@@ -95,6 +95,13 @@
     "equipSound": {
       "value": "item.armor.equip_iron"
     },
-    "repairItems": []
+    "repairItems": [
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#6"
+      }
+    ]
   }
 }

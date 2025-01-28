@@ -56,6 +56,6 @@ public class HeatForkItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Right Click Cook Food In OffHand"));
+		list.add(Component.literal("\u00A7cRight Click Cook Food In OffHand"));
 	}
 }

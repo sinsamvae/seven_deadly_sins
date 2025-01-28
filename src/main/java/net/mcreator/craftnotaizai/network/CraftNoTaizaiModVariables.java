@@ -281,6 +281,11 @@ public class CraftNoTaizaiModVariables {
 			clone.kill_earthcrawler = original.kill_earthcrawler;
 			clone.freeze_saber = original.freeze_saber;
 			clone.weapon_boost = original.weapon_boost;
+			clone.purgatory_fire_overlay = original.purgatory_fire_overlay;
+			clone.exterminate_ray = original.exterminate_ray;
+			clone.exterminate_ray_tick = original.exterminate_ray_tick;
+			clone.cost_amount = original.cost_amount;
+			clone.the_ruler = original.the_ruler;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -385,6 +390,9 @@ public class CraftNoTaizaiModVariables {
 		public boolean fairy_kings = false;
 		public boolean Reincarnation = false;
 		public boolean eternallife = false;
+		public boolean ReaperScythe = false;
+		public boolean FlyingSaucer = false;
+		public boolean StaffOfImprisonment = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -428,6 +436,9 @@ public class CraftNoTaizaiModVariables {
 			fairy_kings = nbt.getBoolean("fairy_kings");
 			Reincarnation = nbt.getBoolean("Reincarnation");
 			eternallife = nbt.getBoolean("eternallife");
+			ReaperScythe = nbt.getBoolean("ReaperScythe");
+			FlyingSaucer = nbt.getBoolean("FlyingSaucer");
+			StaffOfImprisonment = nbt.getBoolean("StaffOfImprisonment");
 		}
 
 		@Override
@@ -464,6 +475,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("fairy_kings", fairy_kings);
 			nbt.putBoolean("Reincarnation", Reincarnation);
 			nbt.putBoolean("eternallife", eternallife);
+			nbt.putBoolean("ReaperScythe", ReaperScythe);
+			nbt.putBoolean("FlyingSaucer", FlyingSaucer);
+			nbt.putBoolean("StaffOfImprisonment", StaffOfImprisonment);
 			return nbt;
 		}
 
@@ -753,6 +767,11 @@ public class CraftNoTaizaiModVariables {
 		public double kill_earthcrawler = 0;
 		public boolean freeze_saber = false;
 		public double weapon_boost = 0;
+		public boolean purgatory_fire_overlay = false;
+		public boolean exterminate_ray = false;
+		public double exterminate_ray_tick = 0;
+		public double cost_amount = 0;
+		public boolean the_ruler = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -958,6 +977,11 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("kill_earthcrawler", kill_earthcrawler);
 			nbt.putBoolean("freeze_saber", freeze_saber);
 			nbt.putDouble("weapon_boost", weapon_boost);
+			nbt.putBoolean("purgatory_fire_overlay", purgatory_fire_overlay);
+			nbt.putBoolean("exterminate_ray", exterminate_ray);
+			nbt.putDouble("exterminate_ray_tick", exterminate_ray_tick);
+			nbt.putDouble("cost_amount", cost_amount);
+			nbt.putBoolean("the_ruler", the_ruler);
 			return nbt;
 		}
 
@@ -1166,6 +1190,11 @@ public class CraftNoTaizaiModVariables {
 			kill_earthcrawler = nbt.getDouble("kill_earthcrawler");
 			freeze_saber = nbt.getBoolean("freeze_saber");
 			weapon_boost = nbt.getDouble("weapon_boost");
+			purgatory_fire_overlay = nbt.getBoolean("purgatory_fire_overlay");
+			exterminate_ray = nbt.getBoolean("exterminate_ray");
+			exterminate_ray_tick = nbt.getDouble("exterminate_ray_tick");
+			cost_amount = nbt.getDouble("cost_amount");
+			the_ruler = nbt.getBoolean("the_ruler");
 		}
 	}
 
@@ -1396,6 +1425,11 @@ public class CraftNoTaizaiModVariables {
 					variables.kill_earthcrawler = message.data.kill_earthcrawler;
 					variables.freeze_saber = message.data.freeze_saber;
 					variables.weapon_boost = message.data.weapon_boost;
+					variables.purgatory_fire_overlay = message.data.purgatory_fire_overlay;
+					variables.exterminate_ray = message.data.exterminate_ray;
+					variables.exterminate_ray_tick = message.data.exterminate_ray_tick;
+					variables.cost_amount = message.data.cost_amount;
+					variables.the_ruler = message.data.the_ruler;
 				}
 			});
 			context.setPacketHandled(true);

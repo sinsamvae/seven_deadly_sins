@@ -12,8 +12,8 @@
         "value": "Blocks.AIR"
       }
     ],
-    "spacing": 100,
-    "separation": 70,
+    "spacing": 80,
+    "separation": 45,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:FairyKingForest"

@@ -31,13 +31,13 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
 import net.mcreator.craftnotaizai.procedures.CloverRightClickedOnEntityProcedure;
 import net.mcreator.craftnotaizai.procedures.CloverOnInitialEntitySpawnProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
@@ -120,8 +120,12 @@ public class CloverEntity extends PathfinderMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftNoTaizaiModEntities.CLOVER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8));
+		SpawnPlacements.register(CraftNoTaizaiModEntities.CLOVER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return SpawnCondtionProcedure.execute(world);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

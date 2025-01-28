@@ -1,0 +1,12 @@
+{
+  "type": "craft_no_taizai:structure_feature",
+  "config": {
+    "structure": "craft_no_taizai:caveoftrainingremake",
+    "ignored_blocks": [
+      "minecraft:cave_air",
+      "minecraft:air",
+      "minecraft:structure_block",
+      "minecraft:structure_block"
+    ]
+  }
+}

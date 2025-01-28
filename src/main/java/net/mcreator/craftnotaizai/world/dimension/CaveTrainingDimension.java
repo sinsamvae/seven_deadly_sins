@@ -52,7 +52,7 @@ public class CaveTrainingDimension {
 			CaveTrainingPlayerLeavesDimensionProcedure.execute(entity);
 		}
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
-			CaveTrainingPlayerEntersDimensionProcedure.execute(world, entity);
+			CaveTrainingPlayerEntersDimensionProcedure.execute(world, y, entity);
 		}
 	}
 }

@@ -97,7 +97,13 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:CarbonSteel"
+        "value": "Blocks.WOOL#11"
+      },
+      {
+        "value": "Items.DYE#11"
+      },
+      {
+        "value": "Items.DYE#8"
       }
     ]
   }
