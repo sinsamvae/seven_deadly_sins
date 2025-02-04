@@ -429,15 +429,35 @@ public class StoryvarProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
-		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story45")
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story44")
 				&& (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("desert")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("forest"))
 						|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("swamp")))) {
 			{
-				String _setval = "Story46";
+				String _setval = "Story45";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Story = _setval;
 					capability.syncPlayerVariables(entity);
 				});
+			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		} else if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story46")) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.JIGUMO.get().spawn(_level,
+						BlockPos.containing(entity.getLookAngle().x + entity.getX(), entity.getLookAngle().y + entity.getY() + entity.getBbHeight(), entity.getLookAngle().z + entity.getZ()), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
+			}
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+		} else if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story47")) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.TORAH.get().spawn(_level,
+						BlockPos.containing(entity.getLookAngle().x + entity.getX(), entity.getLookAngle().y + entity.getY() + entity.getBbHeight(), entity.getLookAngle().z + entity.getZ()), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();

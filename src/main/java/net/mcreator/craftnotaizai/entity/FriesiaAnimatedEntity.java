@@ -15,6 +15,7 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -23,7 +24,6 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,7 +43,7 @@ import net.mcreator.craftnotaizai.procedures.FriesiaOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.procedures.FriesiaEntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class FriesiaAnimatedEntity extends PathfinderMob implements GeoEntity {
+public class FriesiaAnimatedEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(FriesiaAnimatedEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(FriesiaAnimatedEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(FriesiaAnimatedEntity.class, EntityDataSerializers.STRING);
@@ -146,12 +146,6 @@ public class FriesiaAnimatedEntity extends PathfinderMob implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init() {
 	}
 
@@ -159,7 +153,7 @@ public class FriesiaAnimatedEntity extends PathfinderMob implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 85);
-		builder = builder.add(Attributes.ARMOR, 4);
+		builder = builder.add(Attributes.ARMOR, 3.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 75);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

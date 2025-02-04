@@ -161,7 +161,7 @@ public class RedKnightAnimatedEntity extends PathfinderMob implements GeoEntity 
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 75);
-		builder = builder.add(Attributes.ARMOR, 5);
+		builder = builder.add(Attributes.ARMOR, 15);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 45);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

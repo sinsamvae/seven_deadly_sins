@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "craft_no_taizai:block/pookiebearore",
-    "up": "craft_no_taizai:block/pookiebearore",
-    "north": "craft_no_taizai:block/pookiebearore",
-    "east": "craft_no_taizai:block/pookiebearore",
-    "south": "craft_no_taizai:block/pookiebearore",
-    "west": "craft_no_taizai:block/pookiebearore",
-    "particle": "craft_no_taizai:block/pookiebearore"
+    "down": "craft_no_taizai:block/holy_tree_ore",
+    "up": "craft_no_taizai:block/holy_tree_ore",
+    "north": "craft_no_taizai:block/holy_tree_ore",
+    "east": "craft_no_taizai:block/holy_tree_ore",
+    "south": "craft_no_taizai:block/holy_tree_ore",
+    "west": "craft_no_taizai:block/holy_tree_ore",
+    "particle": "craft_no_taizai:block/holy_tree_ore"
   },
   "render_type": "solid"
 }

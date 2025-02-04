@@ -36,6 +36,7 @@ public class FullPowerDemonMarkShowProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		String texture = "";
 		RenderLivingEvent _evt = (RenderLivingEvent) event;
 		Minecraft mc = Minecraft.getInstance();
 		EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
@@ -51,11 +52,23 @@ public class FullPowerDemonMarkShowProcedure {
 			emptyRenderer.clearLayers();
 			emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark) {
+		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark) {
 			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-				if (ResourceLocation.tryParse("craft_no_taizai:textures/entities/un_demon_mark.png") != null) {
-					_texture = new ResourceLocation("craft_no_taizai:textures/entities/un_demon_mark.png");
+				if (ResourceLocation.tryParse((_evtEntity instanceof AbstractClientPlayer ? ((AbstractClientPlayer) _evtEntity).getSkinTextureLocation().toString() : "kleiders_custom_renderer:textures/entities/default.png")) != null) {
+					_texture = new ResourceLocation((_evtEntity instanceof AbstractClientPlayer ? ((AbstractClientPlayer) _evtEntity).getSkinTextureLocation().toString() : "kleiders_custom_renderer:textures/entities/default.png"));
+				}
+				new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+			}
+		} else {
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark) {
+				texture = "un_demon_mark";
+			}
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+					_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
 				}
 				new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 						_evt.getMultiBufferSource(), _evt.getPackedLight());

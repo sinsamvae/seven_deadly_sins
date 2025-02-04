@@ -51,11 +51,11 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 115,
+    "attackStrength": 105,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 10.0,
+    "armorBaseValue": 4.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 115,
@@ -97,6 +97,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "whenMobDies": {

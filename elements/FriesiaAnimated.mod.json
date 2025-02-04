@@ -53,13 +53,13 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 75,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 4.0,
+    "armorBaseValue": 3.5,
     "trackingRange": 64,
     "followRange": 16,
     "health": 85,

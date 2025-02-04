@@ -32,7 +32,7 @@ public class EntitiesFullCounterProcedure {
 		if (damagesource == null || entity == null || sourceentity == null)
 			return;
 		double dmg = 0;
-		if (entity.getPersistentData().getBoolean("Full Counter") == true && damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))) {
+		if (entity.getPersistentData().getBoolean("Full Counter") && (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))) || damagesource.is(DamageTypes.ARROW))) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			} else if (event != null && event.hasResult()) {

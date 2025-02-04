@@ -12,6 +12,10 @@
     "underwaterBlock": {
       "value": ""
     },
+    "grassColor": {
+      "value": -16724992,
+      "falpha": 0.0
+    },
     "ambientSound": {
       "value": ""
     },

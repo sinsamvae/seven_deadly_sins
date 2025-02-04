@@ -3816,7 +3816,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story45"
+            "name": "Story44"
           },
           "x": 69,
           "y": 48
@@ -3834,7 +3834,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story45"
+            "name": "Story44"
           },
           "x": 68,
           "y": 64
@@ -3852,7 +3852,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story45"
+            "name": "Story44"
           },
           "x": 68,
           "y": 81
@@ -3870,7 +3870,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story45"
+            "name": "Story44"
           },
           "x": 68,
           "y": 103
@@ -3888,7 +3888,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story45"
+            "name": "Story44"
           },
           "x": 70,
           "y": 119
@@ -3906,7 +3906,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 69,
           "y": 48
@@ -3924,7 +3924,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 68,
           "y": 63
@@ -3942,7 +3942,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 69,
           "y": 79
@@ -3960,7 +3960,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 69,
           "y": 98
@@ -3978,7 +3978,7 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 70,
           "y": 119
@@ -3997,10 +3997,281 @@
             "falpha": 0.0
           },
           "displayCondition": {
-            "name": "Story46"
+            "name": "Story45"
           },
           "x": 70,
           "y": 137
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_17_legendary_figures",
+          "text": {
+            "fixedValue": "EP 17: Legendary Figures Part 1"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_surviving_challengers_of_the",
+          "text": {
+            "fixedValue": "The surviving challengers of the Great Fight Festival"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_split_into_pairs_and_made_to",
+          "text": {
+            "fixedValue": "are split into pairs and made to face each other in a "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tag_team_battle",
+          "text": {
+            "fixedValue": "tag team battle."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 69,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_jigumo",
+          "text": {
+            "fixedValue": "Defeat Jigumo"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story46"
+          },
+          "x": 70,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_17_legendary_figures_part_2",
+          "text": {
+            "fixedValue": "EP 17: Legendary Figures Part 2"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story47"
+          },
+          "x": 69,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_surviving_challengers_of_the1",
+          "text": {
+            "fixedValue": "The surviving challengers of the Great Fight Festival"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story47"
+          },
+          "x": 69,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_split_into_pairs_and_made_to1",
+          "text": {
+            "fixedValue": "are split into pairs and made to face each other in a "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story47"
+          },
+          "x": 69,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tag_team_battle1",
+          "text": {
+            "fixedValue": "tag team battle."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story47"
+          },
+          "x": 70,
+          "y": 101
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_jigumo1",
+          "text": {
+            "fixedValue": "Defeat Torah"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story47"
+          },
+          "x": 70,
+          "y": 123
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_17_legendary_figures_part_3",
+          "text": {
+            "fixedValue": "EP 17: Legendary Figures Part 3"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story48"
+          },
+          "x": 68,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_surviving_challengers_of_the2",
+          "text": {
+            "fixedValue": "The surviving challengers of the Great Fight Festival"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story48"
+          },
+          "x": 68,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_split_into_pairs_and_made_to2",
+          "text": {
+            "fixedValue": "are split into pairs and made to face each other in a "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story48"
+          },
+          "x": 68,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tag_team_battle2",
+          "text": {
+            "fixedValue": "tag team battle."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story48"
+          },
+          "x": 69,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_blue_demon_kills",
+          "text": {
+            "fixedValue": "",
+            "name": "BlueDemonKills"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story48"
+          },
+          "x": 70,
+          "y": 134
         }
       }
     ],

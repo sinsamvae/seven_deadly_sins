@@ -12,7 +12,7 @@ public class TheOneKeyBindProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world instanceof Level _lvl0 && _lvl0.isDay()) == true) {
+		if (world instanceof Level _lvl0 && _lvl0.isDay()) {
 			if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate) {
 				if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_one) {
 					{

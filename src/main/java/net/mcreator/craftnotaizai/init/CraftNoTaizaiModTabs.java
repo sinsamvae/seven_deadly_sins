@@ -282,8 +282,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_TREE_SLAB.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.BASTE_DUNGEON_WALLS.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.BASTE_DUNGEON_ROOF.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.CHAOS_FLOOR.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.CHAOS_WALL.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_BLOCK.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_SLAB.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.PURGATORY_STAIR.get().asItem());
@@ -368,7 +366,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.MELIODAS_BOSS_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.MERLIN_BOSS_ANIMATED_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GERHEADE_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.HORN_OF_CERNUNOS_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.DOGEDO_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GOWTHER_STORY_1_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.ALBION_SPAWN_EGG.get());
@@ -390,6 +387,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ELAINE_STORY_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GALAND_OVER_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.BLUE_DEMON_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.JIGUMO_SPAWN_EGG.get());
 			})
 
 					.build());

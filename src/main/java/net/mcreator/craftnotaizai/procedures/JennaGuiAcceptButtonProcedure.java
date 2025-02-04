@@ -37,6 +37,27 @@ public class JennaGuiAcceptButtonProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
+			{
+				double _setval = entity.getX();
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.trainingX = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = entity.getY();
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.trainingY = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = entity.getZ();
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.trainingZ = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		} else {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

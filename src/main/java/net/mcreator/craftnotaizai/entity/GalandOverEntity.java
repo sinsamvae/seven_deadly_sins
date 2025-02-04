@@ -15,6 +15,7 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -23,7 +24,6 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,7 +43,7 @@ import net.mcreator.craftnotaizai.procedures.GalandOverOnEntityTickUpdateProcedu
 import net.mcreator.craftnotaizai.procedures.GalandOverEntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class GalandOverEntity extends PathfinderMob implements GeoEntity {
+public class GalandOverEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GalandOverEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GalandOverEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GalandOverEntity.class, EntityDataSerializers.STRING);
@@ -146,21 +146,15 @@ public class GalandOverEntity extends PathfinderMob implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1.5);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 340);
-		builder = builder.add(Attributes.ARMOR, 16);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 340);
+		builder = builder.add(Attributes.MAX_HEALTH, 375);
+		builder = builder.add(Attributes.ARMOR, 9);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 365);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}

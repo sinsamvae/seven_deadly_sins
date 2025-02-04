@@ -77,7 +77,7 @@ public class TeleportationGuiButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			TeleportButtonProcedure.execute(entity, guistate);
+			TeleportButtonProcedure.execute(world, entity, guistate);
 		}
 	}
 

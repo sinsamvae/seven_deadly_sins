@@ -1,5 +1,5 @@
 {
-  "parent": "craft_no_taizai:custom/sword2",
+  "parent": "craft_no_taizai:custom/drefus_sword",
   "textures": {
     "0": "craft_no_taizai:block/test",
     "particle": "craft_no_taizai:item/test"

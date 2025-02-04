@@ -158,7 +158,7 @@ public class JerichoDemonFormEntity extends Monster implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 240);
-		builder = builder.add(Attributes.ARMOR, 13);
+		builder = builder.add(Attributes.ARMOR, 8.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 235);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

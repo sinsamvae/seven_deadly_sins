@@ -27,10 +27,11 @@
       "value": -13369600,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:SpawnEggs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SpawnEggs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -58,7 +59,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 13.0,
+    "armorBaseValue": 6.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 195,
@@ -100,6 +101,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "whenMobDies": {

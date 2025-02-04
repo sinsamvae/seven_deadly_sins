@@ -48,6 +48,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
+import net.mcreator.craftnotaizai.procedures.DuskBison1OnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 import java.util.EnumSet;
@@ -193,6 +194,7 @@ public class DuskBison1Entity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		DuskBison1OnEntityTickUpdateProcedure.execute(this.level(), this);
 		this.refreshDimensions();
 	}
 
@@ -220,7 +222,7 @@ public class DuskBison1Entity extends PathfinderMob implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 45);
-		builder = builder.add(Attributes.ARMOR, 13);
+		builder = builder.add(Attributes.ARMOR, 12);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

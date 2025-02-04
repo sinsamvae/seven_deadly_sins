@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "craft_no_taizai:block/13530476-cover_l",
-    "up": "craft_no_taizai:block/13530476-cover_l",
-    "north": "craft_no_taizai:block/13530476-cover_l",
-    "east": "craft_no_taizai:block/13530476-cover_l",
-    "south": "craft_no_taizai:block/13530476-cover_l",
-    "west": "craft_no_taizai:block/13530476-cover_l",
-    "particle": "craft_no_taizai:block/13530476-cover_l"
+    "down": "craft_no_taizai:block/sleeping_forest_plank",
+    "up": "craft_no_taizai:block/sleeping_forest_plank",
+    "north": "craft_no_taizai:block/sleeping_forest_plank",
+    "east": "craft_no_taizai:block/sleeping_forest_plank",
+    "south": "craft_no_taizai:block/sleeping_forest_plank",
+    "west": "craft_no_taizai:block/sleeping_forest_plank",
+    "particle": "craft_no_taizai:block/sleeping_forest_plank"
   },
   "render_type": "solid"
 }

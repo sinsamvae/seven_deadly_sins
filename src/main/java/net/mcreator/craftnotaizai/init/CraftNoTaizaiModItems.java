@@ -478,8 +478,6 @@ public class CraftNoTaizaiModItems {
 			() -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.SUN_FLOWER_TRUE_SPIRT_SPEAR, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> MOON_ROSE_SPAWN_EGG = REGISTRY.register("moon_rose_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MOON_ROSE, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> LUME_ORB = REGISTRY.register("lume_orb", () -> new LumeOrbItem());
-	public static final RegistryObject<Item> CHAOS_FLOOR = block(CraftNoTaizaiModBlocks.CHAOS_FLOOR);
-	public static final RegistryObject<Item> CHAOS_WALL = block(CraftNoTaizaiModBlocks.CHAOS_WALL);
 	public static final RegistryObject<Item> BOAR_HAT_OUTFIT_CHESTPLATE = REGISTRY.register("boar_hat_outfit_chestplate", () -> new BoarHatOutfitItem.Chestplate());
 	public static final RegistryObject<Item> BOAR_HAT_OUTFIT_LEGGINGS = REGISTRY.register("boar_hat_outfit_leggings", () -> new BoarHatOutfitItem.Leggings());
 	public static final RegistryObject<Item> HELL_GATE_RED_DEMONS_SPAWN_EGG = REGISTRY.register("hell_gate_red_demons_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.HELL_GATE_RED_DEMONS, -1, -1, new Item.Properties()));
@@ -514,7 +512,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> LONG_AXE = REGISTRY.register("long_axe", () -> new LongAxeItem());
 	public static final RegistryObject<Item> GUARD_SPEAR = REGISTRY.register("guard_spear", () -> new GuardSpearItem());
 	public static final RegistryObject<Item> HOLY_STAFF_COURE_CHOUSE = REGISTRY.register("holy_staff_coure_chouse", () -> new HolyStaffCoureChouseItem());
-	public static final RegistryObject<Item> HORN_OF_CERNUNOS_SPAWN_EGG = REGISTRY.register("horn_of_cernunos_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.HORN_OF_CERNUNOS, -29953, -38401, new Item.Properties()));
 	public static final RegistryObject<Item> DOGEDO_SPAWN_EGG = REGISTRY.register("dogedo_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DOGEDO, -9822, -12681421, new Item.Properties()));
 	public static final RegistryObject<Item> GOWTHER_STORY_1_SPAWN_EGG = REGISTRY.register("gowther_story_1_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GOWTHER_STORY_1, -65281, -10066177, new Item.Properties()));
 	public static final RegistryObject<Item> ALBION_SPAWN_EGG = REGISTRY.register("albion_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ALBION, -1842194, -11576014, new Item.Properties()));
@@ -608,6 +605,10 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> ELAINE_ARMOR_LEGGINGS = REGISTRY.register("elaine_armor_leggings", () -> new ElaineArmorItem.Leggings());
 	public static final RegistryObject<Item> ZELDRIS_SWORD = REGISTRY.register("zeldris_sword", () -> new ZeldrisSwordItem());
 	public static final RegistryObject<Item> REPOSE_ICON = REGISTRY.register("repose_icon", () -> new ReposeIconItem());
+	public static final RegistryObject<Item> JIGUMO_SPAWN_EGG = REGISTRY.register("jigumo_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.JIGUMO, -6183514, -15527654, new Item.Properties()));
+	public static final RegistryObject<Item> TORAH_SPAWN_EGG = REGISTRY.register("torah_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TORAH, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> GERHEADESERVANT_SPAWN_EGG = REGISTRY.register("gerheadeservant_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GERHEADESERVANT, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> STONE_DROLE_SPAWN_EGG = REGISTRY.register("stone_drole_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.STONE_DROLE, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -2,6 +2,7 @@ package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -11,7 +12,7 @@ import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 
 public class DemonModeOnOnKeyPressedProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
@@ -122,22 +123,7 @@ public class DemonModeOnOnKeyPressedProcedure {
 							});
 						}
 					} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).berserkmode) {
-						if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(CraftNoTaizaiModItems.DEMON_CLAW.get())) : false)
-								|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(CraftNoTaizaiModItems.DEMON_AXE.get())) : false)
-								|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(CraftNoTaizaiModItems.DEMON_WING.get())) : false)) {
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.DEMON_AXE.get());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-							}
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.DEMON_WING.get());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-							}
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = new ItemStack(CraftNoTaizaiModItems.DEMON_CLAW.get());
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-							}
-						}
+						RemoveBerserkItemsProcedure.execute(world, entity);
 						{
 							boolean _setval = false;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

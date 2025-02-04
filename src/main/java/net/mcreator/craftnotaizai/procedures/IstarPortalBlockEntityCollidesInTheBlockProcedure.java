@@ -36,7 +36,7 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 				});
 			}
 			{
-				double _setval = entity.getZ() - 5;
+				double _setval = entity.getZ();
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.istarZ = _setval;
 					capability.syncPlayerVariables(entity);

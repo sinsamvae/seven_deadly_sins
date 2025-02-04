@@ -47,8 +47,6 @@ import net.mcreator.craftnotaizai.block.FairyKingLeavesBlock;
 import net.mcreator.craftnotaizai.block.FairyKingLeaveBlock;
 import net.mcreator.craftnotaizai.block.EmptyMugBlockBlock;
 import net.mcreator.craftnotaizai.block.CiderMugBlockBlock;
-import net.mcreator.craftnotaizai.block.ChaosWallBlock;
-import net.mcreator.craftnotaizai.block.ChaosFloorBlock;
 import net.mcreator.craftnotaizai.block.CaveOfTrainingBlock;
 import net.mcreator.craftnotaizai.block.CapitaloftheDeadBlockBlock;
 import net.mcreator.craftnotaizai.block.CapitalOfTheDeadGroundBlockBlock;
@@ -104,8 +102,6 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> BASTE_DUNGEON_WALLS = REGISTRY.register("baste_dungeon_walls", () -> new BasteDungeonWallsBlock());
 	public static final RegistryObject<Block> BASTE_DUNGEON_ROOF = REGISTRY.register("baste_dungeon_roof", () -> new BasteDungeonRoofBlock());
 	public static final RegistryObject<Block> HOLY_TREE_ORE = REGISTRY.register("holy_tree_ore", () -> new HolyTreeOreBlock());
-	public static final RegistryObject<Block> CHAOS_FLOOR = REGISTRY.register("chaos_floor", () -> new ChaosFloorBlock());
-	public static final RegistryObject<Block> CHAOS_WALL = REGISTRY.register("chaos_wall", () -> new ChaosWallBlock());
 	public static final RegistryObject<Block> PURGATORY_BLOCK = REGISTRY.register("purgatory_block", () -> new PurgatoryBlockBlock());
 	public static final RegistryObject<Block> PURGATORY_SLAB = REGISTRY.register("purgatory_slab", () -> new PurgatorySlabBlock());
 	public static final RegistryObject<Block> PURGATORY_STAIR = REGISTRY.register("purgatory_stair", () -> new PurgatoryStairBlock());

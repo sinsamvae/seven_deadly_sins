@@ -100,11 +100,9 @@ public class CraftNoTaizaiModVariables {
 			clone.PlayerFirstJoins = original.PlayerFirstJoins;
 			clone.Race = original.Race;
 			clone.PurgatoryFire = original.PurgatoryFire;
-			clone.creation = original.creation;
 			clone.heavy_metal = original.heavy_metal;
 			clone.lightningarmor = original.lightningarmor;
 			clone.heavy_armor = original.heavy_armor;
-			clone.FreezeShield = original.FreezeShield;
 			clone.Transparency_Use = original.Transparency_Use;
 			clone.magic = original.magic;
 			clone.revengecounter = original.revengecounter;
@@ -189,7 +187,6 @@ public class CraftNoTaizaiModVariables {
 			clone.True_Spirt_From = original.True_Spirt_From;
 			clone.mana_regen_effect = original.mana_regen_effect;
 			clone.hard_protection = original.hard_protection;
-			clone.demon_skill = original.demon_skill;
 			clone.learn_demon_skills = original.learn_demon_skills;
 			clone.aqua_dress = original.aqua_dress;
 			clone.Healing_Area = original.Healing_Area;
@@ -282,10 +279,13 @@ public class CraftNoTaizaiModVariables {
 			clone.freeze_saber = original.freeze_saber;
 			clone.weapon_boost = original.weapon_boost;
 			clone.purgatory_fire_overlay = original.purgatory_fire_overlay;
-			clone.exterminate_ray = original.exterminate_ray;
-			clone.exterminate_ray_tick = original.exterminate_ray_tick;
 			clone.cost_amount = original.cost_amount;
 			clone.the_ruler = original.the_ruler;
+			clone.trainingX = original.trainingX;
+			clone.trainingY = original.trainingY;
+			clone.trainingZ = original.trainingZ;
+			clone.demon_hearts = original.demon_hearts;
+			clone.defeat_bluedemon = original.defeat_bluedemon;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -361,7 +361,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean chastiefol = false;
 		public boolean fairyking = false;
 		public boolean choas = false;
-		public boolean fariykingtree = false;
 		public boolean immortalityworld = false;
 		public boolean courechouse = false;
 		public boolean Gideon = false;
@@ -407,7 +406,6 @@ public class CraftNoTaizaiModVariables {
 			chastiefol = nbt.getBoolean("chastiefol");
 			fairyking = nbt.getBoolean("fairyking");
 			choas = nbt.getBoolean("choas");
-			fariykingtree = nbt.getBoolean("fariykingtree");
 			immortalityworld = nbt.getBoolean("immortalityworld");
 			courechouse = nbt.getBoolean("courechouse");
 			Gideon = nbt.getBoolean("Gideon");
@@ -446,7 +444,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("chastiefol", chastiefol);
 			nbt.putBoolean("fairyking", fairyking);
 			nbt.putBoolean("choas", choas);
-			nbt.putBoolean("fariykingtree", fariykingtree);
 			nbt.putBoolean("immortalityworld", immortalityworld);
 			nbt.putBoolean("courechouse", courechouse);
 			nbt.putBoolean("Gideon", Gideon);
@@ -584,11 +581,9 @@ public class CraftNoTaizaiModVariables {
 		public boolean PlayerFirstJoins = false;
 		public String Race = "\"\"";
 		public boolean PurgatoryFire = false;
-		public boolean creation = false;
 		public boolean heavy_metal = false;
 		public boolean lightningarmor = false;
 		public double heavy_armor = 0;
-		public boolean FreezeShield = false;
 		public boolean Transparency_Use = false;
 		public String magic = "\"\"";
 		public boolean revengecounter = false;
@@ -674,7 +669,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean True_Spirt_From = false;
 		public double mana_regen_effect = 0;
 		public boolean hard_protection = false;
-		public ItemStack demon_skill = ItemStack.EMPTY;
 		public boolean learn_demon_skills = false;
 		public boolean aqua_dress = false;
 		public boolean Healing_Area = false;
@@ -768,10 +762,13 @@ public class CraftNoTaizaiModVariables {
 		public boolean freeze_saber = false;
 		public double weapon_boost = 0;
 		public boolean purgatory_fire_overlay = false;
-		public boolean exterminate_ray = false;
-		public double exterminate_ray_tick = 0;
 		public double cost_amount = 0;
 		public boolean the_ruler = false;
+		public double trainingX = 0;
+		public double trainingY = 0;
+		public double trainingZ = 0;
+		public double demon_hearts = 0;
+		public double defeat_bluedemon = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -794,11 +791,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("PlayerFirstJoins", PlayerFirstJoins);
 			nbt.putString("Race", Race);
 			nbt.putBoolean("PurgatoryFire", PurgatoryFire);
-			nbt.putBoolean("creation", creation);
 			nbt.putBoolean("heavy_metal", heavy_metal);
 			nbt.putBoolean("lightningarmor", lightningarmor);
 			nbt.putDouble("heavy_armor", heavy_armor);
-			nbt.putBoolean("FreezeShield", FreezeShield);
 			nbt.putBoolean("Transparency_Use", Transparency_Use);
 			nbt.putString("magic", magic);
 			nbt.putBoolean("revengecounter", revengecounter);
@@ -884,7 +879,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("True_Spirt_From", True_Spirt_From);
 			nbt.putDouble("mana_regen_effect", mana_regen_effect);
 			nbt.putBoolean("hard_protection", hard_protection);
-			nbt.put("demon_skill", demon_skill.save(new CompoundTag()));
 			nbt.putBoolean("learn_demon_skills", learn_demon_skills);
 			nbt.putBoolean("aqua_dress", aqua_dress);
 			nbt.putBoolean("Healing_Area", Healing_Area);
@@ -978,10 +972,13 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("freeze_saber", freeze_saber);
 			nbt.putDouble("weapon_boost", weapon_boost);
 			nbt.putBoolean("purgatory_fire_overlay", purgatory_fire_overlay);
-			nbt.putBoolean("exterminate_ray", exterminate_ray);
-			nbt.putDouble("exterminate_ray_tick", exterminate_ray_tick);
 			nbt.putDouble("cost_amount", cost_amount);
 			nbt.putBoolean("the_ruler", the_ruler);
+			nbt.putDouble("trainingX", trainingX);
+			nbt.putDouble("trainingY", trainingY);
+			nbt.putDouble("trainingZ", trainingZ);
+			nbt.putDouble("demon_hearts", demon_hearts);
+			nbt.putDouble("defeat_bluedemon", defeat_bluedemon);
 			return nbt;
 		}
 
@@ -1007,11 +1004,9 @@ public class CraftNoTaizaiModVariables {
 			PlayerFirstJoins = nbt.getBoolean("PlayerFirstJoins");
 			Race = nbt.getString("Race");
 			PurgatoryFire = nbt.getBoolean("PurgatoryFire");
-			creation = nbt.getBoolean("creation");
 			heavy_metal = nbt.getBoolean("heavy_metal");
 			lightningarmor = nbt.getBoolean("lightningarmor");
 			heavy_armor = nbt.getDouble("heavy_armor");
-			FreezeShield = nbt.getBoolean("FreezeShield");
 			Transparency_Use = nbt.getBoolean("Transparency_Use");
 			magic = nbt.getString("magic");
 			revengecounter = nbt.getBoolean("revengecounter");
@@ -1097,7 +1092,6 @@ public class CraftNoTaizaiModVariables {
 			True_Spirt_From = nbt.getBoolean("True_Spirt_From");
 			mana_regen_effect = nbt.getDouble("mana_regen_effect");
 			hard_protection = nbt.getBoolean("hard_protection");
-			demon_skill = ItemStack.of(nbt.getCompound("demon_skill"));
 			learn_demon_skills = nbt.getBoolean("learn_demon_skills");
 			aqua_dress = nbt.getBoolean("aqua_dress");
 			Healing_Area = nbt.getBoolean("Healing_Area");
@@ -1191,10 +1185,13 @@ public class CraftNoTaizaiModVariables {
 			freeze_saber = nbt.getBoolean("freeze_saber");
 			weapon_boost = nbt.getDouble("weapon_boost");
 			purgatory_fire_overlay = nbt.getBoolean("purgatory_fire_overlay");
-			exterminate_ray = nbt.getBoolean("exterminate_ray");
-			exterminate_ray_tick = nbt.getDouble("exterminate_ray_tick");
 			cost_amount = nbt.getDouble("cost_amount");
 			the_ruler = nbt.getBoolean("the_ruler");
+			trainingX = nbt.getDouble("trainingX");
+			trainingY = nbt.getDouble("trainingY");
+			trainingZ = nbt.getDouble("trainingZ");
+			demon_hearts = nbt.getDouble("demon_hearts");
+			defeat_bluedemon = nbt.getDouble("defeat_bluedemon");
 		}
 	}
 
@@ -1242,11 +1239,9 @@ public class CraftNoTaizaiModVariables {
 					variables.PlayerFirstJoins = message.data.PlayerFirstJoins;
 					variables.Race = message.data.Race;
 					variables.PurgatoryFire = message.data.PurgatoryFire;
-					variables.creation = message.data.creation;
 					variables.heavy_metal = message.data.heavy_metal;
 					variables.lightningarmor = message.data.lightningarmor;
 					variables.heavy_armor = message.data.heavy_armor;
-					variables.FreezeShield = message.data.FreezeShield;
 					variables.Transparency_Use = message.data.Transparency_Use;
 					variables.magic = message.data.magic;
 					variables.revengecounter = message.data.revengecounter;
@@ -1332,7 +1327,6 @@ public class CraftNoTaizaiModVariables {
 					variables.True_Spirt_From = message.data.True_Spirt_From;
 					variables.mana_regen_effect = message.data.mana_regen_effect;
 					variables.hard_protection = message.data.hard_protection;
-					variables.demon_skill = message.data.demon_skill;
 					variables.learn_demon_skills = message.data.learn_demon_skills;
 					variables.aqua_dress = message.data.aqua_dress;
 					variables.Healing_Area = message.data.Healing_Area;
@@ -1426,10 +1420,13 @@ public class CraftNoTaizaiModVariables {
 					variables.freeze_saber = message.data.freeze_saber;
 					variables.weapon_boost = message.data.weapon_boost;
 					variables.purgatory_fire_overlay = message.data.purgatory_fire_overlay;
-					variables.exterminate_ray = message.data.exterminate_ray;
-					variables.exterminate_ray_tick = message.data.exterminate_ray_tick;
 					variables.cost_amount = message.data.cost_amount;
 					variables.the_ruler = message.data.the_ruler;
+					variables.trainingX = message.data.trainingX;
+					variables.trainingY = message.data.trainingY;
+					variables.trainingZ = message.data.trainingZ;
+					variables.demon_hearts = message.data.demon_hearts;
+					variables.defeat_bluedemon = message.data.defeat_bluedemon;
 				}
 			});
 			context.setPacketHandled(true);

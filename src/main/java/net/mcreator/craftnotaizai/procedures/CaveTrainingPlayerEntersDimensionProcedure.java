@@ -14,7 +14,7 @@ public class CaveTrainingPlayerEntersDimensionProcedure {
 			return;
 		double amount = 0;
 		CaveOfTrainingSetUpProcedure.execute(world, entity);
-		CraftNoTaizaiMod.queueServerWork(100, () -> {
+		CraftNoTaizaiMod.queueServerWork(60, () -> {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("\u00A77You've entered the cave of training realm!"), false);
 			{

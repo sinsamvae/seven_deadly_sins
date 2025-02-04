@@ -116,7 +116,7 @@ public class WhipItem extends Item implements GeoItem {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
 		boolean retval = super.onEntitySwing(itemstack, entity);
-		WhipEntitySwingsItemProcedure.execute(entity.level(), entity, itemstack);
+		WhipEntitySwingsItemProcedure.execute(itemstack);
 		return retval;
 	}
 }

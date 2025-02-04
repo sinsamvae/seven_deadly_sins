@@ -169,7 +169,7 @@ public class RedDemonGeckolibEntity extends PathfinderMob implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 230);
-		builder = builder.add(Attributes.ARMOR, 20);
+		builder = builder.add(Attributes.ARMOR, 21);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 170);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

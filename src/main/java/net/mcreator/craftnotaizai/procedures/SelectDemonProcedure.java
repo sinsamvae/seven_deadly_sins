@@ -10,6 +10,7 @@ public class SelectDemonProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		double n = 0;
 		{
 			boolean _setval = true;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

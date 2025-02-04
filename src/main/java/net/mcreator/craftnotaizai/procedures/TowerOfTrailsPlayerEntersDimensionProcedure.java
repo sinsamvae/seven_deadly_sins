@@ -13,7 +13,7 @@ public class TowerOfTrailsPlayerEntersDimensionProcedure {
 		if (entity == null)
 			return;
 		TowerOfTrailsSetUpProcedure.execute(world, entity);
-		CraftNoTaizaiMod.queueServerWork(100, () -> {
+		CraftNoTaizaiMod.queueServerWork(60, () -> {
 			{
 				double _setval = 12000;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

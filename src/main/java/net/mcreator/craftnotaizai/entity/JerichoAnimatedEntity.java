@@ -153,7 +153,7 @@ public class JerichoAnimatedEntity extends Monster implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 145);
-		builder = builder.add(Attributes.ARMOR, 12);
+		builder = builder.add(Attributes.ARMOR, 4.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 135);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

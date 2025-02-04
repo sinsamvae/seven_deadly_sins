@@ -17,8 +17,11 @@ import net.mcreator.craftnotaizai.procedures.Story7Procedure;
 import net.mcreator.craftnotaizai.procedures.Story6Procedure;
 import net.mcreator.craftnotaizai.procedures.Story5Procedure;
 import net.mcreator.craftnotaizai.procedures.Story4Procedure;
+import net.mcreator.craftnotaizai.procedures.Story48Procedure;
+import net.mcreator.craftnotaizai.procedures.Story47Procedure;
 import net.mcreator.craftnotaizai.procedures.Story46Procedure;
 import net.mcreator.craftnotaizai.procedures.Story45Procedure;
+import net.mcreator.craftnotaizai.procedures.Story44Procedure;
 import net.mcreator.craftnotaizai.procedures.Story43Procedure;
 import net.mcreator.craftnotaizai.procedures.Story42Procedure;
 import net.mcreator.craftnotaizai.procedures.Story41Procedure;
@@ -62,6 +65,7 @@ import net.mcreator.craftnotaizai.procedures.KillGiantVarProcedure;
 import net.mcreator.craftnotaizai.procedures.GrayDemonKillProcedure;
 import net.mcreator.craftnotaizai.procedures.EarthCrawlerKillsProcedure;
 import net.mcreator.craftnotaizai.procedures.CaveOfTrainingVarProcedure;
+import net.mcreator.craftnotaizai.procedures.BlueDemonKillsProcedure;
 import net.mcreator.craftnotaizai.network.StoryBoardButtonMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -545,30 +549,62 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_stumbling_into_a_bar_deep_inside"), -145, -19, -16777216, false);
 		if (Story43Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_galand2"), -144, 0, -13369345, false);
-		if (Story45Procedure.execute(entity))
+		if (Story44Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_15_a_bloodcurdling_confessio"), -145, -72, -16711681, false);
-		if (Story45Procedure.execute(entity))
+		if (Story44Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_gloxinia_and_drole_of_the_ten_co"), -146, -56, -16777216, false);
-		if (Story45Procedure.execute(entity))
+		if (Story44Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_fighters_to_vaizel_by_offering_t"), -146, -39, -16777216, false);
-		if (Story45Procedure.execute(entity))
+		if (Story44Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_winner_of_their_great_fight_fest"), -146, -17, -16777216, false);
-		if (Story45Procedure.execute(entity))
+		if (Story44Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_go_to_plains_biome"), -144, -1, -13369345, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_16_deathtrap_maze"), -145, -72, -16711681, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_an_elaborate_trapladen_deadly_m"), -146, -57, -16777216, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_begins_to_weed_out_the_weaker_ch"), -145, -41, -16777216, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_gathered_for_the_great_fight_fes"), -145, -22, -16777216, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_5_earth_crawlers"), -144, -1, -13369345, false);
-		if (Story46Procedure.execute(entity))
+		if (Story45Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
 					EarthCrawlerKillsProcedure.execute(entity), -144, 17, -13369345, false);
+		if (Story46Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_17_legendary_figures"), -145, -72, -16711681, false);
+		if (Story46Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_surviving_challengers_of_the"), -145, -57, -16777216, false);
+		if (Story46Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_are_split_into_pairs_and_made_to"), -145, -40, -16777216, false);
+		if (Story46Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_tag_team_battle"), -145, -22, -16777216, false);
+		if (Story46Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_jigumo"), -144, 1, -13369345, false);
+		if (Story47Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_17_legendary_figures_part_2"), -145, -72, -16711681, false);
+		if (Story47Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_surviving_challengers_of_the1"), -145, -56, -16777216, false);
+		if (Story47Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_are_split_into_pairs_and_made_to1"), -145, -37, -16777216, false);
+		if (Story47Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_tag_team_battle1"), -144, -19, -16777216, false);
+		if (Story47Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_jigumo1"), -144, 3, -13369345, false);
+		if (Story48Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_17_legendary_figures_part_3"), -146, -71, -16711681, false);
+		if (Story48Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_surviving_challengers_of_the2"), -146, -57, -16777216, false);
+		if (Story48Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_are_split_into_pairs_and_made_to2"), -146, -40, -16777216, false);
+		if (Story48Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_tag_team_battle2"), -145, -18, -16777216, false);
+		if (Story48Procedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					BlueDemonKillsProcedure.execute(entity), -144, 14, -13369345, false);
 	}
 
 	@Override

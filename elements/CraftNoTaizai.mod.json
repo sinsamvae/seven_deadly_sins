@@ -171,9 +171,9 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 3.0,
+            "numberField": 2.0,
             "textDefault": "",
-            "comment": "This will determine how much stat you get when killing mob (Default 3)",
+            "comment": "This will determine how much stat you get when killing mob (Default 2)",
             "vardisplay": "cave_of_training",
             "varname": "cave_of_training",
             "enablecomment": true,
@@ -188,9 +188,9 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 3.0,
+            "numberField": 2.0,
             "textDefault": "",
-            "comment": "This will determine how much stat you get when killing mob (Default 3)",
+            "comment": "This will determine how much stat you get when killing mob (Default 2)",
             "vardisplay": "tower_of_trails",
             "varname": "tower_of_trails",
             "enablecomment": true,

@@ -34,14 +34,6 @@ public class PerfectCubeOnTickUpdateProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		blockrevert = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "old_block"))).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 		if (new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -50,27 +42,48 @@ public class PerfectCubeOnTickUpdateProcedure {
 				return -1;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "timer") > 100) {
-			if (!(new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "old_block")).equals("")) {
-				{
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = blockrevert;
-					BlockState _bso = world.getBlockState(_bp);
-					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.getValue(_property) != null)
-							try {
-								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-							} catch (Exception e) {
+			int horizontalRadiusSphere = (int) 25 - 1;
+			int verticalRadiusSphere = (int) 25 - 1;
+			int yIterationsSphere = verticalRadiusSphere;
+			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+					for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+						if (distanceSq <= 1.0) {
+							if (!(new Object() {
+								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getString(tag);
+									return "";
+								}
+							}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "old_block")).equals("")) {
+								blockrevert = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(((new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "old_block"))).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
+									BlockState _bs = blockrevert;
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
 							}
+						}
 					}
-					world.setBlock(_bp, _bs, 3);
 				}
 			}
 		}

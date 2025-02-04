@@ -35,8 +35,8 @@ public class CraftNoTaizaiConfiguration {
 		SPEED = BUILDER.comment("This will determine the max speed").define("Speed", (double) 100);
 		BUILDER.pop();
 		BUILDER.push("Istar");
-		CAVE_OF_TRAINING = BUILDER.comment("This will determine how much stat you get when killing mob (Default 3)").define("cave_of_training", (double) 3);
-		TOWER_OF_TRAILS = BUILDER.comment("This will determine how much stat you get when killing mob (Default 3)").define("tower_of_trails", (double) 3);
+		CAVE_OF_TRAINING = BUILDER.comment("This will determine how much stat you get when killing mob (Default 2)").define("cave_of_training", (double) 2);
+		TOWER_OF_TRAILS = BUILDER.comment("This will determine how much stat you get when killing mob (Default 2)").define("tower_of_trails", (double) 2);
 		BUILDER.pop();
 		BUILDER.push("immortality");
 		IMMORTALITY = BUILDER.comment("This will determine if immortality can be obtain in game(Default True)").define("immortality", true);

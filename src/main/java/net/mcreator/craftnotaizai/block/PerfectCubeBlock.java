@@ -24,7 +24,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.PerfectCubeOnTickUpdateProcedure;
-import net.mcreator.craftnotaizai.procedures.PerfectCubeBlockAddedProcedure;
 import net.mcreator.craftnotaizai.block.entity.PerfectCubeBlockEntity;
 
 public class PerfectCubeBlock extends Block implements EntityBlock {
@@ -47,7 +46,6 @@ public class PerfectCubeBlock extends Block implements EntityBlock {
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		world.scheduleTick(pos, this, 1);
-		PerfectCubeBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

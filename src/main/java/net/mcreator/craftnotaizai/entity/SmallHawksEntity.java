@@ -151,9 +151,9 @@ public class SmallHawksEntity extends PathfinderMob implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
-		builder = builder.add(Attributes.ARMOR, 3);
+		builder = builder.add(Attributes.ARMOR, 2.8);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

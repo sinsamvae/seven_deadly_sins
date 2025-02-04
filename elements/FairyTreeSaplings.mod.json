@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "block",
   "definition": {
-    "texture": "2024-08-09_21.37.14-export",
+    "texture": "fairy_tree",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -14,7 +14,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "2024-08-09_21.37.14-export",
+    "itemTexture": "fairy_tree",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -58,7 +58,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "PLANTS"
+      "value": "ROCK"
     },
     "tickRate": 0,
     "tickRandomly": true,

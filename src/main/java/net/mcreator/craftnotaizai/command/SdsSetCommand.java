@@ -915,7 +915,7 @@ public class SdsSetCommand {
 
 			SetallstatProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.literal("Miscellaneous").then(Commands.argument("name", BoolArgumentType.bool()).then(Commands.literal("Possession").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		})))).then(Commands.literal("Miscellaneous").then(Commands.argument("name", BoolArgumentType.bool()).then(Commands.literal("Possession").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -929,7 +929,7 @@ public class SdsSetCommand {
 
 			SetPossessionProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.literal("Gray_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		})).then(Commands.literal("Gray_Demon_Blood").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -943,7 +943,7 @@ public class SdsSetCommand {
 
 			SetGrayDemonBloodProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.literal("Red_Demon_Blood").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		})).then(Commands.literal("Red_Demon_Blood").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -957,7 +957,7 @@ public class SdsSetCommand {
 
 			SetRedDemonBloodProcedure.execute(arguments);
 			return 0;
-		}))).then(Commands.literal("Immortality").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		})).then(Commands.literal("Immortality").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -971,7 +971,7 @@ public class SdsSetCommand {
 
 			SetdemoneyesProcedure.execute(world, arguments);
 			return 0;
-		}))).then(Commands.literal("God").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		})).then(Commands.literal("God").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -985,7 +985,7 @@ public class SdsSetCommand {
 
 			GiveGodProcedureProcedure.execute(arguments);
 			return 0;
-		})))).then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).then(Commands.literal("RhittaStorePower").then(Commands.argument("Player", EntityArgument.players()).executes(arguments -> {
+		}))).then(Commands.argument("number", DoubleArgumentType.doubleArg(0)).then(Commands.literal("RhittaStorePower").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -999,7 +999,7 @@ public class SdsSetCommand {
 
 			GiveRhittaStorePowerProcedureProcedure.execute(arguments);
 			return 0;
-		}))))).then(Commands.literal("Story").then(Commands.argument("name", StringArgumentType.word()).executes(arguments -> {
+		})))).then(Commands.literal("Story").then(Commands.argument("name", StringArgumentType.word()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

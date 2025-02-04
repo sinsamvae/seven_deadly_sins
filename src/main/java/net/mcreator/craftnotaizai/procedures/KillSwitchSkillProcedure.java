@@ -1,6 +1,5 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -13,36 +12,13 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 import net.mcreator.craftnotaizai.entity.KillSwitchProjectileEntity;
 
 public class KillSwitchSkillProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double damage = 0;
 		damage = Math.ceil(0.45 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 2;
 		damage = damage * ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
-		if (world.dayTime() % 24000 >= 23000 && world.dayTime() % 24000 <= 23460) {
-			damage = damage * 1;
-		} else if (world.dayTime() % 24000 >= 23460 && world.dayTime() % 24000 <= 23992) {
-			damage = damage * 3;
-		} else if (world.dayTime() % 24000 >= 23992 && world.dayTime() % 24000 <= 0) {
-			damage = damage * 10;
-		} else if (world.dayTime() % 24000 >= 0 && world.dayTime() % 24000 <= 1000) {
-			damage = damage * 13.5;
-		} else if (world.dayTime() % 24000 >= 1000 && world.dayTime() % 24000 <= 5723) {
-			damage = damage * 15;
-		} else if (world.dayTime() % 24000 >= 5723 && world.dayTime() % 24000 <= 11834) {
-			damage = damage * 20;
-		} else if (world.dayTime() % 24000 >= 11834 && world.dayTime() % 24000 <= 12040) {
-			damage = damage / 3;
-		} else if (world.dayTime() % 24000 >= 12040 && world.dayTime() % 24000 <= 12786) {
-			damage = damage / 10;
-		} else if (world.dayTime() % 24000 >= 12786 && world.dayTime() % 24000 <= 13188) {
-			damage = damage / 13.5;
-		} else if (world.dayTime() % 24000 >= 13188 && world.dayTime() % 24000 <= 17843) {
-			damage = damage / 15;
-		} else if (world.dayTime() % 24000 >= 18000 && world.dayTime() % 24000 <= 23000) {
-			damage = damage / 20;
-		}
 		{
 			Entity _shootFrom = entity;
 			Level projectileLevel = _shootFrom.level();

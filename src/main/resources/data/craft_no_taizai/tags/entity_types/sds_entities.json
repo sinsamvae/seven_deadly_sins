@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#craft_no_taizai:giant",
+    "#craft_no_taizai:holy_knights",
+    "craft_no_taizai:muramo_demon_form",
+    "craft_no_taizai:blue_demon",
+    "craft_no_taizai:red_demon_geckolib",
+    "craft_no_taizai:andre_demon_form",
+    "craft_no_taizai:gray_demon_entity",
+    "#craft_no_taizai:tamed_skills",
+    "craft_no_taizai:gerheadeservant"
+  ]
+}

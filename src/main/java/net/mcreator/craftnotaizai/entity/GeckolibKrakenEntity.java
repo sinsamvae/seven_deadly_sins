@@ -19,7 +19,6 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
@@ -50,7 +49,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.GeckolibKrakenOnEntityTickUpdateProcedure;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class GeckolibKrakenEntity extends PathfinderMob implements GeoEntity {
@@ -152,11 +150,6 @@ public class GeckolibKrakenEntity extends PathfinderMob implements GeoEntity {
 		return MobType.WATER;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(CraftNoTaizaiModItems.TENTACLES.get()));
-	}
-
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
 		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craft_no_taizai:kraken_idle")), 0.15f, 1);
@@ -225,7 +218,7 @@ public class GeckolibKrakenEntity extends PathfinderMob implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 30);
-		builder = builder.add(Attributes.ARMOR, 4);
+		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 13);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);

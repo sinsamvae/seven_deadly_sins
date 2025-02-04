@@ -71,6 +71,16 @@ public class DemonKingAgreeButtonProcedure {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness) {
 					CraftNoTaizaiModVariables.MapVariables.get(world).Selflessness = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					{
 						String _setval = "Selflessness";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -103,6 +113,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 2) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Pacifism) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					{
 						String _setval = "Pacifism";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -135,6 +155,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 3) {
 				if (CraftNoTaizaiModVariables.MapVariables.get(world).Patience == false) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Patience = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -169,6 +199,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 4) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Repose) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Repose = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -203,6 +243,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 5) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Purity) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Purity = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -237,6 +287,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 6) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Reticence) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Reticence = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -271,6 +331,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 7) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Faith) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Faith = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -305,6 +375,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 8) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Truth) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Truth = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -339,6 +419,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 9) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Love) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Love = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{
@@ -373,6 +463,16 @@ public class DemonKingAgreeButtonProcedure {
 			}
 			if (commandment == 10) {
 				if (!CraftNoTaizaiModVariables.MapVariables.get(world).Piety) {
+					if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.reddemonboost = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					CraftNoTaizaiModVariables.MapVariables.get(world).Piety = true;
 					CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 					{

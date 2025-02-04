@@ -160,7 +160,7 @@ public class AlbionEntity extends Monster implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 300);
-		builder = builder.add(Attributes.ARMOR, 16);
+		builder = builder.add(Attributes.ARMOR, 5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 300);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

@@ -52,7 +52,7 @@ public class PerfectShellProcedure {
 		double a = 0;
 		double b = 0;
 		double damage = 0;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PerfectShell == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PerfectShell) {
 			r = 1.5;
 			a = Math.random() * 12;
 			b = 90;

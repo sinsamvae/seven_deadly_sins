@@ -103,8 +103,8 @@ public class BeforehitProcedure {
 			}
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Human")
 					&& !((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost
-							|| (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood)
-					&& !(((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Infinity")
+							|| (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood
+							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Infinity")
 							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Snatch")
 							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Chaos")
 							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")
@@ -128,24 +128,25 @@ public class BeforehitProcedure {
 					}
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon") && Math.floor(current_health) <= 10) {
+			if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
+							&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")) && Math.floor(current_health) <= 10) {
 				n = Mth.nextInt(RandomSource.create(), 1, 100);
-				if (n <= 5) {
-					if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Purgatory) {
-						current_health = 20;
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
-							ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:purgatory"));
-							if (_player.level().dimension() == destinationType)
-								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
-							if (nextLevel != null) {
-								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
-								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
-								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
-								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
-							}
+				if (n <= 5 && !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Purgatory) {
+					current_health = 20;
+					if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:purgatory"));
+						if (_player.level().dimension() == destinationType)
+							return;
+						ServerLevel nextLevel = _player.server.getLevel(destinationType);
+						if (nextLevel != null) {
+							_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
 				}

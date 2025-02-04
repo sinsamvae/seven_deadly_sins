@@ -99,6 +99,9 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "whenMobDies": {
       "name": "GrayDemonHendricksonEntityDies"
     },

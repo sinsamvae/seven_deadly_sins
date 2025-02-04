@@ -6,7 +6,7 @@
     "renderType": 1,
     "blockingRenderType": 0,
     "texture": "test",
-    "customModelName": "sword2:default",
+    "customModelName": "drefus_sword:default",
     "blockingModelName": "Normal blocking",
     "name": "Dreyfus Sword",
     "specialInformation": {

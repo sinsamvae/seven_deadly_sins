@@ -12,12 +12,14 @@ import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TwigoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.TrollEntity;
+import net.mcreator.craftnotaizai.entity.TorahEntity;
 import net.mcreator.craftnotaizai.entity.TallAlbionEntity;
 import net.mcreator.craftnotaizai.entity.TaizooAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SwordWolfEntity;
 import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.StoryBanAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.StoryBan2AnimatedEntity;
+import net.mcreator.craftnotaizai.entity.StoneDroleEntity;
 import net.mcreator.craftnotaizai.entity.SoldierAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SmallHawksEntity;
 import net.mcreator.craftnotaizai.entity.SladerAnimatedEntity;
@@ -45,6 +47,7 @@ import net.mcreator.craftnotaizai.entity.KingStory1Entity;
 import net.mcreator.craftnotaizai.entity.KingBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JumanjuEntityEntity;
 import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.JigumoEntity;
 import net.mcreator.craftnotaizai.entity.JerichoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.InsectEntity;
@@ -75,6 +78,7 @@ import net.mcreator.craftnotaizai.entity.GilThunderAnimated2Entity;
 import net.mcreator.craftnotaizai.entity.GigaPickEntity;
 import net.mcreator.craftnotaizai.entity.GigaFallEntity;
 import net.mcreator.craftnotaizai.entity.GigaCrushEntity;
+import net.mcreator.craftnotaizai.entity.GerheadeservantEntity;
 import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
@@ -900,6 +904,34 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof BlueDemonEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof JigumoEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TorahEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GerheadeservantEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StoneDroleEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

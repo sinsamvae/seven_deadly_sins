@@ -27,6 +27,7 @@ import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TwigoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.TrollEntity;
+import net.mcreator.craftnotaizai.entity.TorahEntity;
 import net.mcreator.craftnotaizai.entity.TheoEntity;
 import net.mcreator.craftnotaizai.entity.TallAlbionEntity;
 import net.mcreator.craftnotaizai.entity.TaizooAnimatedEntity;
@@ -36,6 +37,7 @@ import net.mcreator.craftnotaizai.entity.SunflowerEntity;
 import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.StoryBanAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.StoryBan2AnimatedEntity;
+import net.mcreator.craftnotaizai.entity.StoneDroleEntity;
 import net.mcreator.craftnotaizai.entity.SoyokazenoGekirinProjectileEntity;
 import net.mcreator.craftnotaizai.entity.SoldierAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SnowflowerbeamProjectileEntity;
@@ -81,6 +83,7 @@ import net.mcreator.craftnotaizai.entity.KillSwitchProjectileEntity;
 import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
 import net.mcreator.craftnotaizai.entity.JumanjuEntityEntity;
 import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.JigumoEntity;
 import net.mcreator.craftnotaizai.entity.JethammerProjectileEntity;
 import net.mcreator.craftnotaizai.entity.JerichoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
@@ -91,7 +94,6 @@ import net.mcreator.craftnotaizai.entity.IceAnchorEntity;
 import net.mcreator.craftnotaizai.entity.HunterWispProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HugoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HowzerAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.HornOfCernunosEntity;
 import net.mcreator.craftnotaizai.entity.HideAndSeekEntity;
 import net.mcreator.craftnotaizai.entity.HendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
@@ -120,6 +122,7 @@ import net.mcreator.craftnotaizai.entity.GilThunderAnimated2Entity;
 import net.mcreator.craftnotaizai.entity.GigaPickEntity;
 import net.mcreator.craftnotaizai.entity.GigaFallEntity;
 import net.mcreator.craftnotaizai.entity.GigaCrushEntity;
+import net.mcreator.craftnotaizai.entity.GerheadeservantEntity;
 import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
@@ -189,7 +192,6 @@ import net.mcreator.craftnotaizai.entity.BasquiasGuardianEntity;
 import net.mcreator.craftnotaizai.entity.BanBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.AuraBurstEntity;
 import net.mcreator.craftnotaizai.entity.AshDragonEntity;
-import net.mcreator.craftnotaizai.entity.ArrowShotProjectileEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
@@ -410,8 +412,6 @@ public class CraftNoTaizaiModEntities {
 					.sized(1f, 3f));
 	public static final RegistryObject<EntityType<PainEditionEntity>> PAIN_EDITION = register("pain_edition",
 			EntityType.Builder.<PainEditionEntity>of(PainEditionEntity::new, MobCategory.MISC).setCustomClientFactory(PainEditionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<ArrowShotProjectileEntity>> ARROW_SHOT_PROJECTILE = register("arrow_shot_projectile", EntityType.Builder.<ArrowShotProjectileEntity>of(ArrowShotProjectileEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(ArrowShotProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PhysicalCloneEntity>> PHYSICAL_CLONE = register("physical_clone",
 			EntityType.Builder.<PhysicalCloneEntity>of(PhysicalCloneEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PhysicalCloneEntity::new)
 
@@ -675,8 +675,6 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<AealHealEntity>of(AealHealEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AealHealEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SuperSlashEntity>> SUPER_SLASH = register("super_slash",
 			EntityType.Builder.<SuperSlashEntity>of(SuperSlashEntity::new, MobCategory.MISC).setCustomClientFactory(SuperSlashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<HornOfCernunosEntity>> HORN_OF_CERNUNOS = register("horn_of_cernunos", EntityType.Builder.<HornOfCernunosEntity>of(HornOfCernunosEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HornOfCernunosEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DogedoEntity>> DOGEDO = register("dogedo",
 			EntityType.Builder.<DogedoEntity>of(DogedoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DogedoEntity::new)
 
@@ -789,6 +787,22 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<BlueDemonEntity>of(BlueDemonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlueDemonEntity::new)
 
 					.sized(1.5f, 2.8f));
+	public static final RegistryObject<EntityType<JigumoEntity>> JIGUMO = register("jigumo",
+			EntityType.Builder.<JigumoEntity>of(JigumoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JigumoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TorahEntity>> TORAH = register("torah",
+			EntityType.Builder.<TorahEntity>of(TorahEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TorahEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GerheadeservantEntity>> GERHEADESERVANT = register("gerheadeservant",
+			EntityType.Builder.<GerheadeservantEntity>of(GerheadeservantEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GerheadeservantEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoneDroleEntity>> STONE_DROLE = register("stone_drole",
+			EntityType.Builder.<StoneDroleEntity>of(StoneDroleEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StoneDroleEntity::new)
+
+					.sized(0.6f, 3.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -898,7 +912,6 @@ public class CraftNoTaizaiModEntities {
 			ServantEntity.init();
 			MarmasEntity.init();
 			AealHealEntity.init();
-			HornOfCernunosEntity.init();
 			DogedoEntity.init();
 			GowtherStory1Entity.init();
 			AlbionEntity.init();
@@ -929,6 +942,10 @@ public class CraftNoTaizaiModEntities {
 			ReaperScytheEntityEntity.init();
 			DubsEntity.init();
 			BlueDemonEntity.init();
+			JigumoEntity.init();
+			TorahEntity.init();
+			GerheadeservantEntity.init();
+			StoneDroleEntity.init();
 		});
 	}
 
@@ -1035,7 +1052,6 @@ public class CraftNoTaizaiModEntities {
 		event.put(SERVANT.get(), ServantEntity.createAttributes().build());
 		event.put(MARMAS.get(), MarmasEntity.createAttributes().build());
 		event.put(AEAL_HEAL.get(), AealHealEntity.createAttributes().build());
-		event.put(HORN_OF_CERNUNOS.get(), HornOfCernunosEntity.createAttributes().build());
 		event.put(DOGEDO.get(), DogedoEntity.createAttributes().build());
 		event.put(GOWTHER_STORY_1.get(), GowtherStory1Entity.createAttributes().build());
 		event.put(ALBION.get(), AlbionEntity.createAttributes().build());
@@ -1066,5 +1082,9 @@ public class CraftNoTaizaiModEntities {
 		event.put(REAPER_SCYTHE_ENTITY.get(), ReaperScytheEntityEntity.createAttributes().build());
 		event.put(DUBS.get(), DubsEntity.createAttributes().build());
 		event.put(BLUE_DEMON.get(), BlueDemonEntity.createAttributes().build());
+		event.put(JIGUMO.get(), JigumoEntity.createAttributes().build());
+		event.put(TORAH.get(), TorahEntity.createAttributes().build());
+		event.put(GERHEADESERVANT.get(), GerheadeservantEntity.createAttributes().build());
+		event.put(STONE_DROLE.get(), StoneDroleEntity.createAttributes().build());
 	}
 }

@@ -255,7 +255,7 @@ public class BlackHoundEntity extends TamableAnimal implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
 		builder = builder.add(Attributes.MAX_HEALTH, 40);
-		builder = builder.add(Attributes.ARMOR, 14);
+		builder = builder.add(Attributes.ARMOR, 11.2);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

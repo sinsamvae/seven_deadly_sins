@@ -59,7 +59,7 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plusbuttonoutline",
-          "image": "2024-05-09_10.00.44.png",
+          "image": "skillscroll.png",
           "hoveredImage": "skillscrollhover.png",
           "onClick": {
             "name": "LearnedSkills"

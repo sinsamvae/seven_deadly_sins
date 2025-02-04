@@ -13,11 +13,21 @@ public class WhirlShockWhileProjectileFlyingTickProcedure {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		double delay = 0;
+		double sevy = 0;
+		double a = 0;
+		double sevx = 0;
+		double sevz = 0;
+		double sev = 0;
+		double tedy = 0;
+		double tedz = 0;
+		double ted = 0;
+		double tedx = 0;
+		double sevz2 = 0;
+		double sevy2 = 0;
+		double sevx2 = 0;
+		double cubesize = 0;
+		double sev2 = 0;
 		immediatesourceentity.setNoGravity(true);
-		CraftNoTaizaiMod.queueServerWork(100, () -> {
-			if (!immediatesourceentity.level().isClientSide())
-				immediatesourceentity.discard();
-		});
 		entity.getPersistentData().putDouble("range", 0);
 		entity.getPersistentData().putDouble("sx", (entity.getX()));
 		entity.getPersistentData().putDouble("sy", (entity.getY() + 1.2));
@@ -49,6 +59,11 @@ public class WhirlShockWhileProjectileFlyingTickProcedure {
 							(entity.getPersistentData().getDouble("sz") + Math.sin(entity.getPersistentData().getDouble("h")) * (entity.getDirection()).getStepX()), 4, 0.1, 0.1, 0.1, 0);
 				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
 			});
+		}
+		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));
+		if (immediatesourceentity.getPersistentData().getDouble("Flying") >= 200) {
+			if (!immediatesourceentity.level().isClientSide())
+				immediatesourceentity.discard();
 		}
 	}
 }

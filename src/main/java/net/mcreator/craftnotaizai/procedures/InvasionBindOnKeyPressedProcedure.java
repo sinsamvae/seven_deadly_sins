@@ -50,7 +50,7 @@ public class InvasionBindOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						KillSwitchSkillProcedure.execute(world, entity);
+						KillSwitchSkillProcedure.execute(entity);
 						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 								("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 40);
 					} else {

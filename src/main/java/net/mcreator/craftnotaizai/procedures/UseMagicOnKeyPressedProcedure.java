@@ -17,7 +17,7 @@ public class UseMagicOnKeyPressedProcedure {
 		AuraBurstKeybindProcedure.execute(world, entity);
 		UseMagicPressed2Procedure.execute(world, x, y, z, entity);
 		UseMagicPressed3Procedure.execute(world, x, y, z, entity);
-		DemonModeOnOnKeyPressedProcedure.execute(entity);
+		DemonModeOnOnKeyPressedProcedure.execute(world, entity);
 		HumandemonmarkProcedure.execute(entity);
 		ChastiefolButtonPressProcedure.execute(world, x, y, z, entity);
 		UseMagicPressed4Procedure.execute(world, x, y, z, entity);

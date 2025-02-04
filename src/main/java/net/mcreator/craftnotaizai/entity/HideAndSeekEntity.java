@@ -162,7 +162,7 @@ public class HideAndSeekEntity extends PathfinderMob implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.6);
 		builder = builder.add(Attributes.MAX_HEALTH, 15);
-		builder = builder.add(Attributes.ARMOR, 8);
+		builder = builder.add(Attributes.ARMOR, 3.2);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

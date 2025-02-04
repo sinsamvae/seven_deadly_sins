@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "pink_knight_sword"
+        "missing": "pink_knight_sword"
       },
       "name": "default"
     }

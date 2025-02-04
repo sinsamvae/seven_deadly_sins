@@ -83,8 +83,8 @@ public class GigaPickSkillProcedure {
 							}.checkGamemode(entityiterator) || entityiterator instanceof GigaPickEntity)) {
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:earth_magic")))),
 								(float) damage);
-						entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getX()) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getY()) * 1.3),
-								((entityiterator.getDeltaMovement().z() + entityiterator.getZ()) * 0)));
+						entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getLookAngle().x) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getLookAngle().y) * (-1.3)),
+								((entityiterator.getDeltaMovement().z() + entityiterator.getLookAngle().z) * 0)));
 					}
 				}
 			}
