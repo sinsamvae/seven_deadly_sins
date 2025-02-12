@@ -24,7 +24,7 @@ public class ElaineStoryEntityDiesProcedure {
 					if (entityiterator instanceof Player && !(entityiterator == entity)) {
 						{
 							double _setval = ((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).xp
-									+ Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 945) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
+									+ Math.ceil(entityiterator.getPersistentData().getDouble("level")) * 0.5 + 175) * ((double) CraftNoTaizaiConfiguration.XP_AMOUNT.get() / 10);
 							entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.xp = _setval;
 								capability.syncPlayerVariables(entityiterator);

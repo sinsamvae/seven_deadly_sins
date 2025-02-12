@@ -135,7 +135,6 @@ public class CraftNoTaizaiModVariables {
 			clone.mana_timer = original.mana_timer;
 			clone.Levitation = original.Levitation;
 			clone.WPressed = original.WPressed;
-			clone.mana_amount = original.mana_amount;
 			clone.mana_drain = original.mana_drain;
 			clone.attack_cd = original.attack_cd;
 			clone.TPAmount = original.TPAmount;
@@ -286,6 +285,9 @@ public class CraftNoTaizaiModVariables {
 			clone.trainingZ = original.trainingZ;
 			clone.demon_hearts = original.demon_hearts;
 			clone.defeat_bluedemon = original.defeat_bluedemon;
+			clone.demon = original.demon;
+			clone.defeat_drole = original.defeat_drole;
+			clone.defeat_gloxinia = original.defeat_gloxinia;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -617,7 +619,6 @@ public class CraftNoTaizaiModVariables {
 		public double mana_timer = 0;
 		public boolean Levitation = false;
 		public boolean WPressed = false;
-		public double mana_amount = 0;
 		public double mana_drain = 0;
 		public double attack_cd = 0;
 		public double TPAmount = 0;
@@ -769,6 +770,9 @@ public class CraftNoTaizaiModVariables {
 		public double trainingZ = 0;
 		public double demon_hearts = 0;
 		public double defeat_bluedemon = 0;
+		public boolean demon = false;
+		public double defeat_drole = 0;
+		public double defeat_gloxinia = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -827,7 +831,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("mana_timer", mana_timer);
 			nbt.putBoolean("Levitation", Levitation);
 			nbt.putBoolean("WPressed", WPressed);
-			nbt.putDouble("mana_amount", mana_amount);
 			nbt.putDouble("mana_drain", mana_drain);
 			nbt.putDouble("attack_cd", attack_cd);
 			nbt.putDouble("TPAmount", TPAmount);
@@ -979,6 +982,9 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("trainingZ", trainingZ);
 			nbt.putDouble("demon_hearts", demon_hearts);
 			nbt.putDouble("defeat_bluedemon", defeat_bluedemon);
+			nbt.putBoolean("demon", demon);
+			nbt.putDouble("defeat_drole", defeat_drole);
+			nbt.putDouble("defeat_gloxinia", defeat_gloxinia);
 			return nbt;
 		}
 
@@ -1040,7 +1046,6 @@ public class CraftNoTaizaiModVariables {
 			mana_timer = nbt.getDouble("mana_timer");
 			Levitation = nbt.getBoolean("Levitation");
 			WPressed = nbt.getBoolean("WPressed");
-			mana_amount = nbt.getDouble("mana_amount");
 			mana_drain = nbt.getDouble("mana_drain");
 			attack_cd = nbt.getDouble("attack_cd");
 			TPAmount = nbt.getDouble("TPAmount");
@@ -1192,6 +1197,9 @@ public class CraftNoTaizaiModVariables {
 			trainingZ = nbt.getDouble("trainingZ");
 			demon_hearts = nbt.getDouble("demon_hearts");
 			defeat_bluedemon = nbt.getDouble("defeat_bluedemon");
+			demon = nbt.getBoolean("demon");
+			defeat_drole = nbt.getDouble("defeat_drole");
+			defeat_gloxinia = nbt.getDouble("defeat_gloxinia");
 		}
 	}
 
@@ -1275,7 +1283,6 @@ public class CraftNoTaizaiModVariables {
 					variables.mana_timer = message.data.mana_timer;
 					variables.Levitation = message.data.Levitation;
 					variables.WPressed = message.data.WPressed;
-					variables.mana_amount = message.data.mana_amount;
 					variables.mana_drain = message.data.mana_drain;
 					variables.attack_cd = message.data.attack_cd;
 					variables.TPAmount = message.data.TPAmount;
@@ -1427,6 +1434,9 @@ public class CraftNoTaizaiModVariables {
 					variables.trainingZ = message.data.trainingZ;
 					variables.demon_hearts = message.data.demon_hearts;
 					variables.defeat_bluedemon = message.data.defeat_bluedemon;
+					variables.demon = message.data.demon;
+					variables.defeat_drole = message.data.defeat_drole;
+					variables.defeat_gloxinia = message.data.defeat_gloxinia;
 				}
 			});
 			context.setPacketHandled(true);

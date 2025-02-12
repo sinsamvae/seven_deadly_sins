@@ -17,6 +17,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -112,6 +113,11 @@ public class VivianAnimatedEntity extends PathfinderMob implements GeoEntity {
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, AndreDemonFormEntity.class, true, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, BlueDemonEntity.class, true, false));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, GrayDemonEntityEntity.class, true, false));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, MuramoDemonFormEntity.class, true, false));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, RedDemonGeckolibEntity.class, true, false));
 	}
 
 	@Override

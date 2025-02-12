@@ -16,7 +16,11 @@ import net.mcreator.craftnotaizai.procedures.Story8Procedure;
 import net.mcreator.craftnotaizai.procedures.Story7Procedure;
 import net.mcreator.craftnotaizai.procedures.Story6Procedure;
 import net.mcreator.craftnotaizai.procedures.Story5Procedure;
+import net.mcreator.craftnotaizai.procedures.Story52Procedure;
+import net.mcreator.craftnotaizai.procedures.Story51Procedure;
+import net.mcreator.craftnotaizai.procedures.Story50Procedure;
 import net.mcreator.craftnotaizai.procedures.Story4Procedure;
+import net.mcreator.craftnotaizai.procedures.Story49Procedure;
 import net.mcreator.craftnotaizai.procedures.Story48Procedure;
 import net.mcreator.craftnotaizai.procedures.Story47Procedure;
 import net.mcreator.craftnotaizai.procedures.Story46Procedure;
@@ -64,6 +68,8 @@ import net.mcreator.craftnotaizai.procedures.RedDemonKillProcedure;
 import net.mcreator.craftnotaizai.procedures.KillGiantVarProcedure;
 import net.mcreator.craftnotaizai.procedures.GrayDemonKillProcedure;
 import net.mcreator.craftnotaizai.procedures.EarthCrawlerKillsProcedure;
+import net.mcreator.craftnotaizai.procedures.DefeatGloxiniaVarProcedure;
+import net.mcreator.craftnotaizai.procedures.DefeatDroleVarProcedure;
 import net.mcreator.craftnotaizai.procedures.CaveOfTrainingVarProcedure;
 import net.mcreator.craftnotaizai.procedures.BlueDemonKillsProcedure;
 import net.mcreator.craftnotaizai.network.StoryBoardButtonMessage;
@@ -350,7 +356,7 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 		if (Story25Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_what_i_can_do_for_you"), -142, -71, -16711681, false);
 		if (Story25Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_meliodas_loses_elizabeth_again"), -149, -57, -16777216, false);
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_meliodas_loses_elizabeth_again"), -148, -56, -16777216, false);
 		if (Story25Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save"), -147, -42, -16777216, false);
 		if (Story25Procedure.execute(entity))
@@ -605,6 +611,54 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font,
 
 					BlueDemonKillsProcedure.execute(entity), -144, 14, -13369345, false);
+		if (Story49Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light"), -146, -72, -16711681, false);
+		if (Story49Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba"), -146, -58, -16777216, false);
+		if (Story49Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole"), -145, -41, -16777216, false);
+		if (Story49Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther"), -145, -23, -16777216, false);
+		if (Story49Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_servant"), -144, -1, -13369345, false);
+		if (Story50Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light1"), -146, -72, -16711681, false);
+		if (Story50Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba1"), -146, -57, -16777216, false);
+		if (Story50Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole1"), -146, -40, -16777216, false);
+		if (Story50Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther1"), -144, -19, -16777216, false);
+		if (Story50Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_clay_drole"), -144, 0, -13369345, false);
+		if (Story51Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light2"), -146, -72, -16711681, false);
+		if (Story51Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba2"), -145, -57, -16777216, false);
+		if (Story51Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole2"), -146, -39, -16777216, false);
+		if (Story51Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther2"), -145, -18, -16777216, false);
+		if (Story51Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_gowther1"), -144, -1, -13369345, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_19_meliodas_vsthe_ten_comma"), -146, -72, -16711681, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_as_escanors_battle_with_gowther"), -148, -57, -16777216, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_melioddas_must_now_face_the_rema"), -148, -42, -16777216, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_in_an_allout_battle"), -147, -21, -16777216, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_drole_gloxinia"), -146, -3, -13369345, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					DefeatDroleVarProcedure.execute(entity), -146, 12, -13369345, false);
+		if (Story52Procedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					DefeatGloxiniaVarProcedure.execute(entity), -146, 24, -13369345, false);
 	}
 
 	@Override

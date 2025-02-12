@@ -124,7 +124,17 @@ public class BlackHoundEntity extends TamableAnimal implements GeoEntity {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1) {
+			@Override
+			public boolean canUse() {
+				double x = BlackHoundEntity.this.getX();
+				double y = BlackHoundEntity.this.getY();
+				double z = BlackHoundEntity.this.getZ();
+				Entity entity = BlackHoundEntity.this;
+				Level world = BlackHoundEntity.this.level();
+				return super.canUse() && BlackhoundFollowReturnProcedure.execute(entity);
+			}
+		});
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));

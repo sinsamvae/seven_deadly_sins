@@ -8,6 +8,6 @@ public class RCoolDownVarProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Magi Disable: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).rCoolDown);
+		return "Magic Disable: " + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).rCoolDown);
 	}
 }

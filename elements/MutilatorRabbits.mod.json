@@ -158,7 +158,7 @@
     "spawningCondition": {
       "name": "SpawnCondtion"
     },
-    "spawningProbability": 10,
+    "spawningProbability": 15,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 2,
     "maxNumberOfMobsPerGroup": 3,

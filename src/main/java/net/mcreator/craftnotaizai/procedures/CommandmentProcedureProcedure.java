@@ -13,7 +13,7 @@ public class CommandmentProcedureProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = StringArgumentType.getString(arguments, "name");
+			String _setval = StringArgumentType.getString(arguments, "commandment");
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.commandment = _setval;
 				capability.syncPlayerVariables(entity);

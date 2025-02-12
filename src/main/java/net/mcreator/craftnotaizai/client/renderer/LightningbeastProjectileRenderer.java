@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class LightningbeastProjectileRenderer extends EntityRenderer<LightningbeastProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/lightingbeast.png");
+	private static final ResourceLocation texture = new ResourceLocation("craft_no_taizai:textures/entities/lightning_dragon.png");
 	private final Modelashdragon model;
 
 	public LightningbeastProjectileRenderer(EntityRendererProvider.Context context) {

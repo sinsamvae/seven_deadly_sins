@@ -3699,10 +3699,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -5842,25 +5838,6 @@
       "path": "~/Weapons/whip"
     },
     {
-      "name": "Changeracehumancommand",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changeracehumancommand",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangeracehumancommandProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/race"
-    },
-    {
       "name": "Changemagiccommand",
       "type": "procedure",
       "compiles": true,
@@ -5878,63 +5855,6 @@
         ]
       },
       "path": "~/Commands/magic/Set_Magic_Human"
-    },
-    {
-      "name": "Changedemon",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changedemon",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangedemonProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/race"
-    },
-    {
-      "name": "Changefairy",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changefairy",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangefairyProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/race"
-    },
-    {
-      "name": "Changegaint",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "changegaint",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangegaintProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/race"
     },
     {
       "name": "CapitaloftheDeadBlock",
@@ -6724,25 +6644,6 @@
         ]
       },
       "path": "~/particle"
-    },
-    {
-      "name": "GeckolibKrakenOnEntityTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "geckolib_kraken_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GeckolibKrakenOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities/Weak/very_hard/kraken"
     },
     {
       "name": "Banhood",
@@ -8055,10 +7956,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -10075,44 +9972,6 @@
           "src/main/resources/assets/craft_no_taizai/blockstates/sleeping_forest_wood.json",
           "src/main/java/net/mcreator/craftnotaizai/block/SleepingForestWoodBlock.java",
           "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_wood.json"
-        ]
-      },
-      "path": "~/Block/sleepingforestblocks"
-    },
-    {
-      "name": "SleepingForestSlab",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sleeping_forest_slab",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_slab.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_slab_top.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/sleeping_forest_slab.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_slab_full.json",
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/sleeping_forest_slab.json",
-          "src/main/resources/assets/craft_no_taizai/models/item/sleeping_forest_slab.json",
-          "src/main/java/net/mcreator/craftnotaizai/block/SleepingForestSlabBlock.java"
-        ]
-      },
-      "path": "~/Block/sleepingforestblocks"
-    },
-    {
-      "name": "SleepingForestStair",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sleeping_forest_stair",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/block/SleepingForestStairBlock.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/sleeping_forest_stair.json",
-          "src/main/resources/assets/craft_no_taizai/blockstates/sleeping_forest_stair.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_stair.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_stair_outer.json",
-          "src/main/resources/assets/craft_no_taizai/models/block/sleeping_forest_stair_inner.json",
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/sleeping_forest_stair.json"
         ]
       },
       "path": "~/Block/sleepingforestblocks"
@@ -17844,31 +17703,6 @@
       "path": "~/races/fairyclan/TrueSpiritSpear"
     },
     {
-      "name": "IncreasetruespiritspearParticles",
-      "type": "particle",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "increasetruespiritspear_particles",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/client/particle/IncreasetruespiritspearParticlesParticle.java",
-          "src/main/resources/assets/craft_no_taizai/particles/increasetruespiritspear_particles.json"
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/chastiefol/TrueSpirtSpear/Increase_True_Spirit_Spear"
-    },
-    {
-      "name": "IncreasetrueSpiritSpear3Dmodel",
-      "type": "particlemodel",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "increasetrue_spirit_spear_3_dmodel",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Weapons/Sacred Treasure/chastiefol/TrueSpirtSpear/Increase_True_Spirit_Spear"
-    },
-    {
       "name": "IncreaseTrueSpiritSpear",
       "type": "procedure",
       "compiles": true,
@@ -20516,19 +20350,6 @@
       "path": "~/Magic Abilities/ark/elizebeth/Goddess Bless"
     },
     {
-      "name": "FairyTreeWoodSticks",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fairy_tree_wood_sticks",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_no_taizai/recipes/fairy_tree_wood_sticks.json"
-        ]
-      },
-      "path": "~/Recipe/FairyTreeRecipe"
-    },
-    {
       "name": "GrayDemonEntityOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
@@ -21931,10 +21752,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -22741,10 +22558,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -22807,10 +22620,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -23192,10 +23001,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -23244,15 +23049,7 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
             "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
             "type": "number"
           },
           {
@@ -23340,10 +23137,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -23526,10 +23319,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -23904,10 +23693,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -24308,10 +24093,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -25210,31 +24991,6 @@
       "path": "~/Magic Abilities/ten commandments/Hell Gate/HellGate/HellGateDemon"
     },
     {
-      "name": "BreakableBugParticles",
-      "type": "particle",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "breakable_bug_particles",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/client/particle/BreakableBugParticlesParticle.java",
-          "src/main/resources/assets/craft_no_taizai/particles/breakable_bug_particles.json"
-        ]
-      },
-      "path": "~/Magic Abilities/ten commandments/Curse/Breakable Bug"
-    },
-    {
-      "name": "InsectParticle3D",
-      "type": "particlemodel",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "insect_particle_3_d",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Magic Abilities/ten commandments/Curse/Breakable Bug"
-    },
-    {
       "name": "BreakableBugSkill",
       "type": "procedure",
       "compiles": true,
@@ -25271,10 +25027,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -25696,10 +25448,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -25996,10 +25744,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -27296,10 +27040,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -29720,10 +29460,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -30081,113 +29817,6 @@
         ]
       },
       "path": "~/Gui/StoryGui/storyvar"
-    },
-    {
-      "name": "CannonEntity",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cannon_entity",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craft_no_taizai/models/item/cannon_entity_spawn_egg.json",
-          "src/main/java/net/mcreator/craftnotaizai/client/renderer/CannonEntityRenderer.java",
-          "src/main/java/net/mcreator/craftnotaizai/entity/CannonEntityEntity.java"
-        ]
-      },
-      "path": "~/entities/Cannon"
-    },
-    {
-      "name": "CannonGui",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cannon_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/network/CannonGuiButtonMessage.java",
-          "src/main/java/net/mcreator/craftnotaizai/world/inventory/CannonGuiMenu.java",
-          "src/main/java/net/mcreator/craftnotaizai/client/gui/CannonGuiScreen.java"
-        ]
-      },
-      "path": "~/entities/Cannon/CannonGui"
-    },
-    {
-      "name": "CannonEntityRightClickedOnEntity",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cannon_entity_right_clicked_on_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CannonEntityRightClickedOnEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/entities/Cannon"
-    },
-    {
-      "name": "CannonAcceptQuest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cannon_accept_quest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CannonAcceptQuestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities/Cannon/CannonGui"
-    },
-    {
-      "name": "CannonDenyQuest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cannon_deny_quest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CannonDenyQuestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities/Cannon/CannonGui"
     },
     {
       "name": "SideQuestClaim",
@@ -34344,25 +33973,6 @@
       "path": "~/races/Giant"
     },
     {
-      "name": "EnititesStats",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enitites_stats",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/EnititesStatsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/entities"
-    },
-    {
       "name": "LowerPower",
       "type": "procedure",
       "compiles": true,
@@ -34419,52 +34029,6 @@
         ]
       },
       "path": "~/var"
-    },
-    {
-      "name": "PerpetualReincarnation",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "perpetual_reincarnation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/PerpetualReincarnationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/races/Human_Clan"
-    },
-    {
-      "name": "SetReincarnation",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_reincarnation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SetReincarnationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/races/Human_Clan"
     },
     {
       "name": "ReRollMagicRightclicked",
@@ -34647,29 +34211,6 @@
         ]
       },
       "path": "~/items/Cup/CiderMug"
-    },
-    {
-      "name": "SetEternalLife",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_eternal_life",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SetEternalLifeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/races/Demon_Clan"
     },
     {
       "name": "ReaperScythe",
@@ -35695,7 +35236,7 @@
           }
         ]
       },
-      "path": "~/Magic Abilities"
+      "path": "~/Magic Abilities/Chaos/Wicked Bite"
     },
     {
       "name": "DivineSlashSkill",
@@ -36709,22 +36250,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -37103,22 +36628,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -38582,6 +38091,693 @@
         ]
       },
       "path": "~/StoryModeEntities/Season2/Drole"
+    },
+    {
+      "name": "GerheadeservantEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gerheadeservant_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GerheadeservantEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Gerheade"
+    },
+    {
+      "name": "StoneDroleOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_drole_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/StoneDroleOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Drole"
+    },
+    {
+      "name": "StoneDroleEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_drole_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/StoneDroleEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Drole"
+    },
+    {
+      "name": "Story50",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_50",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/Story50Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui/storyvar"
+    },
+    {
+      "name": "GerheadeservantOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gerheadeservant_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GerheadeservantOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Gerheade"
+    },
+    {
+      "name": "ChangeRacecommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_racecommand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangeRacecommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/race"
+    },
+    {
+      "name": "StoryButton1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_button_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/StoryButton1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui"
+    },
+    {
+      "name": "Storybutton2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "storybutton_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/Storybutton2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui"
+    },
+    {
+      "name": "GowtherEP18",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gowther_ep_18",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/GowtherEP18Entity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/GowtherEP18Renderer.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/gowther_ep_18_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/GowtherEP18Model.java"
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/GowtherEP18"
+    },
+    {
+      "name": "Story51",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_51",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/Story51Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui/storyvar"
+    },
+    {
+      "name": "SleepingForestLogRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleeping_forest_log_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/sleeping_forest_log_recipe.json"
+        ]
+      },
+      "path": "~/Recipe/Sleeping Forest"
+    },
+    {
+      "name": "TPSpirt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tp_spirt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TPSpirtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/stats/AddStat"
+    },
+    {
+      "name": "GowtherEP18OnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gowther_ep_18_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GowtherEP18OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/GowtherEP18"
+    },
+    {
+      "name": "GowtherEP18EntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gowther_ep_18_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GowtherEP18EntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/GowtherEP18"
+    },
+    {
+      "name": "Story52",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_52",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/Story52Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui/storyvar"
+    },
+    {
+      "name": "Story53",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_53",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/Story53Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gui/StoryGui/storyvar"
+    },
+    {
+      "name": "GloxiniaStory",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gloxinia_story",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/GloxiniaStoryEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/GloxiniaStoryRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/GloxiniaStoryModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/gloxinia_story_spawn_egg.json"
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Gloxinia"
+    },
+    {
+      "name": "Drole",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drole",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/DroleModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/drole_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/DroleRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/DroleEntity.java"
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Drole2"
+    },
+    {
+      "name": "DroleOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drole_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DroleOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Drole2"
+    },
+    {
+      "name": "DefeatDroleVar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defeat_drole_var",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DefeatDroleVarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/var"
+    },
+    {
+      "name": "DefeatGloxiniaVar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defeat_gloxinia_var",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DefeatGloxiniaVarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/var"
+    },
+    {
+      "name": "GloxiniaStoryOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gloxinia_story_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GloxiniaStoryOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Gloxinia"
+    },
+    {
+      "name": "GloxiniaStoryEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gloxinia_story_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/GloxiniaStoryEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Gloxinia"
+    },
+    {
+      "name": "IncreaseTrueSpiritSpearProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_true_spirit_spear_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/IncreaseTrueSpiritSpearProjectileEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/IncreaseTrueSpiritSpearProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/chastiefol/TrueSpirtSpear/Increase_True_Spirit_Spear"
+    },
+    {
+      "name": "IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "increase_true_spirit_spear_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Weapons/Sacred Treasure/chastiefol/TrueSpirtSpear/Increase_True_Spirit_Spear"
+    },
+    {
+      "name": "DroleEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drole_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DroleEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Drole2"
+    },
+    {
+      "name": "BreakableBugProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breakable_bug_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/BreakableBugProjectileEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/BreakableBugProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Magic Abilities/ten commandments/Curse/Breakable Bug"
+    },
+    {
+      "name": "BreakableBugProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breakable_bug_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/BreakableBugProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/ten commandments/Curse/Breakable Bug"
+    },
+    {
+      "name": "BreakableBugProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "breakable_bug_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/BreakableBugProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/ten commandments/Curse/Breakable Bug"
+    },
+    {
+      "name": "SetStory52To53",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_52_to_53",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetStory52To53Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/StoryModeEntities/Season2/Story52"
     }
   ],
   "variable_elements": [
@@ -38914,12 +39110,6 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "mana_amount",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "mana_drain",
@@ -40006,6 +40196,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "demon",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "defeat_drole",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "defeat_gloxinia",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -40299,7 +40507,6 @@
       "CUSTOM:GuilaDemonanimated",
       "CUSTOM:GrayDemonHendricksonAnimated",
       "CUSTOM:Albion",
-      "CUSTOM:GrayDemon",
       "CUSTOM:AlbionFat",
       "CUSTOM:AlbionTall",
       "CUSTOM:TallAlbion",
@@ -40315,7 +40522,11 @@
       "EntityStray",
       "EntityWither",
       "EntityWitherSkeleton",
-      "EntityPhantom"
+      "EntityPhantom",
+      "CUSTOM:BlueDemon",
+      "CUSTOM:Galand",
+      "CUSTOM:GalandOver",
+      "CUSTOM:GalandStory2"
     ],
     "ITEMS:mod:rare_clover_trades": [
       "CUSTOM:TeleportationOrb",
@@ -40329,7 +40540,8 @@
     ],
     "BLOCKS:minecraft:logs": [
       "CUSTOM:FairyTreesLog",
-      "CUSTOM:FairyKingLog"
+      "CUSTOM:FairyKingLog",
+      "CUSTOM:SleepingForestWood"
     ],
     "ENTITIES:mod:skill": [
       "CUSTOM:BlackOut",
@@ -40379,7 +40591,6 @@
       "~CUSTOM:PurgatoryBrickSlab",
       "~CUSTOM:PurgatorySlab",
       "~CUSTOM:FairyTreeSlab",
-      "~CUSTOM:SleepingForestSlab",
       "~CUSTOM:AreaWoodSlab",
       "~CUSTOM:AreaSlab"
     ],
@@ -40411,8 +40622,7 @@
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:PurgatoryBrickStair",
       "~CUSTOM:PurgatoryStair",
-      "~CUSTOM:FairyTreeStaires",
-      "~CUSTOM:SleepingForestStair"
+      "~CUSTOM:FairyTreeStaires"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:ZeldrisSword",
@@ -40439,6 +40649,10 @@
       "~CUSTOM:Chastiefol2",
       "~CUSTOM:DragonHandle",
       "CUSTOM:Lostvayne"
+    ],
+    "ITEMS:minecraft:planks": [
+      "CUSTOM:FairyTreeWood",
+      "CUSTOM:SleepingForestPlank"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:HolyTreeOre",
@@ -40475,6 +40689,49 @@
       "CUSTOM:WhirlShockProjectile",
       "CUSTOM:WindShotProjectile"
     ],
+    "ENTITIES:mod:story_entities": [
+      "CUSTOM:TwigoAnimated",
+      "CUSTOM:GilThunderAnimated",
+      "CUSTOM:GolgiusAnimated",
+      "CUSTOM:DianeAnimated",
+      "CUSTOM:FriesiaAnimated",
+      "CUSTOM:RuinAnimated",
+      "CUSTOM:GuilaAnimated",
+      "CUSTOM:TaizooAnimated",
+      "CUSTOM:GriamoreAnimated",
+      "CUSTOM:HowzerAnimated",
+      "CUSTOM:CainBarzadAnimated",
+      "CUSTOM:StoryBanAnimated",
+      "CUSTOM:JerichoAnimated",
+      "CUSTOM:GuilaDemonanimated",
+      "CUSTOM:HelbremAnimated",
+      "CUSTOM:DaleArmored",
+      "CUSTOM:DaleSec",
+      "CUSTOM:Dalefinal",
+      "CUSTOM:FairyHelbremAnimated",
+      "CUSTOM:DreyfusAnimated",
+      "CUSTOM:GilThunderAnimated2",
+      "CUSTOM:HendricksonAnimated",
+      "CUSTOM:JerichoDemonForm",
+      "CUSTOM:DeadHelbramanimated",
+      "CUSTOM:StoryBan2Animated",
+      "CUSTOM:DemonHendricksonAnimated",
+      "CUSTOM:GrayDemonHendricksonAnimated",
+      "CUSTOM:Dogedo",
+      "CUSTOM:GowtherStory1",
+      "CUSTOM:Galand",
+      "CUSTOM:KingStory1",
+      "CUSTOM:GalandStory2",
+      "CUSTOM:ElaineStory",
+      "CUSTOM:GalandOver",
+      "CUSTOM:Jigumo",
+      "CUSTOM:Torah",
+      "CUSTOM:Gerheadeservant",
+      "CUSTOM:StoneDrole",
+      "CUSTOM:GowtherEP18",
+      "CUSTOM:GloxiniaStory",
+      "CUSTOM:Drole"
+    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:StaffOfImprisonment",
       "~CUSTOM:TwinBowHerritt",
@@ -40507,11 +40764,9 @@
       "Items.DIAMOND_PICKAXE"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR",
-      "~Blocks.COBBLED_DEEPSLATE",
-      "~Blocks.STONE#0",
-      "~Blocks.DIRT#0",
       "~Blocks.GRASS",
+      "~Blocks.STONE#0",
+      "~Blocks.AIR",
       "~CUSTOM:PurgatoryBlock",
       "~CUSTOM:PurgatoryBrick",
       "~CUSTOM:CapitalOfTheDeadGround",
@@ -40570,20 +40825,26 @@
       "CUSTOM:KingStory1",
       "CUSTOM:GalandStory2",
       "CUSTOM:ElaineStory",
-      "CUSTOM:EscanorBoss"
+      "CUSTOM:EscanorBoss",
+      "CUSTOM:GalandOver"
     ],
     "ITEMS:mod:uncommon_clover_trades": [
       "CUSTOM:ChickenMatangoMushRoom",
       "Blocks.REEDS",
       "Items.POTATO"
     ],
+    "BLOCKS:minecraft:dirt": [
+      "CUSTOM:SleepingForestDirt"
+    ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:SleepingForestPlank",
       "~CUSTOM:FairyTreeSlab",
       "~CUSTOM:FairyTreeStaires",
       "~CUSTOM:FairyTreeFence",
       "~CUSTOM:FairyTreeWood",
       "~CUSTOM:Keg",
-      "~CUSTOM:FairyTreesLog"
+      "~CUSTOM:FairyTreesLog",
+      "~CUSTOM:SleepingForestWood"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:HolyTreeOre",
@@ -40605,7 +40866,8 @@
       "CUSTOM:AndreDemonForm",
       "CUSTOM:GrayDemonEntity",
       "#mod:tamed_skills",
-      "CUSTOM:Gerheadeservant"
+      "CUSTOM:Gerheadeservant",
+      "CUSTOM:StoneDrole"
     ],
     "BLOCKS:minecraft:fences": [
       "~CUSTOM:FairyTreeFence",
@@ -40646,21 +40908,60 @@
       "TrollEar",
       "CookTrollEar",
       "MinimumTablets"
+    ],
+    "CUSTOM:SdsBlocks": [
+      "CapitaloftheDeadBlock",
+      "PerfectCube",
+      "BarDoor",
+      "HayBaleRoof",
+      "AreaGround",
+      "Areawood",
+      "Areafence",
+      "AreaSlab",
+      "AreaWoodSlab",
+      "TalaVillageFlower",
+      "CapitalOfTheDeadGroundBlock",
+      "CapitalOfTheDeadGround",
+      "SleepingForestWood",
+      "SleepingForestPlank",
+      "FairyTreesLog",
+      "FairyKingLog",
+      "FairyKingLeave",
+      "FairyKingLeaves",
+      "EmptyMug",
+      "GoddassOre",
+      "FairyTreeWood",
+      "FairyTreeFence",
+      "FairyTreeStaires",
+      "FairyTreeSlab",
+      "BasteDungeonWalls",
+      "BasteDungeonRoof",
+      "PurgatoryBlock",
+      "PurgatorySlab",
+      "PurgatoryStair",
+      "PurgatoryBrick",
+      "PurgatoryBrickSlab",
+      "PurgatoryBrickStair",
+      "SleepingForestDirt",
+      "TowerOfTrials",
+      "CaveOfTraining",
+      "SideMountain",
+      "RhittaBlock"
     ]
   },
   "language_map": {
     "en_us": {
-      "gui.craft_no_taizai.story_board.label_go_to_the_fairy_king_forest_biom": "Go To the Fairy King Forest Biome",
-      "block.craft_no_taizai.stage_two_agave": "Stage Two Agave",
       "gui.craft_no_taizai.disaster_menu.label_empty": "\u003e",
+      "block.craft_no_taizai.stage_two_agave": "Stage Two Agave",
+      "gui.craft_no_taizai.story_board.label_go_to_the_fairy_king_forest_biom": "Go To the Fairy King Forest Biome",
       "gui.craft_no_taizai.story_board.label_what_have_they_come_for2": "What have they come for?",
       "item.craft_no_taizai.vivian_armor_chestplate": "Vivian Chestplate",
       "gui.craft_no_taizai.story_board.label_what_have_they_come_for1": "What have they come for?",
       "block.craft_no_taizai.fairy_king_log": "Fairy King Log",
       "item.craft_no_taizai.reaper_scythe_entity_spawn_egg": "Reaper Scythe Spawn Egg",
       "entity.craft_no_taizai.jumanju_entity": "Jumanju Entity",
-      "item.craft_no_taizai.meliodasdanaforarmor_chestplate": "Danafor Armor",
       "gui.craft_no_taizai.giant_clan.label_random_200_to_500": "Random: 150 to 350",
+      "item.craft_no_taizai.meliodasdanaforarmor_chestplate": "Danafor Armor",
       "gui.craft_no_taizai.story_board.label_defeat_jigumo": "Defeat Jigumo",
       "effect.craft_no_taizai.fossilization_effect": "Fossilization Effect",
       "gui.craft_no_taizai.story_board.label_the_other_memebers_of_the_seven": "The other memebers of the seven deadly sins",
@@ -40673,13 +40974,13 @@
       "entity.craft_no_taizai.royal_gurard_animated": "Royal Guard",
       "entity.craft_no_taizai.anaon": "Anaon",
       "entity.craft_no_taizai.fighting_area": "Fighting Area",
-      "item.craft_no_taizai.gil_thunder_armor_chestplate": "GilThunder Armor",
       "item.craft_no_taizai.dianeoutfit_chestplate": "Diane Shirt",
+      "item.craft_no_taizai.gil_thunder_armor_chestplate": "GilThunder Armor",
       "entity.craft_no_taizai.galand": "Galand",
-      "gui.craft_no_taizai.theo_gui.label_back": ". Back",
       "item.craft_no_taizai.kings_armor_leggings": "Kings Leggings",
-      "gui.craft_no_taizai.story_board.label_season_2_will_be_added_in_soon": "with a medal ceremony.",
+      "gui.craft_no_taizai.theo_gui.label_back": ". Back",
       "item.craft_no_taizai.diane_animated_spawn_egg": "Diane Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_season_2_will_be_added_in_soon": "with a medal ceremony.",
       "entity.craft_no_taizai.guila_demonanimated": "Guila",
       "gui.craft_no_taizai.story_board.label_ep_9_a_promise_to_a_loved_one": "EP 9: A Promise To A Loved One",
       "entity.craft_no_taizai.vivian_animated": "Vivian Animated",
@@ -40693,14 +40994,16 @@
       "gui.craft_no_taizai.story_board.label_the_seven_deadly_sins": "EP1: The Seven Deadly Sins",
       "death.attack.wind_magic.player": "%1$s died whilst trying to escape %2$s",
       "advancements.sapphire.descr": "Get BP 11300",
-      "advancements.defeat_ban.descr": "Defeat The Sin Of Greed",
       "item.craft_no_taizai.manta_spawn_egg": "Mantaray Spawn Egg",
+      "advancements.defeat_ban.descr": "Defeat The Sin Of Greed",
       "gui.craft_no_taizai.dubs_trade.label_trade": "TRADE",
       "item.craft_no_taizai.marmas_spawn_egg": "Marmas Spawn Egg",
       "item.craft_no_taizai.dusk_bison_1_spawn_egg": "Dusk Bison Spawn Egg",
       "item.craft_no_taizai.howzer_armor_chestplate": "Howzer Armor",
       "advancements.red_demon_blood.title": "Demon Blood",
       "item.craft_no_taizai.anaon_spawn_egg": "Anaon Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther2": "against his fellow ally Gowther.",
+      "gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther1": "against his fellow ally Gowther.",
       "gui.craft_no_taizai.story_board.label_baste_dungeon_but_the_group_is": "Baste Dungeon, but the group is assailed by an enemy",
       "gui.craft_no_taizai.gaint_clan.button_empty1": "\u003c",
       "block.craft_no_taizai.sleeping_forest_dirt": "Sleeping Forest Dirt",
@@ -40711,23 +41014,24 @@
       "gui.craft_no_taizai.giant_clan.label_magic": "Magic",
       "item.craft_no_taizai.andre_armor_leggings": "Andre Leggings",
       "block.craft_no_taizai.fairy_tree_slab": "Fairy Tree Slab",
-      "gui.craft_no_taizai.story_board.label_defeat_ban_and_helbram": "Defeat Ban And Helbram",
       "item.craft_no_taizai.luigi_spawn_egg": "Luigi Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_defeat_ban_and_helbram": "Defeat Ban And Helbram",
       "gui.craft_no_taizai.possession.label_deny": "DENY",
       "gui.craft_no_taizai.fairy_clan_ui.label_50_strength": "- Strength: 0 to 10",
       "gui.craft_no_taizai.story_board.label_with_fraudrins_manipulation_of": "With Fraudrin\u0027s manipulation of Hendrickson, the",
-      "gui.craft_no_taizai.disaster_menu.label_page_2": "Page 2.",
       "entity.craft_no_taizai.weinheidt_animated": "Weinheidt",
+      "gui.craft_no_taizai.disaster_menu.label_page_2": "Page 2.",
       "gui.craft_no_taizai.disaster_menu.label_page_3": "Page 3.",
       "gui.craft_no_taizai.disaster_menu.tooltip_learned_skills_from_magic_scroll": "Learned Skills from Magic Scroll",
       "gui.craft_no_taizai.disaster_menu.label_page_1": "Page 1.",
       "item.craft_no_taizai.earth_crawler_tail_cooked": "Earth Crawler Tail",
+      "entity.craft_no_taizai.gowther_ep_18": "Gowther",
       "item.craft_no_taizai.howzer_armor_leggings": "Howzer Armor",
       "gui.craft_no_taizai.story_board.label_proceed_to_the_dungeon": "proceed to the dungeon",
-      "gui.craft_no_taizai.story_board.label_the_surviving_challengers_of_the": "The surviving challengers of the Great Fight Festival",
       "gui.craft_no_taizai.demon_clan.label_30_health": "- Health: 30 to 40",
-      "item.craft_no_taizai.guila_demonanimated_spawn_egg": "Guila Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_the_surviving_challengers_of_the": "The surviving challengers of the Great Fight Festival",
       "item.craft_no_taizai.gowther_boss_animated_spawn_egg": "Gowther Boss Spawn Egg",
+      "item.craft_no_taizai.guila_demonanimated_spawn_egg": "Guila Spawn Egg",
       "gui.craft_no_taizai.story_board.label_proceed_to_the_dungeon1": "proceed to the dungeon",
       "item.craft_no_taizai.earth_crawler_tail": "Raw Earth Crawler Tail",
       "item.craft_no_taizai.zeldris_sword": "Zeldris_Sword",
@@ -40740,18 +41044,18 @@
       "gui.craft_no_taizai.story_board.label_next_challanger_griamore_appears": "Second round challanger Griamore appears",
       "entity.craft_no_taizai.hide_and_seek": "Hide And Seek",
       "item.craft_no_taizai.chicken_matango_mush_room": "Chicken_Matango MushRoom",
-      "entity.craft_no_taizai.elaine_story": "Elaine",
       "item.craft_no_taizai.hendrickson_armor_leggings": "HendrickSon Leggings",
+      "entity.craft_no_taizai.elaine_story": "Elaine",
       "item.craft_no_taizai.taizoo_animated_spawn_egg": "Taizoo Spawn Egg",
       "item.craft_no_taizai.ban_armor_s_2_chestplate": "Ban ChestPlate",
-      "gui.craft_no_taizai.jenna_gui.label_youll_need_to_get_into_fighting": "You\u0027ll need to get into fighting shape",
       "entity.craft_no_taizai.muramo_animated": "Muramo",
-      "block.craft_no_taizai.sleeping_forest_stair": "Sleeping Forest Stairs",
+      "gui.craft_no_taizai.jenna_gui.label_youll_need_to_get_into_fighting": "You\u0027ll need to get into fighting shape",
       "gui.craft_no_taizai.story_board.label_chased_by_the_seven_deadly_sins": "Chased by the Seven Deadly Sins, Hendrickson makes two",
       "block.craft_no_taizai.baste_dungeon_walls": "Baste Dungeon Walls",
       "gui.craft_no_taizai.disaster_menu.tooltip_stats": "Stats",
       "entity.craft_no_taizai.red_demon_geckolib": "Red Demon",
       "item.craft_no_taizai.galand_over_spawn_egg": "Galand Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther": "against his fellow ally Gowther.",
       "advancements.defeat_meliodas.descr": "Defeat The Sin Of Wrath",
       "gui.craft_no_taizai.theo_tower.label_tower_of_trail": "Tower of Trails",
       "gui.craft_no_taizai.guild_accept_gui.label_deny": "DENY",
@@ -40761,6 +41065,7 @@
       "gui.craft_no_taizai.story_board.label_thrid_round": "Third round challanger howzer appears",
       "entity.craft_no_taizai.chain_explosion_v_2": "Chain Explosion",
       "subtitles.troll_idle": "",
+      "item.craft_no_taizai.gowther_ep_18_spawn_egg": "Gowther Spawn Egg",
       "entity.craft_no_taizai.clay_dragon": "Clay Dragon",
       "entity.craft_no_taizai.cain_barzad_animated": "Cain Barzad",
       "gui.craft_no_taizai.story_board.label_comrades_with_her_memories_fadi": "comrades. With her memories fading, she heads for",
@@ -40776,9 +41081,10 @@
       "biome.craft_no_taizai.cave_training_biome": "Cave Training Biome",
       "item.craft_no_taizai.bullet_squall_spawn_egg": "Bullet Squall Spawn Egg",
       "item_group.craft_no_taizai.items": "Craft No Taizai Items",
-      "gui.craft_no_taizai.story_board.label_meliodas_is_reunited_with_elizab": "Meliodas is reunited with Elizabeth; Ban learns he",
       "gui.craft_no_taizai.story_board.label_megadoza_home_of_the_giant_clan": "Megadoza, home of the Giant Clan.",
+      "gui.craft_no_taizai.story_board.label_meliodas_is_reunited_with_elizab": "Meliodas is reunited with Elizabeth; Ban learns he",
       "item.craft_no_taizai.ruin_armor_chestplate": "Ruin Chestplate",
+      "entity.craft_no_taizai.gloxinia_story": "Gloxinia",
       "entity.craft_no_taizai.taizoo_animated": "Taizoo",
       "item.craft_no_taizai.meliodasoutfit_chestplate": "Meliodas Shirt",
       "item.craft_no_taizai.diane_boss_animated_spawn_egg": "Diane Boss Spawn Egg",
@@ -40788,8 +41094,8 @@
       "item.craft_no_taizai.geckolib_kraken_spawn_egg": "Kraken Spawn Egg",
       "effect.craft_no_taizai.minimum_tablets_effect": "Minimum Tablets",
       "gui.craft_no_taizai.story_board.button_start2": "Start",
-      "gui.craft_no_taizai.story_board.button_start1": "Start",
       "item_group.craft_no_taizai.foods": "Craft No Taizai Foods",
+      "gui.craft_no_taizai.story_board.button_start1": "Start",
       "item.craft_no_taizai.merlin_outfit_chestplate": "Merlin Shirt",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_well_shall_give_you_mission": "Well shall give you mission.",
       "gui.craft_no_taizai.story_board.label_ep_17_legendary_figures_part_2": "EP 17: Legendary Figures Part 2",
@@ -40806,6 +41112,7 @@
       "gui.craft_no_taizai.story_board.label_set_on_crushing_the_whole_town_a": "set on crushing the whole town and the seven deadly sin",
       "subtitles.duskbison_hurt": "",
       "gui.craft_no_taizai.story_board.tooltip_skills": "Magic",
+      "item.craft_no_taizai.gloxinia_story_spawn_egg": "Gloxinia Spawn Egg",
       "gui.craft_no_taizai.disaster_menu.tooltip_demon_king_magic": "Demon King Magic",
       "gui.craft_no_taizai.theo_gui.label_tower_of_trail_will_increase_you": "Will increase you\u0027re magical stats",
       "item.craft_no_taizai.friesiaarmor_leggings": "Friesia Leggings",
@@ -40823,17 +41130,17 @@
       "gui.craft_no_taizai.fairy_clan_ui.label_magic": "Magic",
       "item.craft_no_taizai.soldier_animated_spawn_egg": "Soldier Spawn Egg",
       "gui.craft_no_taizai.story_board.label_defeat_5_earth_crawlers": "Defeat Earth Crawlers ",
-      "gui.craft_no_taizai.story_board.label_the_fairies_reconcile_their_diff": "The fairies reconcile their differences with King as Ban",
       "item.craft_no_taizai.helbrumsword": "Holy Tree Sword",
+      "gui.craft_no_taizai.story_board.label_the_fairies_reconcile_their_diff": "The fairies reconcile their differences with King as Ban",
       "entity.craft_no_taizai.acid_twower_mob": "Acid Twower Mob",
       "item.craft_no_taizai.fairy_helbrem_animated_spawn_egg": "Fairy Helbrem Animated Spawn Egg",
       "gui.craft_no_taizai.story_board.label_go_to_the_sleeping_forest_biome": "Go To the Sleeping Forest Biome",
       "subtitles.tonado": "",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_who_are_you": "Who Are You?",
       "entity.craft_no_taizai.vine": "Vine",
-      "entity.craft_no_taizai.merlin_boss_animated": "Merlin Boss Animated",
-      "key.craft_no_taizai.mantaray_space": "Move",
       "item.craft_no_taizai.royalknight_leggings": "Royalknight Leggings",
+      "key.craft_no_taizai.mantaray_space": "Move",
+      "entity.craft_no_taizai.merlin_boss_animated": "Merlin Boss Animated",
       "advancements.emerald_advancement.title": "Emerald",
       "gui.craft_no_taizai.story_board.label_commandments_meliodas_vigorousl": "Commandments, Meliodas vigorously trains with the Druids",
       "gui.craft_no_taizai.story_board.label_intentions": "intentions.",
@@ -40851,6 +41158,7 @@
       "gui.craft_no_taizai.theo_gui.label_tower_of_trail": "Tower Of Trail",
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie": "Must fight the holy knights Friesia and Ruin ",
       "gui.craft_no_taizai.demon_stat.tooltip_skills": "Magic",
+      "gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba": "King and Diane continue their battle against opponents ",
       "item.craft_no_taizai.kulumil_spawn_egg": "Kulumil Spawn Egg",
       "key.craft_no_taizai.double_jump": "Double Jump",
       "item.craft_no_taizai.fairy_helbram_armor_leggings": "Helbram Leggings",
@@ -40890,9 +41198,10 @@
       "advancements.defeat_merlin.title": "Defeat Deadly Sin",
       "gui.craft_no_taizai.skillslots.label_x1": "x",
       "subtitles.fullconter": "",
+      "gui.craft_no_taizai.demon_stat.tooltip_increase_maxhealth": "Increase MaxHealth",
       "item.craft_no_taizai.galand_spawn_egg": "Galand Spawn Egg",
       "gui.craft_no_taizai.story_board.label_as_melascula_and_galand_of_the_t": "ments begin their attack on Britannia. A resurrected",
-      "item.craft_no_taizai.fragment_of_eternal_darkness_2": "Fragment Of Eternal Darkness",
+      "item.craft_no_taizai.fragment_of_eternal_darkness_2": "Human \u0026 Giant Fragment Of Eternal Darkness",
       "key.craft_no_taizai.open_stats": "Open Stats",
       "subtitles.chicken_matango_dies": "",
       "gui.craft_no_taizai.demon_stat.tooltip_settings": "Settings",
@@ -40903,7 +41212,7 @@
       "item.craft_no_taizai.ban_armor_leggings": "Ban Leggings",
       "entity.craft_no_taizai.sunflower": "Sunflower",
       "entity.craft_no_taizai.guila_animated": "Guila",
-      "item.craft_no_taizai.fragment_of_eternal_darkness_3": "Fragment Of Eternal Darkness",
+      "item.craft_no_taizai.fragment_of_eternal_darkness_3": "Goddess Fragment Of Eternal Darkness",
       "gui.craft_no_taizai.story_board.label_a_frail_zhivago_reunites_wtih_ba": "A frail Zhivago reunites Wtih Ban, his long-lost adopted",
       "key.craft_no_taizai.lock_on": "Lock On",
       "item.craft_no_taizai.demon_king_spawn_egg": "Demon King Spawn Egg",
@@ -40962,7 +41271,7 @@
       "death.attack.lightning_magic.item": "%1$s was killed by %2$s using %3$s",
       "effect.craft_no_taizai.freeze_coffin_potion_effect": "Freeze Coffin Potion Effect",
       "entity.craft_no_taizai.simon_animated": "Simon",
-      "item.craft_no_taizai.dreyfus_sword": "Dreyfus Sword",
+      "item.craft_no_taizai.dreyfus_sword": "Broad Sword",
       "item.craft_no_taizai.gowther_armor_s_2_chestplate": "Gowther Chestplate",
       "entity.craft_no_taizai.soldier_animated": "Soldier",
       "item.craft_no_taizai.liz_sword": "Liz Sword",
@@ -41073,6 +41382,8 @@
       "death.attack.fire_magic.player": "%1$s died whilst trying to escape %2$s",
       "gui.craft_no_taizai.demon_stat.button_empty": "+",
       "gui.craft_no_taizai.demon_stat.tooltip_guild": "Guild",
+      "gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole2": "summoned by Gloxinia and Drole. Escanor refuses to fight",
+      "gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole1": "summoned by Gloxinia and Drole. Escanor refuses to fight",
       "gui.craft_no_taizai.story_board.button_start": "Start",
       "gui.craft_no_taizai.magic_menu.tooltip_demon_king_magic": "Demon King Magic",
       "gui.craft_no_taizai.story_board.label_when_the_holy_knights_defended_t": "When the Holy Knights defended the realm wielding",
@@ -41099,8 +41410,8 @@
       "gui.craft_no_taizai.story_board.label_defeat_galand": "Defeat Galand",
       "entity.craft_no_taizai.galand_over": "Galand",
       "item.craft_no_taizai.hendrickson_animated_spawn_egg": "Hendrickson Spawn Egg",
-      "block.craft_no_taizai.sleeping_forest_slab": "Sleeping Forest Slab",
       "item.craft_no_taizai.moon_rose_spawn_egg": "Moon Rose Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_melioddas_must_now_face_the_rema": "Melioddas must now face the remaining Ten Commandments ",
       "gui.craft_no_taizai.magic_menu.tooltip_back": "Back",
       "advancements.defeat_king.title": "Defeat Deadly Sin",
       "key.craft_no_taizai.mantaray_s_move": "Move",
@@ -41120,6 +41431,7 @@
       "advancements.defeat_gowther.descr": "Defeat The Sin Of Lust",
       "item.craft_no_taizai.guila_animated_spawn_egg": "Guila Spawn Egg",
       "gui.craft_no_taizai.story_board.label_the_armor_giant": "The Armor Giant.",
+      "gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole": "summoned by Gloxinia and Drole. Escanor refuses to fight",
       "item.craft_no_taizai.double_sided_spear": "Double-Sided Spear",
       "item.craft_no_taizai.tyrant_dragon_spawn_egg": "Tyrant Dragon Spawn Egg",
       "gui.craft_no_taizai.story_board.label_what_have_they_come_for": "What have they come for?",
@@ -41152,7 +41464,7 @@
       "item.craft_no_taizai.bake_apple_pie": "Bake Apple Pie",
       "advancements.plaatinum.descr": "Get BP 14150",
       "item.craft_no_taizai.gowther_story_1_spawn_egg": "Gowther Spawn Egg",
-      "entity.craft_no_taizai.gerheadeservant": "Gerheade",
+      "entity.craft_no_taizai.gerheadeservant": "Gerheade Servant",
       "key.craft_no_taizai.w_press_f_ly": "W Press Fly",
       "gui.craft_no_taizai.story_board.label_human_and_nonhuman_worlds_were": "human and non-human worlds were forever divided.",
       "item.craft_no_taizai.arther_armor_chestplate": "Arthur Armor",
@@ -41203,9 +41515,10 @@
       "gui.craft_no_taizai.fairy_clan_ui.label_demon_clan": "Fairy Race",
       "gui.craft_no_taizai.story_board.label_the_end": "The Seven Deadly Sins: Revival of The Commandments.",
       "block.craft_no_taizai.fairy_tree_wood": "Fairy Tree Wood",
+      "gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba1": "King and Diane continue their battle against opponents ",
+      "gui.craft_no_taizai.story_board.label_king_and_diane_continue_their_ba2": "King and Diane continue their battle against opponents ",
       "block.craft_no_taizai.purgatory_stair": "Purgatory",
       "gui.craft_no_taizai.story_board.label_drives_the_group_to_fight_each_o": "Drives the group to fight each other.",
-      "item.craft_no_taizai.cannon_entity_spawn_egg": "Cannon Spawn Egg",
       "entity.craft_no_taizai.guardian_true_spirt_spear": "Guardian",
       "effect.craft_no_taizai.staff_of_imrisonment_effect": "Staff Of Imrisonment Effect",
       "item.craft_no_taizai.holy_staff_coure_chouse": "Holy Staff Coure Chouse",
@@ -41216,6 +41529,7 @@
       "item.craft_no_taizai.gray_demon_entity_spawn_egg": "Gray Demon Spawn Egg",
       "item.craft_no_taizai.gray_demon_hendrickson_animated_spawn_egg": "Gray Demon Hendrickson Spawn Egg",
       "entity.craft_no_taizai.earth_golem": "Earth Golem",
+      "gui.craft_no_taizai.story_board.label_defeat_drole_gloxinia": "Defeat Drole \u0026 Gloxinia",
       "gui.craft_no_taizai.story_board.label_out_in_pandemonium_when_a_group": "out in pandemonium when a group of Holy Knights attacks",
       "gui.craft_no_taizai.story_board.label_defeat_jericho": "Defeat Jericho",
       "gui.craft_no_taizai.demon_king_gui.label_you_bit_of_my_power": "you bit of my power",
@@ -41282,6 +41596,7 @@
       "gui.craft_no_taizai.story_board.label_roun_1": "First round challanger taizoo appears",
       "item.craft_no_taizai.cider_mug": "Cider ale",
       "entity.craft_no_taizai.diane_animated": "Diane",
+      "entity.craft_no_taizai.drole": "Drole",
       "gui.craft_no_taizai.guild_accept_gui.label_accept": "ACCEPT",
       "gui.craft_no_taizai.story_board.label_capital_of_the_dead": "Capital of the Dead",
       "item.craft_no_taizai.serpent_icon": "Serpent Icon",
@@ -41343,6 +41658,7 @@
       "death.attack.ice_magic.item": "%1$s was killed by %2$s using %3$s",
       "gui.craft_no_taizai.teleportation_gui.button_teleport": "Teleport",
       "item.craft_no_taizai.ruin_armor_leggings": "Ruin Leggings",
+      "gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light": "EP 18: For Whom Does That Light Shine? Part 1",
       "gui.craft_no_taizai.teleportation_gui.label_y": "Y:",
       "advancements.ruby.descr": "Get BP 8750",
       "gui.craft_no_taizai.teleportation_gui.label_z": "Z:",
@@ -41496,7 +41812,7 @@
       "block.craft_no_taizai.rhitta_block": "Rhitta Block",
       "gui.craft_no_taizai.story_board.label_defect_all_vaizel_fighting_festi": "Defect All Vaizel Fighting Festival Particlipate",
       "gui.craft_no_taizai.disaster_menu.label_slot": "Slot",
-      "item.craft_no_taizai.fragment_of_eternal_darkness": "Fragment Of Eternal Darkness",
+      "item.craft_no_taizai.fragment_of_eternal_darkness": "Fairy Fragment Of Eternal Darkness",
       "item.craft_no_taizai.goddess_amber": "Goddess Amber",
       "key.craft_no_taizai.swap_move": "Swap Move",
       "entity.craft_no_taizai.giga_pick": "Giga Pick",
@@ -41532,15 +41848,16 @@
       "gui.craft_no_taizai.demon_stat.button_skill": "skill",
       "subtitles.unsheathed": "",
       "item.craft_no_taizai.servant_spawn_egg": "Servant Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_ep_19_meliodas_vsthe_ten_comma": "EP 19: Meliodas vs.The Ten Commandments Part 1",
       "advancements.defeat_diane.title": "Defeat Deadly Sin",
       "gui.craft_no_taizai.story_board.label_defeat_bloodred_form_hendrickso": "Defeat Blood-Red Form Hendrickson",
       "gui.craft_no_taizai.theo_gui.label_physical_and_magical_power": "physical and magical powers.",
+      "gui.craft_no_taizai.story_board.label_in_an_allout_battle": "in an all-out battle.",
       "item.craft_no_taizai.meliodas_boss_animated_spawn_egg": "Meliodas Boss Animated Spawn Egg",
       "entity.craft_no_taizai.manta": "Mantaray",
       "\"key.categories.[craftnotaizai]\"": "",
       "gui.craft_no_taizai.story_board.label_respected_but_among_them_a_grou": "respected. But among them a group emerged that betrayed",
       "item.craft_no_taizai.cooked_dusk_meat": "Dusk Meat",
-      "gui.craft_no_taizai.cannon_gui.label_deny": "Deny",
       "entity.craft_no_taizai.gloxina_boss": "Gloxina",
       "item.craft_no_taizai.acid_twower_mob_spawn_egg": "Acid Twower Mob Spawn Egg",
       "gui.craft_no_taizai.story_board.label_ep_11_father_son": "EP 11: Father \u0026 Son",
@@ -41559,7 +41876,7 @@
       "item.craft_no_taizai.demon_claw": "Demon Claw",
       "item.craft_no_taizai.vivian_armor_helmet": "Vivian Helmet",
       "gui.craft_no_taizai.story_board.label_a_revived_but_possessed_elaine_a1": "A revived but possessed Elaine attacks her lover, Ban,",
-      "item.craft_no_taizai.gerheadeservant_spawn_egg": "Gerheade Spawn Egg",
+      "item.craft_no_taizai.gerheadeservant_spawn_egg": "Gerheade Servant Spawn Egg",
       "gui.craft_no_taizai.story_board.label_diane_meanwhile_a_confused_dia": "Diane. Meanwhile, a confused Diane encounters Galand",
       "gui.craft_no_taizai.story_board.label_ep_6_part_1the_poem_of_beginnin": "EP 6 Part 1:The Poem Of Beginning",
       "gui.craft_no_taizai.story_board.label_ep_17_legendary_figures": "EP 17: Legendary Figures Part 1",
@@ -41613,15 +41930,14 @@
       "item.craft_no_taizai.golgiusarmor_helmet": "Golgius Helmet",
       "effect.craft_no_taizai.purgatory_flame": "purgatory flame",
       "entity.craft_no_taizai.hawks": "Hawks",
-      "entity.craft_no_taizai.cannon_entity": "Cannon",
       "block.craft_no_taizai.cave_of_training": "Cave Of Training",
       "entity.craft_no_taizai.gray_demon_hendrickson_animated": "Gray Demon Hendrickson",
+      "gui.craft_no_taizai.story_board.label_defeat_servant": "Defeat Servant",
       "item.craft_no_taizai.giga_pick_spawn_egg": "Giga Pick Spawn Egg",
       "gui.craft_no_taizai.story_board.label_ten_commandments_return_to_the_p": "Ten Commandments return to the physical realm. King",
       "gui.craft_no_taizai.story_board.label_go_to_the_plains_biome": "Go To the Plains Biome",
       "item_group.craft_no_taizai.weapons": "Craft No Taizai Weapons",
       "item.craft_no_taizai.dreyfus_armor_chestplate": "Dreyfus Chestplate",
-      "gui.craft_no_taizai.cannon_gui.label_accept": "accept",
       "gui.craft_no_taizai.story_board.label_defect_armord_helbram": "Defeat Armord Helbram",
       "item.craft_no_taizai.ban_outfit_chestplate": "Ban Shirt",
       "entity.craft_no_taizai.dale_armored": "Dale",
@@ -41667,10 +41983,14 @@
       "block.craft_no_taizai.stage_one_agave": "Agave",
       "gui.craft_no_taizai.story_board.label_zeals_memories_with_the_return": "Zeal\u0027s memories. With the return of the Demon Clan, New",
       "item.craft_no_taizai.griamore_animated_spawn_egg": "Griamore Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_defeat_gowther1": "Defeat Gowther",
       "gui.craft_no_taizai.theo_tower.label_back": ". Back",
+      "gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light2": "EP 18: For Whom Does That Light Shine? Part 3",
+      "gui.craft_no_taizai.story_board.label_ep_18_for_whom_does_that_light1": "EP 18: For Whom Does That Light Shine? Part 2",
       "item.craft_no_taizai.demon_hendrickson_animated_spawn_egg": "Demon Hendrickson Spawn Egg",
       "effect.craft_no_taizai.king_trumpet": "King Trumpet",
       "gui.craft_no_taizai.story_board.label_acknowledging_his_lack_of_streng": "Acknowledging his lack of strength to face the Ten",
+      "gui.craft_no_taizai.story_board.label_defeat_clay_drole": "Defeat Clay Drole",
       "gui.craft_no_taizai.story_board.label_he_has_to_kill_in_order_to_save1": "he has to kill in order to save Elaine",
       "item.craft_no_taizai.twigo_armor_leggings": "Twigo Leggings",
       "block.craft_no_taizai.side_mountain": "Side Mountain",
@@ -41751,6 +42071,8 @@
       "entity.craft_no_taizai.jenna": "Jenna",
       "gui.craft_no_taizai.story_board.label_ep_3the_scared_treasure_lostvay1": "EP 4:The Ten Commandments on the Move",
       "entity.craft_no_taizai.green_knight_animated": "Green Knight",
+      "item.craft_no_taizai.drole_spawn_egg": "Drole Spawn Egg",
+      "gui.craft_no_taizai.story_board.label_as_escanors_battle_with_gowther": "As Escanor\u0027s battle with Gowther comes to a dramatic end",
       "key.craft_no_taizai.levitation": "Levitation",
       "gui.craft_no_taizai.demon_clan.button_empty": "\u003e",
       "entity.craft_no_taizai.gray_demon": "Gray Demon_Statue",
@@ -42757,15 +43079,6 @@
             ]
           },
           {
-            "name": "Cannon",
-            "children": [
-              {
-                "name": "CannonGui",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Dubs",
             "children": [
               {
@@ -43329,6 +43642,10 @@
           {
             "name": "IncantationOrb",
             "children": []
+          },
+          {
+            "name": "Sleeping Forest",
+            "children": []
           }
         ]
       },
@@ -43779,6 +44096,22 @@
               },
               {
                 "name": "Drole",
+                "children": []
+              },
+              {
+                "name": "GowtherEP18",
+                "children": []
+              },
+              {
+                "name": "Gloxinia",
+                "children": []
+              },
+              {
+                "name": "Drole2",
+                "children": []
+              },
+              {
+                "name": "Story52",
                 "children": []
               }
             ]

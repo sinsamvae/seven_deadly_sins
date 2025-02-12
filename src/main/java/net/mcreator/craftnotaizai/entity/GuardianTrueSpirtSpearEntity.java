@@ -154,7 +154,7 @@ public class GuardianTrueSpirtSpearEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GuardianTrueSpirtSpearOnEntityTickUpdateProcedure.execute(this.level(), this);
+		GuardianTrueSpirtSpearOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

@@ -149,7 +149,7 @@ public class SunflowerEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		SunflowerOnEntityTickUpdateProcedure.execute(this.level(), this);
+		SunflowerOnEntityTickUpdateProcedure.execute(this);
 	}
 
 	@Override

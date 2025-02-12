@@ -57,42 +57,8 @@
             "numberField": 0.09,
             "textDefault": "",
             "comment": "This will determine how much mana is drain(Default 0.09)",
-            "vardisplay": "mana_drain_one",
-            "varname": "mana_drain_one",
-            "enablecomment": true,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.13,
-            "textDefault": "",
-            "comment": "This will determine how much mana is drain(Default 0.13)",
-            "vardisplay": "mana_drain_two",
-            "varname": "mana_drain_two",
-            "enablecomment": true,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.15,
-            "textDefault": "",
-            "comment": "This will determine how much mana is drain(Default 0.15)",
-            "vardisplay": "mana_drain_three",
-            "varname": "mana_drain_three",
+            "vardisplay": "mana_drain",
+            "varname": "mana_drain",
             "enablecomment": true,
             "stringlist": []
           }
@@ -110,9 +76,9 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 10.0,
+            "numberField": 1.0,
             "textDefault": "",
-            "comment": "This will determine how much TP you gain after leveling up (Default 10)",
+            "comment": "This will determine how much TP you gain after leveling up (Default 1)",
             "vardisplay": "Tp_Amount",
             "varname": "Tp_Amount",
             "enablecomment": true,
@@ -132,28 +98,6 @@
             "comment": "This will determine how much xp you gain after killing mobs (Default 10)",
             "vardisplay": "Xp_Amount",
             "varname": "Xp_Amount",
-            "enablecomment": true,
-            "stringlist": []
-          }
-        ]
-      },
-      {
-        "category": "Craft No Taizai Speed",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 100.0,
-            "textDefault": "",
-            "comment": "This will determine the max speed",
-            "vardisplay": "Speed",
-            "varname": "Speed",
             "enablecomment": true,
             "stringlist": []
           }

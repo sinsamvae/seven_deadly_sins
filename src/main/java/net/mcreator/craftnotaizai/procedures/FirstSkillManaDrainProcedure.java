@@ -74,7 +74,7 @@ public class FirstSkillManaDrainProcedure {
 				}
 				{
 					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana
-							- (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * (double) CraftNoTaizaiConfiguration.MANA_DRAIN_ONE.get();
+							- (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * (double) CraftNoTaizaiConfiguration.MANA_DRAIN.get();
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.mana = _setval;
 						capability.syncPlayerVariables(entity);

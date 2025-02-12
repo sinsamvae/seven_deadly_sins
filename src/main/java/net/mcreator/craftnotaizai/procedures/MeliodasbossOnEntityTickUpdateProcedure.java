@@ -24,13 +24,6 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 			return;
 		double distance = 0;
 		double ran = 0;
-		if (entity.getPersistentData().getBoolean("Full Counter") == true) {
-			entity.getPersistentData().putDouble("FullCounterTimer", (entity.getPersistentData().getDouble("FullCounterTimer") + 1));
-			if (entity.getPersistentData().getDouble("FullCounterTimer") > 160) {
-				entity.getPersistentData().putDouble("FullCounterTimer", 0);
-				entity.getPersistentData().putBoolean("Full Counter", false);
-			}
-		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 100) * 50) {
 			if (entity instanceof MeliodasBossAnimatedEntity animatable)
 				animatable.setTexture("meliodasdemon_mark");
@@ -69,7 +62,7 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 575, 1);
+								}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -90,7 +83,7 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 595, 1);
+								}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -117,7 +110,7 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 695, 1);
+								}.getArrow(projectileLevel, entity, (float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 50), 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -138,7 +131,7 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 700, 1);
+								}.getArrow(projectileLevel, entity, (float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 50), 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);

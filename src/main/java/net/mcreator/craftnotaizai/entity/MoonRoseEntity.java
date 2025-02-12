@@ -153,7 +153,7 @@ public class MoonRoseEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		MoonRoseOnEntityTickUpdateProcedure.execute(this.level(), this);
+		MoonRoseOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

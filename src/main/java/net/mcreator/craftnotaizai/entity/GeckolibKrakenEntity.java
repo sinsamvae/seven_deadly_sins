@@ -48,7 +48,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftnotaizai.procedures.GeckolibKrakenOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class GeckolibKrakenEntity extends PathfinderMob implements GeoEntity {
@@ -181,7 +180,6 @@ public class GeckolibKrakenEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GeckolibKrakenOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

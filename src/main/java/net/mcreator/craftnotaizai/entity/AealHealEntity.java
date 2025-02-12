@@ -154,7 +154,7 @@ public class AealHealEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		AealHealOnEntityTickUpdateProcedure.execute(this.level(), this);
+		AealHealOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

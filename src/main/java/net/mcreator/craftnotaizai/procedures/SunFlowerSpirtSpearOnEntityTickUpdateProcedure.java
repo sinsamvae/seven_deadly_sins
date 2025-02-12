@@ -24,7 +24,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.entity.SunFlowerTrueSpirtSpearEntity;
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.List;
 import java.util.Comparator;
@@ -95,9 +94,10 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 				}
 			}
 		}
-		CraftNoTaizaiMod.queueServerWork(60, () -> {
+		entity.getPersistentData().putDouble("Despawn", (entity.getPersistentData().getDouble("Despawn") + 1));
+		if (entity.getPersistentData().getDouble("Despawn") >= 60) {
 			if (!entity.level().isClientSide())
 				entity.discard();
-		});
+		}
 	}
 }

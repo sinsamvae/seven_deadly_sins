@@ -72,7 +72,7 @@ public class StoryBan2AnimatedOnEntityTickUpdateProcedure {
 										}
 									}.checkGamemode(entityiterator))) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(), 1200, 3, false, false));
+									_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(), (int) (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1), 3, false, false));
 							}
 						}
 					}

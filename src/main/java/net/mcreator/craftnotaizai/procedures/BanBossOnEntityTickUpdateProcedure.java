@@ -69,7 +69,7 @@ public class BanBossOnEntityTickUpdateProcedure {
 										}
 									}.checkGamemode(entityiterator))) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(), 2400, 1));
+									_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.PHYSICAL_HUNT_NEGITIVE.get(), (int) (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1), 1));
 							}
 						}
 					}

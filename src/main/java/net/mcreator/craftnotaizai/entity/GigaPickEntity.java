@@ -148,7 +148,7 @@ public class GigaPickEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GigaPickOnEntityTickUpdateProcedure.execute(this.level(), this);
+		GigaPickOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

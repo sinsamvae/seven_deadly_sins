@@ -154,7 +154,7 @@ public class DiamondTowerEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DiamondTowerOnEntityTickUpdateProcedure.execute(this.level(), this);
+		DiamondTowerOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

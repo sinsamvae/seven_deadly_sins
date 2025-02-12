@@ -58,7 +58,6 @@ public class BowRightclickedProcedure {
 				}
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 25);
-				arrow.shrink(1);
 			}
 			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.SPECTRAL_ARROW)) : false) {
 				arrow = new ItemStack(Items.SPECTRAL_ARROW);
@@ -91,7 +90,6 @@ public class BowRightclickedProcedure {
 				}
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 25);
-				arrow.shrink(1);
 			}
 		} else {
 			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.ARROW)) : false) {

@@ -154,7 +154,7 @@ public class CocoonOfDarknessEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		CocoonOfDarknessOnEntityTickUpdateProcedure.execute(this.level(), this);
+		CocoonOfDarknessOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

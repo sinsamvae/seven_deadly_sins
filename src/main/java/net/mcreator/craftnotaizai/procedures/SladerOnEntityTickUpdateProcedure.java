@@ -66,7 +66,7 @@ public class SladerOnEntityTickUpdateProcedure {
 									}
 								}.checkGamemode(entityiterator))) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 10000, false, false));
+								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 255, false, false));
 						}
 					}
 				}

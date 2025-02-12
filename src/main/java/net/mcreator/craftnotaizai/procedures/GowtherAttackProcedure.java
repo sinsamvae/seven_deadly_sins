@@ -13,6 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.entity.GowtherStory1Entity;
 import net.mcreator.craftnotaizai.entity.GowtherBossAnimatedEntity;
 
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public class GowtherAttackProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double hit = 0;
-		if (sourceentity instanceof GowtherBossAnimatedEntity) {
+		if (sourceentity instanceof GowtherBossAnimatedEntity || sourceentity instanceof GowtherStory1Entity) {
 			hit = Mth.nextInt(RandomSource.create(), 1, 15);
 			if (hit <= 3) {
 				entity.makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));

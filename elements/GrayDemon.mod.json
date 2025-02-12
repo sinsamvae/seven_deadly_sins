@@ -7,10 +7,10 @@
     "mobModelTexture": "gray_demon_texture_1.png",
     "mobModelGlowTexture": "",
     "visualScale": {
-      "fixedValue": 1.7999999999999998
+      "fixedValue": 2.5
     },
     "boundingBoxScale": {
-      "fixedValue": 1.7999999999999998
+      "fixedValue": 2.5
     },
     "entityDataEntries": [],
     "modelWidth": 1.5999999999999999,

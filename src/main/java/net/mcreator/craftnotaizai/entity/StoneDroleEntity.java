@@ -39,6 +39,8 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.craftnotaizai.procedures.StoneDroleOnEntityTickUpdateProcedure;
+import net.mcreator.craftnotaizai.procedures.StoneDroleEntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class StoneDroleEntity extends Monster implements GeoEntity {
@@ -114,6 +116,12 @@ public class StoneDroleEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		StoneDroleEntityDiesProcedure.execute(this.level(), this);
+	}
+
+	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -129,6 +137,7 @@ public class StoneDroleEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		StoneDroleOnEntityTickUpdateProcedure.execute(this.level(), this.getY(), this);
 		this.refreshDimensions();
 	}
 
@@ -143,9 +152,9 @@ public class StoneDroleEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.MAX_HEALTH, 395);
+		builder = builder.add(Attributes.ARMOR, 10);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 385);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}

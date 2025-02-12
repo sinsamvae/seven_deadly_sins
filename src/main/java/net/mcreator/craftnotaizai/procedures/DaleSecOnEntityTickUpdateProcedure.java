@@ -59,7 +59,7 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, 165, 1);
+						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -76,7 +76,7 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, 165, 1);
+						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -93,7 +93,7 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, 165, 1);
+						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);

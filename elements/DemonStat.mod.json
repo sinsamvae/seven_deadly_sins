@@ -15,7 +15,7 @@
         "data": {
           "image": "gui.png",
           "use1Xscale": false,
-          "x": 121,
+          "x": 120,
           "y": 16
         }
       },
@@ -146,8 +146,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 135,
-          "y": 79
+          "x": 134,
+          "y": 102
         }
       },
       {
@@ -162,8 +162,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 135,
-          "y": 102
+          "x": 134,
+          "y": 124
         }
       },
       {
@@ -179,7 +179,7 @@
             "falpha": 0.0
           },
           "x": 134,
-          "y": 123
+          "y": 146
         }
       },
       {
@@ -194,8 +194,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 135,
-          "y": 144
+          "x": 134,
+          "y": 164
         }
       },
       {
@@ -211,7 +211,7 @@
             "falpha": 0.0
           },
           "x": 134,
-          "y": 154
+          "y": 174
         }
       },
       {
@@ -227,7 +227,7 @@
             "name": "DisplayStatButtons"
           },
           "x": 121,
-          "y": 78
+          "y": 101
         }
       },
       {
@@ -237,13 +237,13 @@
           "image": "statplusbutton.png",
           "hoveredImage": "statplusbuttonoutline.png",
           "onClick": {
-            "name": "TPHp"
+            "name": "TPSpirt"
           },
           "displayCondition": {
             "name": "DisplayStatButtons"
           },
           "x": 121,
-          "y": 100
+          "y": 122
         }
       },
       {
@@ -259,7 +259,7 @@
             "name": "DisplayStatButtons"
           },
           "x": 121,
-          "y": 122
+          "y": 143
         }
       },
       {
@@ -275,7 +275,7 @@
             "name": "DisplayStatButtons"
           },
           "x": 121,
-          "y": 145
+          "y": 164
         }
       },
       {
@@ -287,7 +287,7 @@
           "onClick": {
             "name": "TpSwitchAmount"
           },
-          "x": 197,
+          "x": 196,
           "y": 188
         }
       },
@@ -304,7 +304,7 @@
             "falpha": 0.0
           },
           "x": 210,
-          "y": 190
+          "y": 189
         }
       },
       {
@@ -316,8 +316,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 134,
-          "y": 71
+          "x": 140,
+          "y": 92
         }
       },
       {
@@ -329,8 +329,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 134,
-          "y": 95
+          "x": 140,
+          "y": 116
         }
       },
       {
@@ -342,8 +342,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 133,
-          "y": 119
+          "x": 140,
+          "y": 140
         }
       },
       {
@@ -355,8 +355,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 133,
-          "y": 142
+          "x": 140,
+          "y": 164
         }
       },
       {
@@ -474,6 +474,51 @@
           "height": 24,
           "x": 317,
           "y": 111
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton5",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPHp"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 80
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_maxhealth",
+          "text": {
+            "fixedValue": "Increase MaxHealth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_health_var",
+          "text": {
+            "fixedValue": "",
+            "name": "HealthVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 81
         }
       }
     ],

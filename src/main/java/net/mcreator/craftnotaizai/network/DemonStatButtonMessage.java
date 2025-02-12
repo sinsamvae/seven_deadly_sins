@@ -16,6 +16,7 @@ import net.mcreator.craftnotaizai.world.inventory.DemonStatMenu;
 import net.mcreator.craftnotaizai.procedures.TpmanaProcedure;
 import net.mcreator.craftnotaizai.procedures.TpSwitchAmountProcedure;
 import net.mcreator.craftnotaizai.procedures.TPStrProcedure;
+import net.mcreator.craftnotaizai.procedures.TPSpirtProcedure;
 import net.mcreator.craftnotaizai.procedures.TPHpProcedure;
 import net.mcreator.craftnotaizai.procedures.TPAgilityProcedure;
 import net.mcreator.craftnotaizai.procedures.StoryProcedure;
@@ -89,7 +90,7 @@ public class DemonStatButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			TPHpProcedure.execute(entity);
+			TPSpirtProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
@@ -118,6 +119,10 @@ public class DemonStatButtonMessage {
 		if (buttonID == 8) {
 
 			OpenGuildGuiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 9) {
+
+			TPHpProcedure.execute(entity);
 		}
 	}
 

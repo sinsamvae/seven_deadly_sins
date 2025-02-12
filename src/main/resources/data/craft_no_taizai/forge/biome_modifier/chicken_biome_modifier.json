@@ -10,7 +10,7 @@
   ],
   "spawners": {
     "type": "craft_no_taizai:chicken",
-    "weight": 10,
+    "weight": 15,
     "minCount": 1,
     "maxCount": 3
   }

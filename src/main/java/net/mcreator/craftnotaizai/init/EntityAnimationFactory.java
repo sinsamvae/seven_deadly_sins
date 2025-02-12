@@ -69,9 +69,11 @@ import net.mcreator.craftnotaizai.entity.GrayDemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntityEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntity;
 import net.mcreator.craftnotaizai.entity.GowtherStory1Entity;
+import net.mcreator.craftnotaizai.entity.GowtherEP18Entity;
 import net.mcreator.craftnotaizai.entity.GowtherBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GolgiusAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GoddessBlessEntityEntity;
+import net.mcreator.craftnotaizai.entity.GloxiniaStoryEntity;
 import net.mcreator.craftnotaizai.entity.GloxinaBossEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GilThunderAnimated2Entity;
@@ -92,6 +94,7 @@ import net.mcreator.craftnotaizai.entity.EarthGolemEntity;
 import net.mcreator.craftnotaizai.entity.EarthCrawlerEntity;
 import net.mcreator.craftnotaizai.entity.DuskBison1Entity;
 import net.mcreator.craftnotaizai.entity.DumblebbasAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.DroleEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DogedoEntity;
 import net.mcreator.craftnotaizai.entity.DianeBossAnimatedEntity;
@@ -932,6 +935,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof StoneDroleEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GowtherEP18Entity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GloxiniaStoryEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DroleEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

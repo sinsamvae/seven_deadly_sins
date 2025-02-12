@@ -154,7 +154,7 @@ public class BlackOutEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		BlackOutOnEntityTickUpdateProcedure.execute(this.level(), this);
+		BlackOutOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

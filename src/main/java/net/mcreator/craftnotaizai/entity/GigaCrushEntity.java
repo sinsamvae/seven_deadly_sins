@@ -184,7 +184,7 @@ public class GigaCrushEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GigaCrushOnEntityTickUpdateProcedure.execute(this.level(), this);
+		GigaCrushOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

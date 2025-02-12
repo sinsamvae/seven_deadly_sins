@@ -41,8 +41,12 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [],
-    "destroyTool": "Not specified",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SdsBlocks"
+      }
+    ],
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },

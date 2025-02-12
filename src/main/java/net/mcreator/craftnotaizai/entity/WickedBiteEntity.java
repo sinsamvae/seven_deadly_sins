@@ -148,7 +148,7 @@ public class WickedBiteEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		WickedBiteOnEntityTickUpdateProcedure.execute(this.level(), this);
+		WickedBiteOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

@@ -1,4 +1,4 @@
-// Made with Blockbench 4.11.1
+// Made with Blockbench 4.12.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -92,7 +92,7 @@ public class Modelinsect<T extends Entity> extends EntityModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(),
-				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 0.0F, -3.1416F));
+				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, -1.5708F, 1.5708F));
 
 		PartDefinition body2 = body.addOrReplaceChild("body2",
 				CubeListBuilder.create().texOffs(32, 8)

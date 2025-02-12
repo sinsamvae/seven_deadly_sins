@@ -54,6 +54,20 @@ public class PlayerFirstJoinsProcedure {
 			}
 			GiveRerollMagicProcedure.execute(entity);
 			{
+				double _setval = 0;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.defeat_drole = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.defeat_gloxinia = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
 				double _setval = 100;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.power_percentage = _setval;

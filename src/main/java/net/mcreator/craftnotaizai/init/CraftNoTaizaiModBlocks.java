@@ -15,8 +15,6 @@ import net.mcreator.craftnotaizai.block.TalaVillageFlowerBlock;
 import net.mcreator.craftnotaizai.block.StageTwoAgaveBlock;
 import net.mcreator.craftnotaizai.block.StageOneAgaveBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestWoodBlock;
-import net.mcreator.craftnotaizai.block.SleepingForestStairBlock;
-import net.mcreator.craftnotaizai.block.SleepingForestSlabBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestPlankBlock;
 import net.mcreator.craftnotaizai.block.SleepingForestDirtBlock;
 import net.mcreator.craftnotaizai.block.SideMountainBlock;
@@ -79,8 +77,6 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> CAPITAL_OF_THE_DEAD_GROUND_BLOCK = REGISTRY.register("capital_of_the_dead_ground_block", () -> new CapitalOfTheDeadGroundBlockBlock());
 	public static final RegistryObject<Block> CAPITAL_OF_THE_DEAD_GROUND = REGISTRY.register("capital_of_the_dead_ground", () -> new CapitalOfTheDeadGroundBlock());
 	public static final RegistryObject<Block> SLEEPING_FOREST_WOOD = REGISTRY.register("sleeping_forest_wood", () -> new SleepingForestWoodBlock());
-	public static final RegistryObject<Block> SLEEPING_FOREST_SLAB = REGISTRY.register("sleeping_forest_slab", () -> new SleepingForestSlabBlock());
-	public static final RegistryObject<Block> SLEEPING_FOREST_STAIR = REGISTRY.register("sleeping_forest_stair", () -> new SleepingForestStairBlock());
 	public static final RegistryObject<Block> FAIRY_TREES_LOG = REGISTRY.register("fairy_trees_log", () -> new FairyTreesLogBlock());
 	public static final RegistryObject<Block> FAIRY_KING_LOG = REGISTRY.register("fairy_king_log", () -> new FairyKingLogBlock());
 	public static final RegistryObject<Block> FAIRY_KING_LEAVE = REGISTRY.register("fairy_king_leave", () -> new FairyKingLeaveBlock());

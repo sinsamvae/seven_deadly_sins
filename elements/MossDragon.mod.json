@@ -13,9 +13,9 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 2.3000000000000003,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 2.9,
+    "modelHeight": 2.6,
+    "modelShadowSize": 0.9,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
@@ -158,7 +158,7 @@
     "spawningCondition": {
       "name": "SpawnCondtion"
     },
-    "spawningProbability": 8,
+    "spawningProbability": 10,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,

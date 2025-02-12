@@ -5,7 +5,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
@@ -21,6 +21,7 @@ public class MaigcEyeReturnStrProcedure {
 		boolean target = false;
 		String BP = "";
 		double range = 0;
+		double stength = 0;
 		BP = "NONE";
 		for (int index0 = 0; index0 < 20; index0++) {
 			{
@@ -30,7 +31,7 @@ public class MaigcEyeReturnStrProcedure {
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(range)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!(target || entity == entityiterator) && (entityiterator instanceof Player || entityiterator instanceof PathfinderMob)) {
+					if (!(target || entity == entityiterator) && (entityiterator instanceof Player || entityiterator instanceof LivingEntity)) {
 						target = true;
 						entity_target = entityiterator;
 					}
@@ -39,8 +40,13 @@ public class MaigcEyeReturnStrProcedure {
 			if (target && entity_target instanceof Player) {
 				return "\u00A7eStrength: "
 						+ new java.text.DecimalFormat("##.##").format(Math.ceil((entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength));
-			} else if (target && entity_target instanceof PathfinderMob) {
-				return "\u00A7eStrength: " + new java.text.DecimalFormat("##.##").format(Math.ceil(entity_target.getPersistentData().getDouble("strength")));
+			} else if (target && entity_target instanceof LivingEntity) {
+				if (entity instanceof LivingEntity && ((LivingEntity) entity_target).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) != null) {
+					stength = entity_target instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D;
+				} else {
+					stength = 0;
+				}
+				return "\u00A7eStrength: " + new java.text.DecimalFormat("##.##").format(Math.ceil(stength));
 			}
 			range = range + 1;
 		}

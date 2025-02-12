@@ -13,8 +13,8 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.6,
-    "modelHeight": 3.5,
+    "modelWidth": 1.3,
+    "modelHeight": 5.5,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
@@ -51,14 +51,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 385,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "armorBaseValue": 0.0,
+    "armorBaseValue": 10.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 10,
+    "health": 395,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -101,6 +101,12 @@
     },
     "raidCelebrationSound": {
       "value": ""
+    },
+    "whenMobDies": {
+      "name": "StoneDroleEntityDies"
+    },
+    "onMobTickUpdate": {
+      "name": "StoneDroleOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",

@@ -79,7 +79,7 @@ public class GloxinaBossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 685, 1);
+								}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -134,8 +134,8 @@ public class GloxinaBossOnEntityTickUpdateProcedure {
 												return false;
 											}
 										}.checkGamemode(entityiterator) || entityiterator instanceof BasquiasGuardianEntity)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity), 685);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+											entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.NECROSIS.get(), 200, 1, false, false));
 									if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -285,7 +285,8 @@ public class GloxinaBossOnEntityTickUpdateProcedure {
 												}
 											}.checkGamemode(entityiterator) || entityiterator instanceof DeathThornEntity)) {
 										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))), 685);
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+												entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 									}
 								}
 							}

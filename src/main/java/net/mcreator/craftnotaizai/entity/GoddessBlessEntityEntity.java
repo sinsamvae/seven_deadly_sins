@@ -154,7 +154,7 @@ public class GoddessBlessEntityEntity extends PathfinderMob implements GeoEntity
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GoddessBlessEntityOnEntityTickUpdateProcedure.execute(this.level(), this);
+		GoddessBlessEntityOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

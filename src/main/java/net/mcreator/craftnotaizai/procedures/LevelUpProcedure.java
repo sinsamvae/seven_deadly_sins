@@ -1,11 +1,8 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 public class LevelUpProcedure {
 	public static void execute(Entity entity) {
@@ -31,16 +28,9 @@ public class LevelUpProcedure {
 				});
 			}
 			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TP + 3 * ((double) CraftNoTaizaiConfiguration.TP_AMOUNT.get() / 10);
+				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TP + 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.TP = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth + Mth.nextInt(RandomSource.create(), 2, 4) * 5;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.maxhealth = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

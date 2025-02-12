@@ -42,7 +42,6 @@ public class CraftNoTaizaiModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> DARK_SNOW_2 = REGISTRY.register("dark_snow_2", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> FREEZE_COFFIN = REGISTRY.register("freeze_coffin", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> BLACK_LIGHTNING = REGISTRY.register("black_lightning", () -> new SimpleParticleType(false));
-	public static final RegistryObject<SimpleParticleType> INCREASETRUESPIRITSPEAR_PARTICLES = REGISTRY.register("increasetruespiritspear_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> CHASTIFOL_RED_PARTICLES = REGISTRY.register("chastifol_red_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> FLAME_PURPLE = REGISTRY.register("flame_purple", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> HEALING_GARDEN_PARTICLES = REGISTRY.register("healing_garden_particles", () -> new SimpleParticleType(false));
@@ -53,7 +52,6 @@ public class CraftNoTaizaiModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> BASQUIAS_PARTICLE = REGISTRY.register("basquias_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> JUBAKUENSA_PARTICLE = REGISTRY.register("jubakuensa_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> JUBAKU_ENSA_PARTICLE_2 = REGISTRY.register("jubaku_ensa_particle_2", () -> new SimpleParticleType(false));
-	public static final RegistryObject<SimpleParticleType> BREAKABLE_BUG_PARTICLES = REGISTRY.register("breakable_bug_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> VENOM_TOXICY = REGISTRY.register("venom_toxicy", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> RED_PARTICLES = REGISTRY.register("red_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> HELL_GATE_PARTICLES = REGISTRY.register("hell_gate_particles", () -> new SimpleParticleType(false));

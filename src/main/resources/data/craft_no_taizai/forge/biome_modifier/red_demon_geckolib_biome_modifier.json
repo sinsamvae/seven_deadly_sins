@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craft_no_taizai:red_demon_geckolib",
-    "weight": 2,
+    "weight": 8,
     "minCount": 1,
     "maxCount": 1
   }

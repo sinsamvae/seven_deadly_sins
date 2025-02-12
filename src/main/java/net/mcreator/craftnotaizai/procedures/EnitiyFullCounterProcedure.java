@@ -25,7 +25,7 @@ public class EnitiyFullCounterProcedure {
 			return;
 		double distance = 0;
 		double ran = 0;
-		if (entity.getPersistentData().getBoolean("Full Counter") == true) {
+		if (entity.getPersistentData().getBoolean("Full Counter")) {
 			entity.getPersistentData().putDouble("FullCounterTimer", (entity.getPersistentData().getDouble("FullCounterTimer") + 1));
 			if (entity.getPersistentData().getDouble("FullCounterTimer") > 160) {
 				entity.getPersistentData().putDouble("FullCounterTimer", 0);

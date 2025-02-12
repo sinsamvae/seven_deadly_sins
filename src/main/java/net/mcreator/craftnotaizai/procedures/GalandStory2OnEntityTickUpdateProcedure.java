@@ -87,7 +87,7 @@ public class GalandStory2OnEntityTickUpdateProcedure {
 										if (_ent instanceof ServerPlayer _serverPlayer)
 											_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
 									}
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 330);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 									if (world instanceof ServerLevel _level)
 										_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.5, 0.5, 0.5, 1);
 									if (world instanceof Level _level) {
@@ -136,7 +136,7 @@ public class GalandStory2OnEntityTickUpdateProcedure {
 												return false;
 											}
 										}.checkGamemode(entityiterator))) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK), entity), 330);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 									for (int index0 = 0; index0 < 3; index0++) {
 										if (world instanceof ServerLevel _level)
 											_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 3, 0.1, 3, 0.1, 0);

@@ -45,7 +45,7 @@ public class DeadHelbramOnEntityTickUpdateProcedure {
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
-				entity.getPersistentData().putDouble("KiBlastTimer", 0);
+				entity.getPersistentData().putDouble("range", 0);
 				for (int index0 = 0; index0 < 40; index0++) {
 					rep = rep + 0.3;
 					CraftNoTaizaiMod.queueServerWork((int) rep, () -> {
@@ -82,7 +82,7 @@ public class DeadHelbramOnEntityTickUpdateProcedure {
 											}
 										}.checkGamemode(entityiterator))) {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-											240);
+											entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 								}
 							}
 						}

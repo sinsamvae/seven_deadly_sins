@@ -9,12 +9,12 @@ import net.mcreator.craftnotaizai.entity.GuilaDemonanimatedEntity;
 public class GuilaDemonanimatedModel extends GeoModel<GuilaDemonanimatedEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(GuilaDemonanimatedEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "animations/guila_animated.animation.json");
+		return new ResourceLocation("craft_no_taizai", "animations/guila_mob_animated.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(GuilaDemonanimatedEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "geo/guila_animated.geo.json");
+		return new ResourceLocation("craft_no_taizai", "geo/guila_mob_animated.geo.json");
 	}
 
 	@Override

@@ -131,7 +131,7 @@ public class Guardian1Entity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		Guardian1OnEntityTickUpdateProcedure.execute(this.level(), this);
+		Guardian1OnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

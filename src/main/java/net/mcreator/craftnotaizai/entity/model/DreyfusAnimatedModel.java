@@ -9,12 +9,12 @@ import net.mcreator.craftnotaizai.entity.DreyfusAnimatedEntity;
 public class DreyfusAnimatedModel extends GeoModel<DreyfusAnimatedEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(DreyfusAnimatedEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "animations/drefus_animated.animation.json");
+		return new ResourceLocation("craft_no_taizai", "animations/dreyfus.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(DreyfusAnimatedEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "geo/drefus_animated.geo.json");
+		return new ResourceLocation("craft_no_taizai", "geo/dreyfus.geo.json");
 	}
 
 	@Override

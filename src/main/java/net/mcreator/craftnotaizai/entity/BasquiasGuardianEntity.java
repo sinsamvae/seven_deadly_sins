@@ -148,7 +148,7 @@ public class BasquiasGuardianEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		BasquiasGuardianOnEntityTickUpdateProcedure.execute(this.level(), this);
+		BasquiasGuardianOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

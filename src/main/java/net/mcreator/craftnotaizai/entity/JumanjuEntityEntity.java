@@ -153,7 +153,7 @@ public class JumanjuEntityEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		JumanjuEntityOnEntityTickUpdateProcedure.execute(this.level(), this);
+		JumanjuEntityOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

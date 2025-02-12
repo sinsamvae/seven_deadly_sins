@@ -70,8 +70,8 @@ public class SimonOnEntityTickUpdateProcedure {
 								}.checkGamemode(entityiterator))) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.3, 0.3, 0.3, 0.1);
-							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))), entity),
-									23);
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+									entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 						}
 					}
 				}

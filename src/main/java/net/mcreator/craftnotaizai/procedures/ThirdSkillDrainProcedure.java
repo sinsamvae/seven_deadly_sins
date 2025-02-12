@@ -51,7 +51,7 @@ public class ThirdSkillDrainProcedure {
 				}
 				{
 					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana
-							- (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * (double) CraftNoTaizaiConfiguration.MANA_DRAIN_THREE.get();
+							- (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana * ((double) CraftNoTaizaiConfiguration.MANA_DRAIN.get() + 0.06);
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.mana = _setval;
 						capability.syncPlayerVariables(entity);

@@ -15,7 +15,7 @@ public class KillSwitchProjectileHitsLivingEntityProcedure {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		{
-			double _setval = 1200;
+			double _setval = 300;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.rCoolDown = _setval;
 				capability.syncPlayerVariables(entity);

@@ -5,7 +5,6 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.configuration.CraftNoTaizaiConfiguration;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
@@ -64,7 +63,7 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = (double) CraftNoTaizaiConfiguration.SPEED.get();
+			double _setval = DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {

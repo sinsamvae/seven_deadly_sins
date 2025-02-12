@@ -289,8 +289,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> CAPITAL_OF_THE_DEAD_GROUND_BLOCK = block(CraftNoTaizaiModBlocks.CAPITAL_OF_THE_DEAD_GROUND_BLOCK);
 	public static final RegistryObject<Item> CAPITAL_OF_THE_DEAD_GROUND = block(CraftNoTaizaiModBlocks.CAPITAL_OF_THE_DEAD_GROUND);
 	public static final RegistryObject<Item> SLEEPING_FOREST_WOOD = block(CraftNoTaizaiModBlocks.SLEEPING_FOREST_WOOD);
-	public static final RegistryObject<Item> SLEEPING_FOREST_SLAB = block(CraftNoTaizaiModBlocks.SLEEPING_FOREST_SLAB);
-	public static final RegistryObject<Item> SLEEPING_FOREST_STAIR = block(CraftNoTaizaiModBlocks.SLEEPING_FOREST_STAIR);
 	public static final RegistryObject<Item> TYRANT_DRAGON_SPAWN_EGG = REGISTRY.register("tyrant_dragon_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TYRANT_DRAGON, -65536, -6750208, new Item.Properties()));
 	public static final RegistryObject<Item> TYRANT_DRAGON_MEAT = REGISTRY.register("tyrant_dragon_meat", () -> new TyrantDragonMeatItem());
 	public static final RegistryObject<Item> MUTILATOR_RABBITS_SPAWN_EGG = REGISTRY.register("mutilator_rabbits_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MUTILATOR_RABBITS, -12031644, -5985126, new Item.Properties()));
@@ -568,7 +566,6 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> CLOVER_SPAWN_EGG = REGISTRY.register("clover_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CLOVER, -14542563, -150017, new Item.Properties()));
 	public static final RegistryObject<Item> ISTAR_PORTAL_BLOCK = block(CraftNoTaizaiModBlocks.ISTAR_PORTAL_BLOCK);
 	public static final RegistryObject<Item> BRITANNIA_COINS = REGISTRY.register("britannia_coins", () -> new BritanniaCoinsItem());
-	public static final RegistryObject<Item> CANNON_ENTITY_SPAWN_EGG = REGISTRY.register("cannon_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CANNON_ENTITY, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> SLEEPING_FOREST_PLANK = block(CraftNoTaizaiModBlocks.SLEEPING_FOREST_PLANK);
 	public static final RegistryObject<Item> SEVEN_DEADLY_SINS_OPENING = REGISTRY.register("seven_deadly_sins_opening", () -> new SevenDeadlySinsOpeningItem());
 	public static final RegistryObject<Item> GLOXINA_BOSS_SPAWN_EGG = REGISTRY.register("gloxina_boss_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GLOXINA_BOSS, -4965284, -10778489, new Item.Properties()));
@@ -609,6 +606,9 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> TORAH_SPAWN_EGG = REGISTRY.register("torah_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.TORAH, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> GERHEADESERVANT_SPAWN_EGG = REGISTRY.register("gerheadeservant_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GERHEADESERVANT, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> STONE_DROLE_SPAWN_EGG = REGISTRY.register("stone_drole_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.STONE_DROLE, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> GOWTHER_EP_18_SPAWN_EGG = REGISTRY.register("gowther_ep_18_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GOWTHER_EP_18, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> GLOXINIA_STORY_SPAWN_EGG = REGISTRY.register("gloxinia_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.GLOXINIA_STORY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> DROLE_SPAWN_EGG = REGISTRY.register("drole_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DROLE, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

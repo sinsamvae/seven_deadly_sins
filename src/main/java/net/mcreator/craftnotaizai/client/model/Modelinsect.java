@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.11.1
+// Made with Blockbench 4.12.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modelinsect<T extends Entity> extends EntityModel<T> {
@@ -105,7 +105,7 @@ public class Modelinsect<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 0.0F, -3.1416F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, -1.5708F, 1.5708F));
 		PartDefinition body2 = body.addOrReplaceChild("body2", CubeListBuilder.create().texOffs(32, 8).addBox(-3.0F, -1.775F, -1.3496F, 6.0F, 3.55F, 1.0F, new CubeDeformation(0.0F)).texOffs(15, 20)
 				.addBox(-3.0F, -2.5F, -0.6425F, 6.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(32, 20).addBox(-3.0F, -1.775F, 1.0646F, 6.0F, 3.55F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -9.0F, -7.5575F));
 		PartDefinition cube_r1 = body2.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(15, 39).addBox(-2.975F, -0.5F, -0.5F, 5.95F, 1.0F, 1.0F, new CubeDeformation(0.0F)),

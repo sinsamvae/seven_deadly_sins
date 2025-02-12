@@ -148,7 +148,7 @@ public class DeathThornEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DeathThornOnEntityTickUpdateProcedure.execute(this.level(), this);
+		DeathThornOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

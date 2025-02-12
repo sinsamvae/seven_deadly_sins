@@ -2086,8 +2086,8 @@
           "displayCondition": {
             "name": "Story25"
           },
-          "x": 65,
-          "y": 63
+          "x": 66,
+          "y": 64
         }
       },
       {
@@ -4272,6 +4272,404 @@
           },
           "x": 70,
           "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_18_for_whom_does_that_light",
+          "text": {
+            "fixedValue": "EP 18: For Whom Does That Light Shine? Part 1"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story49"
+          },
+          "x": 68,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_and_diane_continue_their_ba",
+          "text": {
+            "fixedValue": "King and Diane continue their battle against opponents "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story49"
+          },
+          "x": 68,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_summoned_by_gloxinia_and_drole",
+          "text": {
+            "fixedValue": "summoned by Gloxinia and Drole. Escanor refuses to fight"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story49"
+          },
+          "x": 69,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_against_his_fellow_ally_gowther",
+          "text": {
+            "fixedValue": "against his fellow ally Gowther."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story49"
+          },
+          "x": 69,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_servant",
+          "text": {
+            "fixedValue": "Defeat Servant"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story49"
+          },
+          "x": 70,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_18_for_whom_does_that_light1",
+          "text": {
+            "fixedValue": "EP 18: For Whom Does That Light Shine? Part 2"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story50"
+          },
+          "x": 68,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_and_diane_continue_their_ba1",
+          "text": {
+            "fixedValue": "King and Diane continue their battle against opponents "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story50"
+          },
+          "x": 68,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_summoned_by_gloxinia_and_drole1",
+          "text": {
+            "fixedValue": "summoned by Gloxinia and Drole. Escanor refuses to fight"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story50"
+          },
+          "x": 68,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_against_his_fellow_ally_gowther1",
+          "text": {
+            "fixedValue": "against his fellow ally Gowther."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story50"
+          },
+          "x": 70,
+          "y": 101
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_clay_drole",
+          "text": {
+            "fixedValue": "Defeat Clay Drole"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story50"
+          },
+          "x": 70,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_18_for_whom_does_that_light2",
+          "text": {
+            "fixedValue": "EP 18: For Whom Does That Light Shine? Part 3"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story51"
+          },
+          "x": 68,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_and_diane_continue_their_ba2",
+          "text": {
+            "fixedValue": "King and Diane continue their battle against opponents "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story51"
+          },
+          "x": 69,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_summoned_by_gloxinia_and_drole2",
+          "text": {
+            "fixedValue": "summoned by Gloxinia and Drole. Escanor refuses to fight"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story51"
+          },
+          "x": 68,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_against_his_fellow_ally_gowther2",
+          "text": {
+            "fixedValue": "against his fellow ally Gowther."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story51"
+          },
+          "x": 69,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_gowther1",
+          "text": {
+            "fixedValue": "Defeat Gowther"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story51"
+          },
+          "x": 70,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ep_19_meliodas_vsthe_ten_comma",
+          "text": {
+            "fixedValue": "EP 19: Meliodas vs.The Ten Commandments Part 1"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 68,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_as_escanors_battle_with_gowther",
+          "text": {
+            "fixedValue": "As Escanor's battle with Gowther comes to a dramatic end"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 66,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_melioddas_must_now_face_the_rema",
+          "text": {
+            "fixedValue": "Melioddas must now face the remaining Ten Commandments "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 66,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_in_an_allout_battle",
+          "text": {
+            "fixedValue": "in an all-out battle."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 67,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_defeat_drole_gloxinia",
+          "text": {
+            "fixedValue": "Defeat Drole & Gloxinia"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 68,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_defeat_drole_var",
+          "text": {
+            "fixedValue": "",
+            "name": "DefeatDroleVar"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 68,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_defeat_gloxinia_var",
+          "text": {
+            "fixedValue": "",
+            "name": "DefeatGloxiniaVar"
+          },
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Story52"
+          },
+          "x": 68,
+          "y": 144
         }
       }
     ],

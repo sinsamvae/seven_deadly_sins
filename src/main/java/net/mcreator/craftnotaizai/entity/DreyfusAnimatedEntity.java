@@ -69,7 +69,7 @@ public class DreyfusAnimatedEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "drefus_animated");
+		this.entityData.define(TEXTURE, "defyrus_texture");
 	}
 
 	public void setTexture(String texture) {
